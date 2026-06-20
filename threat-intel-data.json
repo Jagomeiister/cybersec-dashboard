@@ -1,81 +1,81 @@
 {
- "generated": "2026-06-19 21:16",
- "today": "2026-06-19",
+ "generated": "2026-06-20 20:45",
+ "today": "2026-06-20",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 20,
-  "cves": 144,
-  "breaches": 28,
-  "malware": 26,
+  "cves": 148,
+  "breaches": 29,
+  "malware": 28,
   "supplychain": 16,
-  "tools": 52,
+  "tools": 54,
   "commands": 8,
-  "guides": 67,
-  "intel_items": 505,
+  "guides": 70,
+  "intel_items": 529,
   "kev": 40
  },
  "windows": {
   "week": {
-   "total": 147,
+   "total": 155,
    "by_cat": {
-    "supplychain": 7,
-    "cve": 30,
-    "tool": 5,
-    "misc": 57,
-    "malware": 16,
-    "breach": 11,
-    "ai-bugbounty": 5,
-    "other": 8,
-    "technique": 7,
+    "cve": 31,
+    "misc": 54,
+    "malware": 18,
+    "supplychain": 4,
+    "breach": 13,
+    "ai-bugbounty": 6,
+    "other": 12,
+    "tool": 6,
+    "technique": 10,
     "command": 1
    },
    "by_src": {}
   },
   "month": {
-   "total": 319,
+   "total": 343,
    "by_cat": {
-    "tool": 20,
-    "cve": 76,
-    "supplychain": 22,
-    "misc": 100,
-    "technique": 17,
-    "breach": 26,
-    "ai-bugbounty": 9,
-    "other": 23,
-    "malware": 25,
+    "tool": 22,
+    "cve": 81,
+    "supplychain": 23,
+    "misc": 103,
+    "technique": 20,
+    "breach": 28,
+    "ai-bugbounty": 10,
+    "other": 27,
+    "malware": 28,
     "command": 1
    },
    "by_src": {}
   },
   "year": {
-   "total": 505,
+   "total": 529,
    "by_cat": {
-    "ai-bugbounty": 30,
-    "malware": 37,
-    "other": 26,
-    "tool": 36,
-    "misc": 154,
+    "ai-bugbounty": 31,
+    "malware": 40,
+    "other": 30,
+    "tool": 38,
+    "misc": 157,
     "command": 2,
-    "technique": 34,
-    "cve": 109,
-    "breach": 39,
-    "supplychain": 38
+    "technique": 37,
+    "cve": 114,
+    "breach": 41,
+    "supplychain": 39
    },
    "by_src": {}
   },
   "all": {
-   "total": 505,
+   "total": 529,
    "by_cat": {
-    "ai-bugbounty": 30,
-    "malware": 37,
-    "other": 26,
-    "tool": 36,
-    "misc": 154,
+    "ai-bugbounty": 31,
+    "malware": 40,
+    "other": 30,
+    "tool": 38,
+    "misc": 157,
     "command": 2,
-    "technique": 34,
-    "cve": 109,
-    "breach": 39,
-    "supplychain": 38
+    "technique": 37,
+    "cve": 114,
+    "breach": 41,
+    "supplychain": 39
    },
    "by_src": {}
   }
@@ -1763,8 +1763,8 @@
   ]
  },
  "cve_sev": {
-  "Critical": 75,
-  "High": 52,
+  "Critical": 76,
+  "High": 55,
   "Medium": 6,
   "Low": 2
  },
@@ -1780,13 +1780,13 @@
   "2023": 9,
   "2024": 11,
   "2025": 7,
-  "2026": 85
+  "2026": 89
  },
  "cve_month": {
   "2025-10": 1,
   "2026-04": 27,
   "2026-05": 20,
-  "2026-06": 61
+  "2026-06": 66
  },
  "top_cve": [
   {
@@ -2413,6 +2413,14 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-28575": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-28575-Android-PackageInstaller.md",
+   "body": "# CVE-2026-28575 \u2014 Android PackageInstaller Session#transfer Memory Exhaustion (CVSS 10.0)\n\n**Severity:** Critical (CVSS 10.0)\n**Status:** Disclosed in June 2026 Android Security Bulletin\n**Component:** Android `PackageInstaller` \u2014 `Session#transfer`\n\n## Summary\nA memory-exhaustion flaw in Android's `PackageInstaller.Session#transfer` is rated **CVSS 10.0**. It is reported to require **no authentication and no user interaction**, with **full system impact**. Defenders should review the June 2026 Android Security Bulletin and apply the corresponding patch level.\n\n## Why it matters\n- A no-auth, no-interaction, full-system-impact flaw in a core OS install component is the highest-risk class of mobile vulnerability \u2014 potential for worm-like or drive-by exploitation if a public PoC emerges.\n- `PackageInstaller` is privileged and present on all Android devices, so the affected surface is broad.\n\n## Defender actions\n- Apply the **June 2026 Android security patch level** as soon as it is available from the device OEM.\n- Track OEM patch rollout; prioritize fleet/MDM-managed devices.\n- Watch for exploitation reports / PoC publication.\n\n## Sources\n> Source: [@SecAlertsCo (X)](https://x.com/SecAlertsCo/status/2067995388280263122) \u2014 2026-06-19\n- June 2026 Android Security Bulletin (secalerts.co/vulnerability/CVE-2026-28575)\n\n*Captured via x-bugbounty-intel-sweep \u2014 2026-06-20*",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-28780": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-28780-Apache-HTTPD-AJP-RCE.md",
    "body": "# CVE-2026-28780 \u2014 Apache HTTP Server mod_proxy_ajp Heap Buffer Overflow RCE (CVSS 9.8)\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n## Overview\n| Field | Value |\n|---|---|\n| CVE | CVE-2026-28780 |\n| CVSS | 9.8 (Critical) |\n| Product | Apache HTTP Server |\n| Component | mod_proxy_ajp |\n| Type | Heap Buffer Overflow \u2192 RCE |\n| Auth Required | None |\n\n## Description\nCritical 9.8 heap buffer overflow in Apache HTTP Server's `mod_proxy_ajp` module. If the server proxies to a malicious AJP backend, attackers can trigger RCE with no authentication and no user interaction required.\n\n## Attack Vector\n- If `mod_proxy_ajp` is enabled and proxying to an external/untrusted AJP backend, an attacker controlling that backend can exploit the buffer overflow\n\n## Affected Configurations\n- Apache HTTP Server with `mod_proxy_ajp` enabled\n- Servers proxying to untrusted AJP upstream\n\n## Source\n- @SecAlertsCo (2026-05-25) \u2014 https://secalerts.co/vulnerability/CVE-2026-28780\n- Tweet: https://x.com/SecAlertsCo/status/2058899250612736266\n\n## Remediation\n- Patch Apache HTTP Server\n- Audit AJP upstream configurations\n- Disable `mod_proxy_ajp` if not needed\n\n## Tags\n#cve #apache #httpd #ajp #heap-overflow #rce #critical #unverified",
@@ -2728,94 +2736,94 @@
  },
  "recent": [
   {
-   "title": "unicode-homoglyph-keyword-bypass-technique-guide",
-   "file": "Guides/unicode-homoglyph-keyword-bypass-technique-guide.md",
+   "title": "ipv4-mapped-ipv6-phishing-evasion-technique-guide",
+   "file": "Guides/ipv4-mapped-ipv6-phishing-evasion-technique-guide.md",
    "cat": "technique",
-   "ts": "2026-06-19"
+   "ts": "2026-06-20"
   },
   {
-   "title": "unit42-codeless-llm-shell-exfil-technique-guide",
-   "file": "Guides/AI-BugBounty/unit42-codeless-llm-shell-exfil-technique-guide.md",
+   "title": "youtube-contentid-email-leak-technique-guide",
+   "file": "Guides/youtube-contentid-email-leak-technique-guide.md",
+   "cat": "technique",
+   "ts": "2026-06-20"
+  },
+  {
+   "title": "autojack-autogen-mcp-websocket-exploit-guide",
+   "file": "Guides/AI-BugBounty/autojack-autogen-mcp-websocket-exploit-guide.md",
    "cat": "ai-bugbounty",
-   "ts": "2026-06-19"
-  },
-  {
-   "title": "osint-surveillance-camera-discovery-guide",
-   "file": "Guides/OSINT/osint-surveillance-camera-discovery-guide.md",
-   "cat": "technique",
-   "ts": "2026-06-19"
-  },
-  {
-   "title": "Exposed-24B-Credentials-Database-2026",
-   "file": "Threat_Intel/Breaches/Exposed-24B-Credentials-Database-2026.md",
-   "cat": "breach",
-   "ts": "2026-06-19"
+   "ts": "2026-06-20"
   },
   {
    "title": "FortiBleed-Fortinet-Credential-Compromise-2026",
    "file": "Threat_Intel/Breaches/FortiBleed-Fortinet-Credential-Compromise-2026.md",
    "cat": "breach",
-   "ts": "2026-06-19"
+   "ts": "2026-06-20"
   },
   {
-   "title": "Kodak-ShinyHunters-Breach-2026",
-   "file": "Threat_Intel/Breaches/Kodak-ShinyHunters-Breach-2026.md",
+   "title": "Texas-TPWD-Driver-Licenses-Breach-2026",
+   "file": "Threat_Intel/Breaches/Texas-TPWD-Driver-Licenses-Breach-2026.md",
    "cat": "breach",
-   "ts": "2026-06-19"
+   "ts": "2026-06-20"
   },
   {
-   "title": "CVE-2025-20701-Airoha-Bluetooth-Beats-Eavesdrop",
-   "file": "Threat_Intel/CVEs/2025/High/CVE-2025-20701-Airoha-Bluetooth-Beats-Eavesdrop.md",
+   "title": "CVE-2026-28575-Android-PackageInstaller",
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-28575-Android-PackageInstaller.md",
    "cat": "cve",
-   "ts": "2026-06-19"
+   "ts": "2026-06-20"
   },
   {
-   "title": "CVE-2025-20700",
-   "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-20700.md",
+   "title": "Windows-Defender-0Day-Chaotic-Eclipse",
+   "file": "Threat_Intel/CVEs/2026/Critical/Windows-Defender-0Day-Chaotic-Eclipse.md",
    "cat": "cve",
-   "ts": "2026-06-19"
+   "ts": "2026-06-20"
   },
   {
-   "title": "CVE-2025-20702",
-   "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-20702.md",
+   "title": "Gravity-SMTP-WordPress-InfoDisclosure-2026",
+   "file": "Threat_Intel/CVEs/2026/High/Gravity-SMTP-WordPress-InfoDisclosure-2026.md",
    "cat": "cve",
-   "ts": "2026-06-19"
+   "ts": "2026-06-20"
   },
   {
-   "title": "CVE-2025-8088",
-   "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-8088.md",
+   "title": "Spyder-MaXSS-AI-Browser-Extensions-2026",
+   "file": "Threat_Intel/CVEs/2026/High/Spyder-MaXSS-AI-Browser-Extensions-2026.md",
    "cat": "cve",
-   "ts": "2026-06-19"
+   "ts": "2026-06-20"
   },
   {
-   "title": "CVE-2026-42530-42055-NGINX-RCE",
-   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-42530-42055-NGINX-RCE.md",
+   "title": "usbIter8-SecureROM-A12-A13-Exploit-2026",
+   "file": "Threat_Intel/CVEs/2026/High/usbIter8-SecureROM-A12-A13-Exploit-2026.md",
    "cat": "cve",
-   "ts": "2026-06-19"
+   "ts": "2026-06-20"
   },
   {
-   "title": "CVE-2026-46798-Oracle-WebCenter-Sites-RCE",
-   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-46798-Oracle-WebCenter-Sites-RCE.md",
-   "cat": "cve",
-   "ts": "2026-06-19"
+   "title": "CryptoBandits-Tor-Backdoor-2026",
+   "file": "Threat_Intel/Malware/CryptoBandits-Tor-Backdoor-2026.md",
+   "cat": "malware",
+   "ts": "2026-06-20"
   },
   {
-   "title": "CVE-2026-33829",
-   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-33829.md",
-   "cat": "cve",
-   "ts": "2026-06-19"
+   "title": "Gentlemen-Ransomware-EDR-Killers-2026",
+   "file": "Threat_Intel/Malware/Gentlemen-Ransomware-EDR-Killers-2026.md",
+   "cat": "malware",
+   "ts": "2026-06-20"
   },
   {
-   "title": "Splunk-Builtin-DB-No-Auth-2026",
-   "file": "Threat_Intel/CVEs/2026/High/Splunk-Builtin-DB-No-Auth-2026.md",
-   "cat": "cve",
-   "ts": "2026-06-19"
+   "title": "Klue-Salesforce-OAuth-Token-Breach-2026",
+   "file": "Threat_Intel/SupplyChain/Klue-Salesforce-OAuth-Token-Breach-2026.md",
+   "cat": "supplychain",
+   "ts": "2026-06-20"
   },
   {
-   "title": "Windows-Search-NTLM-Coercion-NoCVE-2026",
-   "file": "Threat_Intel/CVEs/2026/High/Windows-Search-NTLM-Coercion-NoCVE-2026.md",
-   "cat": "cve",
-   "ts": "2026-06-19"
+   "title": "Matkap-Telegram-Bot-Token-OSINT",
+   "file": "Tools/Matkap-Telegram-Bot-Token-OSINT.md",
+   "cat": "tool",
+   "ts": "2026-06-20"
+  },
+  {
+   "title": "Param-Miner-Cache-Poisoning",
+   "file": "Tools/Param-Miner-Cache-Poisoning.md",
+   "cat": "tool",
+   "ts": "2026-06-20"
   }
  ],
  "kev_referenced": [
@@ -2895,6 +2903,10 @@
    "n": 1
   },
   {
+   "t": "Ipv4 Mapped Ipv6 Phishing Evasion",
+   "n": 1
+  },
+  {
    "t": "Jwt Sqli Jti",
    "n": 1
   },
@@ -2916,10 +2928,6 @@
   },
   {
    "t": "Review Initial Phishing Email",
-   "n": 1
-  },
-  {
-   "t": "Ssh Reverse Tunneling Abuse",
    "n": 1
   }
  ],
