@@ -1,5 +1,5 @@
 {
- "generated": "2026-06-20 20:55",
+ "generated": "2026-06-20 21:01",
  "today": "2026-06-20",
  "vault": "CyberSec Vault",
  "snapshot": {
@@ -2932,5 +2932,20 @@
   }
  ],
  "public": true,
- "history": []
+ "history": [
+  {
+   "date": "2026-06-19",
+   "intel_items": 505,
+   "cves": 144,
+   "breaches": 28,
+   "malware": 26
+  },
+  {
+   "date": "2026-06-20",
+   "intel_items": 529,
+   "cves": 148,
+   "breaches": 29,
+   "malware": 28
+  }
+ ]
 }
