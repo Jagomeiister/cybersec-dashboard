@@ -1,81 +1,81 @@
 {
- "generated": "2026-06-20 21:01",
- "today": "2026-06-20",
+ "generated": "2026-06-21 20:20",
+ "today": "2026-06-21",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 20,
-  "cves": 148,
-  "breaches": 29,
+  "cves": 149,
+  "breaches": 31,
   "malware": 28,
-  "supplychain": 16,
-  "tools": 54,
+  "supplychain": 17,
+  "tools": 55,
   "commands": 8,
-  "guides": 70,
-  "intel_items": 529,
-  "kev": 40
+  "guides": 72,
+  "intel_items": 548,
+  "kev": 41
  },
  "windows": {
   "week": {
-   "total": 155,
+   "total": 150,
    "by_cat": {
-    "cve": 31,
-    "misc": 54,
-    "malware": 18,
-    "supplychain": 4,
-    "breach": 13,
+    "misc": 43,
+    "cve": 26,
+    "breach": 16,
+    "malware": 20,
     "ai-bugbounty": 6,
-    "other": 12,
-    "tool": 6,
-    "technique": 10,
+    "supplychain": 4,
+    "other": 15,
+    "tool": 7,
+    "technique": 12,
     "command": 1
    },
    "by_src": {}
   },
   "month": {
-   "total": 343,
+   "total": 362,
    "by_cat": {
-    "tool": 22,
-    "cve": 81,
-    "supplychain": 23,
-    "misc": 103,
-    "technique": 20,
-    "breach": 28,
+    "tool": 23,
+    "cve": 82,
+    "supplychain": 24,
+    "misc": 108,
+    "technique": 22,
+    "breach": 31,
     "ai-bugbounty": 10,
-    "other": 27,
-    "malware": 28,
+    "other": 30,
+    "malware": 31,
     "command": 1
    },
    "by_src": {}
   },
   "year": {
-   "total": 529,
+   "total": 548,
    "by_cat": {
     "ai-bugbounty": 31,
-    "malware": 40,
-    "other": 30,
-    "tool": 38,
-    "misc": 157,
+    "malware": 43,
+    "other": 33,
+    "tool": 39,
+    "misc": 162,
     "command": 2,
-    "technique": 37,
-    "cve": 114,
-    "breach": 41,
-    "supplychain": 39
+    "technique": 39,
+    "cve": 115,
+    "breach": 44,
+    "supplychain": 40
    },
    "by_src": {}
   },
   "all": {
-   "total": 529,
+   "total": 548,
    "by_cat": {
     "ai-bugbounty": 31,
-    "malware": 40,
-    "other": 30,
-    "tool": 38,
-    "misc": 157,
+    "malware": 43,
+    "other": 33,
+    "tool": 39,
+    "misc": 162,
     "command": 2,
-    "technique": 37,
-    "cve": 114,
-    "breach": 41,
-    "supplychain": 39
+    "technique": 39,
+    "cve": 115,
+    "breach": 44,
+    "supplychain": 40
    },
    "by_src": {}
   }
@@ -1765,7 +1765,7 @@
  "cve_sev": {
   "Critical": 76,
   "High": 55,
-  "Medium": 6,
+  "Medium": 7,
   "Low": 2
  },
  "cve_year": {
@@ -1780,13 +1780,13 @@
   "2023": 9,
   "2024": 11,
   "2025": 7,
-  "2026": 89
+  "2026": 90
  },
  "cve_month": {
   "2025-10": 1,
   "2026-04": 27,
   "2026-05": 20,
-  "2026-06": 66
+  "2026-06": 67
  },
  "top_cve": [
   {
@@ -2709,6 +2709,14 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-20262": {
+   "file": "Threat_Intel/CVEs/2026/Medium/CVE-2026-20262-Cisco-Catalyst-SDWAN-Manager-FileWrite.md",
+   "body": "# CVE-2026-20262 \u2014 Cisco Catalyst SD-WAN Manager Arbitrary File Write (Actively Exploited)\n\n\u2705 **Verification:** Verified \u2014 Cisco advisory + CISA KEV + NVD/cvefeed (CVSS 6.5).\n\n**Severity:** Medium \u2014 CVSS 3.1 base **6.5** (vector AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:N) \u2014 but **actively exploited** (CISA KEV, federal fix-by **2026-06-29**)\n**Product:** Cisco Catalyst SD-WAN Manager (formerly vManage)\n**Type:** Directory/path traversal \u2192 **arbitrary file write** by an authenticated low-privileged remote user; can chain to **root**\n**Status:** Patched \u2014 update to a fixed release\n\n## Summary\nA flaw in the web interface of Cisco Catalyst SD-WAN Manager lets an **authenticated** remote attacker (valid low-privileged account) create or overwrite files on the underlying OS via a crafted HTTP request, due to improper validation of user-supplied input during file uploads. A successful write can be leveraged for **privilege escalation to root**. Cisco reports it has been **exploited in limited, targeted attacks**, and CISA added it to the Known Exploited Vulnerabilities catalog.\n\n## Exploitation indicators (from THN/Cisco)\nSuspicious **WAR file uploads** to Catalyst SD-WAN Manager. Hunt in **`/var/log/nms/vmanage-server.log`** for path-traversal patterns such as:\n\n```\n../../../../var/lib/wildfly/standalone/deployments/suspicious.war\n```\n\nA `.war` deployed into the WildFly `deployments` directory is a classic web-shell / RCE staging primitive.\n\n## Defender actions\n- **Update to a fixed Cisco Catalyst SD-WAN Manager release** immediately (KEV deadline 2026-06-29).\n- Grep `vmanage-server.log` for `../` traversal sequences and unexpected `.war` deployments under `wildfly/standalone/deployments/`.\n- Restrict and audit low-privileged web UI accounts; place the management interface behind VPN/allowlist.\n- Review file integrity on the appliance and hunt for web shells / unexpected root processes.\n\n## Sources\n> Source: [@TheHackersNews (X) \u2014 CVE-2026-20262 exploitation indicators](https://x.com/TheHackersNews/status/2068602570449551427) \u2014 2026-06-21\n- The Hacker News: https://thehackernews.com/2026/06/cisco-releases-security-updates-for.html\n- SecurityAffairs: https://securityaffairs.com/193693/security/cve-2026-20262-cisco-catalyst-sd-wan-flaw-under-active-targeted-exploitation.html\n- cvefeed (KEV): https://cvefeed.io/vuln/detail/CVE-2026-20262\n\n*Captured via x-bugbounty-intel-sweep \u2014 2026-06-21*",
+   "sev": "Medium",
+   "year": "2026",
+   "kev": true,
+   "apts": []
+  },
   "CVE-2026-42055": {
    "file": "Threat_Intel/CVEs/2026/Medium/CVE-2026-42055.md",
    "body": "# CVE-2026-42055\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Medium  \n**Year:** 2026\n\n## Summary\n2067661885907030116 | 2026-06-18 | @TheHackersNews (rt @hackerfantastic) | F5 patches 2 critical NGINX OSS RCE flaws CVE-2026-42530 (HTTP/3 UAF) + CVE-2026-42055 (HTTP/2 heap overflow), both CVSSv4 9.2 | \u2192 Threat_Intel/CVEs/2026/Critical/CVE-2026-42530-42055-NGINX-RCE.md (new)\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 2067661885907030116 | 2026-06-18 | @TheHackersNews (rt @hackerfantastic) | F5 patches 2 critical NGINX OSS RCE flaws CVE-2026-42530 (HTTP/3 UAF) + CVE-2026-42055 (HTTP/2 heap overflow), both CVSSv4 9.2 | \u2192 Threat_Intel/CVEs/2026/Critical/CVE-2026-42530-42055-NGINX-RCE.md (new)\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-42055\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-42055\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42055\n\n## Tags\n#cve #2026 #medium #auto-stub",
@@ -2736,6 +2744,72 @@
  },
  "recent": [
   {
+   "title": "account-takeover-open-redirect-regex-bypass-technique-guide",
+   "file": "Guides/account-takeover-open-redirect-regex-bypass-technique-guide.md",
+   "cat": "technique",
+   "ts": "2026-06-21"
+  },
+  {
+   "title": "secure-boot-certificate-expiry-june-2026-guide",
+   "file": "Guides/secure-boot-certificate-expiry-june-2026-guide.md",
+   "cat": "technique",
+   "ts": "2026-06-21"
+  },
+  {
+   "title": "Brazil-Emergency-Alert-System-Breach-2026",
+   "file": "Threat_Intel/Breaches/Brazil-Emergency-Alert-System-Breach-2026.md",
+   "cat": "breach",
+   "ts": "2026-06-21"
+  },
+  {
+   "title": "FortiBleed-Fortinet-Credential-Compromise-2026",
+   "file": "Threat_Intel/Breaches/FortiBleed-Fortinet-Credential-Compromise-2026.md",
+   "cat": "breach",
+   "ts": "2026-06-21"
+  },
+  {
+   "title": "TEG-Ticketek-26M-Records-Breach-2026",
+   "file": "Threat_Intel/Breaches/TEG-Ticketek-26M-Records-Breach-2026.md",
+   "cat": "breach",
+   "ts": "2026-06-21"
+  },
+  {
+   "title": "CVE-2026-20262-Cisco-Catalyst-SDWAN-Manager-FileWrite",
+   "file": "Threat_Intel/CVEs/2026/Medium/CVE-2026-20262-Cisco-Catalyst-SDWAN-Manager-FileWrite.md",
+   "cat": "cve",
+   "ts": "2026-06-21"
+  },
+  {
+   "title": "DragonForce-Teams-Relay-C2-Backdoor-2026",
+   "file": "Threat_Intel/Malware/DragonForce-Teams-Relay-C2-Backdoor-2026.md",
+   "cat": "malware",
+   "ts": "2026-06-21"
+  },
+  {
+   "title": "SprySOCKS-Windows-Backdoor-2026",
+   "file": "Threat_Intel/Malware/SprySOCKS-Windows-Backdoor-2026.md",
+   "cat": "malware",
+   "ts": "2026-06-21"
+  },
+  {
+   "title": "Mastra-AI-NorthKorea-SupplyChain-2026",
+   "file": "Threat_Intel/SupplyChain/Mastra-AI-NorthKorea-SupplyChain-2026.md",
+   "cat": "supplychain",
+   "ts": "2026-06-21"
+  },
+  {
+   "title": "CyberSentinel-AI",
+   "file": "Tools/CyberSentinel-AI.md",
+   "cat": "tool",
+   "ts": "2026-06-21"
+  },
+  {
+   "title": "x-intel-2026-06-21",
+   "file": "X_Intel/x-intel-2026-06-21.md",
+   "cat": "misc",
+   "ts": "2026-06-21"
+  },
+  {
    "title": "ipv4-mapped-ipv6-phishing-evasion-technique-guide",
    "file": "Guides/ipv4-mapped-ipv6-phishing-evasion-technique-guide.md",
    "cat": "technique",
@@ -2754,75 +2828,9 @@
    "ts": "2026-06-20"
   },
   {
-   "title": "FortiBleed-Fortinet-Credential-Compromise-2026",
-   "file": "Threat_Intel/Breaches/FortiBleed-Fortinet-Credential-Compromise-2026.md",
-   "cat": "breach",
-   "ts": "2026-06-20"
-  },
-  {
    "title": "Texas-TPWD-Driver-Licenses-Breach-2026",
    "file": "Threat_Intel/Breaches/Texas-TPWD-Driver-Licenses-Breach-2026.md",
    "cat": "breach",
-   "ts": "2026-06-20"
-  },
-  {
-   "title": "CVE-2026-28575-Android-PackageInstaller",
-   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-28575-Android-PackageInstaller.md",
-   "cat": "cve",
-   "ts": "2026-06-20"
-  },
-  {
-   "title": "Windows-Defender-0Day-Chaotic-Eclipse",
-   "file": "Threat_Intel/CVEs/2026/Critical/Windows-Defender-0Day-Chaotic-Eclipse.md",
-   "cat": "cve",
-   "ts": "2026-06-20"
-  },
-  {
-   "title": "Gravity-SMTP-WordPress-InfoDisclosure-2026",
-   "file": "Threat_Intel/CVEs/2026/High/Gravity-SMTP-WordPress-InfoDisclosure-2026.md",
-   "cat": "cve",
-   "ts": "2026-06-20"
-  },
-  {
-   "title": "Spyder-MaXSS-AI-Browser-Extensions-2026",
-   "file": "Threat_Intel/CVEs/2026/High/Spyder-MaXSS-AI-Browser-Extensions-2026.md",
-   "cat": "cve",
-   "ts": "2026-06-20"
-  },
-  {
-   "title": "usbIter8-SecureROM-A12-A13-Exploit-2026",
-   "file": "Threat_Intel/CVEs/2026/High/usbIter8-SecureROM-A12-A13-Exploit-2026.md",
-   "cat": "cve",
-   "ts": "2026-06-20"
-  },
-  {
-   "title": "CryptoBandits-Tor-Backdoor-2026",
-   "file": "Threat_Intel/Malware/CryptoBandits-Tor-Backdoor-2026.md",
-   "cat": "malware",
-   "ts": "2026-06-20"
-  },
-  {
-   "title": "Gentlemen-Ransomware-EDR-Killers-2026",
-   "file": "Threat_Intel/Malware/Gentlemen-Ransomware-EDR-Killers-2026.md",
-   "cat": "malware",
-   "ts": "2026-06-20"
-  },
-  {
-   "title": "Klue-Salesforce-OAuth-Token-Breach-2026",
-   "file": "Threat_Intel/SupplyChain/Klue-Salesforce-OAuth-Token-Breach-2026.md",
-   "cat": "supplychain",
-   "ts": "2026-06-20"
-  },
-  {
-   "title": "Matkap-Telegram-Bot-Token-OSINT",
-   "file": "Tools/Matkap-Telegram-Bot-Token-OSINT.md",
-   "cat": "tool",
-   "ts": "2026-06-20"
-  },
-  {
-   "title": "Param-Miner-Cache-Poisoning",
-   "file": "Tools/Param-Miner-Cache-Poisoning.md",
-   "cat": "tool",
    "ts": "2026-06-20"
   }
  ],
@@ -2860,6 +2868,7 @@
   "CVE-2026-0257",
   "CVE-2026-10520",
   "CVE-2026-20253",
+  "CVE-2026-20262",
   "CVE-2026-33825",
   "CVE-2026-34197",
   "CVE-2026-34621",
@@ -2870,6 +2879,10 @@
  ],
  "top_tags": [],
  "attack_types": [
+  {
+   "t": "Account Takeover Open Redirect Regex Bypass",
+   "n": 1
+  },
   {
    "t": "Amsi Scriptblock Logging Bypass",
    "n": 1
@@ -2925,10 +2938,6 @@
   {
    "t": "Rdp Screen Fragment Leakage",
    "n": 1
-  },
-  {
-   "t": "Review Initial Phishing Email",
-   "n": 1
   }
  ],
  "public": true,
@@ -2945,6 +2954,13 @@
    "intel_items": 529,
    "cves": 148,
    "breaches": 29,
+   "malware": 28
+  },
+  {
+   "date": "2026-06-21",
+   "intel_items": 548,
+   "cves": 149,
+   "breaches": 31,
    "malware": 28
   }
  ]
