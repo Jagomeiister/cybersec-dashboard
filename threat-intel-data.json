@@ -1,80 +1,80 @@
 {
- "generated": "2026-06-21 20:20",
- "today": "2026-06-21",
+ "generated": "2026-06-22 21:34",
+ "today": "2026-06-22",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 20,
   "cves": 149,
   "breaches": 31,
-  "malware": 28,
+  "malware": 29,
   "supplychain": 17,
   "tools": 55,
   "commands": 8,
-  "guides": 72,
-  "intel_items": 548,
+  "guides": 76,
+  "intel_items": 564,
   "kev": 41
  },
  "windows": {
   "week": {
-   "total": 150,
+   "total": 144,
    "by_cat": {
-    "misc": 43,
-    "cve": 26,
-    "breach": 16,
-    "malware": 20,
-    "ai-bugbounty": 6,
-    "supplychain": 4,
+    "cve": 25,
     "other": 15,
+    "malware": 22,
+    "ai-bugbounty": 7,
     "tool": 7,
-    "technique": 12,
-    "command": 1
+    "misc": 36,
+    "technique": 14,
+    "breach": 14,
+    "command": 1,
+    "supplychain": 3
    },
    "by_src": {}
   },
   "month": {
-   "total": 362,
+   "total": 377,
    "by_cat": {
-    "tool": 23,
-    "cve": 82,
+    "tool": 22,
+    "cve": 83,
     "supplychain": 24,
-    "misc": 108,
-    "technique": 22,
-    "breach": 31,
-    "ai-bugbounty": 10,
-    "other": 30,
-    "malware": 31,
+    "misc": 112,
+    "technique": 24,
+    "breach": 32,
+    "ai-bugbounty": 13,
+    "other": 31,
+    "malware": 35,
     "command": 1
    },
    "by_src": {}
   },
   "year": {
-   "total": 548,
+   "total": 564,
    "by_cat": {
-    "ai-bugbounty": 31,
-    "malware": 43,
-    "other": 33,
+    "ai-bugbounty": 34,
+    "malware": 47,
+    "other": 34,
     "tool": 39,
-    "misc": 162,
+    "misc": 166,
     "command": 2,
-    "technique": 39,
-    "cve": 115,
-    "breach": 44,
+    "technique": 41,
+    "cve": 116,
+    "breach": 45,
     "supplychain": 40
    },
    "by_src": {}
   },
   "all": {
-   "total": 548,
+   "total": 564,
    "by_cat": {
-    "ai-bugbounty": 31,
-    "malware": 43,
-    "other": 33,
+    "ai-bugbounty": 34,
+    "malware": 47,
+    "other": 34,
     "tool": 39,
-    "misc": 162,
+    "misc": 166,
     "command": 2,
-    "technique": 39,
-    "cve": 115,
-    "breach": 44,
+    "technique": 41,
+    "cve": 116,
+    "breach": 45,
     "supplychain": 40
    },
    "by_src": {}
@@ -1786,7 +1786,7 @@
   "2025-10": 1,
   "2026-04": 27,
   "2026-05": 20,
-  "2026-06": 67
+  "2026-06": 68
  },
  "top_cve": [
   {
@@ -2503,7 +2503,7 @@
   },
   "CVE-2026-42530": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-42530-42055-NGINX-RCE.md",
-   "body": "# CVE-2026-42530 & CVE-2026-42055 \u2014 Critical NGINX Open Source RCE (F5 OOB Patch)\n\n\u2705 **Verification:** Verified \u2014 F5 vendor advisory + multiple security outlets (THN, SecurityWeek, BleepingComputer, Security Affairs)\n\n**Severity:** Critical \u2014 CVSSv4 **9.2** (both)\n**Product:** NGINX Open Source / NGINX Plus\n**Type:** Use-after-free (HTTP/3 QUIC) and heap-based buffer overflow (HTTP/2 proxy)\n**Status:** Patched out-of-band by F5; unauthenticated, remote\n\n## Summary\nF5 issued **out-of-band patches** for two critical NGINX flaws, both remotely triggerable by an **unauthenticated** attacker and capable of leading to **remote code execution**.\n\n### CVE-2026-42530 (CVSSv4 9.2) \u2014 HTTP/3 QUIC use-after-free\nUse-after-free in **`ngx_http_v3_module`**, triggered when NGINX is configured with the **HTTP/3 QUIC module**. A specially crafted HTTP/3 session can **reopen a QPACK encoder stream**, causing a use-after-free in the NGINX worker process (worker restart/DoS). If **ASLR is disabled or bypassed**, the attacker can execute arbitrary code.\n- Affects NGINX Open Source **1.31.0 / 1.31.1**; fixed in **1.31.2**.\n- Mitigation: **disable HTTP/3**.\n\n### CVE-2026-42055 (CVSSv4 9.2) \u2014 HTTP/2 proxy heap overflow\nHeap-based buffer overflow in **`ngx_http_proxy_v2_module`** and **`ngx_http_grpc_module`**, triggered when `proxy_http_version` is set to **2** or `grpc_pass` is used to proxy **HTTP/2** traffic.\n- Fixed in NGINX Open Source **1.30.3 / 1.31.2**, NGINX Plus **R37 P2.1 (37.0.2.1)** and **R36 P6**.\n- Mitigation: remove `ignore_invalid_headers off`; reduce `large_client_header_buffers` size below 2 MB.\n\n## Defender actions\n- Patch to NGINX OSS 1.31.2 (or 1.30.3 for the HTTP/2 fix) / NGINX Plus R37 P2.1 / R36 P6 immediately.\n- If patching is delayed: disable HTTP/3 (42530) and apply the HTTP/2 config mitigations (42055).\n- Inventory edge/reverse-proxy NGINX instances using HTTP/3 or HTTP/2 upstream proxying \u2014 those are the exposed configs.\n\n## Sources\n> Source: [@TheHackersNews (X) \u2014 F5 Patches Two Critical NGINX Open Source Flaws](https://x.com/TheHackersNews/status/2067661885907030116) \u2014 2026-06-18\n- F5 advisory: https://my.f5.com/manage/s/article/K000161616\n- The Hacker News: https://thehackernews.com/2026/06/f5-patches-two-critical-nginx-open.html\n- SecurityWeek: https://www.securityweek.com/f5-patches-critical-high-severity-nginx-vulnerabilities/\n- BleepingComputer: https://www.bleepingcomputer.com/news/security/f5-issues-out-of-band-patches-for-critical-nginx-vulnerabilities/\n\n## Tags\n#cve #2026 #critical #nginx #rce #http3 #http2\n\n---\n*Captured via x-bugbounty-intel-sweep \u2014 2026-06-19*\n\n## Update \u2014 2026-06-19 (additional X corroboration)\nFurther X amplification of the F5 out-of-band NGINX patch confirms the note above (no new technical detail):\n- @akaclandestine posted a PoC reference: \"CVE-2026-42530 NGINX RCE.\"\n- @The_Cyber_News: \"F5 Patches NGINX Vulnerability That Enables Code Execution and DoS Attacks\" (cybersecuritynews.com).\n- @UK_Daniel_Card (mRr3b00t) shared the THN write-up (\"F5 patches two critical NGINX\" flaws).\n\n> Source: [@akaclandestine (X)](https://x.com/akaclandestine/status/2067661726321922548) \u2014 2026-06-18\n> Source: [@The_Cyber_News (X)](https://x.com/The_Cyber_News/status/2067584468274340137) \u2014 2026-06-18\n> Source: [@UK_Daniel_Card (X)](https://x.com/UK_Daniel_Card/status/2067714596589179248) \u2014 2026-06-18\n\n*Captured via x-bugbounty-intel-sweep \u2014 2026-06-19*",
+   "body": "# CVE-2026-42530 & CVE-2026-42055 \u2014 Critical NGINX Open Source RCE (F5 OOB Patch)\n\n\u2705 **Verification:** Verified \u2014 F5 vendor advisory + multiple security outlets (THN, SecurityWeek, BleepingComputer, Security Affairs)\n\n**Severity:** Critical \u2014 CVSSv4 **9.2** (both)\n**Product:** NGINX Open Source / NGINX Plus\n**Type:** Use-after-free (HTTP/3 QUIC) and heap-based buffer overflow (HTTP/2 proxy)\n**Status:** Patched out-of-band by F5; unauthenticated, remote\n\n## Summary\nF5 issued **out-of-band patches** for two critical NGINX flaws, both remotely triggerable by an **unauthenticated** attacker and capable of leading to **remote code execution**.\n\n### CVE-2026-42530 (CVSSv4 9.2) \u2014 HTTP/3 QUIC use-after-free\nUse-after-free in **`ngx_http_v3_module`**, triggered when NGINX is configured with the **HTTP/3 QUIC module**. A specially crafted HTTP/3 session can **reopen a QPACK encoder stream**, causing a use-after-free in the NGINX worker process (worker restart/DoS). If **ASLR is disabled or bypassed**, the attacker can execute arbitrary code.\n- Affects NGINX Open Source **1.31.0 / 1.31.1**; fixed in **1.31.2**.\n- Mitigation: **disable HTTP/3**.\n\n### CVE-2026-42055 (CVSSv4 9.2) \u2014 HTTP/2 proxy heap overflow\nHeap-based buffer overflow in **`ngx_http_proxy_v2_module`** and **`ngx_http_grpc_module`**, triggered when `proxy_http_version` is set to **2** or `grpc_pass` is used to proxy **HTTP/2** traffic.\n- Fixed in NGINX Open Source **1.30.3 / 1.31.2**, NGINX Plus **R37 P2.1 (37.0.2.1)** and **R36 P6**.\n- Mitigation: remove `ignore_invalid_headers off`; reduce `large_client_header_buffers` size below 2 MB.\n\n## Defender actions\n- Patch to NGINX OSS 1.31.2 (or 1.30.3 for the HTTP/2 fix) / NGINX Plus R37 P2.1 / R36 P6 immediately.\n- If patching is delayed: disable HTTP/3 (42530) and apply the HTTP/2 config mitigations (42055).\n- Inventory edge/reverse-proxy NGINX instances using HTTP/3 or HTTP/2 upstream proxying \u2014 those are the exposed configs.\n\n## Sources\n> Source: [@TheHackersNews (X) \u2014 F5 Patches Two Critical NGINX Open Source Flaws](https://x.com/TheHackersNews/status/2067661885907030116) \u2014 2026-06-18\n- F5 advisory: https://my.f5.com/manage/s/article/K000161616\n- The Hacker News: https://thehackernews.com/2026/06/f5-patches-two-critical-nginx-open.html\n- SecurityWeek: https://www.securityweek.com/f5-patches-critical-high-severity-nginx-vulnerabilities/\n- BleepingComputer: https://www.bleepingcomputer.com/news/security/f5-issues-out-of-band-patches-for-critical-nginx-vulnerabilities/\n\n## Tags\n#cve #2026 #critical #nginx #rce #http3 #http2\n\n---\n*Captured via x-bugbounty-intel-sweep \u2014 2026-06-19*\n\n## Update \u2014 2026-06-19 (additional X corroboration)\nFurther X amplification of the F5 out-of-band NGINX patch confirms the note above (no new technical detail):\n- @akaclandestine posted a PoC reference: \"CVE-2026-42530 NGINX RCE.\"\n- @The_Cyber_News: \"F5 Patches NGINX Vulnerability That Enables Code Execution and DoS Attacks\" (cybersecuritynews.com).\n- @UK_Daniel_Card (mRr3b00t) shared the THN write-up (\"F5 patches two critical NGINX\" flaws).\n\n> Source: [@akaclandestine (X)](https://x.com/akaclandestine/status/2067661726321922548) \u2014 2026-06-18\n> Source: [@The_Cyber_News (X)](https://x.com/The_Cyber_News/status/2067584468274340137) \u2014 2026-06-18\n> Source: [@UK_Daniel_Card (X)](https://x.com/UK_Daniel_Card/status/2067714596589179248) \u2014 2026-06-18\n\n*Captured via x-bugbounty-intel-sweep \u2014 2026-06-19*\n\n## Update \u2014 2026-06-22 (clearer technical path)\nThe Hacker News published a follow-up clarifying the exploit mechanics of both flaws:\n- **CVE-2026-42530** \"comes down to an **HTTP/3 lifetime mismatch** that can leave a **freed stream pointer treated as valid**\" \u2014 i.e., the use-after-free arises because a QUIC/HTTP/3 stream object is freed but a dangling reference continues to be used as if live.\n- **CVE-2026-42055** \"lets **oversized HPACK data write past its buffer**, causing [an] unauthenticated worker\" overflow \u2014 confirming the HTTP/2 heap overflow is reachable pre-auth via crafted HPACK (header-compression) data exceeding buffer bounds.\n\nNo change to remediation: patch to NGINX OSS 1.31.2 (HTTP/3) / 1.30.3 (HTTP/2) or NGINX Plus R37 P2.1 / R36 P6; disable HTTP/3 and apply HTTP/2 config mitigations if patching is delayed.\n\n> Source: [@TheHackersNews (X)](https://x.com/TheHackersNews/status/2068935559704129715) \u2014 2026-06-22\n\n*Updated via x-bugbounty-intel-sweep \u2014 2026-06-22*",
    "sev": "Critical",
    "year": "2026",
    "kev": false,
@@ -2744,6 +2744,54 @@
  },
  "recent": [
   {
+   "title": "trusted-service-c2-exfiltration-technique-guide",
+   "file": "Guides/trusted-service-c2-exfiltration-technique-guide.md",
+   "cat": "technique",
+   "ts": "2026-06-22"
+  },
+  {
+   "title": "v8-jit-f64mod-range-confusion-technique-guide",
+   "file": "Guides/v8-jit-f64mod-range-confusion-technique-guide.md",
+   "cat": "technique",
+   "ts": "2026-06-22"
+  },
+  {
+   "title": "ai-search-poisoning-reddit-comment-deep-research",
+   "file": "Guides/AI-BugBounty/ai-search-poisoning-reddit-comment-deep-research.md",
+   "cat": "ai-bugbounty",
+   "ts": "2026-06-22"
+  },
+  {
+   "title": "mythos-ai-nsa-redteam-2026",
+   "file": "Guides/AI-BugBounty/mythos-ai-nsa-redteam-2026.md",
+   "cat": "ai-bugbounty",
+   "ts": "2026-06-22"
+  },
+  {
+   "title": "FortiBleed-Fortinet-Credential-Compromise-2026",
+   "file": "Threat_Intel/Breaches/FortiBleed-Fortinet-Credential-Compromise-2026.md",
+   "cat": "breach",
+   "ts": "2026-06-22"
+  },
+  {
+   "title": "CVE-2026-42530-42055-NGINX-RCE",
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-42530-42055-NGINX-RCE.md",
+   "cat": "cve",
+   "ts": "2026-06-22"
+  },
+  {
+   "title": "AryStinger-Router-Botnet-2026",
+   "file": "Threat_Intel/Malware/AryStinger-Router-Botnet-2026.md",
+   "cat": "malware",
+   "ts": "2026-06-22"
+  },
+  {
+   "title": "x-intel-2026-06-22",
+   "file": "X_Intel/x-intel-2026-06-22.md",
+   "cat": "misc",
+   "ts": "2026-06-22"
+  },
+  {
    "title": "account-takeover-open-redirect-regex-bypass-technique-guide",
    "file": "Guides/account-takeover-open-redirect-regex-bypass-technique-guide.md",
    "cat": "technique",
@@ -2758,12 +2806,6 @@
   {
    "title": "Brazil-Emergency-Alert-System-Breach-2026",
    "file": "Threat_Intel/Breaches/Brazil-Emergency-Alert-System-Breach-2026.md",
-   "cat": "breach",
-   "ts": "2026-06-21"
-  },
-  {
-   "title": "FortiBleed-Fortinet-Credential-Compromise-2026",
-   "file": "Threat_Intel/Breaches/FortiBleed-Fortinet-Credential-Compromise-2026.md",
    "cat": "breach",
    "ts": "2026-06-21"
   },
@@ -2790,48 +2832,6 @@
    "file": "Threat_Intel/Malware/SprySOCKS-Windows-Backdoor-2026.md",
    "cat": "malware",
    "ts": "2026-06-21"
-  },
-  {
-   "title": "Mastra-AI-NorthKorea-SupplyChain-2026",
-   "file": "Threat_Intel/SupplyChain/Mastra-AI-NorthKorea-SupplyChain-2026.md",
-   "cat": "supplychain",
-   "ts": "2026-06-21"
-  },
-  {
-   "title": "CyberSentinel-AI",
-   "file": "Tools/CyberSentinel-AI.md",
-   "cat": "tool",
-   "ts": "2026-06-21"
-  },
-  {
-   "title": "x-intel-2026-06-21",
-   "file": "X_Intel/x-intel-2026-06-21.md",
-   "cat": "misc",
-   "ts": "2026-06-21"
-  },
-  {
-   "title": "ipv4-mapped-ipv6-phishing-evasion-technique-guide",
-   "file": "Guides/ipv4-mapped-ipv6-phishing-evasion-technique-guide.md",
-   "cat": "technique",
-   "ts": "2026-06-20"
-  },
-  {
-   "title": "youtube-contentid-email-leak-technique-guide",
-   "file": "Guides/youtube-contentid-email-leak-technique-guide.md",
-   "cat": "technique",
-   "ts": "2026-06-20"
-  },
-  {
-   "title": "autojack-autogen-mcp-websocket-exploit-guide",
-   "file": "Guides/AI-BugBounty/autojack-autogen-mcp-websocket-exploit-guide.md",
-   "cat": "ai-bugbounty",
-   "ts": "2026-06-20"
-  },
-  {
-   "title": "Texas-TPWD-Driver-Licenses-Breach-2026",
-   "file": "Threat_Intel/Breaches/Texas-TPWD-Driver-Licenses-Breach-2026.md",
-   "cat": "breach",
-   "ts": "2026-06-20"
   }
  ],
  "kev_referenced": [
@@ -2943,25 +2943,18 @@
  "public": true,
  "history": [
   {
-   "date": "2026-06-19",
-   "intel_items": 505,
-   "cves": 144,
-   "breaches": 28,
-   "malware": 26
-  },
-  {
-   "date": "2026-06-20",
-   "intel_items": 529,
-   "cves": 148,
-   "breaches": 29,
-   "malware": 28
-  },
-  {
    "date": "2026-06-21",
    "intel_items": 548,
    "cves": 149,
    "breaches": 31,
    "malware": 28
+  },
+  {
+   "date": "2026-06-22",
+   "intel_items": 564,
+   "cves": 149,
+   "breaches": 31,
+   "malware": 29
   }
  ]
 }
