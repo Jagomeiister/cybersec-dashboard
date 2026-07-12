@@ -1,75 +1,77 @@
 {
- "generated": "2026-07-10 20:45",
- "today": "2026-07-10",
+ "generated": "2026-07-12 20:45",
+ "today": "2026-07-12",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 20,
-  "cves": 217,
-  "breaches": 51,
-  "malware": 58,
-  "supplychain": 23,
-  "tools": 71,
+  "cves": 226,
+  "breaches": 54,
+  "malware": 62,
+  "supplychain": 26,
+  "tools": 72,
   "commands": 9,
-  "guides": 120,
-  "intel_items": 712,
+  "guides": 126,
+  "intel_items": 725,
   "kev": 52
  },
  "windows": {
   "week": {
-   "total": 11,
+   "total": 21,
    "by_cat": {
     "malware": 3,
-    "technique": 4,
-    "cve": 1,
-    "breach": 3
+    "cve": 4,
+    "technique": 6,
+    "breach": 5,
+    "supplychain": 2,
+    "ai-bugbounty": 1
    },
    "by_src": {}
   },
   "month": {
-   "total": 387,
+   "total": 367,
    "by_cat": {
-    "misc": 108,
-    "technique": 37,
-    "tool": 13,
-    "cve": 89,
-    "other": 24,
-    "supplychain": 17,
-    "breach": 33,
-    "malware": 54,
-    "ai-bugbounty": 10,
+    "supplychain": 16,
+    "cve": 83,
+    "tool": 11,
+    "misc": 99,
+    "malware": 55,
+    "breach": 30,
+    "ai-bugbounty": 11,
+    "other": 22,
+    "technique": 38,
     "command": 2
    },
    "by_src": {}
   },
   "year": {
-   "total": 712,
+   "total": 725,
    "by_cat": {
-    "ai-bugbounty": 35,
-    "malware": 74,
+    "ai-bugbounty": 36,
+    "malware": 76,
     "other": 40,
     "tool": 42,
     "misc": 196,
     "command": 3,
-    "technique": 62,
-    "cve": 159,
-    "breach": 56,
-    "supplychain": 45
+    "technique": 65,
+    "cve": 162,
+    "breach": 58,
+    "supplychain": 47
    },
    "by_src": {}
   },
   "all": {
-   "total": 712,
+   "total": 725,
    "by_cat": {
-    "ai-bugbounty": 35,
-    "malware": 74,
+    "ai-bugbounty": 36,
+    "malware": 76,
     "other": 40,
     "tool": 42,
     "misc": 196,
     "command": 3,
-    "technique": 62,
-    "cve": 159,
-    "breach": 56,
-    "supplychain": 45
+    "technique": 65,
+    "cve": 162,
+    "breach": 58,
+    "supplychain": 47
    },
    "by_src": {}
   }
@@ -1712,7 +1714,6 @@
   "week": {},
   "month": {
    "Scattered Spider": 3,
-   "Volt Typhoon": 1,
    "Gamaredon": 1
   },
   "year": {
@@ -1765,9 +1766,9 @@
   ]
  },
  "cve_sev": {
-  "Critical": 102,
-  "High": 83,
-  "Medium": 8,
+  "Critical": 105,
+  "High": 88,
+  "Medium": 9,
   "Low": 2
  },
  "cve_year": {
@@ -1782,14 +1783,14 @@
   "2023": 9,
   "2024": 12,
   "2025": 8,
-  "2026": 156
+  "2026": 165
  },
  "cve_month": {
   "2025-10": 1,
   "2026-04": 27,
   "2026-05": 20,
   "2026-06": 108,
-  "2026-07": 3
+  "2026-07": 6
  },
  "top_cve": [
   {
@@ -2546,6 +2547,14 @@
    "kev": true,
    "apts": []
   },
+  "CVE-2026-40008": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-40008-Apache-IoTDB-Deserialization-RCE.md",
+   "body": "# CVE-2026-40008 \u2014 Apache IoTDB Pipe Processor Unauthenticated Deserialization RCE\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source (X)\n\n**Severity:** Critical \u2014 CVSS 9.8 (no authentication)\n**Component:** Apache IoTDB \u2014 pipe processor (RPC interface)\n**Impact:** Unauthenticated remote code execution via insecure Java object instantiation.\n\n## Details\nThe Apache IoTDB pipe processor accepts a **fully-qualified Java class name over RPC and instantiates it** with no authentication and no allow-list. An attacker with network access to the RPC interface can trigger arbitrary class instantiation at the network level \u2014 a classic unsafe-deserialization / arbitrary-class-load primitive that leads to remote code execution.\n\n## Action\n- Patch to the fixed Apache IoTDB release once published; monitor the Apache advisory / NVD entry for exact fixed version.\n- Restrict the IoTDB RPC interface to trusted networks; never expose it to the internet.\n- Add network ACLs / firewalling in front of the RPC port as an interim control.\n\n> Source: [X @SecAlertsCo](https://x.com/SecAlertsCo) \u2014 2026-07-10 (secalerts.co/vulnerability/...)\n\n## Tags\n#cve #apache-iotdb #deserialization #rce #critical #unauthenticated #unverified\n\n*Captured via x-bugbounty-intel-sweep \u2014 2026-07-11*",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-40138": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-40138-40141-BeyondTrust-IGS-PRA-Flaws.md",
    "body": "# CVE-2026-40138 / -40139 / -40140 / -40141 \u2014 BeyondTrust IGS & PRA Flaws\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n**Severity:** Critical (two critical pre-auth bugs among four)\n**Vendor/Products:** BeyondTrust \u2014 Identity Governance Suite (IGS) and Privileged Remote Access (PRA)\n**Fixed in:** IGS 25.3.3 and PRA 25.3.3\n**Exploitation:** None reported at disclosure.\n\n## Details\nBeyondTrust fixed four flaws in IGS and PRA:\n- **CVE-2026-40138** \u2014 pre-auth\n- **CVE-2026-40139** \u2014 pre-auth\n- **CVE-2026-40140**\n- **CVE-2026-40141**\n\nTwo are critical pre-authentication bugs that could let unauthenticated attackers bypass access controls, but only under specific authentication configurations.\n\n## Action\n- Upgrade to IGS 25.3.3 / PRA 25.3.3.\n- Review authentication configuration against BeyondTrust's advisory to determine pre-auth exposure.\n\n> Source: X @TheHackersNews \u2014 2026-07-07\n\n## Tags\n#cve #beyondtrust #igs #pra #pre-auth #access-control-bypass #critical #unverified",
@@ -2900,7 +2909,7 @@
   },
   "CVE-2026-20896": {
    "file": "Threat_Intel/CVEs/2026/High/CVE-2026-20896-Gitea-Docker-XWEBAUTHUSER-Header-Spoof.md",
-   "body": "# CVE-2026-20896 \u2014 Gitea Docker X-WEBAUTH-USER Header Spoofing (Exploited ITW)\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n**Severity:** High (authentication bypass) \u2014 **exploited in the wild**\n**Component:** Gitea (Docker deployments behind a reverse proxy)\n**Impact:** Reachable containers trust spoofed `X-WEBAUTH-USER` headers when reverse-proxy auth is enabled, allowing authentication as an arbitrary user.\n\n## Details\nCVE-2026-20896 affects Gitea Docker deployments: when reverse-proxy authentication is enabled, reachable containers trust a spoofed `X-WEBAUTH-USER` header, letting an attacker impersonate any user. First in-the-wild exploitation attempt was observed **13 days after disclosure**.\n\n## Action\n- Ensure the reverse proxy strips/sets `X-WEBAUTH-USER` and is the only path to the container.\n- Do not expose the Gitea container directly; bind to the proxy network only.\n- Patch Gitea to the fixed version.\n\n> Source: X @TheHackersNews \u2014 2026-07-07\n\n## Tags\n#cve #gitea #docker #reverse-proxy #auth-bypass #exploited-itw #unverified",
+   "body": "# CVE-2026-20896 \u2014 Gitea Docker X-WEBAUTH-USER Header Spoofing (Exploited ITW)\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n**Severity:** High (authentication bypass) \u2014 **exploited in the wild**\n**Component:** Gitea (Docker deployments behind a reverse proxy)\n**Impact:** Reachable containers trust spoofed `X-WEBAUTH-USER` headers when reverse-proxy auth is enabled, allowing authentication as an arbitrary user.\n\n## Details\nCVE-2026-20896 affects Gitea Docker deployments: when reverse-proxy authentication is enabled, reachable containers trust a spoofed `X-WEBAUTH-USER` header, letting an attacker impersonate any user. First in-the-wild exploitation attempt was observed **13 days after disclosure**.\n\n## Action\n- Ensure the reverse proxy strips/sets `X-WEBAUTH-USER` and is the only path to the container.\n- Do not expose the Gitea container directly; bind to the proxy network only.\n- Patch Gitea to the fixed version.\n\n> Source: X @TheHackersNews \u2014 2026-07-07\n\n## Tags\n#cve #gitea #docker #reverse-proxy #auth-bypass #exploited-itw #unverified\n\n## 2026-07-12 Update \u2014 Active Exploitation Confirmed (BleepingComputer)\nBleepingComputer reports hackers are **actively exploiting** the critical auth bypass in the official **Gitea Docker image**, allowing attackers to impersonate any user, including administrators. Reinforces the header-spoofing bypass tracked above; treat any directly-reachable Gitea container as at-risk.\n\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-auth-bypass-in-gitea-docker-image/) \u2014 2026-07-10",
    "sev": "High",
    "year": "2026",
    "kev": false,
@@ -2917,6 +2926,14 @@
   "CVE-2026-27309": {
    "file": "Threat_Intel/CVEs/2026/High/CVE-2026-27309-Adobe-Substance3D-UAF.md",
    "body": "# CVE-2026-27309 \u2014 Adobe Substance3D Stager Use After Free (CWE-416)\n\n\u2705 **Verification:** Verified \u2014 4 independent sources\n\n**Date**: 2026-03-28\n**Source**: X (@ptdbugs) \u2014 [https://x.com/ptdbugs/status/2037802066446323953](https://x.com/ptdbugs/status/2037802066446323953)\n**Severity**: High\n**Tags**: #cve #uaf #adobe #threat-intel\n\n---\n\n## Summary\nAdobe Substance3D - Stager versions 3.1.7 and earlier contain a Use After Free vulnerability (CWE-416) that can lead to arbitrary code execution in the context of the current user. Exploitation requires a victim to open a malicious file \u2014 no network-facing exploit path.\n\n## Affected Software / Versions\n- **Vendor**: Adobe\n- **Product**: Substance3D - Stager\n- **Affected versions**: 3.1.7 and earlier\n- **CVSS**: 7.8 (High)\n- **Credits**: n/a\n\n## PoC / Exploit Details\nNo public PoC. Attack vector: malicious file opened by victim (social engineering / phishing). User interaction required.\n\n## References\n- [Adobe Security Bulletin](https://helpx.adobe.com/security/products/)\n- [NVD \u2014 CVE-2026-27309](https://nvd.nist.gov/vuln/detail/CVE-2026-27309)\n- [dbugs advisory](https://dbugs.ptsecurity.com/)\n\n## Mitigation\n- Update Adobe Substance3D - Stager to version 3.1.8 or later\n- Avoid opening untrusted `.ssg` or Substance3D project files from unknown sources\n\n## Tags\n #verified",
+   "sev": "High",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-28564": {
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-28564-Apache-IoTDB-REST-Auth-Replay-Bypass.md",
+   "body": "# CVE-2026-28564 \u2014 Apache IoTDB REST Basic Auth Stale-Credential Replay Bypass\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source (X)\n\n**Severity:** High \u2014 CVSS 9.8 reported (network, no privileges)\n**Component:** Apache IoTDB \u2014 REST API (HTTP Basic Auth)\n**Impact:** Authentication bypass via capture-replay of previously valid credentials.\n\n## Details\nThe Apache IoTDB **REST API accepts stale cached credentials**, allowing an authentication bypass through **capture-replay**: an attacker who observes or replays a previously valid Basic Auth exchange can authenticate without holding current credentials. No privileges are required and the attack is fully remote.\n\n## Action\n- Patch to the fixed Apache IoTDB release; monitor the Apache advisory / NVD entry.\n- Terminate the REST API behind TLS and an authenticating reverse proxy; rotate credentials.\n- Restrict REST endpoint exposure to trusted networks.\n\n> Source: [X @SecAlertsCo](https://x.com/SecAlertsCo) \u2014 2026-07-10 (secalerts.co/vulnerability/...)\n\n## Tags\n#cve #apache-iotdb #authentication-bypass #replay #rest-api #high #unverified\n\n*Captured via x-bugbounty-intel-sweep \u2014 2026-07-11*",
    "sev": "High",
    "year": "2026",
    "kev": false,
@@ -3050,6 +3067,14 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-61857": {
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-61857-ImageMagick-XMP-Heap-UAF.md",
+   "body": "# CVE-2026-61857 \u2014 ImageMagick Heap Use-After-Free via XMP Profile Parsing\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source (CVE feed)\n\n**Severity:** High (memory corruption via crafted image)\n**Component:** ImageMagick < 7.1.2-26\n**Impact:** A heap use-after-free caused by a missing null check when parsing XMP profiles. Attackers can craft a malicious image that, when processed, triggers the UAF \u2014 potentially leading to code execution or crash.\n\n## Details\nImageMagick before 7.1.2-26 contains a heap use-after-free vulnerability caused by a missing null check when parsing XMP profiles embedded in images. Because ImageMagick is widely used server-side for automated image processing (uploads, thumbnails, conversions), a crafted image delivered through any such pipeline can trigger the condition without user interaction.\n\n## Action\n- Upgrade ImageMagick to **7.1.2-26** or later.\n- In upload pipelines, validate/limit accepted formats and strip XMP metadata before processing where possible.\n- Sandbox ImageMagick workers and apply a restrictive `policy.xml`.\n\n> Source: [X @CVEnew](https://x.com/CVEnew) \u2014 2026-07-12\n\n## Tags\n#cve #imagemagick #use-after-free #memory-corruption #image-parsing #xmp #2026 #unverified\n\n*Captured via x-bugbounty-intel-sweep \u2014 2026-07-12*",
+   "sev": "High",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-8451": {
    "file": "Threat_Intel/CVEs/2026/High/CVE-2026-8451-Citrix-NetScaler-Memory-Overread.md",
    "body": "# CVE-2026-8451 \u2014 Citrix NetScaler ADC / Gateway Memory Overread\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n**Severity:** High (as reported)\n**Component:** Citrix **NetScaler ADC** and **NetScaler Gateway**.\n**Type:** Memory **overread** caused by insufficient input validation (CitrixBleed-style information disclosure).\n\n## Summary\nA memory-overread flaw in NetScaler ADC/Gateway caused by insufficient input validation \u2014 reminiscent of the CitrixBleed class of session-token / memory disclosure bugs. **watchTowr** published a full write-up and a **Detection Artifact Generator** tool on GitHub to identify affected/exploited devices.\n\n## Recommended Actions\n- Patch NetScaler ADC/Gateway to the fixed build immediately; rotate sessions/secrets if exposed.\n- Use the watchTowr detection artifact generator to check devices; hunt for anomalous memory-leak indicators.\n\n## Tags\n#CVE #Citrix #NetScaler #MemoryOverread #InfoLeak #2026 #unverified\n\n> Source: [@DarkWebInformer (X)](https://x.com/DarkWebInformer) \u2014 2026-07-02 (github.com/watchtowrlabs; labs.watchtowr.com)\n\n*Captured via x-bugbounty-intel-sweep \u2014 2026-07-03*",
@@ -3069,6 +3094,14 @@
   "CVE-2026-10104": {
    "file": "Threat_Intel/CVEs/2026/Medium/CVE-2026-10104-WooCommerce-Product-Video-Gallery-Stored-XSS.md",
    "body": "# CVE-2026-10104 \u2014 Product Video Gallery for WooCommerce Authenticated Stored XSS (PoC)\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n**Severity:** Medium (authenticated stored XSS)\n**Component:** \"Product Video Gallery for WooCommerce\" WordPress plugin (older versions)\n**Impact:** Authenticated user can store JavaScript that executes on public product pages.\n**PoC:** Published (github.com/liav-liv/CVE-20...).\n\n## Details\nCVE-2026-10104 is an authenticated stored XSS in the Product Video Gallery for WooCommerce plugin. It affects older plugin versions and can allow JavaScript execution on public product pages. A public PoC is available.\n\n## Action\n- Update the plugin to the latest version.\n- Review product pages for injected markup; audit contributor/author accounts.\n\n> Source: X @DarkWebInformer \u2014 2026-07-07 (github.com/liav-liv/CVE-20...)\n\n## Tags\n#cve #wordpress #woocommerce #stored-xss #poc #unverified\n\n---\n\n## Update \u2014 2026-07-09: Public PoC released\nA public proof-of-concept for CVE-2026-10104 (authenticated stored XSS in Product Video Gallery for WooCommerce) has been published on GitHub (Ravi-ik/CVE-20\u2026). The flaw affects older versions of the plugin and can allow JavaScript execution on public product pages. Exploitability now higher \u2014 prioritise patching/removal.\n\n> Source: [X @DarkWebInformer](https://x.com/DarkWebInformer) \u2014 2026-07-07 (bookmark; GitHub Ravi-ik/CVE-2026-10104)\n\n*Appended via x-bugbounty-intel-sweep \u2014 2026-07-09*",
+   "sev": "Medium",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-10865": {
+   "file": "Threat_Intel/CVEs/2026/Medium/CVE-2026-10865-Cost-Calculator-Builder-WordPress-Info-Exposure.md",
+   "body": "# CVE-2026-10865 \u2014 Cost Calculator Builder (WordPress) Sensitive Information Exposure\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 CVE feed (X @CVEnew / cve.org)\n\n**Severity:** Medium\n**Component:** Cost Calculator Builder plugin for WordPress \u2014 versions **\u2264 4.0.11**\n**Impact:** Sensitive information exposure via the template body.\n\n## Details\nThe **Cost Calculator Builder** WordPress plugin is vulnerable to **Sensitive Information Exposure** in all versions **up to and including 4.0.11**, via the template body. Disclosed through the CVE feed; exposure severity depends on what data the affected sites render in calculator templates.\n\n## Action\n- Update the Cost Calculator Builder plugin beyond 4.0.11 once a fixed release is available.\n- Review calculator template configurations for any embedded sensitive data.\n\n> Source: [X @CVEnew](https://x.com/CVEnew) \u2014 2026-07-11 (cve.org/CVERecord?id=CVE-2026-10865)\n\n## Tags\n#cve #wordpress #plugin #information-disclosure #medium #unverified\n\n*Captured via x-bugbounty-intel-sweep \u2014 2026-07-11*",
    "sev": "Medium",
    "year": "2026",
    "kev": false,
@@ -3189,94 +3222,94 @@
  },
  "recent": [
   {
-   "title": "asd-alert-cms-exploitation-campaign-2026",
-   "file": "Guides/asd-alert-cms-exploitation-campaign-2026.md",
-   "cat": "technique",
-   "ts": "2026-07-09"
+   "title": "ghostcommit-image-prompt-injection-ai-code-reviewers-2026",
+   "file": "Guides/AI-BugBounty/ghostcommit-image-prompt-injection-ai-code-reviewers-2026.md",
+   "cat": "ai-bugbounty",
+   "ts": "2026-07-12"
   },
   {
-   "title": "coolshh-throttle-limited-bulletproof-hosting-2026",
-   "file": "Guides/coolshh-throttle-limited-bulletproof-hosting-2026.md",
-   "cat": "technique",
-   "ts": "2026-07-09"
+   "title": "Lifeline-Australia-Employee-Data-Leak-2026",
+   "file": "Threat_Intel/Breaches/Lifeline-Australia-Employee-Data-Leak-2026.md",
+   "cat": "breach",
+   "ts": "2026-07-12"
   },
   {
-   "title": "felons-fraudsters-offensive-cybersecurity-startup-krebs-2026",
-   "file": "Guides/felons-fraudsters-offensive-cybersecurity-startup-krebs-2026.md",
-   "cat": "technique",
-   "ts": "2026-07-09"
-  },
-  {
-   "title": "CVE-2026-55607-ClaudeCode-Worktree-Sandbox-Escape",
-   "file": "Guides/AI-BugBounty/CVE-2026-55607-ClaudeCode-Worktree-Sandbox-Escape.md",
+   "title": "CVE-2026-20896-Gitea-Docker-XWEBAUTHUSER-Header-Spoof",
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-20896-Gitea-Docker-XWEBAUTHUSER-Header-Spoof.md",
    "cat": "cve",
-   "ts": "2026-07-09"
+   "ts": "2026-07-12"
   },
   {
-   "title": "friendly-fire-readme-prompt-injection-ai-code-review-agents-2026",
-   "file": "Guides/AI-BugBounty/friendly-fire-readme-prompt-injection-ai-code-review-agents-2026.md",
+   "title": "CVE-2026-61857-ImageMagick-XMP-Heap-UAF",
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-61857-ImageMagick-XMP-Heap-UAF.md",
+   "cat": "cve",
+   "ts": "2026-07-12"
+  },
+  {
+   "title": "U-Boot-Six-Flaws-Stealthy-Firmware-Attacks-2026",
+   "file": "Threat_Intel/CVEs/2026/High/U-Boot-Six-Flaws-Stealthy-Firmware-Attacks-2026.md",
+   "cat": "cve",
+   "ts": "2026-07-12"
+  },
+  {
+   "title": "China-Leash-Backdoors-2026",
+   "file": "Threat_Intel/Malware/China-Leash-Backdoors-2026.md",
+   "cat": "malware",
+   "ts": "2026-07-12"
+  },
+  {
+   "title": "GodDamn-Ransomware-PoisonX-BYOVD-2026",
+   "file": "Threat_Intel/Malware/GodDamn-Ransomware-PoisonX-BYOVD-2026.md",
+   "cat": "malware",
+   "ts": "2026-07-12"
+  },
+  {
+   "title": "TON-Blockchain-C2-RAT-Japan-Hotels-2026",
+   "file": "Threat_Intel/Malware/TON-Blockchain-C2-RAT-Japan-Hotels-2026.md",
+   "cat": "malware",
+   "ts": "2026-07-12"
+  },
+  {
+   "title": "jscrambler-npm-Supply-Chain-Preinstall-Backdoor-2026",
+   "file": "Threat_Intel/SupplyChain/jscrambler-npm-Supply-Chain-Preinstall-Backdoor-2026.md",
+   "cat": "supplychain",
+   "ts": "2026-07-12"
+  },
+  {
+   "title": "Metasploit-Weekly-Flowise-Htaccess-PackageKit-2026-07-11",
+   "file": "Tools/Metasploit-Weekly-Flowise-Htaccess-PackageKit-2026-07-11.md",
+   "cat": "tool",
+   "ts": "2026-07-12"
+  },
+  {
+   "title": "x-intel-2026-07-12",
+   "file": "X_Intel/x-intel-2026-07-12.md",
+   "cat": "misc",
+   "ts": "2026-07-12"
+  },
+  {
+   "title": "emergency-data-request-abuse-services-2026",
+   "file": "Guides/emergency-data-request-abuse-services-2026.md",
+   "cat": "technique",
+   "ts": "2026-07-11"
+  },
+  {
+   "title": "openclaw-whatsapp-untrusted-input-rce-2026",
+   "file": "Guides/AI-BugBounty/openclaw-whatsapp-untrusted-input-rce-2026.md",
    "cat": "ai-bugbounty",
-   "ts": "2026-07-09"
+   "ts": "2026-07-11"
   },
   {
-   "title": "openwrt-0day-found-via-self-built-ai-llm-vuln-scanner-2026",
-   "file": "Guides/AI-BugBounty/openwrt-0day-found-via-self-built-ai-llm-vuln-scanner-2026.md",
-   "cat": "ai-bugbounty",
-   "ts": "2026-07-09"
-  },
-  {
-   "title": "artoken-eviltokens-m365-phaas-2026",
-   "file": "Guides/phishing/artoken-eviltokens-m365-phaas-2026.md",
+   "title": "comment-stuffing-html-attachment-ai-detection-evasion-2026",
+   "file": "Guides/phishing/comment-stuffing-html-attachment-ai-detection-evasion-2026.md",
    "cat": "technique",
-   "ts": "2026-07-09"
+   "ts": "2026-07-11"
   },
   {
-   "title": "entra-passkey-enrollment-vishing-m365-2026",
-   "file": "Guides/phishing/entra-passkey-enrollment-vishing-m365-2026.md",
+   "title": "forg365-phaas-ai-m365-2026",
+   "file": "Guides/phishing/forg365-phaas-ai-m365-2026.md",
    "cat": "technique",
-   "ts": "2026-07-09"
-  },
-  {
-   "title": "fake-indian-income-tax-dual-rat-ghostrat-asyncrat-2026",
-   "file": "Guides/phishing/fake-indian-income-tax-dual-rat-ghostrat-asyncrat-2026.md",
-   "cat": "technique",
-   "ts": "2026-07-09"
-  },
-  {
-   "title": "reddit-discord-false-report-account-theft-scam-2026",
-   "file": "Guides/phishing/reddit-discord-false-report-account-theft-scam-2026.md",
-   "cat": "technique",
-   "ts": "2026-07-09"
-  },
-  {
-   "title": "hidden-parameter-discovery-methodology-2026",
-   "file": "Guides/WebSec/hidden-parameter-discovery-methodology-2026.md",
-   "cat": "technique",
-   "ts": "2026-07-09"
-  },
-  {
-   "title": "Darsa-AI-Data-Leak-2026",
-   "file": "Threat_Intel/Breaches/Darsa-AI-Data-Leak-2026.md",
-   "cat": "breach",
-   "ts": "2026-07-09"
-  },
-  {
-   "title": "Lumos-Gaming-SourceCode-UserDB-Sale-2026",
-   "file": "Threat_Intel/Breaches/Lumos-Gaming-SourceCode-UserDB-Sale-2026.md",
-   "cat": "breach",
-   "ts": "2026-07-09"
-  },
-  {
-   "title": "Monday-com-User-Dataset-Sale-2026",
-   "file": "Threat_Intel/Breaches/Monday-com-User-Dataset-Sale-2026.md",
-   "cat": "breach",
-   "ts": "2026-07-09"
-  },
-  {
-   "title": "NetNut-Residential-Proxy-Takedown-2026",
-   "file": "Threat_Intel/Breaches/NetNut-Residential-Proxy-Takedown-2026.md",
-   "cat": "breach",
-   "ts": "2026-07-09"
+   "ts": "2026-07-11"
   }
  ],
  "kev_referenced": [
@@ -3380,6 +3413,10 @@
    "n": 1
   },
   {
+   "t": "Emergency Data Request Abuse Services 2026",
+   "n": 1
+  },
+  {
    "t": "File Upload Null Byte Bypass",
    "n": 1
   },
@@ -3389,10 +3426,6 @@
   },
   {
    "t": "Identity Exposure Management",
-   "n": 1
-  },
-  {
-   "t": "Ipv4 Mapped Ipv6 Phishing Evasion",
    "n": 1
   }
  ],
@@ -3481,6 +3514,20 @@
    "cves": 217,
    "breaches": 51,
    "malware": 58
+  },
+  {
+   "date": "2026-07-11",
+   "intel_items": 722,
+   "cves": 224,
+   "breaches": 53,
+   "malware": 60
+  },
+  {
+   "date": "2026-07-12",
+   "intel_items": 725,
+   "cves": 226,
+   "breaches": 54,
+   "malware": 62
   }
  ]
 }
