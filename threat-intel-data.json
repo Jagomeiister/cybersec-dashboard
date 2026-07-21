@@ -1,45 +1,44 @@
 {
- "generated": "2026-07-18 20:45",
- "today": "2026-07-18",
+ "generated": "2026-07-21 20:45",
+ "today": "2026-07-21",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 20,
-  "cves": 249,
-  "breaches": 58,
+  "cves": 251,
+  "breaches": 59,
   "malware": 70,
-  "supplychain": 30,
+  "supplychain": 31,
   "tools": 74,
   "commands": 9,
-  "guides": 135,
+  "guides": 136,
   "intel_items": 747,
   "kev": 57
  },
  "windows": {
   "week": {
-   "total": 23,
+   "total": 14,
    "by_cat": {
-    "ai-bugbounty": 3,
-    "breach": 2,
-    "malware": 4,
-    "cve": 5,
-    "supplychain": 2,
     "misc": 6,
+    "cve": 4,
+    "malware": 1,
+    "supplychain": 1,
+    "ai-bugbounty": 1,
     "technique": 1
    },
    "by_src": {}
   },
   "month": {
-   "total": 282,
+   "total": 205,
    "by_cat": {
-    "misc": 56,
-    "technique": 35,
-    "cve": 68,
-    "other": 18,
-    "tool": 8,
-    "malware": 50,
-    "breach": 26,
-    "supplychain": 12,
-    "ai-bugbounty": 8,
+    "cve": 53,
+    "technique": 28,
+    "malware": 39,
+    "misc": 42,
+    "ai-bugbounty": 7,
+    "breach": 16,
+    "other": 7,
+    "supplychain": 9,
+    "tool": 3,
     "command": 1
    },
    "by_src": {}
@@ -1717,8 +1716,7 @@
   },
   "month": {
    "Scattered Spider": 3,
-   "APT41": 2,
-   "Gamaredon": 1
+   "APT41": 2
   },
   "year": {
    "Scattered Spider": 3,
@@ -1786,7 +1784,7 @@
  },
  "cve_sev": {
   "Critical": 119,
-  "High": 95,
+  "High": 97,
   "Medium": 10,
   "Low": 2
  },
@@ -1802,7 +1800,7 @@
   "2023": 9,
   "2024": 12,
   "2025": 9,
-  "2026": 187
+  "2026": 189
  },
  "cve_month": {
   "2025-10": 1,
@@ -3214,6 +3212,22 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-53565": {
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-53565-53566-Citrix-Secure-Access-EPA-Client-PrivEsc.md",
+   "body": "# CVE-2026-53565 / CVE-2026-53566 \u2014 Citrix Secure Access & Endpoint Analysis Client (Windows) Privilege Escalation\n\n\u26a0\ufe0f **Verification:** Reported \u2014 single-source (CybersecurityNews via X @The_Cyber_News) summarising a Cloud Software Group advisory. Vendor advisory text not independently retrieved this sweep (RSS/vendor feeds unreachable from sandbox).\n\n**Type:** cve | **Severity:** High (local privilege escalation on endpoint) | **Date:** 2026-07-18 (report)\n\n## Summary\nCloud Software Group disclosed **two vulnerabilities** affecting **Citrix Secure Access Client for Windows** and the **Citrix Endpoint Analysis (EPA) Client**, tracked as **CVE-2026-53565** and **CVE-2026-53566**. Both enable **local privilege escalation** on Windows endpoints running the affected client software.\n\n## Key details\n- **Affected products:** Citrix Secure Access Client for Windows; Citrix Endpoint Analysis Client (EPA).\n- **Impact:** local privilege escalation \u2014 a low-privileged local user or already-landed attacker can elevate to higher privileges on the endpoint.\n- **Vendor:** Cloud Software Group (Citrix).\n- **Exploitation status:** no public reports of in-the-wild exploitation at time of capture.\n\n## Why it matters\nBoth clients are **widely deployed on managed corporate endpoints** as part of remote-access and posture-check enforcement. Client-side privesc on VPN/ZTNA agents is a favoured post-initial-access step: the agent runs with elevated service components, so a working exploit converts a phishing/infostealer foothold into SYSTEM without touching the network edge.\n\n## Action / Notes\n- Inventory endpoints running Citrix Secure Access Client and the EPA client; apply Cloud Software Group's fixed versions.\n- Hunt for suspicious child processes or DLL loads from the Citrix client service paths.\n- Confirm exact fixed build numbers and CVSS from the official Citrix/Cloud Software Group security bulletin before rolling out \u2014 this note is based on a secondary report.\n\n## References\n- https://cybersecuritynews.com/citrix-secure-access-vulnerability/\n\n## Source\n> Source: [X @The_Cyber_News](https://x.com/The_Cyber_News) \u2014 2026-07-18\n\n## Tags\n#cve #citrix #secure-access #epa-client #privilege-escalation #windows #endpoint #2026 #unverified\n\n*Captured via x-bugbounty-intel-sweep \u2014 2026-07-19*",
+   "sev": "High",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-53566": {
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-53566.md",
+   "body": "# CVE-2026-53566\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** High  \n**Year:** 2026\n\n## Summary\n(X feed) | 2026-07-18 | @The_Cyber_News | Citrix Secure Access Client for Windows + Citrix Endpoint Analysis (EPA) Client \u2014 two local privilege escalation flaws, CVE-2026-53565 and CVE-2026-53566, disclosed by Cloud Software Group | -> Threat_Intel/CVEs/2026/High/CVE-2026-53565-53566-Citrix-Secure-Access-EPA-Client-PrivEsc.md (new)\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 (X feed) | 2026-07-18 | @The_Cyber_News | Citrix Secure Access Client for Windows + Citrix Endpoint Analysis (EPA) Client \u2014 two local privilege escalation flaws, CVE-2026-53565 and CVE-2026-53566, disclosed by Cloud Software Group | -> Threat_Intel/CVEs/2026/High/CVE-2026-53565-53566-Citrix-Secure-Access-EPA-Client-PrivEsc.md (new)\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-53566\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-53566\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-53566\n\n## Tags\n#cve #2026 #high #auto-stub",
+   "sev": "High",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-55607": {
    "file": "Threat_Intel/CVEs/2026/High/CVE-2026-55607.md",
    "body": "# CVE-2026-55607\n\n\u2705 **Verification:** Verified \u2014 4 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** High  \n**Year:** 2026\n\n## Summary\nCVE-2026-55607 \u2014 Claude Code Sandbox Escape via Git Worktree Path Confusion\n\n## Where it appears in this vault\n- `Guides/AI-BugBounty/CVE-2026-55607-ClaudeCode-Worktree-Sandbox-Escape.md` \u2014 cve: CVE-2026-55607\n- `Guides/AI-BugBounty/CVE-2026-55607-ClaudeCode-Worktree-Sandbox-Escape.md` \u2014 CVE-2026-55607 \u2014 Claude Code Sandbox Escape via Git Worktree Path Confusion\n- `X_Intel/x-intel-tracker.md` \u2014 2070369295704482296 | 2026-06-26 | @v_metnew | Claude Code Full Sandbox Escape CVE-2026-55607 (git worktree path confusion; prompt-injection \u2192 host RCE even read-only+sandbox); CVSS 7.7, patched 2.1.163 | -> Guides/AI-BugBounty/CVE-2026-55607-ClaudeCode-Worktree-Sandbox-Escape.md (new)\n- `X_Intel/x-intel-tracker.md` \u2014 Methodology: sandbox curl egress blocked (HTTP=000) \u2014 web_fetch fallback. **BleepingComputer** readable (channel Jun27 08:27 GMT; in-window items Jun26: Signal keys, fraudulent OpenAI invites, CISA/Cisco deadline, Polymarket[tracked]; GRC-agent sponsored skipped; Jun25 items already tracked). **Malwarebytes** readable (newest in-window Jun26 12:44 Chrome cookie stealer [kept]; rest Jun24-25 tracked). **SANS ISC** readable (lastBuild Jun27 11:35; newest diary \"Ports Hear\" Jun25 + Linux Process Masquerading Jun24 both already tracked \u2014 no new). **THN feedburner** STALE (newest Jun13). **ProjectZero** out-of-window (newest May13 Pixel10). **The Record**, **SecurityWeek**, **CISA all.xml**, **GrahamCluley** = empty bodies via web_fetch. **ZDI**, **Unit42**, **Canada CCCS** = gzip/binary undecodable. Net: 3 new RSS notes + 2 appends; freshest CVE/breach intel again led by the live X feed (DirtyClone/CVE-2026-46331 Linux su-poisoning, Claude Code CVE-2026-55607, GeoVision CVE-2026-12847, TP-Link CVE-2026-3227, UniFi CVE-2026-34908/09/10, wolfSSL CVE-2026-11999).\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-55607\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-55607\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-55607\n\n## Tags\n#cve #2026 #high #auto-stub #verified",
@@ -3401,6 +3415,54 @@
  },
  "recent": [
   {
+   "title": "BTL1-CheatSheet",
+   "file": "Study/BTL1-CheatSheet.md",
+   "cat": "other",
+   "ts": "2026-07-21"
+  },
+  {
+   "title": "memghost-ai-agent-memory-poisoning-gmail-2026",
+   "file": "Guides/AI-BugBounty/memghost-ai-agent-memory-poisoning-gmail-2026.md",
+   "cat": "ai-bugbounty",
+   "ts": "2026-07-19"
+  },
+  {
+   "title": "Tinder-600M-User-Database-Sale-Claim-2026",
+   "file": "Threat_Intel/Breaches/Tinder-600M-User-Database-Sale-Claim-2026.md",
+   "cat": "breach",
+   "ts": "2026-07-19"
+  },
+  {
+   "title": "7zip-heap-overflow-RCE-2026",
+   "file": "Threat_Intel/CVEs/2026/High/7zip-heap-overflow-RCE-2026.md",
+   "cat": "cve",
+   "ts": "2026-07-19"
+  },
+  {
+   "title": "CVE-2026-53565-53566-Citrix-Secure-Access-EPA-Client-PrivEsc",
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-53565-53566-Citrix-Secure-Access-EPA-Client-PrivEsc.md",
+   "cat": "cve",
+   "ts": "2026-07-19"
+  },
+  {
+   "title": "CVE-2026-53566",
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-53566.md",
+   "cat": "cve",
+   "ts": "2026-07-19"
+  },
+  {
+   "title": "DPRK-Malicious-GitHub-Repos-Developer-Targeting-2026",
+   "file": "Threat_Intel/SupplyChain/DPRK-Malicious-GitHub-Repos-Developer-Targeting-2026.md",
+   "cat": "supplychain",
+   "ts": "2026-07-19"
+  },
+  {
+   "title": "x-intel-2026-07-19",
+   "file": "X_Intel/x-intel-2026-07-19.md",
+   "cat": "misc",
+   "ts": "2026-07-19"
+  },
+  {
    "title": "Shark-Robot-Vacuum-Certificate-Root-RCE-IoT-2026",
    "file": "Guides/Shark-Robot-Vacuum-Certificate-Root-RCE-IoT-2026.md",
    "cat": "technique",
@@ -3441,54 +3503,6 @@
    "file": "Threat_Intel/CVEs/2026/Critical/Microsoft-July-2026-Patch-Tuesday-Record-CVEs.md",
    "cat": "cve",
    "ts": "2026-07-18"
-  },
-  {
-   "title": "Windows-LegacyHive-UserProfileService-PrivEsc-ZeroDay-2026",
-   "file": "Threat_Intel/CVEs/2026/High/Windows-LegacyHive-UserProfileService-PrivEsc-ZeroDay-2026.md",
-   "cat": "cve",
-   "ts": "2026-07-18"
-  },
-  {
-   "title": "x-intel-2026-07-18",
-   "file": "X_Intel/x-intel-2026-07-18.md",
-   "cat": "misc",
-   "ts": "2026-07-18"
-  },
-  {
-   "title": "clickfix-wasm-svg-steganography-unit42-2026",
-   "file": "Guides/phishing/clickfix-wasm-svg-steganography-unit42-2026.md",
-   "cat": "technique",
-   "ts": "2026-07-17"
-  },
-  {
-   "title": "Coca-Cola-Fairlife-Ransomware-2026",
-   "file": "Threat_Intel/Breaches/Coca-Cola-Fairlife-Ransomware-2026.md",
-   "cat": "breach",
-   "ts": "2026-07-17"
-  },
-  {
-   "title": "CVE-2026-57433-Perl-Storable-Deserialization-Overflow",
-   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-57433-Perl-Storable-Deserialization-Overflow.md",
-   "cat": "cve",
-   "ts": "2026-07-17"
-  },
-  {
-   "title": "7zip-heap-overflow-RCE-2026",
-   "file": "Threat_Intel/CVEs/2026/High/7zip-heap-overflow-RCE-2026.md",
-   "cat": "cve",
-   "ts": "2026-07-17"
-  },
-  {
-   "title": "AnyDesk-AnyPwn-Preauth-Oclick-RCE-2026",
-   "file": "Threat_Intel/CVEs/2026/High/AnyDesk-AnyPwn-Preauth-Oclick-RCE-2026.md",
-   "cat": "cve",
-   "ts": "2026-07-17"
-  },
-  {
-   "title": "CVE-2026-14266",
-   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-14266.md",
-   "cat": "cve",
-   "ts": "2026-07-17"
   }
  ],
  "kev_referenced": [
@@ -3753,6 +3767,27 @@
    "intel_items": 747,
    "cves": 249,
    "breaches": 58,
+   "malware": 70
+  },
+  {
+   "date": "2026-07-19",
+   "intel_items": 747,
+   "cves": 251,
+   "breaches": 59,
+   "malware": 70
+  },
+  {
+   "date": "2026-07-20",
+   "intel_items": 747,
+   "cves": 251,
+   "breaches": 59,
+   "malware": 70
+  },
+  {
+   "date": "2026-07-21",
+   "intel_items": 747,
+   "cves": 251,
+   "breaches": 59,
    "malware": 70
   }
  ]
