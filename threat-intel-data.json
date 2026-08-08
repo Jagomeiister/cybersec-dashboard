@@ -1,77 +1,77 @@
 {
- "generated": "2026-08-07 20:45",
- "today": "2026-08-07",
+ "generated": "2026-08-08 20:45",
+ "today": "2026-08-08",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 20,
-  "cves": 282,
-  "breaches": 72,
-  "malware": 96,
-  "supplychain": 37,
+  "cves": 302,
+  "breaches": 77,
+  "malware": 97,
+  "supplychain": 38,
   "tools": 75,
   "commands": 9,
-  "guides": 155,
-  "intel_items": 800,
-  "kev": 72
+  "guides": 166,
+  "intel_items": 847,
+  "kev": 74
  },
  "windows": {
   "week": {
-   "total": 34,
+   "total": 78,
    "by_cat": {
-    "malware": 7,
-    "cve": 5,
-    "other": 3,
-    "supplychain": 4,
-    "technique": 5,
-    "breach": 4,
-    "ai-bugbounty": 1,
-    "misc": 5
+    "cve": 17,
+    "technique": 8,
+    "breach": 10,
+    "malware": 11,
+    "ai-bugbounty": 10,
+    "misc": 12,
+    "supplychain": 5,
+    "other": 5
    },
    "by_src": {}
   },
   "month": {
-   "total": 90,
+   "total": 132,
    "by_cat": {
-    "breach": 13,
-    "technique": 12,
-    "cve": 18,
-    "supplychain": 8,
-    "malware": 18,
-    "ai-bugbounty": 7,
-    "misc": 11,
-    "other": 3
+    "breach": 17,
+    "cve": 30,
+    "supplychain": 9,
+    "technique": 14,
+    "malware": 22,
+    "ai-bugbounty": 16,
+    "misc": 18,
+    "other": 6
    },
    "by_src": {}
   },
   "year": {
-   "total": 800,
+   "total": 847,
    "by_cat": {
-    "ai-bugbounty": 42,
-    "malware": 92,
-    "other": 43,
+    "ai-bugbounty": 51,
+    "malware": 97,
+    "other": 46,
     "tool": 42,
-    "misc": 207,
+    "misc": 214,
     "command": 3,
-    "technique": 73,
-    "cve": 177,
-    "breach": 68,
-    "supplychain": 53
+    "technique": 76,
+    "cve": 189,
+    "breach": 74,
+    "supplychain": 55
    },
    "by_src": {}
   },
   "all": {
-   "total": 800,
+   "total": 847,
    "by_cat": {
-    "ai-bugbounty": 42,
-    "malware": 92,
-    "other": 43,
+    "ai-bugbounty": 51,
+    "malware": 97,
+    "other": 46,
     "tool": 42,
-    "misc": 207,
+    "misc": 214,
     "command": 3,
-    "technique": 73,
-    "cve": 177,
-    "breach": 68,
-    "supplychain": 53
+    "technique": 76,
+    "cve": 189,
+    "breach": 74,
+    "supplychain": 55
    },
    "by_src": {}
   }
@@ -1225,7 +1225,7 @@
   },
   {
    "group": "Salt Typhoon",
-   "body": "# Salt Typhoon \u2014 APT Profile\n\n\u2705 **Verification:** Verified \u2014 7 independent sources\n\n## Snapshot\n| Field | Value |\n|---|---|\n| Attribution | PRC state-sponsored; contractors (incl. sanctioned Sichuan Juxinhe Network Technology) supporting Chinese intelligence services |\n| Aliases | GhostEmperor, FamousSparrow, Earth Estries, UNC2286, UNC5807, RedMike, OPERATOR PANDA |\n| MITRE ATT&CK ID | G1045 |\n| First seen | 2019 |\n| Status | Active |\n| Motivation | Espionage (telecom intercept / metadata collection) |\n\n## Overview\nSalt Typhoon is a China-nexus cyber-espionage actor active since at least 2019, responsible for numerous compromises of network infrastructure at major US telecom and ISP providers. It is distinguished by **deep exploitation of network-edge devices** (especially Cisco routers), **living-off-the-network-device** persistence (GRE tunnels, loopback manipulation, config/credential dumping), and targeting of **lawful-intercept (CALEA/wiretap) systems** and high-value individuals' communications. MITRE assigned it **G1045** in Feb 2025.\n\n## Attribution & Origin\nPRC state-sponsored. The Aug 2025 joint advisory and US Treasury link the activity to **contractors supporting Chinese intelligence services** (MSS, with PLA references).\n- **17 Jan 2025** \u2014 US Treasury OFAC **sanctioned Sichuan Juxinhe Network Technology Co., Ltd.** for direct involvement with Salt Typhoon.\n- The Aug 2025 advisory also names **Beijing Huanyu Tianqiong Information Technology Co., Ltd.** and **Sichuan Zhixin Ruijie Network Technology Co., Ltd.** as providing cyber products/services to China's intelligence services.\n\n## Motivation & Objectives\nCyber-espionage / long-term intelligence collection. Specifically targets **telecom intercept capability**: call detail records and metadata, geolocation, SMS, and in some cases call audio of high-value targets \u2014 plus access to **lawful-intercept (CALEA / court-ordered wiretap) systems**.\n\n## Target Profile\nPrimary sector: **telecommunications providers and ISPs**. US carriers reported breached include **AT&T, Verizon, Lumen, T-Mobile** (reporting cites at least nine US telecoms). Also government, transportation, lodging/hospitality and military networks (per the Aug 2025 advisory). Targets of intelligence value include **lawful-intercept / CALEA wiretap systems** and the communications of high-profile individuals (reporting cites people associated with 2024 US presidential campaigns and government officials).\n\nRegions: United States (epicentre) plus **APAC, EMEA and others** \u2014 affected telecoms reported across the US, Italy, a UK-affiliated US telecom, South Africa and Thailand, with earlier Earth Estries victims across a dozen-plus countries (Taiwan, Philippines, India, Indonesia, Malaysia, Vietnam, etc.).\n\n**APAC / Australia relevance \u2014 key government guidance.**\n- **3 Dec 2024** \u2014 CISA/NSA/FBI + **ASD's ACSC (Australia)**, Canada's CCCS and NZ's NCSC-NZ released **\"Enhanced Visibility and Hardening Guidance for Communications Infrastructure\"** \u2014 a joint guide (not a numbered AAxx-xxx advisory) with ~three dozen visibility/hardening best practices for telecom defenders. Cisco and Google Cloud Security contributed.\n- **27 Aug 2025** \u2014 Multinational Joint Cybersecurity Advisory **AA25-239A**, \"Countering Chinese State-Sponsored Actors Compromise of Networks Worldwide to Feed Global Espionage System.\" Co-sealed by 13+ partners **including Australia (ASD's ACSC)** \u2014 confirming APAC relevance \u2014 plus Canada (CSE/Cyber Centre), Germany (BfV, BND, BSI), Japan (NCO) and other Five Eyes/EU partners alongside CISA, NSA, FBI. It documents PRC APT targeting of telecom/government/transport/lodging/military and edge routers (backbone, PE and CE routers).\n\n## TTPs \u2014 MITRE ATT&CK\nTechnique IDs verified against the MITRE ATT&CK G1045 page. Techniques marked **(G1045)** are formally attributed on the MITRE page; others are flagged \"consistent with reported TTPs\" to avoid overstating attribution.\n\n**Initial Access**\n- `T1190` Exploit Public-Facing Application *(G1045)* \u2014 exploited CVE-2018-0171 (Cisco Smart Install RCE) for initial access; also Cisco IOS XE Web UI CVEs (CVE-2023-20198 / CVE-2023-20273).\n- `T1078` Valid Accounts \u2014 *consistent with reported TTPs*; used stolen telecom-employee credentials.\n- `T1133` External Remote Services \u2014 *consistent with reported TTPs*; abuse of remote management/SSH on edge devices.\n\n**Credential Access**\n- `T1110.002` Brute Force: Password Cracking *(G1045)* \u2014 cracked weakly-encrypted passwords from device config files.\n\n**Persistence**\n- `T1098.004` Account Manipulation: SSH Authorized Keys *(G1045)* \u2014 added authorized_keys for root/users on Linux-level network devices.\n- `T1136` Create Account *(G1045)* \u2014 created Linux users via /etc/shadow and /etc/passwd on devices.\n\n**Defense Evasion**\n- `T1686` Disable or Modify System Firewall *(G1045)* \u2014 modified ACLs and loopback interface addresses.\n- `T1685.006` Disable or Modify Tools: Clear Linux/Mac System Logs *(G1045)* \u2014 cleared .bash_history, auth.log, lastlog, wtmp, btmp.\n- `T1601` Modify System Image (network devices) \u2014 *consistent with reported TTPs* (edge-device firmware/config tampering is a hallmark).\n\n**Collection / Discovery**\n- `T1040` Network Sniffing *(G1045)* \u2014 packet capture between interfaces (via JumbledPath).\n- `T1602.002` Data from Configuration Repository: Network Device Config Dump *(G1045)* \u2014 dumped device configs to harvest credentials.\n- `T1590.004` Gather Victim Network Information: Network Topology *(G1045)* \u2014 used configs to map upstream/downstream segments.\n\n**Lateral Movement / C2**\n- `T1021.004` Remote Services: SSH *(G1045)* \u2014 used a manipulated loopback as SSH source to pivot and bypass ACLs.\n- `T1572` Protocol Tunneling *(G1045)* \u2014 created GRE tunnels via device config changes.\n- `T1071` Application Layer Protocol \u2014 *consistent with reported TTPs* (HTTP/S for C2 blending).\n\n**Exfiltration**\n- `T1048.003` Exfil Over Unencrypted Non-C2 Protocol *(G1045)* \u2014 exfiltrated configs over FTP/TFTP.\n\n**Resource Development**\n- `T1587.001` Develop Capabilities: Malware *(G1045)* \u2014 built JumbledPath.\n\n## Tooling & Malware\n- **Demodex** \u2014 Windows kernel-mode rootkit (the original GhostEmperor signature tool; Kaspersky).\n- **GhostSpider, Deed RAT / SNAPPYBEE, Crowdoor, SparrowDoor, HemiGate, Zingdoor, TrillClient** \u2014 backdoors/stealers in the Earth Estries arsenal (Trend Micro).\n- **JumbledPath** (MITRE **S1206**) \u2014 custom Go/ELF utility for remote packet capture on Cisco devices via an actor-defined jump-host; also clears logs (Cisco Talos).\n- **Living-off-the-network-device:** GRE tunnels for persistence/exfil, loopback-address manipulation to bypass ACLs, native config/credential dumping.\n- **Network-edge exploitation:** CVE-2018-0171 (Cisco IOS/IOS XE Smart Install RCE \u2014 confirmed by MITRE/Talos), CVE-2023-20198 (IOS XE Web UI auth bypass, CVSS 10.0) and CVE-2023-20273 (priv-esc to root). Much initial access also came from **stolen/valid credentials** rather than only CVEs.\n\n## Notable Campaigns & Timeline\n- **2021** \u2014 Kaspersky documents **GhostEmperor** using the Demodex rootkit against Southeast Asian govt/telecom.\n- **Nov 2024** \u2014 Trend Micro publishes \"Game of Emperor,\" detailing long-term **Earth Estries** intrusions and the GhostSpider/Demodex toolset across 12+ countries.\n- **Oct\u2013Nov 2024** \u2014 WSJ and others disclose Salt Typhoon breaches of US telecoms (AT&T, Verizon, Lumen; later reported at least nine carriers), including access to wiretap/CALEA systems and comms of political figures.\n- **3 Dec 2024** \u2014 CISA/NSA/FBI + ACSC/CCCS/NCSC-NZ publish \"Enhanced Visibility and Hardening Guidance for Communications Infrastructure.\"\n- **17 Jan 2025** \u2014 US Treasury OFAC sanctions **Sichuan Juxinhe Network Technology Co., Ltd.** and an individual, tying the firm to Salt Typhoon.\n- **13 Feb 2025** \u2014 Recorded Future (Insikt/RedMike) reports exploitation of 1,000+ Cisco IOS XE devices (CVE-2023-20198/20273) Dec 2024\u2013Jan 2025.\n- **20 Feb 2025** \u2014 Cisco Talos publishes \"Weathering the Storm,\" confirming CVE-2018-0171 use, stolen credentials, and the JumbledPath utility.\n- **27 Aug 2025** \u2014 13+ nation multinational advisory **AA25-239A** published, naming associated PRC contractor firms and broadening the targeted-sector picture.\n\n## Detection & Hunting\n- **Network-device integrity monitoring:** alert on unauthorised config changes, new local accounts (/etc/passwd, /etc/shadow), added SSH authorized_keys, and loopback-address changes.\n- **Config monitoring & diffing:** continuously baseline and diff router/switch configs; flag new GRE tunnels, ACL modifications and unexpected SNMP/TFTP/FTP activity.\n- **Log integrity:** monitor for cleared logs (.bash_history, auth.log, wtmp/btmp/lastlog) \u2014 gaps are a strong indicator.\n- **NetFlow / traffic analysis:** hunt for GRE/tunnelled traffic, config exfil over FTP/TFTP, anomalous device-to-device SSH (especially sourced from loopback), and unexpected packet-capture activity.\n- Monitor management-plane access and any access to lawful-intercept/CALEA systems.\n\n## Mitigations\n- **Patch and harden Cisco/edge gear:** remediate CVE-2018-0171, CVE-2023-20198, CVE-2023-20273; disable Smart Install and the IOS XE HTTP/HTTPS web UI where not required.\n- **Reduce attack surface:** disable unneeded services/protocols (Telnet, unauthenticated SNMP, TFTP); restrict management interfaces to out-of-band/allow-listed hosts.\n- **Strong credential hygiene/MFA:** eliminate weak/legacy password encryption, rotate device credentials, enforce phishing-resistant MFA.\n- Apply the Dec 2024 Enhanced Visibility & Hardening Guidance and AA25-239A recommendations; centralise/forward logs to tamper-resistant storage.\n\n## Activity Log\n<!-- Append-only -->\n- _(seed)_ 2026-06-17 \u2014 Profile created.\n\n## Trend Tracking\n| Date | Event Type | Description | Source |\n|---|---|---|---|\n| | | | |\n\n## References\n- MITRE ATT&CK Group G1045 (Salt Typhoon): https://attack.mitre.org/groups/G1045/\n- CISA Enhanced Visibility and Hardening Guidance for Communications Infrastructure (Dec 2024): https://www.cisa.gov/resources-tools/resources/enhanced-visibility-and-hardening-guidance-communications-infrastructure\n- CISA news release on the Dec 2024 guide: https://www.cisa.gov/news-events/news/cisa-nsa-fbi-and-international-partners-publish-guide-protecting-communications-infrastructure\n- CISA Advisory AA25-239A (Aug 2025 multinational advisory): https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-239a\n- ASD's ACSC (Australia) listing of the same advisory: https://www.cyber.gov.au/about-us/view-all-content/alerts-and-advisories/countering-chinese-state-sponsored-actors-compromise-of-networks-worldwide-to-feed-global-espionage-system\n- US Treasury sanctions press release (Jan 2025): https://home.treasury.gov/news/press-releases/jy2792\n- Cisco Talos \"Weathering the storm\" (Feb 2025): https://blog.talosintelligence.com/salt-typhoon-analysis/\n- Trend Micro \"Game of Emperor: Unveiling Long Term Earth Estries Cyber Intrusions\" (Nov 2024): https://www.trendmicro.com/en_us/research/24/k/earth-estries.html\n- Kaspersky/Malpedia GhostEmperor (Demodex): https://malpedia.caad.fkie.fraunhofer.de/actor/ghostemperor\n- MITRE ATT&CK Software S1206 (JumbledPath): https://attack.mitre.org/software/S1206\n\n---\n*Profile generated for CyberSec Vault \u2014 2026-06-17*\n\n## Tags\n #verified\n\n---\n\n## Activity Log \u2014 2026-08-06\n**Chinese telcos retain deep US presence despite Salt Typhoon links (House committee).** A U.S. House committee report concluded that **three Chinese telecommunications giants** continue to hold footholds in the U.S. internet ecosystem despite their alleged role in prior Chinese hacking campaigns (incl. Salt Typhoon telecom intrusions). Policy/exposure signal \u2014 ongoing supply-chain and interconnection risk from PRC-linked carriers.\n\n### Trend Tracking\n- Reinforces persistence of PRC telecom access vectors underpinning Salt Typhoon-style operations; watch for regulatory action (FCC/House) and continued targeting of US carrier infrastructure.\n\n> Source: [The Record](https://therecord.media/chinese-hackers-telecoms-house) \u2014 2026-08-05",
+   "body": "# Salt Typhoon \u2014 APT Profile\n\n\u2705 **Verification:** Verified \u2014 8 independent sources\n\n## Snapshot\n| Field | Value |\n|---|---|\n| Attribution | PRC state-sponsored; contractors (incl. sanctioned Sichuan Juxinhe Network Technology) supporting Chinese intelligence services |\n| Aliases | GhostEmperor, FamousSparrow, Earth Estries, UNC2286, UNC5807, RedMike, OPERATOR PANDA |\n| MITRE ATT&CK ID | G1045 |\n| First seen | 2019 |\n| Status | Active |\n| Motivation | Espionage (telecom intercept / metadata collection) |\n\n## Overview\nSalt Typhoon is a China-nexus cyber-espionage actor active since at least 2019, responsible for numerous compromises of network infrastructure at major US telecom and ISP providers. It is distinguished by **deep exploitation of network-edge devices** (especially Cisco routers), **living-off-the-network-device** persistence (GRE tunnels, loopback manipulation, config/credential dumping), and targeting of **lawful-intercept (CALEA/wiretap) systems** and high-value individuals' communications. MITRE assigned it **G1045** in Feb 2025.\n\n## Attribution & Origin\nPRC state-sponsored. The Aug 2025 joint advisory and US Treasury link the activity to **contractors supporting Chinese intelligence services** (MSS, with PLA references).\n- **17 Jan 2025** \u2014 US Treasury OFAC **sanctioned Sichuan Juxinhe Network Technology Co., Ltd.** for direct involvement with Salt Typhoon.\n- The Aug 2025 advisory also names **Beijing Huanyu Tianqiong Information Technology Co., Ltd.** and **Sichuan Zhixin Ruijie Network Technology Co., Ltd.** as providing cyber products/services to China's intelligence services.\n\n## Motivation & Objectives\nCyber-espionage / long-term intelligence collection. Specifically targets **telecom intercept capability**: call detail records and metadata, geolocation, SMS, and in some cases call audio of high-value targets \u2014 plus access to **lawful-intercept (CALEA / court-ordered wiretap) systems**.\n\n## Target Profile\nPrimary sector: **telecommunications providers and ISPs**. US carriers reported breached include **AT&T, Verizon, Lumen, T-Mobile** (reporting cites at least nine US telecoms). Also government, transportation, lodging/hospitality and military networks (per the Aug 2025 advisory). Targets of intelligence value include **lawful-intercept / CALEA wiretap systems** and the communications of high-profile individuals (reporting cites people associated with 2024 US presidential campaigns and government officials).\n\nRegions: United States (epicentre) plus **APAC, EMEA and others** \u2014 affected telecoms reported across the US, Italy, a UK-affiliated US telecom, South Africa and Thailand, with earlier Earth Estries victims across a dozen-plus countries (Taiwan, Philippines, India, Indonesia, Malaysia, Vietnam, etc.).\n\n**APAC / Australia relevance \u2014 key government guidance.**\n- **3 Dec 2024** \u2014 CISA/NSA/FBI + **ASD's ACSC (Australia)**, Canada's CCCS and NZ's NCSC-NZ released **\"Enhanced Visibility and Hardening Guidance for Communications Infrastructure\"** \u2014 a joint guide (not a numbered AAxx-xxx advisory) with ~three dozen visibility/hardening best practices for telecom defenders. Cisco and Google Cloud Security contributed.\n- **27 Aug 2025** \u2014 Multinational Joint Cybersecurity Advisory **AA25-239A**, \"Countering Chinese State-Sponsored Actors Compromise of Networks Worldwide to Feed Global Espionage System.\" Co-sealed by 13+ partners **including Australia (ASD's ACSC)** \u2014 confirming APAC relevance \u2014 plus Canada (CSE/Cyber Centre), Germany (BfV, BND, BSI), Japan (NCO) and other Five Eyes/EU partners alongside CISA, NSA, FBI. It documents PRC APT targeting of telecom/government/transport/lodging/military and edge routers (backbone, PE and CE routers).\n\n## TTPs \u2014 MITRE ATT&CK\nTechnique IDs verified against the MITRE ATT&CK G1045 page. Techniques marked **(G1045)** are formally attributed on the MITRE page; others are flagged \"consistent with reported TTPs\" to avoid overstating attribution.\n\n**Initial Access**\n- `T1190` Exploit Public-Facing Application *(G1045)* \u2014 exploited CVE-2018-0171 (Cisco Smart Install RCE) for initial access; also Cisco IOS XE Web UI CVEs (CVE-2023-20198 / CVE-2023-20273).\n- `T1078` Valid Accounts \u2014 *consistent with reported TTPs*; used stolen telecom-employee credentials.\n- `T1133` External Remote Services \u2014 *consistent with reported TTPs*; abuse of remote management/SSH on edge devices.\n\n**Credential Access**\n- `T1110.002` Brute Force: Password Cracking *(G1045)* \u2014 cracked weakly-encrypted passwords from device config files.\n\n**Persistence**\n- `T1098.004` Account Manipulation: SSH Authorized Keys *(G1045)* \u2014 added authorized_keys for root/users on Linux-level network devices.\n- `T1136` Create Account *(G1045)* \u2014 created Linux users via /etc/shadow and /etc/passwd on devices.\n\n**Defense Evasion**\n- `T1686` Disable or Modify System Firewall *(G1045)* \u2014 modified ACLs and loopback interface addresses.\n- `T1685.006` Disable or Modify Tools: Clear Linux/Mac System Logs *(G1045)* \u2014 cleared .bash_history, auth.log, lastlog, wtmp, btmp.\n- `T1601` Modify System Image (network devices) \u2014 *consistent with reported TTPs* (edge-device firmware/config tampering is a hallmark).\n\n**Collection / Discovery**\n- `T1040` Network Sniffing *(G1045)* \u2014 packet capture between interfaces (via JumbledPath).\n- `T1602.002` Data from Configuration Repository: Network Device Config Dump *(G1045)* \u2014 dumped device configs to harvest credentials.\n- `T1590.004` Gather Victim Network Information: Network Topology *(G1045)* \u2014 used configs to map upstream/downstream segments.\n\n**Lateral Movement / C2**\n- `T1021.004` Remote Services: SSH *(G1045)* \u2014 used a manipulated loopback as SSH source to pivot and bypass ACLs.\n- `T1572` Protocol Tunneling *(G1045)* \u2014 created GRE tunnels via device config changes.\n- `T1071` Application Layer Protocol \u2014 *consistent with reported TTPs* (HTTP/S for C2 blending).\n\n**Exfiltration**\n- `T1048.003` Exfil Over Unencrypted Non-C2 Protocol *(G1045)* \u2014 exfiltrated configs over FTP/TFTP.\n\n**Resource Development**\n- `T1587.001` Develop Capabilities: Malware *(G1045)* \u2014 built JumbledPath.\n\n## Tooling & Malware\n- **Demodex** \u2014 Windows kernel-mode rootkit (the original GhostEmperor signature tool; Kaspersky).\n- **GhostSpider, Deed RAT / SNAPPYBEE, Crowdoor, SparrowDoor, HemiGate, Zingdoor, TrillClient** \u2014 backdoors/stealers in the Earth Estries arsenal (Trend Micro).\n- **JumbledPath** (MITRE **S1206**) \u2014 custom Go/ELF utility for remote packet capture on Cisco devices via an actor-defined jump-host; also clears logs (Cisco Talos).\n- **Living-off-the-network-device:** GRE tunnels for persistence/exfil, loopback-address manipulation to bypass ACLs, native config/credential dumping.\n- **Network-edge exploitation:** CVE-2018-0171 (Cisco IOS/IOS XE Smart Install RCE \u2014 confirmed by MITRE/Talos), CVE-2023-20198 (IOS XE Web UI auth bypass, CVSS 10.0) and CVE-2023-20273 (priv-esc to root). Much initial access also came from **stolen/valid credentials** rather than only CVEs.\n\n## Notable Campaigns & Timeline\n- **2021** \u2014 Kaspersky documents **GhostEmperor** using the Demodex rootkit against Southeast Asian govt/telecom.\n- **Nov 2024** \u2014 Trend Micro publishes \"Game of Emperor,\" detailing long-term **Earth Estries** intrusions and the GhostSpider/Demodex toolset across 12+ countries.\n- **Oct\u2013Nov 2024** \u2014 WSJ and others disclose Salt Typhoon breaches of US telecoms (AT&T, Verizon, Lumen; later reported at least nine carriers), including access to wiretap/CALEA systems and comms of political figures.\n- **3 Dec 2024** \u2014 CISA/NSA/FBI + ACSC/CCCS/NCSC-NZ publish \"Enhanced Visibility and Hardening Guidance for Communications Infrastructure.\"\n- **17 Jan 2025** \u2014 US Treasury OFAC sanctions **Sichuan Juxinhe Network Technology Co., Ltd.** and an individual, tying the firm to Salt Typhoon.\n- **13 Feb 2025** \u2014 Recorded Future (Insikt/RedMike) reports exploitation of 1,000+ Cisco IOS XE devices (CVE-2023-20198/20273) Dec 2024\u2013Jan 2025.\n- **20 Feb 2025** \u2014 Cisco Talos publishes \"Weathering the Storm,\" confirming CVE-2018-0171 use, stolen credentials, and the JumbledPath utility.\n- **27 Aug 2025** \u2014 13+ nation multinational advisory **AA25-239A** published, naming associated PRC contractor firms and broadening the targeted-sector picture.\n\n## Detection & Hunting\n- **Network-device integrity monitoring:** alert on unauthorised config changes, new local accounts (/etc/passwd, /etc/shadow), added SSH authorized_keys, and loopback-address changes.\n- **Config monitoring & diffing:** continuously baseline and diff router/switch configs; flag new GRE tunnels, ACL modifications and unexpected SNMP/TFTP/FTP activity.\n- **Log integrity:** monitor for cleared logs (.bash_history, auth.log, wtmp/btmp/lastlog) \u2014 gaps are a strong indicator.\n- **NetFlow / traffic analysis:** hunt for GRE/tunnelled traffic, config exfil over FTP/TFTP, anomalous device-to-device SSH (especially sourced from loopback), and unexpected packet-capture activity.\n- Monitor management-plane access and any access to lawful-intercept/CALEA systems.\n\n## Mitigations\n- **Patch and harden Cisco/edge gear:** remediate CVE-2018-0171, CVE-2023-20198, CVE-2023-20273; disable Smart Install and the IOS XE HTTP/HTTPS web UI where not required.\n- **Reduce attack surface:** disable unneeded services/protocols (Telnet, unauthenticated SNMP, TFTP); restrict management interfaces to out-of-band/allow-listed hosts.\n- **Strong credential hygiene/MFA:** eliminate weak/legacy password encryption, rotate device credentials, enforce phishing-resistant MFA.\n- Apply the Dec 2024 Enhanced Visibility & Hardening Guidance and AA25-239A recommendations; centralise/forward logs to tamper-resistant storage.\n\n## Activity Log\n<!-- Append-only -->\n- _(seed)_ 2026-06-17 \u2014 Profile created.\n\n## Trend Tracking\n| Date | Event Type | Description | Source |\n|---|---|---|---|\n| | | | |\n\n## References\n- MITRE ATT&CK Group G1045 (Salt Typhoon): https://attack.mitre.org/groups/G1045/\n- CISA Enhanced Visibility and Hardening Guidance for Communications Infrastructure (Dec 2024): https://www.cisa.gov/resources-tools/resources/enhanced-visibility-and-hardening-guidance-communications-infrastructure\n- CISA news release on the Dec 2024 guide: https://www.cisa.gov/news-events/news/cisa-nsa-fbi-and-international-partners-publish-guide-protecting-communications-infrastructure\n- CISA Advisory AA25-239A (Aug 2025 multinational advisory): https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-239a\n- ASD's ACSC (Australia) listing of the same advisory: https://www.cyber.gov.au/about-us/view-all-content/alerts-and-advisories/countering-chinese-state-sponsored-actors-compromise-of-networks-worldwide-to-feed-global-espionage-system\n- US Treasury sanctions press release (Jan 2025): https://home.treasury.gov/news/press-releases/jy2792\n- Cisco Talos \"Weathering the storm\" (Feb 2025): https://blog.talosintelligence.com/salt-typhoon-analysis/\n- Trend Micro \"Game of Emperor: Unveiling Long Term Earth Estries Cyber Intrusions\" (Nov 2024): https://www.trendmicro.com/en_us/research/24/k/earth-estries.html\n- Kaspersky/Malpedia GhostEmperor (Demodex): https://malpedia.caad.fkie.fraunhofer.de/actor/ghostemperor\n- MITRE ATT&CK Software S1206 (JumbledPath): https://attack.mitre.org/software/S1206\n\n---\n*Profile generated for CyberSec Vault \u2014 2026-06-17*\n\n## Tags\n #verified\n\n---\n\n## Activity Log \u2014 2026-08-06\n**Chinese telcos retain deep US presence despite Salt Typhoon links (House committee).** A U.S. House committee report concluded that **three Chinese telecommunications giants** continue to hold footholds in the U.S. internet ecosystem despite their alleged role in prior Chinese hacking campaigns (incl. Salt Typhoon telecom intrusions). Policy/exposure signal \u2014 ongoing supply-chain and interconnection risk from PRC-linked carriers.\n\n### Trend Tracking\n- Reinforces persistence of PRC telecom access vectors underpinning Salt Typhoon-style operations; watch for regulatory action (FCC/House) and continued targeting of US carrier infrastructure.\n\n> Source: [The Record](https://therecord.media/chinese-hackers-telecoms-house) \u2014 2026-08-05",
    "aliases": [
     "GhostEmperor",
     "FamousSparrow",
@@ -1804,9 +1804,9 @@
   ]
  },
  "cve_sev": {
-  "Critical": 129,
-  "High": 104,
-  "Medium": 10,
+  "Critical": 133,
+  "High": 108,
+  "Medium": 12,
   "Low": 8
  },
  "cve_year": {
@@ -1820,8 +1820,8 @@
   "2022": 7,
   "2023": 9,
   "2024": 13,
-  "2025": 14,
-  "2026": 214
+  "2025": 15,
+  "2026": 233
  },
  "cve_month": {
   "2025-10": 1,
@@ -1829,7 +1829,7 @@
   "2026-05": 20,
   "2026-06": 108,
   "2026-07": 16,
-  "2026-08": 5
+  "2026-08": 17
  },
  "top_cve": [
   {
@@ -2418,7 +2418,7 @@
   },
   "CVE-2025-14174": {
    "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-14174.md",
-   "body": "# CVE-2025-14174\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2025\n\n## Summary\nDarkSword** (first public ~2026-03): Safari `WebContent` sandbox escape leveraging **WebGPU** to inject into the `mediaplaybackd` daemon, gaining privileged file-system access. Uses a chain of 6 flaws incl. zero-days: **CVE-2025-31277, CVE-2025-43529, CVE-2026-20700, CVE-2025-14174, CVE-2025-43510, CVE-2025-43520**. Impacts **iOS 18.4\u201318.7**.\n\n## Where it appears in this vault\n- `Threat_Intel/Malware/DarkSword-Leaked-Kit-Chinese-Actor-FakeLogin-GHOSTBLADE-2026.md` \u2014 DarkSword** (first public ~2026-03): Safari `WebContent` sandbox escape leveraging **WebGPU** to inject into the `mediaplaybackd` daemon, gaining privileged file-system access. Uses a chain of 6 flaws incl. zero-days: **CVE-2025-31277, CVE-2025-43529, CVE-2026-20700, CVE-2025-14174, CVE-2025-43510, CVE-2025-43520**. Impacts **iOS 18.4\u201318.7**.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-14174\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-14174\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-14174\n\n## Tags\n#cve #2025 #unrated #auto-stub",
+   "body": "# CVE-2025-14174\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2025\n\n## Summary\nDarkSword** (first public ~2026-03): Safari `WebContent` sandbox escape leveraging **WebGPU** to inject into the `mediaplaybackd` daemon, gaining privileged file-system access. Uses a chain of 6 flaws incl. zero-days: **CVE-2025-31277, CVE-2025-43529, CVE-2026-20700, CVE-2025-14174, CVE-2025-43510, CVE-2025-43520**. Impacts **iOS 18.4\u201318.7**.\n\n## Where it appears in this vault\n- `Threat_Intel/Malware/DarkSword-Leaked-Kit-Chinese-Actor-FakeLogin-GHOSTBLADE-2026.md` \u2014 DarkSword** (first public ~2026-03): Safari `WebContent` sandbox escape leveraging **WebGPU** to inject into the `mediaplaybackd` daemon, gaining privileged file-system access. Uses a chain of 6 flaws incl. zero-days: **CVE-2025-31277, CVE-2025-43529, CVE-2026-20700, CVE-2025-14174, CVE-2025-43510, CVE-2025-43520**. Impacts **iOS 18.4\u201318.7**.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-14174\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-14174\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-14174\n\n## Tags\n#cve #2025 #unrated #auto-stub #verified",
    "sev": "",
    "year": "2025",
    "kev": true,
@@ -2442,7 +2442,7 @@
   },
   "CVE-2025-31277": {
    "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-31277.md",
-   "body": "# CVE-2025-31277\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2025\n\n## Summary\nDarkSword** (first public ~2026-03): Safari `WebContent` sandbox escape leveraging **WebGPU** to inject into the `mediaplaybackd` daemon, gaining privileged file-system access. Uses a chain of 6 flaws incl. zero-days: **CVE-2025-31277, CVE-2025-43529, CVE-2026-20700, CVE-2025-14174, CVE-2025-43510, CVE-2025-43520**. Impacts **iOS 18.4\u201318.7**.\n\n## Where it appears in this vault\n- `Threat_Intel/Malware/DarkSword-Leaked-Kit-Chinese-Actor-FakeLogin-GHOSTBLADE-2026.md` \u2014 DarkSword** (first public ~2026-03): Safari `WebContent` sandbox escape leveraging **WebGPU** to inject into the `mediaplaybackd` daemon, gaining privileged file-system access. Uses a chain of 6 flaws incl. zero-days: **CVE-2025-31277, CVE-2025-43529, CVE-2026-20700, CVE-2025-14174, CVE-2025-43510, CVE-2025-43520**. Impacts **iOS 18.4\u201318.7**.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-31277\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-31277\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-31277\n\n## Tags\n#cve #2025 #unrated #auto-stub",
+   "body": "# CVE-2025-31277\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2025\n\n## Summary\nDarkSword** (first public ~2026-03): Safari `WebContent` sandbox escape leveraging **WebGPU** to inject into the `mediaplaybackd` daemon, gaining privileged file-system access. Uses a chain of 6 flaws incl. zero-days: **CVE-2025-31277, CVE-2025-43529, CVE-2026-20700, CVE-2025-14174, CVE-2025-43510, CVE-2025-43520**. Impacts **iOS 18.4\u201318.7**.\n\n## Where it appears in this vault\n- `Threat_Intel/Malware/DarkSword-Leaked-Kit-Chinese-Actor-FakeLogin-GHOSTBLADE-2026.md` \u2014 DarkSword** (first public ~2026-03): Safari `WebContent` sandbox escape leveraging **WebGPU** to inject into the `mediaplaybackd` daemon, gaining privileged file-system access. Uses a chain of 6 flaws incl. zero-days: **CVE-2025-31277, CVE-2025-43529, CVE-2026-20700, CVE-2025-14174, CVE-2025-43510, CVE-2025-43520**. Impacts **iOS 18.4\u201318.7**.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-31277\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-31277\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-31277\n\n## Tags\n#cve #2025 #unrated #auto-stub #verified",
    "sev": "",
    "year": "2025",
    "kev": true,
@@ -2450,7 +2450,7 @@
   },
   "CVE-2025-43510": {
    "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-43510.md",
-   "body": "# CVE-2025-43510\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2025\n\n## Summary\nDarkSword** (first public ~2026-03): Safari `WebContent` sandbox escape leveraging **WebGPU** to inject into the `mediaplaybackd` daemon, gaining privileged file-system access. Uses a chain of 6 flaws incl. zero-days: **CVE-2025-31277, CVE-2025-43529, CVE-2026-20700, CVE-2025-14174, CVE-2025-43510, CVE-2025-43520**. Impacts **iOS 18.4\u201318.7**.\n\n## Where it appears in this vault\n- `Threat_Intel/Malware/DarkSword-Leaked-Kit-Chinese-Actor-FakeLogin-GHOSTBLADE-2026.md` \u2014 DarkSword** (first public ~2026-03): Safari `WebContent` sandbox escape leveraging **WebGPU** to inject into the `mediaplaybackd` daemon, gaining privileged file-system access. Uses a chain of 6 flaws incl. zero-days: **CVE-2025-31277, CVE-2025-43529, CVE-2026-20700, CVE-2025-14174, CVE-2025-43510, CVE-2025-43520**. Impacts **iOS 18.4\u201318.7**.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-43510\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-43510\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-43510\n\n## Tags\n#cve #2025 #unrated #auto-stub",
+   "body": "# CVE-2025-43510\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2025\n\n## Summary\nDarkSword** (first public ~2026-03): Safari `WebContent` sandbox escape leveraging **WebGPU** to inject into the `mediaplaybackd` daemon, gaining privileged file-system access. Uses a chain of 6 flaws incl. zero-days: **CVE-2025-31277, CVE-2025-43529, CVE-2026-20700, CVE-2025-14174, CVE-2025-43510, CVE-2025-43520**. Impacts **iOS 18.4\u201318.7**.\n\n## Where it appears in this vault\n- `Threat_Intel/Malware/DarkSword-Leaked-Kit-Chinese-Actor-FakeLogin-GHOSTBLADE-2026.md` \u2014 DarkSword** (first public ~2026-03): Safari `WebContent` sandbox escape leveraging **WebGPU** to inject into the `mediaplaybackd` daemon, gaining privileged file-system access. Uses a chain of 6 flaws incl. zero-days: **CVE-2025-31277, CVE-2025-43529, CVE-2026-20700, CVE-2025-14174, CVE-2025-43510, CVE-2025-43520**. Impacts **iOS 18.4\u201318.7**.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-43510\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-43510\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-43510\n\n## Tags\n#cve #2025 #unrated #auto-stub #verified",
    "sev": "",
    "year": "2025",
    "kev": true,
@@ -2458,7 +2458,7 @@
   },
   "CVE-2025-43520": {
    "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-43520.md",
-   "body": "# CVE-2025-43520\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2025\n\n## Summary\nDarkSword** (first public ~2026-03): Safari `WebContent` sandbox escape leveraging **WebGPU** to inject into the `mediaplaybackd` daemon, gaining privileged file-system access. Uses a chain of 6 flaws incl. zero-days: **CVE-2025-31277, CVE-2025-43529, CVE-2026-20700, CVE-2025-14174, CVE-2025-43510, CVE-2025-43520**. Impacts **iOS 18.4\u201318.7**.\n\n## Where it appears in this vault\n- `Threat_Intel/Malware/DarkSword-Leaked-Kit-Chinese-Actor-FakeLogin-GHOSTBLADE-2026.md` \u2014 DarkSword** (first public ~2026-03): Safari `WebContent` sandbox escape leveraging **WebGPU** to inject into the `mediaplaybackd` daemon, gaining privileged file-system access. Uses a chain of 6 flaws incl. zero-days: **CVE-2025-31277, CVE-2025-43529, CVE-2026-20700, CVE-2025-14174, CVE-2025-43510, CVE-2025-43520**. Impacts **iOS 18.4\u201318.7**.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-43520\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-43520\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-43520\n\n## Tags\n#cve #2025 #unrated #auto-stub",
+   "body": "# CVE-2025-43520\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2025\n\n## Summary\nDarkSword** (first public ~2026-03): Safari `WebContent` sandbox escape leveraging **WebGPU** to inject into the `mediaplaybackd` daemon, gaining privileged file-system access. Uses a chain of 6 flaws incl. zero-days: **CVE-2025-31277, CVE-2025-43529, CVE-2026-20700, CVE-2025-14174, CVE-2025-43510, CVE-2025-43520**. Impacts **iOS 18.4\u201318.7**.\n\n## Where it appears in this vault\n- `Threat_Intel/Malware/DarkSword-Leaked-Kit-Chinese-Actor-FakeLogin-GHOSTBLADE-2026.md` \u2014 DarkSword** (first public ~2026-03): Safari `WebContent` sandbox escape leveraging **WebGPU** to inject into the `mediaplaybackd` daemon, gaining privileged file-system access. Uses a chain of 6 flaws incl. zero-days: **CVE-2025-31277, CVE-2025-43529, CVE-2026-20700, CVE-2025-14174, CVE-2025-43510, CVE-2025-43520**. Impacts **iOS 18.4\u201318.7**.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-43520\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-43520\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-43520\n\n## Tags\n#cve #2025 #unrated #auto-stub #verified",
    "sev": "",
    "year": "2025",
    "kev": true,
@@ -2466,7 +2466,15 @@
   },
   "CVE-2025-43529": {
    "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-43529.md",
-   "body": "# CVE-2025-43529\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2025\n\n## Summary\nDarkSword** (first public ~2026-03): Safari `WebContent` sandbox escape leveraging **WebGPU** to inject into the `mediaplaybackd` daemon, gaining privileged file-system access. Uses a chain of 6 flaws incl. zero-days: **CVE-2025-31277, CVE-2025-43529, CVE-2026-20700, CVE-2025-14174, CVE-2025-43510, CVE-2025-43520**. Impacts **iOS 18.4\u201318.7**.\n\n## Where it appears in this vault\n- `Threat_Intel/Malware/DarkSword-Leaked-Kit-Chinese-Actor-FakeLogin-GHOSTBLADE-2026.md` \u2014 DarkSword** (first public ~2026-03): Safari `WebContent` sandbox escape leveraging **WebGPU** to inject into the `mediaplaybackd` daemon, gaining privileged file-system access. Uses a chain of 6 flaws incl. zero-days: **CVE-2025-31277, CVE-2025-43529, CVE-2026-20700, CVE-2025-14174, CVE-2025-43510, CVE-2025-43520**. Impacts **iOS 18.4\u201318.7**.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-43529\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-43529\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-43529\n\n## Tags\n#cve #2025 #unrated #auto-stub",
+   "body": "# CVE-2025-43529\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2025\n\n## Summary\nDarkSword** (first public ~2026-03): Safari `WebContent` sandbox escape leveraging **WebGPU** to inject into the `mediaplaybackd` daemon, gaining privileged file-system access. Uses a chain of 6 flaws incl. zero-days: **CVE-2025-31277, CVE-2025-43529, CVE-2026-20700, CVE-2025-14174, CVE-2025-43510, CVE-2025-43520**. Impacts **iOS 18.4\u201318.7**.\n\n## Where it appears in this vault\n- `Threat_Intel/Malware/DarkSword-Leaked-Kit-Chinese-Actor-FakeLogin-GHOSTBLADE-2026.md` \u2014 DarkSword** (first public ~2026-03): Safari `WebContent` sandbox escape leveraging **WebGPU** to inject into the `mediaplaybackd` daemon, gaining privileged file-system access. Uses a chain of 6 flaws incl. zero-days: **CVE-2025-31277, CVE-2025-43529, CVE-2026-20700, CVE-2025-14174, CVE-2025-43510, CVE-2025-43520**. Impacts **iOS 18.4\u201318.7**.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-43529\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-43529\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-43529\n\n## Tags\n#cve #2025 #unrated #auto-stub #verified",
+   "sev": "",
+   "year": "2025",
+   "kev": true,
+   "apts": []
+  },
+  "CVE-2025-59287": {
+   "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-59287.md",
+   "body": "# CVE-2025-59287\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2025\n\n## Summary\nResult: attacker-controlled software distributed through **trusted patch-management** infrastructure. (Distinct from \u2014 but conceptually adjacent to \u2014 the 2025 WSUS RCE CVE-2025-59287 exploitation wave.)\n\n## Where it appears in this vault\n- `Guides/WSUS-SQL-Server-Malicious-Update-Delivery-2026.md` \u2014 Result: attacker-controlled software distributed through **trusted patch-management** infrastructure. (Distinct from \u2014 but conceptually adjacent to \u2014 the 2025 WSUS RCE CVE-2025-59287 exploitation wave.)\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-59287\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-59287\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-59287\n\n## Tags\n#cve #2025 #unrated #auto-stub",
    "sev": "",
    "year": "2025",
    "kev": true,
@@ -2544,6 +2552,14 @@
    "sev": "Critical",
    "year": "2026",
    "kev": true,
+   "apts": []
+  },
+  "CVE-2026-20303": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-20303-Cisco-SDWAN-IOSXE-August-2026.md",
+   "body": "# Cisco Catalyst SD-WAN & IOS XE \u2014 August 2026 Patch Batch (3\u00d7 CVSS 9.9)\n\n\u2705 **Verification:** Verified \u2014 web-confirmed (THN, SecurityWeek, Cisco advisory)\n\n**Type:** Vendor patch batch / critical CVEs | **Date:** 2026-08-06\n\n## Summary\nCisco patched **12 Catalyst SD-WAN and IOS XE flaws**, including **three CVSS 9.9** bugs and a **9.8 command-injection** issue. Found via **internal testing using frontier AI models**; **not known to be actively exploited**.\n\n## Key CVEs\n- **CVE-2026-20303** (9.9) \u2014 SD-WAN improper input validation.\n- **CVE-2026-20304** (9.9) \u2014 SD-WAN improper access control.\n- **CVE-2026-20310** (9.9) \u2014 SD-WAN improper link resolution before file access.\n- **CVE-2026-20272** (9.8) \u2014 IOS XE improper neutralization of special elements (command / OS / argument injection).\n- **CVE-2026-20267** (9.0) \u2014 IOS XE improper access control.\n\n## Fixed Versions\nIOS XE **17.9.10, 17.12.8, 17.15.6, 17.18.4/17.18.4a, 26.1.2** (first fixed).\n\n## Action\n- Patch to fixed IOS XE trains; prioritize internet-reachable SD-WAN managers/edges.\n- Restrict management-plane access; monitor for injection attempts pending upgrade.\n\n> Source: [The Hacker News](https://thehackernews.com/2026/08/cisco-patches-12-sd-wan-and-ios-xe.html) \u2014 2026-08-06 (RSS: THN feedburner)\n> Source: [SecurityWeek](https://www.securityweek.com/cisco-patches-critical-sd-wan-ios-xe-fmc-vulnerabilities/) \u2014 2026-08-06\n\n## Tags\n#verified #cve #cisco",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
    "apts": []
   },
   "CVE-2026-26980": {
@@ -2834,6 +2850,14 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-48323": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-48323.md",
+   "body": "# CVE-2026-48323\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2026\n\n## Summary\nAdobe Campaign Classic CVE-2026-48323 (CVSS 10, unauth template-injection RCE) \u2014 @SecAlertsCo, dated Aug 7 (>24h). Consider capture next run if not patched/tracked.\n\n## Where it appears in this vault\n- `X_Intel/x-intel-2026-08-08.md` \u2014 Adobe Campaign Classic CVE-2026-48323 (CVSS 10, unauth template-injection RCE) \u2014 @SecAlertsCo, dated Aug 7 (>24h). Consider capture next run if not patched/tracked.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-48323\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-48323\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-48323\n\n## Tags\n#cve #2026 #critical #auto-stub",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-48907": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-48907.md",
    "body": "# CVE-2026-48907\n\n\u2705 **Verification:** Verified \u2014 4 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2026\n\n## Summary\n(X feed) | 2026-06-28 | @DarkWebInformer (repost) | CVE-2026-48907 Joomla Content Editor (JCE <2.9.99.5) \u2014 GitHub scanner github.com/gh1mau/masta-cve-2026-48907 | -> APPENDED Threat_Intel/CVEs/2026/Critical/Joomla-JCE-Plugin-MaxSeverity-RCE-2026.md\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 (X feed) | 2026-06-28 | @DarkWebInformer (repost) | CVE-2026-48907 Joomla Content Editor (JCE <2.9.99.5) \u2014 GitHub scanner github.com/gh1mau/masta-cve-2026-48907 | -> APPENDED Threat_Intel/CVEs/2026/Critical/Joomla-JCE-Plugin-MaxSeverity-RCE-2026.md\n- `X_Intel/x-intel-tracker.md` \u2014 Methodology: sandbox curl egress blocked (HTTP=000) \u2014 web_fetch fallback. **BleepingComputer** readable (channel Jun28 13:52 GMT; freshest in-window-adjacent = \"Clean GitHub repo\" Jun27 14:22 UTC [kept \u2014 new/untracked, missed by prior sweep]; rest Jun25\u201326 already tracked + sponsored/Anthropic-Cowork product items skipped). **SANS ISC** readable (lastBuild Jun28 14:00; newest = YARA-X release Jun28 07:56 [kept \u2014 new since last sweep, which saw lastBuild Jun27]; \"Ports Hear\" Jun25 + \"Linux Process Masquerading\" Jun24 tracked). **Malwarebytes** readable but freshest Jun26 12:44 (tracked, out-of-window). **THN feedburner** STALE (newest Jun13). **Project Zero** out-of-window (newest May13 Pixel10). **Krebs** = reCAPTCHA challenge page. **SecurityWeek**, **The Record** = empty bodies. **Schneier** = gzip/binary undecodable. Both kept items are ~just outside the strict 24h window but newly surfaced and untracked, so captured per \"capture new untracked intel\" intent. Freshest CVE/breach/TTP intel this sweep again led by the live X feed (Splunk CVE-2026-20251, StegoAd Edge extensions, libssh2 CVE-2026-55200 PoC, pedit COW CVE-2026-46331 PoC, Joomla CVE-2026-48907 scanner, Akira ransomware DFIR).\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-48907\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-48907\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-48907\n\n## Tags\n#cve #2026 #critical #auto-stub #verified",
@@ -2900,7 +2924,7 @@
   },
   "CVE-2026-51302": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-51302.md",
-   "body": "# CVE-2026-51302\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2026\n\n## Summary\nLLM-Hallucinated CVEs Against SQLite \u2014 Fake CVE-2026-51302 (Bogus CVSS 10.0)\n\n## Where it appears in this vault\n- `Guides/AI-BugBounty/Hallucinated-SQLite-CVEs-Fake-CVE-2026-51302-LLM-Slop-2026.md` \u2014 LLM-Hallucinated CVEs Against SQLite \u2014 Fake CVE-2026-51302 (Bogus CVSS 10.0)\n- `Guides/AI-BugBounty/Hallucinated-SQLite-CVEs-Fake-CVE-2026-51302-LLM-Slop-2026.md` \u2014 A wave of **fabricated, LLM-generated CVEs** has been filed against **SQLite**, including **CVE-2026-51302** (assigned 2026-07-27) which was floated with a **CVSS 10.0** despite describing a vulnerability that **does not exist**. SQLite author **Richard Hipp** confirmed on the SQLite forum that **dozens more fake CVEs** were filed and that a random sampling has revealed **none that are valid** \u2014 \"if you see new CVEs against SQLite, you can probably assume they are fake.\" **SuSE** ran several through an LLM (Claude) which concluded they were **fabricated**; **JFrog Security** publicly corroborated.\n- `Guides/AI-BugBounty/Hallucinated-SQLite-CVEs-Fake-CVE-2026-51302-LLM-Slop-2026.md` \u2014 Source: [NVD \u2014 CVE-2026-51302](https://nvd.nist.gov/vuln/detail/CVE-2026-51302)\n- `X_Intel/x-intel-tracker.md` \u2014 (X feed) | 2026-08-03 | @IntCyberDigest | LLM-hallucinated fake SQLite CVEs incl. CVE-2026-51302 (bogus CVSS 10.0); Richard Hipp says dozens more fake; JFrog+SuSE(Claude) confirm fabricated; MITRE take-down asymmetry (\"slopocalypse\"); web-verified | -> Guides/AI-BugBounty/Hallucinated-SQLite-CVEs-Fake-CVE-2026-51302-LLM-Slop-2026.md (new)\n- `X_Intel/x-intel-tracker.md` \u2014 Verification: web-verified via WebSearch \u2014 SQLite fake CVE-2026-51302 (JFrog/SuSE/SQLite forum), UK police leak (actor corrected LulzSec\u2192ExfilSquad; PNLD+DfE), DarkSword/GHOSTBLADE, NullReceiver/EtherHiding (UNC5342), Rails CVE-2026-66066 (Rapid7 KindaRails2Shell, CVSS 9.5).\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-51302\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-51302\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-51302\n\n## Tags\n#cve #2026 #critical #auto-stub",
+   "body": "# CVE-2026-51302\n\n\u2705 **Verification:** Verified \u2014 4 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2026\n\n## Summary\nLLM-Hallucinated CVEs Against SQLite \u2014 Fake CVE-2026-51302 (Bogus CVSS 10.0)\n\n## Where it appears in this vault\n- `Guides/AI-BugBounty/Hallucinated-SQLite-CVEs-Fake-CVE-2026-51302-LLM-Slop-2026.md` \u2014 LLM-Hallucinated CVEs Against SQLite \u2014 Fake CVE-2026-51302 (Bogus CVSS 10.0)\n- `Guides/AI-BugBounty/Hallucinated-SQLite-CVEs-Fake-CVE-2026-51302-LLM-Slop-2026.md` \u2014 A wave of **fabricated, LLM-generated CVEs** has been filed against **SQLite**, including **CVE-2026-51302** (assigned 2026-07-27) which was floated with a **CVSS 10.0** despite describing a vulnerability that **does not exist**. SQLite author **Richard Hipp** confirmed on the SQLite forum that **dozens more fake CVEs** were filed and that a random sampling has revealed **none that are valid** \u2014 \"if you see new CVEs against SQLite, you can probably assume they are fake.\" **SuSE** ran several through an LLM (Claude) which concluded they were **fabricated**; **JFrog Security** publicly corroborated.\n- `Guides/AI-BugBounty/Hallucinated-SQLite-CVEs-Fake-CVE-2026-51302-LLM-Slop-2026.md` \u2014 Source: [NVD \u2014 CVE-2026-51302](https://nvd.nist.gov/vuln/detail/CVE-2026-51302)\n- `X_Intel/x-intel-tracker.md` \u2014 (X feed) | 2026-08-03 | @IntCyberDigest | LLM-hallucinated fake SQLite CVEs incl. CVE-2026-51302 (bogus CVSS 10.0); Richard Hipp says dozens more fake; JFrog+SuSE(Claude) confirm fabricated; MITRE take-down asymmetry (\"slopocalypse\"); web-verified | -> Guides/AI-BugBounty/Hallucinated-SQLite-CVEs-Fake-CVE-2026-51302-LLM-Slop-2026.md (new)\n- `X_Intel/x-intel-tracker.md` \u2014 Verification: web-verified via WebSearch \u2014 SQLite fake CVE-2026-51302 (JFrog/SuSE/SQLite forum), UK police leak (actor corrected LulzSec\u2192ExfilSquad; PNLD+DfE), DarkSword/GHOSTBLADE, NullReceiver/EtherHiding (UNC5342), Rails CVE-2026-66066 (Rapid7 KindaRails2Shell, CVSS 9.5).\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-51302\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-51302\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-51302\n\n## Tags\n#cve #2026 #critical #auto-stub #verified",
    "sev": "Critical",
    "year": "2026",
    "kev": false,
@@ -3004,7 +3028,7 @@
   },
   "CVE-2026-59309": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-59309.md",
-   "body": "# CVE-2026-59309\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2026\n\n## Summary\nCVE-2026-59309** (CVSS **9.8**) \u2014 **authentication bypass** in the **VMware Directory Service** used by vCenter for identity; unauthenticated, network-accessible. **No workaround.**\n\n## Where it appears in this vault\n- `Threat_Intel/VMware-ESXi-vCenter-Ransomware-Exploitation-VMSA-2026-0006-2026.md` \u2014 CVE-2026-59309** (CVSS **9.8**) \u2014 **authentication bypass** in the **VMware Directory Service** used by vCenter for identity; unauthenticated, network-accessible. **No workaround.**\n- `X_Intel/x-intel-tracker.md` \u2014 2084887132603085174 | 2026-08-05 | @ridvanyagli | VMware ESXi/vCenter ransomware attacks begun (VMSA-2026-0006; CVE-2026-59309/59310 CVSS 9.8 auth-bypass); web-verified | -> Threat_Intel/VMware-ESXi-vCenter-Ransomware-Exploitation-VMSA-2026-0006-2026.md (new)\n- `X_Intel/x-intel-tracker.md` \u2014 Verification: web-verified via WebSearch \u2014 CVE-2026-18574 (CheckPoint sk185222/NVD), CVE-2026-66902 (oss-sec), Pass-ta-key (Unit 42/THN/Malwarebytes), WebKit leaks (Mysk/9to5Mac), Remus EtherHiding (Unit 42/SOCPrime), ChainDrop/Shai-Hulud (Microsoft/Elastic/CSA-SG), CISA KEV Langflow/N-central/Tomcat + DeepSeek CVE-2026-34486, Claude Mythos/GPT-5.6 UK AISI (The Record/BC/THN), VMSA-2026-0006 CVE-2026-59309/59310.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-59309\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-59309\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-59309\n\n## Tags\n#cve #2026 #critical #auto-stub",
+   "body": "# CVE-2026-59309\n\n\u2705 **Verification:** Verified \u2014 4 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2026\n\n## Summary\nCVE-2026-59309** (CVSS **9.8**) \u2014 **authentication bypass** in the **VMware Directory Service** used by vCenter for identity; unauthenticated, network-accessible. **No workaround.**\n\n## Where it appears in this vault\n- `Threat_Intel/VMware-ESXi-vCenter-Ransomware-Exploitation-VMSA-2026-0006-2026.md` \u2014 CVE-2026-59309** (CVSS **9.8**) \u2014 **authentication bypass** in the **VMware Directory Service** used by vCenter for identity; unauthenticated, network-accessible. **No workaround.**\n- `X_Intel/x-intel-tracker.md` \u2014 2084887132603085174 | 2026-08-05 | @ridvanyagli | VMware ESXi/vCenter ransomware attacks begun (VMSA-2026-0006; CVE-2026-59309/59310 CVSS 9.8 auth-bypass); web-verified | -> Threat_Intel/VMware-ESXi-vCenter-Ransomware-Exploitation-VMSA-2026-0006-2026.md (new)\n- `X_Intel/x-intel-tracker.md` \u2014 Verification: web-verified via WebSearch \u2014 CVE-2026-18574 (CheckPoint sk185222/NVD), CVE-2026-66902 (oss-sec), Pass-ta-key (Unit 42/THN/Malwarebytes), WebKit leaks (Mysk/9to5Mac), Remus EtherHiding (Unit 42/SOCPrime), ChainDrop/Shai-Hulud (Microsoft/Elastic/CSA-SG), CISA KEV Langflow/N-central/Tomcat + DeepSeek CVE-2026-34486, Claude Mythos/GPT-5.6 UK AISI (The Record/BC/THN), VMSA-2026-0006 CVE-2026-59309/59310.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-59309\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-59309\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-59309\n\n## Tags\n#cve #2026 #critical #auto-stub #verified",
    "sev": "Critical",
    "year": "2026",
    "kev": false,
@@ -3012,7 +3036,7 @@
   },
   "CVE-2026-59310": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-59310.md",
-   "body": "# CVE-2026-59310\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2026\n\n## Summary\nCVE-2026-59310** (CVSS **9.8**) \u2014 paired critical, unauthenticated network attacker. **No workaround.**\n\n## Where it appears in this vault\n- `Threat_Intel/VMware-ESXi-vCenter-Ransomware-Exploitation-VMSA-2026-0006-2026.md` \u2014 CVE-2026-59310** (CVSS **9.8**) \u2014 paired critical, unauthenticated network attacker. **No workaround.**\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-59310\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-59310\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-59310\n\n## Tags\n#cve #2026 #critical #auto-stub",
+   "body": "# CVE-2026-59310\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2026\n\n## Summary\nCVE-2026-59310** (CVSS **9.8**) \u2014 paired critical, unauthenticated network attacker. **No workaround.**\n\n## Where it appears in this vault\n- `Threat_Intel/VMware-ESXi-vCenter-Ransomware-Exploitation-VMSA-2026-0006-2026.md` \u2014 CVE-2026-59310** (CVSS **9.8**) \u2014 paired critical, unauthenticated network attacker. **No workaround.**\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-59310\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-59310\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-59310\n\n## Tags\n#cve #2026 #critical #auto-stub #verified",
    "sev": "Critical",
    "year": "2026",
    "kev": false,
@@ -3044,7 +3068,7 @@
   },
   "CVE-2026-66066": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-66066-Rails-ActiveStorage-KindaRails2Shell-libvips-FileRead-RCE.md",
-   "body": "# CVE-2026-66066 \u2014 Ruby on Rails Active Storage \"KindaRails2Shell\" (libvips) Arbitrary File Read \u2192 RCE\n\n**CVSSv4:** 9.5 (Critical) \u2014 CWE-1188 (Initialization of a Resource with an Insecure Default)\n**Disclosed:** Rails security advisory 2026-07-29; press coverage 2026-08-01. Full details embargoed until no later than 2026-08-28.\n\n## Summary\nA critical vulnerability in Rails **Active Storage** image processing when used with the **libvips** image-processing library. An **unauthenticated** attacker who can submit an image upload to an affected app can read arbitrary files accessible to the Rails application process. Exposed secrets (credentials, tokens, `secret_key_base`) can then be leveraged to achieve **remote code execution** or lateral movement to connected systems. Dubbed **KindaRails2Shell** by Rapid7.\n\n## Affected / Fixed\n- Vulnerable when the app uses **libvips** for Active Storage image processing **and** accepts image uploads from untrusted users.\n- Affected: Active Storage **< 7.2.3.2**, **8.0.x < 8.0.5.1**, **8.1.x < 8.1.3.1**.\n- Fixed: **7.2.3.2 / 8.0.5.1 / 8.1.3.1**. Confirm **libvips \u2265 8.13**.\n\n## Mitigation\n- Patch to the fixed Active Storage release; then **rotate every secret the app can read**.\n- On libvips \u2265 8.13: set env `VIPS_BLOCK_UNTRUSTED` or call `Vips.block_untrusted(true)` (ruby-vips \u2265 2.2.1) to temporarily disable the vulnerable path.\n\n## Bug-bounty / pentest relevance\nTest any Rails target that accepts image uploads (avatars, attachments) and uses `image_processing`/libvips. File-read primitive \u2192 grab `config/master.key` / `secret_key_base` \u2192 forge cookies / deserialization \u2192 RCE. Embargoed technical detail (\u2264 Aug 28) means a PoC window is likely imminent.\n\n> Source: [BleepingComputer \u2014 Rails patches critical Active Storage flaw with RCE potential](https://www.bleepingcomputer.com/news/security/rails-patches-critical-active-storage-flaw-with-rce-potential/) \u2014 2026-08-01\n> Source: [Rapid7 \u2014 KindaRails2Shell CVE-2026-66066](https://www.rapid7.com/blog/post/etr-kindarails2shell-cve-2026-66066-critical-arbitrary-file-read-and-possible-remote-code-execution-in-ruby-on-rails/)\n> Source: [The Hacker News \u2014 Critical Rails Flaw Could Let Unauthenticated Attackers Read Server Files](https://thehackernews.com/2026/07/critical-rails-flaw-could-let.html)",
+   "body": "# CVE-2026-66066 \u2014 Ruby on Rails Active Storage \"KindaRails2Shell\" (libvips) Arbitrary File Read \u2192 RCE\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n**CVSSv4:** 9.5 (Critical) \u2014 CWE-1188 (Initialization of a Resource with an Insecure Default)\n**Disclosed:** Rails security advisory 2026-07-29; press coverage 2026-08-01. Full details embargoed until no later than 2026-08-28.\n\n## Summary\nA critical vulnerability in Rails **Active Storage** image processing when used with the **libvips** image-processing library. An **unauthenticated** attacker who can submit an image upload to an affected app can read arbitrary files accessible to the Rails application process. Exposed secrets (credentials, tokens, `secret_key_base`) can then be leveraged to achieve **remote code execution** or lateral movement to connected systems. Dubbed **KindaRails2Shell** by Rapid7.\n\n## Affected / Fixed\n- Vulnerable when the app uses **libvips** for Active Storage image processing **and** accepts image uploads from untrusted users.\n- Affected: Active Storage **< 7.2.3.2**, **8.0.x < 8.0.5.1**, **8.1.x < 8.1.3.1**.\n- Fixed: **7.2.3.2 / 8.0.5.1 / 8.1.3.1**. Confirm **libvips \u2265 8.13**.\n\n## Mitigation\n- Patch to the fixed Active Storage release; then **rotate every secret the app can read**.\n- On libvips \u2265 8.13: set env `VIPS_BLOCK_UNTRUSTED` or call `Vips.block_untrusted(true)` (ruby-vips \u2265 2.2.1) to temporarily disable the vulnerable path.\n\n## Bug-bounty / pentest relevance\nTest any Rails target that accepts image uploads (avatars, attachments) and uses `image_processing`/libvips. File-read primitive \u2192 grab `config/master.key` / `secret_key_base` \u2192 forge cookies / deserialization \u2192 RCE. Embargoed technical detail (\u2264 Aug 28) means a PoC window is likely imminent.\n\n> Source: [BleepingComputer \u2014 Rails patches critical Active Storage flaw with RCE potential](https://www.bleepingcomputer.com/news/security/rails-patches-critical-active-storage-flaw-with-rce-potential/) \u2014 2026-08-01\n> Source: [Rapid7 \u2014 KindaRails2Shell CVE-2026-66066](https://www.rapid7.com/blog/post/etr-kindarails2shell-cve-2026-66066-critical-arbitrary-file-read-and-possible-remote-code-execution-in-ruby-on-rails/)\n> Source: [The Hacker News \u2014 Critical Rails Flaw Could Let Unauthenticated Attackers Read Server Files](https://thehackernews.com/2026/07/critical-rails-flaw-could-let.html)\n\n## Tags\n#verified",
    "sev": "Critical",
    "year": "2026",
    "kev": false,
@@ -3060,7 +3084,15 @@
   },
   "CVE-2026-66902": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-66902-GoogleAuth-Perl-OS-Command-Injection.md",
-   "body": "# CVE-2026-66902 \u2014 Google::Auth (Perl) OS Command Injection via external_account credentials\n\n\u26a0\ufe0f **Verification:** Web-verified (oss-sec advisory, Feedly, OpenCVE)\n\n**Type:** OS command injection (CWE-78 / CWE-829) | **Severity:** Critical (CVSS 9.8) | **Date:** 2026-08-05\n\n## Summary\n**Google::Auth** versions **before 0.06** for **Perl** run a command named in an `external_account` credentials JSON via an **ungated `system()` call**. Any actor who can supply or modify the credentials JSON can inject code that runs as the process loading the credentials.\n\n## Technical Detail\n- The **Pluggable** subclass reads `credential_source.executable.command` from the credentials JSON and runs it as `system($command)` \u2014 a **single-argument** call, so the whole string is passed to `/bin/sh -c`.\n- The `environment_variables` map from the same JSON is copied into `%ENV` first.\n- Path is reached from the standard **Application Default Credentials (ADC)** flow, including a `\"type\": \"external_account\"` config read from the file named by `GOOGLE_APPLICATION_CREDENTIALS`.\n\n## Impact\nCode execution as the loading process wherever an attacker-controlled or attacker-modifiable ADC file is honored (CI runners, misconfigured service accounts, shared credential paths).\n\n## Fix\n- Upgrade to **Google-Auth \u2265 0.06**, which now **throws unless** `GOOGLE_EXTERNAL_ACCOUNT_ALLOW_EXECUTABLES=1` is set.\n- Audit for untrusted/writable `GOOGLE_APPLICATION_CREDENTIALS` paths.\n\n> Source: [oss-sec advisory](https://seclists.org/oss-sec/2026/q3/435) \u2014 2026-08-05 (via @SecAlertsCo, X feed)",
+   "body": "# CVE-2026-66902 \u2014 Google::Auth (Perl) OS Command Injection via external_account credentials\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n**Type:** OS command injection (CWE-78 / CWE-829) | **Severity:** Critical (CVSS 9.8) | **Date:** 2026-08-05\n\n## Summary\n**Google::Auth** versions **before 0.06** for **Perl** run a command named in an `external_account` credentials JSON via an **ungated `system()` call**. Any actor who can supply or modify the credentials JSON can inject code that runs as the process loading the credentials.\n\n## Technical Detail\n- The **Pluggable** subclass reads `credential_source.executable.command` from the credentials JSON and runs it as `system($command)` \u2014 a **single-argument** call, so the whole string is passed to `/bin/sh -c`.\n- The `environment_variables` map from the same JSON is copied into `%ENV` first.\n- Path is reached from the standard **Application Default Credentials (ADC)** flow, including a `\"type\": \"external_account\"` config read from the file named by `GOOGLE_APPLICATION_CREDENTIALS`.\n\n## Impact\nCode execution as the loading process wherever an attacker-controlled or attacker-modifiable ADC file is honored (CI runners, misconfigured service accounts, shared credential paths).\n\n## Fix\n- Upgrade to **Google-Auth \u2265 0.06**, which now **throws unless** `GOOGLE_EXTERNAL_ACCOUNT_ALLOW_EXECUTABLES=1` is set.\n- Audit for untrusted/writable `GOOGLE_APPLICATION_CREDENTIALS` paths.\n\n> Source: [oss-sec advisory](https://seclists.org/oss-sec/2026/q3/435) \u2014 2026-08-05 (via @SecAlertsCo, X feed)\n\n## Tags\n#unverified",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-66909": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-66909-Apache-CXF-JMS-Deserialization-RCE.md",
+   "body": "# CVE-2026-66909 \u2014 Apache CXF JMS ObjectMessage Deserialization RCE\n\n**Severity:** Critical (CVSS 9.8)\n**Status:** Patched\n**Date captured:** 2026-08-08\n\n## Summary\nApache CXF's JMS transport deserializes the body of any inbound JMS `ObjectMessage` using native Java deserialization with **zero type restrictions**. Any attacker able to place a message on the service's JMS destination can submit a malicious serialized object \u2014 leading to denial of service or, if a suitable gadget class is on the classpath, **remote code execution**. No authentication beyond the ability to write to the queue is required.\n\n## Affected / Fixed\n- Fixed in Apache CXF **4.2.3**, **4.1.8**, and **3.6.12**.\n- The fix disables `ObjectMessage` deserialization by default, with a config switch to re-enable if needed.\n\n## Remediation\n- Upgrade to a fixed version immediately.\n- Restrict who can write to the JMS destination; do not expose broker queues to untrusted producers.\n- Audit classpath for known deserialization gadget chains.\n\n## Sources\n- X: @SecAlertsCo \u2014 https://x.com/SecAlertsCo/status/2085875335699009873 (2026-08-07)\n- INCIBE-CERT: https://www.incibe.es/incibe-cert/alerta-temprana/vulnerabilidades/cve-2026-66909",
    "sev": "Critical",
    "year": "2026",
    "kev": false,
@@ -3079,7 +3111,7 @@
    "body": "# CVE-2026-8037 \u2014 Progress Kemp LoadMaster Unauthenticated Root Command Execution\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n**Severity:** Critical\n**Product:** Progress Kemp LoadMaster (load balancer / ADC)\n**Type:** Unauthenticated API abuse \u2192 arbitrary root command execution\n**Exploit status:** Public PoC available\n\n## Summary\nA critical flaw in the Progress Kemp LoadMaster management API lets **unauthenticated attackers run commands as root** when the API is enabled. A public PoC is out, raising the risk of opportunistic exploitation against internet-exposed LoadMaster management interfaces.\n\n## Impact\n- Full device compromise (root) on the LoadMaster ADC.\n- LoadMasters commonly sit in front of critical web apps \u2192 strong pivot / MITM position.\n\n## Remediation\n- Patch to the fixed LoadMaster firmware per Progress advisory.\n- Restrict / firewall the management API; do not expose it to the internet.\n- If the API is not required, disable it.\n\n> Source: [@TheHackersNews (X) \u2014 Public PoC for CVE-2026-8037 Progress Kemp LoadMaster](https://x.com/TheHackersNews) \u2014 2026-06-30\n\n## Tags\n #cve #rce #unauth #unverified",
    "sev": "Critical",
    "year": "2026",
-   "kev": false,
+   "kev": true,
    "apts": []
   },
   "CVE-2026-9082": {
@@ -3188,7 +3220,15 @@
   },
   "CVE-2026-18574": {
    "file": "Threat_Intel/CVEs/2026/High/CVE-2026-18574-CheckPoint-Management-Auth-Bypass-RCE.md",
-   "body": "# CVE-2026-18574 \u2014 Check Point Security Management Authentication Bypass \u2192 Command Execution\n\n\u26a0\ufe0f **Verification:** Web-verified (Check Point sk185222, cybersecuritynews, gbhackers, NVD)\n\n**Type:** Authentication bypass \u2192 arbitrary command execution | **Severity:** High | **Date:** 2026-08-04\n\n## Summary\nCheck Point patched a high-severity authentication-bypass vulnerability (**CVE-2026-18574**) that lets an **unauthenticated attacker with network access** to a management server **bypass Management authentication and execute arbitrary commands**, resulting in **full takeover** of the Security Management system \u2014 firewall policies, gateway configs, administrator access, and all managed security infrastructure.\n\n## Affected\n- **Security Management Server** and **Multi-Domain Security Management Server**.\n- Versions **R80, R80.10, R80.20, R80.30, R80.40, R81, R81.10** \u2014 all **end-of-support**.\n- **Smart-1 Cloud** customers already protected.\n\n## Status\n- Discovered **internally**; Check Point reports **no evidence of in-the-wild exploitation**.\n- Fixed via **Jumbo Hotfix Accumulator** updates.\n\n## Mitigation\n- Apply the Jumbo Hotfix; upgrade off EOL versions.\n- **Restrict network access to management interfaces**; never expose them to untrusted networks.\n\n## Notes / Related\n- Distinct from **CVE-2026-16232** (Check Point SmartConsole auth bypass, CISA KEV \u2014 separate note in vault) and **CVE-2026-50751** (Remote Access VPN IKEv1 auth bypass). Check Point management/VPN auth-bypass is a recurring 2026 theme.\n\n> Source: [Cyber Security News](https://cybersecuritynews.com/check-point-authentication-bypass-flaw/) \u2014 2026-08-04 (via @The_Cyber_News, X bookmark)\n> Source: [Check Point sk185222](https://support.checkpoint.com/results/sk/sk185222)",
+   "body": "# CVE-2026-18574 \u2014 Check Point Security Management Authentication Bypass \u2192 Command Execution\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n**Type:** Authentication bypass \u2192 arbitrary command execution | **Severity:** High | **Date:** 2026-08-04\n\n## Summary\nCheck Point patched a high-severity authentication-bypass vulnerability (**CVE-2026-18574**) that lets an **unauthenticated attacker with network access** to a management server **bypass Management authentication and execute arbitrary commands**, resulting in **full takeover** of the Security Management system \u2014 firewall policies, gateway configs, administrator access, and all managed security infrastructure.\n\n## Affected\n- **Security Management Server** and **Multi-Domain Security Management Server**.\n- Versions **R80, R80.10, R80.20, R80.30, R80.40, R81, R81.10** \u2014 all **end-of-support**.\n- **Smart-1 Cloud** customers already protected.\n\n## Status\n- Discovered **internally**; Check Point reports **no evidence of in-the-wild exploitation**.\n- Fixed via **Jumbo Hotfix Accumulator** updates.\n\n## Mitigation\n- Apply the Jumbo Hotfix; upgrade off EOL versions.\n- **Restrict network access to management interfaces**; never expose them to untrusted networks.\n\n## Notes / Related\n- Distinct from **CVE-2026-16232** (Check Point SmartConsole auth bypass, CISA KEV \u2014 separate note in vault) and **CVE-2026-50751** (Remote Access VPN IKEv1 auth bypass). Check Point management/VPN auth-bypass is a recurring 2026 theme.\n\n> Source: [Cyber Security News](https://cybersecuritynews.com/check-point-authentication-bypass-flaw/) \u2014 2026-08-04 (via @The_Cyber_News, X bookmark)\n> Source: [Check Point sk185222](https://support.checkpoint.com/results/sk/sk185222)\n\n## Tags\n#unverified",
+   "sev": "High",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-18686": {
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-18686-GLiNet-GL-MT3000-Command-Injection.md",
+   "body": "# CVE-2026-18686 \u2014 GL.iNet GL-MT3000 Unauthenticated Command Injection\n\n**Severity:** High (CVSS 8.9)\n**Status:** PoC public\n**Date captured:** 2026-08-08\n\n## Summary\nCommand injection in the **GL.iNet GL-MT3000** router via the `nas-web.add_user` function at `/cgi-bin/glc`. **No authentication required**, network-accessible \u2192 full RCE. A public **PoC exists**.\n\n## Related (same device, same period)\n- **CVE-2026-18685** \u2014 unauth command injection via `set_upgrade` (`/cgi-bin/glc`, modem.so), CVSS 8.9, full RCE.\n- **CVE-2026-18684** \u2014 command injection via `remove_profile` (`/cgi-bin/glc`), affects up to firmware 4.4.5, no auth, CVSS 8.9.\n\n## Remediation\n- Update GL-MT3000 firmware to the fixed release.\n- Do not expose the router admin/`/cgi-bin/glc` interface to untrusted networks.\n\n## Sources\n- X: @SecAlertsCo \u2014 https://x.com/SecAlertsCo/status/2085814897946878283 (2026-08-07)",
    "sev": "High",
    "year": "2026",
    "kev": false,
@@ -3426,9 +3466,33 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-64561": {
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-64561-Zapscape-KVM-Guest-Host-Escape.md",
+   "body": "# CVE-2026-64561 \u2014 Zapscape: KVM/x86 Guest-to-Host Escape (Shadow MMU UAF)\n\n\u2705 **Verification:** Verified \u2014 web-confirmed (THE HACKER NEWS, Phoronix, TuxCare)\n\n**Type:** Use-after-free / VM escape | **Date:** 2026-08-06 (public disclosure)\n\n## Summary\n**Zapscape** (**CVE-2026-64561**) is a **use-after-free in the shadow-MMU emulation of KVM/x86**, in the recursive **zap path** run when shadow pages are reclaimed. A privileged (kernel-level) attacker inside an **L1 guest** with **nested virtualization** exposed can **escape KVM isolation** to the host.\n\n## Impact\n- **DoS:** panic the host kernel \u2192 takes down every other tenant VM on the same physical machine.\n- **RCE:** run code with **root on the host** \u2192 full takeover of host and all guests.\n- On **Intel**, exploitation also requires **EPT page-walk length 4 and 5** exposed to the L1 guest.\n- High relevance to **public-cloud multi-tenant** hosts renting nested-virt instances.\n\n## Timeline\n- Reported by **Hyunwoo Kim** to security@kernel.org **2026-07-11**; patch merged **2026-07-21**; linux-distros embargo **2026-08-01**; CVE assigned **2026-08-04**; public disclosure **2026-08-06**.\n\n## Action\n- Update KVM hosts to a fixed stable kernel (or vendor backport) **now**, especially any host exposing **nested virtualization to untrusted guests**.\n- If patching lags, disable nested virt for untrusted tenants.\n\n> Source: [The Hacker News](https://thehackernews.com/2026/08/new-zapscape-kvm-flaw-could-let.html) \u2014 2026-08-06 (RSS: THN feedburner)\n> Source: [Phoronix](https://www.phoronix.com/news/Linux-Zapscape-Vulnerability) \u2014 2026-08-06\n\n## Tags\n#verified #cve #virtualization",
+   "sev": "High",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-64564": {
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-64564-Linux-SCTP-SCTPhantom-Root-Container-Escape.md",
+   "body": "# CVE-2026-64564 \u2014 Linux Kernel SCTP UAF \"SCTPhantom\" (Local Root + Container Escape)\n\n**Severity:** High (CVSS v4.0 8.5)\n**Status:** Patched\n**Date captured:** 2026-08-08\n\n## Summary\n**SCTPhantom** is a **use-after-free** in the Linux kernel's SCTP (Stream Control Transmission Protocol) **Dynamic Address Reconfiguration (ASCONF)** handling. A local attacker can escalate to **root**, and in certain configurations **escape a container** to reach the host. Found by **Tencent Zhuque Lab's Corvus AI** project.\n\n## Technical Detail\n- Root cause: an identity mix-up \u2014 the kernel checks a delete request against the packet's source address but acts on a path chosen using a different address inside the message, leading to UAF.\n- Present since Linux **2.6.25 (Dec 2007)** \u2014 ~18 years old.\n\n## Affected / Fixed\n- Fixed in stable kernels **7.1.6, 6.18.42, 6.12.101, 6.6.148** (released 2026-08-03). Disclosed 2026-08-06.\n\n## Remediation\n- Patch to a fixed stable kernel.\n- If patching is delayed, disable/blacklist the `sctp` module where not needed (`modprobe -r sctp`; blacklist) to remove the attack surface.\n\n## Sources\n- Source: [The Hacker News](https://thehackernews.com/2026/08/18-year-old-linux-sctp-flaw-could-let.html) \u2014 2026-08-07\n- Tencent Zhuque Lab: https://matrix.tencent.com/en/2026/08/06/sctphantom-CVE-2026-64564",
+   "sev": "High",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-64600": {
    "file": "Threat_Intel/CVEs/2026/High/CVE-2026-64600-RefluXFS-Linux-XFS-Root-LPE.md",
    "body": "# CVE-2026-64600 \u2014 \"RefluXFS\" Linux Kernel XFS Local Privilege Escalation to Root\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 2 independent sources\n\n**Type:** CVE / Linux kernel (XFS filesystem) \u2014 Local Privilege Escalation\n**Severity:** High (root LPE; ~16.4M systems estimated)\n**CVE:** CVE-2026-64600\n**Date captured:** 2026-07-27\n\n## Summary\n**RefluXFS** is a race condition in the Linux kernel **XFS copy-on-write (reflink) path**. When two concurrent `O_DIRECT` writes target the same reflinked file, the kernel can briefly drop the inode lock while waiting for transaction log space. A second writer completes its own remap and alters the original block's reference state; when the first writer resumes it trusts stale metadata and writes **directly to the original block** instead of a private copy. An unprivileged local attacker can overwrite protected on-disk files (e.g. `/etc/passwd`, SUID-root binaries) \u2192 **root**.\n\n## Impact\n- Local unprivileged \u2192 root; on-disk corruption persists across reboots, limited forensic evidence.\n- Not memory-corruption/hardening-bypass dependent \u2014 abuses concurrent O_DIRECT writes on reflink-enabled XFS.\n- Default-affected: RHEL 8/9/10 and derivatives, Fedora Server, Amazon Linux. Qualys estimates 16.4M+ systems.\n\n## Timeline\n- Fix merged to Linux tree **2026-07-16**; Qualys public disclosure **2026-07-22**; distros backporting.\n\n## Action\n- Patch kernel; prioritise multi-tenant / shell-access hosts with reflink-enabled XFS (`xfs_info | grep reflink`).\n- Where patching lags, restrict local access and monitor for unexpected writes to SUID binaries / `/etc/passwd`.\n\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/linux/new-refluxfs-linux-flaw-lets-attackers-gain-root-privileges/) \u2014 2026-07-23; web-verified via [Qualys](https://blog.qualys.com/vulnerabilities-threat-research/2026/07/22/refluxfs-a-linux-kernel-local-privilege-escalation-to-root-in-xfs-cve-2026-64600).\n\n## Tags\n#cve #linux #kernel #xfs #lpe #privilege-escalation #web-verified #unverified",
+   "sev": "High",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-64638": {
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-64638-WordPress-Core-PreAuth-XSS-RCE-XSS2Shell.md",
+   "body": "# CVE-2026-64638 \u2014 WordPress Core Pre-Auth XSS \u2192 PHP RCE (\"XSS2Shell\")\n\n**Severity:** High (CVSS 8.9)\n**Status:** Patched (WordPress 7.0.3)\n**Date captured:** 2026-08-08\n\n## Summary\nA **pre-authentication reflected XSS** in WordPress Core's login screen (`wp-login.php`) that can be chained into **server-side PHP remote code execution**. Discovered by **pwn.ai** \u2014 notably using **open-weight LLMs** \u2014 and dubbed **XSS2Shell**.\n\n## Technical Detail\n- The bug lives in the failed-login error path. Submitting a non-existent username builds an error message via `wp_strip_all_tags`.\n- Inserting a space between an opening angle bracket and a tag name (e.g. `< area`) causes PHP's `strip_tags()` parser to treat the payload as harmless text, letting script through.\n- The resulting JavaScript executes in the visitor's browser with no further interaction on that page (pre-auth).\n- **RCE chain:** requires a victim already logged in as Administrator plus explicit interaction with an attacker-controlled page \u2192 JS drives admin actions to write PHP to the server.\n\n## Affected / Fixed\n- Vulnerable code has shipped since **WordPress 4.7** \u2014 effectively every actively maintained install (~43% of the web).\n- **Fix: WordPress 7.0.3**, backported through the 4.7 branch. Auto-update sites patch automatically.\n\n## Remediation\n- Update to 7.0.3 (or the backported patch) ASAP.\n- Confirm auto-updates are enabled.\n\n## AI angle\nFound autonomously by pwn.ai using open-source models \u2014 another data point in AI-discovered CVEs (see Guides/AI-BugBounty).\n\n## Sources\n- Source: [The Hacker News](https://thehackernews.com/2026/08/new-wordpress-pre-auth-xss-could-lead.html) \u2014 2026-08-07\n- X: @The_Cyber_News \u2014 https://x.com/The_Cyber_News/status/2085878011338084633\n- X: @Rhynorater \u2014 https://x.com/Rhynorater/status/2085746602098975227\n- pwn.ai research: https://pwn.ai/blog/xss2shell",
    "sev": "High",
    "year": "2026",
    "kev": false,
@@ -3460,7 +3524,7 @@
   },
   "CVE-2026-18577": {
    "file": "Threat_Intel/CVEs/2026/Low/CVE-2026-18577.md",
-   "body": "# CVE-2026-18577\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Low  \n**Year:** 2026\n\n## Summary\nCVE-2026-18577** \u2014 **N-able N-central** Authentication Bypass Using an Alternate Path/Channel.\n\n## Where it appears in this vault\n- `Threat_Intel/CISA-KEV-Langflow-Ncentral-Tomcat-DeepSeek-AI-Campaign-2026.md` \u2014 CVE-2026-18577** \u2014 **N-able N-central** Authentication Bypass Using an Alternate Path/Channel.\n- `X_Intel/x-intel-tracker.md` \u2014 rss:bc-2026-08-05-cisa-kev-langflow + rss:thn-2026-08-05-cisa-kev | 2026-08-05 | BleepingComputer / THN | CISA KEV: Langflow CVE-2026-55255, N-central CVE-2026-18577, Tomcat; DeepSeek/Hermes AI campaign CVE-2026-34486; web-verified | -> Threat_Intel/CISA-KEV-Langflow-Ncentral-Tomcat-DeepSeek-AI-Campaign-2026.md (new)\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-18577\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-18577\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-18577\n\n## Tags\n#cve #2026 #low #auto-stub",
+   "body": "# CVE-2026-18577\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Low  \n**Year:** 2026\n\n## Summary\nCVE-2026-18577** \u2014 **N-able N-central** Authentication Bypass Using an Alternate Path/Channel.\n\n## Where it appears in this vault\n- `Threat_Intel/CISA-KEV-Langflow-Ncentral-Tomcat-DeepSeek-AI-Campaign-2026.md` \u2014 CVE-2026-18577** \u2014 **N-able N-central** Authentication Bypass Using an Alternate Path/Channel.\n- `X_Intel/x-intel-tracker.md` \u2014 rss:bc-2026-08-05-cisa-kev-langflow + rss:thn-2026-08-05-cisa-kev | 2026-08-05 | BleepingComputer / THN | CISA KEV: Langflow CVE-2026-55255, N-central CVE-2026-18577, Tomcat; DeepSeek/Hermes AI campaign CVE-2026-34486; web-verified | -> Threat_Intel/CISA-KEV-Langflow-Ncentral-Tomcat-DeepSeek-AI-Campaign-2026.md (new)\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-18577\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-18577\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-18577\n\n## Tags\n#cve #2026 #low #auto-stub #verified",
    "sev": "Low",
    "year": "2026",
    "kev": true,
@@ -3468,7 +3532,7 @@
   },
   "CVE-2026-34486": {
    "file": "Threat_Intel/CVEs/2026/Low/CVE-2026-34486.md",
-   "body": "# CVE-2026-34486\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Low  \n**Year:** 2026\n\n## Summary\nCVE-2026-34486** \u2014 related exploited flaw attributed to an **AI-enabled autonomous hacking campaign** by a Chinese-speaking actor (aliases **knaithe / KnYuan**, based in Zhuhai) leveraging **DeepSeek via the Hermes Agent framework** as an offensive operator against internet-exposed devices.\n\n## Where it appears in this vault\n- `Threat_Intel/CISA-KEV-Langflow-Ncentral-Tomcat-DeepSeek-AI-Campaign-2026.md` \u2014 CVE-2026-34486** \u2014 related exploited flaw attributed to an **AI-enabled autonomous hacking campaign** by a Chinese-speaking actor (aliases **knaithe / KnYuan**, based in Zhuhai) leveraging **DeepSeek via the Hermes Agent framework** as an offensive operator against internet-exposed devices.\n- `X_Intel/x-intel-tracker.md` \u2014 rss:bc-2026-08-05-cisa-kev-langflow + rss:thn-2026-08-05-cisa-kev | 2026-08-05 | BleepingComputer / THN | CISA KEV: Langflow CVE-2026-55255, N-central CVE-2026-18577, Tomcat; DeepSeek/Hermes AI campaign CVE-2026-34486; web-verified | -> Threat_Intel/CISA-KEV-Langflow-Ncentral-Tomcat-DeepSeek-AI-Campaign-2026.md (new)\n- `X_Intel/x-intel-tracker.md` \u2014 Verification: web-verified via WebSearch \u2014 CVE-2026-18574 (CheckPoint sk185222/NVD), CVE-2026-66902 (oss-sec), Pass-ta-key (Unit 42/THN/Malwarebytes), WebKit leaks (Mysk/9to5Mac), Remus EtherHiding (Unit 42/SOCPrime), ChainDrop/Shai-Hulud (Microsoft/Elastic/CSA-SG), CISA KEV Langflow/N-central/Tomcat + DeepSeek CVE-2026-34486, Claude Mythos/GPT-5.6 UK AISI (The Record/BC/THN), VMSA-2026-0006 CVE-2026-59309/59310.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-34486\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-34486\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-34486\n\n## Tags\n#cve #2026 #low #auto-stub",
+   "body": "# CVE-2026-34486\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Low  \n**Year:** 2026\n\n## Summary\nCVE-2026-34486** \u2014 related exploited flaw attributed to an **AI-enabled autonomous hacking campaign** by a Chinese-speaking actor (aliases **knaithe / KnYuan**, based in Zhuhai) leveraging **DeepSeek via the Hermes Agent framework** as an offensive operator against internet-exposed devices.\n\n## Where it appears in this vault\n- `Threat_Intel/CISA-KEV-Langflow-Ncentral-Tomcat-DeepSeek-AI-Campaign-2026.md` \u2014 CVE-2026-34486** \u2014 related exploited flaw attributed to an **AI-enabled autonomous hacking campaign** by a Chinese-speaking actor (aliases **knaithe / KnYuan**, based in Zhuhai) leveraging **DeepSeek via the Hermes Agent framework** as an offensive operator against internet-exposed devices.\n- `X_Intel/x-intel-tracker.md` \u2014 rss:bc-2026-08-05-cisa-kev-langflow + rss:thn-2026-08-05-cisa-kev | 2026-08-05 | BleepingComputer / THN | CISA KEV: Langflow CVE-2026-55255, N-central CVE-2026-18577, Tomcat; DeepSeek/Hermes AI campaign CVE-2026-34486; web-verified | -> Threat_Intel/CISA-KEV-Langflow-Ncentral-Tomcat-DeepSeek-AI-Campaign-2026.md (new)\n- `X_Intel/x-intel-tracker.md` \u2014 Verification: web-verified via WebSearch \u2014 CVE-2026-18574 (CheckPoint sk185222/NVD), CVE-2026-66902 (oss-sec), Pass-ta-key (Unit 42/THN/Malwarebytes), WebKit leaks (Mysk/9to5Mac), Remus EtherHiding (Unit 42/SOCPrime), ChainDrop/Shai-Hulud (Microsoft/Elastic/CSA-SG), CISA KEV Langflow/N-central/Tomcat + DeepSeek CVE-2026-34486, Claude Mythos/GPT-5.6 UK AISI (The Record/BC/THN), VMSA-2026-0006 CVE-2026-59309/59310.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-34486\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-34486\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-34486\n\n## Tags\n#cve #2026 #low #auto-stub #verified",
    "sev": "Low",
    "year": "2026",
    "kev": true,
@@ -3476,7 +3540,7 @@
   },
   "CVE-2026-46539": {
    "file": "Threat_Intel/CVEs/2026/Low/CVE-2026-46539.md",
-   "body": "# CVE-2026-46539\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Low  \n**Year:** 2026\n\n## Summary\n@CVEnew (3h) \u2014 CVE-2026-46539: \"sm page duplicator\" WordPress plugin (\u2264 latest) stored-value SQLi when duplicating a page (auto-CVE, low-signal WP plugin).\n\n## Where it appears in this vault\n- `X_Intel/x-intel-2026-08-03.md` \u2014 @CVEnew (3h) \u2014 CVE-2026-46539: \"sm page duplicator\" WordPress plugin (\u2264 latest) stored-value SQLi when duplicating a page (auto-CVE, low-signal WP plugin).\n- `X_Intel/x-intel-tracker.md` \u2014 Logged/minor -> X_Intel/x-intel-2026-08-03.md: CVE-2026-46539 sm-page-duplicator WP SQLi (auto-CVE); ANY.RUN Suricata changelog; DPRK ClickFix fake-macOS-update repost (Jul-31, older); assorted product/non-security filler.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-46539\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-46539\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-46539\n\n## Tags\n#cve #2026 #low #auto-stub",
+   "body": "# CVE-2026-46539\n\n\u2705 **Verification:** Verified \u2014 4 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Low  \n**Year:** 2026\n\n## Summary\n@CVEnew (3h) \u2014 CVE-2026-46539: \"sm page duplicator\" WordPress plugin (\u2264 latest) stored-value SQLi when duplicating a page (auto-CVE, low-signal WP plugin).\n\n## Where it appears in this vault\n- `X_Intel/x-intel-2026-08-03.md` \u2014 @CVEnew (3h) \u2014 CVE-2026-46539: \"sm page duplicator\" WordPress plugin (\u2264 latest) stored-value SQLi when duplicating a page (auto-CVE, low-signal WP plugin).\n- `X_Intel/x-intel-tracker.md` \u2014 Logged/minor -> X_Intel/x-intel-2026-08-03.md: CVE-2026-46539 sm-page-duplicator WP SQLi (auto-CVE); ANY.RUN Suricata changelog; DPRK ClickFix fake-macOS-update repost (Jul-31, older); assorted product/non-security filler.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-46539\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-46539\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-46539\n\n## Tags\n#cve #2026 #low #auto-stub #verified",
    "sev": "Low",
    "year": "2026",
    "kev": false,
@@ -3484,7 +3548,7 @@
   },
   "CVE-2026-55255": {
    "file": "Threat_Intel/CVEs/2026/Low/CVE-2026-55255.md",
-   "body": "# CVE-2026-55255\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Low  \n**Year:** 2026\n\n## Summary\nCVE-2026-55255** \u2014 **Langflow** Authorization Bypass Through User-Controlled Key.\n\n## Where it appears in this vault\n- `Threat_Intel/CISA-KEV-Langflow-Ncentral-Tomcat-DeepSeek-AI-Campaign-2026.md` \u2014 CVE-2026-55255** \u2014 **Langflow** Authorization Bypass Through User-Controlled Key.\n- `X_Intel/x-intel-tracker.md` \u2014 rss:bc-2026-08-05-cisa-kev-langflow + rss:thn-2026-08-05-cisa-kev | 2026-08-05 | BleepingComputer / THN | CISA KEV: Langflow CVE-2026-55255, N-central CVE-2026-18577, Tomcat; DeepSeek/Hermes AI campaign CVE-2026-34486; web-verified | -> Threat_Intel/CISA-KEV-Langflow-Ncentral-Tomcat-DeepSeek-AI-Campaign-2026.md (new)\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-55255\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-55255\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-55255\n\n## Tags\n#cve #2026 #low #auto-stub",
+   "body": "# CVE-2026-55255\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Low  \n**Year:** 2026\n\n## Summary\nCVE-2026-55255** \u2014 **Langflow** Authorization Bypass Through User-Controlled Key.\n\n## Where it appears in this vault\n- `Threat_Intel/CISA-KEV-Langflow-Ncentral-Tomcat-DeepSeek-AI-Campaign-2026.md` \u2014 CVE-2026-55255** \u2014 **Langflow** Authorization Bypass Through User-Controlled Key.\n- `X_Intel/x-intel-tracker.md` \u2014 rss:bc-2026-08-05-cisa-kev-langflow + rss:thn-2026-08-05-cisa-kev | 2026-08-05 | BleepingComputer / THN | CISA KEV: Langflow CVE-2026-55255, N-central CVE-2026-18577, Tomcat; DeepSeek/Hermes AI campaign CVE-2026-34486; web-verified | -> Threat_Intel/CISA-KEV-Langflow-Ncentral-Tomcat-DeepSeek-AI-Campaign-2026.md (new)\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-55255\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-55255\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-55255\n\n## Tags\n#cve #2026 #low #auto-stub #verified",
    "sev": "Low",
    "year": "2026",
    "kev": true,
@@ -3538,6 +3602,22 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-48047": {
+   "file": "Threat_Intel/CVEs/2026/Medium/CVE-2026-48047-XWiki-WebJars-Path-Traversal-File-Write.md",
+   "body": "# CVE-2026-48047 \u2014 XWiki Platform WebJars API Path Traversal (Arbitrary File Write)\n\n**Severity:** Medium (privileged; CWE-24 path traversal)\n**Status:** Patched\n**Date captured:** 2026-08-08\n\n## Summary\nA **path traversal** in the XWiki Platform **WebJars API** lets an attacker who can install a malicious WebJar extension write **arbitrary files** on the wiki. Consequences can be severe \u2014 overriding configuration files, setting the **superadmin password** \u2014 but exploitation requires the attacker to already hold **(sub)wiki admin** rights and to publish a malicious extension in a configured extension repository.\n\n## Affected / Fixed\n- Affected: from **9.6-rc-1** prior to **16.10.17 / 17.4.9 / 17.10.3**.\n- Fixed in **16.10.17, 17.4.9, 17.10.3, 18.0.0RC1**.\n\n## Remediation\n- Upgrade to a patched version.\n- Restrict script and admin rights; be cautious about which extension repositories are configured.\n\n## Sources\n- X: @CVEnew \u2014 https://x.com/CVEnew/status/2085943018918715398 (2026-08-08)\n- GitHub Advisory: https://github.com/advisories/GHSA-vgwr-23fq-pr7g",
+   "sev": "Medium",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-68480": {
+   "file": "Threat_Intel/CVEs/2026/Medium/CVE-2026-68480-Interrupt-Injection-Spectre-v2-Bypass.md",
+   "body": "# CVE-2026-68480 \u2014 Interrupt Injection (\"TONTOU\"): Spectre v2 Defense Bypass\n\n\u2705 **Verification:** Verified \u2014 web-confirmed (THN, BleepingComputer, linuxcompatible)\n\n**Type:** CPU speculative-execution side-channel | **Date:** 2026-08-06\n\n## Summary\n**MIT CSAIL** researchers **Dani\u00ebl Trujillo & Mengjia Yan** disclosed **Interrupt Injection** (BleepingComputer: **\"TONTOU\"**), which **bypasses Spectre v2 mitigations** on **Intel and AMD** CPUs by exploiting a **Time-of-Neutralization \u2192 Time-of-Use** gap. An unprivileged program **times a hardware interrupt** to land between the CPU sanitizing its branch predictor and the kernel using it, **re-poisoning the predictor after the defense ran**.\n\n## Impact\n- **AMD Zen 2**, Linux 6.14 with all default Spectre v2 mitigations on: leaked **arbitrary kernel memory at 5.47 B/s, 91.97% accuracy** \u2014 enough to read **/etc/shadow** (password hashes) in **5 of 10** attempts.\n- **No privileges** needed \u2014 only **local code execution**. Risk concentrated on **shared/multi-tenant** hosts.\n- **Intel:** no end-to-end leak demonstrated (needs a usable in-kernel disclosure gadget).\n\n## Patch\n- Linux commit *\"x86/bugs: Make Safe-RET robust against interrupt injection\"* (AMD engineers, dated Jun 2). Fixed in stable **6.18.43, 6.6.149, 6.1.181** \u2192 **CVE-2026-68480**.\n\n## Action\n- Patch Linux kernels on shared/multi-tenant systems; prioritize AMD Zen 2 hosts running untrusted local workloads.\n\n> Source: [The Hacker News](https://thehackernews.com/2026/08/new-interrupt-injection-attack-can.html) \u2014 2026-08-06 (RSS: THN feedburner)\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/new-tontou-cpu-attack-bypasses-spectre-v2-fixes-leaks-linux-password-hashes/) \u2014 2026-08-06\n\n## Tags\n#verified #cve #cpu #sidechannel",
+   "sev": "Medium",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-1519": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-1519.md",
    "body": "# CVE-2026-1519\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nDifferent from CVE-2026-1519 (which is BIND 9)\n\n## Where it appears in this vault\n- `BugBounty/findings/systemd-resolved-findings.md` \u2014 Different from CVE-2026-1519 (which is BIND 9)\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-1519\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-1519\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-1519\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
@@ -3546,9 +3626,57 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-18684": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-18684.md",
+   "body": "# CVE-2026-18684\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nGL.iNet GL-MT3000 CVE-2026-18685 / CVE-2026-18684 (companion command-injection CVEs) \u2014 captured in the CVE-2026-18686 note's \"Related\" section.\n\n## Where it appears in this vault\n- `X_Intel/x-intel-2026-08-08.md` \u2014 GL.iNet GL-MT3000 CVE-2026-18685 / CVE-2026-18684 (companion command-injection CVEs) \u2014 captured in the CVE-2026-18686 note's \"Related\" section.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-18684\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-18684\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-18684\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-18685": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-18685.md",
+   "body": "# CVE-2026-18685\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nGL.iNet GL-MT3000 CVE-2026-18685 / CVE-2026-18684 (companion command-injection CVEs) \u2014 captured in the CVE-2026-18686 note's \"Related\" section.\n\n## Where it appears in this vault\n- `X_Intel/x-intel-2026-08-08.md` \u2014 GL.iNet GL-MT3000 CVE-2026-18685 / CVE-2026-18684 (companion command-injection CVEs) \u2014 captured in the CVE-2026-18686 note's \"Related\" section.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-18685\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-18685\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-18685\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-20267": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-20267.md",
+   "body": "# CVE-2026-20267\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-20267\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-20267\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-20267\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-20272": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-20272.md",
+   "body": "# CVE-2026-20272\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-20272\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-20272\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-20272\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-20304": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-20304.md",
+   "body": "# CVE-2026-20304\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-20304\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-20304\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-20304\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-20310": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-20310.md",
+   "body": "# CVE-2026-20310\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-20310\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-20310\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-20310\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-20700": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-20700.md",
-   "body": "# CVE-2026-20700\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nDarkSword** (first public ~2026-03): Safari `WebContent` sandbox escape leveraging **WebGPU** to inject into the `mediaplaybackd` daemon, gaining privileged file-system access. Uses a chain of 6 flaws incl. zero-days: **CVE-2025-31277, CVE-2025-43529, CVE-2026-20700, CVE-2025-14174, CVE-2025-43510, CVE-2025-43520**. Impacts **iOS 18.4\u201318.7**.\n\n## Where it appears in this vault\n- `Threat_Intel/Malware/DarkSword-Leaked-Kit-Chinese-Actor-FakeLogin-GHOSTBLADE-2026.md` \u2014 DarkSword** (first public ~2026-03): Safari `WebContent` sandbox escape leveraging **WebGPU** to inject into the `mediaplaybackd` daemon, gaining privileged file-system access. Uses a chain of 6 flaws incl. zero-days: **CVE-2025-31277, CVE-2025-43529, CVE-2026-20700, CVE-2025-14174, CVE-2025-43510, CVE-2025-43520**. Impacts **iOS 18.4\u201318.7**.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-20700\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-20700\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-20700\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "body": "# CVE-2026-20700\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nDarkSword** (first public ~2026-03): Safari `WebContent` sandbox escape leveraging **WebGPU** to inject into the `mediaplaybackd` daemon, gaining privileged file-system access. Uses a chain of 6 flaws incl. zero-days: **CVE-2025-31277, CVE-2025-43529, CVE-2026-20700, CVE-2025-14174, CVE-2025-43510, CVE-2025-43520**. Impacts **iOS 18.4\u201318.7**.\n\n## Where it appears in this vault\n- `Threat_Intel/Malware/DarkSword-Leaked-Kit-Chinese-Actor-FakeLogin-GHOSTBLADE-2026.md` \u2014 DarkSword** (first public ~2026-03): Safari `WebContent` sandbox escape leveraging **WebGPU** to inject into the `mediaplaybackd` daemon, gaining privileged file-system access. Uses a chain of 6 flaws incl. zero-days: **CVE-2025-31277, CVE-2025-43529, CVE-2026-20700, CVE-2025-14174, CVE-2025-43510, CVE-2025-43520**. Impacts **iOS 18.4\u201318.7**.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-20700\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-20700\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-20700\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
    "sev": "",
    "year": "2026",
    "kev": true,
@@ -3636,7 +3764,7 @@
   },
   "CVE-2026-50751": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-50751.md",
-   "body": "# CVE-2026-50751\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-50751\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-50751\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-50751\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "body": "# CVE-2026-50751\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-50751\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-50751\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-50751\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
    "sev": "",
    "year": "2026",
    "kev": true,
@@ -3657,98 +3785,122 @@
    "year": "2026",
    "kev": false,
    "apts": []
+  },
+  "CVE-2026-56181": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-56181.md",
+   "body": "# CVE-2026-56181\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nCVE-2026-56181** \u2014 Microsoft **Windows NAT (Hyper-V)**.\n\n## Where it appears in this vault\n- `Threat_Intel/NatJack-NAT-ConnTrack-Hijack-DNS-Poison-2026.md` \u2014 CVE-2026-56181** \u2014 Microsoft **Windows NAT (Hyper-V)**.\n- `X_Intel/x-intel-tracker.md` \u2014 2085661065883652459 | 2026-08-07 | @TheHackersNews | NatJack \u2014 off-path NAT conntrack hijack + DNS poisoning + DoS; 13 vendors/32 products; CVE-2026-56181 (Win NAT/Hyper-V), CVE-2026-63913 (Linux netfilter); Black Hat 2026 (Malcolm Stagg); web-verified | -> Threat_Intel/NatJack-NAT-ConnTrack-Hijack-DNS-Poison-2026.md (new)\n- `X_Intel/x-intel-tracker.md` \u2014 Verification: web-verified via WebSearch \u2014 NatJack (Network World/GlobeNewswire/IACR; CVE-2026-56181/63913), Zapscape CVE-2026-64561 (Phoronix/TuxCare), Interrupt Injection/TONTOU CVE-2026-68480 (THN/BC/linuxcompatible), Cisco CVE-2026-20303/20304/20310/20272 (THN/SecurityWeek/Cisco), WSUS SUSDB technique (CyberSecurityNews/GBHackers), HTTP Terminator + Apache Traffic Server CVE-2026-63078 (PortSwigger).\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-56181\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-56181\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-56181\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-63078": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-63078.md",
+   "body": "# CVE-2026-63078\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nSurfaced a **zero-day desync trigger in Apache Traffic Server** \u2014 now patched as **CVE-2026-63078**.\n\n## Where it appears in this vault\n- `Guides/AI-BugBounty/HTTP-Terminator-Autonomous-AI-HTTP-Desync-BlackHat-2026.md` \u2014 Surfaced a **zero-day desync trigger in Apache Traffic Server** \u2014 now patched as **CVE-2026-63078**.\n- `X_Intel/x-intel-tracker.md` \u2014 2085670047058661509 | 2026-08-07 | @TheHackersNews | HTTP Terminator \u2014 autonomous AI invents novel HTTP desync attacks (~30k vectors); 0-day Apache Traffic Server CVE-2026-63078; PortSwigger BH2026; web-verified | -> Guides/AI-BugBounty/HTTP-Terminator-Autonomous-AI-HTTP-Desync-BlackHat-2026.md (new)\n- `X_Intel/x-intel-tracker.md` \u2014 Verification: web-verified via WebSearch \u2014 NatJack (Network World/GlobeNewswire/IACR; CVE-2026-56181/63913), Zapscape CVE-2026-64561 (Phoronix/TuxCare), Interrupt Injection/TONTOU CVE-2026-68480 (THN/BC/linuxcompatible), Cisco CVE-2026-20303/20304/20310/20272 (THN/SecurityWeek/Cisco), WSUS SUSDB technique (CyberSecurityNews/GBHackers), HTTP Terminator + Apache Traffic Server CVE-2026-63078 (PortSwigger).\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-63078\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-63078\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-63078\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-63913": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-63913.md",
+   "body": "# CVE-2026-63913\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nCVE-2026-63913** \u2014 Linux **netfilter conntrack** subsystem.\n\n## Where it appears in this vault\n- `Threat_Intel/NatJack-NAT-ConnTrack-Hijack-DNS-Poison-2026.md` \u2014 CVE-2026-63913** \u2014 Linux **netfilter conntrack** subsystem.\n- `X_Intel/x-intel-tracker.md` \u2014 2085661065883652459 | 2026-08-07 | @TheHackersNews | NatJack \u2014 off-path NAT conntrack hijack + DNS poisoning + DoS; 13 vendors/32 products; CVE-2026-56181 (Win NAT/Hyper-V), CVE-2026-63913 (Linux netfilter); Black Hat 2026 (Malcolm Stagg); web-verified | -> Threat_Intel/NatJack-NAT-ConnTrack-Hijack-DNS-Poison-2026.md (new)\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-63913\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-63913\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-63913\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
   }
  },
  "recent": [
   {
-   "title": "Automated-SSH-Actors-22-Seconds-Login-to-Persistence-2026",
-   "file": "Guides/Automated-SSH-Actors-22-Seconds-Login-to-Persistence-2026.md",
+   "title": "CSS-Injection-Webmail-Password-Token-Theft-2026",
+   "file": "Guides/CSS-Injection-Webmail-Password-Token-Theft-2026.md",
    "cat": "technique",
-   "ts": "2026-08-06"
+   "ts": "2026-08-08"
   },
   {
-   "title": "khunt-Oracle-Database-Post-Exploitation-Toolkit-SQLi-2026",
-   "file": "Guides/khunt-Oracle-Database-Post-Exploitation-Toolkit-SQLi-2026.md",
-   "cat": "technique",
-   "ts": "2026-08-06"
-  },
-  {
-   "title": "Pass-ta-key-Google-Password-Manager-Passkey-Hijack-Windows-2026",
-   "file": "Guides/Pass-ta-key-Google-Password-Manager-Passkey-Hijack-Windows-2026.md",
-   "cat": "technique",
-   "ts": "2026-08-06"
-  },
-  {
-   "title": "WebKit-IP-DNS-Leak-Private-Relay-Tor-Bypass-2026",
-   "file": "Guides/WebKit-IP-DNS-Leak-Private-Relay-Tor-Bypass-2026.md",
-   "cat": "technique",
-   "ts": "2026-08-06"
-  },
-  {
-   "title": "Claude-Mythos-GPT56-UK-AISI-Rogue-Agent-Cyber-Test-2026",
-   "file": "Guides/AI-BugBounty/Claude-Mythos-GPT56-UK-AISI-Rogue-Agent-Cyber-Test-2026.md",
+   "title": "Atlassian-Rovo-PromptInjection-Jira-Confluence-Exfil-2026",
+   "file": "Guides/AI-BugBounty/Atlassian-Rovo-PromptInjection-Jira-Confluence-Exfil-2026.md",
    "cat": "ai-bugbounty",
-   "ts": "2026-08-06"
+   "ts": "2026-08-08"
   },
   {
-   "title": "Greatness-PhaaS-RingCentral-AiTM-DeviceCode-M365-2026",
-   "file": "Guides/phishing/Greatness-PhaaS-RingCentral-AiTM-DeviceCode-M365-2026.md",
-   "cat": "technique",
-   "ts": "2026-08-06"
+   "title": "Claude-Code-Gemini-CLI-GitHub-Issue-CI-Secrets-2026",
+   "file": "Guides/AI-BugBounty/Claude-Code-Gemini-CLI-GitHub-Issue-CI-Secrets-2026.md",
+   "cat": "ai-bugbounty",
+   "ts": "2026-08-08"
   },
   {
-   "title": "kali365-phishing-service-m365-technique-guide",
-   "file": "Guides/phishing/kali365-phishing-service-m365-technique-guide.md",
-   "cat": "technique",
-   "ts": "2026-08-06"
+   "title": "Claude-in-Chrome-PromptInjection-Gmail-Code-Theft-2026",
+   "file": "Guides/AI-BugBounty/Claude-in-Chrome-PromptInjection-Gmail-Code-Theft-2026.md",
+   "cat": "ai-bugbounty",
+   "ts": "2026-08-08"
+  },
+  {
+   "title": "OpenAI-Model-ExploitGym-Sandbox-Escape-HuggingFace-2026",
+   "file": "Guides/AI-BugBounty/OpenAI-Model-ExploitGym-Sandbox-Escape-HuggingFace-2026.md",
+   "cat": "ai-bugbounty",
+   "ts": "2026-08-08"
   },
   {
    "title": "CISA-KEV-Langflow-Ncentral-Tomcat-DeepSeek-AI-Campaign-2026",
    "file": "Threat_Intel/CISA-KEV-Langflow-Ncentral-Tomcat-DeepSeek-AI-Campaign-2026.md",
    "cat": "other",
-   "ts": "2026-08-06"
+   "ts": "2026-08-08"
   },
   {
    "title": "CISA-Water-Systems-OT-PLC-Attacks-Advisory-2026",
    "file": "Threat_Intel/CISA-Water-Systems-OT-PLC-Attacks-Advisory-2026.md",
    "cat": "other",
-   "ts": "2026-08-06"
+   "ts": "2026-08-08"
   },
   {
-   "title": "TP-Link-Omada-ZTP-15-Flaws-RCE-Chain-2026",
-   "file": "Threat_Intel/TP-Link-Omada-ZTP-15-Flaws-RCE-Chain-2026.md",
-   "cat": "other",
-   "ts": "2026-08-06"
-  },
-  {
-   "title": "VMware-ESXi-vCenter-Ransomware-Exploitation-VMSA-2026-0006-2026",
-   "file": "Threat_Intel/VMware-ESXi-vCenter-Ransomware-Exploitation-VMSA-2026-0006-2026.md",
-   "cat": "other",
-   "ts": "2026-08-06"
-  },
-  {
-   "title": "Hotel-WiFi-DNS-Poisoning-M365-CredTheft-2026",
-   "file": "Threat_Intel/APT_Groups/Hotel-WiFi-DNS-Poisoning-M365-CredTheft-2026.md",
+   "title": "UNC6671-BlackFile-HedgeFund-Extortion-2026",
+   "file": "Threat_Intel/APT_Groups/UNC6671-BlackFile-HedgeFund-Extortion-2026.md",
    "cat": "malware",
-   "ts": "2026-08-06"
+   "ts": "2026-08-08"
   },
   {
-   "title": "SaltTyphoon-Profile",
-   "file": "Threat_Intel/APT_Groups/SaltTyphoon/SaltTyphoon-Profile.md",
+   "title": "about",
+   "file": "Threat_Intel/APT_Groups/TeamPCP/about.md",
    "cat": "malware",
-   "ts": "2026-08-06"
+   "ts": "2026-08-08"
   },
   {
-   "title": "COLDCARD-Predictable-Seed-RNG-594BTC-Theft-2026",
-   "file": "Threat_Intel/Breaches/COLDCARD-Predictable-Seed-RNG-594BTC-Theft-2026.md",
+   "title": "IEH-Corporation-Military-Device-Maker-Cyber-Incident-2026",
+   "file": "Threat_Intel/Breaches/IEH-Corporation-Military-Device-Maker-Cyber-Incident-2026.md",
    "cat": "breach",
-   "ts": "2026-08-06"
+   "ts": "2026-08-08"
   },
   {
-   "title": "LawEnforcement-RansomCartel-Silnikau-Snowflake-Moucka-2026",
-   "file": "Threat_Intel/Breaches/LawEnforcement-RansomCartel-Silnikau-Snowflake-Moucka-2026.md",
+   "title": "Levi-Strauss-Corporate-Data-Theft-SocialEngineering-2026",
+   "file": "Threat_Intel/Breaches/Levi-Strauss-Corporate-Data-Theft-SocialEngineering-2026.md",
    "cat": "breach",
-   "ts": "2026-08-06"
+   "ts": "2026-08-08"
+  },
+  {
+   "title": "North-Carolina-Ports-Cyberattack-2026",
+   "file": "Threat_Intel/Breaches/North-Carolina-Ports-Cyberattack-2026.md",
+   "cat": "breach",
+   "ts": "2026-08-08"
+  },
+  {
+   "title": "Unlimited-Technology-Systems-Breach-3.8M-2026",
+   "file": "Threat_Intel/Breaches/Unlimited-Technology-Systems-Breach-3.8M-2026.md",
+   "cat": "breach",
+   "ts": "2026-08-08"
+  },
+  {
+   "title": "CVE-2026-48323",
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-48323.md",
+   "cat": "cve",
+   "ts": "2026-08-08"
+  },
+  {
+   "title": "CVE-2026-66909-Apache-CXF-JMS-Deserialization-RCE",
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-66909-Apache-CXF-JMS-Deserialization-RCE.md",
+   "cat": "cve",
+   "ts": "2026-08-08"
   }
  ],
  "kev_referenced": [
@@ -3788,6 +3940,7 @@
   "CVE-2025-43510",
   "CVE-2025-43520",
   "CVE-2025-43529",
+  "CVE-2025-59287",
   "CVE-2025-67038",
   "CVE-2025-8088",
   "CVE-2026-0257",
@@ -3823,6 +3976,7 @@
   "CVE-2026-58644",
   "CVE-2026-60137",
   "CVE-2026-63030",
+  "CVE-2026-8037",
   "CVE-2026-9082"
  ],
  "top_tags": [],
@@ -3868,6 +4022,10 @@
    "n": 1
   },
   {
+   "t": "Css Injection Webmail Password Token Theft 2026",
+   "n": 1
+  },
+  {
    "t": "Ctbbpodcast Protobuf Cspt Cookie Path Techniques",
    "n": 1
   },
@@ -3881,10 +4039,6 @@
   },
   {
    "t": "Emergency Data Request Abuse Services 2026",
-   "n": 1
-  },
-  {
-   "t": "Eu Age Verification App Bypass Chrome Extension 2026",
    "n": 1
   }
  ],
@@ -4158,10 +4312,17 @@
   },
   {
    "date": "2026-08-07",
-   "intel_items": 800,
-   "cves": 282,
-   "breaches": 72,
-   "malware": 96
+   "intel_items": 822,
+   "cves": 293,
+   "breaches": 74,
+   "malware": 97
+  },
+  {
+   "date": "2026-08-08",
+   "intel_items": 847,
+   "cves": 302,
+   "breaches": 77,
+   "malware": 97
   }
  ]
 }
