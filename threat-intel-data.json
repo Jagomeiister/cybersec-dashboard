@@ -1,6 +1,6 @@
 {
- "generated": "2026-08-12 20:45",
- "today": "2026-08-12",
+ "generated": "2026-08-14 20:45",
+ "today": "2026-08-14",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 20,
@@ -16,29 +16,29 @@
  },
  "windows": {
   "week": {
-   "total": 73,
+   "total": 38,
    "by_cat": {
-    "cve": 16,
-    "malware": 7,
-    "technique": 9,
-    "ai-bugbounty": 12,
-    "misc": 11,
-    "supplychain": 5,
-    "breach": 9,
-    "other": 4
+    "cve": 10,
+    "malware": 2,
+    "technique": 5,
+    "ai-bugbounty": 7,
+    "other": 2,
+    "misc": 4,
+    "supplychain": 4,
+    "breach": 4
    },
    "by_src": {}
   },
   "month": {
-   "total": 129,
+   "total": 120,
    "by_cat": {
-    "breach": 16,
-    "malware": 20,
-    "cve": 28,
-    "supplychain": 10,
-    "ai-bugbounty": 17,
-    "misc": 18,
+    "cve": 27,
+    "malware": 18,
+    "supplychain": 9,
+    "ai-bugbounty": 16,
+    "misc": 16,
     "technique": 14,
+    "breach": 14,
     "other": 6
    },
    "by_src": {}
@@ -1711,9 +1711,7 @@
   }
  ],
  "apt_activity_windows": {
-  "week": {
-   "Salt Typhoon": 1
-  },
+  "week": {},
   "month": {
    "APT41": 2,
    "APT29": 1,
@@ -4362,6 +4360,20 @@
   },
   {
    "date": "2026-08-12",
+   "intel_items": 855,
+   "cves": 304,
+   "breaches": 77,
+   "malware": 97
+  },
+  {
+   "date": "2026-08-13",
+   "intel_items": 855,
+   "cves": 304,
+   "breaches": 77,
+   "malware": 97
+  },
+  {
+   "date": "2026-08-14",
    "intel_items": 855,
    "cves": 304,
    "breaches": 77,
