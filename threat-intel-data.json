@@ -1,77 +1,81 @@
 {
- "generated": "2026-08-14 20:45",
- "today": "2026-08-14",
+ "generated": "2026-08-15 20:45",
+ "today": "2026-08-15",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 20,
-  "cves": 304,
-  "breaches": 77,
-  "malware": 97,
-  "supplychain": 40,
-  "tools": 75,
-  "commands": 9,
-  "guides": 171,
-  "intel_items": 855,
-  "kev": 74
+  "cves": 315,
+  "breaches": 80,
+  "malware": 102,
+  "supplychain": 44,
+  "tools": 77,
+  "commands": 10,
+  "guides": 177,
+  "intel_items": 891,
+  "kev": 77
  },
  "windows": {
   "week": {
-   "total": 38,
+   "total": 50,
    "by_cat": {
-    "cve": 10,
-    "malware": 2,
-    "technique": 5,
-    "ai-bugbounty": 7,
+    "cve": 13,
     "other": 2,
-    "misc": 4,
-    "supplychain": 4,
-    "breach": 4
+    "ai-bugbounty": 7,
+    "technique": 6,
+    "supplychain": 6,
+    "command": 1,
+    "misc": 2,
+    "breach": 4,
+    "tool": 2,
+    "malware": 7
    },
    "by_src": {}
   },
   "month": {
-   "total": 120,
+   "total": 150,
    "by_cat": {
-    "cve": 27,
-    "malware": 18,
-    "supplychain": 9,
-    "ai-bugbounty": 16,
-    "misc": 16,
-    "technique": 14,
-    "breach": 14,
-    "other": 6
+    "misc": 17,
+    "cve": 34,
+    "technique": 16,
+    "breach": 18,
+    "malware": 24,
+    "ai-bugbounty": 19,
+    "other": 7,
+    "supplychain": 12,
+    "command": 1,
+    "tool": 2
    },
    "by_src": {}
   },
   "year": {
-   "total": 855,
+   "total": 891,
    "by_cat": {
-    "ai-bugbounty": 53,
-    "malware": 97,
-    "other": 46,
-    "tool": 42,
-    "misc": 214,
-    "command": 3,
-    "technique": 79,
-    "cve": 190,
-    "breach": 74,
-    "supplychain": 57
+    "ai-bugbounty": 57,
+    "malware": 104,
+    "other": 47,
+    "tool": 44,
+    "misc": 216,
+    "command": 4,
+    "technique": 81,
+    "cve": 199,
+    "breach": 78,
+    "supplychain": 61
    },
    "by_src": {}
   },
   "all": {
-   "total": 855,
+   "total": 891,
    "by_cat": {
-    "ai-bugbounty": 53,
-    "malware": 97,
-    "other": 46,
-    "tool": 42,
-    "misc": 214,
-    "command": 3,
-    "technique": 79,
-    "cve": 190,
-    "breach": 74,
-    "supplychain": 57
+    "ai-bugbounty": 57,
+    "malware": 104,
+    "other": 47,
+    "tool": 44,
+    "misc": 216,
+    "command": 4,
+    "technique": 81,
+    "cve": 199,
+    "breach": 78,
+    "supplychain": 61
    },
    "by_src": {}
   }
@@ -1004,7 +1008,7 @@
   },
   {
    "group": "Lazarus Group",
-   "body": "# Lazarus Group \u2014 APT Profile\n\n\u2705 **Verification:** Verified \u2014 6 independent sources\n\n## Snapshot\n| Field | Value |\n|---|---|\n| Attribution | North Korea \u2014 Reconnaissance General Bureau (RGB) |\n| Aliases | Hidden Cobra, Labyrinth Chollima, ZINC, Diamond Sleet, APT38, TraderTraitor |\n| MITRE ATT&CK ID | G0032 |\n| First seen | 2009 (Operation Troy) |\n| Status | Active (most prolific DPRK financial + espionage actor) |\n| Motivation | Financial (regime revenue), espionage, sabotage/destruction |\n\n## Overview\nLazarus Group is North Korea's flagship state-sponsored threat actor, active since at least 2009 and attributed to the RGB. It is an umbrella organization spanning multiple subgroups \u2014 including the financially focused **APT38/BlueNoroff** and **TraderTraitor** crypto-theft cells, and **Andariel** for espionage/ransomware. Lazarus is responsible for some of the most consequential cyber events in history: the destructive 2014 Sony Pictures hack, the 2016 Bangladesh Bank SWIFT heist, the 2017 WannaCry ransomware outbreak, and a string of record-breaking cryptocurrency thefts. The group is unusual among nation-state actors in that a primary objective is generating hard currency to fund the DPRK regime and circumvent international sanctions.\n\n## Attribution & Origin\nThe U.S. DOJ has indicted named North Korean RGB operators (notably Park Jin Hyok in 2018) for Lazarus operations. CISA/FBI \"HIDDEN COBRA\" advisories, Treasury (OFAC) sanctions, and vendor reporting from Mandiant, Kaspersky, Microsoft (Diamond Sleet/ZINC), and others consistently attribute Lazarus to North Korea. The FBI and partners have publicly attributed major crypto heists (Ronin, Harmony, DMM Bitcoin, Bybit) to Lazarus/TraderTraitor.\n\n## Motivation & Objectives\n- **Financial (dominant):** theft from banks (SWIFT), cryptocurrency exchanges, DeFi bridges, and individuals to fund the regime and weapons programs; estimated billions stolen.\n- **Espionage:** defense, aerospace, energy, and technology intelligence (overlap with Andariel/APT37 collection priorities).\n- **Sabotage/destruction:** wiper and ransomware operations (Sony 2014, WannaCry 2017) for coercion and disruption.\n\n## Target Profile\nLazarus targets globally across cryptocurrency and financial services, defense/aerospace, energy, technology, media, and supply-chain vendors. It runs persistent fake-recruiter (\"Operation Dream Job\") and ClickFix campaigns against engineers and crypto/blockchain staff. **APAC / Australia & financial/crypto theft relevance is high:** Australian and APAC cryptocurrency exchanges, blockchain startups, fintechs, and their employees are squarely in scope. Lazarus has repeatedly hit exchanges across the Asia-Pacific (e.g., DMM Bitcoin in Japan, and numerous regional platforms), and Australian crypto firms and developers face the same fake-job, supply-chain (malicious npm/PyPI), and social-engineering vectors. Treat unsolicited recruiter outreach, \"coding test\" repos, and fake Zoom/wallet tooling as high-risk Lazarus indicators in this sector.\n\n## TTPs \u2014 MITRE ATT&CK\n\n### Initial Access\n- **T1566.001/.003 Spearphishing (Attachment / via Service)** \u2014 \"Dream Job\" fake recruiter lures via LinkedIn/Telegram with trojanized documents and \"coding challenges.\"\n- **T1189 Drive-by Compromise** \u2014 watering holes and a Feb 2025 Chrome zero-day delivered via a fake gaming site (AI-generated content for credibility).\n- **T1195 Supply Chain Compromise** \u2014 malicious npm/PyPI packages (BeaverTail/InvisibleFerret) and the 3CX/X_TRADER software supply-chain cascade.\n\n### Execution\n- **T1204.002 User Execution: Malicious File**, **T1059.001 PowerShell / T1059.005 Visual Basic / T1059.007 JavaScript**, **T1106 Native API**, **T1203 Exploitation for Client Execution**.\n\n### Persistence & Privilege Escalation\n- **T1543.003 Windows Service**, **T1547.001 Registry Run Keys/Startup**, **T1053 Scheduled Task/Job**, **T1574 Hijack Execution Flow** (DLL side-loading).\n- **T1068-class driver exploitation** \u2014 exploited **CVE-2024-38193** (Windows AFD.sys BYOVD/zero-day) for SYSTEM-level privilege escalation (FudModule rootkit chain). [Privilege Escalation]\n\n### Defense Evasion\n- **T1027 Obfuscated/Encoded Files**, **T1140 Deobfuscate/Decode**, **T1202 Indirect Command Execution**, **T1218 System Binary Proxy Execution**, **T1220 XSL Script Processing**, **T1221 Template Injection**, **T1553 Subvert Trust Controls** (stolen/abused code-signing certs), **T1564 Hide Artifacts**.\n\n### Credential Access & Discovery\n- **T1110 Brute Force**, **T1557 Adversary-in-the-Middle**, **T1087 Account Discovery**, **T1083 File/Directory Discovery**.\n\n### Collection, C2 & Exfiltration\n- **T1056 Input Capture**, **T1560 Archive Collected Data**, **T1005 Data from Local System**.\n- **T1071.001 Web Protocols**, **T1573 Encrypted Channel**, **T1008 Fallback Channels**, **T1105 Ingress Tool Transfer**, **T1001 Data Obfuscation**.\n- **T1041 Exfiltration Over C2 Channel**, **T1567.002 Exfiltration to Cloud Storage**.\n\n### Impact\n- **T1485 Data Destruction** and **T1491 Defacement** (Sony 2014, Guardians of Peace), **T1486 Data Encrypted for Impact** (WannaCry). [Impact]\n\n## Tooling & Malware\n- **Manuscrypt / NukeSped / Comebacker** \u2014 modular backdoors used across campaigns.\n- **AppleJeus** \u2014 trojanized cryptocurrency trading apps (Windows & macOS) for crypto theft.\n- **BLINDINGCAN, FALLCHILL, Volgmer, DTrack** \u2014 RATs/backdoors from HIDDEN COBRA advisories.\n- **BeaverTail / InvisibleFerret** \u2014 JavaScript/Python stealers in the \"Contagious Interview\" fake-job + supply-chain campaigns.\n- **WannaCry** \u2014 self-propagating ransomware (EternalBlue) behind the 2017 global outbreak.\n- **FudModule rootkit** \u2014 kernel-level AV/EDR tampering delivered via BYOVD.\n\n## Notable Campaigns & Timeline\n- **2009 / 2013** \u2014 Operation Troy and DarkSeoul wiper attacks against South Korea.\n- **Nov 2014** \u2014 Destructive **Sony Pictures** hack (Guardians of Peace) \u2014 wiper + data leak.\n- **Feb 2016** \u2014 **Bangladesh Bank SWIFT heist** (~$81M stolen).\n- **May 2017** \u2014 **WannaCry** global ransomware outbreak.\n- **2018** \u2014 DOJ indicts Park Jin Hyok; AppleJeus crypto-theft campaigns surface.\n- **Mar 2022** \u2014 **Ronin Network bridge** hack (~$620M, Axie Infinity) attributed to Lazarus.\n- **2023** \u2014 **JumpCloud** cloud identity provider breach (TraderTraitor); 3CX/X_TRADER supply-chain cascade.\n- **May 2024** \u2014 **DMM Bitcoin** (Japan) heist (~$308M) attributed to TraderTraitor by FBI/NPA.\n- **Aug 2024** \u2014 Exploitation of **CVE-2024-38193** (AFD.sys zero-day) for SYSTEM access.\n- **Feb 2025** \u2014 **Bybit** exchange heist (~$1.5B in Ethereum) \u2014 largest crypto theft on record; Chrome zero-day delivered via fake gaming site.\n- **2024\u20132025** \u2014 Adoption of **ClickFix** social engineering in fake job-interview crypto-theft chains; AI-generated personas/recruiters on LinkedIn.\n\n## Detection & Hunting\n- Hunt for **fake-recruiter** activity: trojanized \"job description\"/\"coding test\" files, ISO/LNK lures, and developer machines pulling unusual npm/PyPI packages (BeaverTail/InvisibleFerret IOCs).\n- Detect **DLL side-loading** and execution from unusual paths; alert on signed binaries loading unsigned/abnormal DLLs.\n- Monitor for **BYOVD** \u2014 vulnerable-driver loads (e.g., AFD.sys exploit patterns) and kernel-tampering behaviors consistent with FudModule.\n- Watch crypto/finance endpoints for **trojanized trading apps** (AppleJeus) and fake wallet/Zoom installers.\n- Network: encrypted C2 with fallback channels, exfil to cloud storage, connections to newly-registered look-alike crypto/recruiting domains.\n- For exchanges: monitor privileged-operator workstations and multisig signing infrastructure for AiTM and UI-spoofing (Bybit-style) tradecraft.\n\n## Mitigations\n- Phishing-resistant **FIDO2 MFA**; strict controls on developer and crypto-operations endpoints.\n- **Application control / WDAC**, vulnerable-driver blocklists (Microsoft recommended driver block rules) to counter BYOVD.\n- Lock down package management (private registries, dependency pinning, scanning) to counter malicious npm/PyPI.\n- Segregate and monitor signing/multisig and treasury operations; enforce out-of-band transaction verification.\n- Patch promptly (Chrome, Windows kernel/AFD.sys, 3CX-type supply-chain risks); EDR with kernel-tamper protection.\n- Security awareness for engineers/crypto staff on fake-recruiter, \"coding test,\" and ClickFix lures.\n\n## Activity Log\n<!-- Append-only: future intel sweeps add dated entries below -->\n- _(seed)_ 2026-06-17 \u2014 Profile created.\n\n## Trend Tracking\n| Date | Event Type | Description | Source |\n|---|---|---|---|\n| 2025-02 | Heist | Bybit ~$1.5B Ethereum theft \u2014 largest crypto heist on record | FBI / Picus |\n| 2024-05 | Heist | DMM Bitcoin ~$308M theft attributed to TraderTraitor | FBI / NPA Japan |\n| 2024-08 | Vulnerability | CVE-2024-38193 AFD.sys zero-day used for SYSTEM access | Gen/Avast |\n| 2026-06 | Malware | Suspected BeaverTail sample `vscode-bootstrap.sh` \u2192 code-beautify[.]com (2 VT) \u2014 developer lure | @malwrhunterteam/@LOPsec (X) |\n\n## References\n- https://attack.mitre.org/groups/G0032/\n- https://www.picussecurity.com/resource/blog/fbi-north-korean-lazarus-group-bybit-crypto-heist\n- https://www.wiz.io/blog/north-korean-tradertraitor-crypto-heist\n- https://www.huntress.com/threat-library/threat-actors/lazarus-group\n- https://www.infoblox.com/blog/security/lazarus-group-targets-financial-services-and-cryptocurrency-sector/\n- https://www.picussecurity.com/resource/blog/lazarus-group-apt38-explained-timeline-ttps-and-major-attacks\n\n---\n*Profile generated for CyberSec Vault \u2014 2026-06-17*\n\n## Tags\n #verified",
+   "body": "# Lazarus Group \u2014 APT Profile\n\n\u2705 **Verification:** Verified \u2014 6 independent sources\n\n## Snapshot\n| Field | Value |\n|---|---|\n| Attribution | North Korea \u2014 Reconnaissance General Bureau (RGB) |\n| Aliases | Hidden Cobra, Labyrinth Chollima, ZINC, Diamond Sleet, APT38, TraderTraitor |\n| MITRE ATT&CK ID | G0032 |\n| First seen | 2009 (Operation Troy) |\n| Status | Active (most prolific DPRK financial + espionage actor) |\n| Motivation | Financial (regime revenue), espionage, sabotage/destruction |\n\n## Overview\nLazarus Group is North Korea's flagship state-sponsored threat actor, active since at least 2009 and attributed to the RGB. It is an umbrella organization spanning multiple subgroups \u2014 including the financially focused **APT38/BlueNoroff** and **TraderTraitor** crypto-theft cells, and **Andariel** for espionage/ransomware. Lazarus is responsible for some of the most consequential cyber events in history: the destructive 2014 Sony Pictures hack, the 2016 Bangladesh Bank SWIFT heist, the 2017 WannaCry ransomware outbreak, and a string of record-breaking cryptocurrency thefts. The group is unusual among nation-state actors in that a primary objective is generating hard currency to fund the DPRK regime and circumvent international sanctions.\n\n## Attribution & Origin\nThe U.S. DOJ has indicted named North Korean RGB operators (notably Park Jin Hyok in 2018) for Lazarus operations. CISA/FBI \"HIDDEN COBRA\" advisories, Treasury (OFAC) sanctions, and vendor reporting from Mandiant, Kaspersky, Microsoft (Diamond Sleet/ZINC), and others consistently attribute Lazarus to North Korea. The FBI and partners have publicly attributed major crypto heists (Ronin, Harmony, DMM Bitcoin, Bybit) to Lazarus/TraderTraitor.\n\n## Motivation & Objectives\n- **Financial (dominant):** theft from banks (SWIFT), cryptocurrency exchanges, DeFi bridges, and individuals to fund the regime and weapons programs; estimated billions stolen.\n- **Espionage:** defense, aerospace, energy, and technology intelligence (overlap with Andariel/APT37 collection priorities).\n- **Sabotage/destruction:** wiper and ransomware operations (Sony 2014, WannaCry 2017) for coercion and disruption.\n\n## Target Profile\nLazarus targets globally across cryptocurrency and financial services, defense/aerospace, energy, technology, media, and supply-chain vendors. It runs persistent fake-recruiter (\"Operation Dream Job\") and ClickFix campaigns against engineers and crypto/blockchain staff. **APAC / Australia & financial/crypto theft relevance is high:** Australian and APAC cryptocurrency exchanges, blockchain startups, fintechs, and their employees are squarely in scope. Lazarus has repeatedly hit exchanges across the Asia-Pacific (e.g., DMM Bitcoin in Japan, and numerous regional platforms), and Australian crypto firms and developers face the same fake-job, supply-chain (malicious npm/PyPI), and social-engineering vectors. Treat unsolicited recruiter outreach, \"coding test\" repos, and fake Zoom/wallet tooling as high-risk Lazarus indicators in this sector.\n\n## TTPs \u2014 MITRE ATT&CK\n\n### Initial Access\n- **T1566.001/.003 Spearphishing (Attachment / via Service)** \u2014 \"Dream Job\" fake recruiter lures via LinkedIn/Telegram with trojanized documents and \"coding challenges.\"\n- **T1189 Drive-by Compromise** \u2014 watering holes and a Feb 2025 Chrome zero-day delivered via a fake gaming site (AI-generated content for credibility).\n- **T1195 Supply Chain Compromise** \u2014 malicious npm/PyPI packages (BeaverTail/InvisibleFerret) and the 3CX/X_TRADER software supply-chain cascade.\n\n### Execution\n- **T1204.002 User Execution: Malicious File**, **T1059.001 PowerShell / T1059.005 Visual Basic / T1059.007 JavaScript**, **T1106 Native API**, **T1203 Exploitation for Client Execution**.\n\n### Persistence & Privilege Escalation\n- **T1543.003 Windows Service**, **T1547.001 Registry Run Keys/Startup**, **T1053 Scheduled Task/Job**, **T1574 Hijack Execution Flow** (DLL side-loading).\n- **T1068-class driver exploitation** \u2014 exploited **CVE-2024-38193** (Windows AFD.sys BYOVD/zero-day) for SYSTEM-level privilege escalation (FudModule rootkit chain). [Privilege Escalation]\n\n### Defense Evasion\n- **T1027 Obfuscated/Encoded Files**, **T1140 Deobfuscate/Decode**, **T1202 Indirect Command Execution**, **T1218 System Binary Proxy Execution**, **T1220 XSL Script Processing**, **T1221 Template Injection**, **T1553 Subvert Trust Controls** (stolen/abused code-signing certs), **T1564 Hide Artifacts**.\n\n### Credential Access & Discovery\n- **T1110 Brute Force**, **T1557 Adversary-in-the-Middle**, **T1087 Account Discovery**, **T1083 File/Directory Discovery**.\n\n### Collection, C2 & Exfiltration\n- **T1056 Input Capture**, **T1560 Archive Collected Data**, **T1005 Data from Local System**.\n- **T1071.001 Web Protocols**, **T1573 Encrypted Channel**, **T1008 Fallback Channels**, **T1105 Ingress Tool Transfer**, **T1001 Data Obfuscation**.\n- **T1041 Exfiltration Over C2 Channel**, **T1567.002 Exfiltration to Cloud Storage**.\n\n### Impact\n- **T1485 Data Destruction** and **T1491 Defacement** (Sony 2014, Guardians of Peace), **T1486 Data Encrypted for Impact** (WannaCry). [Impact]\n\n## Tooling & Malware\n- **Manuscrypt / NukeSped / Comebacker** \u2014 modular backdoors used across campaigns.\n- **AppleJeus** \u2014 trojanized cryptocurrency trading apps (Windows & macOS) for crypto theft.\n- **BLINDINGCAN, FALLCHILL, Volgmer, DTrack** \u2014 RATs/backdoors from HIDDEN COBRA advisories.\n- **BeaverTail / InvisibleFerret** \u2014 JavaScript/Python stealers in the \"Contagious Interview\" fake-job + supply-chain campaigns.\n- **WannaCry** \u2014 self-propagating ransomware (EternalBlue) behind the 2017 global outbreak.\n- **FudModule rootkit** \u2014 kernel-level AV/EDR tampering delivered via BYOVD.\n\n## Notable Campaigns & Timeline\n- **2009 / 2013** \u2014 Operation Troy and DarkSeoul wiper attacks against South Korea.\n- **Nov 2014** \u2014 Destructive **Sony Pictures** hack (Guardians of Peace) \u2014 wiper + data leak.\n- **Feb 2016** \u2014 **Bangladesh Bank SWIFT heist** (~$81M stolen).\n- **May 2017** \u2014 **WannaCry** global ransomware outbreak.\n- **2018** \u2014 DOJ indicts Park Jin Hyok; AppleJeus crypto-theft campaigns surface.\n- **Mar 2022** \u2014 **Ronin Network bridge** hack (~$620M, Axie Infinity) attributed to Lazarus.\n- **2023** \u2014 **JumpCloud** cloud identity provider breach (TraderTraitor); 3CX/X_TRADER supply-chain cascade.\n- **May 2024** \u2014 **DMM Bitcoin** (Japan) heist (~$308M) attributed to TraderTraitor by FBI/NPA.\n- **Aug 2024** \u2014 Exploitation of **CVE-2024-38193** (AFD.sys zero-day) for SYSTEM access.\n- **Feb 2025** \u2014 **Bybit** exchange heist (~$1.5B in Ethereum) \u2014 largest crypto theft on record; Chrome zero-day delivered via fake gaming site.\n- **2024\u20132025** \u2014 Adoption of **ClickFix** social engineering in fake job-interview crypto-theft chains; AI-generated personas/recruiters on LinkedIn.\n\n## Detection & Hunting\n- Hunt for **fake-recruiter** activity: trojanized \"job description\"/\"coding test\" files, ISO/LNK lures, and developer machines pulling unusual npm/PyPI packages (BeaverTail/InvisibleFerret IOCs).\n- Detect **DLL side-loading** and execution from unusual paths; alert on signed binaries loading unsigned/abnormal DLLs.\n- Monitor for **BYOVD** \u2014 vulnerable-driver loads (e.g., AFD.sys exploit patterns) and kernel-tampering behaviors consistent with FudModule.\n- Watch crypto/finance endpoints for **trojanized trading apps** (AppleJeus) and fake wallet/Zoom installers.\n- Network: encrypted C2 with fallback channels, exfil to cloud storage, connections to newly-registered look-alike crypto/recruiting domains.\n- For exchanges: monitor privileged-operator workstations and multisig signing infrastructure for AiTM and UI-spoofing (Bybit-style) tradecraft.\n\n## Mitigations\n- Phishing-resistant **FIDO2 MFA**; strict controls on developer and crypto-operations endpoints.\n- **Application control / WDAC**, vulnerable-driver blocklists (Microsoft recommended driver block rules) to counter BYOVD.\n- Lock down package management (private registries, dependency pinning, scanning) to counter malicious npm/PyPI.\n- Segregate and monitor signing/multisig and treasury operations; enforce out-of-band transaction verification.\n- Patch promptly (Chrome, Windows kernel/AFD.sys, 3CX-type supply-chain risks); EDR with kernel-tamper protection.\n- Security awareness for engineers/crypto staff on fake-recruiter, \"coding test,\" and ClickFix lures.\n\n## Activity Log\n<!-- Append-only: future intel sweeps add dated entries below -->\n- _(seed)_ 2026-06-17 \u2014 Profile created.\n\n## Trend Tracking\n| Date | Event Type | Description | Source |\n|---|---|---|---|\n| 2025-02 | Heist | Bybit ~$1.5B Ethereum theft \u2014 largest crypto heist on record | FBI / Picus |\n| 2024-05 | Heist | DMM Bitcoin ~$308M theft attributed to TraderTraitor | FBI / NPA Japan |\n| 2024-08 | Vulnerability | CVE-2024-38193 AFD.sys zero-day used for SYSTEM access | Gen/Avast |\n| 2026-06 | Malware | Suspected BeaverTail sample `vscode-bootstrap.sh` \u2192 code-beautify[.]com (2 VT) \u2014 developer lure | @malwrhunterteam/@LOPsec (X) |\n\n## References\n- https://attack.mitre.org/groups/G0032/\n- https://www.picussecurity.com/resource/blog/fbi-north-korean-lazarus-group-bybit-crypto-heist\n- https://www.wiz.io/blog/north-korean-tradertraitor-crypto-heist\n- https://www.huntress.com/threat-library/threat-actors/lazarus-group\n- https://www.infoblox.com/blog/security/lazarus-group-targets-financial-services-and-cryptocurrency-sector/\n- https://www.picussecurity.com/resource/blog/lazarus-group-apt38-explained-timeline-ttps-and-major-attacks\n\n---\n*Profile generated for CyberSec Vault \u2014 2026-06-17*\n\n## Tags\n #verified\n\n---\n\n### 2026-08-12 \u2014 Operation Dream Job resurfaces with Windows zero-day CVE-2026-68820 + \"Troy\" backdoor\n\n\u2705 **Verification:** Web-verified \u2014 Check Point Research, The Hacker News, BleepingComputer, SecurityWeek, Help Net Security\n\n- **Zero-day:** **CVE-2026-68820** \u2014 Windows **Ancillary Function Driver for WinSock (AFD.sys)** privilege escalation to **SYSTEM** (CVSS 7.0). Exploited by Lazarus **since early July 2026**, roughly five weeks before Microsoft patched it in the **August 2026 Patch Tuesday**. It was the only in-the-wild exploited flaw in that release.\n- **Targets:** defense, aerospace, and aviation organisations in **France, Germany, Brazil, and India**.\n- **Lure:** fake recruiter approaches (LinkedIn) impersonating firms including **Lockheed Martin** and **Enveil**; victim opens a malicious **PDF** or installs a **trojanized PDF viewer**.\n- **New backdoor:** **Troy** \u2014 grants remote access to the compromised machine.\n- **C2 architecture:** built almost entirely on infrastructure Lazarus **does not own** \u2014 compromised **Roundcube webmail** installations and CMS platforms (many vulnerable to **CVE-2025-49113**), infected with **RelayShell**, a previously undocumented **PHP webshell** acting as a communication relay between implants and operators via **simple text files**.\n\n**Trend tracking:** continues Lazarus's Dream Job social-engineering spine (cf. Zoom lure 2026-03, Mach-O Man macOS 2026-04, signed-driver BYOVD 2026-04, BeaverTail 2026-06) but adds (a) a genuine Windows kernel-driver zero-day and (b) a shift to **third-party compromised infrastructure for C2**, which materially degrades infrastructure-based attribution and blocklisting.\n\n**Hunting:** Troy backdoor artifacts; trojanized PDF viewers; outbound C2 to Roundcube/CMS hosts; RelayShell PHP webshells using text-file command relay.\n\n> Source: [Check Point Research](https://research.checkpoint.com/2026/shattering-the-dream-when-a-job-offer-becomes-a-zero-day-attack/) \u2014 2026-08-12; [The Hacker News](https://thehackernews.com/2026/08/lazarus-exploits-windows-zero-day-to.html) \u2014 Wed, 12 Aug 2026",
    "aliases": [
     "Hidden Cobra",
     "Labyrinth Chollima",
@@ -1294,7 +1298,7 @@
   },
   {
    "group": "Sandworm",
-   "body": "# Sandworm \u2014 APT Profile\n\n\u2705 **Verification:** Verified \u2014 6 independent sources\n\n## Snapshot\n| Field | Value |\n|---|---|\n| Attribution | Russia \u2014 GRU Unit 74455 (GTsST) |\n| Aliases | Sandworm Team, APT44, Seashell Blizzard (ex-IRIDIUM), Voodoo Bear, ELECTRUM, Telebots |\n| MITRE ATT&CK ID | G0034 |\n| First seen | 2009 |\n| Status | Active |\n| Motivation | Sabotage, destruction, espionage, influence |\n\n## Overview\nSandworm Team (designated APT44 by Mandiant since April 2024) is a Russian military-intelligence cyber unit run by the GRU's Main Centre for Special Technologies (GTsST), Military Unit 74455. Unlike its espionage-focused peers, Sandworm is the most operationally mature destructive cyber actor observed to date, specializing in sabotage, critical-infrastructure disruption, and influence operations in support of Russian strategic and wartime objectives.\n\nThe group is responsible for the only confirmed cyber-caused power blackouts in history (Ukraine 2015 and 2016), the most financially damaging cyberattack ever (NotPetya, 2017), the disruption of the 2018 Winter Olympics (Olympic Destroyer), and a continuous stream of wiper attacks against Ukraine since the 2022 invasion. Mandiant characterizes APT44 as a \"full-spectrum\" actor combining espionage, attack, and information operations.\n\nSandworm pioneered ICS/OT attack tooling (Industroyer/CrashOverride) and routinely abuses Active Directory and Group Policy to mass-deploy wipers across victim networks. Its operations extend beyond Ukraine, with the BadPilot subgroup expanding initial-access operations to the US, UK, Canada, and Australia.\n\n## Attribution & Origin\n- **Country / sponsor:** Russia \u2014 GRU, Main Centre for Special Technologies (GTsST), Military Unit 74455.\n- **US indictment (October 15, 2020):** A Pittsburgh federal grand jury charged six GRU Unit 74455 officers (Andrienko, Detistov, Frolov, Kovalev, Ochichenko, Pliskin) with computer/wire fraud, damaging protected computers, and aggravated identity theft \u2014 covering KillDisk/Industroyer, NotPetya, and Olympic Destroyer.\n- **Sanctions:** US Treasury sanctioned the GRU and officials in March 2018 (CAATSA / EO 13694) over NotPetya and 2016 election interference; the EU Council imposed cyber-regime sanctions on Unit 74455 personnel in July 2020; the UK (NCSC) publicly attributed Olympic-related attacks in 2020.\n\n## Motivation & Objectives\nState-directed sabotage and destruction in support of Russian strategic and wartime objectives. Distinct from espionage-focused peers, Sandworm emphasizes disruptive and destructive effects (wipers, ICS/OT attacks, power-grid blackouts), psychological/influence operations (hack-and-leak, defacement), and degradation of critical infrastructure. Espionage and access operations support these effects.\n\n## Target Profile\n**Sectors:** Energy/electric utilities and ICS/OT (primary), government, military/defense, transportation & logistics, telecommunications, maritime, water utilities, media, financial, and elections/political organizations.\n\n**Regions:** Ukraine (dominant focus since 2014, intensified post-Feb 2022), Europe broadly, Georgia, the US (2016 election hack-and-leak, 2018 Olympics infrastructure), France (2017 election), South Korea (2018 PyeongChang Olympics), and the Middle East.\n\n**APAC / Australia targeting:** Explicitly documented.\n- The **BadPilot** subgroup (Microsoft Threat Intelligence, Feb 2025) ran a multi-year (2021\u20132025) initial-access campaign that expanded in 2024 to explicitly include Australia, alongside the US, UK, and Canada \u2014 targeting energy, telecommunications, maritime, and arms/defense sectors.\n- **ACSC / ASD government advisory:** Australia (ASD's ACSC) co-authored the joint advisory CISA AA22-110A, *\"Russian State-Sponsored and Criminal Cyber Threats to Critical Infrastructure\"* (April 20, 2022; revised May 9, 2022), produced with US, Canada, NZ, and UK authorities. It names Sandworm/Unit 74455 and its toolset.\n\n## TTPs \u2014 MITRE ATT&CK\n\n### Initial Access\n- **T1190 \u2013 Exploit Public-Facing Application:** Exploits internet-facing servers/appliances for entry (e.g., BadPilot web-shell deployments).\n- **T1566.001 \u2013 Spearphishing Attachment:** Credible spearphishing (Olympic Destroyer, NotPetya precursor ops) with malicious documents.\n- **T1133 \u2013 External Remote Services:** Abuses internet-facing access for entry and re-entry.\n\n### Execution\n- **T1059.001 / .003 / .005 \u2013 Command & Scripting Interpreter (PowerShell / Windows Command Shell / VBScript):** Scripts for staging, lateral movement, and payload execution (VBScripts on a compromised SSH server in the 2016 grid attack).\n- **T1204.002 \u2013 User Execution: Malicious File:** Relies on victims opening weaponized attachments.\n\n### Persistence\n- **T1505.003 \u2013 Web Shell:** Deployed Neo-REGEORG on an internet-facing server (2022 grid attack); custom LocalOlive web shell (BadPilot).\n- **T1136.002 \u2013 Create Account: Domain Account:** Creates domain accounts to retain access.\n\n### Privilege Escalation\n- **T1543.003 \u2013 Create or Modify System Process: Windows Service:** Replaces a Windows service ImagePath with a backdoor binary (Industroyer ops).\n- **T1078 \u2013 Valid Accounts:** Reuses harvested valid/admin credentials.\n\n### Defense Evasion\n- **T1070.004 \u2013 Indicator Removal: File Deletion:** Wipes files and artifacts to cover tracks.\n- **T1027 / .002 \u2013 Obfuscated Files or Information (incl. Software Packing):** Packs and obfuscates payloads.\n- **T1484.001 \u2013 Domain Policy Modification: Group Policy Modification:** Abuses GPOs to distribute payloads domain-wide (CaddyWiper msserver.exe and Prestige delivered via Default Domain GPO).\n\n### Credential Access\n- **T1003.001 / .003 \u2013 OS Credential Dumping (LSASS Memory / NTDS):** Mimikatz + comsvcs.dll to dump credentials from memory (2016 grid attack).\n- **T1040 \u2013 Network Sniffing:** BlackEnergy sniffer module captured credentials traversing the LAN-to-ICS boundary.\n\n### Discovery\n- **T1018 \u2013 Remote System Discovery** and **T1083 \u2013 File and Directory Discovery:** Maps hosts/shares and enumerates files before deployment.\n\n### Lateral Movement\n- **T1021.002 \u2013 Remote Services: SMB/Windows Admin Shares** and **T1570 \u2013 Lateral Tool Transfer:** Moved tools between corporate and ICS networks (2015 grid attack); used move to push files to network shares.\n\n### Collection\n- **T1056.001 \u2013 Input Capture: Keylogging:** BlackEnergy keylogger plugin.\n- **T1005 \u2013 Data from Local System.**\n\n### Command and Control\n- **T1071.001 \u2013 Application Layer Protocol: Web Protocols:** BlackEnergy C2 via HTTP POST.\n- **T1572 \u2013 Protocol Tunneling** and **T1090 \u2013 Proxy:** Tor-based inbound routing (2024).\n\n### Exfiltration\n- **T1041 \u2013 Exfiltration Over C2 Channel.**\n\n### Impact (destruction-focused)\n- **T1485 \u2013 Data Destruction:** Core capability \u2014 CaddyWiper, SDelete, BlackEnergy KillDisk component, and JUNKMAIL (null-byte overwrite) to wipe files; CaddyWiper wiped OT-related files, mapped drives, and partitions (2022 grid attack).\n- **T1486 \u2013 Data Encrypted for Impact:** NotPetya and Prestige ransomware encrypt data (Prestige hit transport/logistics in Ukraine and Poland, Oct 2022).\n- **T1489 \u2013 Service Stop:** Stops services to maximize disruption.\n- **T1490 \u2013 Inhibit System Recovery:** Prestige deletes backup catalog (wbadmin.exe delete catalog) and volume shadow copies (vssadmin.exe delete shadows /all /quiet); KillDisk corrupts the MBR.\n- **T1491.002 \u2013 Defacement: External Defacement** and **T1499 \u2013 Endpoint Denial of Service:** Website defacement and DoS as influence/disruption effects.\n- *ICS ATT&CK (ATT&CK for ICS):* T0826 Loss of Availability, T0827 Loss of Control, T0816 Device Restart/Shutdown, T0831 Manipulation of Control \u2014 Industroyer's IEC-104/IEC-101/IEC-61850/OPC DA payloads.\n\n## Tooling & Malware\n- **BlackEnergy (S0089):** Modular trojan; KillDisk wiper component, keylogger, network sniffer; used in 2015 grid attack.\n- **KillDisk:** Disk-wiping/MBR-corruption component (paired with BlackEnergy/Industroyer ops).\n- **Industroyer / CrashOverride (S0604):** First malware purpose-built to manipulate electric-grid ICS protocols (IEC-101/104, IEC-61850, OPC DA); used in 2016 Kyiv blackout.\n- **Industroyer2 (2022):** Streamlined variant implementing only IEC-104 to target protection relays in substations; deployed with CaddyWiper.\n- **NotPetya / ExPetr (S0368):** Pseudo-ransomware wiper (2017); ~$1B+ damage to indicted victims, global spillover.\n- **Olympic Destroyer (S0365):** Self-propagating wiper that disrupted the 2018 PyeongChang Olympics IT.\n- **CaddyWiper (S0693):** Data wiper used in the 2022 Ukraine power attack to destroy OT-related files and partitions.\n- **VPNFilter (2018):** Modular router/IoT botnet malware (FBI sinkhole disruption, 2018).\n- **Cyclops Blink:** VPNFilter successor targeting WatchGuard and ASUS devices; disrupted in 2022 (CISA AA22-054A).\n- **Prestige (S1058):** Ransomware against Ukrainian/Polish transport & logistics (Oct 2022).\n- **ZEROLOT / AcidPour (2024\u20132025):** Newer wipers; ZEROLOT against Ukrainian energy firms (Dec 2024\u2013Mar 2025) via AD/GPO abuse.\n- **Commodity/utility tooling:** Mimikatz (S0002), Impacket (S0357), Cobalt Strike (S0154), Empire (S0363), PoshC2 (S0378), SDelete (S0195), Invoke-PSImage (S0231), P.A.S. Webshell (S0598), Neo-REGEORG, LocalOlive, plus RMM abuse (Atera Agent, Splashtop) in BadPilot.\n\n## Notable Campaigns & Timeline\n- **Dec 23, 2015** \u2014 Ukraine power grid #1: BlackEnergy + KillDisk; first confirmed cyber-caused blackout (~225k customers). MITRE C0028.\n- **Dec 17, 2016** \u2014 Ukraine power grid #2 (Kyiv): Industroyer/CrashOverride. MITRE C0025.\n- **June 2017** \u2014 NotPetya: global destructive pseudo-ransomware seeded via the M.E.Doc supply chain.\n- **2017** \u2014 French election interference (Macron campaign hack-and-leak).\n- **Feb 2018** \u2014 Olympic Destroyer: disrupted the PyeongChang Winter Olympics.\n- **2018** \u2014 VPNFilter router botnet (FBI takedown).\n- **2018\u20132019** \u2014 Georgia: mass website defacements and broadcaster disruption.\n- **Feb 2022** \u2014 Cyclops Blink: WatchGuard/ASUS device botnet exposed/disrupted (CISA AA22-054A).\n- **April 2022** \u2014 Industroyer2 + CaddyWiper: attempted blackout against a Ukrainian energy provider; thwarted (ESET/CERT-UA). MITRE C0034.\n- **Oct 2022** \u2014 Prestige ransomware: Ukraine/Poland transport & logistics (Microsoft).\n- **April 2024** \u2014 Mandiant elevates Sandworm to APT44, consolidating clusters; links to a Texas water-facility intrusion.\n- **2023\u20132025** \u2014 Ongoing vs Ukraine + global expansion: BadPilot multi-year access campaign expanding to US/UK/Canada/Australia (2024); ZEROLOT/AcidPour deployments against Ukrainian energy (late 2024\u20132025); continued AD/GPO-driven destruction, Tor C2, and RMM-tool abuse.\n\n## Detection & Hunting\n- **ICS/OT focus:** Monitor for anomalous IEC-104 / IEC-101 / IEC-61850 / OPC DA traffic and unexpected commands to protection relays/RTUs; baseline OT protocol use and alert on deviations; watch for unauthorized config changes and device restart/shutdown commands.\n- **GPO abuse (high-value signal):** Alert on Default Domain GPO changes that distribute executables (CaddyWiper msserver.exe, ZEROLOT, Prestige); monitor SYSVOL writes and scheduled-task/service creation pushed via GPO.\n- **Recovery-inhibition commands:** Alert on vssadmin delete shadows, wbadmin delete catalog, bcdedit recovery edits, and MBR writes.\n- **Credential access:** LSASS access via comsvcs.dll MiniDump, Mimikatz signatures, NTDS.dit extraction.\n- **Web shells / external access:** Hunt for Neo-REGEORG, P.A.S., LocalOlive on internet-facing servers; review web-server process trees spawning cmd/PowerShell.\n- **RMM/LOLbins:** Unexpected Atera Agent / Splashtop installs; Tor traffic from servers; new domain accounts.\n- **Log sources:** Windows Security/Sysmon (4688/1, 4720 account creation, 7045 service install, 4698 scheduled task), GPO change auditing, EDR memory events, OT network sensors (Dragos/Nozomi), NetFlow, web-server logs, AD event correlation.\n- **IOCs:** Pull current hashes/IPs from CISA AA22-110A, AA22-054A (Cyclops Blink), ESET Industroyer2 report, Mandiant APT44 appendix; treat IOCs as supplementary to behavior-based detection given rapid wiper turnover.\n\n## Mitigations\n- Segment IT/OT with strict, monitored, default-deny boundaries; no direct corporate-to-ICS routing; enforce a DMZ/data-diode model for OT.\n- Harden Active Directory & GPO: restrict who can edit GPOs, enable change auditing/alerting, tier admin accounts, use Protected Users / LAPS \u2014 this disrupts Sandworm's primary mass-deployment vector.\n- Patch internet-facing assets (VPNs, mail/web servers, edge appliances) promptly; replace/patch SOHO/edge devices targeted by Cyclops Blink.\n- Phishing-resistant MFA everywhere, especially remote access and admin; disable legacy/default MFA configs.\n- Offline, immutable, tested backups; protect VSS and backup infrastructure; rehearse OT recovery.\n- Credential hygiene: Credential Guard, disable cached creds where feasible, monitor LSASS access, rotate after incidents.\n- Application allowlisting / EDR on OT-adjacent jump hosts; restrict RMM tooling to an approved inventory.\n- Adopt the AA22-110A / Shields Up posture and ICS-specific guidance from CISA, ACSC, and NCSC.\n\n## Activity Log\n<!-- Append-only: future intel sweeps add dated entries below -->\n- _(seed)_ 2026-06-17 \u2014 Profile created.\n\n## Trend Tracking\n| Date | Event Type | Description | Source |\n|---|---|---|---|\n| | | | |\n\n## References\n- MITRE ATT&CK G0034: https://attack.mitre.org/groups/G0034/\n- MITRE Campaign C0028 (2015 Ukraine grid): https://attack.mitre.org/campaigns/C0028/\n- MITRE Campaign C0025 (2016 Ukraine grid): https://attack.mitre.org/campaigns/C0025/\n- MITRE Campaign C0034 (2022 Industroyer2): https://attack.mitre.org/campaigns/C0034/\n- Mandiant \"APT44: Unearthing Sandworm\": https://cloud.google.com/blog/topics/threat-intelligence/apt44-unearthing-sandworm\n- DOJ indictment (Oct 2020): https://www.justice.gov/archives/opa/pr/six-russian-gru-officers-charged-connection-worldwide-deployment-destructive-malware-and\n- CISA AA22-110A (joint with ACSC/ASD): https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-110a\n- ACSC mirror of AA22-110A: https://www.cyber.gov.au/about-us/advisories/russian-state-sponsored-and-criminal-cyber-threats-critical-infrastructure\n- CISA AA22-054A (Cyclops Blink): https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-054a\n- ESET Industroyer2 analysis: https://www.welivesecurity.com/2022/04/12/industroyer2-industroyer-reloaded/\n- Microsoft BadPilot subgroup (incl. Australia targeting): https://www.microsoft.com/en-us/security/blog/2025/02/12/the-badpilot-campaign-seashell-blizzard-subgroup-conducts-multiyear-global-access-operation/\n\n---\n*Profile generated for CyberSec Vault \u2014 2026-06-17*\n\n## Tags\n #verified",
+   "body": "# Sandworm \u2014 APT Profile\n\n\u2705 **Verification:** Verified \u2014 6 independent sources\n\n## Snapshot\n| Field | Value |\n|---|---|\n| Attribution | Russia \u2014 GRU Unit 74455 (GTsST) |\n| Aliases | Sandworm Team, APT44, Seashell Blizzard (ex-IRIDIUM), Voodoo Bear, ELECTRUM, Telebots |\n| MITRE ATT&CK ID | G0034 |\n| First seen | 2009 |\n| Status | Active |\n| Motivation | Sabotage, destruction, espionage, influence |\n\n## Overview\nSandworm Team (designated APT44 by Mandiant since April 2024) is a Russian military-intelligence cyber unit run by the GRU's Main Centre for Special Technologies (GTsST), Military Unit 74455. Unlike its espionage-focused peers, Sandworm is the most operationally mature destructive cyber actor observed to date, specializing in sabotage, critical-infrastructure disruption, and influence operations in support of Russian strategic and wartime objectives.\n\nThe group is responsible for the only confirmed cyber-caused power blackouts in history (Ukraine 2015 and 2016), the most financially damaging cyberattack ever (NotPetya, 2017), the disruption of the 2018 Winter Olympics (Olympic Destroyer), and a continuous stream of wiper attacks against Ukraine since the 2022 invasion. Mandiant characterizes APT44 as a \"full-spectrum\" actor combining espionage, attack, and information operations.\n\nSandworm pioneered ICS/OT attack tooling (Industroyer/CrashOverride) and routinely abuses Active Directory and Group Policy to mass-deploy wipers across victim networks. Its operations extend beyond Ukraine, with the BadPilot subgroup expanding initial-access operations to the US, UK, Canada, and Australia.\n\n## Attribution & Origin\n- **Country / sponsor:** Russia \u2014 GRU, Main Centre for Special Technologies (GTsST), Military Unit 74455.\n- **US indictment (October 15, 2020):** A Pittsburgh federal grand jury charged six GRU Unit 74455 officers (Andrienko, Detistov, Frolov, Kovalev, Ochichenko, Pliskin) with computer/wire fraud, damaging protected computers, and aggravated identity theft \u2014 covering KillDisk/Industroyer, NotPetya, and Olympic Destroyer.\n- **Sanctions:** US Treasury sanctioned the GRU and officials in March 2018 (CAATSA / EO 13694) over NotPetya and 2016 election interference; the EU Council imposed cyber-regime sanctions on Unit 74455 personnel in July 2020; the UK (NCSC) publicly attributed Olympic-related attacks in 2020.\n\n## Motivation & Objectives\nState-directed sabotage and destruction in support of Russian strategic and wartime objectives. Distinct from espionage-focused peers, Sandworm emphasizes disruptive and destructive effects (wipers, ICS/OT attacks, power-grid blackouts), psychological/influence operations (hack-and-leak, defacement), and degradation of critical infrastructure. Espionage and access operations support these effects.\n\n## Target Profile\n**Sectors:** Energy/electric utilities and ICS/OT (primary), government, military/defense, transportation & logistics, telecommunications, maritime, water utilities, media, financial, and elections/political organizations.\n\n**Regions:** Ukraine (dominant focus since 2014, intensified post-Feb 2022), Europe broadly, Georgia, the US (2016 election hack-and-leak, 2018 Olympics infrastructure), France (2017 election), South Korea (2018 PyeongChang Olympics), and the Middle East.\n\n**APAC / Australia targeting:** Explicitly documented.\n- The **BadPilot** subgroup (Microsoft Threat Intelligence, Feb 2025) ran a multi-year (2021\u20132025) initial-access campaign that expanded in 2024 to explicitly include Australia, alongside the US, UK, and Canada \u2014 targeting energy, telecommunications, maritime, and arms/defense sectors.\n- **ACSC / ASD government advisory:** Australia (ASD's ACSC) co-authored the joint advisory CISA AA22-110A, *\"Russian State-Sponsored and Criminal Cyber Threats to Critical Infrastructure\"* (April 20, 2022; revised May 9, 2022), produced with US, Canada, NZ, and UK authorities. It names Sandworm/Unit 74455 and its toolset.\n\n## TTPs \u2014 MITRE ATT&CK\n\n### Initial Access\n- **T1190 \u2013 Exploit Public-Facing Application:** Exploits internet-facing servers/appliances for entry (e.g., BadPilot web-shell deployments).\n- **T1566.001 \u2013 Spearphishing Attachment:** Credible spearphishing (Olympic Destroyer, NotPetya precursor ops) with malicious documents.\n- **T1133 \u2013 External Remote Services:** Abuses internet-facing access for entry and re-entry.\n\n### Execution\n- **T1059.001 / .003 / .005 \u2013 Command & Scripting Interpreter (PowerShell / Windows Command Shell / VBScript):** Scripts for staging, lateral movement, and payload execution (VBScripts on a compromised SSH server in the 2016 grid attack).\n- **T1204.002 \u2013 User Execution: Malicious File:** Relies on victims opening weaponized attachments.\n\n### Persistence\n- **T1505.003 \u2013 Web Shell:** Deployed Neo-REGEORG on an internet-facing server (2022 grid attack); custom LocalOlive web shell (BadPilot).\n- **T1136.002 \u2013 Create Account: Domain Account:** Creates domain accounts to retain access.\n\n### Privilege Escalation\n- **T1543.003 \u2013 Create or Modify System Process: Windows Service:** Replaces a Windows service ImagePath with a backdoor binary (Industroyer ops).\n- **T1078 \u2013 Valid Accounts:** Reuses harvested valid/admin credentials.\n\n### Defense Evasion\n- **T1070.004 \u2013 Indicator Removal: File Deletion:** Wipes files and artifacts to cover tracks.\n- **T1027 / .002 \u2013 Obfuscated Files or Information (incl. Software Packing):** Packs and obfuscates payloads.\n- **T1484.001 \u2013 Domain Policy Modification: Group Policy Modification:** Abuses GPOs to distribute payloads domain-wide (CaddyWiper msserver.exe and Prestige delivered via Default Domain GPO).\n\n### Credential Access\n- **T1003.001 / .003 \u2013 OS Credential Dumping (LSASS Memory / NTDS):** Mimikatz + comsvcs.dll to dump credentials from memory (2016 grid attack).\n- **T1040 \u2013 Network Sniffing:** BlackEnergy sniffer module captured credentials traversing the LAN-to-ICS boundary.\n\n### Discovery\n- **T1018 \u2013 Remote System Discovery** and **T1083 \u2013 File and Directory Discovery:** Maps hosts/shares and enumerates files before deployment.\n\n### Lateral Movement\n- **T1021.002 \u2013 Remote Services: SMB/Windows Admin Shares** and **T1570 \u2013 Lateral Tool Transfer:** Moved tools between corporate and ICS networks (2015 grid attack); used move to push files to network shares.\n\n### Collection\n- **T1056.001 \u2013 Input Capture: Keylogging:** BlackEnergy keylogger plugin.\n- **T1005 \u2013 Data from Local System.**\n\n### Command and Control\n- **T1071.001 \u2013 Application Layer Protocol: Web Protocols:** BlackEnergy C2 via HTTP POST.\n- **T1572 \u2013 Protocol Tunneling** and **T1090 \u2013 Proxy:** Tor-based inbound routing (2024).\n\n### Exfiltration\n- **T1041 \u2013 Exfiltration Over C2 Channel.**\n\n### Impact (destruction-focused)\n- **T1485 \u2013 Data Destruction:** Core capability \u2014 CaddyWiper, SDelete, BlackEnergy KillDisk component, and JUNKMAIL (null-byte overwrite) to wipe files; CaddyWiper wiped OT-related files, mapped drives, and partitions (2022 grid attack).\n- **T1486 \u2013 Data Encrypted for Impact:** NotPetya and Prestige ransomware encrypt data (Prestige hit transport/logistics in Ukraine and Poland, Oct 2022).\n- **T1489 \u2013 Service Stop:** Stops services to maximize disruption.\n- **T1490 \u2013 Inhibit System Recovery:** Prestige deletes backup catalog (wbadmin.exe delete catalog) and volume shadow copies (vssadmin.exe delete shadows /all /quiet); KillDisk corrupts the MBR.\n- **T1491.002 \u2013 Defacement: External Defacement** and **T1499 \u2013 Endpoint Denial of Service:** Website defacement and DoS as influence/disruption effects.\n- *ICS ATT&CK (ATT&CK for ICS):* T0826 Loss of Availability, T0827 Loss of Control, T0816 Device Restart/Shutdown, T0831 Manipulation of Control \u2014 Industroyer's IEC-104/IEC-101/IEC-61850/OPC DA payloads.\n\n## Tooling & Malware\n- **BlackEnergy (S0089):** Modular trojan; KillDisk wiper component, keylogger, network sniffer; used in 2015 grid attack.\n- **KillDisk:** Disk-wiping/MBR-corruption component (paired with BlackEnergy/Industroyer ops).\n- **Industroyer / CrashOverride (S0604):** First malware purpose-built to manipulate electric-grid ICS protocols (IEC-101/104, IEC-61850, OPC DA); used in 2016 Kyiv blackout.\n- **Industroyer2 (2022):** Streamlined variant implementing only IEC-104 to target protection relays in substations; deployed with CaddyWiper.\n- **NotPetya / ExPetr (S0368):** Pseudo-ransomware wiper (2017); ~$1B+ damage to indicted victims, global spillover.\n- **Olympic Destroyer (S0365):** Self-propagating wiper that disrupted the 2018 PyeongChang Olympics IT.\n- **CaddyWiper (S0693):** Data wiper used in the 2022 Ukraine power attack to destroy OT-related files and partitions.\n- **VPNFilter (2018):** Modular router/IoT botnet malware (FBI sinkhole disruption, 2018).\n- **Cyclops Blink:** VPNFilter successor targeting WatchGuard and ASUS devices; disrupted in 2022 (CISA AA22-054A).\n- **Prestige (S1058):** Ransomware against Ukrainian/Polish transport & logistics (Oct 2022).\n- **ZEROLOT / AcidPour (2024\u20132025):** Newer wipers; ZEROLOT against Ukrainian energy firms (Dec 2024\u2013Mar 2025) via AD/GPO abuse.\n- **Commodity/utility tooling:** Mimikatz (S0002), Impacket (S0357), Cobalt Strike (S0154), Empire (S0363), PoshC2 (S0378), SDelete (S0195), Invoke-PSImage (S0231), P.A.S. Webshell (S0598), Neo-REGEORG, LocalOlive, plus RMM abuse (Atera Agent, Splashtop) in BadPilot.\n\n## Notable Campaigns & Timeline\n- **Dec 23, 2015** \u2014 Ukraine power grid #1: BlackEnergy + KillDisk; first confirmed cyber-caused blackout (~225k customers). MITRE C0028.\n- **Dec 17, 2016** \u2014 Ukraine power grid #2 (Kyiv): Industroyer/CrashOverride. MITRE C0025.\n- **June 2017** \u2014 NotPetya: global destructive pseudo-ransomware seeded via the M.E.Doc supply chain.\n- **2017** \u2014 French election interference (Macron campaign hack-and-leak).\n- **Feb 2018** \u2014 Olympic Destroyer: disrupted the PyeongChang Winter Olympics.\n- **2018** \u2014 VPNFilter router botnet (FBI takedown).\n- **2018\u20132019** \u2014 Georgia: mass website defacements and broadcaster disruption.\n- **Feb 2022** \u2014 Cyclops Blink: WatchGuard/ASUS device botnet exposed/disrupted (CISA AA22-054A).\n- **April 2022** \u2014 Industroyer2 + CaddyWiper: attempted blackout against a Ukrainian energy provider; thwarted (ESET/CERT-UA). MITRE C0034.\n- **Oct 2022** \u2014 Prestige ransomware: Ukraine/Poland transport & logistics (Microsoft).\n- **April 2024** \u2014 Mandiant elevates Sandworm to APT44, consolidating clusters; links to a Texas water-facility intrusion.\n- **2023\u20132025** \u2014 Ongoing vs Ukraine + global expansion: BadPilot multi-year access campaign expanding to US/UK/Canada/Australia (2024); ZEROLOT/AcidPour deployments against Ukrainian energy (late 2024\u20132025); continued AD/GPO-driven destruction, Tor C2, and RMM-tool abuse.\n\n## Detection & Hunting\n- **ICS/OT focus:** Monitor for anomalous IEC-104 / IEC-101 / IEC-61850 / OPC DA traffic and unexpected commands to protection relays/RTUs; baseline OT protocol use and alert on deviations; watch for unauthorized config changes and device restart/shutdown commands.\n- **GPO abuse (high-value signal):** Alert on Default Domain GPO changes that distribute executables (CaddyWiper msserver.exe, ZEROLOT, Prestige); monitor SYSVOL writes and scheduled-task/service creation pushed via GPO.\n- **Recovery-inhibition commands:** Alert on vssadmin delete shadows, wbadmin delete catalog, bcdedit recovery edits, and MBR writes.\n- **Credential access:** LSASS access via comsvcs.dll MiniDump, Mimikatz signatures, NTDS.dit extraction.\n- **Web shells / external access:** Hunt for Neo-REGEORG, P.A.S., LocalOlive on internet-facing servers; review web-server process trees spawning cmd/PowerShell.\n- **RMM/LOLbins:** Unexpected Atera Agent / Splashtop installs; Tor traffic from servers; new domain accounts.\n- **Log sources:** Windows Security/Sysmon (4688/1, 4720 account creation, 7045 service install, 4698 scheduled task), GPO change auditing, EDR memory events, OT network sensors (Dragos/Nozomi), NetFlow, web-server logs, AD event correlation.\n- **IOCs:** Pull current hashes/IPs from CISA AA22-110A, AA22-054A (Cyclops Blink), ESET Industroyer2 report, Mandiant APT44 appendix; treat IOCs as supplementary to behavior-based detection given rapid wiper turnover.\n\n## Mitigations\n- Segment IT/OT with strict, monitored, default-deny boundaries; no direct corporate-to-ICS routing; enforce a DMZ/data-diode model for OT.\n- Harden Active Directory & GPO: restrict who can edit GPOs, enable change auditing/alerting, tier admin accounts, use Protected Users / LAPS \u2014 this disrupts Sandworm's primary mass-deployment vector.\n- Patch internet-facing assets (VPNs, mail/web servers, edge appliances) promptly; replace/patch SOHO/edge devices targeted by Cyclops Blink.\n- Phishing-resistant MFA everywhere, especially remote access and admin; disable legacy/default MFA configs.\n- Offline, immutable, tested backups; protect VSS and backup infrastructure; rehearse OT recovery.\n- Credential hygiene: Credential Guard, disable cached creds where feasible, monitor LSASS access, rotate after incidents.\n- Application allowlisting / EDR on OT-adjacent jump hosts; restrict RMM tooling to an approved inventory.\n- Adopt the AA22-110A / Shields Up posture and ICS-specific guidance from CISA, ACSC, and NCSC.\n\n## Activity Log\n<!-- Append-only: future intel sweeps add dated entries below -->\n- _(seed)_ 2026-06-17 \u2014 Profile created.\n\n## Trend Tracking\n| Date | Event Type | Description | Source |\n|---|---|---|---|\n| | | | |\n\n## References\n- MITRE ATT&CK G0034: https://attack.mitre.org/groups/G0034/\n- MITRE Campaign C0028 (2015 Ukraine grid): https://attack.mitre.org/campaigns/C0028/\n- MITRE Campaign C0025 (2016 Ukraine grid): https://attack.mitre.org/campaigns/C0025/\n- MITRE Campaign C0034 (2022 Industroyer2): https://attack.mitre.org/campaigns/C0034/\n- Mandiant \"APT44: Unearthing Sandworm\": https://cloud.google.com/blog/topics/threat-intelligence/apt44-unearthing-sandworm\n- DOJ indictment (Oct 2020): https://www.justice.gov/archives/opa/pr/six-russian-gru-officers-charged-connection-worldwide-deployment-destructive-malware-and\n- CISA AA22-110A (joint with ACSC/ASD): https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-110a\n- ACSC mirror of AA22-110A: https://www.cyber.gov.au/about-us/advisories/russian-state-sponsored-and-criminal-cyber-threats-critical-infrastructure\n- CISA AA22-054A (Cyclops Blink): https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-054a\n- ESET Industroyer2 analysis: https://www.welivesecurity.com/2022/04/12/industroyer2-industroyer-reloaded/\n- Microsoft BadPilot subgroup (incl. Australia targeting): https://www.microsoft.com/en-us/security/blog/2025/02/12/the-badpilot-campaign-seashell-blizzard-subgroup-conducts-multiyear-global-access-operation/\n\n---\n*Profile generated for CyberSec Vault \u2014 2026-06-17*\n\n## Tags\n #verified\n\n---\n\n### 2026-08-11 \u2014 UAC-0145 subgroup: fake job interviews pushing a command-capable VPN client (CERT-UA)\n\n\u2705 **Verification:** Web-verified \u2014 CERT-UA via The Hacker News\n\n- **CERT-UA** disclosed a social-engineering campaign by **UAC-0145**, a threat cluster it assesses as a **subgroup within Sandworm (aka APT44)**.\n- **Targeting:** IT workers in **Ukraine**.\n- **Lure:** operators masquerade as **recruiters**, running fake job interviews to trick targets into installing malware.\n- **Payload:** a **VPN client that can execute commands** \u2014 i.e. trojanized remote-access software delivered under the cover of a legitimate onboarding requirement.\n\n**Trend tracking:** notable convergence with DPRK tradecraft \u2014 Lazarus ran its own fake-recruiter Operation Dream Job campaign the same week (`Threat_Intel/CVEs/2026/High/CVE-2026-68820-Windows-AFD-WinSock-LPE-Lazarus-ZeroDay.md`), and researchers separately ran a fake crypto startup that hired three suspected DPRK IT workers. Fake-employment social engineering is now shared tradecraft across Russian and North Korean clusters, in both directions (actor-as-recruiter and actor-as-candidate).\n\n**Hunting:** unsigned/sideloaded VPN clients installed during recruitment-themed activity; VPN binaries with command-execution capability; interview-themed lures targeting IT/dev staff.\n\n> Source: [The Hacker News](https://thehackernews.com/2026/08/sandworm-linked-uac-0145-uses-fake-job.html) \u2014 Wed, 12 Aug 2026",
    "aliases": [
     "Sandworm Team",
     "APT44",
@@ -1711,11 +1715,14 @@
   }
  ],
  "apt_activity_windows": {
-  "week": {},
+  "week": {
+   "Sandworm": 1
+  },
   "month": {
    "APT41": 2,
    "APT29": 1,
-   "Salt Typhoon": 1
+   "Salt Typhoon": 1,
+   "Sandworm": 1
   },
   "year": {
    "Scattered Spider": 3,
@@ -1724,7 +1731,8 @@
    "Volt Typhoon": 1,
    "Gamaredon": 1,
    "APT29": 1,
-   "Salt Typhoon": 1
+   "Salt Typhoon": 1,
+   "Sandworm": 1
   },
   "all": {
    "Scattered Spider": 3,
@@ -1733,7 +1741,8 @@
    "Volt Typhoon": 1,
    "Gamaredon": 1,
    "APT29": 1,
-   "Salt Typhoon": 1
+   "Salt Typhoon": 1,
+   "Sandworm": 1
   }
  },
  "apt_activity_monthly": {
@@ -1801,8 +1810,8 @@
   ]
  },
  "cve_sev": {
-  "Critical": 134,
-  "High": 108,
+  "Critical": 141,
+  "High": 112,
   "Medium": 12,
   "Low": 8
  },
@@ -1817,8 +1826,8 @@
   "2022": 7,
   "2023": 9,
   "2024": 13,
-  "2025": 15,
-  "2026": 235
+  "2025": 16,
+  "2026": 245
  },
  "cve_month": {
   "2025-10": 1,
@@ -1826,7 +1835,7 @@
   "2026-05": 20,
   "2026-06": 108,
   "2026-07": 16,
-  "2026-08": 18
+  "2026-08": 27
  },
  "top_cve": [
   {
@@ -1854,15 +1863,15 @@
    "kev": true
   },
   {
-   "id": "CVE-2026-55607",
+   "id": "CVE-2026-34348",
    "n": 26,
-   "sev": "High",
+   "sev": "",
    "kev": false
   },
   {
-   "id": "CVE-2026-34348",
-   "n": 25,
-   "sev": "",
+   "id": "CVE-2026-55607",
+   "n": 26,
+   "sev": "High",
    "kev": false
   },
   {
@@ -1890,13 +1899,13 @@
    "kev": false
   },
   {
-   "id": "CVE-2026-46331",
-   "n": 21,
-   "sev": "High",
+   "id": "CVE-2026-59310",
+   "n": 22,
+   "sev": "Critical",
    "kev": false
   },
   {
-   "id": "CVE-2026-55200",
+   "id": "CVE-2026-59309",
    "n": 21,
    "sev": "Critical",
    "kev": false
@@ -2373,6 +2382,16 @@
    "kev": true,
    "apts": []
   },
+  "CVE-2025-49113": {
+   "file": "Threat_Intel/CVEs/2025/Critical/CVE-2025-49113.md",
+   "body": "# CVE-2025-49113\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2025\n\n## Summary\nC2 architecture:** built almost entirely on infrastructure Lazarus **does not own** \u2014 compromised **Roundcube webmail** installations and CMS platforms (many vulnerable to **CVE-2025-49113**), infected with **RelayShell**, a previously undocumented **PHP webshell** acting as a communication relay between implants and operators via **simple text files**.\n\n## Where it appears in this vault\n- `Threat_Intel/APT_Groups/Lazarus/Lazarus-Profile.md` \u2014 C2 architecture:** built almost entirely on infrastructure Lazarus **does not own** \u2014 compromised **Roundcube webmail** installations and CMS platforms (many vulnerable to **CVE-2025-49113**), infected with **RelayShell**, a previously undocumented **PHP webshell** acting as a communication relay between implants and operators via **simple text files**.\n- `X_Intel/x-intel-tracker.md` \u2014 rss:thn-2026-08-12-lazarus-zeroday | 2026-08-12 | The Hacker News / Check Point | CVE-2026-68820 Windows AFD.sys WinSock LPE\u2192SYSTEM, sole in-the-wild flaw in Aug PT, exploited by Lazarus since early July; Operation Dream Job, \"Troy\" backdoor, RelayShell PHP webshell on compromised Roundcube (CVE-2025-49113); FR/DE/BR/IN defense+aerospace; web-verified | -> Threat_Intel/CVEs/2026/High/CVE-2026-68820-Windows-AFD-WinSock-LPE-Lazarus-ZeroDay.md (new) + APPENDED Threat_Intel/APT_Groups/Lazarus/Lazarus-Profile.md\n- `X_Intel/x-intel-tracker.md` \u2014 Verification: web-verified via WebSearch \u2014 CVE-2026-58231 SAP (eSecurityPlanet/BC/THN/cvemon: CVSS 10.0, Data Hub Adapter, Defused exploitation +3d); CVE-2026-65400 macOS Screen Sharing (BC/NCSC-NL/SC Media/TechRepublic: CVSS 7.1, port 5900, root+Monero, fixed Aug-6 Tahoe 26.6.1); Taiwan autonomous AI attack (CNN/Tom's Hardware/Security Affairs/GBHackers/TechTimes: Hermes+OpenClaw, Jul 1\u20134, 1,395 files, 21 systems, 85 accounts, 2,500+ records, nuclear agency + 7 energy firms, \"authorized pentest\" jailbreak); CVE-2026-68820 Lazarus (Check Point Research/THN/BC/SecurityWeek/Help Net/Security Affairs: AFD.sys WinSock, exploited since early July, Troy backdoor, RelayShell on Roundcube CVE-2025-49113, FR/DE/BR/IN).\n- `X_Intel/x-intel-tracker.md` \u2014 Notes: 24 created / 4 appended. New CVEs referenced: CVE-2026-58231, CVE-2026-55040, CVE-2026-48362, CVE-2026-68820, CVE-2026-65400, CVE-2026-20349, CVE-2026-50656, CVE-2026-59310 (append), CVE-2025-49113 (referenced).\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-49113\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-49113\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-49113\n\n## Tags\n#cve #2025 #critical #auto-stub",
+   "sev": "Critical",
+   "year": "2025",
+   "kev": true,
+   "apts": [
+    "Lazarus Group"
+   ]
+  },
   "CVE-2025-20701": {
    "file": "Threat_Intel/CVEs/2025/High/CVE-2025-20701-Airoha-Bluetooth-Beats-Eavesdrop.md",
    "body": "# CVE-2025-20701 \u2014 Airoha Bluetooth SoC Eavesdropping (Beats Studio Buds + others)\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n**Severity:** High \u2014 CVSS **8.8**\n**Affected:** Airoha Bluetooth audio SDK / Airoha SoCs used in many true-wireless earbuds. Apple **Beats Studio Buds** confirmed; also reported in devices from **Sony, Bose, JBL, Marshall, Jabra** and others using the same chip.\n**Type:** Incorrect authorization / missing authentication in the Bluetooth BR/EDR radio \u2014 device can be paired **without user consent**.\n**Status:** Apple fixed it in **Beats Firmware Update 1B211** (auto-delivered when buds are paired and in Bluetooth range of an iPhone/iPad/Mac). Many other vendors have shipped fixes.\n\n## Summary\nA missing-authentication weakness in the Airoha SoC's Bluetooth radio lets an attacker **within Bluetooth range listen through the microphone** of an earbud device that is **not yet paired and is actively seeking pairing requests**. It was disclosed by ERNW researchers **Dennis Heinze and Frieder Steinmetz** alongside CVE-2025-20700 and CVE-2025-20702 at the TROOPERS conference. The eavesdropping window is the unpaired/pairing-seeking state, so risk is highest for buds taken out of the case near an untrusted party.\n\n## Defender actions\n- Ensure Beats Studio Buds are on firmware **1B211** (pair with an Apple device in range to auto-update; verify via the Beats/headphone settings).\n- For other affected brands, apply the latest vendor firmware.\n- User guidance: pair earbuds in trusted environments; don't leave buds in open pairing mode in public/hostile RF environments.\n\n## Sources\n> Source: [@TheHackersNews (X) \u2014 Apple Patches Beats Studio Buds Flaw](https://x.com/TheHackersNews/status/2067887719049793777) \u2014 2026-06-19\n- The Hacker News: https://thehackernews.com/2026/06/apple-patches-beats-studio-buds-flaw.html\n- BleepingComputer: https://www.bleepingcomputer.com/news/security/apple-fixes-beats-studio-buds-flaw-that-let-hackers-spy-on-conversations/\n- SC Media: https://www.scworld.com/brief/apple-releases-security-update-for-beats-studio-buds-vulnerability\n\n*Captured via x-bugbounty-intel-sweep \u2014 2026-06-19*\n\n## Update \u2014 2026-06-23 (impact goes beyond eavesdropping)\nFollow-up reporting clarifies the **Airoha SoC flaw class** is broader than microphone eavesdropping: researchers say an in-range attacker can **read and write the headphone's RAM and flash**, and **abuse the trust relationship the buds have with their paired phone** \u2014 expanding the impact from \"wiretap\" toward firmware tampering and potential pivoting via the paired device. For **Beats Studio Buds**, Apple's **1B211** firmware closes the patched issue; other Airoha-based brands should be on their latest vendor firmware.\n\n> Source: [@TheHackersNews (X) \u2014 Exploiting Airoha Bluetooth flaws goes beyond microphone access](https://x.com/TheHackersNews/status/2068698955605823908) \u2014 2026-06-22 (bookmarked)\n\n*Updated via x-bugbounty-intel-sweep \u2014 2026-06-23*\n\n## Tags\n #verified",
@@ -2703,6 +2722,22 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-41703": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-41703.md",
+   "body": "# CVE-2026-41703\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2026\n\n## Summary\nBroadcom advisory **VMSA-2026-0006.1** now covers multiple flaws across **vCenter, ESX, Workstation, Fusion, and Cloud Foundation**: **CVE-2026-59309** (critical vCenter authentication bypass, CVSS 9.8), **CVE-2026-59310**, **CVE-2026-47876**, **CVE-2026-41703**, **CVE-2026-41709**.\n\n## Where it appears in this vault\n- `Threat_Intel/VMware-ESXi-vCenter-Ransomware-Exploitation-VMSA-2026-0006-2026.md` \u2014 Broadcom advisory **VMSA-2026-0006.1** now covers multiple flaws across **vCenter, ESX, Workstation, Fusion, and Cloud Foundation**: **CVE-2026-59309** (critical vCenter authentication bypass, CVSS 9.8), **CVE-2026-59310**, **CVE-2026-47876**, **CVE-2026-41703**, **CVE-2026-41709**.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-41703\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-41703\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-41703\n\n## Tags\n#cve #2026 #critical #auto-stub",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-41709": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-41709.md",
+   "body": "# CVE-2026-41709\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2026\n\n## Summary\nBroadcom advisory **VMSA-2026-0006.1** now covers multiple flaws across **vCenter, ESX, Workstation, Fusion, and Cloud Foundation**: **CVE-2026-59309** (critical vCenter authentication bypass, CVSS 9.8), **CVE-2026-59310**, **CVE-2026-47876**, **CVE-2026-41703**, **CVE-2026-41709**.\n\n## Where it appears in this vault\n- `Threat_Intel/VMware-ESXi-vCenter-Ransomware-Exploitation-VMSA-2026-0006-2026.md` \u2014 Broadcom advisory **VMSA-2026-0006.1** now covers multiple flaws across **vCenter, ESX, Workstation, Fusion, and Cloud Foundation**: **CVE-2026-59309** (critical vCenter authentication bypass, CVSS 9.8), **CVE-2026-59310**, **CVE-2026-47876**, **CVE-2026-41703**, **CVE-2026-41709**.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-41709\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-41709\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-41709\n\n## Tags\n#cve #2026 #critical #auto-stub",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-42530": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-42530-42055-NGINX-RCE.md",
    "body": "# CVE-2026-42530 & CVE-2026-42055 \u2014 Critical NGINX Open Source RCE (F5 OOB Patch)\n\n\u2705 **Verification:** Verified \u2014 7 independent sources\n\n**Severity:** Critical \u2014 CVSSv4 **9.2** (both)\n**Product:** NGINX Open Source / NGINX Plus\n**Type:** Use-after-free (HTTP/3 QUIC) and heap-based buffer overflow (HTTP/2 proxy)\n**Status:** Patched out-of-band by F5; unauthenticated, remote\n\n## Summary\nF5 issued **out-of-band patches** for two critical NGINX flaws, both remotely triggerable by an **unauthenticated** attacker and capable of leading to **remote code execution**.\n\n### CVE-2026-42530 (CVSSv4 9.2) \u2014 HTTP/3 QUIC use-after-free\nUse-after-free in **`ngx_http_v3_module`**, triggered when NGINX is configured with the **HTTP/3 QUIC module**. A specially crafted HTTP/3 session can **reopen a QPACK encoder stream**, causing a use-after-free in the NGINX worker process (worker restart/DoS). If **ASLR is disabled or bypassed**, the attacker can execute arbitrary code.\n- Affects NGINX Open Source **1.31.0 / 1.31.1**; fixed in **1.31.2**.\n- Mitigation: **disable HTTP/3**.\n\n### CVE-2026-42055 (CVSSv4 9.2) \u2014 HTTP/2 proxy heap overflow\nHeap-based buffer overflow in **`ngx_http_proxy_v2_module`** and **`ngx_http_grpc_module`**, triggered when `proxy_http_version` is set to **2** or `grpc_pass` is used to proxy **HTTP/2** traffic.\n- Fixed in NGINX Open Source **1.30.3 / 1.31.2**, NGINX Plus **R37 P2.1 (37.0.2.1)** and **R36 P6**.\n- Mitigation: remove `ignore_invalid_headers off`; reduce `large_client_header_buffers` size below 2 MB.\n\n## Defender actions\n- Patch to NGINX OSS 1.31.2 (or 1.30.3 for the HTTP/2 fix) / NGINX Plus R37 P2.1 / R36 P6 immediately.\n- If patching is delayed: disable HTTP/3 (42530) and apply the HTTP/2 config mitigations (42055).\n- Inventory edge/reverse-proxy NGINX instances using HTTP/3 or HTTP/2 upstream proxying \u2014 those are the exposed configs.\n\n## Sources\n> Source: [@TheHackersNews (X) \u2014 F5 Patches Two Critical NGINX Open Source Flaws](https://x.com/TheHackersNews/status/2067661885907030116) \u2014 2026-06-18\n- F5 advisory: https://my.f5.com/manage/s/article/K000161616\n- The Hacker News: https://thehackernews.com/2026/06/f5-patches-two-critical-nginx-open.html\n- SecurityWeek: https://www.securityweek.com/f5-patches-critical-high-severity-nginx-vulnerabilities/\n- BleepingComputer: https://www.bleepingcomputer.com/news/security/f5-issues-out-of-band-patches-for-critical-nginx-vulnerabilities/\n\n## Tags\n#cve #2026 #critical #nginx #rce #http3 #http2 #verified\n\n---\n*Captured via x-bugbounty-intel-sweep \u2014 2026-06-19*\n\n## Update \u2014 2026-06-19 (additional X corroboration)\nFurther X amplification of the F5 out-of-band NGINX patch confirms the note above (no new technical detail):\n- @akaclandestine posted a PoC reference: \"CVE-2026-42530 NGINX RCE.\"\n- @The_Cyber_News: \"F5 Patches NGINX Vulnerability That Enables Code Execution and DoS Attacks\" (cybersecuritynews.com).\n- @UK_Daniel_Card (mRr3b00t) shared the THN write-up (\"F5 patches two critical NGINX\" flaws).\n\n> Source: [@akaclandestine (X)](https://x.com/akaclandestine/status/2067661726321922548) \u2014 2026-06-18\n> Source: [@The_Cyber_News (X)](https://x.com/The_Cyber_News/status/2067584468274340137) \u2014 2026-06-18\n> Source: [@UK_Daniel_Card (X)](https://x.com/UK_Daniel_Card/status/2067714596589179248) \u2014 2026-06-18\n\n*Captured via x-bugbounty-intel-sweep \u2014 2026-06-19*\n\n## Update \u2014 2026-06-22 (clearer technical path)\nThe Hacker News published a follow-up clarifying the exploit mechanics of both flaws:\n- **CVE-2026-42530** \"comes down to an **HTTP/3 lifetime mismatch** that can leave a **freed stream pointer treated as valid**\" \u2014 i.e., the use-after-free arises because a QUIC/HTTP/3 stream object is freed but a dangling reference continues to be used as if live.\n- **CVE-2026-42055** \"lets **oversized HPACK data write past its buffer**, causing [an] unauthenticated worker\" overflow \u2014 confirming the HTTP/2 heap overflow is reachable pre-auth via crafted HPACK (header-compression) data exceeding buffer bounds.\n\nNo change to remediation: patch to NGINX OSS 1.31.2 (HTTP/3) / 1.30.3 (HTTP/2) or NGINX Plus R37 P2.1 / R36 P6; disable HTTP/3 and apply HTTP/2 config mitigations if patching is delayed.\n\n> Source: [@TheHackersNews (X)](https://x.com/TheHackersNews/status/2068935559704129715) \u2014 2026-06-22\n\n*Updated via x-bugbounty-intel-sweep \u2014 2026-06-22*",
@@ -2815,6 +2850,14 @@
    "kev": true,
    "apts": []
   },
+  "CVE-2026-47876": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-47876.md",
+   "body": "# CVE-2026-47876\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2026\n\n## Summary\nBroadcom advisory **VMSA-2026-0006.1** now covers multiple flaws across **vCenter, ESX, Workstation, Fusion, and Cloud Foundation**: **CVE-2026-59309** (critical vCenter authentication bypass, CVSS 9.8), **CVE-2026-59310**, **CVE-2026-47876**, **CVE-2026-41703**, **CVE-2026-41709**.\n\n## Where it appears in this vault\n- `Threat_Intel/VMware-ESXi-vCenter-Ransomware-Exploitation-VMSA-2026-0006-2026.md` \u2014 Broadcom advisory **VMSA-2026-0006.1** now covers multiple flaws across **vCenter, ESX, Workstation, Fusion, and Cloud Foundation**: **CVE-2026-59309** (critical vCenter authentication bypass, CVSS 9.8), **CVE-2026-59310**, **CVE-2026-47876**, **CVE-2026-41703**, **CVE-2026-41709**.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-47876\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-47876\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-47876\n\n## Tags\n#cve #2026 #critical #auto-stub",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-48062": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-48062-CodeIgniter4-Upload-Validation-Bypass-RCE.md",
    "body": "# CVE-2026-48062 \u2014 CodeIgniter4 Upload Validation Bypass \u2192 RCE\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n**Severity:** Critical \u2014 CVSS 9.8\n**Component:** CodeIgniter4 (PHP framework) \u2014 `ext_in` file-upload validation\n**Impact:** Under unsafe upload configurations, a malicious file can bypass extension checks, potentially leading to remote code execution.\n\n## Details\nCVE-2026-48062 is an upload validation bypass in CodeIgniter4's `ext_in` handling. When applications rely on unsafe upload configurations, an attacker can craft a file that slips past extension validation and, depending on how the file is stored/served, achieve remote code execution. FOFA-style reporting indicates exposed instances.\n\n## Action\n- Update CodeIgniter4 to the patched release.\n- Do not rely on `ext_in` alone; validate MIME type, enforce an allow-list, store uploads outside webroot, and disable execution in upload dirs.\n\n> Source: [X @DarkWebInformer](https://x.com/DarkWebInformer) \u2014 2026-07-08 (bookmark)\n\n## Tags\n#cve #codeigniter #php #file-upload #rce #critical #unverified\n\n*Captured via x-bugbounty-intel-sweep \u2014 2026-07-09*",
@@ -2850,6 +2893,14 @@
   "CVE-2026-48323": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-48323.md",
    "body": "# CVE-2026-48323\n\n\u2705 **Verification:** Verified \u2014 4 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2026\n\n## Summary\nAdobe Campaign Classic CVE-2026-48323 (CVSS 10, unauth template-injection RCE) \u2014 @SecAlertsCo, dated Aug 7 (>24h). Consider capture next run if not patched/tracked.\n\n## Where it appears in this vault\n- `X_Intel/x-intel-2026-08-08.md` \u2014 Adobe Campaign Classic CVE-2026-48323 (CVSS 10, unauth template-injection RCE) \u2014 @SecAlertsCo, dated Aug 7 (>24h). Consider capture next run if not patched/tracked.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-48323\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-48323\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-48323\n\n## Tags\n#cve #2026 #critical #auto-stub #verified",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-48362": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-48362-Adobe-ColdFusion-OS-Command-Injection.md",
+   "body": "# CVE-2026-48362 \u2014 Adobe ColdFusion OS Command Injection (CVSS 10.0) + Campaign Classic / Commerce\n\n\u2705 **Verification:** Web-verified \u2014 The Hacker News\n\n**Type:** CVE / command injection | **Severity:** Critical (CVSS 10.0) | **Date:** 2026-08-12\n\n## Summary\nAdobe shipped updates addressing **three CVSS 10.0 flaws** across ColdFusion, Commerce, and Campaign Classic. The most severe, **CVE-2026-48362**, is an **operating-system command injection in ColdFusion** leading to arbitrary code execution. Companion maximum-severity issues affect **Campaign Classic** and **Commerce**, enabling arbitrary code execution and privilege escalation.\n\n## Action\n- Apply the August 2026 Adobe security bulletins for ColdFusion, Commerce, and Campaign Classic.\n- ColdFusion has a long history of rapid post-patch exploitation and KEV listings \u2014 prioritise internet-facing instances.\n- Lock down ColdFusion Administrator, apply the ColdFusion lockdown guide, and hunt for `cfexecute`/CFM webshells.\n\n> Source: [The Hacker News](https://thehackernews.com/2026/08/adobe-patches-three-cvss-100-coldfusion.html) \u2014 Wed, 12 Aug 2026\n\n## Tags\n #cve #adobe #coldfusion #command-injection #rce #critical #cvss10 #verified",
    "sev": "Critical",
    "year": "2026",
    "kev": false,
@@ -2959,6 +3010,14 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-55040": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-55040-SharePoint-Auth-Bypass-Exploited.md",
+   "body": "# CVE-2026-55040 \u2014 Microsoft SharePoint Authentication Bypass, Exploited After PoC (CVSS 9.1)\n\n\u2705 **Verification:** Web-verified \u2014 The Hacker News (two independent reports)\n\n**Type:** CVE / auth bypass \u2192 unauth RCE chain | **Severity:** Critical (CVSS 9.1) | **Date:** 2026-08-11 / 2026-08-13\n\n## Summary\n**CVE-2026-55040** is a critical **security feature bypass stemming from weak authentication** in Microsoft SharePoint. Researchers demonstrated an exploit chain that allows entering a SharePoint server **as any user, including an administrator, with no valid account** \u2014 reaching unauthenticated RCE.\n\n**Attackers began exploiting it in the wild immediately after public PoC release (2026-08-13).**\n\n## Affected / Fixed\n- **Affected:** SharePoint Server Subscription Edition, SharePoint Server 2019, SharePoint Server 2016.\n- **Fixed:** Microsoft **July 2026 Patch Tuesday**.\n\n## Notable \u2014 AI-assisted discovery\nA significant part of the research that found the chain was performed by an **AI agent**, making this a notable data point in the autonomous-vulnerability-research trend (cf. `Guides/AI-BugBounty/HTTP-Terminator-Autonomous-AI-HTTP-Desync-BlackHat-2026.md`).\n\n## Action\n- Confirm July 2026 Patch Tuesday is applied to all SharePoint on-prem farms.\n- Treat unpatched, internet-facing SharePoint as compromised; hunt for anomalous authentication as admin accounts and webshells in LAYOUTS/_layouts paths.\n\n> Source: [The Hacker News](https://thehackernews.com/2026/08/attackers-exploit-sharepoint.html) \u2014 Thu, 13 Aug 2026; [The Hacker News](https://thehackernews.com/2026/08/researchers-disclose-ai-assisted.html) \u2014 Tue, 11 Aug 2026\n\n## Tags\n #cve #sharepoint #microsoft #auth-bypass #rce #exploited #ai-assisted #critical #verified",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-55200": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-55200-libssh2-OOB-Heap-Write-RCE.md",
    "body": "# CVE-2026-55200 \u2014 libssh2 Out-of-Bounds Heap Write (SSH Client RCE)\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n**Severity:** Critical \u2014 CVSS **9.2** (per VulnCheck, as reported)\n**Affected:** **libssh2** SSH client library \u2014 **every version up to and including 1.11.1**. libssh2 is embedded in a very large number of tools, language bindings, and applications that make outbound SSH connections.\n**Type:** **Out-of-bounds heap write** in `ssh2_transport_read()` (transport-layer packet parsing) \u2192 memory corruption, potential remote code execution.\n**Status:** Reported; verify availability of a fixed release (expected >1.11.1) and patch.\n\n## Summary\nA critical memory-corruption flaw was reported in **libssh2**, the widely embedded client-side SSH library. The bug is an **out-of-bounds heap write in `ssh2_transport_read()`**, the routine that parses incoming SSH transport packets. Because the defect is in client-side packet handling, a **malicious or compromised SSH server** (or an active man-in-the-middle) can send crafted transport data to a connecting client and corrupt heap memory \u2014 a primitive that can escalate to **remote code execution** in the process linking libssh2. The library's ubiquity (git tooling, language bindings, automation agents, network/management software) makes the blast radius broad.\n\n## Why it matters\n- Client-side trigger: any tool that connects out to an attacker-controlled or hijacked SSH endpoint is exposed.\n- \"Embedded in countless tools\" \u2014 transitive dependency risk means many products ship libssh2 without it being obvious.\n\n## Defender actions\n- Inventory software and dependencies that bundle or link **libssh2**; identify versions **\u2264 1.11.1**.\n- Update libssh2 to the fixed release once published; rebuild/repackage downstream software that statically links it.\n- Until patched, avoid connecting libssh2-based clients to untrusted SSH servers; pin known-good host keys to reduce MitM risk.\n- Watch vendor advisories for products that embed libssh2 (git clients, automation/CI agents, network management tools).\n\n## Sources\n> Source: [@IntCyberDigest (X) \u2014 Critical RCE in libssh2 (CVE-2026-55200)](https://x.com/IntCyberDigest/status/2069320581221167597) \u2014 2026-06-23\n\n*Captured via x-bugbounty-intel-sweep \u2014 2026-06-23*\n\n## Tags\n#cve #rce #libssh2 #ssh #supplychain #2026 #verified\n\n---\n\n## Update \u2014 2026-06-25: Public PoC code released\nMultiple proof-of-concept exploits for **CVE-2026-55200** have now been published, moving this from \"reported\" to \"weaponizable.\" Treat as **actively exploitable** and prioritize patching of any software linking libssh2 \u2264 1.11.1.\n\n- PoC #1: `github.com/bikini/exploitarium/tree/main/libssh2-cve-2026-55200-poc`\n- PoC #2: `github.com/0xBlackash/CVE-2026-55200`\n\nWith PoCs public, opportunistic exploitation against clients lured to malicious SSH endpoints becomes more likely. Re-prioritize dependency inventory and patching.\n\n> Source: [@IntCyberDigest (X) \u2014 PoC released for libssh2 CVE-2026-55200](https://x.com/IntCyberDigest/status/2069410242392105046) \u2014 2026-06-23\n> Source: [@DarkWebInformer (X) \u2014 another PoC for CVE-2026-55200](https://x.com/DarkWebInformer/status/2069846786513023248) \u2014 2026-06-24\n\n*Appended via x-bugbounty-intel-sweep \u2014 2026-06-25*\n\n## 2026-06-29 \u2014 Additional public PoC + cleanup emphasis\n\n@TheHackersNews reports CVE-2026-55200 \"now has public PoC code.\" Restated impact: a **malicious SSH server** can trigger client-side memory corruption with **no credentials and no user interaction**; affected **through libssh2 1.11.1**. Highlighted remediation challenge: the hard part of cleanup is **finding bundled and static copies** of libssh2 embedded inside other software, not just the system package.\n\n> Source: X @TheHackersNews (tweet 2071493620872405067) \u2014 2026-06-29\n\n*Appended via x-bugbounty-intel-sweep \u2014 2026-06-29*\n\n## 2026-07-01 \u2014 Supply-chain exposure elaboration\n@TheHackersNews stresses the real exposed surface is **not just systems with a standalone libssh2 package**. libssh2 is a **client-side SSH library embedded in curl, Git, PHP, backup agents, firmware updaters, and appliances**. **Static/bundled copies can remain vulnerable even after a distro update**, so patching the OS package is insufficient \u2014 inventory embedded copies across tooling, firmware, and appliances.\n> Source: [@TheHackersNews (X)](https://x.com/TheHackersNews) \u2014 2026-06-30\n*Appended via x-bugbounty-intel-sweep \u2014 2026-07-01*",
@@ -3010,6 +3069,14 @@
   "CVE-2026-58031": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-58031.md",
    "body": "# CVE-2026-58031\n\n\u2705 **Verification:** Verified \u2014 4 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2026\n\n## Summary\n(X feed) | 2026-07-15 | @hawktrace (repost) | Windows Admin Center RCE \u2014 CVE-2026-56196 & CVE-2026-58031 (MSRC, July PT) | -> Threat_Intel/CVEs/2026/Critical/Windows-Admin-Center-RCE-CVE-2026-56196-58031.md (new)\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 (X feed) | 2026-07-15 | @hawktrace (repost) | Windows Admin Center RCE \u2014 CVE-2026-56196 & CVE-2026-58031 (MSRC, July PT) | -> Threat_Intel/CVEs/2026/Critical/Windows-Admin-Center-RCE-CVE-2026-56196-58031.md (new)\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-58031\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-58031\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-58031\n\n## Tags\n#cve #2026 #critical #auto-stub #verified",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-58231": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-58231-SAP-Commerce-Cloud-Unauth-RCE.md",
+   "body": "# CVE-2026-58231 \u2014 SAP Commerce Cloud Data Hub Adapter Unauthenticated RCE (CVSS 10.0)\n\n\u2705 **Verification:** Web-verified \u2014 BleepingComputer, The Hacker News, eSecurityPlanet, cvemon/Intruder\n\n**Type:** CVE / unauth RCE | **Severity:** Critical (CVSS 10.0) | **Date:** 2026-08-12 (disclosed) / 2026-08-14 (exploited)\n\n## Summary\nMaximum-severity **improper authorization** flaw in the **Data Hub Adapter** extension of SAP Commerce Cloud. An unauthenticated attacker abuses a **default authentication client** and submits crafted input to functions lacking sufficient validation, resulting in **arbitrary code execution** \u2014 no privileges, no user interaction, low attack complexity.\n\n## Exploitation Status\n- Patched by SAP **2026-08-11**; threat-intel firm **Defused detected exploitation attempts three days later (2026-08-14)** \u2014 despite no public PoC.\n- SAP is investigating the reported activity.\n\n## Action\n- Apply the SAP Security Patch Day update immediately.\n- Audit/disable the default authentication client on the Data Hub Adapter; restrict network reachability of the adapter endpoint.\n- Hunt for unexpected child processes off the Commerce Cloud/Data Hub JVM and outbound connections from the adapter host.\n\n## Notes\n- Affects an e-commerce platform used by major retail brands \u2014 internet-facing by design, so exposure is high.\n\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/max-severity-sap-commerce-cloud-flaw-now-targeted-in-attacks/) \u2014 Fri, 14 Aug 2026; [The Hacker News](https://thehackernews.com/2026/08/sap-commerce-cloud-flaw-could-let.html) \u2014 Wed, 12 Aug 2026\n\n## Tags\n #cve #sap #commerce-cloud #rce #unauthenticated #critical #cvss10 #exploited #verified",
    "sev": "Critical",
    "year": "2026",
    "kev": false,
@@ -3255,6 +3322,14 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-20349": {
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-20349-Cisco-ASA-FTD-DoS-Exploited.md",
+   "body": "# CVE-2026-20349 \u2014 Cisco Secure Firewall ASA / FTD Remote DoS, Exploited in the Wild (CVSS 8.6)\n\n\u2705 **Verification:** Web-verified \u2014 The Hacker News (Cisco advisory)\n\n**Type:** CVE / denial of service | **Severity:** High (CVSS 8.6) | **Date:** 2026-08-12\n\n## Summary\nCisco warned that **CVE-2026-20349**, affecting **Secure Firewall Adaptive Security Appliance (ASA)** and **Secure Firewall Threat Defense (FTD)** software, is **exploited in the wild**. The flaw is **insufficient error checking when processing HTTP requests**, allowing an **unauthenticated remote attacker to trigger a denial of service**.\n\n## Action\n- Apply Cisco's fixed ASA/FTD releases immediately \u2014 perimeter firewalls are the availability chokepoint.\n- Restrict management/WebVPN HTTP surfaces to trusted sources where possible.\n- Monitor for unexplained device reloads/traceback events.\n\n## Notes\n- Continues the 2026 trend of edge security appliances (Cisco, Fortinet, Ivanti, N-able) as primary exploitation targets.\n\n> Source: [The Hacker News](https://thehackernews.com/2026/08/cisco-asa-and-ftd-flaw-exploited-in.html) \u2014 Wed, 12 Aug 2026\n\n## Tags\n #cve #cisco #asa #ftd #firewall #dos #exploited #edge-device #verified",
+   "sev": "High",
+   "year": "2026",
+   "kev": true,
+   "apts": []
+  },
   "CVE-2026-20896": {
    "file": "Threat_Intel/CVEs/2026/High/CVE-2026-20896-Gitea-Docker-XWEBAUTHUSER-Header-Spoof.md",
    "body": "# CVE-2026-20896 \u2014 Gitea Docker X-WEBAUTH-USER Header Spoofing (Exploited ITW)\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 2 independent sources\n\n**Severity:** High (authentication bypass) \u2014 **exploited in the wild**\n**Component:** Gitea (Docker deployments behind a reverse proxy)\n**Impact:** Reachable containers trust spoofed `X-WEBAUTH-USER` headers when reverse-proxy auth is enabled, allowing authentication as an arbitrary user.\n\n## Details\nCVE-2026-20896 affects Gitea Docker deployments: when reverse-proxy authentication is enabled, reachable containers trust a spoofed `X-WEBAUTH-USER` header, letting an attacker impersonate any user. First in-the-wild exploitation attempt was observed **13 days after disclosure**.\n\n## Action\n- Ensure the reverse proxy strips/sets `X-WEBAUTH-USER` and is the only path to the container.\n- Do not expose the Gitea container directly; bind to the proxy network only.\n- Patch Gitea to the fixed version.\n\n> Source: X @TheHackersNews \u2014 2026-07-07\n\n## Tags\n#cve #gitea #docker #reverse-proxy #auth-bypass #exploited-itw #unverified\n\n## 2026-07-12 Update \u2014 Active Exploitation Confirmed (BleepingComputer)\nBleepingComputer reports hackers are **actively exploiting** the critical auth bypass in the official **Gitea Docker image**, allowing attackers to impersonate any user, including administrators. Reinforces the header-spoofing bypass tracked above; treat any directly-reachable Gitea container as at-risk.\n\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-auth-bypass-in-gitea-docker-image/) \u2014 2026-07-10",
@@ -3399,6 +3474,14 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-50656": {
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-50656-ShieldBreak-Defender-PatchBypass-PoC.md",
+   "body": "# ShieldBreak \u2014 Microsoft Defender Patch Bypass PoC for CVE-2026-50656 \"RoguePlanet\" (SYSTEM)\n\n\u26a0\ufe0f **Verification:** Researcher-claimed PoC, multi-source reported (The Hacker News, @IntCyberDigest) \u2014 success-rate claim not independently validated\n\n**Type:** CVE patch bypass / PoC | **Severity:** High (base CVE CVSS 7.8) | **Date:** 2026-08-12\n\n## Summary\nResearcher **Chaotic Eclipse** (aka *INFINITE NIGHTMARE*, *MSNightmare*, *Nightmare-Eclipse*) released a public PoC named **ShieldBreak** demonstrating a **patch bypass** for **CVE-2026-50656** (\"**RoguePlanet**\"), a Microsoft Defender for Windows local privilege escalation flaw patched in **July 2026**.\n\nThe PoC was published on GitHub **hours after August Patch Tuesday**, with the researcher claiming a **100% success rate** on fully patched systems and **SYSTEM** access.\n\n## Action\n- Do not assume the July patch closes RoguePlanet \u2014 treat Defender LPE as an open risk pending Microsoft confirmation.\n- Monitor for Defender service tampering and unexpected SYSTEM token acquisition.\n- Track for an out-of-band Microsoft advisory / revised CVE.\n\n## Related\n- Same researcher previously published **LegacyHive** (Windows User Profile Service hive-load EoP) \u2014 see `Threat_Intel/CVEs/2026/High/Windows-LegacyHive-UserProfileService-PrivEsc-ZeroDay-2026.md`, patched 2026-08-13.\n\n> Source: [The Hacker News](https://thehackernews.com/2026/08/shieldbreak-zero-day-poc-claims.html) \u2014 Wed, 12 Aug 2026; [@IntCyberDigest](https://x.com/IntCyberDigest/status/2087538376006135880) \u2014 2026-08-12\n\n## Tags\n #cve #microsoft-defender #patch-bypass #privilege-escalation #poc #shieldbreak #rogueplanet #unverified-claim",
+   "sev": "High",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-50663": {
    "file": "Threat_Intel/CVEs/2026/High/CVE-2026-50663-Age-of-Empires-RCE.md",
    "body": "# CVE-2026-50663 \u2014 Age of Empires Remote Code Execution\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n**Type:** cve | **Severity:** High (RCE) | **Date:** 2026-07-16\n\n## Summary\nMicrosoft fixed a **remote code execution** flaw in **Age of Empires** (**CVE-2026-50663**) in the July 2026 Patch Tuesday. Circulating writeups include a worked example of how the exploit is triggered (game-client attack surface \u2014 malicious game data / multiplayer session leading to code execution on the player's machine).\n\n## Affected / Fix\n- Affected: Age of Empires (pre-fix versions).\n- Fix: apply the July 2026 game/security update.\n\n## Action\n- Update the game client; avoid untrusted multiplayer lobbies / mods until patched.\n- For managed endpoints, treat game clients as attack surface and patch.\n\n> Source: [X @DarkWebInformer](https://x.com/DarkWebInformer) \u2014 2026-07-15\n\n## Tags\n#cve #CVE-2026-50663 #age-of-empires #rce #microsoft #patch-tuesday #gaming #high #2026 #unverified\n\n*Captured via x-bugbounty-intel-sweep \u2014 2026-07-16*",
@@ -3502,6 +3585,25 @@
    "year": "2026",
    "kev": false,
    "apts": []
+  },
+  "CVE-2026-65400": {
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-65400-macOS-ScreenSharing-Auth-Bypass-Exploited.md",
+   "body": "# CVE-2026-65400 \u2014 macOS Screen Sharing Authentication Bypass, Exploited for Monero Mining (CVSS 7.1)\n\n\u2705 **Verification:** Web-verified \u2014 BleepingComputer, NCSC-NL advisory, SC Media, TechRepublic\n\n**Type:** CVE / authentication bypass | **Severity:** High (CVSS 7.1) | **Date:** 2026-08-14\n\n## Summary\n**CVE-2026-65400** is an authentication bypass in the **macOS Screen Sharing** capability. A **network-based attacker gains access without valid credentials**, then can open applications remotely, read files, change security settings, and otherwise fully control the Mac.\n\n**Public exploit code emerged, and the Netherlands NCSC confirmed active in-the-wild exploitation.**\n\n## Exploitation detail (NCSC-NL)\n- Abuse observed on **multiple systems with TCP port 5900 reachable from the Internet**.\n- In **all** observed cases the attacker obtained **root** and deployed a **Monero cryptocurrency miner**.\n\n## Affected / Fixed\n- **Fixed:** 2026-08-06 in **macOS Tahoe 26.6.1** and corresponding earlier-release updates.\n\n## Action\n- Patch to macOS Tahoe 26.6.1 (or the equivalent fix for your release train).\n- **Block TCP/5900 (VNC/Screen Sharing) at the perimeter** \u2014 no macOS Screen Sharing should be internet-exposed.\n- Hunt for unexpected root processes, high sustained CPU, and outbound Monero pool traffic on Macs.\n- Shodan/Censys-sweep your own ranges for exposed 5900.\n\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-exploit-macos-screen-sharing-flaw-to-deploy-monero-miner/) \u2014 Fri, 14 Aug 2026\n\n## Tags\n #cve #macos #apple #screen-sharing #vnc #port-5900 #auth-bypass #exploited #cryptomining #monero #verified",
+   "sev": "High",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-68820": {
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-68820-Windows-AFD-WinSock-LPE-Lazarus-ZeroDay.md",
+   "body": "# CVE-2026-68820 \u2014 Windows AFD.sys (WinSock) Privilege Escalation Zero-Day, Exploited by Lazarus (CVSS 7.0)\n\n\u2705 **Verification:** Web-verified \u2014 Check Point Research, The Hacker News, BleepingComputer, SecurityWeek, Help Net Security, SANS ISC\n\n**Type:** CVE / local privilege escalation, zero-day | **Severity:** High (CVSS 7.0) | **Date:** 2026-08-11 (Patch Tuesday)\n\n## Summary\n**CVE-2026-68820** is a privilege-escalation flaw in the **Windows Ancillary Function Driver for WinSock (`AFD.sys`)**, the core kernel driver handling network socket operations. An attacker with code already running on a machine escalates to **SYSTEM**.\n\nIt was the **only flaw under active attack** in the August 2026 Patch Tuesday, and has been **exploited by the North Korean Lazarus Group since early July 2026** \u2014 roughly five weeks before the patch.\n\n## Campaign \u2014 Operation Dream Job\n- **Actor:** Lazarus (DPRK).\n- **Targets:** Defense, aerospace, and aviation organisations in **France, Germany, Brazil, and India**.\n- **Lure:** Fake recruiter approaches (LinkedIn etc.) impersonating firms such as Lockheed Martin and Enveil; victim opens a malicious PDF or installs a **trojanized PDF viewer**.\n- **Payload:** New backdoor tracked as **Troy**, granting remote access.\n- **C2:** Built almost entirely on infrastructure Lazarus does not own \u2014 compromised **Roundcube webmail** installs and CMS platforms (many vulnerable to **CVE-2025-49113**) infected with **RelayShell**, a previously undocumented PHP webshell relaying commands/responses through simple text files.\n\n## Patch Tuesday context\nMicrosoft's August 2026 release fixed **398\u2013418 vulnerabilities** (THN reports 398; SANS ISC reports 418 with 62 critical), including **2 publicly disclosed zero-days** and critical **QUIC** and **DNS Server** RCE bugs. CVE-2026-68820 was the sole in-the-wild exploited flaw.\n\n## Action\n- Deploy August 2026 Patch Tuesday with priority on CVE-2026-68820.\n- Hunt for the Troy backdoor, trojanized PDF viewers, and outbound C2 to Roundcube/CMS hosts.\n- Patch or retire Roundcube installs vulnerable to CVE-2025-49113; hunt for RelayShell PHP webshells (text-file command relay pattern).\n\n> Source: [Check Point Research](https://research.checkpoint.com/2026/shattering-the-dream-when-a-job-offer-becomes-a-zero-day-attack/) \u2014 2026-08-12; [The Hacker News](https://thehackernews.com/2026/08/lazarus-exploits-windows-zero-day-to.html) \u2014 Wed, 12 Aug 2026; [SANS ISC](https://isc.sans.edu/diary/rss/33236) \u2014 Tue, 11 Aug 2026\n\n## Tags\n #cve #windows #afd-sys #winsock #privilege-escalation #zero-day #exploited #lazarus #dprk #apt #operation-dream-job #verified",
+   "sev": "High",
+   "year": "2026",
+   "kev": true,
+   "apts": [
+    "Lazarus Group",
+    "Sandworm"
+   ]
   },
   "CVE-2026-8451": {
    "file": "Threat_Intel/CVEs/2026/High/CVE-2026-8451-Citrix-NetScaler-Memory-Overread.md",
@@ -3826,94 +3928,94 @@
  },
  "recent": [
   {
-   "title": "account-takeover-open-redirect-regex-bypass-technique-guide",
-   "file": "Guides/account-takeover-open-redirect-regex-bypass-technique-guide.md",
-   "cat": "technique",
-   "ts": "2026-08-10"
+   "title": "Shodan-Cert-Subdomain-Enum-API-Endpoints",
+   "file": "Commands/Recon/Shodan-Cert-Subdomain-Enum-API-Endpoints.md",
+   "cat": "command",
+   "ts": "2026-08-15"
   },
   {
-   "title": "Active Directory",
-   "file": "Guides/Active Directory.md",
-   "cat": "technique",
-   "ts": "2026-08-10"
+   "title": "China-AI-Agents-Autonomous-Taiwan-Government-Attack-Hermes-OpenClaw-2026",
+   "file": "Guides/AI-BugBounty/China-AI-Agents-Autonomous-Taiwan-Government-Attack-Hermes-OpenClaw-2026.md",
+   "cat": "ai-bugbounty",
+   "ts": "2026-08-15"
   },
   {
-   "title": "airdrop-quickshare-six-flaws-2026",
-   "file": "Guides/airdrop-quickshare-six-flaws-2026.md",
-   "cat": "technique",
-   "ts": "2026-08-10"
+   "title": "Encrypted-Reasoning-Replay-OpenAI-Anthropic-Google-API-Secret-Leak-2026",
+   "file": "Guides/AI-BugBounty/Encrypted-Reasoning-Replay-OpenAI-Anthropic-Google-API-Secret-Leak-2026.md",
+   "cat": "ai-bugbounty",
+   "ts": "2026-08-15"
   },
   {
-   "title": "amsi-scriptblock-logging-bypass-technique-guide",
-   "file": "Guides/amsi-scriptblock-logging-bypass-technique-guide.md",
-   "cat": "technique",
-   "ts": "2026-08-10"
+   "title": "Malicious-MCP-Servers-Split-Instruction-Exfiltration-2026",
+   "file": "Guides/AI-BugBounty/Malicious-MCP-Servers-Split-Instruction-Exfiltration-2026.md",
+   "cat": "ai-bugbounty",
+   "ts": "2026-08-15"
   },
   {
-   "title": "APT Groups and Operations",
-   "file": "Guides/APT Groups and Operations.md",
-   "cat": "technique",
-   "ts": "2026-08-10"
+   "title": "OpenAI-GPT56-Cyber-Reduced-Safeguards-Exploit-Development-2026",
+   "file": "Guides/AI-BugBounty/OpenAI-GPT56-Cyber-Reduced-Safeguards-Exploit-Development-2026.md",
+   "cat": "ai-bugbounty",
+   "ts": "2026-08-15"
   },
   {
-   "title": "asd-alert-cms-exploitation-campaign-2026",
-   "file": "Guides/asd-alert-cms-exploitation-campaign-2026.md",
+   "title": "CRLF-Powered-Desync-Attacks-Beheading-HTTP-Streams-2026",
+   "file": "Guides/WebSec/CRLF-Powered-Desync-Attacks-Beheading-HTTP-Streams-2026.md",
    "cat": "technique",
-   "ts": "2026-08-10"
+   "ts": "2026-08-15"
   },
   {
-   "title": "Automated-SSH-Actors-22-Seconds-Login-to-Persistence-2026",
-   "file": "Guides/Automated-SSH-Actors-22-Seconds-Login-to-Persistence-2026.md",
+   "title": "WAF-Bypass-Double-Slash-Path-Normalization-2026",
+   "file": "Guides/WebSec/WAF-Bypass-Double-Slash-Path-Normalization-2026.md",
    "cat": "technique",
-   "ts": "2026-08-10"
+   "ts": "2026-08-15"
   },
   {
-   "title": "azure-conditional-access-bypass-kql-guide",
-   "file": "Guides/azure-conditional-access-bypass-kql-guide.md",
-   "cat": "technique",
-   "ts": "2026-08-10"
+   "title": "Polish-CHP-Plant-Private-Cellular-Turbine-Shutdown-2026",
+   "file": "Threat_Intel/Polish-CHP-Plant-Private-Cellular-Turbine-Shutdown-2026.md",
+   "cat": "other",
+   "ts": "2026-08-15"
   },
   {
-   "title": "bitskrieg-bitlocker-bypass-technique-guide",
-   "file": "Guides/bitskrieg-bitlocker-bypass-technique-guide.md",
-   "cat": "technique",
-   "ts": "2026-08-10"
+   "title": "VMware-ESXi-vCenter-Ransomware-Exploitation-VMSA-2026-0006-2026",
+   "file": "Threat_Intel/VMware-ESXi-vCenter-Ransomware-Exploitation-VMSA-2026-0006-2026.md",
+   "cat": "other",
+   "ts": "2026-08-15"
   },
   {
-   "title": "bluekit-browser-in-the-middle-phishing-kit-guide",
-   "file": "Guides/bluekit-browser-in-the-middle-phishing-kit-guide.md",
-   "cat": "technique",
-   "ts": "2026-08-10"
-  },
-  {
-   "title": "browser-in-the-browser-malware-delivery-technique-guide",
-   "file": "Guides/browser-in-the-browser-malware-delivery-technique-guide.md",
+   "title": "Jewelbug-Govt-Webmail-Espionage-Crypto-Fraud-2026",
+   "file": "Threat_Intel/APT_Groups/Jewelbug-Govt-Webmail-Espionage-Crypto-Fraud-2026.md",
    "cat": "malware",
-   "ts": "2026-08-10"
+   "ts": "2026-08-15"
   },
   {
-   "title": "browser-security-tool-blind-spot-guide",
-   "file": "Guides/browser-security-tool-blind-spot-guide.md",
-   "cat": "technique",
-   "ts": "2026-08-10"
+   "title": "Lazarus-Profile",
+   "file": "Threat_Intel/APT_Groups/Lazarus/Lazarus-Profile.md",
+   "cat": "malware",
+   "ts": "2026-08-15"
   },
   {
-   "title": "caido-rpc-traffic-readability-google-idor-workflow",
-   "file": "Guides/caido-rpc-traffic-readability-google-idor-workflow.md",
-   "cat": "technique",
-   "ts": "2026-08-10"
+   "title": "Sandworm-Profile",
+   "file": "Threat_Intel/APT_Groups/Sandworm/Sandworm-Profile.md",
+   "cat": "malware",
+   "ts": "2026-08-15"
   },
   {
-   "title": "clickfix-evolution-api-driven-payloads-amsi-bypass-2026",
-   "file": "Guides/clickfix-evolution-api-driven-payloads-amsi-bypass-2026.md",
-   "cat": "technique",
-   "ts": "2026-08-10"
+   "title": "France-DGFiP-Tax-Authority-Breach-600k-2026",
+   "file": "Threat_Intel/Breaches/France-DGFiP-Tax-Authority-Breach-600k-2026.md",
+   "cat": "breach",
+   "ts": "2026-08-15"
   },
   {
-   "title": "cloud-bucket-hijacking-attack-technique-2026",
-   "file": "Guides/cloud-bucket-hijacking-attack-technique-2026.md",
-   "cat": "technique",
-   "ts": "2026-08-10"
+   "title": "RingCentral-ShinyHunters-1.6M-Accounts-2026",
+   "file": "Threat_Intel/Breaches/RingCentral-ShinyHunters-1.6M-Accounts-2026.md",
+   "cat": "breach",
+   "ts": "2026-08-15"
+  },
+  {
+   "title": "Shell-Clop-Data-Theft-Claim-89GB-2026",
+   "file": "Threat_Intel/Breaches/Shell-Clop-Data-Theft-Claim-89GB-2026.md",
+   "cat": "breach",
+   "ts": "2026-08-15"
   }
  ],
  "kev_referenced": [
@@ -3953,6 +4055,7 @@
   "CVE-2025-43510",
   "CVE-2025-43520",
   "CVE-2025-43529",
+  "CVE-2025-49113",
   "CVE-2025-59287",
   "CVE-2025-67038",
   "CVE-2025-8088",
@@ -3966,6 +4069,7 @@
   "CVE-2026-20245",
   "CVE-2026-20253",
   "CVE-2026-20262",
+  "CVE-2026-20349",
   "CVE-2026-20700",
   "CVE-2026-33017",
   "CVE-2026-33825",
@@ -3989,6 +4093,7 @@
   "CVE-2026-58644",
   "CVE-2026-60137",
   "CVE-2026-63030",
+  "CVE-2026-68820",
   "CVE-2026-8037",
   "CVE-2026-9082"
  ],
@@ -4378,6 +4483,13 @@
    "cves": 304,
    "breaches": 77,
    "malware": 97
+  },
+  {
+   "date": "2026-08-15",
+   "intel_items": 891,
+   "cves": 315,
+   "breaches": 80,
+   "malware": 102
   }
  ]
 }
