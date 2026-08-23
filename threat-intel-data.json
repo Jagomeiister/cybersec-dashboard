@@ -1,79 +1,79 @@
 {
- "generated": "2026-08-21 20:45",
- "today": "2026-08-21",
+ "generated": "2026-08-23 21:13",
+ "today": "2026-08-23",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 20,
-  "cves": 340,
-  "breaches": 89,
-  "malware": 108,
-  "supplychain": 47,
+  "cves": 347,
+  "breaches": 92,
+  "malware": 111,
+  "supplychain": 48,
   "tools": 77,
   "commands": 10,
-  "guides": 183,
-  "intel_items": 957,
-  "kev": 84
+  "guides": 185,
+  "intel_items": 981,
+  "kev": 87
  },
  "windows": {
   "week": {
-   "total": 73,
+   "total": 89,
    "by_cat": {
-    "cve": 30,
+    "cve": 32,
     "breach": 19,
-    "tool": 1,
-    "malware": 7,
-    "other": 6,
-    "technique": 5,
-    "misc": 4,
-    "ai-bugbounty": 1
+    "malware": 8,
+    "other": 11,
+    "technique": 8,
+    "misc": 7,
+    "ai-bugbounty": 3,
+    "supplychain": 1
    },
    "by_src": {}
   },
   "month": {
-   "total": 205,
+   "total": 217,
    "by_cat": {
-    "cve": 58,
-    "technique": 20,
-    "breach": 32,
+    "technique": 22,
+    "malware": 28,
     "ai-bugbounty": 20,
-    "malware": 29,
-    "other": 13,
-    "supplychain": 12,
-    "misc": 18,
+    "cve": 59,
+    "other": 18,
+    "supplychain": 13,
+    "breach": 33,
+    "misc": 21,
     "command": 1,
     "tool": 2
    },
    "by_src": {}
   },
   "year": {
-   "total": 957,
+   "total": 981,
    "by_cat": {
-    "ai-bugbounty": 58,
-    "malware": 111,
-    "other": 53,
+    "ai-bugbounty": 60,
+    "malware": 113,
+    "other": 58,
     "tool": 44,
-    "misc": 220,
+    "misc": 223,
     "command": 4,
-    "technique": 86,
-    "cve": 227,
-    "breach": 93,
-    "supplychain": 61
+    "technique": 89,
+    "cve": 231,
+    "breach": 97,
+    "supplychain": 62
    },
    "by_src": {}
   },
   "all": {
-   "total": 957,
+   "total": 981,
    "by_cat": {
-    "ai-bugbounty": 58,
-    "malware": 111,
-    "other": 53,
+    "ai-bugbounty": 60,
+    "malware": 113,
+    "other": 58,
     "tool": 44,
-    "misc": 220,
+    "misc": 223,
     "command": 4,
-    "technique": 86,
-    "cve": 227,
-    "breach": 93,
-    "supplychain": 61
+    "technique": 89,
+    "cve": 231,
+    "breach": 97,
+    "supplychain": 62
    },
    "by_src": {}
   }
@@ -1805,7 +1805,7 @@
   ]
  },
  "cve_sev": {
-  "Critical": 152,
+  "Critical": 154,
   "High": 116,
   "Medium": 14,
   "Low": 9
@@ -1822,7 +1822,7 @@
   "2023": 9,
   "2024": 13,
   "2025": 17,
-  "2026": 268
+  "2026": 275
  },
  "cve_month": {
   "2025-10": 1,
@@ -1830,7 +1830,7 @@
   "2026-05": 20,
   "2026-06": 108,
   "2026-07": 16,
-  "2026-08": 55
+  "2026-08": 59
  },
  "top_cve": [
   {
@@ -1882,6 +1882,12 @@
    "kev": true
   },
   {
+   "id": "CVE-2026-72529",
+   "n": 28,
+   "sev": "Critical",
+   "kev": true
+  },
+  {
    "id": "CVE-2026-55607",
    "n": 26,
    "sev": "High",
@@ -1894,16 +1900,10 @@
    "kev": true
   },
   {
-   "id": "CVE-2026-20253",
+   "id": "CVE-2026-69836",
    "n": 25,
    "sev": "Critical",
-   "kev": true
-  },
-  {
-   "id": "CVE-2026-0257",
-   "n": 24,
-   "sev": "High",
-   "kev": true
+   "kev": false
   }
  ],
  "cve_pages": {
@@ -3263,10 +3263,26 @@
   },
   "CVE-2026-69836": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-69836-Entra-ID-Deserialization-RCE-CVSS10-Exploited.md",
-   "body": "# CVE-2026-69836 \u2014 Microsoft Entra ID Deserialization RCE (CVSS 10.0, Exploited in the Wild)\n\n> Source: [The Hacker News](https://thehackernews.com/2026/08/microsoft-entra-id-flaw-cvss-100.html) \u2014 2026-08-21 | Corroborated: [Cyber Security News](https://cybersecuritynews.com/entra-id-rce-vulnerability-exploited/) 2026-08-21\n\n\u2705 **Verification:** Microsoft advisory (via THN) + independent coverage. Exploitation confirmed by vendor; exploitation *details* not disclosed.\n\n**Type:** CVE / unsafe deserialization \u2192 unauthenticated RCE | **Severity:** Critical (CVSS 10.0) | **Date:** 2026-08-20/21\n\n## Summary\nMicrosoft disclosed **CVE-2026-69836 (CVSS 10.0)** in **Entra ID** (formerly Azure AD / Azure Active Directory) \u2014 **deserialization of untrusted data allowing an unauthorized attacker to execute code over a network**. Microsoft states the flaw **has been exploited in the wild** but that it is **\"fully mitigated\"** service-side and **no customer action is required**.\n\nCredited to Microsoft Principal Security Engineer **Robert Fitzpatrick**.\n\n## Why This Matters More Than the \"No Action Required\" Line Suggests\nA CVSS 10.0 unauthenticated RCE in the **identity plane** of a hyperscale cloud is about as high-consequence as a cloud vulnerability gets. Entra ID is the trust root for token issuance across M365, Azure, and every federated SaaS app behind it. Code execution there is not a tenant-scoped problem in the way a customer-side bug is.\n\n**Microsoft has published no detail on:**\n- How the vulnerability was exploited\n- When exploitation began\n- Whether it is still ongoing\n- How it was discovered\n\n\"Fully mitigated, no action required\" resolves the *patching* question. It does not resolve the **assurance** question \u2014 customers cannot independently scope blast radius without the timeline.\n\n## Detection / Response Guidance (defensive, service-side flaw)\nBecause customers cannot patch a service-side flaw, the useful work is **retrospective hunting**:\n- Review **Entra ID sign-in logs** and **audit logs** for anomalous service-principal and application activity, unusual token issuance, and consent grants.\n- Hunt for **unexpected application registrations, credential (secret/certificate) additions to existing service principals**, and role assignment changes.\n- Check for **federation/domain trust modifications** (a classic post-identity-compromise persistence path).\n- Review **Risk Detections** and privileged role activations over the widest log-retention window available.\n- SANS ISC published a timely Graph + PowerShell series this same week that is directly applicable \u2014 see the *Related* section.\n\n## Related\n- Earlier in August, Microsoft patched **CVE-2026-68820** (Windows AFD for WinSock LPE, CVSS 7.0) exploited as a zero-day by **Lazarus** in Operation Dream Job \u2014 see `CVE-2026-68820-Windows-AFD-WinSock-LPE-Lazarus-ZeroDay.md`.\n- SANS ISC \"Using Microsoft Graph and PowerShell\" series (Aug 19\u201321, 2026): risk-detection commands, stale accounts/licences, Entra login review and password-spray hunting, MFA-rollout gap analysis.\n\n## Action\n- **No patching action available** \u2014 service-side, vendor-mitigated.\n- **Do** run a retrospective Entra ID audit-log hunt as above.\n- Treat any unexplained service-principal credential addition in the relevant window as an incident until disproven.\n- Track for follow-up disclosure; the absence of an exploitation timeline is the outstanding gap.\n\n#cve #entra-id #azure-ad #identity #rce #deserialization #exploited-in-the-wild #critical\n\n\n---\n\n## Enrichment \u2014 Verified 2026-08-21\n\n> Corroborated across [The Hacker News](https://thehackernews.com/2026/08/microsoft-entra-id-flaw-cvss-100.html), [Cyber Security News](https://cybersecuritynews.com/entra-id-rce-vulnerability-exploited/), [Cyberpress](https://cyberpress.org/critical-microsoft-entra-id-rce-flaw/) and [CrowdStrike's August 2026 Patch Tuesday analysis](https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-august-2026/).\n\n- **Weakness class: CWE-502 (Deserialization of Untrusted Data).** Entra ID's backend processes specially crafted serialised objects without proper validation; an attacker sends malicious serialised data to a vulnerable endpoint and executes arbitrary code \u2014 **no authentication and no user interaction required** (consistent with the CVSS 10.0).\n- **This is a \"cloud service CVE.\"** Microsoft publishes these for transparency on flaws it has already fixed in its own infrastructure. **There is no update package and no KB article** \u2014 nothing exists for a customer to deploy. That is why the advisory reads as \"no action required\" despite the score.\n- The distinction matters for reporting: this CVE will appear in vulnerability-management feeds but **cannot be closed by patching**, and will otherwise sit open in a scanner-driven workflow forever. Record it as **vendor-remediated / not-applicable-to-endpoint** with a note, and keep the retrospective log hunt as the actual work item.\n- **Correction to initial note:** researcher name is **Robert Fitzpatrick** (THN's original text contained a typo, \"Fitzaptrick\").\n\nThe exploitation timeline gap remains unresolved across all sources.",
+   "body": "# CVE-2026-69836 \u2014 Microsoft Entra ID Deserialization RCE (CVSS 10.0, Exploited in the Wild)\n\n> Source: [The Hacker News](https://thehackernews.com/2026/08/microsoft-entra-id-flaw-cvss-100.html) \u2014 2026-08-21 | Corroborated: [Cyber Security News](https://cybersecuritynews.com/entra-id-rce-vulnerability-exploited/) 2026-08-21\n\n\u2705 **Verification:** Microsoft advisory (via THN) + independent coverage. Exploitation confirmed by vendor; exploitation *details* not disclosed.\n\n**Type:** CVE / unsafe deserialization \u2192 unauthenticated RCE | **Severity:** Critical (CVSS 10.0) | **Date:** 2026-08-20/21\n\n## Summary\nMicrosoft disclosed **CVE-2026-69836 (CVSS 10.0)** in **Entra ID** (formerly Azure AD / Azure Active Directory) \u2014 **deserialization of untrusted data allowing an unauthorized attacker to execute code over a network**. Microsoft states the flaw **has been exploited in the wild** but that it is **\"fully mitigated\"** service-side and **no customer action is required**.\n\nCredited to Microsoft Principal Security Engineer **Robert Fitzpatrick**.\n\n## Why This Matters More Than the \"No Action Required\" Line Suggests\nA CVSS 10.0 unauthenticated RCE in the **identity plane** of a hyperscale cloud is about as high-consequence as a cloud vulnerability gets. Entra ID is the trust root for token issuance across M365, Azure, and every federated SaaS app behind it. Code execution there is not a tenant-scoped problem in the way a customer-side bug is.\n\n**Microsoft has published no detail on:**\n- How the vulnerability was exploited\n- When exploitation began\n- Whether it is still ongoing\n- How it was discovered\n\n\"Fully mitigated, no action required\" resolves the *patching* question. It does not resolve the **assurance** question \u2014 customers cannot independently scope blast radius without the timeline.\n\n## Detection / Response Guidance (defensive, service-side flaw)\nBecause customers cannot patch a service-side flaw, the useful work is **retrospective hunting**:\n- Review **Entra ID sign-in logs** and **audit logs** for anomalous service-principal and application activity, unusual token issuance, and consent grants.\n- Hunt for **unexpected application registrations, credential (secret/certificate) additions to existing service principals**, and role assignment changes.\n- Check for **federation/domain trust modifications** (a classic post-identity-compromise persistence path).\n- Review **Risk Detections** and privileged role activations over the widest log-retention window available.\n- SANS ISC published a timely Graph + PowerShell series this same week that is directly applicable \u2014 see the *Related* section.\n\n## Related\n- Earlier in August, Microsoft patched **CVE-2026-68820** (Windows AFD for WinSock LPE, CVSS 7.0) exploited as a zero-day by **Lazarus** in Operation Dream Job \u2014 see `CVE-2026-68820-Windows-AFD-WinSock-LPE-Lazarus-ZeroDay.md`.\n- SANS ISC \"Using Microsoft Graph and PowerShell\" series (Aug 19\u201321, 2026): risk-detection commands, stale accounts/licences, Entra login review and password-spray hunting, MFA-rollout gap analysis.\n\n## Action\n- **No patching action available** \u2014 service-side, vendor-mitigated.\n- **Do** run a retrospective Entra ID audit-log hunt as above.\n- Treat any unexplained service-principal credential addition in the relevant window as an incident until disproven.\n- Track for follow-up disclosure; the absence of an exploitation timeline is the outstanding gap.\n\n#cve #entra-id #azure-ad #identity #rce #deserialization #exploited-in-the-wild #critical\n\n\n---\n\n## Enrichment \u2014 Verified 2026-08-21\n\n> Corroborated across [The Hacker News](https://thehackernews.com/2026/08/microsoft-entra-id-flaw-cvss-100.html), [Cyber Security News](https://cybersecuritynews.com/entra-id-rce-vulnerability-exploited/), [Cyberpress](https://cyberpress.org/critical-microsoft-entra-id-rce-flaw/) and [CrowdStrike's August 2026 Patch Tuesday analysis](https://www.crowdstrike.com/en-us/blog/patch-tuesday-analysis-august-2026/).\n\n- **Weakness class: CWE-502 (Deserialization of Untrusted Data).** Entra ID's backend processes specially crafted serialised objects without proper validation; an attacker sends malicious serialised data to a vulnerable endpoint and executes arbitrary code \u2014 **no authentication and no user interaction required** (consistent with the CVSS 10.0).\n- **This is a \"cloud service CVE.\"** Microsoft publishes these for transparency on flaws it has already fixed in its own infrastructure. **There is no update package and no KB article** \u2014 nothing exists for a customer to deploy. That is why the advisory reads as \"no action required\" despite the score.\n- The distinction matters for reporting: this CVE will appear in vulnerability-management feeds but **cannot be closed by patching**, and will otherwise sit open in a scanner-driven workflow forever. Record it as **vendor-remediated / not-applicable-to-endpoint** with a note, and keep the retrospective log hunt as the actual work item.\n- **Correction to initial note:** researcher name is **Robert Fitzpatrick** (THN's original text contained a typo, \"Fitzaptrick\").\n\nThe exploitation timeline gap remains unresolved across all sources.\n\n---\n\n## Update \u2014 2026-08-23 sweep: **Microsoft REVERSED the exploitation status**\n\n> Source: [Cyber Security News (@The_Cyber_News, X `2090965075620409674`)](https://x.com/The_Cyber_News/status/2090965075620409674) \u2014 Sat, 22 Aug 2026 00:51 UTC\n> Source: [SOCRadar](https://socradar.io/blog/cve-2026-69836-microsoft-entra-id-rce/), [Cybersecurity Dive](https://www.cybersecuritydive.com/news/microsoft-maximum-severity-flaw-entra-id-exploitation/828501/), [Help Net Security](https://www.helpnetsecurity.com/2026/08/21/microsoft-entra-id-vulnerability-cve-2026-69836/) \u2014 web-verified 2026-08-23\n\n**Microsoft changed the \"Exploited\" field in its security bulletin from \"Yes\" to \"No\" on 21 August 2026**, stating \"this vulnerability was not exploited in the wild.\" **No explanation for the reversal was provided.**\n\n### What this changes in this note\nEvery \"exploited in the wild\" statement above \u2014 including the note title and the original THN/BleepingComputer/X sourcing \u2014 reflects **Microsoft's original bulletin**, which Microsoft has since retracted. The technical facts are unchanged and still stand:\n- CVSS **10.0**, **CWE-502** deserialization of untrusted data.\n- Cloud-service CVE \u2014 **no KB, no update package, nothing for customers to patch**.\n- Microsoft states it was **fully mitigated before public disclosure**; no customer action required.\n- Researcher credit: **Robert Fitzpatrick**.\n\n### The lesson worth keeping\nThe vault recorded this as actively exploited across **three independent intake paths in one sweep** (X bookmarks, X feed, THN RSS) \u2014 all of which were downstream of a single upstream authority that was wrong. **Source count is not source independence.** When every source traces to one vendor bulletin, confidence should be capped at that bulletin's reliability, and a status reversal should be treated as a live possibility until a second, non-derivative source (a victim, an IR firm, a government advisory) confirms exploitation.\n\n**Filename retained** for link stability; treat the \"-Exploited\" suffix as historical. Status is now: **critical, mitigated, not exploited.**\n\n#status-reversed #single-upstream-source #verification-lesson",
    "sev": "Critical",
    "year": "2026",
    "kev": false,
+   "apts": []
+  },
+  "CVE-2026-72529": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-72529-72530-TrueConf-Server-Unauth-RCE-Sandbox-Escape-KEV.md",
+   "body": "# CVE-2026-72529 / CVE-2026-72530 \u2014 TrueConf Server Unauthenticated RCE + Sandbox Escape (CISA KEV, Actively Exploited)\n\n\u26a0\ufe0f **Verification:** Multi-source \u2014 BleepingComputer, SecurityWeek, SecurityAffairs, SC Media, CISA KEV.\n\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-actively-exploited-trueconf-server-flaws/) \u2014 Fri, 21 Aug 2026\n> Source: [CISA \u2014 Adds Two Known Exploited Vulnerabilities to Catalog](https://www.cisa.gov/news-events/alerts/2026/08/20/cisa-adds-two-known-exploited-vulnerabilities-catalog) \u2014 Thu, 20 Aug 2026\n\n**Type:** CVE / KEV addition | **Severity:** Critical | **Status:** Actively exploited\n\n## The Vulnerabilities\n| CVE | Effect |\n|---|---|\n| **CVE-2026-72529** | **Unauthenticated remote code execution on TCP port 4307.** No login required. |\n| **CVE-2026-72530** | **Sandbox escape** \u2014 run code directly on the host server, outside TrueConf's confinement. |\n\nChained, these give an unauthenticated network attacker full code execution on the underlying host.\n\n## Why This Note Exists Separately\nThe vault already tracked this campaign as a supply-chain event (`Threat_Intel/SupplyChain/TrueConf-HeadMare-Trojanized-Installers-PhantomCore-Backdoor-2026.md`, 2026-08-08) **before CVE identifiers existed**. This sweep is the first time the flaws are individually identified and KEV-listed, which changes them from \"an unpatched product\" into **tracked, deadline-bound remediation items**.\n\n## Exploitation\n- **Kaspersky** traced active exploitation to attackers **trojanizing TrueConf client installers** with the **PhantomCore** and **PhantomGraph** backdoors.\n- The **Head Mare** hacktivist group is exploiting the bugs to deploy PhantomCore.\n- Matches the previously documented behaviour exactly \u2014 the earlier note's port-4307 unauthenticated-code-execution description is now CVE-2026-72529.\n\n## Remediation Deadlines (BOD 22-01, US federal)\n- **CVE-2026-72529 \u2014 due 23 August 2026** (a *three-day* window, unusually short; CISA reserves this for unauthenticated RCE under live exploitation).\n- **CVE-2026-72530 \u2014 due 2 September 2026.**\n\nFixed in **5.3.9 / 5.4.9 / 5.5.5** \u2014 released **18 June 2026**. The patch has been available for **two months**; this is an exposure problem, not a fix-availability problem.\n\n## Action\n1. Inventory TrueConf Server instances. Confirm version \u2265 5.3.9 / 5.4.9 / 5.5.5.\n2. **Firewall TCP 4307** from untrusted networks regardless of patch state.\n3. Assume any client installer served from an unpatched server is trojanized \u2014 re-hash against vendor checksums and re-deploy.\n4. Hunt for LSASS access and outbound reverse SSH on hosts that installed the TrueConf client (PhantomGraph tradecraft).\n5. The three-day KEV deadline is the signal: treat exposed instances as **already compromised** until proven otherwise.\n\n## Related\n- `Threat_Intel/SupplyChain/TrueConf-HeadMare-Trojanized-Installers-PhantomCore-Backdoor-2026.md`\n\n#cve #kev #trueconf #head-mare #phantomcore #phantomgraph #rce #sandbox-escape #exploited #critical",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": true,
+   "apts": []
+  },
+  "CVE-2026-72530": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-72530.md",
+   "body": "# CVE-2026-72530\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2026\n\n## Summary\nCVE-2026-72530** \u2014 sandbox escape to the host. **Deadline: 2 Sep 2026.**\n\n## Where it appears in this vault\n- `Threat_Intel/SupplyChain/TrueConf-HeadMare-Trojanized-Installers-PhantomCore-Backdoor-2026.md` \u2014 CVE-2026-72530** \u2014 sandbox escape to the host. **Deadline: 2 Sep 2026.**\n- `Threat_Intel/SupplyChain/TrueConf-HeadMare-Trojanized-Installers-PhantomCore-Backdoor-2026.md` \u2014 kev #cve-2026-72529 #cve-2026-72530 #verified #exploited\n- `X_Intel/x-intel-tracker.md` \u2014 rss:cisa-2026-08-20-kev-trueconf + rss:bc-2026-08-21-trueconf | 2026-08-20/21 | CISA KEV / BleepingComputer / SecurityWeek / SecurityAffairs / SC Media | **CVE-2026-72529** unauth RCE on TCP 4307 (federal deadline **23 Aug 2026** \u2014 three days) + **CVE-2026-72530** sandbox escape to host (deadline 2 Sep 2026); Kaspersky traced exploitation to trojanized TrueConf installers carrying PhantomCore/PhantomGraph; **Head Mare**; fixed in 5.3.9/5.4.9/5.5.5 released 18 Jun 2026 | -> Threat_Intel/CVEs/2026/Critical/CVE-2026-72529-72530-TrueConf-Server-Unauth-RCE-Sandbox-Escape-KEV.md (new) + APPENDED Threat_Intel/SupplyChain/TrueConf-HeadMare-Trojanized-Installers-PhantomCore-Backdoor-2026.md\n- `X_Intel/x-intel-tracker.md` \u2014 New CVEs referenced:** CVE-2026-72529, CVE-2026-72530, CVE-2026-20030, CVE-2026-20357, CVE-2026-20358, CVE-2026-20315.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-72530\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-72530\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-72530\n\n## Tags\n#cve #2026 #critical #auto-stub",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": true,
    "apts": []
   },
   "CVE-2026-8037": {
@@ -3709,7 +3725,7 @@
    "body": "# CVE-2026-73570 \u2014 Zimbra Collaboration SNMP Command Injection, Unauthenticated RCE (Actively Exploited)\n\n> Source: [The Hacker News](https://thehackernews.com/2026/08/attackers-exploit-zimbra-snmp-flaw-for.html) \u2014 2026-08-20 | [BleepingComputer](https://www.bleepingcomputer.com/news/security/critical-zimbra-rce-flaw-now-actively-exploited-in-attacks/) 2026-08-20 | Primary: **CERT Polska** bulletin\n\n\u2705 **Verification:** Exploitation reported by **CERT Polska** (national CERT, primary source), corroborated by NVD description and two independent outlets.\n\n**Type:** CVE / command injection \u2192 unauthenticated RCE | **Severity:** High (CVSS 8.9) | **Date:** 2026-08-20 (exploitation); patched July 2026\n\n## Summary\n**CVE-2026-73570 (CVSS 8.9)** \u2014 command injection in **Zimbra Collaboration (ZCS) before 10.1.20**, exploitable **when the optional `zimbra-snmp` package is installed and SNMP notifications are enabled**.\n\nPer NVD: improper sanitisation of untrusted input during **SNMP notification processing** lets an **unauthenticated attacker send specially crafted SMTP requests** resulting in **arbitrary OS command execution as the `zimbra` user**.\n\n**CERT Polska** issued a bulletin this week warning of **active exploitation**.\n\n## The Interesting Bit\nThe injection is reached over **SMTP** but processed by the **SNMP notification path** \u2014 a cross-protocol handoff. Mail arrives, notification logic processes attacker-controlled content, and shell metacharacters survive into a command. Anyone who scoped their exposure by asking \"is SNMP exposed to the internet?\" would have concluded they were safe. The reachable surface is **port 25**, which is exposed by definition on a mail server.\n\n## Precondition (scoping)\nExploitable only if **`zimbra-snmp` is installed AND SNMP notifications are enabled**. This is optional and not universal \u2014 check before panicking, but check properly.\n\n## CERT Polska IOC Guidance\nInspect **`/var/log/zimbra.log`** for suspicious **Zimbra service restarts**, and check for files created in the last 30 days in:\n- `/opt/zimbra/jetty/webapps/`\n- `/opt/zimbra/jetty_base/webapps/`\n- `/tmp/`\n\nWebshell drops into the Jetty webapps directories are the expected post-exploitation step.\n\n## Action\n- **Upgrade to ZCS 10.1.20 or later** (patch released July 2026 \u2014 this is exploitation of an *available* patch, not a zero-day).\n- If immediate patching is not possible, **disable SNMP notifications** / remove the `zimbra-snmp` package to remove the precondition.\n- Run the CERT Polska file-creation and restart checks above before assuming you are clean.\n- Rotate any credentials or keys accessible to the `zimbra` user if indicators are found.\n\n## Related\n- `Zimbra-ZimReaper-ZeroDay-Russian-Espionage-2026.md` \u2014 Laundry Bear (CL-STA-1114 / TA488 / Void Blizzard) targeting Zimbra since at least July 2025 via CVE-2025-66376 stored XSS \u2192 ZimReaper.\n- `Zimbra-Classic-WebClient-Stored-XSS-2026.md`\n\nZimbra remains a persistently targeted mail platform. Treat any ZCS instance as a high-priority patch target.\n\n#cve #zimbra #command-injection #rce #exploited-in-the-wild #cert-polska #mail-server",
    "sev": "High",
    "year": "2026",
-   "kev": false,
+   "kev": true,
    "apts": []
   },
   "CVE-2026-8451": {
@@ -3880,6 +3896,14 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-20030": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-20030.md",
+   "body": "# CVE-2026-20030\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nVerification:** web-verified via WebSearch \u2014 **CVE-2026-72529/72530** confirmed (BleepingComputer, SecurityWeek, SecurityAffairs, SC Media, CISA alert; three-day deadline for 72529 confirmed). **Cisco** CVE IDs confirmed **CVE-2026-20030 (SQLi)**, **CVE-2026-20357 (missing auth)**, **CVE-2026-20358 (external file-system control)**, **CVE-2026-20315 (improper access control)**, Crosswork \u22647.2.1 \u2192 7.2.1-SP, Secure Workload SaaS **and** on-prem affected, found in internal testing, **no workarounds**, not known exploited; note that one syndication cites *six* max-severity Cisco flaws \u2014 count recorded as approximate. **CVE-2026-69836 exploitation reversal** confirmed independently (SOCRadar, Cybersecurity Dive, Help Net Security): Microsoft changed \"Exploited\" from Yes to **No** on 21 Aug with **no explanation**. **BTR.sys** confirmed against **Check Point Research primary** (`research.checkpoint.com/2026/btr-reforged-...`) + SC Media + THN. **Car head-unit malware** confirmed against **Securelist primary** + TechNadu (MoYu/BADBOX link). **E4del/PINHOLE** confirmed against **SOCRadar primary** + SC Media. **UK power plant** \u2014 Telegraph exclusive only; all other outlets syndicate it; **no government confirmation, facility unnamed, no technical detail** \u2014 recorded as press-sourced with attribution explicitly unsettled.\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 Verification:** web-verified via WebSearch \u2014 **CVE-2026-72529/72530** confirmed (BleepingComputer, SecurityWeek, SecurityAffairs, SC Media, CISA alert; three-day deadline for 72529 confirmed). **Cisco** CVE IDs confirmed **CVE-2026-20030 (SQLi)**, **CVE-2026-20357 (missing auth)**, **CVE-2026-20358 (external file-system control)**, **CVE-2026-20315 (improper access control)**, Crosswork \u22647.2.1 \u2192 7.2.1-SP, Secure Workload SaaS **and** on-prem affected, found in internal testing, **no workarounds**, not known exploited; note that one syndication cites *six* max-severity Cisco flaws \u2014 count recorded as approximate. **CVE-2026-69836 exploitation reversal** confirmed independently (SOCRadar, Cybersecurity Dive, Help Net Security): Microsoft changed \"Exploited\" from Yes to **No** on 21 Aug with **no explanation**. **BTR.sys** confirmed against **Check Point Research primary** (`research.checkpoint.com/2026/btr-reforged-...`) + SC Media + THN. **Car head-unit malware** confirmed against **Securelist primary** + TechNadu (MoYu/BADBOX link). **E4del/PINHOLE** confirmed against **SOCRadar primary** + SC Media. **UK power plant** \u2014 Telegraph exclusive only; all other outlets syndicate it; **no government confirmation, facility unnamed, no technical detail** \u2014 recorded as press-sourced with attribution explicitly unsettled.\n- `X_Intel/x-intel-tracker.md` \u2014 New CVEs referenced:** CVE-2026-72529, CVE-2026-72530, CVE-2026-20030, CVE-2026-20357, CVE-2026-20358, CVE-2026-20315.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-20030\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-20030\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-20030\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-20267": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-20267.md",
    "body": "# CVE-2026-20267\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-20267\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-20267\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-20267\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
@@ -3907,6 +3931,30 @@
   "CVE-2026-20310": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-20310.md",
    "body": "# CVE-2026-20310\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-20310\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-20310\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-20310\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-20315": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-20315.md",
+   "body": "# CVE-2026-20315\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nVerification:** web-verified via WebSearch \u2014 **CVE-2026-72529/72530** confirmed (BleepingComputer, SecurityWeek, SecurityAffairs, SC Media, CISA alert; three-day deadline for 72529 confirmed). **Cisco** CVE IDs confirmed **CVE-2026-20030 (SQLi)**, **CVE-2026-20357 (missing auth)**, **CVE-2026-20358 (external file-system control)**, **CVE-2026-20315 (improper access control)**, Crosswork \u22647.2.1 \u2192 7.2.1-SP, Secure Workload SaaS **and** on-prem affected, found in internal testing, **no workarounds**, not known exploited; note that one syndication cites *six* max-severity Cisco flaws \u2014 count recorded as approximate. **CVE-2026-69836 exploitation reversal** confirmed independently (SOCRadar, Cybersecurity Dive, Help Net Security): Microsoft changed \"Exploited\" from Yes to **No** on 21 Aug with **no explanation**. **BTR.sys** confirmed against **Check Point Research primary** (`research.checkpoint.com/2026/btr-reforged-...`) + SC Media + THN. **Car head-unit malware** confirmed against **Securelist primary** + TechNadu (MoYu/BADBOX link). **E4del/PINHOLE** confirmed against **SOCRadar primary** + SC Media. **UK power plant** \u2014 Telegraph exclusive only; all other outlets syndicate it; **no government confirmation, facility unnamed, no technical detail** \u2014 recorded as press-sourced with attribution explicitly unsettled.\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 Verification:** web-verified via WebSearch \u2014 **CVE-2026-72529/72530** confirmed (BleepingComputer, SecurityWeek, SecurityAffairs, SC Media, CISA alert; three-day deadline for 72529 confirmed). **Cisco** CVE IDs confirmed **CVE-2026-20030 (SQLi)**, **CVE-2026-20357 (missing auth)**, **CVE-2026-20358 (external file-system control)**, **CVE-2026-20315 (improper access control)**, Crosswork \u22647.2.1 \u2192 7.2.1-SP, Secure Workload SaaS **and** on-prem affected, found in internal testing, **no workarounds**, not known exploited; note that one syndication cites *six* max-severity Cisco flaws \u2014 count recorded as approximate. **CVE-2026-69836 exploitation reversal** confirmed independently (SOCRadar, Cybersecurity Dive, Help Net Security): Microsoft changed \"Exploited\" from Yes to **No** on 21 Aug with **no explanation**. **BTR.sys** confirmed against **Check Point Research primary** (`research.checkpoint.com/2026/btr-reforged-...`) + SC Media + THN. **Car head-unit malware** confirmed against **Securelist primary** + TechNadu (MoYu/BADBOX link). **E4del/PINHOLE** confirmed against **SOCRadar primary** + SC Media. **UK power plant** \u2014 Telegraph exclusive only; all other outlets syndicate it; **no government confirmation, facility unnamed, no technical detail** \u2014 recorded as press-sourced with attribution explicitly unsettled.\n- `X_Intel/x-intel-tracker.md` \u2014 New CVEs referenced:** CVE-2026-72529, CVE-2026-72530, CVE-2026-20030, CVE-2026-20357, CVE-2026-20358, CVE-2026-20315.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-20315\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-20315\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-20315\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-20357": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-20357.md",
+   "body": "# CVE-2026-20357\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nVerification:** web-verified via WebSearch \u2014 **CVE-2026-72529/72530** confirmed (BleepingComputer, SecurityWeek, SecurityAffairs, SC Media, CISA alert; three-day deadline for 72529 confirmed). **Cisco** CVE IDs confirmed **CVE-2026-20030 (SQLi)**, **CVE-2026-20357 (missing auth)**, **CVE-2026-20358 (external file-system control)**, **CVE-2026-20315 (improper access control)**, Crosswork \u22647.2.1 \u2192 7.2.1-SP, Secure Workload SaaS **and** on-prem affected, found in internal testing, **no workarounds**, not known exploited; note that one syndication cites *six* max-severity Cisco flaws \u2014 count recorded as approximate. **CVE-2026-69836 exploitation reversal** confirmed independently (SOCRadar, Cybersecurity Dive, Help Net Security): Microsoft changed \"Exploited\" from Yes to **No** on 21 Aug with **no explanation**. **BTR.sys** confirmed against **Check Point Research primary** (`research.checkpoint.com/2026/btr-reforged-...`) + SC Media + THN. **Car head-unit malware** confirmed against **Securelist primary** + TechNadu (MoYu/BADBOX link). **E4del/PINHOLE** confirmed against **SOCRadar primary** + SC Media. **UK power plant** \u2014 Telegraph exclusive only; all other outlets syndicate it; **no government confirmation, facility unnamed, no technical detail** \u2014 recorded as press-sourced with attribution explicitly unsettled.\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 Verification:** web-verified via WebSearch \u2014 **CVE-2026-72529/72530** confirmed (BleepingComputer, SecurityWeek, SecurityAffairs, SC Media, CISA alert; three-day deadline for 72529 confirmed). **Cisco** CVE IDs confirmed **CVE-2026-20030 (SQLi)**, **CVE-2026-20357 (missing auth)**, **CVE-2026-20358 (external file-system control)**, **CVE-2026-20315 (improper access control)**, Crosswork \u22647.2.1 \u2192 7.2.1-SP, Secure Workload SaaS **and** on-prem affected, found in internal testing, **no workarounds**, not known exploited; note that one syndication cites *six* max-severity Cisco flaws \u2014 count recorded as approximate. **CVE-2026-69836 exploitation reversal** confirmed independently (SOCRadar, Cybersecurity Dive, Help Net Security): Microsoft changed \"Exploited\" from Yes to **No** on 21 Aug with **no explanation**. **BTR.sys** confirmed against **Check Point Research primary** (`research.checkpoint.com/2026/btr-reforged-...`) + SC Media + THN. **Car head-unit malware** confirmed against **Securelist primary** + TechNadu (MoYu/BADBOX link). **E4del/PINHOLE** confirmed against **SOCRadar primary** + SC Media. **UK power plant** \u2014 Telegraph exclusive only; all other outlets syndicate it; **no government confirmation, facility unnamed, no technical detail** \u2014 recorded as press-sourced with attribution explicitly unsettled.\n- `X_Intel/x-intel-tracker.md` \u2014 New CVEs referenced:** CVE-2026-72529, CVE-2026-72530, CVE-2026-20030, CVE-2026-20357, CVE-2026-20358, CVE-2026-20315.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-20357\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-20357\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-20357\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-20358": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-20358.md",
+   "body": "# CVE-2026-20358\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nVerification:** web-verified via WebSearch \u2014 **CVE-2026-72529/72530** confirmed (BleepingComputer, SecurityWeek, SecurityAffairs, SC Media, CISA alert; three-day deadline for 72529 confirmed). **Cisco** CVE IDs confirmed **CVE-2026-20030 (SQLi)**, **CVE-2026-20357 (missing auth)**, **CVE-2026-20358 (external file-system control)**, **CVE-2026-20315 (improper access control)**, Crosswork \u22647.2.1 \u2192 7.2.1-SP, Secure Workload SaaS **and** on-prem affected, found in internal testing, **no workarounds**, not known exploited; note that one syndication cites *six* max-severity Cisco flaws \u2014 count recorded as approximate. **CVE-2026-69836 exploitation reversal** confirmed independently (SOCRadar, Cybersecurity Dive, Help Net Security): Microsoft changed \"Exploited\" from Yes to **No** on 21 Aug with **no explanation**. **BTR.sys** confirmed against **Check Point Research primary** (`research.checkpoint.com/2026/btr-reforged-...`) + SC Media + THN. **Car head-unit malware** confirmed against **Securelist primary** + TechNadu (MoYu/BADBOX link). **E4del/PINHOLE** confirmed against **SOCRadar primary** + SC Media. **UK power plant** \u2014 Telegraph exclusive only; all other outlets syndicate it; **no government confirmation, facility unnamed, no technical detail** \u2014 recorded as press-sourced with attribution explicitly unsettled.\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 Verification:** web-verified via WebSearch \u2014 **CVE-2026-72529/72530** confirmed (BleepingComputer, SecurityWeek, SecurityAffairs, SC Media, CISA alert; three-day deadline for 72529 confirmed). **Cisco** CVE IDs confirmed **CVE-2026-20030 (SQLi)**, **CVE-2026-20357 (missing auth)**, **CVE-2026-20358 (external file-system control)**, **CVE-2026-20315 (improper access control)**, Crosswork \u22647.2.1 \u2192 7.2.1-SP, Secure Workload SaaS **and** on-prem affected, found in internal testing, **no workarounds**, not known exploited; note that one syndication cites *six* max-severity Cisco flaws \u2014 count recorded as approximate. **CVE-2026-69836 exploitation reversal** confirmed independently (SOCRadar, Cybersecurity Dive, Help Net Security): Microsoft changed \"Exploited\" from Yes to **No** on 21 Aug with **no explanation**. **BTR.sys** confirmed against **Check Point Research primary** (`research.checkpoint.com/2026/btr-reforged-...`) + SC Media + THN. **Car head-unit malware** confirmed against **Securelist primary** + TechNadu (MoYu/BADBOX link). **E4del/PINHOLE** confirmed against **SOCRadar primary** + SC Media. **UK power plant** \u2014 Telegraph exclusive only; all other outlets syndicate it; **no government confirmation, facility unnamed, no technical detail** \u2014 recorded as press-sourced with attribution explicitly unsettled.\n- `X_Intel/x-intel-tracker.md` \u2014 New CVEs referenced:** CVE-2026-72529, CVE-2026-72530, CVE-2026-20030, CVE-2026-20357, CVE-2026-20358, CVE-2026-20315.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-20358\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-20358\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-20358\n\n## Tags\n#cve #2026 #unrated #auto-stub",
    "sev": "",
    "year": "2026",
    "kev": false,
@@ -4091,94 +4139,94 @@
  },
  "recent": [
   {
-   "title": "CDN-Tsunami-HTTP3-to-HTTP11-350x-DoS-Amplification-2026",
-   "file": "Guides/CDN-Tsunami-HTTP3-to-HTTP11-350x-DoS-Amplification-2026.md",
+   "title": "C2-Hunting-Shodan-Censys-CobaltStrike-Server-Fingerprinting-2026",
+   "file": "Guides/C2-Hunting-Shodan-Censys-CobaltStrike-Server-Fingerprinting-2026.md",
    "cat": "technique",
-   "ts": "2026-08-21"
+   "ts": "2026-08-23"
+  },
+  {
+   "title": "Defender-BTR-sys-Boot-Time-Remediation-Driver-Kernel-Primitive-2026",
+   "file": "Guides/Defender-BTR-sys-Boot-Time-Remediation-Driver-Kernel-Primitive-2026.md",
+   "cat": "technique",
+   "ts": "2026-08-23"
   },
   {
    "title": "Zombie-Card-EMV-NFC-Expiry-Rewrite-Relay-Attack-2026",
    "file": "Guides/Zombie-Card-EMV-NFC-Expiry-Rewrite-Relay-Attack-2026.md",
    "cat": "technique",
-   "ts": "2026-08-21"
+   "ts": "2026-08-23"
   },
   {
    "title": "AI-Offensive-Defensive-Signals-2026-08-21",
    "file": "Guides/AI-BugBounty/AI-Offensive-Defensive-Signals-2026-08-21.md",
    "cat": "ai-bugbounty",
-   "ts": "2026-08-21"
+   "ts": "2026-08-23"
   },
   {
-   "title": "Google-OAuth-WhatsApp-Device-Linking-Account-Hijack-Russia-2026",
-   "file": "Guides/phishing/Google-OAuth-WhatsApp-Device-Linking-Account-Hijack-Russia-2026.md",
-   "cat": "technique",
-   "ts": "2026-08-21"
-  },
-  {
-   "title": "CISA-NSA-FBI-Siemens-S7-PLC-AI-Generated-Exploit-Scripts-Advisory-2026",
-   "file": "Threat_Intel/CISA-NSA-FBI-Siemens-S7-PLC-AI-Generated-Exploit-Scripts-Advisory-2026.md",
+   "title": "Iran-IRGC-UK-Power-Plant-Four-Day-Shutdown-2026",
+   "file": "Threat_Intel/Iran-IRGC-UK-Power-Plant-Four-Day-Shutdown-2026.md",
    "cat": "other",
-   "ts": "2026-08-21"
+   "ts": "2026-08-23"
   },
   {
    "title": "Ransomware-Ecosystem-Signals-2026-08-21",
    "file": "Threat_Intel/Ransomware-Ecosystem-Signals-2026-08-21.md",
    "cat": "other",
-   "ts": "2026-08-21"
-  },
-  {
-   "title": "SilkParasite-China-Nexus-Central-Asia-AI-Assisted-RAT-Campaign-2026",
-   "file": "Threat_Intel/APT_Groups/SilkParasite-China-Nexus-Central-Asia-AI-Assisted-RAT-Campaign-2026.md",
-   "cat": "malware",
-   "ts": "2026-08-21"
+   "ts": "2026-08-23"
   },
   {
    "title": "UAT-10147-SPECTRE-Implant-BYOVD-Linux-Rootkit-AgenticAI-2026",
    "file": "Threat_Intel/APT_Groups/UAT-10147-SPECTRE-Implant-BYOVD-Linux-Rootkit-AgenticAI-2026.md",
    "cat": "malware",
-   "ts": "2026-08-21"
+   "ts": "2026-08-23"
   },
   {
-   "title": "CareCloud-EHR-Breach-3.7M-Patients-2026",
-   "file": "Threat_Intel/Breaches/CareCloud-EHR-Breach-3.7M-Patients-2026.md",
+   "title": "Golf-Canada-569k-Accounts-HIBP-2026",
+   "file": "Threat_Intel/Breaches/Golf-Canada-569k-Accounts-HIBP-2026.md",
    "cat": "breach",
-   "ts": "2026-08-21"
+   "ts": "2026-08-23"
   },
   {
-   "title": "ClarityCheck-Reverse-Lookup-450GB-Face-Data-Exposure-2026",
-   "file": "Threat_Intel/Breaches/ClarityCheck-Reverse-Lookup-450GB-Face-Data-Exposure-2026.md",
+   "title": "Leaked-AWS-Access-Keys-9300-Still-Active-2026",
+   "file": "Threat_Intel/Breaches/Leaked-AWS-Access-Keys-9300-Still-Active-2026.md",
    "cat": "breach",
-   "ts": "2026-08-21"
+   "ts": "2026-08-23"
   },
   {
-   "title": "Latvia-Government-Cyberattack-1.2M-Officials-Resign-2026",
-   "file": "Threat_Intel/Breaches/Latvia-Government-Cyberattack-1.2M-Officials-Resign-2026.md",
+   "title": "Pokemon-Center-CEVA-Logistics-ThirdParty-Breach-2026",
+   "file": "Threat_Intel/Breaches/Pokemon-Center-CEVA-Logistics-ThirdParty-Breach-2026.md",
    "cat": "breach",
-   "ts": "2026-08-21"
+   "ts": "2026-08-23"
   },
   {
-   "title": "Sakura-Internet-Breach-1.36M-Accounts-2026",
-   "file": "Threat_Intel/Breaches/Sakura-Internet-Breach-1.36M-Accounts-2026.md",
+   "title": "SickKids-Employee-Applicant-Data-ThirdParty-Flaw-2026",
+   "file": "Threat_Intel/Breaches/SickKids-Employee-Applicant-Data-ThirdParty-Flaw-2026.md",
    "cat": "breach",
-   "ts": "2026-08-21"
-  },
-  {
-   "title": "CVE-2025-66376",
-   "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-66376.md",
-   "cat": "cve",
-   "ts": "2026-08-21"
+   "ts": "2026-08-23"
   },
   {
    "title": "Cisco-Crosswork-Secure-Workload-Five-CVSS10-August-2026",
    "file": "Threat_Intel/CVEs/2026/Critical/Cisco-Crosswork-Secure-Workload-Five-CVSS10-August-2026.md",
    "cat": "cve",
-   "ts": "2026-08-21"
+   "ts": "2026-08-23"
   },
   {
-   "title": "CVE-2026-19478-GitLab-GraphQL-Unauth-Public-Project-Deletion",
-   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-19478-GitLab-GraphQL-Unauth-Public-Project-Deletion.md",
+   "title": "CVE-2026-69836-Entra-ID-Deserialization-RCE-CVSS10-Exploited",
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-69836-Entra-ID-Deserialization-RCE-CVSS10-Exploited.md",
    "cat": "cve",
-   "ts": "2026-08-21"
+   "ts": "2026-08-23"
+  },
+  {
+   "title": "CVE-2026-72529-72530-TrueConf-Server-Unauth-RCE-Sandbox-Escape-KEV",
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-72529-72530-TrueConf-Server-Unauth-RCE-Sandbox-Escape-KEV.md",
+   "cat": "cve",
+   "ts": "2026-08-23"
+  },
+  {
+   "title": "CVE-2026-72530",
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-72530.md",
+   "cat": "cve",
+   "ts": "2026-08-23"
   }
  ],
  "kev_referenced": [
@@ -4264,6 +4312,9 @@
   "CVE-2026-64849",
   "CVE-2026-65400",
   "CVE-2026-68820",
+  "CVE-2026-72529",
+  "CVE-2026-72530",
+  "CVE-2026-73570",
   "CVE-2026-8037",
   "CVE-2026-9082"
  ],
@@ -4302,6 +4353,10 @@
    "n": 1
   },
   {
+   "t": "C2 Hunting Shodan Censys Cobaltstrike Server Fingerprinting 2026",
+   "n": 1
+  },
+  {
    "t": "Clickfix Evolution Api Driven Payloads Amsi Bypass 2026",
    "n": 1
   },
@@ -4323,10 +4378,6 @@
   },
   {
    "t": "Edr Killers",
-   "n": 1
-  },
-  {
-   "t": "Emergency Data Request Abuse Services 2026",
    "n": 1
   }
  ],
@@ -4702,6 +4753,20 @@
    "cves": 340,
    "breaches": 89,
    "malware": 108
+  },
+  {
+   "date": "2026-08-22",
+   "intel_items": 957,
+   "cves": 340,
+   "breaches": 89,
+   "malware": 108
+  },
+  {
+   "date": "2026-08-23",
+   "intel_items": 981,
+   "cves": 347,
+   "breaches": 92,
+   "malware": 111
   }
  ]
 }
