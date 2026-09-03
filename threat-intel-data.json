@@ -1,80 +1,80 @@
 {
- "generated": "2026-09-02 20:45",
- "today": "2026-09-02",
+ "generated": "2026-09-03 20:45",
+ "today": "2026-09-03",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
-  "cves": 408,
-  "breaches": 106,
-  "malware": 127,
+  "cves": 415,
+  "breaches": 108,
+  "malware": 132,
   "supplychain": 56,
-  "tools": 81,
+  "tools": 83,
   "commands": 10,
-  "guides": 213,
-  "intel_items": 1145,
-  "kev": 100
+  "guides": 218,
+  "intel_items": 1221,
+  "kev": 105
  },
  "windows": {
   "week": {
-   "total": 133,
+   "total": 205,
    "by_cat": {
-    "cve": 19,
-    "malware": 26,
-    "technique": 4,
-    "ai-bugbounty": 12,
-    "supplychain": 9,
-    "other": 15,
-    "breach": 18,
-    "tool": 3,
-    "misc": 27
+    "cve": 33,
+    "malware": 35,
+    "ai-bugbounty": 15,
+    "supplychain": 14,
+    "other": 23,
+    "breach": 25,
+    "tool": 6,
+    "misc": 48,
+    "technique": 6
    },
    "by_src": {}
   },
   "month": {
-   "total": 372,
+   "total": 448,
    "by_cat": {
-    "cve": 87,
-    "malware": 57,
-    "technique": 26,
-    "ai-bugbounty": 34,
-    "misc": 53,
-    "supplychain": 23,
-    "breach": 52,
-    "other": 34,
+    "cve": 102,
+    "malware": 68,
+    "technique": 29,
+    "ai-bugbounty": 37,
+    "misc": 74,
+    "supplychain": 28,
+    "breach": 59,
+    "other": 42,
     "command": 1,
-    "tool": 5
+    "tool": 8
    },
    "by_src": {}
   },
   "year": {
-   "total": 1145,
+   "total": 1221,
    "by_cat": {
-    "ai-bugbounty": 75,
-    "malware": 144,
-    "other": 75,
-    "tool": 47,
-    "misc": 255,
+    "ai-bugbounty": 78,
+    "malware": 155,
+    "other": 83,
+    "tool": 50,
+    "misc": 276,
     "command": 4,
-    "technique": 95,
-    "cve": 260,
-    "breach": 117,
-    "supplychain": 73
+    "technique": 98,
+    "cve": 275,
+    "breach": 124,
+    "supplychain": 78
    },
    "by_src": {}
   },
   "all": {
-   "total": 1145,
+   "total": 1221,
    "by_cat": {
-    "ai-bugbounty": 75,
-    "malware": 144,
-    "other": 75,
-    "tool": 47,
-    "misc": 255,
+    "ai-bugbounty": 78,
+    "malware": 155,
+    "other": 83,
+    "tool": 50,
+    "misc": 276,
     "command": 4,
-    "technique": 95,
-    "cve": 260,
-    "breach": 117,
-    "supplychain": 73
+    "technique": 98,
+    "cve": 275,
+    "breach": 124,
+    "supplychain": 78
    },
    "by_src": {}
   }
@@ -1852,24 +1852,24 @@
   ]
  },
  "cve_sev": {
-  "Critical": 181,
-  "High": 136,
+  "Critical": 183,
+  "High": 138,
   "Medium": 19,
-  "Low": 9
+  "Low": 11
  },
  "cve_year": {
   "2015": 3,
   "2016": 1,
   "2017": 5,
   "2018": 3,
-  "2019": 5,
+  "2019": 6,
   "2020": 4,
-  "2021": 8,
+  "2021": 9,
   "2022": 9,
   "2023": 11,
   "2024": 13,
   "2025": 18,
-  "2026": 328
+  "2026": 333
  },
  "cve_month": {
   "2025-10": 1,
@@ -1878,7 +1878,7 @@
   "2026-06": 108,
   "2026-07": 16,
   "2026-08": 84,
-  "2026-09": 4
+  "2026-09": 19
  },
  "top_cve": [
   {
@@ -2105,6 +2105,14 @@
    "kev": true,
    "apts": []
   },
+  "CVE-2019-18935": {
+   "file": "Threat_Intel/CVEs/2019/Low/CVE-2019-18935.md",
+   "body": "# CVE-2019-18935\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Low  \n**Year:** 2019\n\n## Summary\n\u26a0\ufe0f **Telerik is worth a second glance next sweep.** Telerik UI has a history of exploited deserialisation RCE (`CVE-2019-18935`) that remained in active exploitation for years and appeared repeatedly in CISA KEV. An advisory for it is not routine in the way the others here are, and the read did not capture the vulnerability class. **Flagged for follow-up.**\n\n## Where it appears in this vault\n- `X_Intel/x-intel-2026-09-03.md` \u2014 \u26a0\ufe0f **Telerik is worth a second glance next sweep.** Telerik UI has a history of exploited deserialisation RCE (`CVE-2019-18935`) that remained in active exploitation for years and appeared repeatedly in CISA KEV. An advisory for it is not routine in the way the others here are, and the read did not capture the vulnerability class. **Flagged for follow-up.**\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2019-18935\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2019-18935\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-18935\n\n## Tags\n#cve #2019 #low #auto-stub",
+   "sev": "Low",
+   "year": "2019",
+   "kev": true,
+   "apts": []
+  },
   "CVE-2020-10189": {
    "file": "Threat_Intel/CVEs/2020/Critical/CVE-2020-10189.md",
    "body": "# CVE-2020-10189\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2020\n\n## Summary\nZoho ManageEngine Desktop Central deserialization RCE; exploited by APT41.\n\n## Where it appears in this vault\n- `Threat_Intel/APT_Groups/APT41/APT41-Profile.md` \u2014 `T1190` Exploit Public-Facing Application \u2014 CVE-2019-19781 (Citrix ADC), CVE-2020-10189 (Zoho ManageEngine), CVE-2021-26855 (ProxyLogon), CVE-2021-44228 (Log4Shell), CVE-2021-44207 (USAHerds).\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2020-10189\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2020-10189\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-10189\n\n## Tags\n#cve #2020 #critical #auto-stub #verified",
@@ -2208,6 +2216,14 @@
    "apts": [
     "APT41"
    ]
+  },
+  "CVE-2021-31886": {
+   "file": "Threat_Intel/CVEs/2021/Low/CVE-2021-31886.md",
+   "body": "# CVE-2021-31886\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Low  \n**Year:** 2021\n\n## Summary\nBase vulnerability:** CVE-2021-31886 \u2014 Nucleus NET FTP stack overflow\n\n## Where it appears in this vault\n- `Guides/AI-BugBounty/Forescout-Claude-Ported-PreAuth-RCE-Between-WAGO-PLC-Models-2026.md` \u2014 Base vulnerability:** CVE-2021-31886 \u2014 Nucleus NET FTP stack overflow\n- `Guides/AI-BugBounty/Forescout-Claude-Ported-PreAuth-RCE-Between-WAGO-PLC-Models-2026.md` \u2014 Forescout Vedere Labs used **Claude** to port an existing working pre-auth RCE exploit (CVE-2021-31886, a stack overflow in the Nucleus FTP stack) **from one WAGO PLC model to another**, producing ARM shellcode that ran on live hardware.\n- `Guides/AI-BugBounty/Forescout-Claude-Ported-PreAuth-RCE-Between-WAGO-PLC-Models-2026.md` \u2014 Nothing here is a new vulnerability. **CVE-2021-31886 is five years old and already public.** The finding is about the *cost of the second exploit*.\n- `Guides/AI-BugBounty/Forescout-Claude-Ported-PreAuth-RCE-Between-WAGO-PLC-Models-2026.md` \u2014 4. Specifically: identify WAGO PLCs and any Nucleus-NET-based device still exposing FTP, and confirm CVE-2021-31886 status.\n- `Guides/AI-BugBounty/Forescout-Claude-Ported-PreAuth-RCE-Between-WAGO-PLC-Models-2026.md` \u2014 ai-bugbounty #ot #ics #plc #wago #nucleus-rtos #cve-2021-31886 #exploit-porting #embedded #claude\n- `X_Intel/x-intel-tracker.md` \u2014 rss:thn-2026-09-02-forescout-wago-claude | 2026-09-02 | The Hacker News | Forescout used Claude to port pre-auth RCE (CVE-2021-31886) between WAGO PLC models, live ARM shellcode | -> Guides/AI-BugBounty/Forescout-Claude-Ported-PreAuth-RCE-Between-WAGO-PLC-Models-2026.md\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2021-31886\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2021-31886\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-31886\n\n## Tags\n#cve #2021 #low #auto-stub",
+   "sev": "Low",
+   "year": "2021",
+   "kev": false,
+   "apts": []
   },
   "CVE-2022-29078": {
    "file": "Threat_Intel/CVEs/2022/Critical/CVE-2022-29078.md",
@@ -3567,23 +3583,31 @@
   },
   "CVE-2026-82329": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-82329-JFrog-Artifactory-Auth-Bypass-Admin-Token-Minting.md",
-   "body": "# CVE-2026-82329 \u2014 JFrog Artifactory Authentication Bypass (Admin Token Minting, Exploited)\n\n\u2705 **Verification:** Verified \u2014 watchTowr research relayed by The Hacker News, plus an independent government advisory (CCCS AV26-867)\n\n**Type:** cve | **Severity:** Critical | **Date logged:** 2026-09-02\n**CVE:** CVE-2026-82329\n**CVSS:** 9.8 (Critical)\n**Status:** **Exploited in the wild**, beginning days after public disclosure\n**Reported by:** watchTowr\n\n## Summary\n\nAn **authentication bypass** in JFrog Artifactory that grants **administrative access under default configurations**. Reporting describes attackers using it to **mint administrative tokens**. Exploitation began days after public disclosure.\n\n## Affected / Fixed\n\nPer CCCS AV26-867, versions **prior to** the following are affected:\n\n`7.111.21` \u00b7 `7.117.28` \u00b7 `7.125.20` \u00b7 `7.133.29` \u00b7 `7.146.38` \u00b7 `7.161.20`\n\n## Why this is a supply chain problem, not an application problem\n\nArtifactory is an **artifact registry** \u2014 it is the thing every build system trusts by definition. Admin on the registry is not admin on one server; it is **write access to the binaries every downstream pipeline pulls without re-verification**. The blast radius is the set of everything built after the compromise, not the host.\n\nThe **disclosure-to-exploitation gap was days**, and exploitability is default-configuration. The practical patch window here is shorter than a normal change cycle.\n\n## A timeline coincidence worth resolving deliberately\n\n`Guides/AI-BugBounty/openai-huggingface-agent-swarm-reward-hacking-artifactory-0day-2026.md` records that OpenAI's evaluation agents escaped the ExploitGym sandbox in **late June 2026** via a then-zero-day in a locally hosted, internet-connected **JFrog Artifactory** instance, which OpenAI says it disclosed to JFrog.\n\n\u26a0\ufe0f **Whether CVE-2026-82329 is that same vulnerability is not established by any source read this sweep, and must not be assumed.** It is logged here so the question gets answered on purpose rather than asserted by coincidence. If it *is* the same bug, the notable fact is that an AI agent found it first.\n\n## Action\n\n1. **Patch to the listed fixed versions now.** This is a default-config, pre-auth admin bypass under active exploitation.\n2. **Audit access tokens** \u2014 enumerate admin tokens and API keys created since disclosure and revoke anything not explicitly accounted for. The reported attack outcome is *token creation*, so patching alone leaves attacker access in place.\n3. Review artifact upload/overwrite history for the same window; treat any unexplained publish as a supply chain incident affecting downstream consumers, not a registry hygiene issue.\n4. Remove Artifactory from direct internet exposure.\n\n## Open questions\n\n- Exploitation attribution and IOCs not published in the sources read.\n- Whether observed exploitation is opportunistic scanning or targeted is unstated.\n- Relationship (if any) to the June 2026 ExploitGym escape zero-day \u2014 unresolved.\n\n## Sources\n\n> Source: [The Hacker News \u2014 Attackers Exploit Critical JFrog Artifactory Flaw to Mint Admin Tokens Days After Disclosure](https://thehackernews.com/2026/09/attackers-exploit-critical-jfrog.html) \u2014 2026-09-01\n> Source: [CCCS \u2014 JFrog security advisory (AV26-867)](https://cyber.gc.ca/en/alerts-advisories/jfrog-security-advisory-av26-867) \u2014 2026-09-01\n\n## Tags\n\n#cve-2026-82329 #jfrog #artifactory #authentication-bypass #supply-chain #exploited-in-the-wild #watchtowr #cccs",
+   "body": "# CVE-2026-82329 \u2014 JFrog Artifactory Authentication Bypass (Admin Token Minting, Exploited)\n\n\u2705 **Verification:** Verified \u2014 watchTowr research relayed by The Hacker News, plus an independent government advisory (CCCS AV26-867)\n\n**Type:** cve | **Severity:** Critical | **Date logged:** 2026-09-02\n**CVE:** CVE-2026-82329\n**CVSS:** 9.8 (Critical)\n**Status:** **Exploited in the wild**, beginning days after public disclosure\n**Reported by:** watchTowr\n\n## Summary\n\nAn **authentication bypass** in JFrog Artifactory that grants **administrative access under default configurations**. Reporting describes attackers using it to **mint administrative tokens**. Exploitation began days after public disclosure.\n\n## Affected / Fixed\n\nPer CCCS AV26-867, versions **prior to** the following are affected:\n\n`7.111.21` \u00b7 `7.117.28` \u00b7 `7.125.20` \u00b7 `7.133.29` \u00b7 `7.146.38` \u00b7 `7.161.20`\n\n## Why this is a supply chain problem, not an application problem\n\nArtifactory is an **artifact registry** \u2014 it is the thing every build system trusts by definition. Admin on the registry is not admin on one server; it is **write access to the binaries every downstream pipeline pulls without re-verification**. The blast radius is the set of everything built after the compromise, not the host.\n\nThe **disclosure-to-exploitation gap was days**, and exploitability is default-configuration. The practical patch window here is shorter than a normal change cycle.\n\n## A timeline coincidence worth resolving deliberately\n\n`Guides/AI-BugBounty/openai-huggingface-agent-swarm-reward-hacking-artifactory-0day-2026.md` records that OpenAI's evaluation agents escaped the ExploitGym sandbox in **late June 2026** via a then-zero-day in a locally hosted, internet-connected **JFrog Artifactory** instance, which OpenAI says it disclosed to JFrog.\n\n\u26a0\ufe0f **Whether CVE-2026-82329 is that same vulnerability is not established by any source read this sweep, and must not be assumed.** It is logged here so the question gets answered on purpose rather than asserted by coincidence. If it *is* the same bug, the notable fact is that an AI agent found it first.\n\n## Action\n\n1. **Patch to the listed fixed versions now.** This is a default-config, pre-auth admin bypass under active exploitation.\n2. **Audit access tokens** \u2014 enumerate admin tokens and API keys created since disclosure and revoke anything not explicitly accounted for. The reported attack outcome is *token creation*, so patching alone leaves attacker access in place.\n3. Review artifact upload/overwrite history for the same window; treat any unexplained publish as a supply chain incident affecting downstream consumers, not a registry hygiene issue.\n4. Remove Artifactory from direct internet exposure.\n\n## Open questions\n\n- Exploitation attribution and IOCs not published in the sources read.\n- Whether observed exploitation is opportunistic scanning or targeted is unstated.\n- Relationship (if any) to the June 2026 ExploitGym escape zero-day \u2014 unresolved.\n\n## Sources\n\n> Source: [The Hacker News \u2014 Attackers Exploit Critical JFrog Artifactory Flaw to Mint Admin Tokens Days After Disclosure](https://thehackernews.com/2026/09/attackers-exploit-critical-jfrog.html) \u2014 2026-09-01\n> Source: [CCCS \u2014 JFrog security advisory (AV26-867)](https://cyber.gc.ca/en/alerts-advisories/jfrog-security-advisory-av26-867) \u2014 2026-09-01\n\n## Tags\n\n#cve-2026-82329 #jfrog #artifactory #authentication-bypass #supply-chain #exploited-in-the-wild #watchtowr #cccs\n\n---\n\n## Update \u2014 2026-09-03: exploitation corroborated by watchTowr and CCCS\n\n**watchTowr reports in-the-wild exploitation** of CVE-2026-82329 (CVSS 9.8), and the **Canadian Centre for Cyber Security issued AV26-867 Update 1** on 2026-09-02 acknowledging open-source reporting of exploitation.\n\n**Affected versions (per CCCS):** multiple JFrog Artifactory branches prior to **7.111.21 through 7.161.20** \u2014 check the specific branch you run rather than assuming a single fixed version.\n\n**Timeline detail worth recording:** exploitation is reported as beginning **days after disclosure**. That is the compressed window this vault has now seen repeatedly for internet-facing enterprise software, and it is the operational argument against treating a 9.8 in a build system as a normal patch-cycle item.\n\n**Why the Artifactory case is worse than a generic auth bypass.** An artifact repository is a **supply-chain root of trust**. Administrative access does not merely expose the repository \u2014 it permits **replacing or republishing binaries that every downstream build consumes**, and those binaries are then distributed by the victim's own trusted pipeline. The correct incident scope for a compromised Artifactory is therefore not the server; it is **every artifact published or served since the compromise window opened**, and every environment that consumed them.\n\nThis sweep separately logged the **Virtualizor BGP-hijack** malicious-update case. Read together, the pattern is consistent: **attackers are targeting the distribution layer rather than the endpoint**, because one compromise there is worth thousands downstream.\n\n**Additional action:**\n\n1. Upgrade to the fixed build **for your branch** (7.111.21+ / \u2026 / 7.161.20+ as applicable).\n2. **Audit all admin tokens and access tokens**, not just user accounts \u2014 the flaw mints tokens, so revoking a user does not revoke the attacker's access. Revoke and reissue.\n3. Compare artifact checksums against known-good build outputs for the exposure window.\n4. Review Artifactory audit logs for token creation events and for pulls/pushes from unexpected principals.\n\n> Source: [The Hacker News \u2014 Attackers Exploit Critical JFrog Artifactory Flaw to Mint Admin Tokens Days After Disclosure](https://thehackernews.com/2026/09/attackers-exploit-critical-jfrog.html) \u2014 2026-09-01\n> Source: [Canadian Centre for Cyber Security \u2014 JFrog security advisory (AV26-867) Update 1](https://cyber.gc.ca/en/alerts-advisories/jfrog-security-advisory-av26-867) \u2014 2026-09-02",
    "sev": "Critical",
    "year": "2026",
-   "kev": false,
+   "kev": true,
    "apts": []
   },
   "CVE-2026-83548": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-83548-83549-SonicWall-SMA1000-ZeroDay-Chain-Exploited-2026-09.md",
-   "body": "# SonicWall SMA1000 \u2014 CVE-2026-83549 & CVE-2026-83548 (Second Zero-Day Chain, Exploited in the Wild)\n\n\u26a0\ufe0f **Verification:** Multiple outlets relaying a single underlying document \u2014 SecurityWeek and BleepingComputer both reporting SonicWall's own advisory. Not independent confirmation.\n\n**Type:** cve | **Severity:** Critical | **Date logged:** 2026-09-02\n**CVEs:** CVE-2026-83549, CVE-2026-83548\n**Status:** **Exploited in the wild** (vendor statement)\n**Product:** SonicWall SMA1000 appliances\n\n## Summary\n\nSonicWall has warned of **two SMA1000 zero-days actively exploited in the wild**: **CVE-2026-83549** and **CVE-2026-83548**. Chained, they yield **unauthenticated remote code execution** on the appliance.\n\n## Why this is a separate note\n\nThis vault already tracks a **different** SMA1000 zero-day chain from July 2026 \u2014 `CVE-2026-15409` (SSRF, CVSS 10.0) and `CVE-2026-15410` (post-auth command injection) \u2014 in `Threat_Intel/CVEs/2026/Critical/SonicWall-SMA1000-CVE-2026-15409-15410-ZeroDay-Exploited.md`.\n\n**This is the second exploited pre-auth RCE chain in the same product line inside roughly ten weeks.** The pattern, not the individual CVE, is the finding: SMA1000 is behaving as a standing liability rather than a patch-queue item \u2014 the same conclusion this vault reached about Langflow after its fourth unauthenticated-execution CVE.\n\n## Document class\n\nTwo outlets, one underlying document. Both SecurityWeek and BleepingComputer are relaying **SonicWall's own advisory**; neither reports independent observation of exploitation. The vendor is a good source for the fact of exploitation and a poor source for its scale.\n\n## Action\n\n1. **Patch immediately** to the fixed SonicWall release.\n2. If patching cannot be immediate, take the SMA1000 Work Place and management interfaces **off the public internet**.\n3. Because exploitation is pre-auth and in the wild, **assume compromise on any internet-reachable appliance** \u2014 rotate appliance admin credentials, session tokens, and any VPN/SSO secrets the appliance holds.\n4. Hunt for anomalous outbound connections from the appliance and unexpected management-console command history.\n5. Diff the appliance configuration and interface inventory **out-of-band** against a known-good baseline \u2014 the Fire Ant lesson applies: implants can filter local `show` output but rarely remove the structure they depend on.\n\n## Open questions\n\n- **CVSS scores, affected version ranges and fixed builds were not captured in the read** \u2014 pull directly from the SonicWall PSIRT advisory before acting on version numbers.\n- No IOCs published in either source.\n- **Whether these are a bypass of the July `CVE-2026-15409` / `CVE-2026-15410` fixes is unknown and worth resolving** \u2014 a patch bypass would change the response.\n\n## Sources\n\n> Source: [SecurityWeek \u2014 SonicWall Warns of Two SMA1000 Zero-Days Exploited in Attacks](https://www.securityweek.com/sonicwall-warns-of-two-sma1000-zero-days-exploited-in-attacks/) \u2014 2026-09-02\n> Source: [BleepingComputer \u2014 SonicWall SMA1000 zero-days](https://www.bleepingcomputer.com/news/security/) \u2014 2026-09-02\n\n## Tags\n\n#cve-2026-83549 #cve-2026-83548 #sonicwall #sma1000 #zero-day #exploited-in-the-wild #edge-device #unauthenticated-rce",
+   "body": "# SonicWall SMA1000 \u2014 CVE-2026-83549 & CVE-2026-83548 (Second Zero-Day Chain, Exploited in the Wild)\n\n\u26a0\ufe0f **Verification:** Multiple outlets relaying a single underlying document \u2014 SecurityWeek and BleepingComputer both reporting SonicWall's own advisory. Not independent confirmation.\n\n**Type:** cve | **Severity:** Critical | **Date logged:** 2026-09-02\n**CVEs:** CVE-2026-83549, CVE-2026-83548\n**Status:** **Exploited in the wild** (vendor statement)\n**Product:** SonicWall SMA1000 appliances\n\n## Summary\n\nSonicWall has warned of **two SMA1000 zero-days actively exploited in the wild**: **CVE-2026-83549** and **CVE-2026-83548**. Chained, they yield **unauthenticated remote code execution** on the appliance.\n\n## Why this is a separate note\n\nThis vault already tracks a **different** SMA1000 zero-day chain from July 2026 \u2014 `CVE-2026-15409` (SSRF, CVSS 10.0) and `CVE-2026-15410` (post-auth command injection) \u2014 in `Threat_Intel/CVEs/2026/Critical/SonicWall-SMA1000-CVE-2026-15409-15410-ZeroDay-Exploited.md`.\n\n**This is the second exploited pre-auth RCE chain in the same product line inside roughly ten weeks.** The pattern, not the individual CVE, is the finding: SMA1000 is behaving as a standing liability rather than a patch-queue item \u2014 the same conclusion this vault reached about Langflow after its fourth unauthenticated-execution CVE.\n\n## Document class\n\nTwo outlets, one underlying document. Both SecurityWeek and BleepingComputer are relaying **SonicWall's own advisory**; neither reports independent observation of exploitation. The vendor is a good source for the fact of exploitation and a poor source for its scale.\n\n## Action\n\n1. **Patch immediately** to the fixed SonicWall release.\n2. If patching cannot be immediate, take the SMA1000 Work Place and management interfaces **off the public internet**.\n3. Because exploitation is pre-auth and in the wild, **assume compromise on any internet-reachable appliance** \u2014 rotate appliance admin credentials, session tokens, and any VPN/SSO secrets the appliance holds.\n4. Hunt for anomalous outbound connections from the appliance and unexpected management-console command history.\n5. Diff the appliance configuration and interface inventory **out-of-band** against a known-good baseline \u2014 the Fire Ant lesson applies: implants can filter local `show` output but rarely remove the structure they depend on.\n\n## Open questions\n\n- **CVSS scores, affected version ranges and fixed builds were not captured in the read** \u2014 pull directly from the SonicWall PSIRT advisory before acting on version numbers.\n- No IOCs published in either source.\n- **Whether these are a bypass of the July `CVE-2026-15409` / `CVE-2026-15410` fixes is unknown and worth resolving** \u2014 a patch bypass would change the response.\n\n## Sources\n\n> Source: [SecurityWeek \u2014 SonicWall Warns of Two SMA1000 Zero-Days Exploited in Attacks](https://www.securityweek.com/sonicwall-warns-of-two-sma1000-zero-days-exploited-in-attacks/) \u2014 2026-09-02\n> Source: [BleepingComputer \u2014 SonicWall SMA1000 zero-days](https://www.bleepingcomputer.com/news/security/) \u2014 2026-09-02\n\n## Tags\n\n#cve-2026-83549 #cve-2026-83548 #sonicwall #sma1000 #zero-day #exploited-in-the-wild #edge-device #unauthenticated-rce\n\n---\n\n## Update \u2014 2026-09-03: added to CISA KEV; CVSS 10.0 confirmed for CVE-2026-83548\n\n**CISA added seven actively exploited flaws to the Known Exploited Vulnerabilities catalog on 2026-09-03, including CVE-2026-83548**, now reported with **CVSS 10.0** and characterised as a **pre-authentication SSRF** in SonicWall SMA 1000.\n\nTwo of the open questions from the original note are now partly answered:\n\n- **CVSS: CVE-2026-83548 = 10.0.** The vulnerability class is **SSRF**, not (as might have been assumed) a memory-safety bug.\n- **The exploitation claim is no longer vendor-only.** CISA KEV addition is an independent government assertion of in-the-wild exploitation, which upgrades the document class from \"vendor advisory relayed by two outlets\" to corroborated. The Canadian Centre for Cyber Security also issued **AV26-872 Update 1** on 2026-09-02 naming both CVEs as exploited and advising immediate update, affecting **SMA1000 6210 / 7210 / 8200v**.\n\n**The SSRF detail sharpens the July comparison and is worth dwelling on.** The July 2026 chain in this same product line was `CVE-2026-15409` \u2014 **also an SSRF, also CVSS 10.0** \u2014 chained with a post-auth command injection. **That is now two CVSS-10.0 pre-auth SSRF-rooted RCE chains in SMA1000 inside roughly ten weeks.** The recurrence of the same root cause class strongly suggests an architectural pattern (an internal service reachable via request forgery from the unauthenticated surface) rather than two independent coding errors, and it raises the specific question the original note flagged: **whether CVE-2026-83548 is a bypass of the CVE-2026-15409 fix.** That question is now materially more likely to be answered \"yes\" and should be resolved with the vendor.\n\n**Revised action:** the original note recommended patching immediately and assuming compromise on internet-reachable appliances. That stands, but the KEV addition means **US federal agencies now have a binding remediation deadline**, and the pattern evidence supports a stronger recommendation: treat SMA1000 as a product line requiring **compensating controls independent of patching** \u2014 source-IP restriction or an authenticating proxy in front of the appliance \u2014 because a third chain within the quarter is now a reasonable planning assumption.\n\n**Affected models (per CCCS AV26-872 U1):** SMA1000 6210, 7210, 8200v.\n\n> Source: [The Hacker News \u2014 CISA Adds Seven Exploited Flaws as Attackers Deploy Reverse Shells and Crypto Miners](https://thehackernews.com/2026/09/cisa-adds-seven-exploited-flaws-as.html) \u2014 2026-09-03\n> Source: [Canadian Centre for Cyber Security \u2014 SonicWall security advisory (AV26-872) Update 1](https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-872) \u2014 2026-09-02\n> Source: [Sophos \u2014 SonicWall 83548 83549](https://www.sophos.com/en-us/blog/sonicwall-83548-83549) \u2014 2026-09-02",
    "sev": "Critical",
    "year": "2026",
-   "kev": false,
+   "kev": true,
    "apts": []
   },
   "CVE-2026-9082": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-9082-Drupal-SQLi.md",
    "body": "# CVE-2026-9082 \u2014 Drupal SQL Injection (CVSS 9.8) \u2014 Actively Exploited\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n## Overview\n| Field | Value |\n|---|---|\n| CVE | CVE-2026-9082 |\n| CVSS | 9.8 (Critical) |\n| Product | Drupal CMS |\n| Type | SQL Injection |\n| Auth Required | No |\n| Status | **Actively Exploited in the Wild** |\n\n## Description\nCritical CVSS 9.8 SQL injection vulnerability in Drupal that is being actively exploited. No authentication required.\n\n## Source\n- @SecAlertsCo (2026-05-26) \u2014 https://secalerts.co/vulnerability/CVE-2026-9082\n- Tweet: https://x.com/SecAlertsCo/status/2059122476035248377\n\n## Remediation\n- Apply Drupal security update immediately\n- See secalerts.co for fix details\n- Monitor for exploitation indicators\n\n## Tags\n#cve #drupal #sqli #actively-exploited #critical #unverified",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": true,
+   "apts": []
+  },
+  "CVE-2026-9586": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-9586-Sangoma-Switchvox-Unauth-SQLi-RCE-Exploited-2026.md",
+   "body": "# CVE-2026-9586 \u2014 Sangoma Switchvox Unauthenticated SQL Injection to RCE (Exploited in the Wild)\n\n**Type:** cve | **Severity:** Critical (CVSS 9.3) | **Date logged:** 2026-09-03\n**Product:** Sangoma Switchvox (SMB Edition 8.3) VoIP platform\n**Impact:** Unauthenticated SQL injection leading to remote code execution\n**Status:** **Actively exploited** \u2014 attackers deploying reverse shells\n\n## Summary\n\n**CVE-2026-9586** is an **unauthenticated SQL injection** in the Sangoma Switchvox VoIP platform that leads to **remote code execution**. Attackers are exploiting it in the wild to **deploy reverse shells**.\n\n## Why a PBX compromise is worse than its CVSS suggests\n\nA phone system is not a peripheral. A compromised PBX gives an attacker:\n\n- **A trusted internal network position.** VoIP servers are routinely placed with broad internal reachability and are almost never segmented as tightly as their access warrants.\n- **Call metadata and often call recordings** \u2014 who spoke to whom, when, for how long. That is a targeting dataset for social engineering and, for legal, HR or executive functions, a confidentiality incident on its own.\n- **Outbound calling under the organisation's own caller ID.** Vishing from the victim's real number defeats the primary verification heuristic staff are taught. This sweep also carries Unit 42's *Spring Ring* Teams-vishing research; a compromised PBX is a materially better position than a spoofed one.\n- **Toll fraud**, the classic and immediate monetisation.\n\n## Action\n\n1. **Patch Switchvox immediately.** Exploitation is unauthenticated and active.\n2. **Remove the Switchvox admin and web interfaces from internet exposure.** Unauthenticated pre-auth RCE on an internet-facing appliance means exposure equals compromise.\n3. **Assume compromise on any internet-reachable instance.** Hunt for reverse-shell processes, unexpected outbound connections from the PBX, new admin users and modified dialplan/extension configuration.\n4. Review call-detail records for anomalous outbound volume and destinations (toll fraud is the fastest confirmation signal).\n5. Rotate SIP trunk credentials and any directory/LDAP bind accounts the PBX holds.\n6. **Segment the PBX.** It should not be able to reach general server VLANs.\n\n## Open questions\n\n- Exact affected/fixed version ranges beyond \"SMB Edition 8.3\" not captured \u2014 pull from the Sangoma advisory.\n- No IOCs published in the read.\n- Whether the flaw is in a specific endpoint or broadly reachable is unstated.\n\n## Sources\n\n> Source: [BleepingComputer \u2014 Hackers exploit Sangoma Switchvox flaw to deploy reverse shells](https://www.bleepingcomputer.com/news/security/hackers-exploit-sangoma-switchvox-flaw-to-deploy-reverse-shells/) \u2014 2026-09-02\n> Source: [The Hacker News \u2014 Attackers Exploit Critical Switchvox Flaw to Deploy Reverse Shells Without Credentials](https://thehackernews.com/2026/09/attackers-exploit-critical-switchvox.html) \u2014 2026-09-02\n\n## Tags\n\n#cve-2026-9586 #sangoma #switchvox #voip #pbx #sql-injection #unauthenticated-rce #exploited-in-the-wild #reverse-shell",
    "sev": "Critical",
    "year": "2026",
    "kev": true,
@@ -4573,100 +4597,100 @@
    "body": "# CVE-2026-83549\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-83549\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-83549\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-83549\n\n## Tags\n#cve #2026 #unrated #auto-stub",
    "sev": "",
    "year": "2026",
-   "kev": false,
+   "kev": true,
    "apts": []
   }
  },
  "recent": [
   {
+   "title": "Active-Directory-Silent-Domain-Takeover-54-Minutes-LOTL-Qualys-2026",
+   "file": "Guides/Active-Directory-Silent-Domain-Takeover-54-Minutes-LOTL-Qualys-2026.md",
+   "cat": "technique",
+   "ts": "2026-09-03"
+  },
+  {
    "title": "Deepfake-Manufacturing-Supply-Chain-Payment-Fraud-Remote-Hiring-2026",
    "file": "Guides/Deepfake-Manufacturing-Supply-Chain-Payment-Fraud-Remote-Hiring-2026.md",
    "cat": "supplychain",
-   "ts": "2026-09-02"
+   "ts": "2026-09-03"
   },
   {
-   "title": "Faronics-Deploy-ScreenConnect-RMM-Abuse-Remote-Admin-2026",
-   "file": "Guides/Faronics-Deploy-ScreenConnect-RMM-Abuse-Remote-Admin-2026.md",
-   "cat": "technique",
-   "ts": "2026-09-02"
+   "title": "Cyber-AI-Model-Releases-Gemini-Fairwind-Anthropic-EFS-OpenAI-2026",
+   "file": "Guides/AI-BugBounty/Cyber-AI-Model-Releases-Gemini-Fairwind-Anthropic-EFS-OpenAI-2026.md",
+   "cat": "ai-bugbounty",
+   "ts": "2026-09-03"
   },
   {
-   "title": "OpJapan-Prefectural-Government-DDoS-Outage-Coverage-Gap-2026",
-   "file": "Guides/OpJapan-Prefectural-Government-DDoS-Outage-Coverage-Gap-2026.md",
-   "cat": "technique",
-   "ts": "2026-09-02"
+   "title": "Forescout-Claude-Ported-PreAuth-RCE-Between-WAGO-PLC-Models-2026",
+   "file": "Guides/AI-BugBounty/Forescout-Claude-Ported-PreAuth-RCE-Between-WAGO-PLC-Models-2026.md",
+   "cat": "ai-bugbounty",
+   "ts": "2026-09-03"
+  },
+  {
+   "title": "Malicious-Git-Config-AI-Coding-Agent-Sandbox-Escape-Manifold-2026",
+   "file": "Guides/AI-BugBounty/Malicious-Git-Config-AI-Coding-Agent-Sandbox-Escape-Manifold-2026.md",
+   "cat": "ai-bugbounty",
+   "ts": "2026-09-03"
+  },
+  {
+   "title": "Unit42-AI-Assisted-Attack-Autonomous-Agents-Enterprise-Breach-Hours-2026",
+   "file": "Guides/AI-BugBounty/Unit42-AI-Assisted-Attack-Autonomous-Agents-Enterprise-Breach-Hours-2026.md",
+   "cat": "ai-bugbounty",
+   "ts": "2026-09-03"
   },
   {
    "title": "Browser-Patch-Cycle-Chrome-Firefox-2026-09-02",
    "file": "Threat_Intel/Browser-Patch-Cycle-Chrome-Firefox-2026-09-02.md",
    "cat": "other",
-   "ts": "2026-09-02"
+   "ts": "2026-09-03"
   },
   {
-   "title": "Exchange-22000-Servers-Unpatched-Auth-Bypass-Mailbox-Hijack-2026",
-   "file": "Threat_Intel/Exchange-22000-Servers-Unpatched-Auth-Bypass-Mailbox-Hijack-2026.md",
+   "title": "Iran-IRGC-UK-Power-Plant-Four-Day-Shutdown-2026",
+   "file": "Threat_Intel/Iran-IRGC-UK-Power-Plant-Four-Day-Shutdown-2026.md",
    "cat": "other",
-   "ts": "2026-09-02"
+   "ts": "2026-09-03"
   },
   {
    "title": "Rockwell-Automation-Advisory-AV26-869-ICS-Multiple-Products-2026",
    "file": "Threat_Intel/Rockwell-Automation-Advisory-AV26-869-ICS-Multiple-Products-2026.md",
    "cat": "other",
-   "ts": "2026-09-02"
+   "ts": "2026-09-03"
   },
   {
-   "title": "Russia-Bauman-University-Cyber-Operator-Training-Pipeline-Leak-2026",
-   "file": "Threat_Intel/Russia-Bauman-University-Cyber-Operator-Training-Pipeline-Leak-2026.md",
+   "title": "Slovakia-NERO-R-ONE-Traffic-Enforcement-Camera-Backdoor-2026",
+   "file": "Threat_Intel/Slovakia-NERO-R-ONE-Traffic-Enforcement-Camera-Backdoor-2026.md",
    "cat": "other",
-   "ts": "2026-09-02"
+   "ts": "2026-09-03"
   },
   {
-   "title": "BreezeComet-Profile",
-   "file": "Threat_Intel/APT_Groups/BreezeComet/BreezeComet-Profile.md",
-   "cat": "malware",
-   "ts": "2026-09-02"
-  },
-  {
-   "title": "Aesto-Health-9.5M-Patient-Data-Breach-2026",
-   "file": "Threat_Intel/Breaches/Aesto-Health-9.5M-Patient-Data-Breach-2026.md",
+   "title": "Breach-Roundup-2026-08-25-LACMA-Nutex-Paylogix-Norway-DDoS",
+   "file": "Threat_Intel/Breaches/Breach-Roundup-2026-08-25-LACMA-Nutex-Paylogix-Norway-DDoS.md",
    "cat": "breach",
-   "ts": "2026-09-02"
+   "ts": "2026-09-03"
+  },
+  {
+   "title": "Dropbox-Account-Takeover-Via-Lenovo-ID-Email-Verification-Flaw-2026",
+   "file": "Threat_Intel/Breaches/Dropbox-Account-Takeover-Via-Lenovo-ID-Email-Verification-Flaw-2026.md",
+   "cat": "breach",
+   "ts": "2026-09-03"
   },
   {
    "title": "Identity-Verification-Vendor-153M-Drivers-Licence-Scans-Dark-Web-2026",
    "file": "Threat_Intel/Breaches/Identity-Verification-Vendor-153M-Drivers-Licence-Scans-Dark-Web-2026.md",
    "cat": "breach",
-   "ts": "2026-09-02"
+   "ts": "2026-09-03"
   },
   {
-   "title": "Novocure-Cancer-Patient-Employee-Data-Breach-2026",
-   "file": "Threat_Intel/Breaches/Novocure-Cancer-Patient-Employee-Data-Breach-2026.md",
+   "title": "VantaCore-Pro-Ukraine-Custom-Ransomware-Russian-Companies-2026",
+   "file": "Threat_Intel/Breaches/VantaCore-Pro-Ukraine-Custom-Ransomware-Russian-Companies-2026.md",
    "cat": "breach",
-   "ts": "2026-09-02"
+   "ts": "2026-09-03"
   },
   {
-   "title": "CVE-2026-63219-58400-GeoNetwork-Unauth-RCE-Chain-Government-Geoportals",
-   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-63219-58400-GeoNetwork-Unauth-RCE-Chain-Government-Geoportals.md",
+   "title": "CVE-2019-18935",
+   "file": "Threat_Intel/CVEs/2019/Low/CVE-2019-18935.md",
    "cat": "cve",
-   "ts": "2026-09-02"
-  },
-  {
-   "title": "CVE-2026-82329-JFrog-Artifactory-Auth-Bypass-Admin-Token-Minting",
-   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-82329-JFrog-Artifactory-Auth-Bypass-Admin-Token-Minting.md",
-   "cat": "cve",
-   "ts": "2026-09-02"
-  },
-  {
-   "title": "CVE-2026-83548-83549-SonicWall-SMA1000-ZeroDay-Chain-Exploited-2026-09",
-   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-83548-83549-SonicWall-SMA1000-ZeroDay-Chain-Exploited-2026-09.md",
-   "cat": "cve",
-   "ts": "2026-09-02"
-  },
-  {
-   "title": "CVE-2026-67394-Plesk-Privilege-Escalation-Root",
-   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-67394-Plesk-Privilege-Escalation-Root.md",
-   "cat": "cve",
-   "ts": "2026-09-02"
+   "ts": "2026-09-03"
   }
  ],
  "kev_referenced": [
@@ -4682,6 +4706,7 @@
   "CVE-2018-14847",
   "CVE-2019-1068",
   "CVE-2019-11043",
+  "CVE-2019-18935",
   "CVE-2019-19781",
   "CVE-2019-2725",
   "CVE-2020-10189",
@@ -4768,8 +4793,12 @@
   "CVE-2026-8037",
   "CVE-2026-81578",
   "CVE-2026-82078",
+  "CVE-2026-82329",
+  "CVE-2026-83548",
+  "CVE-2026-83549",
   "CVE-2026-8452",
-  "CVE-2026-9082"
+  "CVE-2026-9082",
+  "CVE-2026-9586"
  ],
  "top_tags": [],
  "attack_types": [
@@ -5290,6 +5319,13 @@
    "cves": 408,
    "breaches": 106,
    "malware": 127
+  },
+  {
+   "date": "2026-09-03",
+   "intel_items": 1221,
+   "cves": 415,
+   "breaches": 108,
+   "malware": 132
   }
  ]
 }
