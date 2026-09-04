@@ -1,80 +1,80 @@
 {
- "generated": "2026-09-03 20:45",
- "today": "2026-09-03",
+ "generated": "2026-09-04 20:45",
+ "today": "2026-09-04",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
-  "cves": 415,
-  "breaches": 108,
-  "malware": 132,
-  "supplychain": 56,
+  "cves": 424,
+  "breaches": 111,
+  "malware": 133,
+  "supplychain": 57,
   "tools": 83,
   "commands": 10,
-  "guides": 218,
-  "intel_items": 1221,
+  "guides": 221,
+  "intel_items": 1255,
   "kev": 105
  },
  "windows": {
   "week": {
-   "total": 205,
+   "total": 232,
    "by_cat": {
-    "cve": 33,
+    "cve": 42,
     "malware": 35,
-    "ai-bugbounty": 15,
     "supplychain": 14,
-    "other": 23,
-    "breach": 25,
+    "breach": 31,
     "tool": 6,
-    "misc": 48,
-    "technique": 6
+    "misc": 53,
+    "other": 29,
+    "ai-bugbounty": 14,
+    "technique": 8
    },
    "by_src": {}
   },
   "month": {
-   "total": 448,
+   "total": 473,
    "by_cat": {
-    "cve": 102,
-    "malware": 68,
-    "technique": 29,
-    "ai-bugbounty": 37,
-    "misc": 74,
-    "supplychain": 28,
-    "breach": 59,
-    "other": 42,
+    "cve": 111,
+    "malware": 67,
+    "technique": 30,
+    "ai-bugbounty": 38,
+    "misc": 78,
+    "supplychain": 27,
+    "breach": 65,
+    "other": 48,
     "command": 1,
     "tool": 8
    },
    "by_src": {}
   },
   "year": {
-   "total": 1221,
+   "total": 1255,
    "by_cat": {
-    "ai-bugbounty": 78,
-    "malware": 155,
-    "other": 83,
+    "ai-bugbounty": 79,
+    "malware": 157,
+    "other": 90,
     "tool": 50,
-    "misc": 276,
+    "misc": 281,
     "command": 4,
-    "technique": 98,
-    "cve": 275,
-    "breach": 124,
-    "supplychain": 78
+    "technique": 100,
+    "cve": 285,
+    "breach": 130,
+    "supplychain": 79
    },
    "by_src": {}
   },
   "all": {
-   "total": 1221,
+   "total": 1255,
    "by_cat": {
-    "ai-bugbounty": 78,
-    "malware": 155,
-    "other": 83,
+    "ai-bugbounty": 79,
+    "malware": 157,
+    "other": 90,
     "tool": 50,
-    "misc": 276,
+    "misc": 281,
     "command": 4,
-    "technique": 98,
-    "cve": 275,
-    "breach": 124,
-    "supplychain": 78
+    "technique": 100,
+    "cve": 285,
+    "breach": 130,
+    "supplychain": 79
    },
    "by_src": {}
   }
@@ -1760,7 +1760,6 @@
   "month": {
    "Fire Ant": 5,
    "APT28": 1,
-   "APT29": 1,
    "Salt Typhoon": 1,
    "Sandworm": 1
   },
@@ -1852,8 +1851,8 @@
   ]
  },
  "cve_sev": {
-  "Critical": 183,
-  "High": 138,
+  "Critical": 189,
+  "High": 139,
   "Medium": 19,
   "Low": 11
  },
@@ -1869,7 +1868,7 @@
   "2023": 11,
   "2024": 13,
   "2025": 18,
-  "2026": 333
+  "2026": 342
  },
  "cve_month": {
   "2025-10": 1,
@@ -1878,7 +1877,7 @@
   "2026-06": 108,
   "2026-07": 16,
   "2026-08": 84,
-  "2026-09": 19
+  "2026-09": 29
  },
  "top_cve": [
   {
@@ -2645,6 +2644,22 @@
     "Turla"
    ]
   },
+  "CVE-2026-20354": {
+   "file": "Threat_Intel/CVEs/2026/Critical/Cisco-Secure-Email-SMIME-Unpatched-IOS-XR-Nexus-Critical-2026-09.md",
+   "body": "# Cisco, September 2026 \u2014 Unpatched Secure Email S/MIME Flaws (CVE-2026-20354 / -20355) Alongside Critical IOS XR and Nexus Fixes\n\n**Type:** cve | **Severity:** Critical (IOS XR / Nexus) and High (Secure Email, **unpatched**) | **Date logged:** 2026-09-04\n**Advisory:** Cisco round of 2026-09-03; relayed as **CCCS AV26-876**\n**Status:** IOS XR and Nexus \u2014 **patched**. Secure Email S/MIME \u2014 **publicly known, no fix available**.\n\n## Summary\n\nCisco published a September round with two very different halves:\n\n**Half one \u2014 unpatched and publicly known.** **CVE-2026-20354** and **CVE-2026-20355** are **S/MIME handling flaws in Cisco Secure Email** that can **expose the content of encrypted email**. Cisco has disclosed them as publicly known with **no fix currently available**; mitigation is configuration and monitoring only.\n\n**Half two \u2014 patched and critical.** The same round fixed **critical remote code execution and authentication bypass** flaws in **Cisco IOS XR** and **Nexus 9000 Series** switching products.\n\n**Also in scope per CCCS AV26-876:** Desk Phone 9800 Series and Video Phone 8875 prior to 5.0(1); IP Phone 7800/8800 prior to 14.4(1)SR3; IP Phone 8845/8865 prior to 14.4(1)SR4; Wireless IP Phone 8821.\n\n## Why the unpatched half is the more interesting one\n\nA security appliance that fails **open on the confidentiality control it exists to provide** is a distinct failure class from a vulnerable appliance.\n\n- **The control silently stops working.** S/MIME's entire value is the assurance that message content is unreadable in transit and at rest on intermediaries. A flaw that exposes plaintext at the gateway does not produce an error, an alert, or a user-visible change \u2014 senders and recipients see a successfully encrypted exchange.\n- **It is the messages chosen for S/MIME that are exposed.** Nobody encrypts routine mail. The population of affected messages is, by construction, the subset the organisation considered sensitive enough to warrant the friction \u2014 legal, M&A, HR, clinical, regulated communications.\n- **\"Publicly known with no patch\" is the worst square on the grid** and it is under-tracked. Vulnerability management programmes are built to consume patches; an advisory with no fix has no field to write a remediation date into and routinely falls out of the process entirely. This vault has now logged several of these \u2014 the honest handling is a **tracked compensating control with a review date**, not a deferred ticket.\n\n## Action\n\n**Secure Email (no patch available):**\n1. **Inventory who actually relies on S/MIME through the gateway**, and tell them. This is a disclosure decision, not just a technical one \u2014 parties who exchanged encrypted mail under an assumption that no longer held may have regulatory notification obligations.\n2. Consider **suspending gateway-side S/MIME processing** and moving sensitive exchange to endpoint-to-endpoint encryption where the gateway is not in the decryption path, for the duration.\n3. Monitor Cisco's advisory for a fixed release and treat this as an **open risk item with a named owner and a review date**, not a backlog entry.\n\n**IOS XR / Nexus (patched):**\n4. **Patch IOS XR and Nexus 9000 now** \u2014 critical RCE and authentication bypass on core switching and carrier-grade routing.\n5. Confirm management planes for both are **off the internet and on a segregated admin network**.\n6. Hunt for unexpected configuration changes, new local accounts, and unaccounted-for reloads on affected platforms.\n\n**Phones:**\n7. Update the Desk Phone 9800, Video Phone 8875 and IP Phone 7800/8800/8845/8865/8821 fleets to the fixed loads. Handsets are rarely in the patch programme at all, sit on voice VLANs with wide internal reachability, and have microphones.\n\n## Open questions\n\n- CVE identifiers for the IOS XR and Nexus critical flaws were not captured in this read \u2014 pull from the Cisco advisories.\n- Whether the S/MIME flaws are exploitable remotely by a sender, or require a position on the appliance. This determines whether the exposure is active or opportunistic.\n- No exploitation reported for any item in the round.\n\n## Sources\n\n> Source: [SecurityWeek \u2014 Cisco Warns of Unpatched Secure Email Flaws, Patches Critical Switch Vulnerabilities](https://www.securityweek.com/cisco-warns-of-unpatched-secure-email-flaws-patches-critical-switch-vulnerabilities/) \u2014 Thu, 03 Sep 2026 10:30 UTC\n> Source: [CCCS \u2014 Cisco security advisory (AV26-876)](https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-876) \u2014 2026-09-03 13:13 UTC\n\n## Tags\n\n#cisco #cve-2026-20354 #cve-2026-20355 #secure-email #smime #unpatched #ios-xr #nexus-9000 #rce #authentication-bypass #cccs-av26-876 #critical",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-20355": {
+   "file": "Threat_Intel/CVEs/2026/Critical/Cisco-Secure-Email-SMIME-Unpatched-IOS-XR-Nexus-Critical-2026-09.md",
+   "body": "# Cisco, September 2026 \u2014 Unpatched Secure Email S/MIME Flaws (CVE-2026-20354 / -20355) Alongside Critical IOS XR and Nexus Fixes\n\n**Type:** cve | **Severity:** Critical (IOS XR / Nexus) and High (Secure Email, **unpatched**) | **Date logged:** 2026-09-04\n**Advisory:** Cisco round of 2026-09-03; relayed as **CCCS AV26-876**\n**Status:** IOS XR and Nexus \u2014 **patched**. Secure Email S/MIME \u2014 **publicly known, no fix available**.\n\n## Summary\n\nCisco published a September round with two very different halves:\n\n**Half one \u2014 unpatched and publicly known.** **CVE-2026-20354** and **CVE-2026-20355** are **S/MIME handling flaws in Cisco Secure Email** that can **expose the content of encrypted email**. Cisco has disclosed them as publicly known with **no fix currently available**; mitigation is configuration and monitoring only.\n\n**Half two \u2014 patched and critical.** The same round fixed **critical remote code execution and authentication bypass** flaws in **Cisco IOS XR** and **Nexus 9000 Series** switching products.\n\n**Also in scope per CCCS AV26-876:** Desk Phone 9800 Series and Video Phone 8875 prior to 5.0(1); IP Phone 7800/8800 prior to 14.4(1)SR3; IP Phone 8845/8865 prior to 14.4(1)SR4; Wireless IP Phone 8821.\n\n## Why the unpatched half is the more interesting one\n\nA security appliance that fails **open on the confidentiality control it exists to provide** is a distinct failure class from a vulnerable appliance.\n\n- **The control silently stops working.** S/MIME's entire value is the assurance that message content is unreadable in transit and at rest on intermediaries. A flaw that exposes plaintext at the gateway does not produce an error, an alert, or a user-visible change \u2014 senders and recipients see a successfully encrypted exchange.\n- **It is the messages chosen for S/MIME that are exposed.** Nobody encrypts routine mail. The population of affected messages is, by construction, the subset the organisation considered sensitive enough to warrant the friction \u2014 legal, M&A, HR, clinical, regulated communications.\n- **\"Publicly known with no patch\" is the worst square on the grid** and it is under-tracked. Vulnerability management programmes are built to consume patches; an advisory with no fix has no field to write a remediation date into and routinely falls out of the process entirely. This vault has now logged several of these \u2014 the honest handling is a **tracked compensating control with a review date**, not a deferred ticket.\n\n## Action\n\n**Secure Email (no patch available):**\n1. **Inventory who actually relies on S/MIME through the gateway**, and tell them. This is a disclosure decision, not just a technical one \u2014 parties who exchanged encrypted mail under an assumption that no longer held may have regulatory notification obligations.\n2. Consider **suspending gateway-side S/MIME processing** and moving sensitive exchange to endpoint-to-endpoint encryption where the gateway is not in the decryption path, for the duration.\n3. Monitor Cisco's advisory for a fixed release and treat this as an **open risk item with a named owner and a review date**, not a backlog entry.\n\n**IOS XR / Nexus (patched):**\n4. **Patch IOS XR and Nexus 9000 now** \u2014 critical RCE and authentication bypass on core switching and carrier-grade routing.\n5. Confirm management planes for both are **off the internet and on a segregated admin network**.\n6. Hunt for unexpected configuration changes, new local accounts, and unaccounted-for reloads on affected platforms.\n\n**Phones:**\n7. Update the Desk Phone 9800, Video Phone 8875 and IP Phone 7800/8800/8845/8865/8821 fleets to the fixed loads. Handsets are rarely in the patch programme at all, sit on voice VLANs with wide internal reachability, and have microphones.\n\n## Open questions\n\n- CVE identifiers for the IOS XR and Nexus critical flaws were not captured in this read \u2014 pull from the Cisco advisories.\n- Whether the S/MIME flaws are exploitable remotely by a sender, or require a position on the appliance. This determines whether the exposure is active or opportunistic.\n- No exploitation reported for any item in the round.\n\n## Sources\n\n> Source: [SecurityWeek \u2014 Cisco Warns of Unpatched Secure Email Flaws, Patches Critical Switch Vulnerabilities](https://www.securityweek.com/cisco-warns-of-unpatched-secure-email-flaws-patches-critical-switch-vulnerabilities/) \u2014 Thu, 03 Sep 2026 10:30 UTC\n> Source: [CCCS \u2014 Cisco security advisory (AV26-876)](https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-876) \u2014 2026-09-03 13:13 UTC\n\n## Tags\n\n#cisco #cve-2026-20354 #cve-2026-20355 #secure-email #smime #unpatched #ios-xr #nexus-9000 #rce #authentication-bypass #cccs-av26-876 #critical",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2024-58349": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2024-58349-WordPress-Travelscape-File-Upload.md",
    "body": "# CVE-2024-58349 \u2014 WordPress Travelscape Theme Unauthenticated Arbitrary File Upload (Critical, CVSS 9.3)\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n## Summary\nThe **WordPress Travelscape theme v1.0.3** contains a critical (CVSS 9.3) **unauthenticated arbitrary file upload** flaw. No login is required to drop malicious files (e.g., PHP webshells) onto the server, leading to site compromise / RCE.\n\n## Technical Details\n- Affected: Travelscape theme 1.0.3\n- Access: unauthenticated (no login)\n- Impact: arbitrary file upload \u2192 webshell \u2192 RCE / full site takeover\n\n## Recommended Actions\n- Disable or update the Travelscape theme immediately\n- Scan `wp-content/uploads` and theme dirs for unexpected PHP files\n- Review web/access logs for anomalous POST upload requests\n- Rotate WordPress secrets/credentials if compromise suspected\n\n## Sources\n- X (@SecAlertsCo) tweet 2065941552703156708 \u2014 2026-06-14\n\n## Tags\n#CVE #WordPress #Travelscape #FileUpload #Webshell #Unauthenticated #Critical #BugBounty #unverified",
@@ -2805,6 +2820,14 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-19949": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-19949.md",
+   "body": "# CVE-2026-19949\n\n> \u2139\ufe0f **Enriched** \u2014 this note now contains captured intel beyond the auto-stub baseline. Verify specifics against the linked sources.\n\n**Severity (assessed):** Critical  \n**Year:** 2026\n\n## Summary\nrss:securityweek-2026-09-03-wp-migration-3m-sites | 2026-09-03 | SecurityWeek | CVE-2026-19949 \u2014 All-in-One WP Migration and Backup unauth SQLi to RCE, 3M+ sites. **Resolves the CVE-identifier gap flagged 2026-09-03** | -> Threat_Intel/CVEs/2026/Critical/AllInOne-WP-Migration-Backup-Unauth-SQLi-RCE-2026.md (appended)\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 rss:securityweek-2026-09-03-wp-migration-3m-sites | 2026-09-03 | SecurityWeek | CVE-2026-19949 \u2014 All-in-One WP Migration and Backup unauth SQLi to RCE, 3M+ sites. **Resolves the CVE-identifier gap flagged 2026-09-03** | -> Threat_Intel/CVEs/2026/Critical/AllInOne-WP-Migration-Backup-Unauth-SQLi-RCE-2026.md (appended)\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-19949\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-19949\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-19949\n\n## Tags\n#cve #2026 #critical #enriched\n\n---\n\n## Enriched note \u2014 2026-09-04\n\nAll-in-One WP Migration and Backup \u2014 unauthenticated SQL injection to RCE, 3M+ WordPress sites (high severity).\n\n**Full analysis, affected versions, action and sources:** [[Threat_Intel/CVEs/2026/Critical/AllInOne-WP-Migration-Backup-Unauth-SQLi-RCE-2026.md]]\n\nThis stub exists for CVE-index coverage; the linked note is authoritative.\n\n#enriched",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-20253": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-20253.md",
    "body": "# CVE-2026-20253\n\n\u2705 **Verification:** Verified \u2014 4 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2026\n\n## Summary\n\"Critical Splunk Enterprise Flaw Lets Attackers Run Code Without Authentication\" (06-13 13:23 UTC) \u2192 appended RSS source to Threat_Intel/CVEs/2026/High/Splunk-Builtin-DB-No-Auth-2026.md (corroborates tracked CVE-2026-20253).\n\n## Where it appears in this vault\n- `X_Intel/x-intel-2026-06-14.md` \u2014 \"Critical Splunk Enterprise Flaw Lets Attackers Run Code Without Authentication\" (06-13 13:23 UTC) \u2192 appended RSS source to Threat_Intel/CVEs/2026/High/Splunk-Builtin-DB-No-Auth-2026.md (corroborates tracked CVE-2026-20253).\n- `X_Intel/x-intel-tracker.md` \u2014 2065578741212856660 | 2026-06-12 | @SecAlertsCo | [FEED] Splunk CVE-2026-20253 (CVSS 9.8) unauth arbitrary file create/truncate via PostgreSQL sidecar; fixed 10.2.4/10.0.7 | \u2192 Threat_Intel/CVEs/2026/High/Splunk-Builtin-DB-No-Auth-2026.md (appended \u2014 CVE assigned to prior \"no-auth DB\" note)\n- `X_Intel/x-intel-tracker.md` \u2014 Freshest CVE/supply-chain intel this run came from the X feed (Jun 12-13: Splunk CVE-2026-20253, Arch AUR detail, GreatXML PoC re-release, depx), which posts ahead of the cached RSS hosts.\n- `X_Intel/x-intel-tracker.md` \u2014 rss:thehackernews-2026-06-13-splunk-unauth-rce | 2026-06-13 | The Hacker News | Critical Splunk Enterprise Flaw Lets Attackers Run Code Without Authentication | \u2192 Threat_Intel/CVEs/2026/High/Splunk-Builtin-DB-No-Auth-2026.md (appended RSS source \u2014 corroborates CVE-2026-20253)\n- `X_Intel/x-intel-tracker.md` \u2014 The Hacker News (lastBuild 2026-06-13 23:56 UTC): only in-window item is Splunk unauth-RCE (06-13 13:23 UTC) \u2014 already tracked (CVE-2026-20253). Anthropic Fable/Mythos (06-13 05:42 UTC) just outside 24h window and already logged. 0 new.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-20253\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-20253\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-20253\n\n## Tags\n#cve #2026 #critical #auto-stub #verified",
@@ -2863,7 +2886,7 @@
   },
   "CVE-2026-32475": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-32475-Elementor-Pro-Empty-Filename-Upload-RCE.md",
-   "body": "# CVE-2026-32475 \u2014 Elementor Pro (WordPress): Empty-Filename Parser Confusion \u2192 Unauthenticated File Upload RCE\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 2 independent sources\n\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/critical-elementor-pro-bug-exposes-wordpress-sites-to-rce-attacks/) \u2014 2026-08-20 | [The Hacker News](https://thehackernews.com/) 2026-08-20 | Primary research: **Patchstack**\n\n\n**Type:** CVE / arbitrary file upload \u2192 RCE | **Severity:** Critical | **Date:** 2026-08-20\n\n## Summary\n**CVE-2026-32475** affects **Elementor Pro before 4.2.2**. The **File Upload module** uses **separate loops for validation and for processing**, and the two loops **disagree about how to handle an empty file entry** (an upload part whose filename is blank, which PHP reports as `UPLOAD_ERR_NO_FILE`).\n\nPer Patchstack: *\"The validation loop and the processing loop have different early-exit logic for these empty entries, so a carefully shaped multi-part upload can be seen one way by the validator and another way by the mover.\"*\n\n## Exploitation Shape\nCraft a multipart upload where **the first entry has an empty filename**, followed by a **malicious entry**. The validator's early-exit skips or mis-indexes; the processing loop moves the attacker's file. Result: **executable file written to the server \u2192 RCE**.\n\n## The Pattern Worth Internalising\nThis is a **parser-differential / TOCTOU-by-iteration** bug, not a blocklist bypass. Two passes over the same input with different loop-termination semantics is a recurring root cause across languages and frameworks. It generalises well as a **hunting heuristic**:\n\n> Wherever code validates a collection in one loop and acts on it in another, look for an input that changes the iteration boundary between the two.\n\nCompare **CVE-2026-15748 (Forminator)** from three days earlier \u2014 also an unauthenticated WordPress upload-to-RCE, but a blocklist/MIME-key bypass rather than a loop mismatch. See `CVE-2026-15748-Forminator-WordPress-Unauth-FileUpload-RCE.md`.\n\n## Action\n- **Update Elementor Pro to 4.2.2 or later** immediately. Elementor Pro is on millions of sites; expect mass scanning.\n- Audit `wp-content/uploads/` (and any custom upload path) for **`.php`, `.phtml`, `.phar`** and other executable extensions with recent mtimes.\n- Enforce **no PHP execution in the uploads directory** at the web-server level \u2014 this defence would have neutralised both this bug and Forminator.\n- Review web-server access logs for POST requests to Elementor form endpoints with multipart bodies containing empty filename parts.\n\n#cve #wordpress #elementor #file-upload #rce #parser-differential #unauthenticated #critical\n\n## Tags\n #unverified",
+   "body": "# CVE-2026-32475 \u2014 Elementor Pro (WordPress): Empty-Filename Parser Confusion \u2192 Unauthenticated File Upload RCE\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 2 independent sources\n\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/critical-elementor-pro-bug-exposes-wordpress-sites-to-rce-attacks/) \u2014 2026-08-20 | [The Hacker News](https://thehackernews.com/) 2026-08-20 | Primary research: **Patchstack**\n\n\n**Type:** CVE / arbitrary file upload \u2192 RCE | **Severity:** Critical | **Date:** 2026-08-20\n\n## Summary\n**CVE-2026-32475** affects **Elementor Pro before 4.2.2**. The **File Upload module** uses **separate loops for validation and for processing**, and the two loops **disagree about how to handle an empty file entry** (an upload part whose filename is blank, which PHP reports as `UPLOAD_ERR_NO_FILE`).\n\nPer Patchstack: *\"The validation loop and the processing loop have different early-exit logic for these empty entries, so a carefully shaped multi-part upload can be seen one way by the validator and another way by the mover.\"*\n\n## Exploitation Shape\nCraft a multipart upload where **the first entry has an empty filename**, followed by a **malicious entry**. The validator's early-exit skips or mis-indexes; the processing loop moves the attacker's file. Result: **executable file written to the server \u2192 RCE**.\n\n## The Pattern Worth Internalising\nThis is a **parser-differential / TOCTOU-by-iteration** bug, not a blocklist bypass. Two passes over the same input with different loop-termination semantics is a recurring root cause across languages and frameworks. It generalises well as a **hunting heuristic**:\n\n> Wherever code validates a collection in one loop and acts on it in another, look for an input that changes the iteration boundary between the two.\n\nCompare **CVE-2026-15748 (Forminator)** from three days earlier \u2014 also an unauthenticated WordPress upload-to-RCE, but a blocklist/MIME-key bypass rather than a loop mismatch. See `CVE-2026-15748-Forminator-WordPress-Unauth-FileUpload-RCE.md`.\n\n## Action\n- **Update Elementor Pro to 4.2.2 or later** immediately. Elementor Pro is on millions of sites; expect mass scanning.\n- Audit `wp-content/uploads/` (and any custom upload path) for **`.php`, `.phtml`, `.phar`** and other executable extensions with recent mtimes.\n- Enforce **no PHP execution in the uploads directory** at the web-server level \u2014 this defence would have neutralised both this bug and Forminator.\n- Review web-server access logs for POST requests to Elementor form endpoints with multipart bodies containing empty filename parts.\n\n#cve #wordpress #elementor #file-upload #rce #parser-differential #unauthenticated #critical\n\n## Tags\n #unverified\n\n---\n\n## Update \u2014 2026-09-04: Confirmed mass exploitation \u2014 Wordfence blocked 440,000+ attempts; Super Forms exploited alongside\n\n**Status change: this is now actively exploited at scale.** Wordfence reports blocking **over 440,000 exploitation attempts** against **CVE-2026-32475 (Elementor Pro)** and a parallel flaw in **Super Forms**. Attacks deliver a **webshell** and execute arbitrary commands on the underlying server.\n\n**Both bugs allow unauthenticated PHP uploads.** The Elementor Pro attacks carry a specific precondition worth recording, because it defines who is actually at risk: **exploitation requires a published page containing a Form widget with a File Upload field.** An installed-but-unused Elementor Pro is not exploitable by this path; a site with a live contact or application form that accepts attachments is.\n\n### What the precondition changes about triage\n\nThis turns a blanket \"millions of sites affected\" into a **checkable question with a yes/no answer**: *do we have a published page with an Elementor form that accepts file uploads?* That is a five-minute audit and it correctly separates the urgent population from the merely unpatched one.\n\nIt also identifies **which** sites are exposed, and they are the worst ones \u2014 public contact forms, job-application pages, support-request forms. These are pages that exist to receive files from strangers, are linked from the site's own navigation, and are therefore trivially discoverable by the same crawl that finds them for legitimate visitors. **The attacker's targeting problem is solved by the victim's site map.**\n\n### Action (updated \u2014 treat as compromise-assessment, not patching)\n\n1. **Patch is necessary but no longer sufficient.** At 440,000 blocked attempts, the relevant question for any site that was unpatched and had a qualifying form published is **whether it was already hit**, not whether it will be.\n2. **Audit for the precondition first** \u2014 list published pages with Elementor Form widgets containing File Upload fields. That is your exposed set.\n3. **Hunt for webshells** across `wp-content/uploads/` and any custom upload path: `.php`, `.phtml`, `.phar`, and PHP content in files with image extensions. Check mtimes against the disclosure date, and check for files whose extension does not match their magic bytes.\n4. **Check for the second bug too** \u2014 **Super Forms** is exploited in the same campaign by the same unauthenticated-PHP-upload path. Patch and audit both.\n5. **Enforce no PHP execution in upload directories at the web-server level.** This is now the third WordPress upload-RCE in this vault (Elementor Pro, Super Forms, Forminator) that this one control would have neutralised outright, independent of patch state.\n6. Rotate WordPress salts, admin credentials, and any database or API credentials in `wp-config.php` on sites assessed as compromised.\n\n### Cross-reference\n\nLogged the same day as the CVE assignment for **CVE-2026-19949 (All-in-One WP Migration and Backup, 3M+ sites)** \u2014 see that note. **Two mass-deployed WordPress plugin flaws in one window, one confirmed under exploitation at scale, indicates an active ecosystem-wide campaign** rather than isolated disclosures.\n\n> Source: [@TheHackersNews](https://x.com/TheHackersNews/status/2095796361019244588) \u2014 2026-09-04 08:49 UTC \u2014 \"Attackers are exploiting Super Forms and Elementor Pro RCE flaws. Wordfence has blocked over 440,000 attempts. Both bugs allow unauthenticated PHP uploads; Elementor attacks require a published page with a Form widget and File Upload field.\"\n> Source: [BleepingComputer \u2014 Critical Elementor Pro flaw exploited to take over WordPress sites](https://www.bleepingcomputer.com/news/security/critical-elementor-pro-flaw-exploited-to-take-over-wordpress-sites/) \u2014 Thu, 03 Sep 2026 10:52 EDT\n\n#exploited-in-the-wild #super-forms #webshell",
    "sev": "Critical",
    "year": "2026",
    "kev": false,
@@ -3549,6 +3572,14 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-76657": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-76657-HPE-Networking-Fabric-Composer-API-Auth-Bypass.md",
+   "body": "# CVE-2026-76657 \u2014 HPE Networking Fabric Composer API Authentication Bypass (CVSS 10.0)\n\n**Type:** cve | **Severity:** Critical (CVSS 10.0) | **Date logged:** 2026-09-04\n**Product:** HPE Networking **Fabric Composer** \u2014 API\n**Impact:** Unauthenticated attacker obtains **full administrative access**. No credentials required.\n**Status:** Patch available. No public exploitation reported at time of logging.\n\n## Summary\n\n**CVE-2026-76657** is an **authentication bypass in the HPE Networking Fabric Composer API** rated **CVSS 10.0**. An unauthenticated attacker reaching the API obtains **full administrative access** to the platform.\n\n## Why a fabric controller is a worse target than a switch\n\nFabric Composer is the **management and orchestration plane for a data-centre switching fabric** \u2014 it does not forward traffic, it decides how traffic is forwarded across every switch it manages. Administrative control of it is therefore a superset of administrative control of the individual devices:\n\n- **Arbitrary re-segmentation.** VLAN, VRF and policy changes made from the controller are legitimate, authorised configuration changes as far as every downstream switch is concerned. There is no exploit signature on the data-plane devices to find.\n- **Traffic redirection and mirroring at fabric scale** \u2014 a SPAN/ERSPAN destination configured centrally is a passive tap on any segment, invisible to endpoint and application telemetry.\n- **It sits below every control that assumes the network is the boundary.** Micro-segmentation, east-west firewalling and zero-trust network policy are all *expressed* through the fabric. Owning the thing that expresses them makes them advisory.\n\nThe generalisable point, and one this vault keeps re-deriving: **management planes are consistently under-rated relative to the devices they manage.** A CVSS 10 pre-auth bypass on an orchestrator is not equivalent to a CVSS 10 on one switch; it is that CVSS 10 multiplied by the fabric.\n\n## Action\n\n1. **Patch Fabric Composer immediately** \u2014 pre-auth, no credentials, CVSS 10.\n2. **Verify the API is not internet-reachable.** It should not be, and for an orchestration plane the honest control is network reachability, not authentication. Confirm rather than assume \u2014 verify from outside your own perimeter.\n3. **Restrict management-plane access to a dedicated admin network** with its own authentication path, and treat any host that can reach it as a tier-0 asset.\n4. **Assume compromise on any instance that was internet-exposed.** Hunt for: new or modified administrative accounts, API tokens issued outside change windows, unexpected configuration pushes, and newly configured mirror/SPAN destinations.\n5. **Diff the running fabric configuration against a known-good out-of-band baseline.** Because attacker actions here look like legitimate configuration, configuration diffing is the detection \u2014 not log alerting.\n\n## Open questions\n\n- Affected and fixed version ranges not captured in the read \u2014 pull from the HPE security bulletin.\n- Whether the bypass is reachable on the standard management listener or requires a specific API path.\n- No IOCs published.\n- Relationship, if any, to the ArubaOS-CX critical RCE patched by HPE the previous day (see `HPE-ArubaOS-CX-Critical-RCE-2026-09.md`) \u2014 two critical HPE networking flaws in 48 hours warrants asking whether they came from the same research effort.\n\n## Sources\n\n> Source: [@SecAlertsCo](https://x.com/SecAlertsCo/status/2095809711794782543) \u2014 2026-09-04 09:42 UTC \u2014 \"HPE Networking Fabric Composer API: CVE-2026-76657 is a CVSS 10 auth bypass giving unauthenticated attackers full administrative access. No credentials needed. Patch immediately.\"\n\n## Tags\n\n#cve-2026-76657 #hpe #fabric-composer #authentication-bypass #management-plane #network-orchestration #cvss-10 #critical",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-8037": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-8037-Progress-Kemp-LoadMaster-Unauth-Root-RCE.md",
    "body": "# CVE-2026-8037 \u2014 Progress Kemp LoadMaster Unauthenticated Root Command Execution\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n**Severity:** Critical\n**Product:** Progress Kemp LoadMaster (load balancer / ADC)\n**Type:** Unauthenticated API abuse \u2192 arbitrary root command execution\n**Exploit status:** Public PoC available\n\n## Summary\nA critical flaw in the Progress Kemp LoadMaster management API lets **unauthenticated attackers run commands as root** when the API is enabled. A public PoC is out, raising the risk of opportunistic exploitation against internet-exposed LoadMaster management interfaces.\n\n## Impact\n- Full device compromise (root) on the LoadMaster ADC.\n- LoadMasters commonly sit in front of critical web apps \u2192 strong pivot / MITM position.\n\n## Remediation\n- Patch to the fixed LoadMaster firmware per Progress advisory.\n- Restrict / firewall the management API; do not expose it to the internet.\n- If the API is not required, disable it.\n\n> Source: [@TheHackersNews (X) \u2014 Public PoC for CVE-2026-8037 Progress Kemp LoadMaster](https://x.com/TheHackersNews) \u2014 2026-06-30\n\n## Tags\n #cve #rce #unauth #unverified",
@@ -3595,6 +3626,14 @@
    "sev": "Critical",
    "year": "2026",
    "kev": true,
+   "apts": []
+  },
+  "CVE-2026-85046": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-85046-Chrome-V8-Type-Confusion-ZeroDay-Exploited-2026.md",
+   "body": "# CVE-2026-85046 \u2014 Chrome V8 Type Confusion Zero-Day, Actively Exploited in the Wild\n\n**Type:** cve | **Severity:** Critical | **Date logged:** 2026-09-04\n**Product:** Google Chrome \u2014 V8 JavaScript/WebAssembly engine\n**Fixed in:** Chrome **152.0.7977.82 / .83** (emergency out-of-band release)\n**Impact:** Arbitrary code execution inside the browser renderer sandbox via a crafted HTML page\n**Status:** **Actively exploited in the wild** \u2014 Google confirmed an exploit exists; targets and actor undisclosed\n\n## Summary\n\nGoogle shipped an **emergency Chrome update** for **CVE-2026-85046**, a **type confusion** flaw in **V8**, the JavaScript and WebAssembly engine Chrome uses to process web content. A crafted HTML page achieves **arbitrary code execution inside the renderer sandbox**. Google confirmed **real-world exploitation** but, per its standard practice, withheld attack details, targeting, and actor attribution until a majority of users have updated.\n\n## Reading the sandbox qualifier honestly\n\nThe \"inside the sandbox\" framing consistently causes under-prioritisation, and it should not here.\n\n- **A renderer-only bug is still full access to everything the tab holds** \u2014 session cookies, tokens in memory, the DOM of every same-process origin, and the credential autofill surface. For a browser that is now the primary enterprise application client, that is the crown-jewel boundary, not a stepping stone to it.\n- **Renderer RCE is the standard first stage of a chain.** Every in-the-wild Chrome chain this vault has logged pairs a V8 or WebAssembly bug with a separate sandbox-escape primitive. The absence of a disclosed escape means the escape was not disclosed, not that the operator lacks one.\n- **V8 type confusion is the single most productive Chrome bug class** and the one with the shortest interval from patch to public n-day exploit, because the patch diff points directly at the affected optimisation path. Assume a working public exploit within days of this note.\n\n## Relationship to the 2026-09-02 browser patch cycle\n\nThis is **not** the same event as `Threat_Intel/Browser-Patch-Cycle-Chrome-Firefox-2026-09-02.md`. That note covered a scheduled Chrome/Firefox round with **no reported exploitation**, and explicitly recorded that Chrome fixed versions had not been captured. This is an **out-of-band emergency release two days later with confirmed exploitation**. An estate that treated the 09-02 cycle as routine and deferred it is now two patch levels behind on an actively exploited engine bug.\n\n## Action\n\n1. **Force Chrome to 152.0.7977.82/.83 or later now.** Chrome updates on relaunch \u2014 pushing the binary is not the same as applying it. **Measure relaunch compliance, not download compliance**; the gap between the two is where this bug lives.\n2. Update every **Chromium derivative**: Edge, Brave, Vivaldi, Opera, Electron applications, and embedded CEF/WebView2 components. Electron apps are the reliably forgotten surface and ship their own pinned Chromium.\n3. Enforce a **maximum browser version age** policy via management (Chrome Enterprise / Intune) rather than relying on user relaunch.\n4. **Hunt:** renderer process crashes (`chrome.exe` / `Google Chrome Helper (Renderer)`) clustered by user or by site, unexpected child processes spawned from a renderer, and outbound connections from browser processes to newly-seen domains.\n5. Treat as **in-scope for KEV-style SLA** \u2014 confirmed exploitation on a universally deployed client.\n\n## Open questions\n\n- **Whether a sandbox escape was chained.** Google has not said. This is the question that determines whether the impact is tab-scoped or host-scoped.\n- Targeting: no indication yet whether this is commercial-surveillance, state-aligned, or criminal use.\n- No IOCs published.\n- Whether the bug affects Chrome for Android and iOS builds on the same timeline.\n\n## Sources\n\n> Source: [@TheHackersNews](https://x.com/TheHackersNews/status/2095773697412079741) \u2014 2026-09-04 07:19 UTC \u2014 \"Attackers are exploiting a Chrome V8 zero-day. CVE-2026-85046 allows arbitrary code execution inside the browser sandbox via a crafted HTML page. Google fixed it in Chrome 152.0.7977.82/.83.\"\n> Source: [@The_Cyber_News](https://x.com/The_Cyber_News/status/2095767967577600011) \u2014 2026-09-04 06:56 UTC \u2014 emergency Chrome security update for a critical zero-day already exploited in real-world attacks.\n\n## Tags\n\n#cve-2026-85046 #chrome #v8 #type-confusion #zero-day #exploited-in-the-wild #browser #emergency-patch #critical",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
    "apts": []
   },
   "CVE-2026-9082": {
@@ -3965,6 +4004,14 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-52924": {
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-52924-Linux-SCTP-Out-Of-Bounds-Ubuntu-2604-2026.md",
+   "body": "# CVE-2026-52924 \u2014 Linux Kernel SCTP Out-of-Bounds (Ubuntu 26.04), Public Exploit\n\n\u26a0\ufe0f **Verification:** Single source \u2014 an X post from @cybermeowfia claiming a working exploit against Ubuntu 26.04. Exploit source published on GitHub. Not independently confirmed in this read; treat the working-exploit claim as unverified until the repository or a vendor advisory is reviewed.\n\n**Type:** cve | **Severity:** High | **Date logged:** 2026-09-04\n**Product:** Linux kernel \u2014 **SCTP** (Stream Control Transmission Protocol) subsystem\n**Affected:** demonstrated against **Ubuntu 26.04**\n**Timeline claimed:** introduced **October 2017**, fixed upstream **June 2026** \u2014 a **~9-year** dwell time in-tree\n**Discovery:** attributed to the **NebuSec** automated security pipeline\n\n## Summary\n\nA public exploit was released for **CVE-2026-52924**, an **out-of-bounds** flaw in the Linux kernel's **SCTP** implementation, demonstrated against **Ubuntu 26.04**. The bug is claimed to have been **introduced in October 2017 and fixed upstream in June 2026**, and to have been **discovered and exploited by an automated pipeline** rather than by manual review.\n\n## The two findings worth separating\n\n**First, the boring one: SCTP is attack surface almost nobody accounts for.** SCTP is a transport protocol most estates never knowingly use \u2014 it appears in telecom signalling (SIGTRAN/Diameter), some clustering stacks, and essentially nowhere else. But the kernel module is present and, on many distributions, **auto-loadable on first use of the protocol family**. That is the recurring shape of Linux local-privilege-escalation surface: not code you run, but code the kernel will load *on demand* if an unprivileged process asks for it. `AF_SCTP`, `AF_PACKET`, DCCP, TIPC, and n_hdlc have all supplied the same lesson.\n\n**Second, the one that actually matters: a pipeline found and weaponised a nine-year-old bug.** This is the third item in roughly a week where the expensive, specialist part of exploitation was automated away \u2014 alongside **Forescout using Claude to port a WAGO PLC exploit between models** (2026-09-03) and **Unit 42's autonomous-agent enterprise breach** (2026-09-03). The pattern is now consistent enough to state plainly:\n\n> **Bug age is no longer a proxy for bug safety.** The defence for old, obscure, in-tree code was never that it was secure \u2014 it was that no human would spend weeks auditing an unfashionable subsystem for a low-value LPE. Automation removes exactly that economic filter, and it removes it across the entire tree at once, not one subsystem at a time.\n\nThe practical consequence for triage: **a 2017-introduced kernel bug in an unused protocol is now a normal finding, not an exotic one.** Backlogs sorted by \"recently introduced\" or \"in code we actually use\" are sorted on an assumption that no longer holds.\n\n## Action\n\n1. **Apply current kernel updates.** Upstream fixed this in June 2026; the exposure is estates running kernels older than their distribution's June 2026 rebase.\n2. **Blacklist SCTP if you do not use it** \u2014 this is the cheap, durable control and it neutralises the entire subsystem, not just this CVE:\n   - `install sctp /bin/true` in `/etc/modprobe.d/`\n   - Verify with `lsmod | grep sctp` and confirm nothing loads it on demand.\n3. Apply the same reasoning to the other historically productive auto-loadable modules (`dccp`, `tipc`, `rds`, `n_hdlc`) unless a documented requirement exists.\n4. **Detection:** alert on unexpected kernel module loads, and on `socket(AF_INET, SOCK_STREAM, IPPROTO_SCTP)` from processes that have no business speaking SCTP.\n5. Prioritise on **multi-tenant and shared-shell hosts** \u2014 CI runners, jump boxes, container hosts with permissive seccomp \u2014 where an unprivileged local foothold is the realistic precondition.\n\n## Open questions\n\n- **The exploit claim is unverified in this read.** The GitHub repository should be reviewed before this is recorded as a working public exploit.\n- Which distributions and kernel versions are affected beyond Ubuntu 26.04.\n- Whether the primitive is a local privilege escalation only, or remotely reachable where SCTP listeners are exposed. The read implies local.\n- **What NebuSec is** and whether its pipeline output is being published broadly \u2014 that would materially change the expected volume of this class of finding.\n\n## Sources\n\n> Source: [@cybermeowfia](https://x.com/cybermeowfia/status/2095706087064527011) \u2014 2026-09-04 02:50 UTC \u2014 \"Today's exploit is for the latest Ubuntu 26.04, a 9-year-old OOB in SCTP: CVE-2026-52924. It was introduced in Oct 2017 and fixed upstream in Jun 2026. Discovered and exploited by the NebuSec security pipeline.\"\n\n## Related\n\n- `Guides/AI-BugBounty/Forescout-Claude-Ported-PreAuth-RCE-Between-WAGO-PLC-Models-2026.md` \u2014 automation collapsing exploit-porting cost\n- `Guides/AI-BugBounty/Unit42-AI-Assisted-Attack-Autonomous-Agents-Enterprise-Breach-Hours-2026.md`\n\n## Tags\n\n#cve-2026-52924 #linux-kernel #sctp #out-of-bounds #privilege-escalation #automated-exploit-discovery #ubuntu #unverified #high",
+   "sev": "High",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-53399": {
    "file": "Threat_Intel/CVEs/2026/High/CVE-2026-53399-Linux-Kernel-nfsd-Layout-Setlease-UAF.md",
    "body": "# CVE-2026-53399 \u2014 Linux Kernel nfsd Layout Setlease Use-After-Free\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n**Type:** CVE / Linux kernel (nfsd, pNFS layout)\n**Severity:** High \u2014 Red Hat CVSSv3 **7.0** (\u26a0\ufe0f X source claimed 9.8; see note)\n**CVE:** CVE-2026-53399\n**Date captured:** 2026-07-27\n\n## Summary\nUse-after-free in the Linux kernel **nfsd** subsystem. `nfs4_alloc_stid()` publishes the new stid into `cl->cl_stateids` via `idr_alloc_cyclic()` under `cl_lock` before returning to `nfsd4_alloc_layout_stateid()`. `nfsd4_free_layout_stateid()` unconditionally inspects `ls->ls_fence_work` via `delayed_work_pending()` under `ls_lock`, but `INIT_DELAYED_WORK(&ls->ls_fence_work, \u2026)` runs only after the `setlease` call \u2014 so on the **setlease-failure path** the destructor touches an uninitialized/freed `delayed_work`.\n\n## Impact\n- UAF affecting confidentiality, integrity, availability (crash / potential code execution) on NFS servers exporting pNFS layouts.\n- Affected: Linux kernel up to 6.12.95 / 6.18.38 / 7.1.2 (fixed in point releases; distros backporting).\n\n## Note on severity\nX source (@SecAlertsCo) billed this as **CVSS 9.8, network, no-auth**. Red Hat's published advisory (2026-07-19) rates it **7.0**. Treat the 9.8 as unverified vendor-inflation; prioritise by exposure of NFS/pNFS layout servers.\n\n## Action\n- Patch nfsd/kernel to fixed point releases; restrict NFS server exposure to trusted networks.\n- Hunt for nfsd crashes / oops referencing `nfsd4_free_layout_stateid`.\n\n> Source: X [@SecAlertsCo](https://x.com/SecAlertsCo) \u2014 2026-07-26; web-verified via NVD CVE-2026-53399, VulDB #380130, Red Hat (CVSS 7.0).\n\n## Tags\n#cve #linux #kernel #nfsd #uaf #web-verified #unverified",
@@ -4304,6 +4351,14 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-12345": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-12345.md",
+   "body": "# CVE-2026-12345\n\n> \u2139\ufe0f **Enriched** \u2014 this note now contains captured intel beyond the auto-stub baseline. Verify specifics against the linked sources.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\n{ label: \"\ud83d\udc1e New CVE\",            template: \"Templates/CVE Tracker Template.md\",         folder: \"Threat_Intel/CVEs\", ask: \"CVE id (e.g. CVE-2026-12345)\" },\n\n## Where it appears in this vault\n- `\ud83c\udfe0 SOC Vault Homepage.md` \u2014 { label: \"\ud83d\udc1e New CVE\",            template: \"Templates/CVE Tracker Template.md\",         folder: \"Threat_Intel/CVEs\", ask: \"CVE id (e.g. CVE-2026-12345)\" },\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-12345\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-12345\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-12345\n\n## Tags\n#cve #2026 #unrated #enriched\n\n---\n\n## \u26a0\ufe0f FALSE POSITIVE \u2014 not a real CVE reference (flagged 2026-09-04)\n\n**This stub should not exist and its identifier is not a real vulnerability in this vault's scope.**\n\n`make_cve_notes.py` extracted `CVE-2026-12345` from a **placeholder example string** in `\ud83c\udfe0 SOC Vault Homepage.md`:\n\n`ask: \"CVE id (e.g. CVE-2026-12345)\"`\n\n\u2014 which is the prompt text of a Templater quick-add button, not an intel reference. `CVE-2026-12345` is the conventional dummy identifier used in documentation examples.\n\n**Impact:** it inflates the `referenced` count in the CVE-coverage metric by one and adds a permanent empty stub to `Threat_Intel/CVEs/2026/Unrated/`.\n\n**Recommended fix (left for the vault owner \u2014 this sweep does not delete files):**\n1. Delete this file.\n2. Add an exclusion to `Dashboards/make_cve_notes.py` so the CVE regex skips: (a) matches inside `e.g.`/`example` contexts, (b) an explicit denylist containing `CVE-2026-12345`, or (c) the `\ud83c\udfe0 SOC Vault Homepage.md` file entirely, since it is a navigation page rather than an intel note.\n\nOption (b) is the smallest safe change. Without it this stub will be silently regenerated on every sweep.\n\n## Tags\n#false-positive #enriched-error #tooling-bug #do-not-cite",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-1519": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-1519.md",
    "body": "# CVE-2026-1519\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nDifferent from CVE-2026-1519 (which is BIND 9)\n\n## Where it appears in this vault\n- `BugBounty/findings/systemd-resolved-findings.md` \u2014 Different from CVE-2026-1519 (which is BIND 9)\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-1519\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-1519\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-1519\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
@@ -4603,94 +4658,94 @@
  },
  "recent": [
   {
-   "title": "Active-Directory-Silent-Domain-Takeover-54-Minutes-LOTL-Qualys-2026",
-   "file": "Guides/Active-Directory-Silent-Domain-Takeover-54-Minutes-LOTL-Qualys-2026.md",
+   "title": "\ud83c\udfe0 SOC Vault Homepage",
+   "file": "\ud83c\udfe0 SOC Vault Homepage.md",
+   "cat": "other",
+   "ts": "2026-09-04"
+  },
+  {
+   "title": "Work Board",
+   "file": "00_Homepage_Collab/Work Board.md",
+   "cat": "other",
+   "ts": "2026-09-04"
+  },
+  {
+   "title": "Work plan",
+   "file": "00_Homepage_Collab/Work plan.md",
+   "cat": "other",
+   "ts": "2026-09-04"
+  },
+  {
+   "title": "2026-09-04",
+   "file": "Daily/2026-09-04.md",
+   "cat": "other",
+   "ts": "2026-09-04"
+  },
+  {
+   "title": "Unit42-LATAM-Operational-LLM-Use-CL-CRI-1131-CL-CRI-1163-Exposed-NextChat-2026",
+   "file": "Guides/AI-BugBounty/Unit42-LATAM-Operational-LLM-Use-CL-CRI-1131-CL-CRI-1163-Exposed-NextChat-2026.md",
+   "cat": "ai-bugbounty",
+   "ts": "2026-09-04"
+  },
+  {
+   "title": "ASCII-Smuggling-Unicode-Tags-Crossover-From-Prompt-Injection-To-Phishing-Evasion-2026",
+   "file": "Guides/phishing/ASCII-Smuggling-Unicode-Tags-Crossover-From-Prompt-Injection-To-Phishing-Evasion-2026.md",
    "cat": "technique",
-   "ts": "2026-09-03"
+   "ts": "2026-09-04"
   },
   {
-   "title": "Deepfake-Manufacturing-Supply-Chain-Payment-Fraud-Remote-Hiring-2026",
-   "file": "Guides/Deepfake-Manufacturing-Supply-Chain-Payment-Fraud-Remote-Hiring-2026.md",
-   "cat": "supplychain",
-   "ts": "2026-09-03"
+   "title": "Imageless-QR-Codes-Rendered-From-Email-Markup-Quishing-Evasion-2026",
+   "file": "Guides/phishing/Imageless-QR-Codes-Rendered-From-Email-Markup-Quishing-Evasion-2026.md",
+   "cat": "technique",
+   "ts": "2026-09-04"
   },
   {
-   "title": "Cyber-AI-Model-Releases-Gemini-Fairwind-Anthropic-EFS-OpenAI-2026",
-   "file": "Guides/AI-BugBounty/Cyber-AI-Model-Releases-Gemini-Fairwind-Anthropic-EFS-OpenAI-2026.md",
-   "cat": "ai-bugbounty",
-   "ts": "2026-09-03"
+   "title": "2026-09-04 UWU meeting sept",
+   "file": "Meetings/2026-09-04 UWU meeting sept.md",
+   "cat": "other",
+   "ts": "2026-09-04"
   },
   {
-   "title": "Forescout-Claude-Ported-PreAuth-RCE-Between-WAGO-PLC-Models-2026",
-   "file": "Guides/AI-BugBounty/Forescout-Claude-Ported-PreAuth-RCE-Between-WAGO-PLC-Models-2026.md",
-   "cat": "ai-bugbounty",
-   "ts": "2026-09-03"
+   "title": "README-github-sync",
+   "file": "Parsers/README-github-sync.md",
+   "cat": "other",
+   "ts": "2026-09-04"
   },
   {
-   "title": "Malicious-Git-Config-AI-Coding-Agent-Sandbox-Escape-Manifold-2026",
-   "file": "Guides/AI-BugBounty/Malicious-Git-Config-AI-Coding-Agent-Sandbox-Escape-Manifold-2026.md",
-   "cat": "ai-bugbounty",
-   "ts": "2026-09-03"
+   "title": "README-weekly-report",
+   "file": "Parsers/README-weekly-report.md",
+   "cat": "other",
+   "ts": "2026-09-04"
   },
   {
-   "title": "Unit42-AI-Assisted-Attack-Autonomous-Agents-Enterprise-Breach-Hours-2026",
-   "file": "Guides/AI-BugBounty/Unit42-AI-Assisted-Attack-Autonomous-Agents-Enterprise-Breach-Hours-2026.md",
-   "cat": "ai-bugbounty",
-   "ts": "2026-09-03"
+   "title": "SKILL-STEP6-replacement",
+   "file": "Parsers/SKILL-STEP6-replacement.md",
+   "cat": "other",
+   "ts": "2026-09-04"
   },
   {
    "title": "Browser-Patch-Cycle-Chrome-Firefox-2026-09-02",
    "file": "Threat_Intel/Browser-Patch-Cycle-Chrome-Firefox-2026-09-02.md",
    "cat": "other",
-   "ts": "2026-09-03"
+   "ts": "2026-09-04"
   },
   {
-   "title": "Iran-IRGC-UK-Power-Plant-Four-Day-Shutdown-2026",
-   "file": "Threat_Intel/Iran-IRGC-UK-Power-Plant-Four-Day-Shutdown-2026.md",
+   "title": "Vendor-Advisory-Roundup-CCCS-AV26-877-882-2026-09-03",
+   "file": "Threat_Intel/Vendor-Advisory-Roundup-CCCS-AV26-877-882-2026-09-03.md",
    "cat": "other",
-   "ts": "2026-09-03"
+   "ts": "2026-09-04"
   },
   {
-   "title": "Rockwell-Automation-Advisory-AV26-869-ICS-Multiple-Products-2026",
-   "file": "Threat_Intel/Rockwell-Automation-Advisory-AV26-869-ICS-Multiple-Products-2026.md",
-   "cat": "other",
-   "ts": "2026-09-03"
-  },
-  {
-   "title": "Slovakia-NERO-R-ONE-Traffic-Enforcement-Camera-Backdoor-2026",
-   "file": "Threat_Intel/Slovakia-NERO-R-ONE-Traffic-Enforcement-Camera-Backdoor-2026.md",
-   "cat": "other",
-   "ts": "2026-09-03"
-  },
-  {
-   "title": "Breach-Roundup-2026-08-25-LACMA-Nutex-Paylogix-Norway-DDoS",
-   "file": "Threat_Intel/Breaches/Breach-Roundup-2026-08-25-LACMA-Nutex-Paylogix-Norway-DDoS.md",
+   "title": "Breach-Roundup-2026-08-27-Manchester-Airports-Carhartt-Hasbro-Grindr-Hinge",
+   "file": "Threat_Intel/Breaches/Breach-Roundup-2026-08-27-Manchester-Airports-Carhartt-Hasbro-Grindr-Hinge.md",
    "cat": "breach",
-   "ts": "2026-09-03"
+   "ts": "2026-09-04"
   },
   {
-   "title": "Dropbox-Account-Takeover-Via-Lenovo-ID-Email-Verification-Flaw-2026",
-   "file": "Threat_Intel/Breaches/Dropbox-Account-Takeover-Via-Lenovo-ID-Email-Verification-Flaw-2026.md",
+   "title": "Dustin-Nordic-Benelux-IT-Supplier-Breach-Systems-Offline-2026",
+   "file": "Threat_Intel/Breaches/Dustin-Nordic-Benelux-IT-Supplier-Breach-Systems-Offline-2026.md",
    "cat": "breach",
-   "ts": "2026-09-03"
-  },
-  {
-   "title": "Identity-Verification-Vendor-153M-Drivers-Licence-Scans-Dark-Web-2026",
-   "file": "Threat_Intel/Breaches/Identity-Verification-Vendor-153M-Drivers-Licence-Scans-Dark-Web-2026.md",
-   "cat": "breach",
-   "ts": "2026-09-03"
-  },
-  {
-   "title": "VantaCore-Pro-Ukraine-Custom-Ransomware-Russian-Companies-2026",
-   "file": "Threat_Intel/Breaches/VantaCore-Pro-Ukraine-Custom-Ransomware-Russian-Companies-2026.md",
-   "cat": "breach",
-   "ts": "2026-09-03"
-  },
-  {
-   "title": "CVE-2019-18935",
-   "file": "Threat_Intel/CVEs/2019/Low/CVE-2019-18935.md",
-   "cat": "cve",
-   "ts": "2026-09-03"
+   "ts": "2026-09-04"
   }
  ],
  "kev_referenced": [
@@ -5326,6 +5381,13 @@
    "cves": 415,
    "breaches": 108,
    "malware": 132
+  },
+  {
+   "date": "2026-09-04",
+   "intel_items": 1255,
+   "cves": 424,
+   "breaches": 111,
+   "malware": 133
   }
  ]
 }
