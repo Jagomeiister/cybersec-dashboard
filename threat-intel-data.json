@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-04 20:45",
- "today": "2026-09-04",
+ "generated": "2026-09-05 20:45",
+ "today": "2026-09-05",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
@@ -12,35 +12,35 @@
   "commands": 10,
   "guides": 221,
   "intel_items": 1255,
-  "kev": 105
+  "kev": 106
  },
  "windows": {
   "week": {
-   "total": 232,
+   "total": 204,
    "by_cat": {
-    "cve": 42,
-    "malware": 35,
-    "supplychain": 14,
-    "breach": 31,
-    "tool": 6,
-    "misc": 53,
-    "other": 29,
-    "ai-bugbounty": 14,
+    "misc": 50,
+    "other": 24,
+    "cve": 34,
+    "breach": 27,
+    "malware": 33,
+    "ai-bugbounty": 13,
+    "tool": 5,
+    "supplychain": 10,
     "technique": 8
    },
    "by_src": {}
   },
   "month": {
-   "total": 473,
+   "total": 457,
    "by_cat": {
-    "cve": 111,
-    "malware": 67,
-    "technique": 30,
-    "ai-bugbounty": 38,
-    "misc": 78,
-    "supplychain": 27,
-    "breach": 65,
-    "other": 48,
+    "misc": 75,
+    "technique": 28,
+    "cve": 108,
+    "malware": 65,
+    "ai-bugbounty": 37,
+    "other": 47,
+    "breach": 62,
+    "supplychain": 26,
     "command": 1,
     "tool": 8
    },
@@ -1754,13 +1754,11 @@
  ],
  "apt_activity_windows": {
   "week": {
-   "Fire Ant": 5,
-   "APT28": 1
+   "Fire Ant": 5
   },
   "month": {
    "Fire Ant": 5,
    "APT28": 1,
-   "Salt Typhoon": 1,
    "Sandworm": 1
   },
   "year": {
@@ -3633,7 +3631,7 @@
    "body": "# CVE-2026-85046 \u2014 Chrome V8 Type Confusion Zero-Day, Actively Exploited in the Wild\n\n**Type:** cve | **Severity:** Critical | **Date logged:** 2026-09-04\n**Product:** Google Chrome \u2014 V8 JavaScript/WebAssembly engine\n**Fixed in:** Chrome **152.0.7977.82 / .83** (emergency out-of-band release)\n**Impact:** Arbitrary code execution inside the browser renderer sandbox via a crafted HTML page\n**Status:** **Actively exploited in the wild** \u2014 Google confirmed an exploit exists; targets and actor undisclosed\n\n## Summary\n\nGoogle shipped an **emergency Chrome update** for **CVE-2026-85046**, a **type confusion** flaw in **V8**, the JavaScript and WebAssembly engine Chrome uses to process web content. A crafted HTML page achieves **arbitrary code execution inside the renderer sandbox**. Google confirmed **real-world exploitation** but, per its standard practice, withheld attack details, targeting, and actor attribution until a majority of users have updated.\n\n## Reading the sandbox qualifier honestly\n\nThe \"inside the sandbox\" framing consistently causes under-prioritisation, and it should not here.\n\n- **A renderer-only bug is still full access to everything the tab holds** \u2014 session cookies, tokens in memory, the DOM of every same-process origin, and the credential autofill surface. For a browser that is now the primary enterprise application client, that is the crown-jewel boundary, not a stepping stone to it.\n- **Renderer RCE is the standard first stage of a chain.** Every in-the-wild Chrome chain this vault has logged pairs a V8 or WebAssembly bug with a separate sandbox-escape primitive. The absence of a disclosed escape means the escape was not disclosed, not that the operator lacks one.\n- **V8 type confusion is the single most productive Chrome bug class** and the one with the shortest interval from patch to public n-day exploit, because the patch diff points directly at the affected optimisation path. Assume a working public exploit within days of this note.\n\n## Relationship to the 2026-09-02 browser patch cycle\n\nThis is **not** the same event as `Threat_Intel/Browser-Patch-Cycle-Chrome-Firefox-2026-09-02.md`. That note covered a scheduled Chrome/Firefox round with **no reported exploitation**, and explicitly recorded that Chrome fixed versions had not been captured. This is an **out-of-band emergency release two days later with confirmed exploitation**. An estate that treated the 09-02 cycle as routine and deferred it is now two patch levels behind on an actively exploited engine bug.\n\n## Action\n\n1. **Force Chrome to 152.0.7977.82/.83 or later now.** Chrome updates on relaunch \u2014 pushing the binary is not the same as applying it. **Measure relaunch compliance, not download compliance**; the gap between the two is where this bug lives.\n2. Update every **Chromium derivative**: Edge, Brave, Vivaldi, Opera, Electron applications, and embedded CEF/WebView2 components. Electron apps are the reliably forgotten surface and ship their own pinned Chromium.\n3. Enforce a **maximum browser version age** policy via management (Chrome Enterprise / Intune) rather than relying on user relaunch.\n4. **Hunt:** renderer process crashes (`chrome.exe` / `Google Chrome Helper (Renderer)`) clustered by user or by site, unexpected child processes spawned from a renderer, and outbound connections from browser processes to newly-seen domains.\n5. Treat as **in-scope for KEV-style SLA** \u2014 confirmed exploitation on a universally deployed client.\n\n## Open questions\n\n- **Whether a sandbox escape was chained.** Google has not said. This is the question that determines whether the impact is tab-scoped or host-scoped.\n- Targeting: no indication yet whether this is commercial-surveillance, state-aligned, or criminal use.\n- No IOCs published.\n- Whether the bug affects Chrome for Android and iOS builds on the same timeline.\n\n## Sources\n\n> Source: [@TheHackersNews](https://x.com/TheHackersNews/status/2095773697412079741) \u2014 2026-09-04 07:19 UTC \u2014 \"Attackers are exploiting a Chrome V8 zero-day. CVE-2026-85046 allows arbitrary code execution inside the browser sandbox via a crafted HTML page. Google fixed it in Chrome 152.0.7977.82/.83.\"\n> Source: [@The_Cyber_News](https://x.com/The_Cyber_News/status/2095767967577600011) \u2014 2026-09-04 06:56 UTC \u2014 emergency Chrome security update for a critical zero-day already exploited in real-world attacks.\n\n## Tags\n\n#cve-2026-85046 #chrome #v8 #type-confusion #zero-day #exploited-in-the-wild #browser #emergency-patch #critical",
    "sev": "Critical",
    "year": "2026",
-   "kev": false,
+   "kev": true,
    "apts": []
   },
   "CVE-2026-9082": {
@@ -4661,19 +4659,31 @@
    "title": "\ud83c\udfe0 SOC Vault Homepage",
    "file": "\ud83c\udfe0 SOC Vault Homepage.md",
    "cat": "other",
-   "ts": "2026-09-04"
+   "ts": "2026-09-05"
   },
   {
    "title": "Work Board",
    "file": "00_Homepage_Collab/Work Board.md",
    "cat": "other",
-   "ts": "2026-09-04"
+   "ts": "2026-09-05"
   },
   {
    "title": "Work plan",
    "file": "00_Homepage_Collab/Work plan.md",
    "cat": "other",
-   "ts": "2026-09-04"
+   "ts": "2026-09-05"
+  },
+  {
+   "title": "README-weekly-report",
+   "file": "Parsers/README-weekly-report.md",
+   "cat": "other",
+   "ts": "2026-09-05"
+  },
+  {
+   "title": "SKILL-STEP6-replacement",
+   "file": "Parsers/SKILL-STEP6-replacement.md",
+   "cat": "other",
+   "ts": "2026-09-05"
   },
   {
    "title": "2026-09-04",
@@ -4708,18 +4718,6 @@
   {
    "title": "README-github-sync",
    "file": "Parsers/README-github-sync.md",
-   "cat": "other",
-   "ts": "2026-09-04"
-  },
-  {
-   "title": "README-weekly-report",
-   "file": "Parsers/README-weekly-report.md",
-   "cat": "other",
-   "ts": "2026-09-04"
-  },
-  {
-   "title": "SKILL-STEP6-replacement",
-   "file": "Parsers/SKILL-STEP6-replacement.md",
    "cat": "other",
    "ts": "2026-09-04"
   },
@@ -4852,6 +4850,7 @@
   "CVE-2026-83548",
   "CVE-2026-83549",
   "CVE-2026-8452",
+  "CVE-2026-85046",
   "CVE-2026-9082",
   "CVE-2026-9586"
  ],
@@ -5384,6 +5383,13 @@
   },
   {
    "date": "2026-09-04",
+   "intel_items": 1255,
+   "cves": 424,
+   "breaches": 111,
+   "malware": 133
+  },
+  {
+   "date": "2026-09-05",
    "intel_items": 1255,
    "cves": 424,
    "breaches": 111,
