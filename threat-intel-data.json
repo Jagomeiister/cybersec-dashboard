@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-09 20:45",
- "today": "2026-09-09",
+ "generated": "2026-09-10 20:45",
+ "today": "2026-09-10",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
@@ -12,37 +12,37 @@
   "commands": 12,
   "guides": 236,
   "intel_items": 1405,
-  "kev": 110
+  "kev": 111
  },
  "windows": {
   "week": {
-   "total": 236,
+   "total": 191,
    "by_cat": {
-    "cve": 72,
-    "other": 27,
-    "supplychain": 6,
-    "malware": 22,
-    "misc": 35,
-    "ai-bugbounty": 24,
-    "breach": 27,
-    "technique": 17,
-    "tool": 4,
+    "malware": 18,
+    "cve": 62,
+    "misc": 21,
+    "other": 22,
+    "breach": 25,
+    "technique": 15,
+    "supplychain": 3,
+    "ai-bugbounty": 21,
+    "tool": 2,
     "command": 2
    },
    "by_src": {}
   },
   "month": {
-   "total": 554,
+   "total": 550,
    "by_cat": {
-    "cve": 145,
-    "ai-bugbounty": 48,
-    "supplychain": 25,
+    "ai-bugbounty": 46,
     "technique": 35,
+    "cve": 144,
     "command": 3,
     "misc": 81,
     "breach": 75,
     "tool": 10,
     "malware": 74,
+    "supplychain": 24,
     "other": 58
    },
    "by_src": {}
@@ -2822,7 +2822,7 @@
    "body": "# CVE-2026-19490 / CVE-2026-19489 \u2014 Citrix NetScaler ADC & Gateway: Authentication Bypass + Memory Overflow\n\n\u2705 **Verification:** Verified \u2014 4 independent sources\n\n> Source: [The Hacker News](https://thehackernews.com/2026/08/critical-netscaler-flaw-can-bypass.html) \u2014 2026-08-20 | [BleepingComputer](https://www.bleepingcomputer.com/news/security/citrix-urges-admins-to-patch-new-netscaler-flaws-as-soon-as-possible/) 2026-08-20 | [CSO Online](https://www.csoonline.com/) 2026-08-20\n\n\n**Type:** CVE / authentication bypass + memory overflow | **Severity:** Critical (CVE-2026-19490, CVSS 9.3) + High (CVE-2026-19489, CVSS 8.8) | **Date:** 2026-08-20\n\n## Summary\nCitrix patched two flaws in **NetScaler ADC** and **NetScaler Gateway**:\n\n| CVE | CVSS | Class |\n|---|---|---|\n| **CVE-2026-19490** | **9.3** | **Authentication bypass** \u2014 no credentials, no user interaction, on certain Gateway and AAA server configurations |\n| CVE-2026-19489 | 8.8 | Memory overflow |\n\n## Affected Versions\n- NetScaler ADC and NetScaler Gateway **14.1 before 14.1-73.32**\n- NetScaler ADC and NetScaler Gateway **13.1 before 13.1-63.21**\n- NetScaler ADC **FIPS before 14.1-73.32 FIPS**\n- NetScaler ADC **FIPS and NDcPP before 13.1-37.277**\n\nAlso affects **SecurAccess ZTNA Hybrid** deployments that use customer-managed NetScaler instances.\n\n**Not affected:** Citrix-managed cloud services and Citrix-managed Adaptive Authentication \u2014 already patched by Citrix.\n\n## Why This Is Urgent\nNetScaler Gateway is an **internet-facing remote-access chokepoint**. The historical pattern for this product line (CitrixBleed and its successors) is short: bulletin \u2192 mass scanning \u2192 exploitation, often within days. An **unauthenticated, no-interaction auth bypass on the AAA/Gateway path** is the highest-value class of bug an edge appliance can have \u2014 it converts directly into session/identity access rather than just code on a box.\n\nNote also that patching alone has historically been insufficient for this product family: session tokens minted before patching can survive the update.\n\n## Action\n1. **Patch immediately** to 14.1-73.32 / 13.1-63.21 / 14.1-73.32 FIPS / 13.1-37.277.\n2. After patching, **terminate all active ICA and PCoIP sessions** and invalidate existing sessions \u2014 do not assume the update revokes pre-existing tokens.\n3. Review authentication logs for successful logins without corresponding credential events, especially against AAA virtual servers.\n4. Confirm whether any **SecurAccess ZTNA Hybrid** deployment points at a customer-managed NetScaler \u2014 those inherit the exposure.\n5. Rotate credentials for accounts that authenticate through the Gateway if compromise cannot be excluded.\n\n#cve #citrix #netscaler #authentication-bypass #edge-device #critical #remote-access\n\n## Tags\n #verified\n\n---\n\n## Update \u2014 2026-09-05: **Now exploited in the wild**\n\n**Status change: patched-not-exploited \u2192 ACTIVELY EXPLOITED.**\n\nAttackers have begun targeting **CVE-2026-19490** in the wild, per vulnerability-intelligence firm Previdian. The Canadian Centre for Cyber Security issued **AL26-019** covering both CVE-2026-19490 and CVE-2026-19489 on 2026-09-04.\n\n**Elapsed time from advisory to confirmed exploitation: days.** That is the exact interval this note predicted when it was written \u2014 \"bulletin \u2192 mass scanning \u2192 exploitation, often within days\" \u2014 and it is the fourth consecutive NetScaler-family bug in this vault to follow that curve. The prediction should now be treated as the default assumption for this product line rather than as a risk estimate: **for internet-facing NetScaler Gateway, an unauthenticated auth bypass is under exploitation from the moment the bulletin is public.**\n\n### Revised action \u2014 the post-patch steps are now the important ones\n\nPatching is table stakes and is presumed complete. The steps that determine whether you are compromised are the ones after it, and they are the ones organisations routinely skip:\n\n1. **If the appliance was internet-facing and unpatched at any point since the bulletin, treat it as compromised until you have evidence otherwise.** Do not reason from \"we patched quickly.\"\n2. **Terminate all ICA and PCoIP sessions and invalidate every existing session token.** Sessions minted before patching survive the update \u2014 this is the specific historical failure mode of this product family (CitrixBleed and successors) and it is why \"we patched\" has repeatedly not meant \"we are safe.\"\n3. **Hunt for authentication successes with no corresponding credential event** against AAA virtual servers, and for session reuse from anomalous source addresses or geographies.\n4. **Rotate credentials for every account that authenticates through the Gateway** where compromise cannot be excluded, and re-examine any downstream system those identities reach.\n5. Confirm again whether any **SecurAccess ZTNA Hybrid** deployment points at a customer-managed NetScaler \u2014 those inherit the exposure and are commonly missed in the asset list.\n\n### Sources\n\n> Source: [BleepingComputer \u2014 Critical Citrix NetScaler auth bypass now leveraged in attacks](https://www.bleepingcomputer.com/news/security/hackers-target-critical-citrix-netscaler-auth-bypass-in-attacks/) \u2014 2026-09-04\n> Source: [CCCS AL26-019 \u2014 Vulnerabilities impacting Citrix NetScaler ADC and NetScaler Gateway](https://cyber.gc.ca/en/alerts-advisories/al26-019-vulnerabilities-impacting-citrix-netscaler-adc-netscaler-gateway-cve-2026-19490-cve-2026-19489) \u2014 2026-09-04\n\n#actively-exploited #kev-candidate\n\n---\n\n## Update \u2014 2026-09-04: CVE-2026-19490 now exploited in the wild\n\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-target-critical-citrix-netscaler-auth-bypass-in-attacks/) \u2014 2026-09-04\n\nVulnerability-intelligence firm Previdian reports **active in-the-wild exploitation of CVE-2026-19490**, the critical NetScaler auth-bypass tracked in this note. This moves the CVE from disclosed to **exploited** and should trigger the assume-compromise branch for any NetScaler that was internet-reachable and unpatched.\n\nNetScaler/Citrix ADC has an established history as a **pre-authentication edge target with post-patch persistence** (CitrixBleed lineage). Patching closes the entry; it does not evict web shells, does not invalidate stolen session tokens, and does not remove config-level persistence. **Post-patch actions:** terminate all ICA/PCoIP sessions, rotate the `ns` account and any bound service credentials, and review for unexpected responder/rewrite policies and shell artefacts. Prioritise ahead of the still-unexploited items in this month's edge backlog \u2014 this one is confirmed live.\n\n#actively-exploited #cve-2026-19490",
    "sev": "Critical",
    "year": "2026",
-   "kev": false,
+   "kev": true,
    "apts": []
   },
   "CVE-2026-19598": {
@@ -4919,94 +4919,94 @@
  },
  "recent": [
   {
-   "title": "optus-recon-leads",
-   "file": "BugBounty/leads/optus-recon-leads.md",
+   "title": "optus-oes-unhandled-exception-finding",
+   "file": "BugBounty/findings/optus-oes-unhandled-exception-finding.md",
    "cat": "other",
-   "ts": "2026-09-09"
+   "ts": "2026-09-10"
   },
   {
-   "title": "optus-ct-enumeration",
-   "file": "BugBounty/notes/optus-ct-enumeration.md",
+   "title": "optus-activetest-leads-leads",
+   "file": "BugBounty/leads/optus-activetest-leads-leads.md",
    "cat": "other",
-   "ts": "2026-09-09"
+   "ts": "2026-09-10"
   },
   {
-   "title": "optus-dns-http-probe",
-   "file": "BugBounty/notes/optus-dns-http-probe.md",
+   "title": "optus-activetest-leads",
+   "file": "BugBounty/leads/optus-activetest-leads.md",
    "cat": "other",
-   "ts": "2026-09-09"
+   "ts": "2026-09-10"
   },
   {
-   "title": "optus-jsintel-www-bundles",
-   "file": "BugBounty/notes/optus-jsintel-www-bundles.md",
+   "title": "optus-chain-analysis-leads-leads",
+   "file": "BugBounty/leads/optus-chain-analysis-leads-leads.md",
    "cat": "other",
-   "ts": "2026-09-09"
+   "ts": "2026-09-10"
   },
   {
-   "title": "systemd-v260-candidates-refuted-observations",
-   "file": "BugBounty/notes/systemd-v260-candidates-refuted-observations.md",
+   "title": "optus-chain-analysis-leads",
+   "file": "BugBounty/leads/optus-chain-analysis-leads.md",
    "cat": "other",
-   "ts": "2026-09-09"
+   "ts": "2026-09-10"
   },
   {
-   "title": "optus-scope",
-   "file": "BugBounty/scopes/optus-scope.md",
+   "title": "optus-activetest-gateway-differential-observations",
+   "file": "BugBounty/notes/optus-activetest-gateway-differential-observations.md",
    "cat": "other",
-   "ts": "2026-09-09"
+   "ts": "2026-09-10"
   },
   {
-   "title": "NetNTLMv1-Rainbow-Tables-Outflank-ntlmrain-2026",
-   "file": "Commands/Credential-Access/NetNTLMv1-Rainbow-Tables-Outflank-ntlmrain-2026.md",
-   "cat": "command",
-   "ts": "2026-09-09"
+   "title": "optus-activetest-gateway-differential",
+   "file": "BugBounty/notes/optus-activetest-gateway-differential.md",
+   "cat": "other",
+   "ts": "2026-09-10"
   },
   {
-   "title": "Pass-ta-key-Google-Password-Manager-Passkey-Hijack-Windows-2026",
-   "file": "Guides/Pass-ta-key-Google-Password-Manager-Passkey-Hijack-Windows-2026.md",
-   "cat": "technique",
-   "ts": "2026-09-09"
+   "title": "optus-activetest-oes-ogws-observations",
+   "file": "BugBounty/notes/optus-activetest-oes-ogws-observations.md",
+   "cat": "other",
+   "ts": "2026-09-10"
   },
   {
-   "title": "Autonomous-MultiAgent-Credential-Harvesting-Six-Hours-GTIG-2026",
-   "file": "Guides/AI-BugBounty/Autonomous-MultiAgent-Credential-Harvesting-Six-Hours-GTIG-2026.md",
-   "cat": "ai-bugbounty",
-   "ts": "2026-09-09"
+   "title": "optus-activetest-oes-ogws",
+   "file": "BugBounty/notes/optus-activetest-oes-ogws.md",
+   "cat": "other",
+   "ts": "2026-09-10"
   },
   {
-   "title": "ChatGPT-Planted-Prompt-CrossAccount-Gmail-Exfiltration-CheckPoint-2026",
-   "file": "Guides/AI-BugBounty/ChatGPT-Planted-Prompt-CrossAccount-Gmail-Exfiltration-CheckPoint-2026.md",
-   "cat": "ai-bugbounty",
-   "ts": "2026-09-09"
+   "title": "optus-activetest-www-aem-and-closures",
+   "file": "BugBounty/notes/optus-activetest-www-aem-and-closures.md",
+   "cat": "other",
+   "ts": "2026-09-10"
   },
   {
-   "title": "CISA-NSA-FBI-Industrial-Scale-AI-Model-Distillation-Advisory-2026",
-   "file": "Guides/AI-BugBounty/CISA-NSA-FBI-Industrial-Scale-AI-Model-Distillation-Advisory-2026.md",
-   "cat": "ai-bugbounty",
-   "ts": "2026-09-09"
+   "title": "optus-activetest-www-aem-closures-observations",
+   "file": "BugBounty/notes/optus-activetest-www-aem-closures-observations.md",
+   "cat": "other",
+   "ts": "2026-09-10"
   },
   {
-   "title": "Encrypted-Reasoning-Replay-OpenAI-Anthropic-Google-API-Secret-Leak-2026",
-   "file": "Guides/AI-BugBounty/Encrypted-Reasoning-Replay-OpenAI-Anthropic-Google-API-Secret-Leak-2026.md",
-   "cat": "ai-bugbounty",
-   "ts": "2026-09-09"
+   "title": "optus-campaign-lessons",
+   "file": "BugBounty/notes/optus-campaign-lessons.md",
+   "cat": "other",
+   "ts": "2026-09-10"
   },
   {
-   "title": "Forescout-AI-Assisted-PLC-Exploit-Porting-WAGO-Nucleus-FTP-2026",
-   "file": "Guides/AI-BugBounty/Forescout-AI-Assisted-PLC-Exploit-Porting-WAGO-Nucleus-FTP-2026.md",
-   "cat": "ai-bugbounty",
-   "ts": "2026-09-09"
+   "title": "optus-chain-analysis-observations-observations",
+   "file": "BugBounty/notes/optus-chain-analysis-observations-observations.md",
+   "cat": "other",
+   "ts": "2026-09-10"
   },
   {
-   "title": "Indirect-Prompt-Injection-Autonomous-Agents-Carrier-Index-2026",
-   "file": "Guides/AI-BugBounty/Indirect-Prompt-Injection-Autonomous-Agents-Carrier-Index-2026.md",
-   "cat": "ai-bugbounty",
-   "ts": "2026-09-09"
+   "title": "optus-chain-analysis-observations",
+   "file": "BugBounty/notes/optus-chain-analysis-observations.md",
+   "cat": "other",
+   "ts": "2026-09-10"
   },
   {
-   "title": "Okta-Frontier-Model-Vulnerability-Hunting-Human-In-The-Loop-2026",
-   "file": "Guides/AI-BugBounty/Okta-Frontier-Model-Vulnerability-Hunting-Human-In-The-Loop-2026.md",
-   "cat": "ai-bugbounty",
-   "ts": "2026-09-09"
+   "title": "optus-report-stage-adjudication-zero-reports-observations",
+   "file": "BugBounty/notes/optus-report-stage-adjudication-zero-reports-observations.md",
+   "cat": "other",
+   "ts": "2026-09-10"
   }
  ],
  "kev_referenced": [
@@ -5068,6 +5068,7 @@
   "CVE-2026-15410",
   "CVE-2026-16232",
   "CVE-2026-18577",
+  "CVE-2026-19490",
   "CVE-2026-20230",
   "CVE-2026-20245",
   "CVE-2026-20253",
@@ -5685,6 +5686,13 @@
   },
   {
    "date": "2026-09-09",
+   "intel_items": 1405,
+   "cves": 471,
+   "breaches": 119,
+   "malware": 142
+  },
+  {
+   "date": "2026-09-10",
    "intel_items": 1405,
    "cves": 471,
    "breaches": 119,
