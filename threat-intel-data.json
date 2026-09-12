@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-11 20:45",
- "today": "2026-09-11",
+ "generated": "2026-09-12 20:45",
+ "today": "2026-09-12",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
@@ -11,71 +11,71 @@
   "tools": 89,
   "commands": 12,
   "guides": 256,
-  "intel_items": 1405,
-  "kev": 122
+  "intel_items": 1458,
+  "kev": 125
  },
  "windows": {
   "week": {
-   "total": 153,
+   "total": 161,
    "by_cat": {
-    "cve": 52,
-    "breach": 21,
-    "ai-bugbounty": 20,
-    "technique": 13,
-    "misc": 13,
-    "malware": 14,
-    "other": 14,
-    "tool": 2,
-    "supplychain": 2,
+    "ai-bugbounty": 25,
+    "misc": 8,
+    "technique": 22,
+    "cve": 46,
+    "other": 11,
+    "breach": 18,
+    "tool": 6,
+    "malware": 20,
+    "supplychain": 3,
     "command": 2
    },
    "by_src": {}
   },
   "month": {
-   "total": 542,
+   "total": 583,
    "by_cat": {
-    "ai-bugbounty": 44,
-    "technique": 35,
-    "cve": 143,
+    "ai-bugbounty": 50,
+    "technique": 49,
     "command": 3,
     "misc": 81,
-    "breach": 75,
-    "tool": 10,
-    "malware": 72,
-    "supplychain": 22,
-    "other": 57
+    "cve": 151,
+    "breach": 78,
+    "tool": 13,
+    "malware": 78,
+    "other": 59,
+    "supplychain": 21
    },
    "by_src": {}
   },
   "year": {
-   "total": 1405,
+   "total": 1458,
    "by_cat": {
-    "ai-bugbounty": 99,
-    "malware": 171,
-    "other": 104,
-    "tool": 52,
-    "misc": 295,
+    "ai-bugbounty": 106,
+    "malware": 179,
+    "other": 106,
+    "tool": 56,
+    "misc": 296,
     "command": 6,
-    "technique": 114,
-    "cve": 334,
-    "breach": 149,
-    "supplychain": 81
+    "technique": 128,
+    "cve": 347,
+    "breach": 152,
+    "supplychain": 82
    },
    "by_src": {}
   },
   "all": {
-   "total": 1405,
+   "total": 1458,
    "by_cat": {
-    "ai-bugbounty": 99,
-    "malware": 171,
-    "other": 104,
-    "tool": 52,
-    "misc": 295,
+    "ai-bugbounty": 106,
+    "malware": 179,
+    "other": 106,
+    "tool": 56,
+    "misc": 296,
     "command": 6,
-    "technique": 114,
-    "cve": 334,
-    "breach": 149,
-    "supplychain": 81
+    "technique": 128,
+    "cve": 347,
+    "breach": 152,
+    "supplychain": 82
    },
    "by_src": {}
   }
@@ -1755,7 +1755,7 @@
  ],
  "apt_activity_windows": {
   "week": {
-   "Sandworm": 3
+   "Sandworm": 4
   },
   "month": {
    "Fire Ant": 5,
@@ -1763,7 +1763,7 @@
    "APT28": 1
   },
   "year": {
-   "Sandworm": 5,
+   "Sandworm": 6,
    "Fire Ant": 5,
    "Scattered Spider": 3,
    "APT28": 2,
@@ -1774,7 +1774,7 @@
    "Salt Typhoon": 1
   },
   "all": {
-   "Sandworm": 5,
+   "Sandworm": 6,
    "Fire Ant": 5,
    "Scattered Spider": 3,
    "APT28": 2,
@@ -1801,7 +1801,7 @@
      0,
      0,
      2,
-     3
+     4
     ]
    },
    {
@@ -1883,7 +1883,7 @@
   "2026-06": 108,
   "2026-07": 16,
   "2026-08": 84,
-  "2026-09": 78
+  "2026-09": 91
  },
  "top_cve": [
   {
@@ -1912,13 +1912,19 @@
   },
   {
    "id": "CVE-2026-85880",
-   "n": 39,
+   "n": 40,
    "sev": "Critical",
    "kev": true
   },
   {
    "id": "CVE-2026-10520",
    "n": 39,
+   "sev": "Critical",
+   "kev": true
+  },
+  {
+   "id": "CVE-2026-19490",
+   "n": 37,
    "sev": "Critical",
    "kev": true
   },
@@ -1935,8 +1941,8 @@
    "kev": false
   },
   {
-   "id": "CVE-2026-19490",
-   "n": 34,
+   "id": "CVE-2026-85046",
+   "n": 33,
    "sev": "Critical",
    "kev": true
   },
@@ -1948,12 +1954,6 @@
   },
   {
    "id": "CVE-2022-0995",
-   "n": 32,
-   "sev": "High",
-   "kev": true
-  },
-  {
-   "id": "CVE-2015-5287",
    "n": 32,
    "sev": "High",
    "kev": true
@@ -4836,7 +4836,7 @@
    "body": "# CVE-2026-42016\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-42016\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-42016\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42016\n\n## Tags\n#cve #2026 #unrated #auto-stub",
    "sev": "",
    "year": "2026",
-   "kev": false,
+   "kev": true,
    "apts": []
   },
   "CVE-2026-42018": {
@@ -4844,7 +4844,7 @@
    "body": "# CVE-2026-42018\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-42018\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-42018\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42018\n\n## Tags\n#cve #2026 #unrated #auto-stub",
    "sev": "",
    "year": "2026",
-   "kev": false,
+   "kev": true,
    "apts": []
   },
   "CVE-2026-42978": {
@@ -5076,7 +5076,7 @@
    "body": "# CVE-2026-84869\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-84869\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-84869\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-84869\n\n## Tags\n#cve #2026 #unrated #auto-stub",
    "sev": "",
    "year": "2026",
-   "kev": false,
+   "kev": true,
    "apts": []
   },
   "CVE-2026-85103": {
@@ -5098,93 +5098,93 @@
  },
  "recent": [
   {
-   "title": "AWS-Access-Key-Exposure-Detection-CloudTrail-Attribution-Gaps-2026",
-   "file": "Guides/AWS-Access-Key-Exposure-Detection-CloudTrail-Attribution-Gaps-2026.md",
-   "cat": "technique",
+   "title": "ginandjuice-catalog-sqli-h2-fileread-chain-finding",
+   "file": "BugBounty/findings/ginandjuice-catalog-sqli-h2-fileread-chain-finding.md",
+   "cat": "other",
+   "ts": "2026-09-12"
+  },
+  {
+   "title": "ginandjuice-unexploited-surfaces-leads",
+   "file": "BugBounty/leads/ginandjuice-unexploited-surfaces-leads.md",
+   "cat": "other",
+   "ts": "2026-09-12"
+  },
+  {
+   "title": "ginandjuice-chain-analysis-observations",
+   "file": "BugBounty/notes/ginandjuice-chain-analysis-observations.md",
+   "cat": "other",
+   "ts": "2026-09-12"
+  },
+  {
+   "title": "ginandjuice-coverage-vs-ground-truth",
+   "file": "BugBounty/notes/ginandjuice-coverage-vs-ground-truth.md",
+   "cat": "other",
+   "ts": "2026-09-12"
+  },
+  {
+   "title": "session-2026-09-12-handover",
+   "file": "BugBounty/notes/session-2026-09-12-handover.md",
+   "cat": "other",
+   "ts": "2026-09-12"
+  },
+  {
+   "title": "ginandjuice-h2-dbadmin-fileread-primitive",
+   "file": "BugBounty/primitives/ginandjuice-h2-dbadmin-fileread-primitive.md",
+   "cat": "other",
+   "ts": "2026-09-12"
+  },
+  {
+   "title": "ginandjuice-blog-search-dupparam-filter-bypass-report",
+   "file": "BugBounty/reports/ginandjuice-blog-search-dupparam-filter-bypass-report.md",
+   "cat": "other",
+   "ts": "2026-09-12"
+  },
+  {
+   "title": "ginandjuice-catalog-category-sqli-file-read-report",
+   "file": "BugBounty/reports/ginandjuice-catalog-category-sqli-file-read-report.md",
+   "cat": "other",
+   "ts": "2026-09-12"
+  },
+  {
+   "title": "ginandjuice-blog-back-open-redirect-finding",
+   "file": "BugBounty/findings/ginandjuice-blog-back-open-redirect-finding.md",
+   "cat": "other",
    "ts": "2026-09-11"
   },
   {
-   "title": "Cloud-Web-Applications-Threat-Matrix-Microsoft-2026",
-   "file": "Guides/Cloud-Web-Applications-Threat-Matrix-Microsoft-2026.md",
-   "cat": "technique",
+   "title": "ginandjuice-blog-csti-finding",
+   "file": "BugBounty/findings/ginandjuice-blog-csti-finding.md",
+   "cat": "other",
    "ts": "2026-09-11"
   },
   {
-   "title": "Companion-Device-Linking-E2EE-Bypass-WhatsApp-Signal-Telegram-2026",
-   "file": "Guides/Companion-Device-Linking-E2EE-Bypass-WhatsApp-Signal-Telegram-2026.md",
-   "cat": "technique",
+   "title": "ginandjuice-blog-domxss-finding",
+   "file": "BugBounty/findings/ginandjuice-blog-domxss-finding.md",
+   "cat": "other",
    "ts": "2026-09-11"
   },
   {
-   "title": "csrf-token-not-bound-to-session-technique-guide",
-   "file": "Guides/csrf-token-not-bound-to-session-technique-guide.md",
-   "cat": "technique",
+   "title": "ginandjuice-blog-prototype-pollution-finding",
+   "file": "BugBounty/findings/ginandjuice-blog-prototype-pollution-finding.md",
+   "cat": "other",
    "ts": "2026-09-11"
   },
   {
-   "title": "EU-Cyber-Resilience-Act-Vulnerability-Disclosure-Readiness-UpGuard-2026",
-   "file": "Guides/EU-Cyber-Resilience-Act-Vulnerability-Disclosure-Readiness-UpGuard-2026.md",
-   "cat": "technique",
+   "title": "ginandjuice-blog-search-dupparam-filter-bypass-finding",
+   "file": "BugBounty/findings/ginandjuice-blog-search-dupparam-filter-bypass-finding.md",
+   "cat": "other",
    "ts": "2026-09-11"
   },
   {
-   "title": "Google-Play-Early-Access-Review-Evasion-Deceptive-Apps-2026",
-   "file": "Guides/Google-Play-Early-Access-Review-Evasion-Deceptive-Apps-2026.md",
-   "cat": "technique",
+   "title": "ginandjuice-catalog-category-sqli-finding",
+   "file": "BugBounty/findings/ginandjuice-catalog-category-sqli-finding.md",
+   "cat": "other",
    "ts": "2026-09-11"
   },
   {
-   "title": "SPIFFE-SPIRE-Node-Compromise-Workload-Attestation-Spoofing-2026",
-   "file": "Guides/SPIFFE-SPIRE-Node-Compromise-Workload-Attestation-Spoofing-2026.md",
-   "cat": "technique",
-   "ts": "2026-09-11"
-  },
-  {
-   "title": "Version-Control-DFIR-Audit-Log-Coverage-Gaps-Wiz-2026",
-   "file": "Guides/Version-Control-DFIR-Audit-Log-Coverage-Gaps-Wiz-2026.md",
-   "cat": "technique",
-   "ts": "2026-09-11"
-  },
-  {
-   "title": "Adaptive-Agentic-Worms-Open-Weight-LLM-Self-Replication-arXiv-2606-03811",
-   "file": "Guides/AI-BugBounty/Adaptive-Agentic-Worms-Open-Weight-LLM-Self-Replication-arXiv-2606-03811.md",
-   "cat": "ai-bugbounty",
-   "ts": "2026-09-11"
-  },
-  {
-   "title": "AI-Compressed-Exploit-Timeline-Embargo-Collapse-2026",
-   "file": "Guides/AI-BugBounty/AI-Compressed-Exploit-Timeline-Embargo-Collapse-2026.md",
-   "cat": "ai-bugbounty",
-   "ts": "2026-09-11"
-  },
-  {
-   "title": "Anthropic-Claude-Hardening-After-Unauthorized-Real-System-Access-2026",
-   "file": "Guides/AI-BugBounty/Anthropic-Claude-Hardening-After-Unauthorized-Real-System-Access-2026.md",
-   "cat": "ai-bugbounty",
-   "ts": "2026-09-11"
-  },
-  {
-   "title": "Anthropic-Compliance-API-MCP-Inventory-Local-MCP-Blind-Spot-2026",
-   "file": "Guides/AI-BugBounty/Anthropic-Compliance-API-MCP-Inventory-Local-MCP-Blind-Spot-2026.md",
-   "cat": "ai-bugbounty",
-   "ts": "2026-09-11"
-  },
-  {
-   "title": "Anthropic-Threat-Intelligence-Report-2026-09-Claude-Misuse-Midnight-Blizzard-Model-Theft",
-   "file": "Guides/AI-BugBounty/Anthropic-Threat-Intelligence-Report-2026-09-Claude-Misuse-Midnight-Blizzard-Model-Theft.md",
-   "cat": "ai-bugbounty",
-   "ts": "2026-09-11"
-  },
-  {
-   "title": "Cross-Model-Code-Review-Asymmetry-Greptile-2026",
-   "file": "Guides/AI-BugBounty/Cross-Model-Code-Review-Asymmetry-Greptile-2026.md",
-   "cat": "ai-bugbounty",
-   "ts": "2026-09-11"
-  },
-  {
-   "title": "LLM-Router-Prompt-Dataset-Resale-Credential-Leak-2026",
-   "file": "Guides/AI-BugBounty/LLM-Router-Prompt-Dataset-Resale-Credential-Leak-2026.md",
-   "cat": "ai-bugbounty",
+   "title": "ginandjuice-catalog-searchterm-reflected-xss-finding",
+   "file": "BugBounty/findings/ginandjuice-catalog-searchterm-reflected-xss-finding.md",
+   "cat": "other",
    "ts": "2026-09-11"
   }
  ],
@@ -5273,6 +5273,8 @@
   "CVE-2026-35273",
   "CVE-2026-39808",
   "CVE-2026-39987",
+  "CVE-2026-42016",
+  "CVE-2026-42018",
   "CVE-2026-42897",
   "CVE-2026-46817",
   "CVE-2026-48282",
@@ -5304,6 +5306,7 @@
   "CVE-2026-83548",
   "CVE-2026-83549",
   "CVE-2026-8452",
+  "CVE-2026-84869",
   "CVE-2026-85046",
   "CVE-2026-85880",
   "CVE-2026-86060",
@@ -5891,6 +5894,13 @@
   {
    "date": "2026-09-11",
    "intel_items": 1405,
+   "cves": 495,
+   "breaches": 121,
+   "malware": 147
+  },
+  {
+   "date": "2026-09-12",
+   "intel_items": 1458,
    "cves": 495,
    "breaches": 121,
    "malware": 147
