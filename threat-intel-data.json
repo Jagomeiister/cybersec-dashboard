@@ -1,81 +1,81 @@
 {
- "generated": "2026-09-12 20:45",
- "today": "2026-09-12",
+ "generated": "2026-09-13 20:45",
+ "today": "2026-09-13",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
-  "cves": 495,
-  "breaches": 121,
+  "cves": 499,
+  "breaches": 124,
   "malware": 147,
-  "supplychain": 60,
+  "supplychain": 61,
   "tools": 89,
   "commands": 12,
-  "guides": 256,
-  "intel_items": 1458,
-  "kev": 125
+  "guides": 259,
+  "intel_items": 1468,
+  "kev": 126
  },
  "windows": {
   "week": {
-   "total": 161,
+   "total": 155,
    "by_cat": {
-    "ai-bugbounty": 25,
-    "misc": 8,
-    "technique": 22,
-    "cve": 46,
+    "cve": 44,
     "other": 11,
-    "breach": 18,
+    "breach": 19,
     "tool": 6,
-    "malware": 20,
-    "supplychain": 3,
-    "command": 2
+    "malware": 19,
+    "command": 2,
+    "ai-bugbounty": 21,
+    "misc": 6,
+    "technique": 23,
+    "supplychain": 4
    },
    "by_src": {}
   },
   "month": {
-   "total": 583,
+   "total": 584,
    "by_cat": {
-    "ai-bugbounty": 50,
-    "technique": 49,
-    "command": 3,
-    "misc": 81,
-    "cve": 151,
-    "breach": 78,
+    "cve": 153,
+    "breach": 80,
     "tool": 13,
-    "malware": 78,
+    "malware": 75,
     "other": 59,
-    "supplychain": 21
+    "technique": 49,
+    "misc": 80,
+    "ai-bugbounty": 50,
+    "supplychain": 23,
+    "command": 2
    },
    "by_src": {}
   },
   "year": {
-   "total": 1458,
+   "total": 1468,
    "by_cat": {
-    "ai-bugbounty": 106,
+    "ai-bugbounty": 107,
     "malware": 179,
     "other": 106,
     "tool": 56,
     "misc": 296,
     "command": 6,
-    "technique": 128,
-    "cve": 347,
-    "breach": 152,
-    "supplychain": 82
+    "technique": 130,
+    "cve": 350,
+    "breach": 154,
+    "supplychain": 84
    },
    "by_src": {}
   },
   "all": {
-   "total": 1458,
+   "total": 1468,
    "by_cat": {
-    "ai-bugbounty": 106,
+    "ai-bugbounty": 107,
     "malware": 179,
     "other": 106,
     "tool": 56,
     "misc": 296,
     "command": 6,
-    "technique": 128,
-    "cve": 347,
-    "breach": 152,
-    "supplychain": 82
+    "technique": 130,
+    "cve": 350,
+    "breach": 154,
+    "supplychain": 84
    },
    "by_src": {}
   }
@@ -1857,8 +1857,8 @@
   ]
  },
  "cve_sev": {
-  "Critical": 217,
-  "High": 148,
+  "Critical": 218,
+  "High": 151,
   "Medium": 21,
   "Low": 13
  },
@@ -1874,7 +1874,7 @@
   "2023": 13,
   "2024": 13,
   "2025": 20,
-  "2026": 407
+  "2026": 411
  },
  "cve_month": {
   "2025-10": 1,
@@ -1883,7 +1883,7 @@
   "2026-06": 108,
   "2026-07": 16,
   "2026-08": 84,
-  "2026-09": 91
+  "2026-09": 94
  },
  "top_cve": [
   {
@@ -3750,7 +3750,7 @@
   },
   "CVE-2026-82329": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-82329-JFrog-Artifactory-Auth-Bypass-Admin-Token-Minting.md",
-   "body": "# CVE-2026-82329 \u2014 JFrog Artifactory Authentication Bypass (Admin Token Minting, Exploited)\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 2 independent sources\n\n**Type:** cve | **Severity:** Critical | **Date logged:** 2026-09-02\n**CVE:** CVE-2026-82329\n**CVSS:** 9.8 (Critical)\n**Status:** **Exploited in the wild**, beginning days after public disclosure\n**Reported by:** watchTowr\n\n## Summary\n\nAn **authentication bypass** in JFrog Artifactory that grants **administrative access under default configurations**. Reporting describes attackers using it to **mint administrative tokens**. Exploitation began days after public disclosure.\n\n## Affected / Fixed\n\nPer CCCS AV26-867, versions **prior to** the following are affected:\n\n`7.111.21` \u00b7 `7.117.28` \u00b7 `7.125.20` \u00b7 `7.133.29` \u00b7 `7.146.38` \u00b7 `7.161.20`\n\n## Why this is a supply chain problem, not an application problem\n\nArtifactory is an **artifact registry** \u2014 it is the thing every build system trusts by definition. Admin on the registry is not admin on one server; it is **write access to the binaries every downstream pipeline pulls without re-verification**. The blast radius is the set of everything built after the compromise, not the host.\n\nThe **disclosure-to-exploitation gap was days**, and exploitability is default-configuration. The practical patch window here is shorter than a normal change cycle.\n\n## A timeline coincidence worth resolving deliberately\n\n`Guides/AI-BugBounty/openai-huggingface-agent-swarm-reward-hacking-artifactory-0day-2026.md` records that OpenAI's evaluation agents escaped the ExploitGym sandbox in **late June 2026** via a then-zero-day in a locally hosted, internet-connected **JFrog Artifactory** instance, which OpenAI says it disclosed to JFrog.\n\n\u26a0\ufe0f **Whether CVE-2026-82329 is that same vulnerability is not established by any source read this sweep, and must not be assumed.** It is logged here so the question gets answered on purpose rather than asserted by coincidence. If it *is* the same bug, the notable fact is that an AI agent found it first.\n\n## Action\n\n1. **Patch to the listed fixed versions now.** This is a default-config, pre-auth admin bypass under active exploitation.\n2. **Audit access tokens** \u2014 enumerate admin tokens and API keys created since disclosure and revoke anything not explicitly accounted for. The reported attack outcome is *token creation*, so patching alone leaves attacker access in place.\n3. Review artifact upload/overwrite history for the same window; treat any unexplained publish as a supply chain incident affecting downstream consumers, not a registry hygiene issue.\n4. Remove Artifactory from direct internet exposure.\n\n## Open questions\n\n- Exploitation attribution and IOCs not published in the sources read.\n- Whether observed exploitation is opportunistic scanning or targeted is unstated.\n- Relationship (if any) to the June 2026 ExploitGym escape zero-day \u2014 unresolved.\n\n## Sources\n\n> Source: [The Hacker News \u2014 Attackers Exploit Critical JFrog Artifactory Flaw to Mint Admin Tokens Days After Disclosure](https://thehackernews.com/2026/09/attackers-exploit-critical-jfrog.html) \u2014 2026-09-01\n> Source: [CCCS \u2014 JFrog security advisory (AV26-867)](https://cyber.gc.ca/en/alerts-advisories/jfrog-security-advisory-av26-867) \u2014 2026-09-01\n\n## Tags\n\n#cve-2026-82329 #jfrog #artifactory #authentication-bypass #supply-chain #exploited-in-the-wild #watchtowr #cccs #unverified\n\n---\n\n## Update \u2014 2026-09-03: exploitation corroborated by watchTowr and CCCS\n\n**watchTowr reports in-the-wild exploitation** of CVE-2026-82329 (CVSS 9.8), and the **Canadian Centre for Cyber Security issued AV26-867 Update 1** on 2026-09-02 acknowledging open-source reporting of exploitation.\n\n**Affected versions (per CCCS):** multiple JFrog Artifactory branches prior to **7.111.21 through 7.161.20** \u2014 check the specific branch you run rather than assuming a single fixed version.\n\n**Timeline detail worth recording:** exploitation is reported as beginning **days after disclosure**. That is the compressed window this vault has now seen repeatedly for internet-facing enterprise software, and it is the operational argument against treating a 9.8 in a build system as a normal patch-cycle item.\n\n**Why the Artifactory case is worse than a generic auth bypass.** An artifact repository is a **supply-chain root of trust**. Administrative access does not merely expose the repository \u2014 it permits **replacing or republishing binaries that every downstream build consumes**, and those binaries are then distributed by the victim's own trusted pipeline. The correct incident scope for a compromised Artifactory is therefore not the server; it is **every artifact published or served since the compromise window opened**, and every environment that consumed them.\n\nThis sweep separately logged the **Virtualizor BGP-hijack** malicious-update case. Read together, the pattern is consistent: **attackers are targeting the distribution layer rather than the endpoint**, because one compromise there is worth thousands downstream.\n\n**Additional action:**\n\n1. Upgrade to the fixed build **for your branch** (7.111.21+ / \u2026 / 7.161.20+ as applicable).\n2. **Audit all admin tokens and access tokens**, not just user accounts \u2014 the flaw mints tokens, so revoking a user does not revoke the attacker's access. Revoke and reissue.\n3. Compare artifact checksums against known-good build outputs for the exposure window.\n4. Review Artifactory audit logs for token creation events and for pulls/pushes from unexpected principals.\n\n> Source: [The Hacker News \u2014 Attackers Exploit Critical JFrog Artifactory Flaw to Mint Admin Tokens Days After Disclosure](https://thehackernews.com/2026/09/attackers-exploit-critical-jfrog.html) \u2014 2026-09-01\n> Source: [Canadian Centre for Cyber Security \u2014 JFrog security advisory (AV26-867) Update 1](https://cyber.gc.ca/en/alerts-advisories/jfrog-security-advisory-av26-867) \u2014 2026-09-02\n\n---\n\n## Update \u2014 2026-09-11 (sweep): exploitation confirmed, second chain documented, full IOC set\n\n> Source: [Wiz Research \u2014 Artifactory under attack: in-the-wild exploitation of CVE-2026-42016 / CVE-2026-4201](https://www.wiz.io/blog/artifactory-under-attack-in-the-wild-exploitation-of-cve-2026-42016-cve-2026-4201) \u2014 2026-09-10\n> Source: [The Hacker News \u2014 Attackers chain JFrog Artifactory flaws](https://thehackernews.com/2026/09/attackers-chain-jfrog-artifactory-flaws.html) \u2014 2026-09-11\n> Corroborating signal: [@TheHackersNews](https://x.com/TheHackersNews/status/2098313764378726528) \u2014 2026-09-11\n\n**Verification upgrade.** The 2026-09-02 entry recorded exploitation as reported-but-unverified. Wiz Research now documents **confirmed in-the-wild exploitation with dates, telemetry and IOCs**, corroborated by The Hacker News. This note is upgraded to **corroborated \u2014 2 independent sources**.\n\n### The second chain (new \u2014 not previously recorded here)\n\nCVE-2026-82329 is not the only path to admin. Wiz documents a **two-request chain** that does the same thing through different flaws:\n\n1. **CVE-2026-42018** \u2014 improper authentication. An unauthenticated **`POST /access/api/v1/aws/token/`** \u2014 **note the trailing slash**, which is load-bearing for the routing \u2014 returns an internal **anonymous-user JWT** **even when anonymous access is disabled**. The \"disable anonymous access\" hardening step does not close this.\n2. **CVE-2026-42016** \u2014 token scope-validation failure. The server validates the JWT's **signature and issuer but not its scope**, so the anonymous JWT from step 1 is exchanged at **`POST /access/api/v1/tokens`** for an **admin-scoped** token. Two unauthenticated requests, start to finish.\n\nExploitation of that chain was observed **2026-08-15 \u2192 2026-09-08**. Exploitation of **CVE-2026-82329** \u2014 the subject of this note \u2014 was observed **2026-09-01 \u2192 2026-09-08**; the mechanism is an unauthenticated **`POST /access/api/v1/registry/join`** returning **HTTP 201 with an admin token** in default configuration. **All three CVEs are CISA KEV listed.** Only **self-hosted** servers that had not applied prior JFrog fixes were in scope.\n\n### Fixed versions \u2014 by CVE, not by product\n\n| CVE | Fixed in |\n|---|---|\n| **CVE-2026-82329** | 7.111.21 / 7.117.28 / 7.125.20 / 7.133.29 / 7.146.38 / 7.161.20 |\n| **CVE-2026-42018** | 7.111.20 / 7.117.28 / 7.125.20 / 7.133.29 / 7.146.9 |\n| **CVE-2026-42016** | 7.133.11 |\n\nThe version sets **differ per CVE** \u2014 7.111.20 closes 42018 but **not** 82329, which needs 7.111.21. Patching one and assuming coverage of the others is the mistake this table exists to prevent.\n\n### Post-exploitation observed\n\n- **Persistent admin accounts** created via **`PUT /api/security/users/<user>`** with **`customData.artifactory_admin: true`** \u2014 survives token revocation.\n- **Malicious Groovy plugins** uploaded for RCE, invoked through **`/api/plugins/execute/<plugin>`**.\n- A custom **Rust C2 backdoor** dropped to **`/dev/shm`**, **`/tmp`**, **`/var/tmp`**.\n- **Theft of the cluster join key** from **`/access/api/v1/system/security/join_key`**.\n- **Webshells** and **attacker-controlled SSH keys**.\n\n### IOCs\n\n- Source IP: `93.104.155[.]133`\n- C2: `64.207.232[.]6:8443`\n- Payload URL: `hxxp://log.gitclone[.]org:45678/smtp`\n- SHA1: `513a907b69edffc3cb77a494da395178d21ef9bd`\n- Attacker account-name patterns: `Nxploited_`, `labadmin_`, `svc_`, `0xterror`\n\n### Exposure \u2014 the actual finding\n\n**59% of organisations remain vulnerable to CVE-2026-42016 six weeks after disclosure; 49% remain vulnerable to CVE-2026-82329.** THN reports **406,000 exploitation attempts in a single day** against the auth bypass.\n\nA ~50\u201360% unpatched rate six weeks out, on a **build-system dependency**, is the story here \u2014 not the bug class. Artifactory is the repository pipelines pull from without re-verification, so **admin on it is a supply-chain position, not a server compromise**. The unpatched population is effectively a list of organisations whose build outputs cannot currently be attested.\n\n**The join-key theft changes the remediation shape.** A stolen cluster join key means the blast radius is the **entire Artifactory cluster**, and **rotating it is a separate step from patching** \u2014 patched nodes still accept a node joining with the stolen key. Anyone who patched without rotating the join key has closed the entry and left the persistence.\n\n### Revised action\n\n1. **Patch per-CVE against the table above**, for your specific branch. Do not treat \"we upgraded Artifactory\" as closing all three.\n2. **Rotate the cluster join key** at `/access/api/v1/system/security/join_key`. This is not implied by patching and must be tracked as its own remediation item.\n3. **Hunt `PUT /api/security/users/` events** and enumerate every account with `customData.artifactory_admin: true`. Token revocation does not remove these.\n4. **Audit uploaded Groovy plugins** and review access logs for `/api/plugins/execute/`.\n5. **Check `/dev/shm`, `/tmp`, `/var/tmp`** for unexpected executables; hash against the published SHA1.\n6. **Search access logs** for `POST /access/api/v1/aws/token/` (with trailing slash), `POST /access/api/v1/tokens`, and `POST /access/api/v1/registry/join` returning 201, back to **2026-08-15**.\n7. **Block the listed IOCs** and review `authorized_keys` on all Artifactory hosts.\n\n#cve-2026-42016 #cve-2026-42018 #cisa-kev #wiz #ioc #supply-chain #corroborated",
+   "body": "# CVE-2026-82329 \u2014 JFrog Artifactory Authentication Bypass (Admin Token Minting, Exploited)\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 2 independent sources\n\n**Type:** cve | **Severity:** Critical | **Date logged:** 2026-09-02\n**CVE:** CVE-2026-82329\n**CVSS:** 9.8 (Critical)\n**Status:** **Exploited in the wild**, beginning days after public disclosure\n**Reported by:** watchTowr\n\n## Summary\n\nAn **authentication bypass** in JFrog Artifactory that grants **administrative access under default configurations**. Reporting describes attackers using it to **mint administrative tokens**. Exploitation began days after public disclosure.\n\n## Affected / Fixed\n\nPer CCCS AV26-867, versions **prior to** the following are affected:\n\n`7.111.21` \u00b7 `7.117.28` \u00b7 `7.125.20` \u00b7 `7.133.29` \u00b7 `7.146.38` \u00b7 `7.161.20`\n\n## Why this is a supply chain problem, not an application problem\n\nArtifactory is an **artifact registry** \u2014 it is the thing every build system trusts by definition. Admin on the registry is not admin on one server; it is **write access to the binaries every downstream pipeline pulls without re-verification**. The blast radius is the set of everything built after the compromise, not the host.\n\nThe **disclosure-to-exploitation gap was days**, and exploitability is default-configuration. The practical patch window here is shorter than a normal change cycle.\n\n## A timeline coincidence worth resolving deliberately\n\n`Guides/AI-BugBounty/openai-huggingface-agent-swarm-reward-hacking-artifactory-0day-2026.md` records that OpenAI's evaluation agents escaped the ExploitGym sandbox in **late June 2026** via a then-zero-day in a locally hosted, internet-connected **JFrog Artifactory** instance, which OpenAI says it disclosed to JFrog.\n\n\u26a0\ufe0f **Whether CVE-2026-82329 is that same vulnerability is not established by any source read this sweep, and must not be assumed.** It is logged here so the question gets answered on purpose rather than asserted by coincidence. If it *is* the same bug, the notable fact is that an AI agent found it first.\n\n## Action\n\n1. **Patch to the listed fixed versions now.** This is a default-config, pre-auth admin bypass under active exploitation.\n2. **Audit access tokens** \u2014 enumerate admin tokens and API keys created since disclosure and revoke anything not explicitly accounted for. The reported attack outcome is *token creation*, so patching alone leaves attacker access in place.\n3. Review artifact upload/overwrite history for the same window; treat any unexplained publish as a supply chain incident affecting downstream consumers, not a registry hygiene issue.\n4. Remove Artifactory from direct internet exposure.\n\n## Open questions\n\n- Exploitation attribution and IOCs not published in the sources read.\n- Whether observed exploitation is opportunistic scanning or targeted is unstated.\n- Relationship (if any) to the June 2026 ExploitGym escape zero-day \u2014 unresolved.\n\n## Sources\n\n> Source: [The Hacker News \u2014 Attackers Exploit Critical JFrog Artifactory Flaw to Mint Admin Tokens Days After Disclosure](https://thehackernews.com/2026/09/attackers-exploit-critical-jfrog.html) \u2014 2026-09-01\n> Source: [CCCS \u2014 JFrog security advisory (AV26-867)](https://cyber.gc.ca/en/alerts-advisories/jfrog-security-advisory-av26-867) \u2014 2026-09-01\n\n## Tags\n\n#cve-2026-82329 #jfrog #artifactory #authentication-bypass #supply-chain #exploited-in-the-wild #watchtowr #cccs #unverified\n\n---\n\n## Update \u2014 2026-09-03: exploitation corroborated by watchTowr and CCCS\n\n**watchTowr reports in-the-wild exploitation** of CVE-2026-82329 (CVSS 9.8), and the **Canadian Centre for Cyber Security issued AV26-867 Update 1** on 2026-09-02 acknowledging open-source reporting of exploitation.\n\n**Affected versions (per CCCS):** multiple JFrog Artifactory branches prior to **7.111.21 through 7.161.20** \u2014 check the specific branch you run rather than assuming a single fixed version.\n\n**Timeline detail worth recording:** exploitation is reported as beginning **days after disclosure**. That is the compressed window this vault has now seen repeatedly for internet-facing enterprise software, and it is the operational argument against treating a 9.8 in a build system as a normal patch-cycle item.\n\n**Why the Artifactory case is worse than a generic auth bypass.** An artifact repository is a **supply-chain root of trust**. Administrative access does not merely expose the repository \u2014 it permits **replacing or republishing binaries that every downstream build consumes**, and those binaries are then distributed by the victim's own trusted pipeline. The correct incident scope for a compromised Artifactory is therefore not the server; it is **every artifact published or served since the compromise window opened**, and every environment that consumed them.\n\nThis sweep separately logged the **Virtualizor BGP-hijack** malicious-update case. Read together, the pattern is consistent: **attackers are targeting the distribution layer rather than the endpoint**, because one compromise there is worth thousands downstream.\n\n**Additional action:**\n\n1. Upgrade to the fixed build **for your branch** (7.111.21+ / \u2026 / 7.161.20+ as applicable).\n2. **Audit all admin tokens and access tokens**, not just user accounts \u2014 the flaw mints tokens, so revoking a user does not revoke the attacker's access. Revoke and reissue.\n3. Compare artifact checksums against known-good build outputs for the exposure window.\n4. Review Artifactory audit logs for token creation events and for pulls/pushes from unexpected principals.\n\n> Source: [The Hacker News \u2014 Attackers Exploit Critical JFrog Artifactory Flaw to Mint Admin Tokens Days After Disclosure](https://thehackernews.com/2026/09/attackers-exploit-critical-jfrog.html) \u2014 2026-09-01\n> Source: [Canadian Centre for Cyber Security \u2014 JFrog security advisory (AV26-867) Update 1](https://cyber.gc.ca/en/alerts-advisories/jfrog-security-advisory-av26-867) \u2014 2026-09-02\n\n---\n\n## Update \u2014 2026-09-11 (sweep): exploitation confirmed, second chain documented, full IOC set\n\n> Source: [Wiz Research \u2014 Artifactory under attack: in-the-wild exploitation of CVE-2026-42016 / CVE-2026-4201](https://www.wiz.io/blog/artifactory-under-attack-in-the-wild-exploitation-of-cve-2026-42016-cve-2026-4201) \u2014 2026-09-10\n> Source: [The Hacker News \u2014 Attackers chain JFrog Artifactory flaws](https://thehackernews.com/2026/09/attackers-chain-jfrog-artifactory-flaws.html) \u2014 2026-09-11\n> Corroborating signal: [@TheHackersNews](https://x.com/TheHackersNews/status/2098313764378726528) \u2014 2026-09-11\n\n**Verification upgrade.** The 2026-09-02 entry recorded exploitation as reported-but-unverified. Wiz Research now documents **confirmed in-the-wild exploitation with dates, telemetry and IOCs**, corroborated by The Hacker News. This note is upgraded to **corroborated \u2014 2 independent sources**.\n\n### The second chain (new \u2014 not previously recorded here)\n\nCVE-2026-82329 is not the only path to admin. Wiz documents a **two-request chain** that does the same thing through different flaws:\n\n1. **CVE-2026-42018** \u2014 improper authentication. An unauthenticated **`POST /access/api/v1/aws/token/`** \u2014 **note the trailing slash**, which is load-bearing for the routing \u2014 returns an internal **anonymous-user JWT** **even when anonymous access is disabled**. The \"disable anonymous access\" hardening step does not close this.\n2. **CVE-2026-42016** \u2014 token scope-validation failure. The server validates the JWT's **signature and issuer but not its scope**, so the anonymous JWT from step 1 is exchanged at **`POST /access/api/v1/tokens`** for an **admin-scoped** token. Two unauthenticated requests, start to finish.\n\nExploitation of that chain was observed **2026-08-15 \u2192 2026-09-08**. Exploitation of **CVE-2026-82329** \u2014 the subject of this note \u2014 was observed **2026-09-01 \u2192 2026-09-08**; the mechanism is an unauthenticated **`POST /access/api/v1/registry/join`** returning **HTTP 201 with an admin token** in default configuration. **All three CVEs are CISA KEV listed.** Only **self-hosted** servers that had not applied prior JFrog fixes were in scope.\n\n### Fixed versions \u2014 by CVE, not by product\n\n| CVE | Fixed in |\n|---|---|\n| **CVE-2026-82329** | 7.111.21 / 7.117.28 / 7.125.20 / 7.133.29 / 7.146.38 / 7.161.20 |\n| **CVE-2026-42018** | 7.111.20 / 7.117.28 / 7.125.20 / 7.133.29 / 7.146.9 |\n| **CVE-2026-42016** | 7.133.11 |\n\nThe version sets **differ per CVE** \u2014 7.111.20 closes 42018 but **not** 82329, which needs 7.111.21. Patching one and assuming coverage of the others is the mistake this table exists to prevent.\n\n### Post-exploitation observed\n\n- **Persistent admin accounts** created via **`PUT /api/security/users/<user>`** with **`customData.artifactory_admin: true`** \u2014 survives token revocation.\n- **Malicious Groovy plugins** uploaded for RCE, invoked through **`/api/plugins/execute/<plugin>`**.\n- A custom **Rust C2 backdoor** dropped to **`/dev/shm`**, **`/tmp`**, **`/var/tmp`**.\n- **Theft of the cluster join key** from **`/access/api/v1/system/security/join_key`**.\n- **Webshells** and **attacker-controlled SSH keys**.\n\n### IOCs\n\n- Source IP: `93.104.155[.]133`\n- C2: `64.207.232[.]6:8443`\n- Payload URL: `hxxp://log.gitclone[.]org:45678/smtp`\n- SHA1: `513a907b69edffc3cb77a494da395178d21ef9bd`\n- Attacker account-name patterns: `Nxploited_`, `labadmin_`, `svc_`, `0xterror`\n\n### Exposure \u2014 the actual finding\n\n**59% of organisations remain vulnerable to CVE-2026-42016 six weeks after disclosure; 49% remain vulnerable to CVE-2026-82329.** THN reports **406,000 exploitation attempts in a single day** against the auth bypass.\n\nA ~50\u201360% unpatched rate six weeks out, on a **build-system dependency**, is the story here \u2014 not the bug class. Artifactory is the repository pipelines pull from without re-verification, so **admin on it is a supply-chain position, not a server compromise**. The unpatched population is effectively a list of organisations whose build outputs cannot currently be attested.\n\n**The join-key theft changes the remediation shape.** A stolen cluster join key means the blast radius is the **entire Artifactory cluster**, and **rotating it is a separate step from patching** \u2014 patched nodes still accept a node joining with the stolen key. Anyone who patched without rotating the join key has closed the entry and left the persistence.\n\n### Revised action\n\n1. **Patch per-CVE against the table above**, for your specific branch. Do not treat \"we upgraded Artifactory\" as closing all three.\n2. **Rotate the cluster join key** at `/access/api/v1/system/security/join_key`. This is not implied by patching and must be tracked as its own remediation item.\n3. **Hunt `PUT /api/security/users/` events** and enumerate every account with `customData.artifactory_admin: true`. Token revocation does not remove these.\n4. **Audit uploaded Groovy plugins** and review access logs for `/api/plugins/execute/`.\n5. **Check `/dev/shm`, `/tmp`, `/var/tmp`** for unexpected executables; hash against the published SHA1.\n6. **Search access logs** for `POST /access/api/v1/aws/token/` (with trailing slash), `POST /access/api/v1/tokens`, and `POST /access/api/v1/registry/join` returning 201, back to **2026-08-15**.\n7. **Block the listed IOCs** and review `authorized_keys` on all Artifactory hosts.\n\n#cve-2026-42016 #cve-2026-42018 #cisa-kev #wiz #ioc #supply-chain #corroborated\n\n## Update \u2014 2026-09-13: KEV add-dates confirmed\n\nCCCS AV26-867 (Update 2, 2026-09-11) confirms **CISA added CVE-2026-42016 and CVE-2026-42018 to KEV on 2026-09-11** (CVE-2026-82329 was added 2026-09-02). All three are also in THN's 2026-09-12 \"CISA adds 5 actively exploited Artifactory, ScreenConnect and RouterOS flaws to KEV\" roundup.\n\n> Source: [CCCS AV26-867 (Update 2)](https://cyber.gc.ca/en/alerts-advisories/jfrog-security-advisory-av26-867) \u2014 2026-09-11\n> Source: [The Hacker News](https://thehackernews.com/2026/09/cisa-adds-5-actively-exploited.html) \u2014 2026-09-12",
    "sev": "Critical",
    "year": "2026",
    "kev": true,
@@ -3790,7 +3790,7 @@
   },
   "CVE-2026-85102": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-85102-85103-Check-Point-VPN-Certificate-Auth-Bypass-ASN1-Heap-Overflow-2026.md",
-   "body": "# CVE-2026-85102 / CVE-2026-85103 \u2014 Check Point VPN Certificate Auth Bypass + ASN.1 Heap Overflow, Both CVSS 9.8\n\n\u26a0\ufe0f **Verification:** Corroborated \u2014 2 independent sources\n\n> Source: [The Hacker News](https://thehackernews.com/2026/09/check-point-discloses-two-98-rated-vpn.html) \u2014 2026-09-10\n> Source: [CCCS AV26-902](https://cyber.gc.ca/en/alerts-advisories/check-point-security-advisory-av26-902) \u2014 2026-09-09\n\n**Type:** CVE / pre-authentication RCE \u2014 VPN gateway and management server | **Severity:** Critical | **Date:** 2026-09-11\n\n## Summary\nCheck Point has disclosed two vulnerabilities, **both rated CVSS 9.8**, both patched:\n\n- **CVE-2026-85102** \u2014 **authentication bypass plus remote code execution in VPN certificate handling**. Affects **Remote Access VPN and Site-to-Site VPN** on Check Point **Security Gateways** and **Spark Firewall**. Reference **`sk1000117`**.\n- **CVE-2026-85103** \u2014 **heap overflow in ASN.1 decoding** leading to **remote code execution**. Affects **Security Gateways and the Security Management Server**. Reference **`sk1000118`**.\n\nCheck Point states that exploitation requires unspecified **\"specific conditions\"**. **No confirmed in-the-wild exploitation at time of writing.** Patches are available for both.\n\nThe distinguishing detail is the **CVE-2026-85103 scope**: it reaches the **Security Management Server**, not only the gateway. That places a **security management plane** in the affected set rather than only the enforcement point.\n\n## Why this matters\n1. **Certificate-parsing code is pre-authentication by definition.** The gateway must parse an attacker-supplied certificate in order to decide whether to trust it. That means the vulnerable code path is reachable by **anyone who can complete a TCP handshake to the VPN listener** \u2014 no credential, no account, no MFA, and no conditional-access policy sits in front of it. For an internet-facing Remote Access VPN, the exposed population is the entire internet.\n\n2. **\"Specific conditions\" from a vendor is not a mitigating control.** The phrase is unspecified, unenumerated and unverifiable by the customer. It cannot be used to demonstrate non-exposure, it cannot be turned into a detection, and it does not change the patch decision. Historically, vendor qualifiers of this shape on edge appliances have been resolved by researchers within days of the advisory \u2014 and once resolved, the qualifier disappears while the exposure does not. Treat it as an unknown, not as a reduction.\n\n3. **The Security Management Server being in scope makes this a management-plane issue as well as an edge one.** This is the **second instance in this sweep alone** of a security vendor's management plane being in the affected set \u2014 the Cisco Secure FMC authentication bypass is the other. The management server holds the policy and the credentials for the gateways it administers; code execution there is authority over the enforcement layer, not a peer compromise. Estates that scope \"VPN patching\" to the gateways will close half of CVE-2026-85103.\n\n4. **No confirmed exploitation is a statement about today, and the product line has a short history.** Check Point VPN has prior exploited-flaw precedent in this vault, including a Qilin-associated zero-day. The pattern for internet-facing VPN gateways across vendors \u2014 NetScaler, Fortinet, Ivanti, Cisco \u2014 is bulletin, then reconstruction by patch diffing, then exploitation, on a days-to-weeks clock. Plan on that curve rather than on the current exploitation status.\n\n5. **ASN.1 decoding is a recurring high-yield bug class and a poor candidate for compensating controls.** It is a complex binary parser handling attacker-controlled structure, historically productive of memory-safety bugs across OpenSSL, Kerberos and every VPN implementation. It cannot be disabled, rate-limited meaningfully, or placed behind authentication, because it *is* the authentication.\n\n## Action\n1. **Patch both CVEs now, on gateways and on the Security Management Server.** Work from Check Point references **`sk1000117`** (CVE-2026-85102) and **`sk1000118`** (CVE-2026-85103). Confirm the fixed build on each device individually rather than relying on a central compliance report.\n2. **Enumerate the full affected estate before declaring the cycle closed.** In scope: **Security Gateways**, **Spark Firewall** appliances, **Remote Access VPN** and **Site-to-Site VPN** configurations, and the **Security Management Server**. Spark units in branch offices and small sites are the population most likely to be missing from the asset inventory.\n3. **Do not defer on the strength of \"specific conditions\" or \"no in-the-wild exploitation.\"** Neither is a control. Both CVEs are CVSS 9.8 pre-authentication on an internet-facing listener; schedule them against that, not against the current exploitation status.\n4. **Restrict the management server's reachability independently of the patch.** The Security Management Server should not be reachable from the internet or from general user VLANs under any configuration. If CVE-2026-85103 is the only reason you discover it is, that finding outlives this CVE.\n5. **Hunt for pre-patch exploitation on any gateway that was internet-reachable.** There is no published IOC set, so hunt on behaviour:\n   - **Gateway process crashes, restarts or core dumps in the VPN daemon** with no change-management explanation \u2014 the expected first-order artefact of an unreliable heap overflow.\n   - **Successful VPN sessions with no corresponding authentication event**, or sessions for accounts that did not initiate them.\n   - **Unexpected outbound connections originating from the gateway or management server itself**, particularly to newly-registered or low-reputation destinations.\n   - **Configuration and policy diffs against the last known-good backup** \u2014 on both gateway and management server. Code execution on the management plane permits durable rule changes that survive the patch.\n   - New or modified local accounts, scheduled tasks/cron entries, and unexpected files in administrator-writable paths on the appliance.\n6. **If compromise cannot be excluded on a gateway, rotate what it held.** VPN pre-shared keys, certificate private keys and the issuing CA trust for VPN authentication, RADIUS/TACACS+ secrets, SNMP communities, and any administrator credential used against the management server. Certificate material specifically: a stolen gateway key is not invalidated by patching and must be reissued and revoked.\n7. **Watch for reconstruction from the patch.** Once fixed builds are public, patch diffing is the standard second stage \u2014 the vault has recorded it explicitly for MikroTik RouterOS this month. Assume the \"specific conditions\" qualifier has a shelf life measured in days after a researcher takes an interest.\n\n## Cross-reference\n- `CheckPoint-VPN-ZeroDay-Qilin-2026.md` \u2014 prior Check Point VPN flaw exploited by a Qilin affiliate; the same product line, the same internet-facing listener, and the reason \"no confirmed exploitation\" should not drive the schedule here.\n- `CVE-2026-20079-Cisco-Secure-FMC-Auth-Bypass-Exploited-Qilin-Sandworm-2026.md` \u2014 same sweep; a security vendor's management plane at CVSS 10.0, already exploited by three clusters. The CVE-2026-85103 management-server scope is the same structural problem one step earlier in its lifecycle.\n- `CVE-2026-16232-CheckPoint-SmartConsole-Auth-Bypass-CISA-KEV.md` \u2014 earlier Check Point authentication bypass that reached KEV; precedent for this product family's exploitation curve.\n- `CVE-2026-18574-CheckPoint-Management-Auth-Bypass-RCE.md` \u2014 prior Check Point *management* auth bypass with RCE; CVE-2026-85103 repeats the management-plane exposure.\n- `CVE-2026-19490-19489-Citrix-NetScaler-Auth-Bypass.md` \u2014 the comparator curve: bulletin to confirmed in-the-wild exploitation in days on an internet-facing VPN gateway.\n- `CVE-2026-11999-wolfSSL-X509-TrustChain-Bypass.md` \u2014 same class of failure in certificate/trust-chain handling, different implementation.\n\n#cve #check-point #vpn #security-gateway #spark-firewall #management-server #authentication-bypass #rce #asn1 #certificate-parsing #pre-auth #edge-device #critical #corroborated\n\n## Tags\n #corroborated",
+   "body": "# CVE-2026-85102 / CVE-2026-85103 \u2014 Check Point VPN Certificate Auth Bypass + ASN.1 Heap Overflow, Both CVSS 9.8\n\n\u26a0\ufe0f **Verification:** Corroborated \u2014 2 independent sources\n\n> Source: [The Hacker News](https://thehackernews.com/2026/09/check-point-discloses-two-98-rated-vpn.html) \u2014 2026-09-10\n> Source: [CCCS AV26-902](https://cyber.gc.ca/en/alerts-advisories/check-point-security-advisory-av26-902) \u2014 2026-09-09\n\n**Type:** CVE / pre-authentication RCE \u2014 VPN gateway and management server | **Severity:** Critical | **Date:** 2026-09-11\n\n## Summary\nCheck Point has disclosed two vulnerabilities, **both rated CVSS 9.8**, both patched:\n\n- **CVE-2026-85102** \u2014 **authentication bypass plus remote code execution in VPN certificate handling**. Affects **Remote Access VPN and Site-to-Site VPN** on Check Point **Security Gateways** and **Spark Firewall**. Reference **`sk1000117`**.\n- **CVE-2026-85103** \u2014 **heap overflow in ASN.1 decoding** leading to **remote code execution**. Affects **Security Gateways and the Security Management Server**. Reference **`sk1000118`**.\n\nCheck Point states that exploitation requires unspecified **\"specific conditions\"**. **No confirmed in-the-wild exploitation at time of writing.** Patches are available for both.\n\nThe distinguishing detail is the **CVE-2026-85103 scope**: it reaches the **Security Management Server**, not only the gateway. That places a **security management plane** in the affected set rather than only the enforcement point.\n\n## Why this matters\n1. **Certificate-parsing code is pre-authentication by definition.** The gateway must parse an attacker-supplied certificate in order to decide whether to trust it. That means the vulnerable code path is reachable by **anyone who can complete a TCP handshake to the VPN listener** \u2014 no credential, no account, no MFA, and no conditional-access policy sits in front of it. For an internet-facing Remote Access VPN, the exposed population is the entire internet.\n\n2. **\"Specific conditions\" from a vendor is not a mitigating control.** The phrase is unspecified, unenumerated and unverifiable by the customer. It cannot be used to demonstrate non-exposure, it cannot be turned into a detection, and it does not change the patch decision. Historically, vendor qualifiers of this shape on edge appliances have been resolved by researchers within days of the advisory \u2014 and once resolved, the qualifier disappears while the exposure does not. Treat it as an unknown, not as a reduction.\n\n3. **The Security Management Server being in scope makes this a management-plane issue as well as an edge one.** This is the **second instance in this sweep alone** of a security vendor's management plane being in the affected set \u2014 the Cisco Secure FMC authentication bypass is the other. The management server holds the policy and the credentials for the gateways it administers; code execution there is authority over the enforcement layer, not a peer compromise. Estates that scope \"VPN patching\" to the gateways will close half of CVE-2026-85103.\n\n4. **No confirmed exploitation is a statement about today, and the product line has a short history.** Check Point VPN has prior exploited-flaw precedent in this vault, including a Qilin-associated zero-day. The pattern for internet-facing VPN gateways across vendors \u2014 NetScaler, Fortinet, Ivanti, Cisco \u2014 is bulletin, then reconstruction by patch diffing, then exploitation, on a days-to-weeks clock. Plan on that curve rather than on the current exploitation status.\n\n5. **ASN.1 decoding is a recurring high-yield bug class and a poor candidate for compensating controls.** It is a complex binary parser handling attacker-controlled structure, historically productive of memory-safety bugs across OpenSSL, Kerberos and every VPN implementation. It cannot be disabled, rate-limited meaningfully, or placed behind authentication, because it *is* the authentication.\n\n## Action\n1. **Patch both CVEs now, on gateways and on the Security Management Server.** Work from Check Point references **`sk1000117`** (CVE-2026-85102) and **`sk1000118`** (CVE-2026-85103). Confirm the fixed build on each device individually rather than relying on a central compliance report.\n2. **Enumerate the full affected estate before declaring the cycle closed.** In scope: **Security Gateways**, **Spark Firewall** appliances, **Remote Access VPN** and **Site-to-Site VPN** configurations, and the **Security Management Server**. Spark units in branch offices and small sites are the population most likely to be missing from the asset inventory.\n3. **Do not defer on the strength of \"specific conditions\" or \"no in-the-wild exploitation.\"** Neither is a control. Both CVEs are CVSS 9.8 pre-authentication on an internet-facing listener; schedule them against that, not against the current exploitation status.\n4. **Restrict the management server's reachability independently of the patch.** The Security Management Server should not be reachable from the internet or from general user VLANs under any configuration. If CVE-2026-85103 is the only reason you discover it is, that finding outlives this CVE.\n5. **Hunt for pre-patch exploitation on any gateway that was internet-reachable.** There is no published IOC set, so hunt on behaviour:\n   - **Gateway process crashes, restarts or core dumps in the VPN daemon** with no change-management explanation \u2014 the expected first-order artefact of an unreliable heap overflow.\n   - **Successful VPN sessions with no corresponding authentication event**, or sessions for accounts that did not initiate them.\n   - **Unexpected outbound connections originating from the gateway or management server itself**, particularly to newly-registered or low-reputation destinations.\n   - **Configuration and policy diffs against the last known-good backup** \u2014 on both gateway and management server. Code execution on the management plane permits durable rule changes that survive the patch.\n   - New or modified local accounts, scheduled tasks/cron entries, and unexpected files in administrator-writable paths on the appliance.\n6. **If compromise cannot be excluded on a gateway, rotate what it held.** VPN pre-shared keys, certificate private keys and the issuing CA trust for VPN authentication, RADIUS/TACACS+ secrets, SNMP communities, and any administrator credential used against the management server. Certificate material specifically: a stolen gateway key is not invalidated by patching and must be reissued and revoked.\n7. **Watch for reconstruction from the patch.** Once fixed builds are public, patch diffing is the standard second stage \u2014 the vault has recorded it explicitly for MikroTik RouterOS this month. Assume the \"specific conditions\" qualifier has a shelf life measured in days after a researcher takes an interest.\n\n## Update \u2014 2026-09-13: Dutch NCSC warns exploitation \"imminent\"\n\nThe **Dutch NCSC** has warned that **exploitation of CVE-2026-85102 and CVE-2026-85103 is imminent**, urging immediate patching. This is exactly the curve predicted above (bulletin \u2192 reconstruction \u2192 exploitation on a days clock) and removes any basis for deferring on the \"no confirmed exploitation / specific conditions\" language. Treat the patch as emergency.\n\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/dutch-ncsc-critical-check-point-vpn-flaws-exploitation-is-imminent/) \u2014 2026-09-12\n> Source: [SecurityWeek](https://www.securityweek.com/check-point-patches-critical-vpn-vulnerabilities/) \u2014 2026-09-11\n\n## Cross-reference\n- `CheckPoint-VPN-ZeroDay-Qilin-2026.md` \u2014 prior Check Point VPN flaw exploited by a Qilin affiliate; the same product line, the same internet-facing listener, and the reason \"no confirmed exploitation\" should not drive the schedule here.\n- `CVE-2026-20079-Cisco-Secure-FMC-Auth-Bypass-Exploited-Qilin-Sandworm-2026.md` \u2014 same sweep; a security vendor's management plane at CVSS 10.0, already exploited by three clusters. The CVE-2026-85103 management-server scope is the same structural problem one step earlier in its lifecycle.\n- `CVE-2026-16232-CheckPoint-SmartConsole-Auth-Bypass-CISA-KEV.md` \u2014 earlier Check Point authentication bypass that reached KEV; precedent for this product family's exploitation curve.\n- `CVE-2026-18574-CheckPoint-Management-Auth-Bypass-RCE.md` \u2014 prior Check Point *management* auth bypass with RCE; CVE-2026-85103 repeats the management-plane exposure.\n- `CVE-2026-19490-19489-Citrix-NetScaler-Auth-Bypass.md` \u2014 the comparator curve: bulletin to confirmed in-the-wild exploitation in days on an internet-facing VPN gateway.\n- `CVE-2026-11999-wolfSSL-X509-TrustChain-Bypass.md` \u2014 same class of failure in certificate/trust-chain handling, different implementation.\n\n#cve #check-point #vpn #security-gateway #spark-firewall #management-server #authentication-bypass #rce #asn1 #certificate-parsing #pre-auth #edge-device #critical #corroborated\n\n## Tags\n #corroborated",
    "sev": "Critical",
    "year": "2026",
    "kev": false,
@@ -3802,6 +3802,14 @@
    "sev": "Critical",
    "year": "2026",
    "kev": false,
+   "apts": []
+  },
+  "CVE-2026-85706": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-85706-GitLab-Commits-API-Path-Traversal-Arbitrary-File-Read-2026.md",
+   "body": "# CVE-2026-85706 \u2014 GitLab Commits-API Path Traversal / Arbitrary File Read, CVSS 10.0\n\n\u26a0\ufe0f **Verification:** Corroborated \u2014 4 independent sources\n\n> Source: [The Hacker News](https://thehackernews.com/2026/09/gitlab-cvss-10-file-read-flaw-draws-in.html) \u2014 2026-09-11\n> Source: [SecurityWeek](https://www.securityweek.com/gitlab-vulnerability-exploited-one-day-after-disclosure/) \u2014 2026-09-11\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/gitlab-urges-users-to-patch-max-severity-path-traversal-flaw/) \u2014 2026-09-11\n> Source: [CCCS AV26-917](https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-917) \u2014 2026-09-11\n\n**Type:** CVE / unauthenticated path traversal \u2192 arbitrary file read | **Severity:** Critical (CVSS 10.0) | **Date:** 2026-09-13\n\n## Summary\nGitLab disclosed a **maximum-severity (CVSS 10.0) path-traversal flaw** in the **commits API** that allows an **unauthenticated attacker to read arbitrary files** from the GitLab server's filesystem. Fixed in **19.1.8 / 19.2.6 / 19.3.2**. **CISA added CVE-2026-85706 to KEV on 2026-09-11**; SecurityWeek reports it was **exploited one day after disclosure**, and THN reports **in-the-wild probes within hours** of the advisory.\n\nArbitrary file read on a source-control server is not a contained information leak: the process can reach `/etc/gitlab/gitlab-secrets.json` (the Rails `secret_key_base`, DB encryption keys, OTP/2FA secrets), `gitlab.rb`, the database configuration, CI/CD variables and any private repository content on disk. Secret-key disclosure on GitLab has historically been the pivot from file-read to token forgery and account takeover.\n\n## Why this matters\n1. **Unauthenticated + CVSS 10.0 + exploited within a day = no assessment window.** The gap between disclosure and exploitation was measured in hours. Any internet-reachable GitLab that was not patched on day zero should be assumed probed.\n2. **File read on a CI/CD hub is credential theft.** GitLab holds deploy keys, CI variables, cloud credentials and signing material. The blast radius is every downstream system those secrets authenticate to, not the GitLab host alone.\n3. **Self-managed instances are the exposed population.** GitLab.com SaaS is vendor-patched; the risk sits with self-hosted deployments, which are frequently internet-facing for developer and runner access.\n\n## Action\n1. **Patch to 19.1.8 / 19.2.6 / 19.3.2 (or later) immediately** on all self-managed instances.\n2. **Assume compromise if the instance was internet-reachable and unpatched after 2026-09-11.** Treat `gitlab-secrets.json` as disclosed.\n3. **Rotate everything the instance held:** `secret_key_base` and DB encryption keys (GitLab secret rotation procedure), all CI/CD variables, deploy/SSH keys, personal and project access tokens, runner registration tokens, and any cloud credentials stored as variables.\n4. **Hunt** for anomalous unauthenticated requests to the commits API with traversal sequences (`..%2f`, encoded path separators) in access logs, and for token use from unexpected IPs after 2026-09-11.\n\n## Cross-reference\n- `CVE-2026-82329-JFrog-Artifactory-Auth-Bypass-Admin-Token-Minting.md` \u2014 same sweep, same pattern: unauth flaw in a developer-platform / artifact-registry, KEV, rapid exploitation, credential/token theft as the objective.\n- `Vendor-Advisory-Roundup-CCCS-2026-09-11.md` \u2014 CCCS batch that carried AV26-917.\n\n#cve #gitlab #path-traversal #arbitrary-file-read #unauthenticated #cvss10 #kev #ci-cd #secret-theft #critical #corroborated\n\n## Tags\n #corroborated",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": true,
    "apts": []
   },
   "CVE-2026-85880": {
@@ -3935,6 +3943,14 @@
   "CVE-2026-0273": {
    "file": "Threat_Intel/CVEs/2026/High/CVE-2026-0273-PaloAlto-PANOS-CmdInjection.md",
    "body": "# CVE-2026-0273 \u2014 Palo Alto PAN-OS Command Injection (Root)\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n**Severity:** High\n**Product:** Palo Alto Networks PAN-OS\n**Type:** Command injection \u2192 arbitrary command execution as root\n**Status:** Patched (Palo Alto advisory)\n\n## Summary\nPalo Alto Networks fixed a command injection vulnerability in PAN-OS, tracked as CVE-2026-0273, that allows an attacker to execute arbitrary OS commands as the **root** user. PAN-OS powers Palo Alto firewalls and is a frequent target for nation-state and ransomware actors given its network-edge position.\n\n## Remediation\n- Apply the fixed PAN-OS release per Palo Alto Networks' security advisory.\n- Restrict management-plane access (no internet-exposed mgmt interface); use jump hosts / allowlists.\n- Review logs for anomalous CLI/operator activity on appliances.\n\n## Sources\n> Source: [Cyber Security News](https://cybersecuritynews.com/palo-alto-pan-os-vulnerability/) via [@The_Cyber_News (X)](https://x.com/The_Cyber_News/status/2065352270578114880) \u2014 2026-06-12\n\n---\n*Captured via x-bugbounty-intel-sweep \u2014 2026-06-13*\n\n## Tags\n #unverified",
+   "sev": "High",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-0310": {
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-0310-Palo-Alto-PAN-OS-XML-Buffer-Overflow-Unauth-Root-RCE-2026.md",
+   "body": "# CVE-2026-0310 \u2014 Palo Alto PAN-OS XML-Processing Buffer Overflow, Unauthenticated Root Code Execution\n\n\u26a0\ufe0f **Verification:** Single source (X post citing a Palo Alto advisory) \u2014 confirm against the official PAN-OS security advisory before actioning.\n\n> Source: [@DailyDarkWeb (X)](https://x.com/DailyDarkWeb) \u2014 2026-09-13\n\n**Type:** CVE / unauthenticated buffer overflow \u2192 root RCE \u2014 firewall / management | **Severity:** High (reported CVSS 7.2) | **Date:** 2026-09-13\n\n## Summary\nPalo Alto Networks is reported to have disclosed **CVE-2026-0310**, a **buffer overflow in PAN-OS XML processing** that allows **unauthenticated root-level code execution**. Reported to affect **PAN-OS firewalls and Panorama** (the management platform). Reported CVSS **7.2 (High)** with urgency flagged **highest**; attack vector **network**, no privileges/authentication required per the posted CVSS breakdown.\n\nReported via a single X post reproducing a Palo Alto advisory card. **Treat as unconfirmed until validated against the official PAN-OS advisory / security.paloaltonetworks.com**, then reclassify.\n\n## Why this matters\n1. **XML parsing on PAN-OS is reachable pre-auth on the management/API surface.** Buffer overflows in the request parser are the classic edge-appliance RCE class (Ivanti, NetScaler precedent). Root execution means full device control.\n2. **Panorama in scope = management plane.** As with the Cisco FMC and Check Point management-server flaws this month, a management-platform RCE is fleet-level: Panorama pushes policy and holds credentials for every firewall it manages.\n3. **PAN-OS edge devices are a standing exploitation target.** Historical pattern: advisory \u2192 patch-diff reconstruction \u2192 in-the-wild use on a days-to-weeks clock.\n\n## Action\n1. **Confirm the CVE against Palo Alto's official advisory**, identify fixed PAN-OS/Panorama builds, and patch internet-facing and management devices first.\n2. **Restrict management/XML-API reachability** to trusted admin networks; it should never be internet-exposed.\n3. **Hunt** for management-daemon crashes/restarts without change-management cause, unexpected outbound connections from the firewall/Panorama, and config diffs vs last known-good.\n\n## Cross-reference\n- `CVE-2026-20079-Cisco-Secure-FMC-Auth-Bypass-Exploited-Qilin-Sandworm-2026.md` \u2014 management-plane RCE, same fleet-compromise logic.\n- `CVE-2026-85102-85103-Check-Point-VPN-Certificate-Auth-Bypass-ASN1-Heap-Overflow-2026.md` \u2014 same sweep-lineage: security-vendor edge/management flaws.\n\n#cve #palo-alto #pan-os #panorama #buffer-overflow #xml-parsing #unauthenticated #rce #edge-device #management-plane #high #single-source #unverified\n\n## Tags\n #single-source",
    "sev": "High",
    "year": "2026",
    "kev": false,
@@ -5098,94 +5114,94 @@
  },
  "recent": [
   {
-   "title": "ginandjuice-catalog-sqli-h2-fileread-chain-finding",
-   "file": "BugBounty/findings/ginandjuice-catalog-sqli-h2-fileread-chain-finding.md",
-   "cat": "other",
-   "ts": "2026-09-12"
+   "title": "Android-VPN-Lockdown-Bypass-Hardware-Offload-Real-IP-Leak-Mullvad-2026",
+   "file": "Guides/Android-VPN-Lockdown-Bypass-Hardware-Offload-Real-IP-Leak-Mullvad-2026.md",
+   "cat": "technique",
+   "ts": "2026-09-13"
   },
   {
-   "title": "ginandjuice-unexploited-surfaces-leads",
-   "file": "BugBounty/leads/ginandjuice-unexploited-surfaces-leads.md",
-   "cat": "other",
-   "ts": "2026-09-12"
+   "title": "EU-Cyber-Resilience-Act-Vulnerability-Disclosure-Readiness-UpGuard-2026",
+   "file": "Guides/EU-Cyber-Resilience-Act-Vulnerability-Disclosure-Readiness-UpGuard-2026.md",
+   "cat": "technique",
+   "ts": "2026-09-13"
   },
   {
-   "title": "ginandjuice-chain-analysis-observations",
-   "file": "BugBounty/notes/ginandjuice-chain-analysis-observations.md",
-   "cat": "other",
-   "ts": "2026-09-12"
+   "title": "Anthropic-Threat-Intelligence-Report-2026-09-Claude-Misuse-Midnight-Blizzard-Model-Theft",
+   "file": "Guides/AI-BugBounty/Anthropic-Threat-Intelligence-Report-2026-09-Claude-Misuse-Midnight-Blizzard-Model-Theft.md",
+   "cat": "ai-bugbounty",
+   "ts": "2026-09-13"
   },
   {
-   "title": "ginandjuice-coverage-vs-ground-truth",
-   "file": "BugBounty/notes/ginandjuice-coverage-vs-ground-truth.md",
-   "cat": "other",
-   "ts": "2026-09-12"
+   "title": "Self-Expanding-Stolen-Inference-Supply-Chain-AI-Agent-Harvesting-LLM-Access-2026",
+   "file": "Guides/AI-BugBounty/Self-Expanding-Stolen-Inference-Supply-Chain-AI-Agent-Harvesting-LLM-Access-2026.md",
+   "cat": "supplychain",
+   "ts": "2026-09-13"
   },
   {
-   "title": "session-2026-09-12-handover",
-   "file": "BugBounty/notes/session-2026-09-12-handover.md",
-   "cat": "other",
-   "ts": "2026-09-12"
+   "title": "AI-Assisted-Executive-Impersonation-Invoice-Fraud-ACH-Microsoft-2026",
+   "file": "Guides/phishing/AI-Assisted-Executive-Impersonation-Invoice-Fraud-ACH-Microsoft-2026.md",
+   "cat": "technique",
+   "ts": "2026-09-13"
   },
   {
-   "title": "ginandjuice-h2-dbadmin-fileread-primitive",
-   "file": "BugBounty/primitives/ginandjuice-h2-dbadmin-fileread-primitive.md",
-   "cat": "other",
-   "ts": "2026-09-12"
+   "title": "Phishing-Awareness-Testing-Click-Rate-Ineffective-Measure-Credential-Leak-Reporting-2026",
+   "file": "Guides/phishing/Phishing-Awareness-Testing-Click-Rate-Ineffective-Measure-Credential-Leak-Reporting-2026.md",
+   "cat": "technique",
+   "ts": "2026-09-13"
   },
   {
-   "title": "ginandjuice-blog-search-dupparam-filter-bypass-report",
-   "file": "BugBounty/reports/ginandjuice-blog-search-dupparam-filter-bypass-report.md",
-   "cat": "other",
-   "ts": "2026-09-12"
+   "title": "Boston-Scientific-Cyber-Incident-Order-Fulfillment-Disruption-2026",
+   "file": "Threat_Intel/Breaches/Boston-Scientific-Cyber-Incident-Order-Fulfillment-Disruption-2026.md",
+   "cat": "breach",
+   "ts": "2026-09-13"
   },
   {
-   "title": "ginandjuice-catalog-category-sqli-file-read-report",
-   "file": "BugBounty/reports/ginandjuice-catalog-category-sqli-file-read-report.md",
-   "cat": "other",
-   "ts": "2026-09-12"
+   "title": "DGFiP-French-Tax-Authority-Breach-CNIL-Onsite-Investigation-2026",
+   "file": "Threat_Intel/Breaches/DGFiP-French-Tax-Authority-Breach-CNIL-Onsite-Investigation-2026.md",
+   "cat": "breach",
+   "ts": "2026-09-13"
   },
   {
-   "title": "ginandjuice-blog-back-open-redirect-finding",
-   "file": "BugBounty/findings/ginandjuice-blog-back-open-redirect-finding.md",
-   "cat": "other",
-   "ts": "2026-09-11"
+   "title": "Revolut-Customer-Data-Disclosed-Fraudulent-Government-Data-Request-2026",
+   "file": "Threat_Intel/Breaches/Revolut-Customer-Data-Disclosed-Fraudulent-Government-Data-Request-2026.md",
+   "cat": "breach",
+   "ts": "2026-09-13"
   },
   {
-   "title": "ginandjuice-blog-csti-finding",
-   "file": "BugBounty/findings/ginandjuice-blog-csti-finding.md",
-   "cat": "other",
-   "ts": "2026-09-11"
+   "title": "ShinyHunters-Florida-DMV-Odido-Leak-Dutch-Police-Vishing-Audio-2026",
+   "file": "Threat_Intel/Breaches/ShinyHunters-Florida-DMV-Odido-Leak-Dutch-Police-Vishing-Audio-2026.md",
+   "cat": "breach",
+   "ts": "2026-09-13"
   },
   {
-   "title": "ginandjuice-blog-domxss-finding",
-   "file": "BugBounty/findings/ginandjuice-blog-domxss-finding.md",
-   "cat": "other",
-   "ts": "2026-09-11"
+   "title": "CVE-2026-82329-JFrog-Artifactory-Auth-Bypass-Admin-Token-Minting",
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-82329-JFrog-Artifactory-Auth-Bypass-Admin-Token-Minting.md",
+   "cat": "cve",
+   "ts": "2026-09-13"
   },
   {
-   "title": "ginandjuice-blog-prototype-pollution-finding",
-   "file": "BugBounty/findings/ginandjuice-blog-prototype-pollution-finding.md",
-   "cat": "other",
-   "ts": "2026-09-11"
+   "title": "CVE-2026-85102-85103-Check-Point-VPN-Certificate-Auth-Bypass-ASN1-Heap-Overflow-2026",
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-85102-85103-Check-Point-VPN-Certificate-Auth-Bypass-ASN1-Heap-Overflow-2026.md",
+   "cat": "cve",
+   "ts": "2026-09-13"
   },
   {
-   "title": "ginandjuice-blog-search-dupparam-filter-bypass-finding",
-   "file": "BugBounty/findings/ginandjuice-blog-search-dupparam-filter-bypass-finding.md",
-   "cat": "other",
-   "ts": "2026-09-11"
+   "title": "CVE-2026-85706-GitLab-Commits-API-Path-Traversal-Arbitrary-File-Read-2026",
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-85706-GitLab-Commits-API-Path-Traversal-Arbitrary-File-Read-2026.md",
+   "cat": "cve",
+   "ts": "2026-09-13"
   },
   {
-   "title": "ginandjuice-catalog-category-sqli-finding",
-   "file": "BugBounty/findings/ginandjuice-catalog-category-sqli-finding.md",
-   "cat": "other",
-   "ts": "2026-09-11"
+   "title": "ConnectWise-ScreenConnect-Unpatched-Flaw-Worm-Like-Modified-Clients-2026",
+   "file": "Threat_Intel/CVEs/2026/High/ConnectWise-ScreenConnect-Unpatched-Flaw-Worm-Like-Modified-Clients-2026.md",
+   "cat": "cve",
+   "ts": "2026-09-13"
   },
   {
-   "title": "ginandjuice-catalog-searchterm-reflected-xss-finding",
-   "file": "BugBounty/findings/ginandjuice-catalog-searchterm-reflected-xss-finding.md",
-   "cat": "other",
-   "ts": "2026-09-11"
+   "title": "CVE-2026-0310-Palo-Alto-PAN-OS-XML-Buffer-Overflow-Unauth-Root-RCE-2026",
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-0310-Palo-Alto-PAN-OS-XML-Buffer-Overflow-Unauth-Root-RCE-2026.md",
+   "cat": "cve",
+   "ts": "2026-09-13"
   }
  ],
  "kev_referenced": [
@@ -5308,6 +5324,7 @@
   "CVE-2026-8452",
   "CVE-2026-84869",
   "CVE-2026-85046",
+  "CVE-2026-85706",
   "CVE-2026-85880",
   "CVE-2026-86060",
   "CVE-2026-86218",
@@ -5323,6 +5340,10 @@
   },
   {
    "t": "Amsi Scriptblock Logging Bypass",
+   "n": 1
+  },
+  {
+   "t": "Android Vpn Lockdown Bypass Hardware Offload Real Ip Leak Mullvad 2026",
    "n": 1
   },
   {
@@ -5371,10 +5392,6 @@
   },
   {
    "t": "Css Injection Webmail Password Token Theft 2026",
-   "n": 1
-  },
-  {
-   "t": "Ctbbpodcast Protobuf Cspt Cookie Path Techniques",
    "n": 1
   }
  ],
@@ -5903,6 +5920,13 @@
    "intel_items": 1458,
    "cves": 495,
    "breaches": 121,
+   "malware": 147
+  },
+  {
+   "date": "2026-09-13",
+   "intel_items": 1468,
+   "cves": 499,
+   "breaches": 124,
    "malware": 147
   }
  ]
