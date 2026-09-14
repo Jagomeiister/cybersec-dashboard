@@ -1,80 +1,80 @@
 {
- "generated": "2026-09-13 20:45",
- "today": "2026-09-13",
+ "generated": "2026-09-14 20:45",
+ "today": "2026-09-14",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
-  "cves": 499,
-  "breaches": 124,
+  "cves": 501,
+  "breaches": 125,
   "malware": 147,
   "supplychain": 61,
   "tools": 89,
   "commands": 12,
-  "guides": 259,
-  "intel_items": 1468,
+  "guides": 260,
+  "intel_items": 1472,
   "kev": 126
  },
  "windows": {
   "week": {
-   "total": 155,
+   "total": 145,
    "by_cat": {
-    "cve": 44,
-    "other": 11,
-    "breach": 19,
-    "tool": 6,
-    "malware": 19,
-    "command": 2,
-    "ai-bugbounty": 21,
+    "cve": 41,
+    "malware": 16,
+    "breach": 17,
+    "other": 9,
+    "ai-bugbounty": 22,
     "misc": 6,
     "technique": 23,
-    "supplychain": 4
+    "supplychain": 4,
+    "command": 1,
+    "tool": 6
    },
    "by_src": {}
   },
   "month": {
-   "total": 584,
+   "total": 582,
    "by_cat": {
-    "cve": 153,
-    "breach": 80,
-    "tool": 13,
+    "tool": 14,
+    "cve": 152,
+    "breach": 77,
     "malware": 75,
     "other": 59,
     "technique": 49,
     "misc": 80,
-    "ai-bugbounty": 50,
+    "ai-bugbounty": 51,
     "supplychain": 23,
     "command": 2
    },
    "by_src": {}
   },
   "year": {
-   "total": 1468,
+   "total": 1472,
    "by_cat": {
-    "ai-bugbounty": 107,
+    "ai-bugbounty": 108,
     "malware": 179,
     "other": 106,
-    "tool": 56,
+    "tool": 57,
     "misc": 296,
     "command": 6,
     "technique": 130,
-    "cve": 350,
-    "breach": 154,
+    "cve": 351,
+    "breach": 155,
     "supplychain": 84
    },
    "by_src": {}
   },
   "all": {
-   "total": 1468,
+   "total": 1472,
    "by_cat": {
-    "ai-bugbounty": 107,
+    "ai-bugbounty": 108,
     "malware": 179,
     "other": 106,
-    "tool": 56,
+    "tool": 57,
     "misc": 296,
     "command": 6,
     "technique": 130,
-    "cve": 350,
-    "breach": 154,
+    "cve": 351,
+    "breach": 155,
     "supplychain": 84
    },
    "by_src": {}
@@ -1858,7 +1858,7 @@
  },
  "cve_sev": {
   "Critical": 218,
-  "High": 151,
+  "High": 153,
   "Medium": 21,
   "Low": 13
  },
@@ -1874,7 +1874,7 @@
   "2023": 13,
   "2024": 13,
   "2025": 20,
-  "2026": 411
+  "2026": 413
  },
  "cve_month": {
   "2025-10": 1,
@@ -1883,7 +1883,7 @@
   "2026-06": 108,
   "2026-07": 16,
   "2026-08": 84,
-  "2026-09": 94
+  "2026-09": 95
  },
  "top_cve": [
   {
@@ -4284,6 +4284,14 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-56711": {
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-56711-73324-VLC-Integer-Overflow-Heap-Write-RTSP-Memory-Disclosure-2026.md",
+   "body": "# CVE-2026-56711 / CVE-2026-73324 \u2014 VLC Media Player Integer-Overflow Heap Write and RTSP Heap Memory Disclosure (No Patch Available)\n\n\u26a0\ufe0f **Verification:** Corroborated \u2014 3 independent sources (vendor advisory absent)\n\n> Source: [Cyber Security News](https://cybersecuritynews.com/multiple-vlc-media-player-vulnerabilities/) \u2014 2026-09-12\n> Source: [VulnCheck advisory \u2014 heap OOB write](https://www.vulncheck.com/advisories/vlc-media-player-3.0.0-through-3.0.23-heap-out-of-bounds-write-via-integer-overflow-in-picture-allocation) \u2014 2026-09\n> Source: [VulnCheck advisory \u2014 heap OOB read](https://www.vulncheck.com/advisories/vlc-media-player-3.0.0-through-3.0.23-heap-out-of-bounds-read-via-unterminated-realrtsp-response-line) \u2014 2026-09\n> Corroborating signal: [@The_Cyber_News](https://x.com/The_Cyber_News/status/2098783711487750449) \u2014 2026-09-12\n> Checked and found absent: [VideoLAN security bulletins](https://images.videolan.org/security/) \u2014 latest bulletin is VideoLAN-SB-VLC-322 (VLC 3.0.22, 2025). **No bulletin covers either CVE.**\n\n**Type:** CVE / memory corruption + information disclosure \u2014 desktop media client | **Severity:** High | **Date:** 2026-09-13\n\n## Summary\n\nTwo memory-safety flaws in **VLC Media Player 3.0.0 through 3.0.23**, disclosed **2026-09-09** and credited to **Fabian Wahle of Hap Security**. Both require the victim to open attacker-controlled content \u2014 a media file, an image, or a playlist entry.\n\n**CVE-2026-56711 \u2014 heap out-of-bounds write via integer overflow. CVSS 8.6 (High).** CWE-190 + CWE-787. In `AllocatePicture` (`src/misc/picture.c`), the buffer size is derived from `i_pitch * i_lines`. Both are signed `int` in `include/vlc_picture.h`, so the **32-bit multiply wraps** and VLC under-allocates. The existing guards do not catch it: one validation routine performs its division in 64-bit arithmetic **without constraining the preceding 32-bit multiply**, and a second check evaluates the **already-wrapped** result. Practical vector is a **crafted PNG with oversized width and height in the IHDR header** \u2014 VLC's image demuxer validates the input file size but not the *declared* image dimensions, so the PNG decoder writes scanlines past the undersized heap buffer. Outcome ranges from crash to potential arbitrary code execution.\n\n**CVE-2026-73324 \u2014 heap out-of-bounds read / memory disclosure. CVSS 6.9 (Medium).** CWE-125 + CWE-170. In the RTSP access module, `RtspReadLine` (`modules/access/rtsp/access.c`) uses `strncpy` into a fixed-size buffer; a server-controlled line of **\u2265 4096 bytes leaves the buffer unterminated**. That buffer is later passed to `strdup` in `modules/access/rtsp/rtsp.c`, which reads past the allocation. The vulnerable input is the **RTSP `Session` header** \u2014 VLC stores it as a session identifier and **sends it back to the server in subsequent requests**, giving a hostile RTSP server a *direct read channel* into adjacent client heap memory. Triggered by a malicious playlist containing a `realrtsp` URL. The RTSP module is optional at build time (distro packages vary) but **is enabled in official VideoLAN builds**.\n\n**Patch status: none.** VideoLAN has published no security bulletin for either CVE, and no fixed version exists as of 2026-09-13. Secondary outlets asserting \"fixed in 3.0.24\" are inferring; that is not a VideoLAN statement. **No in-the-wild exploitation and no public PoC reported** \u2014 treat as *no known exploitation*, not *confirmed none*.\n\n**Score discrepancy:** strix.ai lists CVE-2026-56711 at CVSS 8.8 against 8.6 in the primary reporting. Use **8.6**; note the conflict where precision matters.\n\n## Why this matters\n\n1. **An unpatched 8.6 in one of the most widely deployed desktop applications on earth is a long-tail exposure, not a patch-cycle item.** VLC ships in default installs on most Linux distributions, is the standard media client across large enterprise fleets, and is routinely installed by users outside any software-approval process. With no vendor fix, the only lever available is content control \u2014 and content control on a media player is precisely the control most organisations do not have.\n\n2. **The PNG vector makes this reachable without a \"video file.\"** Users trained not to open unexpected `.mkv` or `.avi` attachments have no instinct about a PNG, and VLC is frequently registered as a handler for image and playlist types it is not primarily associated with. File-type-based user guidance will not cover the actual attack surface here.\n\n3. **CVE-2026-73324 is an *outbound* read channel, which inverts the usual media-player threat model.** The assumption behind \"don't open untrusted files\" is that the risk is in the file. Here the risk is in the *stream*: a hostile RTSP server, reached through nothing more than a playlist URL, reads adjacent heap memory from the client and receives it back over the wire because VLC echoes the `Session` header. That is a remote-server-to-client exfiltration primitive triggered by clicking a link.\n\n4. **The root cause of CVE-2026-56711 is a validation routine that was written to catch exactly this bug and does not.** The 64-bit division check reads as a deliberate overflow guard; it fails because it operates on a value that has already wrapped. This is the recurring pattern in integer-overflow findings \u2014 the check exists, is in the right place, and inspects the wrong side of the arithmetic. Treat \"there is a bounds check here\" as insufficient evidence during code review.\n\n5. **No vendor advisory means no downstream signal.** Distribution maintainers, SBOM tooling, and vulnerability scanners key off vendor bulletins. With VideoLAN silent, this will under-report in asset-management tooling and may not appear in scan results at all, while the CVEs are public and the mechanism is fully described.\n\n## Action\n\n1. **Inventory VLC across the estate and record the version.** Anything at **3.0.0\u20133.0.23** is in scope. Do not wait for a scanner to flag it \u2014 with no VideoLAN bulletin, scanner coverage is unreliable. Query software inventory directly for the VLC product name, including user-installed and portable copies.\n2. **Apply content-level mitigation now, since no patch exists.** Advise against opening PNGs, playlists, and RTSP streams from untrusted sources; in high-risk environments, restrict VLC to known-good media locations.\n3. **Block untrusted RTSP egress.** CVE-2026-73324 requires the client to reach an attacker-controlled RTSP server. Egress filtering on RTSP (TCP/UDP 554, and the `realrtsp` scheme) removes the exploitation precondition entirely for the disclosure bug \u2014 this is the single highest-leverage control available while no fix exists.\n4. **Strip or quarantine `.m3u`, `.m3u8`, `.xspf`, `.pls` and `.asx` playlist files at the mail gateway.** Playlist files are the delivery mechanism for the RTSP vector and are rarely legitimate as inbound email attachments. They are also small, text-based, and pass most content inspection unremarked.\n5. **Hunt for the exploitation shape rather than a signature.** Look for `vlc.exe` / `vlc` spawning child processes (it should essentially never spawn a shell or script host), VLC process crashes clustered in time or by user, and outbound RTSP connections from workstations to destinations outside known media infrastructure.\n6. **Track VideoLAN for a bulletin and re-check on each sweep.** Monitor `images.videolan.org/security/` and distribution-maintainer advisories. When a fixed release lands, revisit this note \u2014 the absence of a fix is the defining property of this entry and it will change.\n7. **Consider an interim handler change for high-value users.** Re-associating PNG and playlist extensions away from VLC on executive, finance and administrator endpoints costs little and removes the default-open path.\n\n## Cross-reference\n- `MikroTrick-MikroTik-RouterOS-Unauthenticated-SSH-Takeover-2026.md` \u2014 the vault's running thread on unpatched-but-public flaws where the only control is reachability, not remediation.\n- `Threat_Intel/CVEs/2026/Critical/CVE-2026-85706-GitLab-Commits-API-Path-Traversal-Arbitrary-File-Read-2026.md` \u2014 same sweep window; contrast the disclosure-to-patch-to-exploitation timeline there with the *no patch at all* posture here.\n- `Guides/phishing/` \u2014 playlist-file delivery belongs in the attachment-policy discussion alongside the existing macro and archive guidance.\n\n#cve #vlc #videolan #integer-overflow #heap-overflow #out-of-bounds-write #out-of-bounds-read #memory-disclosure #rtsp #png #unpatched #no-vendor-advisory #high #corroborated\n\n## Tags\n #corroborated",
+   "sev": "High",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-57992": {
    "file": "Threat_Intel/CVEs/2026/High/CVE-2026-57992-Microsoft-Edge-Chromium-UAF-RCE.md",
    "body": "# CVE-2026-57992 \u2014 Microsoft Edge (Chromium) Use-After-Free RCE\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n**Severity:** High \u2014 CVSS 7.5\n**Component:** Microsoft Edge Chromium engine\n**Impact:** Remote attacker executes arbitrary code over a network by tricking a user into visiting a specially crafted webpage.\n**Status at publication:** No available patch or public PoC exploit.\n\n## Details\nMicrosoft disclosed a use-after-free memory-corruption flaw in Edge's Chromium engine, tracked as CVE-2026-57992 (CVSS 7.5). An unauthorized attacker can execute code over a network by luring a signed-in user to a malicious page. Distinct from CVE-2026-50521 (separate Edge UAF tracked 2026-07-02).\n\n## Action\n- Apply the Edge update as soon as Microsoft ships it.\n- Advise users to avoid untrusted links until patched.\n\n> Source: X @The_Cyber_News \u2014 2026-07-07 (cybersecuritynews.com/microsoft-edge...)\n\n## Tags\n#cve #microsoft-edge #chromium #use-after-free #rce #unverified",
@@ -4378,6 +4386,14 @@
   "CVE-2026-69414": {
    "file": "Threat_Intel/CVEs/2026/High/CVE-2026-69414.md",
    "body": "# CVE-2026-69414\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** High  \n**Year:** 2026\n\n## Summary\nrss:bc-2026-08-17-shieldbreak-cve | 2026-08-17 | BleepingComputer | Microsoft confirms working on patch; ShieldBreak now CVE-2026-69414; Will Dormann confirms PoC works (Defender must be enabled) | -> APPENDED Threat_Intel/CVEs/2026/High/CVE-2026-50656-ShieldBreak-Defender-PatchBypass-PoC.md\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 rss:bc-2026-08-17-shieldbreak-cve | 2026-08-17 | BleepingComputer | Microsoft confirms working on patch; ShieldBreak now CVE-2026-69414; Will Dormann confirms PoC works (Defender must be enabled) | -> APPENDED Threat_Intel/CVEs/2026/High/CVE-2026-50656-ShieldBreak-Defender-PatchBypass-PoC.md\n- `X_Intel/x-intel-tracker.md` \u2014 Verification: web-verified via WebSearch \u2014 CVE-2026-59310 Babuk-derived ESXi ransomware / suspected China-nexus / 361 IPs 47 countries (THN/SecurityWeek/Dark Reading/BleepingComputer/Broadcom); Azure/Entra \"TheHatman\" exfil (Hudson Rock primary; IHG ~185k/Kyndryl ~170k/Gap ~80k/Hexaware ~20k/Wyndham ~9k are seller claims). ShieldBreak CVE-2026-69414 + Markdown Preview Enhanced CVEs verified from BleepingComputer + ProjectDiscovery primary sources.\n- `X_Intel/x-intel-tracker.md` \u2014 Notes: 6 created / 3 appended. New CVEs referenced: CVE-2026-69414 (ShieldBreak), CVE-2026-50733, CVE-2026-54566, CVE-2026-54701, CVE-2026-54702, CVE-2026-54703 (Markdown Preview Enhanced), CVE-2026-59310 (append, prior-referenced).\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-69414\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-69414\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-69414\n\n## Tags\n#cve #2026 #high #auto-stub #verified",
+   "sev": "High",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-73324": {
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-73324.md",
+   "body": "# CVE-2026-73324\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** High  \n**Year:** 2026\n\n## Summary\n2098783711487750449 | 2026-09-12 | @The_Cyber_News | VLC Media Player CVE-2026-56711 (CVSS 8.6, integer-overflow heap OOB write via crafted PNG IHDR) + CVE-2026-73324 (CVSS 6.9, unterminated RTSP Session header heap OOB read); 3.0.0\u20133.0.23; **no VideoLAN advisory and no patch** | -> Threat_Intel/CVEs/2026/High/CVE-2026-56711-73324-VLC-Integer-Overflow-Heap-Write-RTSP-Memory-Disclosure-2026.md (new)\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 2098783711487750449 | 2026-09-12 | @The_Cyber_News | VLC Media Player CVE-2026-56711 (CVSS 8.6, integer-overflow heap OOB write via crafted PNG IHDR) + CVE-2026-73324 (CVSS 6.9, unterminated RTSP Session header heap OOB read); 3.0.0\u20133.0.23; **no VideoLAN advisory and no patch** | -> Threat_Intel/CVEs/2026/High/CVE-2026-56711-73324-VLC-Integer-Overflow-Heap-Write-RTSP-Memory-Disclosure-2026.md (new)\n- `X_Intel/x-intel-tracker.md` \u2014 Step 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Plan9 mount failure, fourth consecutive sweep). No CVE-coverage line. Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-56711**, **CVE-2026-73324** (this run), plus **CVE-2026-85706** and **CVE-2026-0310** carried over from the morning run. Run `make_cve_notes.py` manually, or the next successful-shell sweep will catch all four.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-73324\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-73324\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-73324\n\n## Tags\n#cve #2026 #high #auto-stub",
    "sev": "High",
    "year": "2026",
    "kev": false,
@@ -5114,6 +5130,12 @@
  },
  "recent": [
   {
+   "title": "CVE-2026-73324",
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-73324.md",
+   "cat": "cve",
+   "ts": "2026-09-14"
+  },
+  {
    "title": "Android-VPN-Lockdown-Bypass-Hardware-Offload-Real-IP-Leak-Mullvad-2026",
    "file": "Guides/Android-VPN-Lockdown-Bypass-Hardware-Offload-Real-IP-Leak-Mullvad-2026.md",
    "cat": "technique",
@@ -5123,6 +5145,12 @@
    "title": "EU-Cyber-Resilience-Act-Vulnerability-Disclosure-Readiness-UpGuard-2026",
    "file": "Guides/EU-Cyber-Resilience-Act-Vulnerability-Disclosure-Readiness-UpGuard-2026.md",
    "cat": "technique",
+   "ts": "2026-09-13"
+  },
+  {
+   "title": "AI-SOC-Alert-Surge-685pct-Intezer-Permission-Bypass-Agent-Telemetry-2026",
+   "file": "Guides/AI-BugBounty/AI-SOC-Alert-Surge-685pct-Intezer-Permission-Bypass-Agent-Telemetry-2026.md",
+   "cat": "ai-bugbounty",
    "ts": "2026-09-13"
   },
   {
@@ -5147,6 +5175,12 @@
    "title": "Phishing-Awareness-Testing-Click-Rate-Ineffective-Measure-Credential-Leak-Reporting-2026",
    "file": "Guides/phishing/Phishing-Awareness-Testing-Click-Rate-Ineffective-Measure-Credential-Leak-Reporting-2026.md",
    "cat": "technique",
+   "ts": "2026-09-13"
+  },
+  {
+   "title": "Blockstream-Liquid-Elements-Rangeproof-Cache-Key-Collision-4000BTC-2026",
+   "file": "Threat_Intel/Breaches/Blockstream-Liquid-Elements-Rangeproof-Cache-Key-Collision-4000BTC-2026.md",
+   "cat": "breach",
    "ts": "2026-09-13"
   },
   {
@@ -5182,24 +5216,6 @@
   {
    "title": "CVE-2026-85102-85103-Check-Point-VPN-Certificate-Auth-Bypass-ASN1-Heap-Overflow-2026",
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-85102-85103-Check-Point-VPN-Certificate-Auth-Bypass-ASN1-Heap-Overflow-2026.md",
-   "cat": "cve",
-   "ts": "2026-09-13"
-  },
-  {
-   "title": "CVE-2026-85706-GitLab-Commits-API-Path-Traversal-Arbitrary-File-Read-2026",
-   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-85706-GitLab-Commits-API-Path-Traversal-Arbitrary-File-Read-2026.md",
-   "cat": "cve",
-   "ts": "2026-09-13"
-  },
-  {
-   "title": "ConnectWise-ScreenConnect-Unpatched-Flaw-Worm-Like-Modified-Clients-2026",
-   "file": "Threat_Intel/CVEs/2026/High/ConnectWise-ScreenConnect-Unpatched-Flaw-Worm-Like-Modified-Clients-2026.md",
-   "cat": "cve",
-   "ts": "2026-09-13"
-  },
-  {
-   "title": "CVE-2026-0310-Palo-Alto-PAN-OS-XML-Buffer-Overflow-Unauth-Root-RCE-2026",
-   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-0310-Palo-Alto-PAN-OS-XML-Buffer-Overflow-Unauth-Root-RCE-2026.md",
    "cat": "cve",
    "ts": "2026-09-13"
   }
@@ -5927,6 +5943,13 @@
    "intel_items": 1468,
    "cves": 499,
    "breaches": 124,
+   "malware": 147
+  },
+  {
+   "date": "2026-09-14",
+   "intel_items": 1472,
+   "cves": 501,
+   "breaches": 125,
    "malware": 147
   }
  ]
