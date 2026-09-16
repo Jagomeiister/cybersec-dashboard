@@ -1,81 +1,80 @@
 {
- "generated": "2026-09-15 20:45",
- "today": "2026-09-15",
+ "generated": "2026-09-16 20:45",
+ "today": "2026-09-16",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
-  "cves": 501,
-  "breaches": 125,
-  "malware": 147,
-  "supplychain": 61,
-  "tools": 89,
-  "commands": 12,
-  "guides": 260,
-  "intel_items": 1472,
-  "kev": 126
+  "cves": 547,
+  "breaches": 128,
+  "malware": 154,
+  "supplychain": 63,
+  "tools": 90,
+  "commands": 13,
+  "guides": 268,
+  "intel_items": 1488,
+  "kev": 127
  },
  "windows": {
   "week": {
-   "total": 119,
+   "total": 89,
    "by_cat": {
-    "cve": 36,
-    "malware": 12,
-    "ai-bugbounty": 20,
-    "technique": 22,
-    "breach": 11,
-    "other": 4,
-    "misc": 4,
+    "cve": 30,
+    "technique": 18,
+    "breach": 7,
+    "other": 2,
+    "ai-bugbounty": 10,
+    "misc": 1,
+    "malware": 13,
     "supplychain": 4,
-    "command": 1,
-    "tool": 5
+    "tool": 4
    },
    "by_src": {}
   },
   "month": {
-   "total": 580,
+   "total": 591,
    "by_cat": {
-    "cve": 152,
-    "breach": 77,
-    "malware": 74,
-    "other": 59,
-    "technique": 49,
+    "cve": 158,
+    "breach": 76,
+    "malware": 78,
+    "technique": 50,
+    "other": 58,
     "misc": 80,
-    "ai-bugbounty": 51,
-    "supplychain": 23,
+    "ai-bugbounty": 52,
+    "supplychain": 24,
     "tool": 13,
     "command": 2
    },
    "by_src": {}
   },
   "year": {
-   "total": 1472,
+   "total": 1488,
    "by_cat": {
-    "ai-bugbounty": 108,
-    "malware": 179,
+    "ai-bugbounty": 109,
+    "malware": 184,
     "other": 106,
     "tool": 57,
     "misc": 296,
     "command": 6,
-    "technique": 130,
-    "cve": 351,
-    "breach": 155,
-    "supplychain": 84
+    "technique": 131,
+    "cve": 358,
+    "breach": 156,
+    "supplychain": 85
    },
    "by_src": {}
   },
   "all": {
-   "total": 1472,
+   "total": 1488,
    "by_cat": {
-    "ai-bugbounty": 108,
-    "malware": 179,
+    "ai-bugbounty": 109,
+    "malware": 184,
     "other": 106,
     "tool": 57,
     "misc": 296,
     "command": 6,
-    "technique": 130,
-    "cve": 351,
-    "breach": 155,
-    "supplychain": 84
+    "technique": 131,
+    "cve": 358,
+    "breach": 156,
+    "supplychain": 85
    },
    "by_src": {}
   }
@@ -1857,10 +1856,10 @@
   ]
  },
  "cve_sev": {
-  "Critical": 218,
-  "High": 153,
-  "Medium": 21,
-  "Low": 13
+  "Critical": 225,
+  "High": 163,
+  "Medium": 23,
+  "Low": 16
  },
  "cve_year": {
   "2015": 3,
@@ -1873,8 +1872,8 @@
   "2022": 9,
   "2023": 13,
   "2024": 13,
-  "2025": 20,
-  "2026": 413
+  "2025": 26,
+  "2026": 453
  },
  "cve_month": {
   "2025-10": 1,
@@ -1883,7 +1882,7 @@
   "2026-06": 108,
   "2026-07": 16,
   "2026-08": 84,
-  "2026-09": 95
+  "2026-09": 102
  },
  "top_cve": [
   {
@@ -2600,6 +2599,14 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2025-13166": {
+   "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-13166.md",
+   "body": "# CVE-2025-13166\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2025\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-13166\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-13166\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-13166\n\n## Tags\n#cve #2025 #unrated #auto-stub",
+   "sev": "",
+   "year": "2025",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2025-14174": {
    "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-14174.md",
    "body": "# CVE-2025-14174\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2025\n\n## Summary\nDarkSword** (first public ~2026-03): Safari `WebContent` sandbox escape leveraging **WebGPU** to inject into the `mediaplaybackd` daemon, gaining privileged file-system access. Uses a chain of 6 flaws incl. zero-days: **CVE-2025-31277, CVE-2025-43529, CVE-2026-20700, CVE-2025-14174, CVE-2025-43510, CVE-2025-43520**. Impacts **iOS 18.4\u201318.7**.\n\n## Where it appears in this vault\n- `Threat_Intel/Malware/DarkSword-Leaked-Kit-Chinese-Actor-FakeLogin-GHOSTBLADE-2026.md` \u2014 DarkSword** (first public ~2026-03): Safari `WebContent` sandbox escape leveraging **WebGPU** to inject into the `mediaplaybackd` daemon, gaining privileged file-system access. Uses a chain of 6 flaws incl. zero-days: **CVE-2025-31277, CVE-2025-43529, CVE-2026-20700, CVE-2025-14174, CVE-2025-43510, CVE-2025-43520**. Impacts **iOS 18.4\u201318.7**.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-14174\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-14174\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-14174\n\n## Tags\n#cve #2025 #unrated #auto-stub #verified",
@@ -2648,6 +2655,38 @@
    "kev": true,
    "apts": []
   },
+  "CVE-2025-40575": {
+   "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-40575.md",
+   "body": "# CVE-2025-40575\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2025\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-40575\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-40575\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-40575\n\n## Tags\n#cve #2025 #unrated #auto-stub",
+   "sev": "",
+   "year": "2025",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2025-40576": {
+   "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-40576.md",
+   "body": "# CVE-2025-40576\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2025\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-40576\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-40576\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-40576\n\n## Tags\n#cve #2025 #unrated #auto-stub",
+   "sev": "",
+   "year": "2025",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2025-40577": {
+   "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-40577.md",
+   "body": "# CVE-2025-40577\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2025\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-40577\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-40577\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-40577\n\n## Tags\n#cve #2025 #unrated #auto-stub",
+   "sev": "",
+   "year": "2025",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2025-40578": {
+   "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-40578.md",
+   "body": "# CVE-2025-40578\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2025\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-40578\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-40578\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-40578\n\n## Tags\n#cve #2025 #unrated #auto-stub",
+   "sev": "",
+   "year": "2025",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2025-43510": {
    "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-43510.md",
    "body": "# CVE-2025-43510\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2025\n\n## Summary\nDarkSword** (first public ~2026-03): Safari `WebContent` sandbox escape leveraging **WebGPU** to inject into the `mediaplaybackd` daemon, gaining privileged file-system access. Uses a chain of 6 flaws incl. zero-days: **CVE-2025-31277, CVE-2025-43529, CVE-2026-20700, CVE-2025-14174, CVE-2025-43510, CVE-2025-43520**. Impacts **iOS 18.4\u201318.7**.\n\n## Where it appears in this vault\n- `Threat_Intel/Malware/DarkSword-Leaked-Kit-Chinese-Actor-FakeLogin-GHOSTBLADE-2026.md` \u2014 DarkSword** (first public ~2026-03): Safari `WebContent` sandbox escape leveraging **WebGPU** to inject into the `mediaplaybackd` daemon, gaining privileged file-system access. Uses a chain of 6 flaws incl. zero-days: **CVE-2025-31277, CVE-2025-43529, CVE-2026-20700, CVE-2025-14174, CVE-2025-43510, CVE-2025-43520**. Impacts **iOS 18.4\u201318.7**.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-43510\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-43510\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-43510\n\n## Tags\n#cve #2025 #unrated #auto-stub #verified",
@@ -2670,6 +2709,14 @@
    "sev": "",
    "year": "2025",
    "kev": true,
+   "apts": []
+  },
+  "CVE-2025-5802": {
+   "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-5802.md",
+   "body": "# CVE-2025-5802\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2025\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-5802\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-5802\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-5802\n\n## Tags\n#cve #2025 #unrated #auto-stub",
+   "sev": "",
+   "year": "2025",
+   "kev": false,
    "apts": []
   },
   "CVE-2025-59287": {
@@ -3038,7 +3085,7 @@
   },
   "CVE-2026-39987": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-39987-PreAuth-RCE.md",
-   "body": "# CVE-2026-39987 \u2014 Pre-Auth RCE (CVSS 9.3) \u2014 Active Exploitation\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 2 independent sources\n\n**Date**: 2026-04-13\n**CVE**: CVE-2026-39987\n**CVSS**: 9.3 (Critical)\n**Status**: Actively exploited in the wild (as of 2026-04-13)\n**Source**: X (@rxerium) \u2014 [https://x.com/rxerium/status/2043386993070256223](https://x.com/rxerium/status/2043386993070256223)\n**Tags**: #cve #rce #pre-auth #active-exploitation #critical\n\n---\n\n## Summary\n\nA pre-authentication Remote Code Execution vulnerability tracked as **CVE-2026-39987** (CVSS 9.3) is seeing active exploitation in the wild. An unauthenticated attacker can obtain remote code execution without any prior credentials.\n\n## Key Details\n\n- **Vulnerability type**: Pre-authentication RCE\n- **Authentication required**: None\n- **CVSS Score**: 9.3 (Critical)\n- **Exploitation status**: Active in the wild\n- **Nuclei template**: Available at [github.com/rxerium/rxerium-templates/blob/main/2026/CVE-2026-39987.yaml](https://github.com/rxerium/rxerium-templates/blob/main/2026/CVE-2026-39987.yaml)\n\n> **Note**: The affected product was not fully visible in the truncated tweet. Check the source tweet / GitHub template for the full product name and affected versions.\n\n## Detection & Hunting\n\n- Deploy Nuclei template immediately: `CVE-2026-39987.yaml`\n- Scan internet-facing assets for exposure\n- Hunt for exploitation indicators in web server / application logs\n- Monitor for unauthenticated process spawning or reverse shell activity\n\n## Nuclei Template\n\n```\nhttps://github.com/rxerium/rxerium-templates/blob/main/2026/CVE-2026-39987.yaml\n```\n\n## Engagement\n\n- 7 replies, 54 reposts, 273 likes, 183 bookmarks, 22.6K views\n\n## References\n\n- Source tweet: [https://x.com/rxerium/status/2043386993070256223](https://x.com/rxerium/status/2043386993070256223)\n- Nuclei template repo: [github.com/rxerium/rxerium-templates](https://github.com/rxerium/rxerium-templates)\n\n## Tags\n #unverified",
+   "body": "# CVE-2026-39987 \u2014 Pre-Auth RCE (CVSS 9.3) \u2014 Active Exploitation\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 2 independent sources\n\n**Date**: 2026-04-13\n**CVE**: CVE-2026-39987\n**CVSS**: 9.3 (Critical)\n**Status**: Actively exploited in the wild (as of 2026-04-13)\n**Source**: X (@rxerium) \u2014 [https://x.com/rxerium/status/2043386993070256223](https://x.com/rxerium/status/2043386993070256223)\n**Tags**: #cve #rce #pre-auth #active-exploitation #critical\n\n---\n\n## Summary\n\nA pre-authentication Remote Code Execution vulnerability tracked as **CVE-2026-39987** (CVSS 9.3) is seeing active exploitation in the wild. An unauthenticated attacker can obtain remote code execution without any prior credentials.\n\n## Key Details\n\n- **Vulnerability type**: Pre-authentication RCE\n- **Authentication required**: None\n- **CVSS Score**: 9.3 (Critical)\n- **Exploitation status**: Active in the wild\n- **Nuclei template**: Available at [github.com/rxerium/rxerium-templates/blob/main/2026/CVE-2026-39987.yaml](https://github.com/rxerium/rxerium-templates/blob/main/2026/CVE-2026-39987.yaml)\n\n> **Note**: The affected product was not fully visible in the truncated tweet. Check the source tweet / GitHub template for the full product name and affected versions.\n\n## Detection & Hunting\n\n- Deploy Nuclei template immediately: `CVE-2026-39987.yaml`\n- Scan internet-facing assets for exposure\n- Hunt for exploitation indicators in web server / application logs\n- Monitor for unauthenticated process spawning or reverse shell activity\n\n## Nuclei Template\n\n```\nhttps://github.com/rxerium/rxerium-templates/blob/main/2026/CVE-2026-39987.yaml\n```\n\n## Engagement\n\n- 7 replies, 54 reposts, 273 likes, 183 bookmarks, 22.6K views\n\n## References\n\n- Source tweet: [https://x.com/rxerium/status/2043386993070256223](https://x.com/rxerium/status/2043386993070256223)\n- Nuclei template repo: [github.com/rxerium/rxerium-templates](https://github.com/rxerium/rxerium-templates)\n\n---\n\n## Update \u2014 2026-09-16: product identified as Marimo; Sysdig records an 8-second pivot from RCE to SSH bastion\n\n> Source: [The Hacker News](https://thehackernews.com/2026/09/human-attacker-exploits-marimo-rce.html) \u2014 2026-09-15 (research: Sysdig)\n\n**The affected product flagged as unknown above is Marimo** (Python notebook software). This resolves the open question recorded in the 2026-04-13 note.\n\n**Sysdig documented a human operator pivoting from a vulnerable Marimo notebook (RCE) to an SSH bastion host in eight seconds after initial access.**\n\n### Why the eight seconds matters\n1. **It was a human, not an agent.** That is the point Sysdig is making and it cuts against the current framing. The vault has been recording AI-operated intrusion tempo all month \u2014 PaperCut's 26-second multi-victim compromise, the 7-minute path to Domain Admin. This is a person, working manually, moving in eight seconds. The tempo problem is not exclusively an AI problem; it is a *prepared-operator* problem, and AI makes preparation cheaper rather than creating the speed outright.\n2. **Eight seconds is below every human response threshold.** No alert triage, no on-call page, no analyst decision fits inside that window. Containment at this tempo has to be automatic and pre-authorised, or it does not happen.\n3. **The pivot target is the notable choice.** An SSH bastion is the deliberate chokepoint through which all administrative access flows. Reaching it from a notebook server means the notebook host had network reachability to the bastion \u2014 a segmentation finding, not just a patching one. Data-science and notebook infrastructure is routinely placed inside the administrative network because it is treated as an internal analytics tool rather than an exposed service.\n4. **Marimo now has two independently exploited 2026 flaws** \u2014 this one and CVE-2026-75149 (MCP command injection on file open). The product is receiving attacker attention; treat notebook infrastructure as an internet-facing application tier with a patch SLA to match.\n\n### Action (additive)\n- **Resolve Marimo inventory** across data-science, research and ML environments \u2014 including developer laptops and ad-hoc instances, which are the ones nobody patches.\n- **Segment notebook hosts away from bastions and management networks.** There is no reason a notebook server should be able to reach an SSH bastion; enforce it at the network layer.\n- **Pre-authorise automated containment** (host isolation on confirmed RCE indicators). At eight seconds, human-in-the-loop containment is decorative.\n- **Hunt** for SSH connections originating from notebook/data-science hosts to bastion or jump infrastructure \u2014 a single high-signal query.\n- Cross-reference `CVE-2026-75149-Marimo-MCP-Command-Injection-Edit-Mode.md` \u2014 the second Marimo flaw; do not merge the two.\n\n#marimo #sysdig #ssh-bastion #lateral-movement #attack-tempo #segmentation #notebook-security #product-identified\n\n## Tags\n #unverified",
    "sev": "Critical",
    "year": "2026",
    "kev": true,
@@ -3380,6 +3427,14 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-5430": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-5430-WSO2-API-Manager-JWT-Signature-Verification-Bypass-Forged-Admin-Tokens-2026.md",
+   "body": "# CVE-2026-5430 \u2014 WSO2 API Manager JWT Signature Verification Bypass \u2192 Forged Admin Tokens, Exploited In The Wild\n\n\u26a0\ufe0f **Verification:** Corroborated \u2014 2 independent sources\n\n> Source: [The Hacker News](https://thehackernews.com/2026/09/active-exploitation-attempts-target.html) \u2014 2026-09-16\n> Source: [SecurityWeek](https://www.securityweek.com/enterprises-warned-of-attacks-exploiting-wso2-vulnerability/) \u2014 2026-09-16\n\n**Type:** CVE / improper cryptographic signature verification \u2192 authentication bypass | **Severity:** Critical (CVSS 9.8) | **Date:** 2026-09-16\n\n## Summary\n**CVE-2026-5430** is an **improper cryptographic signature verification** flaw in **WSO2 API Manager**. The JWT validation path does not correctly verify the token signature, so an unauthenticated attacker can **forge a JWT asserting administrative identity** and have the gateway accept it. Result is authentication bypass and full account/tenant takeover on the API management plane.\n\n**Exploitation status:** **Active exploitation in the wild confirmed by watchTowr.** SecurityWeek reports attackers are using it to reach valuable enterprise data behind the gateway. Discovery credited to the **Hacktron Team**.\n\n## Why this matters\n1. **An API gateway is a credential concentrator.** WSO2 APIM sits in front of backend services and holds the client secrets, backend credentials and token-issuance keys for everything it fronts. Forging an admin token there is not one application compromised \u2014 it is authority over every API the gateway publishes.\n2. **Signature-verification bugs defeat every downstream control at once.** MFA, session expiry, IP allow-listing and rate limits all sit *after* identity is established. If identity can be minted, none of them apply. There is no compensating control short of blocking the path.\n3. **It repeats the CVE-2026-82329 (JFrog Artifactory) pattern exactly** \u2014 auth bypass via token minting on an infrastructure control plane, exploited within days. Two independent products, same failure class, same window. Token-issuance code is the recurring weak point and deserves standing review, not incident-driven review.\n4. **Forged tokens leave thin logs.** A validly-structured admin JWT produces authentication *successes*, not failures. Detection has to key on anomalous admin activity and token characteristics, not on failed-login telemetry.\n\n## Action\n1. **Patch to the fixed WSO2 API Manager release immediately.** Treat as emergency change \u2014 pre-auth, CVSS 9.8, confirmed in-the-wild.\n2. **Assume compromise** on any internet-reachable APIM instance unpatched since disclosure. Forged-token access may predate the public advisory.\n3. **Rotate the token-signing keypair** and every backend credential, client secret and API key stored in or issued by the gateway. Patching alone does not invalidate tokens already forged.\n4. **Hunt** for admin-scope API calls from unusual source IPs or user-agents; JWTs with anomalous `iss`/`kid`/`alg` values (check specifically for `alg` confusion and unexpected `kid` references); new API subscriptions, applications or throttling-policy changes; and bulk data reads through published APIs.\n5. **Audit every JWT validation path you own** for the same class of defect \u2014 algorithm confusion, unverified `kid` lookup, signature check skipped on a code branch.\n\n## Cross-reference\n- `CVE-2026-82329-JFrog-Artifactory-Auth-Bypass-Admin-Token-Minting.md` \u2014 same failure class (control-plane token minting), same exploitation tempo.\n- `CVE-2026-76461-Cisco-Secure-Email-Gateway-SQLi-Root-RCE-KEV-Exploited-2026.md` \u2014 same window, internet-facing appliance, exploited pre-auth.\n- `Edge-Device-Exposure-Convergence-NCSC-Tenable-Microsoft-2026-08-27.md` \u2014 the structural argument this instantiates.\n\n#cve #wso2 #api-manager #jwt #authentication-bypass #signature-verification #unauthenticated #exploited #critical #api-security #corroborated\n\n## Tags\n #corroborated",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-55040": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-55040-SharePoint-Auth-Bypass-Exploited.md",
    "body": "# CVE-2026-55040 \u2014 Microsoft SharePoint Authentication Bypass, Exploited After PoC (CVSS 9.1)\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n**Type:** CVE / auth bypass \u2192 unauth RCE chain | **Severity:** Critical (CVSS 9.1) | **Date:** 2026-08-11 / 2026-08-13\n\n## Summary\n**CVE-2026-55040** is a critical **security feature bypass stemming from weak authentication** in Microsoft SharePoint. Researchers demonstrated an exploit chain that allows entering a SharePoint server **as any user, including an administrator, with no valid account** \u2014 reaching unauthenticated RCE.\n\n**Attackers began exploiting it in the wild immediately after public PoC release (2026-08-13).**\n\n## Affected / Fixed\n- **Affected:** SharePoint Server Subscription Edition, SharePoint Server 2019, SharePoint Server 2016.\n- **Fixed:** Microsoft **July 2026 Patch Tuesday**.\n\n## Notable \u2014 AI-assisted discovery\nA significant part of the research that found the chain was performed by an **AI agent**, making this a notable data point in the autonomous-vulnerability-research trend (cf. `Guides/AI-BugBounty/HTTP-Terminator-Autonomous-AI-HTTP-Desync-BlackHat-2026.md`).\n\n## Action\n- Confirm July 2026 Patch Tuesday is applied to all SharePoint on-prem farms.\n- Treat unpatched, internet-facing SharePoint as compromised; hunt for anomalous authentication as admin accounts and webshells in LAYOUTS/_layouts paths.\n\n> Source: [The Hacker News](https://thehackernews.com/2026/08/attackers-exploit-sharepoint.html) \u2014 Thu, 13 Aug 2026; [The Hacker News](https://thehackernews.com/2026/08/researchers-disclose-ai-assisted.html) \u2014 Tue, 11 Aug 2026\n\n## Tags\n #cve #sharepoint #microsoft #auth-bypass #rce #exploited #ai-assisted #critical #unverified",
@@ -3494,7 +3549,7 @@
   },
   "CVE-2026-60004": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-60004-Gitea-DiffPatch-Code-Injection-RCE-KEV-Exploited.md",
-   "body": "# CVE-2026-60004 \u2014 Gitea `diffpatch` Code Injection \u2192 RCE (KEV, Exploited ITW)\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n**Severity:** Critical (code injection \u2192 remote code execution) \u2014 **actively exploited**\n**Component:** Gitea self-hosted Git service\n**Fixed in:** **1.27.1** (released late July 2026)\n**KEV added:** 2026-08-25 \u00b7 **FCEB remediation deadline: 2026-08-28**\n\n## Details\nGitea contains a **code injection** flaw reachable via the **`diffpatch` API endpoint**. An attacker holding **repository write access** can submit a malicious patch that plants an **executable Git hook**, which then runs shell commands as the **Gitea service account**.\n\n- **Exploitation observed:** a developer reported their Gitea instance targeted by an unknown actor deploying a **cryptocurrency-miner-like dropper**.\n- **Exposure:** Shadowserver tracks **~5,000 Gitea instances exposed to the internet**.\n- CISA added the CVE to KEV on 25 Aug 2026 and issued a **3-day** federal patch deadline (28 Aug).\n- CCCS issued a parallel **Gitea security advisory AV26-845** (25 Aug 2026).\n\n## Precondition caveat (record of nuance)\nThe vulnerability requires **repository write access**, not pure unauthenticated access. Several syndicated write-ups describe it as \"unauthenticated attackers read server files and gain RCE\" \u2014 that framing conflicts with the CISA/vendor description and appears to conflate this bug with a separate file-read issue. **Treat the write-access precondition as the authoritative one** until Gitea publishes a fuller advisory.\n\n## Action\n- Upgrade to **Gitea \u2265 1.27.1** immediately.\n- Audit `.git/hooks` across all repositories for unexpected executable hooks.\n- Review the Gitea service account for spawned processes / miner artefacts.\n- Restrict who holds repository write access; treat write access as an RCE-equivalent privilege on unpatched instances.\n- Remove Gitea instances from direct internet exposure.\n\n## Related\n- [[CVE-2026-20896-Gitea-Docker-XWEBAUTHUSER-Header-Spoof]] \u2014 separate Gitea auth-bypass exploited ITW in July 2026. **Two independently exploited Gitea flaws in ~6 weeks.**\n\n> Source: [CISA KEV Alert](https://www.cisa.gov/news-events/alerts/2026/08/25/cisa-adds-one-known-exploited-vulnerability-catalog) \u2014 2026-08-25\n> Source: [The Hacker News](https://thehackernews.com/2026/08/critical-gitea-rce-actively-exploited.html) \u2014 2026-08-26\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-now-exploit-critical-gitea-flaw-in-code-injection-attacks/) \u2014 2026-08-26\n\n## Tags\n#cve #gitea #code-injection #rce #git-hooks #kev #exploited-itw #supply-chain #verified\n\n---\n\n## Update \u2014 2026-08-28: 8,300+ servers still vulnerable, three days after the KEV deadline\n\nBleepingComputer reports **over 8,300 Gitea servers remain vulnerable** to code-execution attacks.\n\nTimeline against that number:\n- **late July 2026** \u2014 fixed in **1.27.1**\n- **2026-08-25** \u2014 added to **CISA KEV**; FCEB remediation deadline **2026-08-28**\n- **2026-08-28** \u2014 **8,300+ still exposed**, on the deadline day itself\n\nCompare the Shadowserver figure of **~5,000 exposed instances** recorded in this note on 2026-08-26. The count reported has **gone up, not down** \u2014 most likely a scope/methodology difference between Shadowserver's exposed-instance count and BleepingComputer's vulnerable-server count rather than genuine growth in exposure, but **the discrepancy is recorded rather than reconciled**, since no source explains it.\n\nEither way the remediation direction is not visibly downward a month after a patch existed and three days after a federal deadline.\n\nThis is now the concrete data point behind the week's **edge-exposure convergence** \u2014 see `Guides/Edge-Device-Exposure-Convergence-NCSC-Tenable-Microsoft-2026-08-27.md`.\n\n**Action:** re-scan. Do not assume a patch instruction issued is a patch applied.\n\n> Source: [BleepingComputer \u2014 Over 8,300 Gitea servers vulnerable to code execution attacks](https://www.bleepingcomputer.com/news/security/over-8-300-gitea-servers-vulnerable-to-code-execution-attacks/) \u2014 2026-08-28",
+   "body": "# CVE-2026-60004 \u2014 Gitea `diffpatch` Code Injection \u2192 RCE (KEV, Exploited ITW)\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n**Severity:** Critical (code injection \u2192 remote code execution) \u2014 **actively exploited**\n**Component:** Gitea self-hosted Git service\n**Fixed in:** **1.27.1** (released late July 2026)\n**KEV added:** 2026-08-25 \u00b7 **FCEB remediation deadline: 2026-08-28**\n\n## Details\nGitea contains a **code injection** flaw reachable via the **`diffpatch` API endpoint**. An attacker holding **repository write access** can submit a malicious patch that plants an **executable Git hook**, which then runs shell commands as the **Gitea service account**.\n\n- **Exploitation observed:** a developer reported their Gitea instance targeted by an unknown actor deploying a **cryptocurrency-miner-like dropper**.\n- **Exposure:** Shadowserver tracks **~5,000 Gitea instances exposed to the internet**.\n- CISA added the CVE to KEV on 25 Aug 2026 and issued a **3-day** federal patch deadline (28 Aug).\n- CCCS issued a parallel **Gitea security advisory AV26-845** (25 Aug 2026).\n\n## Precondition caveat (record of nuance)\nThe vulnerability requires **repository write access**, not pure unauthenticated access. Several syndicated write-ups describe it as \"unauthenticated attackers read server files and gain RCE\" \u2014 that framing conflicts with the CISA/vendor description and appears to conflate this bug with a separate file-read issue. **Treat the write-access precondition as the authoritative one** until Gitea publishes a fuller advisory.\n\n## Action\n- Upgrade to **Gitea \u2265 1.27.1** immediately.\n- Audit `.git/hooks` across all repositories for unexpected executable hooks.\n- Review the Gitea service account for spawned processes / miner artefacts.\n- Restrict who holds repository write access; treat write access as an RCE-equivalent privilege on unpatched instances.\n- Remove Gitea instances from direct internet exposure.\n\n## Related\n- [[CVE-2026-20896-Gitea-Docker-XWEBAUTHUSER-Header-Spoof]] \u2014 separate Gitea auth-bypass exploited ITW in July 2026. **Two independently exploited Gitea flaws in ~6 weeks.**\n\n> Source: [CISA KEV Alert](https://www.cisa.gov/news-events/alerts/2026/08/25/cisa-adds-one-known-exploited-vulnerability-catalog) \u2014 2026-08-25\n> Source: [The Hacker News](https://thehackernews.com/2026/08/critical-gitea-rce-actively-exploited.html) \u2014 2026-08-26\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-now-exploit-critical-gitea-flaw-in-code-injection-attacks/) \u2014 2026-08-26\n\n## Tags\n#cve #gitea #code-injection #rce #git-hooks #kev #exploited-itw #supply-chain #verified\n\n---\n\n## Update \u2014 2026-08-28: 8,300+ servers still vulnerable, three days after the KEV deadline\n\nBleepingComputer reports **over 8,300 Gitea servers remain vulnerable** to code-execution attacks.\n\nTimeline against that number:\n- **late July 2026** \u2014 fixed in **1.27.1**\n- **2026-08-25** \u2014 added to **CISA KEV**; FCEB remediation deadline **2026-08-28**\n- **2026-08-28** \u2014 **8,300+ still exposed**, on the deadline day itself\n\nCompare the Shadowserver figure of **~5,000 exposed instances** recorded in this note on 2026-08-26. The count reported has **gone up, not down** \u2014 most likely a scope/methodology difference between Shadowserver's exposed-instance count and BleepingComputer's vulnerable-server count rather than genuine growth in exposure, but **the discrepancy is recorded rather than reconciled**, since no source explains it.\n\nEither way the remediation direction is not visibly downward a month after a patch existed and three days after a federal deadline.\n\nThis is now the concrete data point behind the week's **edge-exposure convergence** \u2014 see `Guides/Edge-Device-Exposure-Convergence-NCSC-Tenable-Microsoft-2026-08-27.md`.\n\n**Action:** re-scan. Do not assume a patch instruction issued is a patch applied.\n\n> Source: [BleepingComputer \u2014 Over 8,300 Gitea servers vulnerable to code execution attacks](https://www.bleepingcomputer.com/news/security/over-8-300-gitea-servers-vulnerable-to-code-execution-attacks/) \u2014 2026-08-28\n\n---\n\n## Update \u2014 2026-09-15: \"Red Heron\" multinational campaign \u2014 13 organisations compromised across six countries\n\n> Source: [The Hacker News](https://thehackernews.com/2026/09/red-heron-exploits-gitea-rce-to.html) \u2014 2026-09-14\n> Source: [Industrial Cyber](https://industrialcyber.co/ransomware/red-heron-exploits-gitea-rce-flaw-in-multinational-campaign-targeting-industrial-and-government-organizations/) \u2014 2026-09-15 (research: Acronis TRU)\n\n**Acronis Threat Research Unit** attributes a multinational campaign exploiting this CVE to a **Chinese-speaking actor tracked as \"Red Heron\"**, who weaponised it **within days of public PoC release**.\n\n### Campaign scale\n- **1,386 internet-facing Gitea instances scanned** across seven countries, plus a **dedicated 477-target list for Taiwan**.\n- **13 organisations confirmed compromised** across **Canada, Argentina, Taiwan, the US and Sri Lanka**.\n- **Targeted sectors:** defence, elections, energy, aerospace, telecom, industrial and government.\n- **Reconnaissance** conducted via **FOFA**.\n\n### Tooling (newly documented)\n- **SIXZUT** \u2014 a previously undocumented **Linux rootkit**, embedded in:\n- **JITTERLY** \u2014 the implant, supporting **30+ post-exploitation commands**.\n- **Adaptix C2** \u2014 the command-and-control framework used for the deployment.\n\n### Objective\n**Source-code and credential theft.** Consistent with the note's existing argument that write access to a Git service is an RCE-equivalent privilege \u2014 here it also proved to be a direct route to the intellectual property and secrets the service holds.\n\n### What this changes\n1. **The exploitation picture upgrades from opportunistic to targeted.** The August entry recorded a miner-like dropper \u2014 commodity, financially motivated. Red Heron is espionage-motivated, sector-selective, and maintains a country-specific target list. Both are exploiting the same unpatched population.\n2. **The 8,300-vulnerable-servers figure now has a named consumer.** The remediation gap recorded on 2026-08-28 is what this campaign is harvesting.\n3. **A Linux rootkit changes the response requirement.** SIXZUT means host-level compromise assessment, not just \"patch and check for hooks\" \u2014 audit `.git/hooks` remains necessary but is no longer sufficient.\n\n### Action (additive)\n- **Assume compromise** on any Gitea instance that was internet-facing and unpatched after late July 2026, particularly in the named sectors.\n- **Hunt for SIXZUT/JITTERLY** indicators and **Adaptix C2** traffic; engage rootkit-capable forensic tooling rather than relying on host agents that the rootkit may subvert.\n- **Rotate all repository secrets, deploy keys, CI credentials and tokens** held by affected instances \u2014 credential theft was a stated objective.\n- **Taiwan-based organisations** running Gitea should treat this as a directed threat given the dedicated target list.\n- See also `CVE-2026-76461-Cisco-Secure-Email-Gateway-SQLi-Root-RCE-KEV-Exploited-2026.md` \u2014 same sweep, same pattern of a KEV flaw in internet-facing infrastructure under active state-aligned exploitation.\n\n#red-heron #acronis-tru #sixzut #jitterly #adaptix-c2 #linux-rootkit #espionage #taiwan #targeted-campaign\n\n---\n\n## Update \u2014 2026-09-16: Red Heron victim-level detail and attribution artefacts\n\n> Source: [Industrial Cyber](https://industrialcyber.co/ransomware/red-heron-exploits-gitea-rce-flaw-in-multinational-campaign-targeting-industrial-and-government-organizations/) \u2014 2026-09-15 (full Acronis TRU detail)\n\nAdditional detail from the Acronis TRU report not captured in the 09-15 entry. Attribution confidence is stated as **moderate**; the Taiwan target metadata carried the field `source: Given authorized website`, which suggests **externally supplied targeting** rather than the operator's own reconnaissance.\n\n### Operator hygiene failure \u2014 a detection opportunity\nThe automated exploitation framework auto-registers accounts, exploits, steals repositories and **attempts cleanup \u2014 but leaves `poc-*` directories behind**. Over **130 were left on a single Taiwanese host**. **Search for `poc-*` directories on any Gitea instance in scope**; this is a cheap, specific, high-confidence indicator of this campaign and does not require rootkit-capable tooling to find.\n\n### Victim detail\n- **Canadian renewable energy company** \u2014 most heavily compromised, **22 exploitation sessions**. Attackers mapped infrastructure and operated via a **legitimate employee account**, pulling the HR system, CRM, auth service, intranet, internal reports and business APIs. **Secrets extracted from Gitea configuration: JWT tokens, internal tokens, SSH host keys, and a deploy key for the company's HCM staging environment.**\n- **Taiwanese industrial automation firm** \u2014 hundreds of repositories lost, including a surveillance/monitoring product, a **SCADA/HMI tool**, IoT platform integrations, a network sniffer, server configurations and internal business applications.\n- Other targets: a US Gitea instance with an election-related title (**14 sessions**), two US municipal platforms, a US media studio, an Argentine quantitative trading firm, a Canadian education platform running **Forgejo**, a Sri Lankan IT consultancy, a Taiwanese hotel, a Taiwanese Synology NAS. A Qatar-based target also had data pulled.\n\n### Attribution artefacts\nReconnaissance databases, target classifications and FOFA scan metadata were **entirely in Simplified Chinese**. Target classes included defence/military, election and voting systems, energy and aerospace. **Taiwan was labelled country `CN`, region `TW`.** An `exec.sh` script moved stolen data off the staging server over **HTTP via an intermediate machine**, indicating a team operation rather than a single operator.\n\n### What this adds\n1. **Stolen SCADA/HMI and industrial-monitoring source code is a forward-looking OT risk.** The immediate loss is intellectual property; the durable loss is that the actor now holds the source for control software deployed in other people's plants. Read alongside the Minnesota water-utility incidents in the same week, the OT attack surface is being worked from both the exposure side and the supply side.\n2. **A deploy key for an HCM staging environment is lateral movement, pre-packaged.** Credential rotation on a compromised Gitea instance is not optional cleanup \u2014 it is the containment step, and it must extend to every downstream system the repository secrets reach.\n3. **Forgejo is in scope.** One confirmed victim ran Forgejo, not Gitea. Any Gitea-fork inventory needs the same treatment.\n4. **`poc-*` leftovers mean some victims are discoverable by filesystem search alone** \u2014 run it before commissioning deeper forensics.\n\n### Action (additive)\n- **Search every Gitea/Forgejo instance for `poc-*` directories.** Any hit is a confirmed compromise.\n- **Include Gitea forks** (Forgejo, Gogs) in the vulnerable-instance inventory.\n- **Trace repository secrets downstream** \u2014 deploy keys, SSH host keys and JWT signing material rotate outward into other systems; rotating them only on the Git host leaves the access in place.\n- **Check for data staged and moved over plain HTTP via an internal intermediate host** \u2014 the `exec.sh` pattern.\n\n#forgejo #scada-source-theft #deploy-key #credential-rotation #poc-directories #ioc #fofa",
    "sev": "Critical",
    "year": "2026",
    "kev": true,
@@ -3695,6 +3750,14 @@
   "CVE-2026-75650": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-75650.md",
    "body": "# CVE-2026-75650\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2026\n\n## Summary\nCVE-2026-75650** | Adobe Commerce |\n\n## Where it appears in this vault\n- `Threat_Intel/CISA-KEV-Langflow-Ncentral-Tomcat-DeepSeek-AI-Campaign-2026.md` \u2014 CVE-2026-75650** | Adobe Commerce |\n- `Threat_Intel/CISA-KEV-Langflow-Ncentral-Tomcat-DeepSeek-AI-Campaign-2026.md` \u2014 3. **CVE-2026-75650 (Adobe Commerce)** \u2014 patch and, separately, inspect checkout pages and CSP reports for injected script; skimmer persistence survives patching.\n- `Threat_Intel/CISA-KEV-Langflow-Ncentral-Tomcat-DeepSeek-AI-Campaign-2026.md` \u2014 cve-2026-86218 #cve-2026-81963 #cve-2026-85880 #cve-2026-75650 #cisa-kev #n-able #n-central #rmm #av26-885 #exploited-in-the-wild #adobe-commerce #windows\n- `X_Intel/x-intel-tracker.md` \u2014 rss:tenable-2026-09-08-stylesmuggler / rss:thn-2026-09-08-magento-rust / rss:bleeping-2026-09-08-adobe-oob / rss:securityweek-2026-09-08-adobe-170 / rss:cccs-2026-09-08-av26-888 | 2026-09-08 | Tenable / THN / BleepingComputer / SecurityWeek / CCCS | StyleSmuggler = CVE-2026-75650 CVSS 10.0; Adobe hotfix VULN-39341 / APSB26-146 (09-07); KEV 09-08; styles-property -> Payment Transaction Failed Reminder execution; implant ~/.local/share/.gvfsd/gvfsd-user, 5-min cron, x86-64 + arm64, Rust backdoor + PHP web shell, 2 operators | -> Threat_Intel/CVEs/2026/Critical/StyleSmuggler-Magento-Adobe-Commerce-PreAuth-RCE-ZeroDay-2026.md (appended)\n- `X_Intel/x-intel-tracker.md` \u2014 Consequence:** CISA's own advisory feed was unreachable for the second consecutive sweep. KEV and ICS coverage this run came via **CCCS** (which flagged four KEV additions on 2026-09-08: CVE-2026-81963, CVE-2026-85880, CVE-2026-75650, CVE-2026-86218) and via vendor/press reporting. This is a single-source-of-truth fragility worth fixing.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-75650\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-75650\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-75650\n\n## Tags\n#cve #2026 #critical #auto-stub",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": true,
+   "apts": []
+  },
+  "CVE-2026-76461": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-76461-Cisco-Secure-Email-Gateway-SQLi-Root-RCE-KEV-Exploited-2026.md",
+   "body": "# CVE-2026-76461 \u2014 Cisco Secure Email Gateway Pre-Auth SQL Injection \u2192 Root Command Execution, Exploited In The Wild\n\n\u26a0\ufe0f **Verification:** Corroborated \u2014 4 independent sources\n\n> Source: [SecurityWeek](https://www.securityweek.com/root-rce-zero-day-in-cisco-secure-email-gateway-under-active-exploitation/) \u2014 2026-09-15\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/new-cisco-secure-email-zero-day-exploited-to-execute-commands-as-root/) \u2014 2026-09-15\n> Source: [CCCS AV26-921](https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-921) \u2014 2026-09-14\n> Source: X @The_Cyber_News \u2014 2026-09-15 (tweet 2099774720644456795)\n\n**Type:** CVE / unauthenticated SQL injection \u2192 OS command execution as root | **Severity:** Critical | **Date:** 2026-09-15\n\n## Summary\nCisco disclosed an actively exploited **zero-day in Secure Email Gateway (AsyncOS)**. The flaw is an **unauthenticated SQL-injection** reachable on the appliance's web interface that escalates into **arbitrary command execution as `root` on the underlying operating system** \u2014 SQLi is the entry point, not the impact ceiling.\n\n**Affected:** Cisco Secure Email Gateway / AsyncOS prior to **15.5.5-014**, **16.0.4-302**, **16.5.0-780**, and **Cisco Secure Email and Web Manager**.\n\n**Exploitation status:** Cisco confirmed exploitation in the wild. **CISA added CVE-2026-76461 to the KEV catalog on 2026-09-14.**\n\n## Why this matters\n1. **Pre-auth root on a mail gateway is a full mail-flow compromise.** An email security appliance terminates and inspects every inbound and outbound message. Root on that box means silent message interception, selective delivery of attacker mail past the very controls it enforces, and access to quarantine contents and DLP policy.\n2. **The appliance is internet-facing by design.** Unlike most internal infrastructure there is no meaningful network-exposure mitigation \u2014 MX has to be reachable. Patch speed is the only lever.\n3. **SQLi-to-root is a design failure, not just a bug.** Reaching OS command execution from a database injection implies the web tier runs privileged and passes injected content to a system context. Assume adjacent injection points on the same appliance are also worth hunting.\n4. **It joins a run of exploited edge-appliance flaws this sweep window** (GitLab CVE-2026-85706, Gitea CVE-2026-60004, FortiGate SSL-VPN, ConnectWise ScreenConnect). The pattern holds: unauthenticated flaw in an internet-facing management or gateway product, KEV listing within days.\n\n## Action\n1. **Patch immediately** to 15.5.5-014 / 16.0.4-302 / 16.5.0-780 or later, including Secure Email and Web Manager.\n2. **Assume compromise** on any internet-reachable appliance that was unpatched after the Cisco advisory. Root access means the appliance itself cannot be trusted to report its own integrity \u2014 verify from outside.\n3. **Rotate every credential the appliance held:** LDAP/AD bind accounts, SMTP relay credentials, API keys, admin passwords, and any certificate private keys stored on the device.\n4. **Hunt** for anomalous `root` shell activity, new local accounts, unexpected outbound connections from the gateway, and modifications to mail policy/quarantine rules. Pull message-tracking logs for delivery anomalies in the exposure window.\n5. **Review mail that transited the appliance** during the exposure period \u2014 a compromised gateway can pass phishing through untouched.\n\n## Cross-reference\n- `CVE-2026-85706-GitLab-Commits-API-Path-Traversal-Arbitrary-File-Read-2026.md` \u2014 same window, same pattern (unauth flaw, internet-facing dev/infra platform, KEV within days).\n- `CVE-2026-60004-Gitea-DiffPatch-Code-Injection-RCE-KEV-Exploited.md` \u2014 Red Heron campaign exploiting a KEV RCE in the same window.\n- `Edge-Device-Exposure-Convergence-NCSC-Tenable-Microsoft-2026-08-27.md` \u2014 the structural edge-appliance exposure argument this instantiates.\n\n#cve #cisco #secure-email-gateway #asyncos #sql-injection #rce #root #unauthenticated #kev #zero-day #edge-device #critical #corroborated\n\n## Tags\n #corroborated",
    "sev": "Critical",
    "year": "2026",
    "kev": true,
@@ -4463,6 +4526,22 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-87886": {
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-87886-Acronis-cPanel-Backup-Plugin-Insecure-Permissions-Local-PrivEsc-Exploited-2026.md",
+   "body": "# CVE-2026-87886 \u2014 Acronis Backup Plugin for cPanel/WHM/Plesk: Insecure File Permissions \u2192 Local Root Privilege Escalation, Exploited\n\n\u26a0\ufe0f **Verification:** Corroborated \u2014 3 independent sources\n\n> Source: [SecurityWeek](https://www.securityweek.com/acronis-patches-exploited-vulnerability-in-cpanel-backup-plugin/) \u2014 2026-09-16\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/acronis-warns-of-actively-exploited-flaw-in-its-cpanel-backup-plugin/) \u2014 2026-09-15\n> Source: X @SecurityWeek \u2014 2026-09-16 (feed item, tweet 2100008597\u2026)\n\n**Type:** CVE / insecure file permissions \u2192 local privilege escalation | **Severity:** High | **Date:** 2026-09-16\n\n## Summary\n**CVE-2026-87886** is an **insecure file permissions** flaw in the **Acronis backup plugin for cPanel, WebHost Manager (WHM) and Plesk** on Linux. A low-privileged local user can abuse the plugin's file permissions to escalate privileges on the host. Acronis has shipped a patch and reports the flaw as **exploited**.\n\n**Affected:** Acronis backup plugin deployments on cPanel / WHM / Plesk (Linux). **Patched** \u2014 apply the vendor update.\n\n## Why this matters\n1. **On shared hosting, \"local privilege escalation\" means cross-tenant compromise.** A cPanel box hosts many unrelated customers. Any one of them \u2014 or anyone who has popped a single vulnerable site on the box \u2014 becomes root over every other tenant on the server. The blast radius is the whole machine, not the attacking account.\n2. **Backup agents are high-value by design.** The plugin exists to read every customer's files and credentials and to write them somewhere else. Root on the backup path is also access to the backup destination and its stored credentials.\n3. **It lands alongside the LiteSpeed Enterprise shared-hosting root flaw in the same week.** Two independent shared-hosting privilege-boundary failures in days. The hosting control-plane stack (cPanel/WHM/Plesk and its plugin ecosystem) is receiving attention and should be treated as a tier-0 patch target, not a commodity one.\n4. **Exploited status with a local-only vector is still urgent** on shared hosting, because initial access to *some* account on a shared box is cheap \u2014 a single vulnerable WordPress install supplies it.\n\n## Action\n1. **Apply the Acronis plugin update** across all cPanel/WHM/Plesk hosts now.\n2. **Audit plugin file and directory permissions** post-patch \u2014 confirm the fix actually changed ownership/mode on your systems rather than assuming.\n3. **Assume tenant compromise** on any shared host that was unpatched and had a compromised customer account in the window. Root access invalidates per-tenant isolation retroactively.\n4. **Rotate** backup-destination credentials, control-panel admin passwords and any API tokens reachable from the host.\n5. **Hunt** for unexpected setuid binaries, cron entries, new local accounts, and modifications under the plugin's install path.\n\n## Cross-reference\n- `LiteSpeed-Enterprise-Shared-Hosting-Low-Privilege-User-To-Root-2026.md` \u2014 same week, same shared-hosting privilege-boundary failure class.\n- `CVE-2026-5430-WSO2-API-Manager-JWT-Signature-Verification-Bypass-Forged-Admin-Tokens-2026.md` \u2014 same sweep window, exploited.\n\n#cve #acronis #cpanel #whm #plesk #shared-hosting #privilege-escalation #local #backup #exploited #high #corroborated\n\n## Tags\n #corroborated",
+   "sev": "High",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-13293": {
+   "file": "Threat_Intel/CVEs/2026/Low/CVE-2026-13293.md",
+   "body": "# CVE-2026-13293\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Low  \n**Year:** 2026\n\n## Summary\n10. **Run `Dashboards/make_cve_notes.py` manually from Windows** \u2014 nine CVEs now lack auto-generated stubs across five sweeps: CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310.\n\n## Where it appears in this vault\n- `X_Intel/x-intel-2026-09-16.md` \u2014 10. **Run `Dashboards/make_cve_notes.py` manually from Windows** \u2014 nine CVEs now lack auto-generated stubs across five sweeps: CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310.\n- `X_Intel/x-intel-tracker.md` \u2014 AV26-925 Docker (Sandboxes <0.43.0) \u00b7 AV26-924 Mozilla (Firefox <156; ESR <115.41/140.16/153.3) \u00b7 AV26-923 GNU libextractor <1.15 (**CVE-2026-91752**, OLE2 stack overflow) \u00b7 AV26-922 IBM (Langflow OSS scanner-blocklist bypass; MQ **CVE-2026-13293** Java messaging RCE; Sterling File Gateway **CVE-2026-19290** improper access control) \u00b7 AV26-921 Cisco (**CVE-2026-76461**, KEV) \u00b7 AV26-920 Android Sept rollup \u00b7 AV26-919 Samsung SMR-SEP-2026 \u00b7 AV26-918 MongoDB (<7.0.43/8.0.32/8.3.11/9.0.1, SERVER-134063).\n- `X_Intel/x-intel-tracker.md` \u2014 Step 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Windows Plan9 mount failure, **fifth consecutive sweep**). **No CVE-coverage line this run.** Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-5430**, **CVE-2026-87886**, **CVE-2026-91752**, **CVE-2026-13293**, **CVE-2026-19290** (this run), plus **CVE-2026-56711**, **CVE-2026-73324**, **CVE-2026-85706** and **CVE-2026-0310** carried over. **The shell has now been unavailable for five straight sweeps \u2014 this has stopped being a transient failure and should be treated as a standing defect.** Running `make_cve_notes.py` manually from Windows would clear the whole backlog.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-13293\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-13293\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-13293\n\n## Tags\n#cve #2026 #low #auto-stub",
+   "sev": "Low",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-18206": {
    "file": "Threat_Intel/CVEs/2026/Low/CVE-2026-18206.md",
    "body": "# CVE-2026-18206\n\n\u2705 **Verification:** Verified \u2014 4 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Low  \n**Year:** 2026\n\n## Summary\n@CVEnew (Jul-31) \u2014 **CVE-2026-18206** Keycloak `keycloak-services` flaw (triggered by a realm administrator). Auto-CVE, low signal / requires admin.\n\n## Where it appears in this vault\n- `X_Intel/x-intel-2026-08-01.md` \u2014 @CVEnew (Jul-31) \u2014 **CVE-2026-18206** Keycloak `keycloak-services` flaw (triggered by a realm administrator). Auto-CVE, low signal / requires admin.\n- `X_Intel/x-intel-tracker.md` \u2014 Logged/minor -> X_Intel/x-intel-2026-08-01.md: DragonForce 2 victims (Jul-31); BofA acquires MDSec (Jul-31); EU AI Act enforcement (Jul-31); Claude/Opus5 wiped Supabase DB (Jul-30); CVE-2026-18206 Keycloak realm-admin auto-CVE (Jul-31); Meta smart-glasses EU ban risk (Jul-31).\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-18206\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-18206\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-18206\n\n## Tags\n#cve #2026 #low #auto-stub #verified",
@@ -4477,6 +4556,14 @@
    "sev": "Low",
    "year": "2026",
    "kev": true,
+   "apts": []
+  },
+  "CVE-2026-19290": {
+   "file": "Threat_Intel/CVEs/2026/Low/CVE-2026-19290.md",
+   "body": "# CVE-2026-19290\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Low  \n**Year:** 2026\n\n## Summary\n10. **Run `Dashboards/make_cve_notes.py` manually from Windows** \u2014 nine CVEs now lack auto-generated stubs across five sweeps: CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310.\n\n## Where it appears in this vault\n- `X_Intel/x-intel-2026-09-16.md` \u2014 10. **Run `Dashboards/make_cve_notes.py` manually from Windows** \u2014 nine CVEs now lack auto-generated stubs across five sweeps: CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310.\n- `X_Intel/x-intel-tracker.md` \u2014 AV26-925 Docker (Sandboxes <0.43.0) \u00b7 AV26-924 Mozilla (Firefox <156; ESR <115.41/140.16/153.3) \u00b7 AV26-923 GNU libextractor <1.15 (**CVE-2026-91752**, OLE2 stack overflow) \u00b7 AV26-922 IBM (Langflow OSS scanner-blocklist bypass; MQ **CVE-2026-13293** Java messaging RCE; Sterling File Gateway **CVE-2026-19290** improper access control) \u00b7 AV26-921 Cisco (**CVE-2026-76461**, KEV) \u00b7 AV26-920 Android Sept rollup \u00b7 AV26-919 Samsung SMR-SEP-2026 \u00b7 AV26-918 MongoDB (<7.0.43/8.0.32/8.3.11/9.0.1, SERVER-134063).\n- `X_Intel/x-intel-tracker.md` \u2014 Step 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Windows Plan9 mount failure, **fifth consecutive sweep**). **No CVE-coverage line this run.** Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-5430**, **CVE-2026-87886**, **CVE-2026-91752**, **CVE-2026-13293**, **CVE-2026-19290** (this run), plus **CVE-2026-56711**, **CVE-2026-73324**, **CVE-2026-85706** and **CVE-2026-0310** carried over. **The shell has now been unavailable for five straight sweeps \u2014 this has stopped being a transient failure and should be treated as a standing defect.** Running `make_cve_notes.py` manually from Windows would clear the whole backlog.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-19290\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-19290\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-19290\n\n## Tags\n#cve #2026 #low #auto-stub",
+   "sev": "Low",
+   "year": "2026",
+   "kev": false,
    "apts": []
   },
   "CVE-2026-34486": {
@@ -4525,6 +4612,14 @@
    "sev": "Low",
    "year": "2026",
    "kev": true,
+   "apts": []
+  },
+  "CVE-2026-91752": {
+   "file": "Threat_Intel/CVEs/2026/Low/CVE-2026-91752.md",
+   "body": "# CVE-2026-91752\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Low  \n**Year:** 2026\n\n## Summary\n10. **Run `Dashboards/make_cve_notes.py` manually from Windows** \u2014 nine CVEs now lack auto-generated stubs across five sweeps: CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310.\n\n## Where it appears in this vault\n- `X_Intel/x-intel-2026-09-16.md` \u2014 10. **Run `Dashboards/make_cve_notes.py` manually from Windows** \u2014 nine CVEs now lack auto-generated stubs across five sweeps: CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310.\n- `X_Intel/x-intel-tracker.md` \u2014 AV26-925 Docker (Sandboxes <0.43.0) \u00b7 AV26-924 Mozilla (Firefox <156; ESR <115.41/140.16/153.3) \u00b7 AV26-923 GNU libextractor <1.15 (**CVE-2026-91752**, OLE2 stack overflow) \u00b7 AV26-922 IBM (Langflow OSS scanner-blocklist bypass; MQ **CVE-2026-13293** Java messaging RCE; Sterling File Gateway **CVE-2026-19290** improper access control) \u00b7 AV26-921 Cisco (**CVE-2026-76461**, KEV) \u00b7 AV26-920 Android Sept rollup \u00b7 AV26-919 Samsung SMR-SEP-2026 \u00b7 AV26-918 MongoDB (<7.0.43/8.0.32/8.3.11/9.0.1, SERVER-134063).\n- `X_Intel/x-intel-tracker.md` \u2014 Step 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Windows Plan9 mount failure, **fifth consecutive sweep**). **No CVE-coverage line this run.** Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-5430**, **CVE-2026-87886**, **CVE-2026-91752**, **CVE-2026-13293**, **CVE-2026-19290** (this run), plus **CVE-2026-56711**, **CVE-2026-73324**, **CVE-2026-85706** and **CVE-2026-0310** carried over. **The shell has now been unavailable for five straight sweeps \u2014 this has stopped being a transient failure and should be treated as a standing defect.** Running `make_cve_notes.py` manually from Windows would clear the whole backlog.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-91752\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-91752\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-91752\n\n## Tags\n#cve #2026 #low #auto-stub",
+   "sev": "Low",
+   "year": "2026",
+   "kev": false,
    "apts": []
   },
   "CVE-2026-10104": {
@@ -4666,6 +4761,14 @@
   "CVE-2026-18685": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-18685.md",
    "body": "# CVE-2026-18685\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nGL.iNet GL-MT3000 CVE-2026-18685 / CVE-2026-18684 (companion command-injection CVEs) \u2014 captured in the CVE-2026-18686 note's \"Related\" section.\n\n## Where it appears in this vault\n- `X_Intel/x-intel-2026-08-08.md` \u2014 GL.iNet GL-MT3000 CVE-2026-18685 / CVE-2026-18684 (companion command-injection CVEs) \u2014 captured in the CVE-2026-18686 note's \"Related\" section.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-18685\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-18685\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-18685\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-19515": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-19515.md",
+   "body": "# CVE-2026-19515\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-19515\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-19515\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-19515\n\n## Tags\n#cve #2026 #unrated #auto-stub",
    "sev": "",
    "year": "2026",
    "kev": false,
@@ -4855,6 +4958,14 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-41573": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-41573.md",
+   "body": "# CVE-2026-41573\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-41573\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-41573\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-41573\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-4201": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-4201.md",
    "body": "# CVE-2026-4201\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-4201\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-4201\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-4201\n\n## Tags\n#cve #2026 #unrated #auto-stub",
@@ -4887,6 +4998,94 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-44202": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-44202.md",
+   "body": "# CVE-2026-44202\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-44202\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-44202\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-44202\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-44203": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-44203.md",
+   "body": "# CVE-2026-44203\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-44203\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-44203\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-44203\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-45048": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-45048.md",
+   "body": "# CVE-2026-45048\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-45048\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-45048\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-45048\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-45051": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-45051.md",
+   "body": "# CVE-2026-45051\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-45051\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-45051\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-45051\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-45794": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-45794.md",
+   "body": "# CVE-2026-45794\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-45794\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-45794\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-45794\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-46498": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-46498.md",
+   "body": "# CVE-2026-46498\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-46498\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-46498\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-46498\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-46619": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-46619.md",
+   "body": "# CVE-2026-46619\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-46619\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-46619\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-46619\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-46623": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-46623.md",
+   "body": "# CVE-2026-46623\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-46623\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-46623\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-46623\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-47424": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-47424.md",
+   "body": "# CVE-2026-47424\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-47424\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-47424\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-47424\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-47426": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-47426.md",
+   "body": "# CVE-2026-47426\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-47426\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-47426\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-47426\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-48717": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-48717.md",
+   "body": "# CVE-2026-48717\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-48717\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-48717\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-48717\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-50549": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-50549.md",
    "body": "# CVE-2026-50549\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-50549\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-50549\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-50549\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
@@ -4911,9 +5110,25 @@
    "kev": true,
    "apts": []
   },
+  "CVE-2026-51990": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-51990.md",
+   "body": "# CVE-2026-51990\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nUpdate \u2014 2026-09-15: CVE assigned (CVE-2026-51990); corroborated by second source\n\n## Where it appears in this vault\n- `Threat_Intel/Malware/GRAYRABBIT-UNC3569-Sogou-Input-Method-Exploitation-2026.md` \u2014 Update \u2014 2026-09-15: CVE assigned (CVE-2026-51990); corroborated by second source\n- `Threat_Intel/Malware/GRAYRABBIT-UNC3569-Sogou-Input-Method-Exploitation-2026.md` \u2014 CVE-2026-51990** is now assigned to the Sogou Input Method flaw.\n- `Threat_Intel/Malware/GRAYRABBIT-UNC3569-Sogou-Input-Method-Exploitation-2026.md` \u2014 1. **Action step 3 is complete.** This is now a normal patch-pipeline item. Feed **CVE-2026-51990** into vulnerability management and asset inventories keyed on CVE feeds \u2014 it will now surface where it previously would not have.\n- `Threat_Intel/Malware/GRAYRABBIT-UNC3569-Sogou-Input-Method-Exploitation-2026.md` \u2014 cve-2026-51990 #identifier-assigned #corroborated #tencent #one-click-rce\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-51990\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-51990\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-51990\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-53409": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-53409.md",
    "body": "# CVE-2026-53409\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-53409\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-53409\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-53409\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-53660": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-53660.md",
+   "body": "# CVE-2026-53660\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-53660\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-53660\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-53660\n\n## Tags\n#cve #2026 #unrated #auto-stub",
    "sev": "",
    "year": "2026",
    "kev": false,
@@ -4989,6 +5204,30 @@
    "sev": "",
    "year": "2026",
    "kev": true,
+   "apts": []
+  },
+  "CVE-2026-62263": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-62263.md",
+   "body": "# CVE-2026-62263\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-62263\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-62263\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-62263\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-62280": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-62280.md",
+   "body": "# CVE-2026-62280\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-62280\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-62280\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-62280\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-62379": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-62379.md",
+   "body": "# CVE-2026-62379\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-62379\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-62379\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-62379\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
    "apts": []
   },
   "CVE-2026-62916": {
@@ -5130,94 +5369,94 @@
  },
  "recent": [
   {
-   "title": "CVE-2026-73324",
-   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-73324.md",
-   "cat": "cve",
-   "ts": "2026-09-14"
-  },
-  {
-   "title": "Android-VPN-Lockdown-Bypass-Hardware-Offload-Real-IP-Leak-Mullvad-2026",
-   "file": "Guides/Android-VPN-Lockdown-Bypass-Hardware-Offload-Real-IP-Leak-Mullvad-2026.md",
+   "title": "Win11-26H2-Phantom-DLLs-xtajitse-xtajitf-Sideloading-Surface-Hexacorn-2026",
+   "file": "Guides/Win11-26H2-Phantom-DLLs-xtajitse-xtajitf-Sideloading-Surface-Hexacorn-2026.md",
    "cat": "technique",
-   "ts": "2026-09-13"
+   "ts": "2026-09-16"
   },
   {
-   "title": "EU-Cyber-Resilience-Act-Vulnerability-Disclosure-Readiness-UpGuard-2026",
-   "file": "Guides/EU-Cyber-Resilience-Act-Vulnerability-Disclosure-Readiness-UpGuard-2026.md",
-   "cat": "technique",
-   "ts": "2026-09-13"
-  },
-  {
-   "title": "AI-SOC-Alert-Surge-685pct-Intezer-Permission-Bypass-Agent-Telemetry-2026",
-   "file": "Guides/AI-BugBounty/AI-SOC-Alert-Surge-685pct-Intezer-Permission-Bypass-Agent-Telemetry-2026.md",
+   "title": "PhantomRaven-LLM-Generated-Infostealer-npm-RDD-Bug-Bounty-Sourcing-CrowdStrike-2026",
+   "file": "Guides/AI-BugBounty/PhantomRaven-LLM-Generated-Infostealer-npm-RDD-Bug-Bounty-Sourcing-CrowdStrike-2026.md",
    "cat": "ai-bugbounty",
-   "ts": "2026-09-13"
+   "ts": "2026-09-16"
   },
   {
-   "title": "Anthropic-Threat-Intelligence-Report-2026-09-Claude-Misuse-Midnight-Blizzard-Model-Theft",
-   "file": "Guides/AI-BugBounty/Anthropic-Threat-Intelligence-Report-2026-09-Claude-Misuse-Midnight-Blizzard-Model-Theft.md",
-   "cat": "ai-bugbounty",
-   "ts": "2026-09-13"
+   "title": "Minnesota-Water-Utilities-Internet-Exposed-PLCs-Default-Credentials-CISA-AA26-097A-2026",
+   "file": "Threat_Intel/Minnesota-Water-Utilities-Internet-Exposed-PLCs-Default-Credentials-CISA-AA26-097A-2026.md",
+   "cat": "other",
+   "ts": "2026-09-16"
   },
   {
-   "title": "Self-Expanding-Stolen-Inference-Supply-Chain-AI-Agent-Harvesting-LLM-Access-2026",
-   "file": "Guides/AI-BugBounty/Self-Expanding-Stolen-Inference-Supply-Chain-AI-Agent-Harvesting-LLM-Access-2026.md",
-   "cat": "supplychain",
-   "ts": "2026-09-13"
-  },
-  {
-   "title": "AI-Assisted-Executive-Impersonation-Invoice-Fraud-ACH-Microsoft-2026",
-   "file": "Guides/phishing/AI-Assisted-Executive-Impersonation-Invoice-Fraud-ACH-Microsoft-2026.md",
-   "cat": "technique",
-   "ts": "2026-09-13"
-  },
-  {
-   "title": "Phishing-Awareness-Testing-Click-Rate-Ineffective-Measure-Credential-Leak-Reporting-2026",
-   "file": "Guides/phishing/Phishing-Awareness-Testing-Click-Rate-Ineffective-Measure-Credential-Leak-Reporting-2026.md",
-   "cat": "technique",
-   "ts": "2026-09-13"
-  },
-  {
-   "title": "Blockstream-Liquid-Elements-Rangeproof-Cache-Key-Collision-4000BTC-2026",
-   "file": "Threat_Intel/Breaches/Blockstream-Liquid-Elements-Rangeproof-Cache-Key-Collision-4000BTC-2026.md",
+   "title": "CenterPoint-Energy-Customer-Data-Breach-Dark-Web-Leak-2026",
+   "file": "Threat_Intel/Breaches/CenterPoint-Energy-Customer-Data-Breach-Dark-Web-Leak-2026.md",
    "cat": "breach",
-   "ts": "2026-09-13"
+   "ts": "2026-09-16"
   },
   {
-   "title": "Boston-Scientific-Cyber-Incident-Order-Fulfillment-Disruption-2026",
-   "file": "Threat_Intel/Breaches/Boston-Scientific-Cyber-Incident-Order-Fulfillment-Disruption-2026.md",
-   "cat": "breach",
-   "ts": "2026-09-13"
-  },
-  {
-   "title": "DGFiP-French-Tax-Authority-Breach-CNIL-Onsite-Investigation-2026",
-   "file": "Threat_Intel/Breaches/DGFiP-French-Tax-Authority-Breach-CNIL-Onsite-Investigation-2026.md",
-   "cat": "breach",
-   "ts": "2026-09-13"
-  },
-  {
-   "title": "Revolut-Customer-Data-Disclosed-Fraudulent-Government-Data-Request-2026",
-   "file": "Threat_Intel/Breaches/Revolut-Customer-Data-Disclosed-Fraudulent-Government-Data-Request-2026.md",
-   "cat": "breach",
-   "ts": "2026-09-13"
-  },
-  {
-   "title": "ShinyHunters-Florida-DMV-Odido-Leak-Dutch-Police-Vishing-Audio-2026",
-   "file": "Threat_Intel/Breaches/ShinyHunters-Florida-DMV-Odido-Leak-Dutch-Police-Vishing-Audio-2026.md",
-   "cat": "breach",
-   "ts": "2026-09-13"
-  },
-  {
-   "title": "CVE-2026-82329-JFrog-Artifactory-Auth-Bypass-Admin-Token-Minting",
-   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-82329-JFrog-Artifactory-Auth-Bypass-Admin-Token-Minting.md",
+   "title": "CVE-2025-13166",
+   "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-13166.md",
    "cat": "cve",
-   "ts": "2026-09-13"
+   "ts": "2026-09-16"
   },
   {
-   "title": "CVE-2026-85102-85103-Check-Point-VPN-Certificate-Auth-Bypass-ASN1-Heap-Overflow-2026",
-   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-85102-85103-Check-Point-VPN-Certificate-Auth-Bypass-ASN1-Heap-Overflow-2026.md",
+   "title": "CVE-2025-40575",
+   "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-40575.md",
    "cat": "cve",
-   "ts": "2026-09-13"
+   "ts": "2026-09-16"
+  },
+  {
+   "title": "CVE-2025-40576",
+   "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-40576.md",
+   "cat": "cve",
+   "ts": "2026-09-16"
+  },
+  {
+   "title": "CVE-2025-40577",
+   "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-40577.md",
+   "cat": "cve",
+   "ts": "2026-09-16"
+  },
+  {
+   "title": "CVE-2025-40578",
+   "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-40578.md",
+   "cat": "cve",
+   "ts": "2026-09-16"
+  },
+  {
+   "title": "CVE-2025-5802",
+   "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-5802.md",
+   "cat": "cve",
+   "ts": "2026-09-16"
+  },
+  {
+   "title": "CVE-2026-39987-PreAuth-RCE",
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-39987-PreAuth-RCE.md",
+   "cat": "cve",
+   "ts": "2026-09-16"
+  },
+  {
+   "title": "CVE-2026-5430-WSO2-API-Manager-JWT-Signature-Verification-Bypass-Forged-Admin-Tokens-2026",
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-5430-WSO2-API-Manager-JWT-Signature-Verification-Bypass-Forged-Admin-Tokens-2026.md",
+   "cat": "cve",
+   "ts": "2026-09-16"
+  },
+  {
+   "title": "CVE-2026-60004-Gitea-DiffPatch-Code-Injection-RCE-KEV-Exploited",
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-60004-Gitea-DiffPatch-Code-Injection-RCE-KEV-Exploited.md",
+   "cat": "cve",
+   "ts": "2026-09-16"
+  },
+  {
+   "title": "CVE-2026-WooCommerce-Wholesale-Lead-Capture-Unauth-File-Upload-PHP-Webshell-2026",
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-WooCommerce-Wholesale-Lead-Capture-Unauth-File-Upload-PHP-Webshell-2026.md",
+   "cat": "cve",
+   "ts": "2026-09-16"
+  },
+  {
+   "title": "LiteSpeed-Enterprise-Shared-Hosting-Low-Privilege-User-To-Root-2026",
+   "file": "Threat_Intel/CVEs/2026/Critical/LiteSpeed-Enterprise-Shared-Hosting-Low-Privilege-User-To-Root-2026.md",
+   "cat": "cve",
+   "ts": "2026-09-16"
   }
  ],
  "kev_referenced": [
@@ -5330,6 +5569,7 @@
   "CVE-2026-72530",
   "CVE-2026-73570",
   "CVE-2026-75650",
+  "CVE-2026-76461",
   "CVE-2026-8037",
   "CVE-2026-81578",
   "CVE-2026-81963",
@@ -5958,6 +6198,13 @@
    "cves": 501,
    "breaches": 125,
    "malware": 147
+  },
+  {
+   "date": "2026-09-16",
+   "intel_items": 1488,
+   "cves": 547,
+   "breaches": 128,
+   "malware": 154
   }
  ]
 }
