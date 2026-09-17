@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-16 20:45",
- "today": "2026-09-16",
+ "generated": "2026-09-17 20:45",
+ "today": "2026-09-17",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
@@ -12,33 +12,32 @@
   "commands": 13,
   "guides": 268,
   "intel_items": 1488,
-  "kev": 127
+  "kev": 128
  },
  "windows": {
   "week": {
-   "total": 89,
+   "total": 66,
    "by_cat": {
-    "cve": 30,
-    "technique": 18,
-    "breach": 7,
-    "other": 2,
-    "ai-bugbounty": 10,
-    "misc": 1,
-    "malware": 13,
+    "cve": 21,
+    "technique": 11,
+    "breach": 6,
+    "other": 1,
+    "ai-bugbounty": 9,
+    "malware": 11,
     "supplychain": 4,
-    "tool": 4
+    "tool": 3
    },
    "by_src": {}
   },
   "month": {
-   "total": 591,
+   "total": 574,
    "by_cat": {
-    "cve": 158,
-    "breach": 76,
-    "malware": 78,
+    "cve": 149,
+    "breach": 70,
     "technique": 50,
-    "other": 58,
+    "other": 57,
     "misc": 80,
+    "malware": 77,
     "ai-bugbounty": 52,
     "supplychain": 24,
     "tool": 13,
@@ -1753,9 +1752,7 @@
   }
  ],
  "apt_activity_windows": {
-  "week": {
-   "Sandworm": 4
-  },
+  "week": {},
   "month": {
    "Fire Ant": 5,
    "Sandworm": 4,
@@ -4531,7 +4528,7 @@
    "body": "# CVE-2026-87886 \u2014 Acronis Backup Plugin for cPanel/WHM/Plesk: Insecure File Permissions \u2192 Local Root Privilege Escalation, Exploited\n\n\u26a0\ufe0f **Verification:** Corroborated \u2014 3 independent sources\n\n> Source: [SecurityWeek](https://www.securityweek.com/acronis-patches-exploited-vulnerability-in-cpanel-backup-plugin/) \u2014 2026-09-16\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/acronis-warns-of-actively-exploited-flaw-in-its-cpanel-backup-plugin/) \u2014 2026-09-15\n> Source: X @SecurityWeek \u2014 2026-09-16 (feed item, tweet 2100008597\u2026)\n\n**Type:** CVE / insecure file permissions \u2192 local privilege escalation | **Severity:** High | **Date:** 2026-09-16\n\n## Summary\n**CVE-2026-87886** is an **insecure file permissions** flaw in the **Acronis backup plugin for cPanel, WebHost Manager (WHM) and Plesk** on Linux. A low-privileged local user can abuse the plugin's file permissions to escalate privileges on the host. Acronis has shipped a patch and reports the flaw as **exploited**.\n\n**Affected:** Acronis backup plugin deployments on cPanel / WHM / Plesk (Linux). **Patched** \u2014 apply the vendor update.\n\n## Why this matters\n1. **On shared hosting, \"local privilege escalation\" means cross-tenant compromise.** A cPanel box hosts many unrelated customers. Any one of them \u2014 or anyone who has popped a single vulnerable site on the box \u2014 becomes root over every other tenant on the server. The blast radius is the whole machine, not the attacking account.\n2. **Backup agents are high-value by design.** The plugin exists to read every customer's files and credentials and to write them somewhere else. Root on the backup path is also access to the backup destination and its stored credentials.\n3. **It lands alongside the LiteSpeed Enterprise shared-hosting root flaw in the same week.** Two independent shared-hosting privilege-boundary failures in days. The hosting control-plane stack (cPanel/WHM/Plesk and its plugin ecosystem) is receiving attention and should be treated as a tier-0 patch target, not a commodity one.\n4. **Exploited status with a local-only vector is still urgent** on shared hosting, because initial access to *some* account on a shared box is cheap \u2014 a single vulnerable WordPress install supplies it.\n\n## Action\n1. **Apply the Acronis plugin update** across all cPanel/WHM/Plesk hosts now.\n2. **Audit plugin file and directory permissions** post-patch \u2014 confirm the fix actually changed ownership/mode on your systems rather than assuming.\n3. **Assume tenant compromise** on any shared host that was unpatched and had a compromised customer account in the window. Root access invalidates per-tenant isolation retroactively.\n4. **Rotate** backup-destination credentials, control-panel admin passwords and any API tokens reachable from the host.\n5. **Hunt** for unexpected setuid binaries, cron entries, new local accounts, and modifications under the plugin's install path.\n\n## Cross-reference\n- `LiteSpeed-Enterprise-Shared-Hosting-Low-Privilege-User-To-Root-2026.md` \u2014 same week, same shared-hosting privilege-boundary failure class.\n- `CVE-2026-5430-WSO2-API-Manager-JWT-Signature-Verification-Bypass-Forged-Admin-Tokens-2026.md` \u2014 same sweep window, exploited.\n\n#cve #acronis #cpanel #whm #plesk #shared-hosting #privilege-escalation #local #backup #exploited #high #corroborated\n\n## Tags\n #corroborated",
    "sev": "High",
    "year": "2026",
-   "kev": false,
+   "kev": true,
    "apts": []
   },
   "CVE-2026-13293": {
@@ -5585,6 +5582,7 @@
   "CVE-2026-86060",
   "CVE-2026-86218",
   "CVE-2026-87491",
+  "CVE-2026-87886",
   "CVE-2026-9082",
   "CVE-2026-9586"
  ],
@@ -6201,6 +6199,13 @@
   },
   {
    "date": "2026-09-16",
+   "intel_items": 1488,
+   "cves": 547,
+   "breaches": 128,
+   "malware": 154
+  },
+  {
+   "date": "2026-09-17",
    "intel_items": 1488,
    "cves": 547,
    "breaches": 128,
