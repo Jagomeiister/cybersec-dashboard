@@ -1,79 +1,79 @@
 {
- "generated": "2026-09-17 20:45",
- "today": "2026-09-17",
+ "generated": "2026-09-18 20:45",
+ "today": "2026-09-18",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
-  "cves": 547,
-  "breaches": 128,
-  "malware": 154,
-  "supplychain": 63,
-  "tools": 90,
+  "cves": 576,
+  "breaches": 131,
+  "malware": 155,
+  "supplychain": 64,
+  "tools": 91,
   "commands": 13,
-  "guides": 268,
-  "intel_items": 1488,
-  "kev": 128
+  "guides": 273,
+  "intel_items": 1502,
+  "kev": 130
  },
  "windows": {
   "week": {
-   "total": 66,
+   "total": 49,
    "by_cat": {
-    "cve": 21,
-    "technique": 11,
-    "breach": 6,
-    "other": 1,
-    "ai-bugbounty": 9,
-    "malware": 11,
+    "cve": 20,
+    "malware": 7,
+    "ai-bugbounty": 3,
     "supplychain": 4,
-    "tool": 3
+    "breach": 7,
+    "technique": 4,
+    "tool": 2,
+    "other": 2
    },
    "by_src": {}
   },
   "month": {
-   "total": 574,
+   "total": 582,
    "by_cat": {
-    "cve": 149,
-    "breach": 70,
+    "cve": 150,
     "technique": 50,
-    "other": 57,
+    "other": 59,
     "misc": 80,
-    "malware": 77,
+    "malware": 78,
+    "breach": 72,
     "ai-bugbounty": 52,
-    "supplychain": 24,
-    "tool": 13,
+    "supplychain": 25,
+    "tool": 14,
     "command": 2
    },
    "by_src": {}
   },
   "year": {
-   "total": 1488,
+   "total": 1502,
    "by_cat": {
     "ai-bugbounty": 109,
-    "malware": 184,
-    "other": 106,
-    "tool": 57,
+    "malware": 185,
+    "other": 108,
+    "tool": 58,
     "misc": 296,
     "command": 6,
-    "technique": 131,
-    "cve": 358,
-    "breach": 156,
-    "supplychain": 85
+    "technique": 132,
+    "cve": 363,
+    "breach": 159,
+    "supplychain": 86
    },
    "by_src": {}
   },
   "all": {
-   "total": 1488,
+   "total": 1502,
    "by_cat": {
     "ai-bugbounty": 109,
-    "malware": 184,
-    "other": 106,
-    "tool": 57,
+    "malware": 185,
+    "other": 108,
+    "tool": 58,
     "misc": 296,
     "command": 6,
-    "technique": 131,
-    "cve": 358,
-    "breach": 156,
-    "supplychain": 85
+    "technique": 132,
+    "cve": 363,
+    "breach": 159,
+    "supplychain": 86
    },
    "by_src": {}
   }
@@ -1752,33 +1752,36 @@
   }
  ],
  "apt_activity_windows": {
-  "week": {},
+  "week": {
+   "Salt Typhoon": 1
+  },
   "month": {
    "Fire Ant": 5,
    "Sandworm": 4,
-   "APT28": 1
+   "APT28": 1,
+   "Salt Typhoon": 1
   },
   "year": {
    "Sandworm": 6,
    "Fire Ant": 5,
    "Scattered Spider": 3,
    "APT28": 2,
+   "Salt Typhoon": 2,
    "APT41": 2,
    "Volt Typhoon": 1,
    "Gamaredon": 1,
-   "APT29": 1,
-   "Salt Typhoon": 1
+   "APT29": 1
   },
   "all": {
    "Sandworm": 6,
    "Fire Ant": 5,
    "Scattered Spider": 3,
    "APT28": 2,
+   "Salt Typhoon": 2,
    "APT41": 2,
    "Volt Typhoon": 1,
    "Gamaredon": 1,
-   "APT29": 1,
-   "Salt Typhoon": 1
+   "APT29": 1
   }
  },
  "apt_activity_monthly": {
@@ -1831,6 +1834,16 @@
     ]
    },
    {
+    "group": "Salt Typhoon",
+    "data": [
+     0,
+     0,
+     0,
+     1,
+     1
+    ]
+   },
+   {
     "group": "APT41",
     "data": [
      0,
@@ -1839,24 +1852,14 @@
      0,
      0
     ]
-   },
-   {
-    "group": "Volt Typhoon",
-    "data": [
-     0,
-     1,
-     0,
-     0,
-     0
-    ]
    }
   ]
  },
  "cve_sev": {
-  "Critical": 225,
-  "High": 163,
-  "Medium": 23,
-  "Low": 16
+  "Critical": 233,
+  "High": 169,
+  "Low": 30,
+  "Medium": 23
  },
  "cve_year": {
   "2015": 3,
@@ -1869,8 +1872,8 @@
   "2022": 9,
   "2023": 13,
   "2024": 13,
-  "2025": 26,
-  "2026": 453
+  "2025": 27,
+  "2026": 481
  },
  "cve_month": {
   "2025-10": 1,
@@ -1879,7 +1882,7 @@
   "2026-06": 108,
   "2026-07": 16,
   "2026-08": 84,
-  "2026-09": 102
+  "2026-09": 107
  },
  "top_cve": [
   {
@@ -1889,70 +1892,70 @@
    "kev": false
   },
   {
-   "id": "CVE-2026-8452",
-   "n": 53,
-   "sev": "High",
-   "kev": true
-  },
-  {
-   "id": "CVE-2026-59310",
-   "n": 43,
+   "id": "CVE-2026-85706",
+   "n": 62,
    "sev": "Critical",
    "kev": true
   },
   {
-   "id": "CVE-2026-69414",
-   "n": 43,
-   "sev": "High",
-   "kev": false
-  },
-  {
-   "id": "CVE-2026-85880",
-   "n": 40,
+   "id": "CVE-2026-76460",
+   "n": 61,
    "sev": "Critical",
    "kev": true
   },
   {
-   "id": "CVE-2026-10520",
-   "n": 39,
-   "sev": "Critical",
-   "kev": true
-  },
-  {
-   "id": "CVE-2026-19490",
-   "n": 37,
-   "sev": "Critical",
-   "kev": true
-  },
-  {
-   "id": "CVE-2026-34348",
-   "n": 36,
-   "sev": "",
-   "kev": false
-  },
-  {
-   "id": "CVE-2026-4105",
-   "n": 34,
+   "id": "CVE-2026-73324",
+   "n": 61,
    "sev": "High",
    "kev": false
   },
   {
-   "id": "CVE-2026-85046",
-   "n": 33,
-   "sev": "Critical",
-   "kev": true
+   "id": "CVE-2026-56711",
+   "n": 59,
+   "sev": "High",
+   "kev": false
   },
   {
-   "id": "CVE-2026-18885",
-   "n": 33,
+   "id": "CVE-2026-5430",
+   "n": 57,
    "sev": "Critical",
    "kev": false
   },
   {
-   "id": "CVE-2022-0995",
-   "n": 32,
+   "id": "CVE-2026-87886",
+   "n": 57,
    "sev": "High",
    "kev": true
+  },
+  {
+   "id": "CVE-2026-91752",
+   "n": 57,
+   "sev": "Low",
+   "kev": false
+  },
+  {
+   "id": "CVE-2026-13293",
+   "n": 56,
+   "sev": "Low",
+   "kev": false
+  },
+  {
+   "id": "CVE-2026-19290",
+   "n": 56,
+   "sev": "Low",
+   "kev": false
+  },
+  {
+   "id": "CVE-2026-0628",
+   "n": 55,
+   "sev": "High",
+   "kev": false
+  },
+  {
+   "id": "CVE-2026-55945",
+   "n": 55,
+   "sev": "High",
+   "kev": false
   }
  ],
  "cve_pages": {
@@ -2548,6 +2551,14 @@
     "Lazarus Group"
    ]
   },
+  "CVE-2025-70873": {
+   "file": "Threat_Intel/CVEs/2025/Critical/CVE-2025-70873.md",
+   "body": "# CVE-2025-70873\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2025\n\n## Summary\nSophos X-Ops Patch Tuesday breakdown** \u2014 the two exploited flaws identified as **CVE-2026-81963** (Windows Update Stack, CWE-59 + CWE-284) and **CVE-2026-85880** (Windows ALPC, CWE-122 + CWE-908), **mutually exclusive by OS version**. 437 EoP / 258 RCE / 173 info-disclosure; Windows 718, Office and 365 106 each, SQL 63. Flags **OpenSSL CVE-2026-34182 (CVSS 9.1, CWE-354)** and SQLite CVE-2025-70873. **82 Office for Mac CVEs shipped with no patch available** \u2014 two Critical at 9.8, thirteen more via **Preview Pane**, one by **viewing a message in Outlook**. Sophos attributes the volume spike to AI-assisted discovery and notes mean CVSS has fallen 7.8 \u2192 7.4 | -> Threat_Intel/CVEs/2026/Critical/Microsoft-September-2026-Patch-Tuesday-Record-974-CVEs-Two-Exploited-ZeroDays.md (appended)\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 Sophos X-Ops Patch Tuesday breakdown** \u2014 the two exploited flaws identified as **CVE-2026-81963** (Windows Update Stack, CWE-59 + CWE-284) and **CVE-2026-85880** (Windows ALPC, CWE-122 + CWE-908), **mutually exclusive by OS version**. 437 EoP / 258 RCE / 173 info-disclosure; Windows 718, Office and 365 106 each, SQL 63. Flags **OpenSSL CVE-2026-34182 (CVSS 9.1, CWE-354)** and SQLite CVE-2025-70873. **82 Office for Mac CVEs shipped with no patch available** \u2014 two Critical at 9.8, thirteen more via **Preview Pane**, one by **viewing a message in Outlook**. Sophos attributes the volume spike to AI-assisted discovery and notes mean CVSS has fallen 7.8 \u2192 7.4 | -> Threat_Intel/CVEs/2026/Critical/Microsoft-September-2026-Patch-Tuesday-Record-974-CVEs-Two-Exploited-ZeroDays.md (appended)\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-70873\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-70873\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-70873\n\n## Tags\n#cve #2025 #critical #auto-stub",
+   "sev": "Critical",
+   "year": "2025",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2025-20701": {
    "file": "Threat_Intel/CVEs/2025/High/CVE-2025-20701-Airoha-Bluetooth-Beats-Eavesdrop.md",
    "body": "# CVE-2025-20701 \u2014 Airoha Bluetooth SoC Eavesdropping (Beats Studio Buds + others)\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n**Severity:** High \u2014 CVSS **8.8**\n**Affected:** Airoha Bluetooth audio SDK / Airoha SoCs used in many true-wireless earbuds. Apple **Beats Studio Buds** confirmed; also reported in devices from **Sony, Bose, JBL, Marshall, Jabra** and others using the same chip.\n**Type:** Incorrect authorization / missing authentication in the Bluetooth BR/EDR radio \u2014 device can be paired **without user consent**.\n**Status:** Apple fixed it in **Beats Firmware Update 1B211** (auto-delivered when buds are paired and in Bluetooth range of an iPhone/iPad/Mac). Many other vendors have shipped fixes.\n\n## Summary\nA missing-authentication weakness in the Airoha SoC's Bluetooth radio lets an attacker **within Bluetooth range listen through the microphone** of an earbud device that is **not yet paired and is actively seeking pairing requests**. It was disclosed by ERNW researchers **Dennis Heinze and Frieder Steinmetz** alongside CVE-2025-20700 and CVE-2025-20702 at the TROOPERS conference. The eavesdropping window is the unpaired/pairing-seeking state, so risk is highest for buds taken out of the case near an untrusted party.\n\n## Defender actions\n- Ensure Beats Studio Buds are on firmware **1B211** (pair with an Apple device in range to auto-update; verify via the Beats/headphone settings).\n- For other affected brands, apply the latest vendor firmware.\n- User guidance: pair earbuds in trusted environments; don't leave buds in open pairing mode in public/hostile RF environments.\n\n## Sources\n> Source: [@TheHackersNews (X) \u2014 Apple Patches Beats Studio Buds Flaw](https://x.com/TheHackersNews/status/2067887719049793777) \u2014 2026-06-19\n- The Hacker News: https://thehackernews.com/2026/06/apple-patches-beats-studio-buds-flaw.html\n- BleepingComputer: https://www.bleepingcomputer.com/news/security/apple-fixes-beats-studio-buds-flaw-that-let-hackers-spy-on-conversations/\n- SC Media: https://www.scworld.com/brief/apple-releases-security-update-for-beats-studio-buds-vulnerability\n\n*Captured via x-bugbounty-intel-sweep \u2014 2026-06-19*\n\n## Update \u2014 2026-06-23 (impact goes beyond eavesdropping)\nFollow-up reporting clarifies the **Airoha SoC flaw class** is broader than microphone eavesdropping: researchers say an in-range attacker can **read and write the headphone's RAM and flash**, and **abuse the trust relationship the buds have with their paired phone** \u2014 expanding the impact from \"wiretap\" toward firmware tampering and potential pivoting via the paired device. For **Beats Studio Buds**, Apple's **1B211** firmware closes the patched issue; other Airoha-based brands should be on their latest vendor firmware.\n\n> Source: [@TheHackersNews (X) \u2014 Exploiting Airoha Bluetooth flaws goes beyond microphone access](https://x.com/TheHackersNews/status/2068698955605823908) \u2014 2026-06-22 (bookmarked)\n\n*Updated via x-bugbounty-intel-sweep \u2014 2026-06-23*\n\n## Tags\n #verified",
@@ -2944,12 +2955,28 @@
     "Sandworm"
    ]
   },
+  "CVE-2026-20176": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-20176.md",
+   "body": "# CVE-2026-20176\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2026\n\n## Summary\nrss:bleeping-2026-09-17-cisco-ise / rss:securityweek-2026-09-17-cisco-ise | 2026-09-17 | BleepingComputer / SecurityWeek / Cisco `cisco-sa-ISE-ABP-VNSW7Tn5` | **CVE-2026-76460 Cisco Identity Services Engine / ISE-PIC** \u2014 **CVSS 10.0** API authentication bypass \u2192 **root command execution**, **exploited as a zero-day**, **KEV 2026-09-16 with a three-day BOD 26-04 deadline**. No workaround; fixes 3.1 P12 / 3.2 P11 / 3.3 P12 / 3.4 P7 / 3.5 P4. Second CVSS 10.0 **CVE-2026-76423** (REST API auth bypass, not exploited) plus CVE-2026-20176/20211/20307 (authenticated OS command exec, 9.1\u20139.9) and CVE-2026-20284 (9.1, NoSQL). IOC guidance is thin \u2014 suspicious usernames in `access.log` on every node; **re-image, do not clean** | -> Threat_Intel/CVEs/2026/Critical/CVE-2026-76460-Cisco-ISE-API-Auth-Bypass-Root-Exploited-KEV-BOD-26-04-2026.md (new)\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 rss:bleeping-2026-09-17-cisco-ise / rss:securityweek-2026-09-17-cisco-ise | 2026-09-17 | BleepingComputer / SecurityWeek / Cisco `cisco-sa-ISE-ABP-VNSW7Tn5` | **CVE-2026-76460 Cisco Identity Services Engine / ISE-PIC** \u2014 **CVSS 10.0** API authentication bypass \u2192 **root command execution**, **exploited as a zero-day**, **KEV 2026-09-16 with a three-day BOD 26-04 deadline**. No workaround; fixes 3.1 P12 / 3.2 P11 / 3.3 P12 / 3.4 P7 / 3.5 P4. Second CVSS 10.0 **CVE-2026-76423** (REST API auth bypass, not exploited) plus CVE-2026-20176/20211/20307 (authenticated OS command exec, 9.1\u20139.9) and CVE-2026-20284 (9.1, NoSQL). IOC guidance is thin \u2014 suspicious usernames in `access.log` on every node; **re-image, do not clean** | -> Threat_Intel/CVEs/2026/Critical/CVE-2026-76460-Cisco-ISE-API-Auth-Bypass-Root-Exploited-KEV-BOD-26-04-2026.md (new)\n- `X_Intel/x-intel-tracker.md` \u2014 Step 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Windows Plan9 mount failure, **sixth consecutive sweep**; the tool now reports the workspace as wedged and instructs no further retries). **No CVE-coverage line this run.** Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-76460, CVE-2026-76423, CVE-2026-20176, CVE-2026-20211, CVE-2026-20307, CVE-2026-20284, CVE-2026-78159, CVE-2026-78006, CVE-2026-89026, CVE-2026-77692, CVE-2026-76163, CVE-2026-19667, CVE-2026-19666, CVE-2026-80274, CVE-2026-19662, CVE-2026-19668, CVE-2026-75029, CVE-2026-81563, CVE-2026-81736, CVE-2026-77119, CVE-2026-19941, CVE-2026-78301, CVE-2026-19033, CVE-2026-58704, CVE-2026-34182, CVE-2026-0628, CVE-2026-55945** (this run), plus **CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310** carried over. **Running `make_cve_notes.py` manually from Windows would clear the whole backlog \u2014 it is now 36 CVEs deep.**\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-20176\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-20176\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-20176\n\n## Tags\n#cve #2026 #critical #auto-stub",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-20253": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-20253.md",
    "body": "# CVE-2026-20253\n\n\u2705 **Verification:** Verified \u2014 4 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2026\n\n## Summary\n\"Critical Splunk Enterprise Flaw Lets Attackers Run Code Without Authentication\" (06-13 13:23 UTC) \u2192 appended RSS source to Threat_Intel/CVEs/2026/High/Splunk-Builtin-DB-No-Auth-2026.md (corroborates tracked CVE-2026-20253).\n\n## Where it appears in this vault\n- `X_Intel/x-intel-2026-06-14.md` \u2014 \"Critical Splunk Enterprise Flaw Lets Attackers Run Code Without Authentication\" (06-13 13:23 UTC) \u2192 appended RSS source to Threat_Intel/CVEs/2026/High/Splunk-Builtin-DB-No-Auth-2026.md (corroborates tracked CVE-2026-20253).\n- `X_Intel/x-intel-tracker.md` \u2014 2065578741212856660 | 2026-06-12 | @SecAlertsCo | [FEED] Splunk CVE-2026-20253 (CVSS 9.8) unauth arbitrary file create/truncate via PostgreSQL sidecar; fixed 10.2.4/10.0.7 | \u2192 Threat_Intel/CVEs/2026/High/Splunk-Builtin-DB-No-Auth-2026.md (appended \u2014 CVE assigned to prior \"no-auth DB\" note)\n- `X_Intel/x-intel-tracker.md` \u2014 Freshest CVE/supply-chain intel this run came from the X feed (Jun 12-13: Splunk CVE-2026-20253, Arch AUR detail, GreatXML PoC re-release, depx), which posts ahead of the cached RSS hosts.\n- `X_Intel/x-intel-tracker.md` \u2014 rss:thehackernews-2026-06-13-splunk-unauth-rce | 2026-06-13 | The Hacker News | Critical Splunk Enterprise Flaw Lets Attackers Run Code Without Authentication | \u2192 Threat_Intel/CVEs/2026/High/Splunk-Builtin-DB-No-Auth-2026.md (appended RSS source \u2014 corroborates CVE-2026-20253)\n- `X_Intel/x-intel-tracker.md` \u2014 The Hacker News (lastBuild 2026-06-13 23:56 UTC): only in-window item is Splunk unauth-RCE (06-13 13:23 UTC) \u2014 already tracked (CVE-2026-20253). Anthropic Fable/Mythos (06-13 05:42 UTC) just outside 24h window and already logged. 0 new.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-20253\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-20253\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-20253\n\n## Tags\n#cve #2026 #critical #auto-stub #verified",
    "sev": "Critical",
    "year": "2026",
    "kev": true,
+   "apts": []
+  },
+  "CVE-2026-20284": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-20284.md",
+   "body": "# CVE-2026-20284\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2026\n\n## Summary\nrss:bleeping-2026-09-17-cisco-ise / rss:securityweek-2026-09-17-cisco-ise | 2026-09-17 | BleepingComputer / SecurityWeek / Cisco `cisco-sa-ISE-ABP-VNSW7Tn5` | **CVE-2026-76460 Cisco Identity Services Engine / ISE-PIC** \u2014 **CVSS 10.0** API authentication bypass \u2192 **root command execution**, **exploited as a zero-day**, **KEV 2026-09-16 with a three-day BOD 26-04 deadline**. No workaround; fixes 3.1 P12 / 3.2 P11 / 3.3 P12 / 3.4 P7 / 3.5 P4. Second CVSS 10.0 **CVE-2026-76423** (REST API auth bypass, not exploited) plus CVE-2026-20176/20211/20307 (authenticated OS command exec, 9.1\u20139.9) and CVE-2026-20284 (9.1, NoSQL). IOC guidance is thin \u2014 suspicious usernames in `access.log` on every node; **re-image, do not clean** | -> Threat_Intel/CVEs/2026/Critical/CVE-2026-76460-Cisco-ISE-API-Auth-Bypass-Root-Exploited-KEV-BOD-26-04-2026.md (new)\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 rss:bleeping-2026-09-17-cisco-ise / rss:securityweek-2026-09-17-cisco-ise | 2026-09-17 | BleepingComputer / SecurityWeek / Cisco `cisco-sa-ISE-ABP-VNSW7Tn5` | **CVE-2026-76460 Cisco Identity Services Engine / ISE-PIC** \u2014 **CVSS 10.0** API authentication bypass \u2192 **root command execution**, **exploited as a zero-day**, **KEV 2026-09-16 with a three-day BOD 26-04 deadline**. No workaround; fixes 3.1 P12 / 3.2 P11 / 3.3 P12 / 3.4 P7 / 3.5 P4. Second CVSS 10.0 **CVE-2026-76423** (REST API auth bypass, not exploited) plus CVE-2026-20176/20211/20307 (authenticated OS command exec, 9.1\u20139.9) and CVE-2026-20284 (9.1, NoSQL). IOC guidance is thin \u2014 suspicious usernames in `access.log` on every node; **re-image, do not clean** | -> Threat_Intel/CVEs/2026/Critical/CVE-2026-76460-Cisco-ISE-API-Auth-Bypass-Root-Exploited-KEV-BOD-26-04-2026.md (new)\n- `X_Intel/x-intel-tracker.md` \u2014 Step 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Windows Plan9 mount failure, **sixth consecutive sweep**; the tool now reports the workspace as wedged and instructs no further retries). **No CVE-coverage line this run.** Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-76460, CVE-2026-76423, CVE-2026-20176, CVE-2026-20211, CVE-2026-20307, CVE-2026-20284, CVE-2026-78159, CVE-2026-78006, CVE-2026-89026, CVE-2026-77692, CVE-2026-76163, CVE-2026-19667, CVE-2026-19666, CVE-2026-80274, CVE-2026-19662, CVE-2026-19668, CVE-2026-75029, CVE-2026-81563, CVE-2026-81736, CVE-2026-77119, CVE-2026-19941, CVE-2026-78301, CVE-2026-19033, CVE-2026-58704, CVE-2026-34182, CVE-2026-0628, CVE-2026-55945** (this run), plus **CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310** carried over. **Running `make_cve_notes.py` manually from Windows would clear the whole backlog \u2014 it is now 36 CVEs deep.**\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-20284\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-20284\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-20284\n\n## Tags\n#cve #2026 #critical #auto-stub",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
    "apts": []
   },
   "CVE-2026-20303": {
@@ -3022,6 +3049,14 @@
    "sev": "Critical",
    "year": "2026",
    "kev": true,
+   "apts": []
+  },
+  "CVE-2026-34182": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-34182.md",
+   "body": "# CVE-2026-34182\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2026\n\n## Summary\n`Microsoft-September-2026-Patch-Tuesday-Record-974-CVEs-Two-Exploited-ZeroDays.md` \u2014 Sophos breakdown; exploited CVE IDs/CWEs; OpenSSL CVE-2026-34182; 82 unpatched Office for Mac CVEs\n\n## Where it appears in this vault\n- `X_Intel/x-intel-2026-09-17.md` \u2014 `Microsoft-September-2026-Patch-Tuesday-Record-974-CVEs-Two-Exploited-ZeroDays.md` \u2014 Sophos breakdown; exploited CVE IDs/CWEs; OpenSSL CVE-2026-34182; 82 unpatched Office for Mac CVEs\n- `X_Intel/x-intel-tracker.md` \u2014 Sophos X-Ops Patch Tuesday breakdown** \u2014 the two exploited flaws identified as **CVE-2026-81963** (Windows Update Stack, CWE-59 + CWE-284) and **CVE-2026-85880** (Windows ALPC, CWE-122 + CWE-908), **mutually exclusive by OS version**. 437 EoP / 258 RCE / 173 info-disclosure; Windows 718, Office and 365 106 each, SQL 63. Flags **OpenSSL CVE-2026-34182 (CVSS 9.1, CWE-354)** and SQLite CVE-2025-70873. **82 Office for Mac CVEs shipped with no patch available** \u2014 two Critical at 9.8, thirteen more via **Preview Pane**, one by **viewing a message in Outlook**. Sophos attributes the volume spike to AI-assisted discovery and notes mean CVSS has fallen 7.8 \u2192 7.4 | -> Threat_Intel/CVEs/2026/Critical/Microsoft-September-2026-Patch-Tuesday-Record-974-CVEs-Two-Exploited-ZeroDays.md (appended)\n- `X_Intel/x-intel-tracker.md` \u2014 Step 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Windows Plan9 mount failure, **sixth consecutive sweep**; the tool now reports the workspace as wedged and instructs no further retries). **No CVE-coverage line this run.** Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-76460, CVE-2026-76423, CVE-2026-20176, CVE-2026-20211, CVE-2026-20307, CVE-2026-20284, CVE-2026-78159, CVE-2026-78006, CVE-2026-89026, CVE-2026-77692, CVE-2026-76163, CVE-2026-19667, CVE-2026-19666, CVE-2026-80274, CVE-2026-19662, CVE-2026-19668, CVE-2026-75029, CVE-2026-81563, CVE-2026-81736, CVE-2026-77119, CVE-2026-19941, CVE-2026-78301, CVE-2026-19033, CVE-2026-58704, CVE-2026-34182, CVE-2026-0628, CVE-2026-55945** (this run), plus **CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310** carried over. **Running `make_cve_notes.py` manually from Windows would clear the whole backlog \u2014 it is now 36 CVEs deep.**\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-34182\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-34182\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-34182\n\n## Tags\n#cve #2026 #critical #auto-stub",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
    "apts": []
   },
   "CVE-2026-34197": {
@@ -3752,6 +3787,22 @@
    "kev": true,
    "apts": []
   },
+  "CVE-2026-76423": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-76423.md",
+   "body": "# CVE-2026-76423\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2026\n\n## Summary\nrss:bleeping-2026-09-17-cisco-ise / rss:securityweek-2026-09-17-cisco-ise | 2026-09-17 | BleepingComputer / SecurityWeek / Cisco `cisco-sa-ISE-ABP-VNSW7Tn5` | **CVE-2026-76460 Cisco Identity Services Engine / ISE-PIC** \u2014 **CVSS 10.0** API authentication bypass \u2192 **root command execution**, **exploited as a zero-day**, **KEV 2026-09-16 with a three-day BOD 26-04 deadline**. No workaround; fixes 3.1 P12 / 3.2 P11 / 3.3 P12 / 3.4 P7 / 3.5 P4. Second CVSS 10.0 **CVE-2026-76423** (REST API auth bypass, not exploited) plus CVE-2026-20176/20211/20307 (authenticated OS command exec, 9.1\u20139.9) and CVE-2026-20284 (9.1, NoSQL). IOC guidance is thin \u2014 suspicious usernames in `access.log` on every node; **re-image, do not clean** | -> Threat_Intel/CVEs/2026/Critical/CVE-2026-76460-Cisco-ISE-API-Auth-Bypass-Root-Exploited-KEV-BOD-26-04-2026.md (new)\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 rss:bleeping-2026-09-17-cisco-ise / rss:securityweek-2026-09-17-cisco-ise | 2026-09-17 | BleepingComputer / SecurityWeek / Cisco `cisco-sa-ISE-ABP-VNSW7Tn5` | **CVE-2026-76460 Cisco Identity Services Engine / ISE-PIC** \u2014 **CVSS 10.0** API authentication bypass \u2192 **root command execution**, **exploited as a zero-day**, **KEV 2026-09-16 with a three-day BOD 26-04 deadline**. No workaround; fixes 3.1 P12 / 3.2 P11 / 3.3 P12 / 3.4 P7 / 3.5 P4. Second CVSS 10.0 **CVE-2026-76423** (REST API auth bypass, not exploited) plus CVE-2026-20176/20211/20307 (authenticated OS command exec, 9.1\u20139.9) and CVE-2026-20284 (9.1, NoSQL). IOC guidance is thin \u2014 suspicious usernames in `access.log` on every node; **re-image, do not clean** | -> Threat_Intel/CVEs/2026/Critical/CVE-2026-76460-Cisco-ISE-API-Auth-Bypass-Root-Exploited-KEV-BOD-26-04-2026.md (new)\n- `X_Intel/x-intel-tracker.md` \u2014 The week's operational headline is that the identity control plane failed twice in one day.** CVE-2026-76460 and CVE-2026-76423 are both CVSS 10.0 authentication bypasses in Cisco ISE \u2014 the product whose entire job is deciding who gets on the network. One is exploited as a zero-day with root execution and a three-day federal deadline. Two maximum-severity auth bypasses in the same product family within 24 hours is not two unlucky bugs; it reads as a systemic authorisation-check gap across the ISE API surface. **Expect more ISE API CVEs.**\n- `X_Intel/x-intel-tracker.md` \u2014 Step 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Windows Plan9 mount failure, **sixth consecutive sweep**; the tool now reports the workspace as wedged and instructs no further retries). **No CVE-coverage line this run.** Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-76460, CVE-2026-76423, CVE-2026-20176, CVE-2026-20211, CVE-2026-20307, CVE-2026-20284, CVE-2026-78159, CVE-2026-78006, CVE-2026-89026, CVE-2026-77692, CVE-2026-76163, CVE-2026-19667, CVE-2026-19666, CVE-2026-80274, CVE-2026-19662, CVE-2026-19668, CVE-2026-75029, CVE-2026-81563, CVE-2026-81736, CVE-2026-77119, CVE-2026-19941, CVE-2026-78301, CVE-2026-19033, CVE-2026-58704, CVE-2026-34182, CVE-2026-0628, CVE-2026-55945** (this run), plus **CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310** carried over. **Running `make_cve_notes.py` manually from Windows would clear the whole backlog \u2014 it is now 36 CVEs deep.**\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-76423\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-76423\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-76423\n\n## Tags\n#cve #2026 #critical #auto-stub",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-76460": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-76460-Cisco-ISE-API-Auth-Bypass-Root-Exploited-KEV-BOD-26-04-2026.md",
+   "body": "# CVE-2026-76460 \u2014 Cisco Identity Services Engine (ISE/ISE-PIC): API Authentication Bypass \u2192 Root Command Execution, Exploited as a Zero-Day, KEV\n\n\u26a0\ufe0f **Verification:** Corroborated \u2014 3 independent sources\n\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/cisco-warns-of-identity-service-engine-zero-day-exploited-in-attacks/) \u2014 2026-09-17\n> Source: [SecurityWeek](https://www.securityweek.com/active-exploitation-triggers-emergency-patch-for-cisco-ise-zero-day/) \u2014 2026-09-17\n> Source: Cisco advisory `cisco-sa-ISE-ABP-VNSW7Tn5` \u2014 2026-09-16\n\n**Type:** CVE / authentication bypass \u2192 root command execution | **Severity:** Critical (CVSS 10.0) | **Date:** 2026-09-17\n\n## Summary\n**CVE-2026-76460** is a **CVSS 10.0 authentication bypass** in the **API of Cisco Identity Services Engine (ISE) and ISE Passive Identity Connector (ISE-PIC)**. Insufficient authentication control on an API endpoint lets a **remote, unauthenticated** attacker reach the web-based management interface with a single crafted request. The flaw applies **regardless of device configuration** \u2014 there is no setting that mitigates it. Cisco PSIRT confirms **active exploitation in the wild**; this was patched as a zero-day. Successful exploitation can yield **command execution with root privileges**, which means an attacker can hide or delete indicators on the device itself. **CISA added it to KEV on 2026-09-16** with a **three-day federal remediation deadline under BOD 26-04** (implying 2026-09-19). **No actor or malware family has been attributed.**\n\n**Fixed releases:** 3.1 \u2192 **3.1 Patch 12** \u00b7 3.2 \u2192 **3.2 Patch 11** \u00b7 3.3 \u2192 **3.3 Patch 12** \u00b7 3.4 \u2192 **3.4 Patch 7** \u00b7 3.5 \u2192 **3.5 Patch 4**. **No workarounds.** Infrastructure ACLs restricting traffic to the appliance are the only mitigating control Cisco names.\n\n### The second CVSS 10.0 in the same window \u2014 CVE-2026-76423\nPatched one day earlier (2026-09-16). A separate **authentication bypass in the ISE/ISE-PIC REST API**: the REST API web service is exposed with **insufficient authorization checks**, letting an unauthenticated remote attacker obtain **administrative access**. **Not flagged as exploited.**\n\n### Other criticals in the same bundle (advisory `cisco-sa-notice-jfxK98ZP`, none flagged exploited)\n- **CVE-2026-20176**, **CVE-2026-20211**, **CVE-2026-20307** \u2014 CVSS reported in the **9.1\u20139.9** range; allow an **authenticated** remote attacker to execute arbitrary commands on the underlying OS. *Per-CVE scores not authoritatively confirmed \u2014 secondary sources give a range only.*\n- **CVE-2026-20284** \u2014 CVSS **9.1**, a **NoSQL**-related flaw in ISE Software. Mechanism **not published**.\n\n## Why this matters\n1. **ISE is the identity control plane for the network, so a root compromise is a network-wide compromise.** ISE decides which endpoints get onto which VLANs, enforces posture, and issues the RADIUS/TACACS+ decisions that switches and wireless controllers obey. An attacker with root on ISE does not need to move laterally in the usual sense \u2014 they can grant themselves authorisation.\n2. **This is the third auth-bypass-by-broken-identity-check in this vault's recent window, and the pattern is now unmistakable.** CVE-2026-5430 (WSO2, JWT signature verification), CVE-2026-82329 (JFrog, admin token minting) and now CVE-2026-76460/76423. Every downstream control \u2014 MFA, session policy, rate limiting, conditional access \u2014 sits *after* identity is established and therefore does not apply. There are no failed logins to alert on.\n3. **Two CVSS 10.0 auth bypasses in the same product family within 24 hours.** That is not a coincidence of disclosure timing; it suggests the ISE API surface was reviewed as a whole and found to have a systemic authorisation-check gap. Treat further ISE API CVEs as likely.\n4. **The root-execution consequence changes the investigation, not just the patch.** Cisco explicitly warns that an attacker can delete IOCs from the appliance. On-box logs are therefore **not trustworthy evidence of absence**.\n5. **A three-day KEV deadline is exceptionally short** and is a reliable signal of how Cisco and CISA rate the exploitation volume.\n\n## IOC guidance (as published \u2014 thin)\n- Review **`access.log` for suspicious usernames**, on **every node** in a distributed deployment. Cisco's wording: \"The presence of any entry in the output may indicate malicious activity.\"\n- If compromise is suspected: **re-image the affected nodes and restore from configuration backup.** Patching alone is not sufficient where root execution may have occurred.\n- Because on-box logs can be tampered with, **cross-check firewall and network logs from outside the device** for unexpected uploads/downloads to external or unknown IPs.\n- **No file hashes, IP addresses, domains, or webshell names have been published** for this campaign.\n\n## Action\n1. **Patch to the fixed release for your train today** \u2014 3.1 P12 / 3.2 P11 / 3.3 P12 / 3.4 P7 / 3.5 P4. Three-day KEV deadline.\n2. **Confirm the ISE management interface and API are not internet-reachable.** Apply infrastructure ACLs so only management networks can reach the appliance.\n3. **Pull `access.log` from every node** (not just the primary) and review usernames against your known admin set before patching, so you retain a pre-patch snapshot.\n4. **Retrieve external network telemetry** for the ISE node IPs covering at least the last 60 days and look for outbound transfers.\n5. **Assume evidence tampering if anything looks off** and re-image rather than clean.\n6. **Patch CVE-2026-76423 and the 9.x authenticated-RCE set in the same maintenance window** \u2014 they are in the same advisory bundle.\n7. **Review who holds authenticated ISE accounts**, since CVE-2026-20176/20211/20307 turn any such account into OS command execution.\n\n## Cross-reference\n- `CVE-2026-76461-Cisco-Secure-Email-Gateway-SQLi-Root-RCE-KEV-Exploited-2026.md` \u2014 **different Cisco product**, same week, also unauthenticated \u2192 root and KEV-listed. Two separate exploited Cisco internet-facing products in four days.\n- `CVE-2026-5430-WSO2-API-Manager-JWT-Signature-Verification-Bypass-Forged-Admin-Tokens-2026.md` \u2014 same auth-bypass-by-token/identity-check class.\n- `CVE-2026-20079-Cisco-Secure-FMC-Auth-Bypass-Exploited-Qilin-Sandworm-2026.md` \u2014 prior Cisco security-appliance auth bypass with named actors.\n- `ConnectWise-ScreenConnect-Unpatched-Flaw-Worm-Like-Modified-Clients-2026.md` \u2014 also newly confirmed exploited this window.\n\n#cve #cisco #ise #identity-services-engine #ise-pic #authentication-bypass #api #rce #root #zero-day #exploited #kev #bod-26-04 #cvss10 #critical #corroborated\n\n## Tags\n #corroborated",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": true,
+   "apts": []
+  },
   "CVE-2026-76461": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-76461-Cisco-Secure-Email-Gateway-SQLi-Root-RCE-KEV-Exploited-2026.md",
    "body": "# CVE-2026-76461 \u2014 Cisco Secure Email Gateway Pre-Auth SQL Injection \u2192 Root Command Execution, Exploited In The Wild\n\n\u26a0\ufe0f **Verification:** Corroborated \u2014 4 independent sources\n\n> Source: [SecurityWeek](https://www.securityweek.com/root-rce-zero-day-in-cisco-secure-email-gateway-under-active-exploitation/) \u2014 2026-09-15\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/new-cisco-secure-email-zero-day-exploited-to-execute-commands-as-root/) \u2014 2026-09-15\n> Source: [CCCS AV26-921](https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-921) \u2014 2026-09-14\n> Source: X @The_Cyber_News \u2014 2026-09-15 (tweet 2099774720644456795)\n\n**Type:** CVE / unauthenticated SQL injection \u2192 OS command execution as root | **Severity:** Critical | **Date:** 2026-09-15\n\n## Summary\nCisco disclosed an actively exploited **zero-day in Secure Email Gateway (AsyncOS)**. The flaw is an **unauthenticated SQL-injection** reachable on the appliance's web interface that escalates into **arbitrary command execution as `root` on the underlying operating system** \u2014 SQLi is the entry point, not the impact ceiling.\n\n**Affected:** Cisco Secure Email Gateway / AsyncOS prior to **15.5.5-014**, **16.0.4-302**, **16.5.0-780**, and **Cisco Secure Email and Web Manager**.\n\n**Exploitation status:** Cisco confirmed exploitation in the wild. **CISA added CVE-2026-76461 to the KEV catalog on 2026-09-14.**\n\n## Why this matters\n1. **Pre-auth root on a mail gateway is a full mail-flow compromise.** An email security appliance terminates and inspects every inbound and outbound message. Root on that box means silent message interception, selective delivery of attacker mail past the very controls it enforces, and access to quarantine contents and DLP policy.\n2. **The appliance is internet-facing by design.** Unlike most internal infrastructure there is no meaningful network-exposure mitigation \u2014 MX has to be reachable. Patch speed is the only lever.\n3. **SQLi-to-root is a design failure, not just a bug.** Reaching OS command execution from a database injection implies the web tier runs privileged and passes injected content to a system context. Assume adjacent injection points on the same appliance are also worth hunting.\n4. **It joins a run of exploited edge-appliance flaws this sweep window** (GitLab CVE-2026-85706, Gitea CVE-2026-60004, FortiGate SSL-VPN, ConnectWise ScreenConnect). The pattern holds: unauthenticated flaw in an internet-facing management or gateway product, KEV listing within days.\n\n## Action\n1. **Patch immediately** to 15.5.5-014 / 16.0.4-302 / 16.5.0-780 or later, including Secure Email and Web Manager.\n2. **Assume compromise** on any internet-reachable appliance that was unpatched after the Cisco advisory. Root access means the appliance itself cannot be trusted to report its own integrity \u2014 verify from outside.\n3. **Rotate every credential the appliance held:** LDAP/AD bind accounts, SMTP relay credentials, API keys, admin passwords, and any certificate private keys stored on the device.\n4. **Hunt** for anomalous `root` shell activity, new local accounts, unexpected outbound connections from the gateway, and modifications to mail policy/quarantine rules. Pull message-tracking logs for delivery anomalies in the exposure window.\n5. **Review mail that transited the appliance** during the exposure period \u2014 a compromised gateway can pass phishing through untouched.\n\n## Cross-reference\n- `CVE-2026-85706-GitLab-Commits-API-Path-Traversal-Arbitrary-File-Read-2026.md` \u2014 same window, same pattern (unauth flaw, internet-facing dev/infra platform, KEV within days).\n- `CVE-2026-60004-Gitea-DiffPatch-Code-Injection-RCE-KEV-Exploited.md` \u2014 Red Heron campaign exploiting a KEV RCE in the same window.\n- `Edge-Device-Exposure-Convergence-NCSC-Tenable-Microsoft-2026-08-27.md` \u2014 the structural edge-appliance exposure argument this instantiates.\n\n#cve #cisco #secure-email-gateway #asyncos #sql-injection #rce #root #unauthenticated #kev #zero-day #edge-device #critical #corroborated\n\n## Tags\n #corroborated",
@@ -3763,6 +3814,22 @@
   "CVE-2026-76657": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-76657-HPE-Networking-Fabric-Composer-API-Auth-Bypass.md",
    "body": "# CVE-2026-76657 \u2014 HPE Networking Fabric Composer API Authentication Bypass (CVSS 10.0)\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n**Type:** cve | **Severity:** Critical (CVSS 10.0) | **Date logged:** 2026-09-04\n**Product:** HPE Networking **Fabric Composer** \u2014 API\n**Impact:** Unauthenticated attacker obtains **full administrative access**. No credentials required.\n**Status:** Patch available. No public exploitation reported at time of logging.\n\n## Summary\n\n**CVE-2026-76657** is an **authentication bypass in the HPE Networking Fabric Composer API** rated **CVSS 10.0**. An unauthenticated attacker reaching the API obtains **full administrative access** to the platform.\n\n## Why a fabric controller is a worse target than a switch\n\nFabric Composer is the **management and orchestration plane for a data-centre switching fabric** \u2014 it does not forward traffic, it decides how traffic is forwarded across every switch it manages. Administrative control of it is therefore a superset of administrative control of the individual devices:\n\n- **Arbitrary re-segmentation.** VLAN, VRF and policy changes made from the controller are legitimate, authorised configuration changes as far as every downstream switch is concerned. There is no exploit signature on the data-plane devices to find.\n- **Traffic redirection and mirroring at fabric scale** \u2014 a SPAN/ERSPAN destination configured centrally is a passive tap on any segment, invisible to endpoint and application telemetry.\n- **It sits below every control that assumes the network is the boundary.** Micro-segmentation, east-west firewalling and zero-trust network policy are all *expressed* through the fabric. Owning the thing that expresses them makes them advisory.\n\nThe generalisable point, and one this vault keeps re-deriving: **management planes are consistently under-rated relative to the devices they manage.** A CVSS 10 pre-auth bypass on an orchestrator is not equivalent to a CVSS 10 on one switch; it is that CVSS 10 multiplied by the fabric.\n\n## Action\n\n1. **Patch Fabric Composer immediately** \u2014 pre-auth, no credentials, CVSS 10.\n2. **Verify the API is not internet-reachable.** It should not be, and for an orchestration plane the honest control is network reachability, not authentication. Confirm rather than assume \u2014 verify from outside your own perimeter.\n3. **Restrict management-plane access to a dedicated admin network** with its own authentication path, and treat any host that can reach it as a tier-0 asset.\n4. **Assume compromise on any instance that was internet-exposed.** Hunt for: new or modified administrative accounts, API tokens issued outside change windows, unexpected configuration pushes, and newly configured mirror/SPAN destinations.\n5. **Diff the running fabric configuration against a known-good out-of-band baseline.** Because attacker actions here look like legitimate configuration, configuration diffing is the detection \u2014 not log alerting.\n\n## Open questions\n\n- Affected and fixed version ranges not captured in the read \u2014 pull from the HPE security bulletin.\n- Whether the bypass is reachable on the standard management listener or requires a specific API path.\n- No IOCs published.\n- Relationship, if any, to the ArubaOS-CX critical RCE patched by HPE the previous day (see `HPE-ArubaOS-CX-Critical-RCE-2026-09.md`) \u2014 two critical HPE networking flaws in 48 hours warrants asking whether they came from the same research effort.\n\n## Sources\n\n> Source: [@SecAlertsCo](https://x.com/SecAlertsCo/status/2095809711794782543) \u2014 2026-09-04 09:42 UTC \u2014 \"HPE Networking Fabric Composer API: CVE-2026-76657 is a CVSS 10 auth bypass giving unauthenticated attackers full administrative access. No credentials needed. Patch immediately.\"\n\n## Tags\n\n#cve-2026-76657 #hpe #fabric-composer #authentication-bypass #management-plane #network-orchestration #cvss-10 #critical #unverified",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-78159": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-78159-CVE-2026-78006-Events-Calendar-WordPress-Unauth-RCE-240k-Sites-2026.md",
+   "body": "# CVE-2026-78159 & CVE-2026-78006 \u2014 The Events Calendar (WordPress): Two Independent Unauthenticated RCE Chains, ~240,000 Sites Affected\n\n\u26a0\ufe0f **Verification:** Corroborated \u2014 2 independent sources\n\n> Source: [SecurityWeek](https://www.securityweek.com/unauthenticated-rce-flaws-could-expose-200000-wordpress-sites-to-takeover/) \u2014 2026-09-16\n> Source: Defiant / Wordfence (Wordfence Argus) \u2014 vendor disclosure\n\n**Type:** CVE / unauthenticated code injection + PHP object injection \u2192 RCE | **Severity:** Critical (CVSS 9.8 \u00d72) | **Date:** 2026-09-16\n\n## Summary\nTwo **CVSS 9.8 unauthenticated remote code execution** flaws in **The Events Calendar** by **StellarWP** \u2014 **600,000+ active installations**. Both were found by **Defiant** via **Wordfence Argus**. Roughly **240,000 sites run versions prior to 6.17 and are affected by both**.\n\n| CVE | Class | Mechanism | Fixed in |\n|---|---|---|---|\n| **CVE-2026-78159** | Unauthenticated **code injection** | Insufficient validation lets an attacker inject a **plain-array payload** that bypasses checks and **executes during processing of single-event HTML, including the comment area** | **6.17.3.1**, released 2026-08-25 |\n| **CVE-2026-78006** | Unauthenticated **PHP object injection** | Exploitable when **comments on events are enabled and visible**. Insufficient protections in a plugin function are bypassed by a commenter **without authentication or approval**, because the injected payload reaches the vulnerable function **before moderation occurs** | **6.17.4.1**, released 2026-09-10 |\n\nBoth are **independent exploitation chains** and both lead to **full compromise of the WordPress installation**.\n\n**Exploitation status: no in-the-wild exploitation reported.** Between 2026-09-10 and 2026-09-14 the plugin was downloaded just over **300,000** times, which suggests roughly **half of installations may still be vulnerable to CVE-2026-78006**. The exact vulnerable-site count is unknown because both flaws require comments to be enabled. **No IOCs published.**\n\n## Why this matters\n1. **\"Payload reaches the vulnerable function before moderation\" is the whole finding, and it generalises.** Comment moderation is widely treated as a security control. It is not \u2014 it is a *publication* control. Anything that parses, deserialises, or renders the comment on the way into the queue runs before a human ever sees it. Any plugin that touches unapproved comment content should be reviewed on this basis.\n2. **Two independent unauth-RCE chains in one plugin, three weeks apart.** That is a code-quality signal about the plugin, not two unlucky bugs. Sites that patched on 2026-08-25 and considered the matter closed were still fully exploitable until 2026-09-10.\n3. **The download-count arithmetic is the actionable number.** 300,000 downloads against 600,000 installs in the four days after the second fix means roughly half the install base is still exposed to a CVSS 9.8 unauthenticated RCE with a published mechanism and no exploitation yet. That gap closes as soon as someone weaponises it.\n4. **No exploitation yet is a scheduling window, not an all-clear.** The mechanism for both is now public and specific enough to reproduce.\n5. **This lands in a week already carrying two other WordPress compromises** \u2014 the Admin Menu Editor Pro maintainer breach and the mass-exploited WooCommerce Wholesale Lead Capture upload flaw. Any one of the three reaches every tenant on a shared host, which is the same population the Acronis cPanel and LiteSpeed root escalations apply to. Triage them as one chain.\n\n## Action\n1. **Update The Events Calendar to 6.17.4.1 or later.** 6.17.3.1 only closes CVE-2026-78159.\n2. **If you cannot patch immediately, disable comments on events** \u2014 it breaks the exploitation path for CVE-2026-78006 and removes the comment-area vector for CVE-2026-78159.\n3. **Enumerate plugin versions across every site you host**, not just your own. ~240,000 sites on pre-6.17 is a shared-hosting problem.\n4. **Review the wider plugin estate for the moderation assumption** \u2014 anything that deserialises, renders or parses comment content before approval.\n5. **Check for post-exploitation artefacts anyway**: unexpected admin users, modified `wp-config.php`, new PHP files in `wp-content/uploads`, scheduled-task additions.\n6. **Shared hosts: treat this together with the Acronis cPanel and LiteSpeed root escalations.** A web shell on one tenant plus a local root bug is a whole-server compromise.\n\n## Cross-reference\n- `WordPress-Admin-Menu-Editor-Pro-Maintainer-Compromise-Trojanized-Update-Backdoor-2026.md` \u2014 same window, supply-chain route to the same foothold.\n- `WooCommerce-Wholesale-Lead-Capture-Unauth-File-Upload-PHP-Webshell-2026.md` \u2014 same window, mass-exploited.\n- `CVE-2026-87886-Acronis-cPanel-Backup-Plugin-Insecure-Permissions-Local-PrivEsc-Exploited-2026.md` \u2014 the escalation that turns any of these into full host compromise.\n- `LiteSpeed-Enterprise-Shared-Hosting-Low-Privilege-User-To-Root-2026.md` \u2014 same shared-hosting privilege-boundary class.\n- `WordPress-Five-Critical-Plugin-Theme-Flaws-2026-08-29.md` \u2014 prior multi-plugin roundup.\n\n#cve #wordpress #events-calendar #stellarwp #plugin #unauthenticated #rce #code-injection #php-object-injection #deserialization #comments #wordfence #defiant #cvss98 #critical #corroborated\n\n## Tags\n #corroborated",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-78006": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-78159-CVE-2026-78006-Events-Calendar-WordPress-Unauth-RCE-240k-Sites-2026.md",
+   "body": "# CVE-2026-78159 & CVE-2026-78006 \u2014 The Events Calendar (WordPress): Two Independent Unauthenticated RCE Chains, ~240,000 Sites Affected\n\n\u26a0\ufe0f **Verification:** Corroborated \u2014 2 independent sources\n\n> Source: [SecurityWeek](https://www.securityweek.com/unauthenticated-rce-flaws-could-expose-200000-wordpress-sites-to-takeover/) \u2014 2026-09-16\n> Source: Defiant / Wordfence (Wordfence Argus) \u2014 vendor disclosure\n\n**Type:** CVE / unauthenticated code injection + PHP object injection \u2192 RCE | **Severity:** Critical (CVSS 9.8 \u00d72) | **Date:** 2026-09-16\n\n## Summary\nTwo **CVSS 9.8 unauthenticated remote code execution** flaws in **The Events Calendar** by **StellarWP** \u2014 **600,000+ active installations**. Both were found by **Defiant** via **Wordfence Argus**. Roughly **240,000 sites run versions prior to 6.17 and are affected by both**.\n\n| CVE | Class | Mechanism | Fixed in |\n|---|---|---|---|\n| **CVE-2026-78159** | Unauthenticated **code injection** | Insufficient validation lets an attacker inject a **plain-array payload** that bypasses checks and **executes during processing of single-event HTML, including the comment area** | **6.17.3.1**, released 2026-08-25 |\n| **CVE-2026-78006** | Unauthenticated **PHP object injection** | Exploitable when **comments on events are enabled and visible**. Insufficient protections in a plugin function are bypassed by a commenter **without authentication or approval**, because the injected payload reaches the vulnerable function **before moderation occurs** | **6.17.4.1**, released 2026-09-10 |\n\nBoth are **independent exploitation chains** and both lead to **full compromise of the WordPress installation**.\n\n**Exploitation status: no in-the-wild exploitation reported.** Between 2026-09-10 and 2026-09-14 the plugin was downloaded just over **300,000** times, which suggests roughly **half of installations may still be vulnerable to CVE-2026-78006**. The exact vulnerable-site count is unknown because both flaws require comments to be enabled. **No IOCs published.**\n\n## Why this matters\n1. **\"Payload reaches the vulnerable function before moderation\" is the whole finding, and it generalises.** Comment moderation is widely treated as a security control. It is not \u2014 it is a *publication* control. Anything that parses, deserialises, or renders the comment on the way into the queue runs before a human ever sees it. Any plugin that touches unapproved comment content should be reviewed on this basis.\n2. **Two independent unauth-RCE chains in one plugin, three weeks apart.** That is a code-quality signal about the plugin, not two unlucky bugs. Sites that patched on 2026-08-25 and considered the matter closed were still fully exploitable until 2026-09-10.\n3. **The download-count arithmetic is the actionable number.** 300,000 downloads against 600,000 installs in the four days after the second fix means roughly half the install base is still exposed to a CVSS 9.8 unauthenticated RCE with a published mechanism and no exploitation yet. That gap closes as soon as someone weaponises it.\n4. **No exploitation yet is a scheduling window, not an all-clear.** The mechanism for both is now public and specific enough to reproduce.\n5. **This lands in a week already carrying two other WordPress compromises** \u2014 the Admin Menu Editor Pro maintainer breach and the mass-exploited WooCommerce Wholesale Lead Capture upload flaw. Any one of the three reaches every tenant on a shared host, which is the same population the Acronis cPanel and LiteSpeed root escalations apply to. Triage them as one chain.\n\n## Action\n1. **Update The Events Calendar to 6.17.4.1 or later.** 6.17.3.1 only closes CVE-2026-78159.\n2. **If you cannot patch immediately, disable comments on events** \u2014 it breaks the exploitation path for CVE-2026-78006 and removes the comment-area vector for CVE-2026-78159.\n3. **Enumerate plugin versions across every site you host**, not just your own. ~240,000 sites on pre-6.17 is a shared-hosting problem.\n4. **Review the wider plugin estate for the moderation assumption** \u2014 anything that deserialises, renders or parses comment content before approval.\n5. **Check for post-exploitation artefacts anyway**: unexpected admin users, modified `wp-config.php`, new PHP files in `wp-content/uploads`, scheduled-task additions.\n6. **Shared hosts: treat this together with the Acronis cPanel and LiteSpeed root escalations.** A web shell on one tenant plus a local root bug is a whole-server compromise.\n\n## Cross-reference\n- `WordPress-Admin-Menu-Editor-Pro-Maintainer-Compromise-Trojanized-Update-Backdoor-2026.md` \u2014 same window, supply-chain route to the same foothold.\n- `WooCommerce-Wholesale-Lead-Capture-Unauth-File-Upload-PHP-Webshell-2026.md` \u2014 same window, mass-exploited.\n- `CVE-2026-87886-Acronis-cPanel-Backup-Plugin-Insecure-Permissions-Local-PrivEsc-Exploited-2026.md` \u2014 the escalation that turns any of these into full host compromise.\n- `LiteSpeed-Enterprise-Shared-Hosting-Low-Privilege-User-To-Root-2026.md` \u2014 same shared-hosting privilege-boundary class.\n- `WordPress-Five-Critical-Plugin-Theme-Flaws-2026-08-29.md` \u2014 prior multi-plugin roundup.\n\n#cve #wordpress #events-calendar #stellarwp #plugin #unauthenticated #rce #code-injection #php-object-injection #deserialization #comments #wordfence #defiant #cvss98 #critical #corroborated\n\n## Tags\n #corroborated",
    "sev": "Critical",
    "year": "2026",
    "kev": false,
@@ -3888,6 +3955,14 @@
    "kev": true,
    "apts": []
   },
+  "CVE-2026-89026": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-89026-Issabel-Framework-Hardcoded-JWT-Key-Unauth-RCE-Exploited-2026.md",
+   "body": "# CVE-2026-89026 \u2014 Issabel Framework: Hard-Coded JWT Signing Key \u2192 Forged Bearer Token \u2192 Unauthenticated OS Command Execution, Exploited\n\n\u26a0\ufe0f **Verification:** Corroborated \u2014 2 independent sources\n\n> Source: [The Hacker News](https://thehackernews.com/2026/09/attackers-exploit-issabel-framework.html) \u2014 2026-09-16\n> Source: VulnCheck (CVSS v4 assignment, VulnCheck KEV) + Shadowserver Foundation (exploitation telemetry)\n\n**Type:** CVE / hard-coded cryptographic key \u2192 unauthenticated RCE | **Severity:** Critical (CVSS v3.1 9.8 / v4.0 9.3) | **Date:** 2026-09-16\n\n## Summary\n**CVE-2026-89026** \u2014 **CWE-321, Use of Hard-coded Cryptographic Key** \u2014 in the **Issabel Framework**, the web front end for the open-source Issabel unified-communications PBX (Asterisk-based).\n\n**Mechanism:** Issabel ships a **hard-coded HS256 JWT signing key in `pbxapi/index.php`**, **identical across every installation**. An unauthenticated remote attacker forges a valid bearer token with the known key, then calls **`/pbxapi/manager/originate`** with the **`System` application parameter**, causing **Asterisk to execute arbitrary OS commands as the `asterisk` user** via the Asterisk Manager Interface. No account, password, prior access, or user interaction required.\n\n**Affected:** Issabel Framework versions **before commit `b97dbaf0b71c1c36f841e672b664afbeb02773bd`**. The patch, which replaces the shared key, was released **2026-08-01**. **No version-number fix label exists** \u2014 remediation is identified by commit.\n\n**Exploitation: active.** **Shadowserver** first observed exploitation on **2026-09-09** \u2014 five and a half weeks after the fix commit. Added to **VulnCheck KEV**. **Not in CISA KEV** as of this sweep. **No actor or malware family published. No hashes, IPs or domains published.**\n\n## Why this matters\n1. **A hard-coded signing key shared across every installation is not a vulnerability in one deployment \u2014 it is a master key to the whole install base.** There is no per-instance entropy to brute-force, no configuration that varies, no hardening that helps. Extract the key once from public source and every unpatched Issabel on the internet accepts your tokens.\n2. **Authentication bypass by forged token, for the third time in this vault's recent window.** WSO2 (CVE-2026-5430, JWT signature verification), JFrog (CVE-2026-82329, admin token minting), Cisco ISE (CVE-2026-76460/76423, API authorisation), and now Issabel. **Token issuance and token validation is the recurring failure site across four unrelated products in a fortnight.** Every control downstream of identity \u2014 MFA, rate limiting, session policy \u2014 is bypassed by construction, and there are no failed logins to alert on.\n3. **The `System` application in Asterisk Manager Interface is a documented command-execution primitive.** It is not a memory-safety bug or an exotic chain \u2014 it is an intended Asterisk feature reachable because the authentication in front of it is forgeable. Any AMI-exposing product should be audited for the same reachability.\n4. **Remediation by commit hash, with no release tag, is an availability problem for defenders.** Asset inventories and vulnerability scanners key on version strings. An organisation cannot easily answer \"are we patched?\" without inspecting the source tree. That alone will keep the exposed population high.\n5. **Five and a half weeks between patch and observed exploitation.** The fix commit was public from 2026-08-01, and the fix *itself* discloses the flaw \u2014 replacing a hard-coded key is self-documenting. This is a straightforward patch-diff-to-exploit case.\n6. **PBX compromise has consequences beyond the host.** Toll fraud, call interception, and \u2014 as SANS ISC noted in a separate hospitality-PBX scanning item this same window \u2014 the ability to place calls that appear to originate from inside the victim organisation.\n\n## Detection (no IOCs published \u2014 behavioural only)\n- Web-server and Issabel logs: **bearer-token activity with no preceding authentication**, unusual **`originate`** requests, any request to `/pbxapi/manager/originate`.\n- Asterisk logs: invocation of the **`System`** application.\n- Endpoint: unexpected shell commands **running as the `asterisk` user**; outbound connections from the PBX host.\n\n## Action\n1. **Pull the Issabel Framework source to at or beyond commit `b97dbaf0b71c1c36f841e672b664afbeb02773bd`.** Verify by inspecting `pbxapi/index.php` for the replaced key \u2014 the version number will not tell you.\n2. **Get the Issabel web interface and `/pbxapi/` off the internet.** There is rarely a business case for an unauthenticated internet-facing PBX API.\n3. **Assume compromise on any internet-exposed instance unpatched since 2026-09-09** and hunt the behavioural indicators above before patching.\n4. **Audit the `asterisk` user's shell history, cron entries and authorized_keys.**\n5. **Review call detail records** for toll fraud and for outbound calls in the exposure window.\n6. **Audit other Asterisk-derived PBX products for AMI `System` reachability** behind forgeable or weak authentication.\n7. **Note this is VulnCheck KEV, not CISA KEV** \u2014 if your patch SLA keys on CISA KEV alone, this will not trigger it.\n\n## Cross-reference\n- `CVE-2026-9586-Sangoma-Switchvox-Unauth-SQLi-RCE-Exploited-2026.md` \u2014 different Asterisk-based PBX, same unauth\u2192RCE class, also exploited.\n- `PIAF-HMS-Hospitality-PBX-Scanning-Farez-Sorter-SANS-ISC-2026.md` \u2014 same window, active scanning of an abandoned PBX/hospitality web front end.\n- `CVE-2026-5430-WSO2-API-Manager-JWT-Signature-Verification-Bypass-Forged-Admin-Tokens-2026.md` \u2014 same forged-token class.\n- `CVE-2026-76460-Cisco-ISE-API-Auth-Bypass-Root-Exploited-KEV-BOD-26-04-2026.md` \u2014 same window, same class.\n\n#cve #issabel #asterisk #pbx #voip #unified-communications #hardcoded-key #jwt #hs256 #token-forgery #authentication-bypass #rce #unauthenticated #exploited #vulncheck-kev #shadowserver #critical #corroborated\n\n## Tags\n #corroborated",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-9082": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-9082-Drupal-SQLi.md",
    "body": "# CVE-2026-9082 \u2014 Drupal SQL Injection (CVSS 9.8) \u2014 Actively Exploited\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n## Overview\n| Field | Value |\n|---|---|\n| CVE | CVE-2026-9082 |\n| CVSS | 9.8 (Critical) |\n| Product | Drupal CMS |\n| Type | SQL Injection |\n| Auth Required | No |\n| Status | **Actively Exploited in the Wild** |\n\n## Description\nCritical CVSS 9.8 SQL injection vulnerability in Drupal that is being actively exploited. No authentication required.\n\n## Source\n- @SecAlertsCo (2026-05-26) \u2014 https://secalerts.co/vulnerability/CVE-2026-9082\n- Tweet: https://x.com/SecAlertsCo/status/2059122476035248377\n\n## Remediation\n- Apply Drupal security update immediately\n- See secalerts.co for fix details\n- Monitor for exploitation indicators\n\n## Tags\n#cve #drupal #sqli #actively-exploited #critical #unverified",
@@ -4011,6 +4086,14 @@
   "CVE-2026-0310": {
    "file": "Threat_Intel/CVEs/2026/High/CVE-2026-0310-Palo-Alto-PAN-OS-XML-Buffer-Overflow-Unauth-Root-RCE-2026.md",
    "body": "# CVE-2026-0310 \u2014 Palo Alto PAN-OS XML-Processing Buffer Overflow, Unauthenticated Root Code Execution\n\n\u26a0\ufe0f **Verification:** Single source (X post citing a Palo Alto advisory) \u2014 confirm against the official PAN-OS security advisory before actioning.\n\n> Source: [@DailyDarkWeb (X)](https://x.com/DailyDarkWeb) \u2014 2026-09-13\n\n**Type:** CVE / unauthenticated buffer overflow \u2192 root RCE \u2014 firewall / management | **Severity:** High (reported CVSS 7.2) | **Date:** 2026-09-13\n\n## Summary\nPalo Alto Networks is reported to have disclosed **CVE-2026-0310**, a **buffer overflow in PAN-OS XML processing** that allows **unauthenticated root-level code execution**. Reported to affect **PAN-OS firewalls and Panorama** (the management platform). Reported CVSS **7.2 (High)** with urgency flagged **highest**; attack vector **network**, no privileges/authentication required per the posted CVSS breakdown.\n\nReported via a single X post reproducing a Palo Alto advisory card. **Treat as unconfirmed until validated against the official PAN-OS advisory / security.paloaltonetworks.com**, then reclassify.\n\n## Why this matters\n1. **XML parsing on PAN-OS is reachable pre-auth on the management/API surface.** Buffer overflows in the request parser are the classic edge-appliance RCE class (Ivanti, NetScaler precedent). Root execution means full device control.\n2. **Panorama in scope = management plane.** As with the Cisco FMC and Check Point management-server flaws this month, a management-platform RCE is fleet-level: Panorama pushes policy and holds credentials for every firewall it manages.\n3. **PAN-OS edge devices are a standing exploitation target.** Historical pattern: advisory \u2192 patch-diff reconstruction \u2192 in-the-wild use on a days-to-weeks clock.\n\n## Action\n1. **Confirm the CVE against Palo Alto's official advisory**, identify fixed PAN-OS/Panorama builds, and patch internet-facing and management devices first.\n2. **Restrict management/XML-API reachability** to trusted admin networks; it should never be internet-exposed.\n3. **Hunt** for management-daemon crashes/restarts without change-management cause, unexpected outbound connections from the firewall/Panorama, and config diffs vs last known-good.\n\n## Cross-reference\n- `CVE-2026-20079-Cisco-Secure-FMC-Auth-Bypass-Exploited-Qilin-Sandworm-2026.md` \u2014 management-plane RCE, same fleet-compromise logic.\n- `CVE-2026-85102-85103-Check-Point-VPN-Certificate-Auth-Bypass-ASN1-Heap-Overflow-2026.md` \u2014 same sweep-lineage: security-vendor edge/management flaws.\n\n#cve #palo-alto #pan-os #panorama #buffer-overflow #xml-parsing #unauthenticated #rce #edge-device #management-plane #high #single-source #unverified\n\n## Tags\n #single-source",
+   "sev": "High",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-0628": {
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-0628.md",
+   "body": "# CVE-2026-0628\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** High  \n**Year:** 2026\n\n## Summary\nVendor response:** all five vendors (Google, Microsoft, Opera, Anthropic, Perplexity) **acknowledged a vulnerability in their own technology and paid bug bounties**, totalling **over $20,000**, ranging **$600 (Anthropic)** to **$7,000 (Google)**. **CVEs issued by Google and Microsoft only: CVE-2026-0628 (Chrome), CVE-2026-55945 (Edge).** CVSS for these two **not published**. Opera, Anthropic and Perplexity issued no CVEs. **All issues resolved.**\n\n## Where it appears in this vault\n- `Guides/AI-BugBounty/BragJack-One-Extension-Hijacks-Five-Browser-AI-Assistants-Forever-Security-2026.md` \u2014 Vendor response:** all five vendors (Google, Microsoft, Opera, Anthropic, Perplexity) **acknowledged a vulnerability in their own technology and paid bug bounties**, totalling **over $20,000**, ranging **$600 (Anthropic)** to **$7,000 (Google)**. **CVEs issued by Google and Microsoft only: CVE-2026-0628 (Chrome), CVE-2026-55945 (Edge).** CVSS for these two **not published**. Opera, Anthropic and Perplexity issued no CVEs. **All issues resolved.**\n- `Guides/AI-BugBounty/BragJack-One-Extension-Hijacks-Five-Browser-AI-Assistants-Forever-Security-2026.md` \u2014 2. **Update all Chromium-based browsers** \u2014 CVE-2026-0628 and CVE-2026-55945 are fixed.\n- `Guides/AI-BugBounty/BragJack-One-Extension-Hijacks-Five-Browser-AI-Assistants-Forever-Security-2026.md` \u2014 technique #ai-security #ai-bugbounty #bragjack #browser-extension #chrome #gemini #perplexity-comet #microsoft-edge #copilot #opera-neon #claude-in-chrome #agent-hijack #isolation-failure #race-condition #bug-bounty #cve-2026-0628 #cve-2026-55945 #high #corroborated\n- `X_Intel/x-intel-tracker.md` \u2014 rss:thn-2026-09-16-bragjack | 2026-09-16 | THN / Forever Security (Gal Weizman) | **BragJack** \u2014 one ordinary browser extension hijacks the built-in AI assistant of **five** products: Chrome/Gemini Live, Perplexity Comet, Edge/Copilot, Opera Neon, **Claude in Chrome**. **Not prompt injection** \u2014 an architectural **extension\u2192agent isolation failure**; the extension seizes the agent's communication channel and injects prompts until compliance. Chrome path = modifying Gemini's **page-load network requests** \u2192 screenshots, local file access, **camera and microphone**, no clicks. Edge = privileged **Microsoft marketing page** + **Think/Do mode race condition**. **CVE-2026-0628 (Chrome), CVE-2026-55945 (Edge)**; all five vendors paid bounties totalling **>$20,000** ($600 Anthropic \u2192 $7,000 Google). All resolved; **not seen in the wild** | -> Guides/AI-BugBounty/BragJack-One-Extension-Hijacks-Five-Browser-AI-Assistants-Forever-Security-2026.md (new)\n- `X_Intel/x-intel-tracker.md` \u2014 Step 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Windows Plan9 mount failure, **sixth consecutive sweep**; the tool now reports the workspace as wedged and instructs no further retries). **No CVE-coverage line this run.** Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-76460, CVE-2026-76423, CVE-2026-20176, CVE-2026-20211, CVE-2026-20307, CVE-2026-20284, CVE-2026-78159, CVE-2026-78006, CVE-2026-89026, CVE-2026-77692, CVE-2026-76163, CVE-2026-19667, CVE-2026-19666, CVE-2026-80274, CVE-2026-19662, CVE-2026-19668, CVE-2026-75029, CVE-2026-81563, CVE-2026-81736, CVE-2026-77119, CVE-2026-19941, CVE-2026-78301, CVE-2026-19033, CVE-2026-58704, CVE-2026-34182, CVE-2026-0628, CVE-2026-55945** (this run), plus **CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310** carried over. **Running `make_cve_notes.py` manually from Windows would clear the whole backlog \u2014 it is now 36 CVEs deep.**\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-0628\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-0628\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-0628\n\n## Tags\n#cve #2026 #high #auto-stub",
    "sev": "High",
    "year": "2026",
    "kev": false,
@@ -4344,6 +4427,14 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-55945": {
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-55945.md",
+   "body": "# CVE-2026-55945\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** High  \n**Year:** 2026\n\n## Summary\nVendor response:** all five vendors (Google, Microsoft, Opera, Anthropic, Perplexity) **acknowledged a vulnerability in their own technology and paid bug bounties**, totalling **over $20,000**, ranging **$600 (Anthropic)** to **$7,000 (Google)**. **CVEs issued by Google and Microsoft only: CVE-2026-0628 (Chrome), CVE-2026-55945 (Edge).** CVSS for these two **not published**. Opera, Anthropic and Perplexity issued no CVEs. **All issues resolved.**\n\n## Where it appears in this vault\n- `Guides/AI-BugBounty/BragJack-One-Extension-Hijacks-Five-Browser-AI-Assistants-Forever-Security-2026.md` \u2014 Vendor response:** all five vendors (Google, Microsoft, Opera, Anthropic, Perplexity) **acknowledged a vulnerability in their own technology and paid bug bounties**, totalling **over $20,000**, ranging **$600 (Anthropic)** to **$7,000 (Google)**. **CVEs issued by Google and Microsoft only: CVE-2026-0628 (Chrome), CVE-2026-55945 (Edge).** CVSS for these two **not published**. Opera, Anthropic and Perplexity issued no CVEs. **All issues resolved.**\n- `Guides/AI-BugBounty/BragJack-One-Extension-Hijacks-Five-Browser-AI-Assistants-Forever-Security-2026.md` \u2014 2. **Update all Chromium-based browsers** \u2014 CVE-2026-0628 and CVE-2026-55945 are fixed.\n- `Guides/AI-BugBounty/BragJack-One-Extension-Hijacks-Five-Browser-AI-Assistants-Forever-Security-2026.md` \u2014 technique #ai-security #ai-bugbounty #bragjack #browser-extension #chrome #gemini #perplexity-comet #microsoft-edge #copilot #opera-neon #claude-in-chrome #agent-hijack #isolation-failure #race-condition #bug-bounty #cve-2026-0628 #cve-2026-55945 #high #corroborated\n- `X_Intel/x-intel-tracker.md` \u2014 rss:thn-2026-09-16-bragjack | 2026-09-16 | THN / Forever Security (Gal Weizman) | **BragJack** \u2014 one ordinary browser extension hijacks the built-in AI assistant of **five** products: Chrome/Gemini Live, Perplexity Comet, Edge/Copilot, Opera Neon, **Claude in Chrome**. **Not prompt injection** \u2014 an architectural **extension\u2192agent isolation failure**; the extension seizes the agent's communication channel and injects prompts until compliance. Chrome path = modifying Gemini's **page-load network requests** \u2192 screenshots, local file access, **camera and microphone**, no clicks. Edge = privileged **Microsoft marketing page** + **Think/Do mode race condition**. **CVE-2026-0628 (Chrome), CVE-2026-55945 (Edge)**; all five vendors paid bounties totalling **>$20,000** ($600 Anthropic \u2192 $7,000 Google). All resolved; **not seen in the wild** | -> Guides/AI-BugBounty/BragJack-One-Extension-Hijacks-Five-Browser-AI-Assistants-Forever-Security-2026.md (new)\n- `X_Intel/x-intel-tracker.md` \u2014 Step 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Windows Plan9 mount failure, **sixth consecutive sweep**; the tool now reports the workspace as wedged and instructs no further retries). **No CVE-coverage line this run.** Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-76460, CVE-2026-76423, CVE-2026-20176, CVE-2026-20211, CVE-2026-20307, CVE-2026-20284, CVE-2026-78159, CVE-2026-78006, CVE-2026-89026, CVE-2026-77692, CVE-2026-76163, CVE-2026-19667, CVE-2026-19666, CVE-2026-80274, CVE-2026-19662, CVE-2026-19668, CVE-2026-75029, CVE-2026-81563, CVE-2026-81736, CVE-2026-77119, CVE-2026-19941, CVE-2026-78301, CVE-2026-19033, CVE-2026-58704, CVE-2026-34182, CVE-2026-0628, CVE-2026-55945** (this run), plus **CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310** carried over. **Running `make_cve_notes.py` manually from Windows would clear the whole backlog \u2014 it is now 36 CVEs deep.**\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-55945\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-55945\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-55945\n\n## Tags\n#cve #2026 #high #auto-stub",
+   "sev": "High",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-56711": {
    "file": "Threat_Intel/CVEs/2026/High/CVE-2026-56711-73324-VLC-Integer-Overflow-Heap-Write-RTSP-Memory-Disclosure-2026.md",
    "body": "# CVE-2026-56711 / CVE-2026-73324 \u2014 VLC Media Player Integer-Overflow Heap Write and RTSP Heap Memory Disclosure (No Patch Available)\n\n\u26a0\ufe0f **Verification:** Corroborated \u2014 3 independent sources (vendor advisory absent)\n\n> Source: [Cyber Security News](https://cybersecuritynews.com/multiple-vlc-media-player-vulnerabilities/) \u2014 2026-09-12\n> Source: [VulnCheck advisory \u2014 heap OOB write](https://www.vulncheck.com/advisories/vlc-media-player-3.0.0-through-3.0.23-heap-out-of-bounds-write-via-integer-overflow-in-picture-allocation) \u2014 2026-09\n> Source: [VulnCheck advisory \u2014 heap OOB read](https://www.vulncheck.com/advisories/vlc-media-player-3.0.0-through-3.0.23-heap-out-of-bounds-read-via-unterminated-realrtsp-response-line) \u2014 2026-09\n> Corroborating signal: [@The_Cyber_News](https://x.com/The_Cyber_News/status/2098783711487750449) \u2014 2026-09-12\n> Checked and found absent: [VideoLAN security bulletins](https://images.videolan.org/security/) \u2014 latest bulletin is VideoLAN-SB-VLC-322 (VLC 3.0.22, 2025). **No bulletin covers either CVE.**\n\n**Type:** CVE / memory corruption + information disclosure \u2014 desktop media client | **Severity:** High | **Date:** 2026-09-13\n\n## Summary\n\nTwo memory-safety flaws in **VLC Media Player 3.0.0 through 3.0.23**, disclosed **2026-09-09** and credited to **Fabian Wahle of Hap Security**. Both require the victim to open attacker-controlled content \u2014 a media file, an image, or a playlist entry.\n\n**CVE-2026-56711 \u2014 heap out-of-bounds write via integer overflow. CVSS 8.6 (High).** CWE-190 + CWE-787. In `AllocatePicture` (`src/misc/picture.c`), the buffer size is derived from `i_pitch * i_lines`. Both are signed `int` in `include/vlc_picture.h`, so the **32-bit multiply wraps** and VLC under-allocates. The existing guards do not catch it: one validation routine performs its division in 64-bit arithmetic **without constraining the preceding 32-bit multiply**, and a second check evaluates the **already-wrapped** result. Practical vector is a **crafted PNG with oversized width and height in the IHDR header** \u2014 VLC's image demuxer validates the input file size but not the *declared* image dimensions, so the PNG decoder writes scanlines past the undersized heap buffer. Outcome ranges from crash to potential arbitrary code execution.\n\n**CVE-2026-73324 \u2014 heap out-of-bounds read / memory disclosure. CVSS 6.9 (Medium).** CWE-125 + CWE-170. In the RTSP access module, `RtspReadLine` (`modules/access/rtsp/access.c`) uses `strncpy` into a fixed-size buffer; a server-controlled line of **\u2265 4096 bytes leaves the buffer unterminated**. That buffer is later passed to `strdup` in `modules/access/rtsp/rtsp.c`, which reads past the allocation. The vulnerable input is the **RTSP `Session` header** \u2014 VLC stores it as a session identifier and **sends it back to the server in subsequent requests**, giving a hostile RTSP server a *direct read channel* into adjacent client heap memory. Triggered by a malicious playlist containing a `realrtsp` URL. The RTSP module is optional at build time (distro packages vary) but **is enabled in official VideoLAN builds**.\n\n**Patch status: none.** VideoLAN has published no security bulletin for either CVE, and no fixed version exists as of 2026-09-13. Secondary outlets asserting \"fixed in 3.0.24\" are inferring; that is not a VideoLAN statement. **No in-the-wild exploitation and no public PoC reported** \u2014 treat as *no known exploitation*, not *confirmed none*.\n\n**Score discrepancy:** strix.ai lists CVE-2026-56711 at CVSS 8.8 against 8.6 in the primary reporting. Use **8.6**; note the conflict where precision matters.\n\n## Why this matters\n\n1. **An unpatched 8.6 in one of the most widely deployed desktop applications on earth is a long-tail exposure, not a patch-cycle item.** VLC ships in default installs on most Linux distributions, is the standard media client across large enterprise fleets, and is routinely installed by users outside any software-approval process. With no vendor fix, the only lever available is content control \u2014 and content control on a media player is precisely the control most organisations do not have.\n\n2. **The PNG vector makes this reachable without a \"video file.\"** Users trained not to open unexpected `.mkv` or `.avi` attachments have no instinct about a PNG, and VLC is frequently registered as a handler for image and playlist types it is not primarily associated with. File-type-based user guidance will not cover the actual attack surface here.\n\n3. **CVE-2026-73324 is an *outbound* read channel, which inverts the usual media-player threat model.** The assumption behind \"don't open untrusted files\" is that the risk is in the file. Here the risk is in the *stream*: a hostile RTSP server, reached through nothing more than a playlist URL, reads adjacent heap memory from the client and receives it back over the wire because VLC echoes the `Session` header. That is a remote-server-to-client exfiltration primitive triggered by clicking a link.\n\n4. **The root cause of CVE-2026-56711 is a validation routine that was written to catch exactly this bug and does not.** The 64-bit division check reads as a deliberate overflow guard; it fails because it operates on a value that has already wrapped. This is the recurring pattern in integer-overflow findings \u2014 the check exists, is in the right place, and inspects the wrong side of the arithmetic. Treat \"there is a bounds check here\" as insufficient evidence during code review.\n\n5. **No vendor advisory means no downstream signal.** Distribution maintainers, SBOM tooling, and vulnerability scanners key off vendor bulletins. With VideoLAN silent, this will under-report in asset-management tooling and may not appear in scan results at all, while the CVEs are public and the mechanism is fully described.\n\n## Action\n\n1. **Inventory VLC across the estate and record the version.** Anything at **3.0.0\u20133.0.23** is in scope. Do not wait for a scanner to flag it \u2014 with no VideoLAN bulletin, scanner coverage is unreliable. Query software inventory directly for the VLC product name, including user-installed and portable copies.\n2. **Apply content-level mitigation now, since no patch exists.** Advise against opening PNGs, playlists, and RTSP streams from untrusted sources; in high-risk environments, restrict VLC to known-good media locations.\n3. **Block untrusted RTSP egress.** CVE-2026-73324 requires the client to reach an attacker-controlled RTSP server. Egress filtering on RTSP (TCP/UDP 554, and the `realrtsp` scheme) removes the exploitation precondition entirely for the disclosure bug \u2014 this is the single highest-leverage control available while no fix exists.\n4. **Strip or quarantine `.m3u`, `.m3u8`, `.xspf`, `.pls` and `.asx` playlist files at the mail gateway.** Playlist files are the delivery mechanism for the RTSP vector and are rarely legitimate as inbound email attachments. They are also small, text-based, and pass most content inspection unremarked.\n5. **Hunt for the exploitation shape rather than a signature.** Look for `vlc.exe` / `vlc` spawning child processes (it should essentially never spawn a shell or script host), VLC process crashes clustered in time or by user, and outbound RTSP connections from workstations to destinations outside known media infrastructure.\n6. **Track VideoLAN for a bulletin and re-check on each sweep.** Monitor `images.videolan.org/security/` and distribution-maintainer advisories. When a fixed release lands, revisit this note \u2014 the absence of a fix is the defining property of this entry and it will change.\n7. **Consider an interim handler change for high-value users.** Re-associating PNG and playlist extensions away from VLC on executive, finance and administrator endpoints costs little and removes the default-open path.\n\n## Cross-reference\n- `MikroTrick-MikroTik-RouterOS-Unauthenticated-SSH-Takeover-2026.md` \u2014 the vault's running thread on unpatched-but-public flaws where the only control is reachability, not remediation.\n- `Threat_Intel/CVEs/2026/Critical/CVE-2026-85706-GitLab-Commits-API-Path-Traversal-Arbitrary-File-Read-2026.md` \u2014 same sweep window; contrast the disclosure-to-patch-to-exploitation timeline there with the *no patch at all* posture here.\n- `Guides/phishing/` \u2014 playlist-file delivery belongs in the attachment-policy discussion alongside the existing macro and archive guidance.\n\n#cve #vlc #videolan #integer-overflow #heap-overflow #out-of-bounds-write #out-of-bounds-read #memory-disclosure #rtsp #png #unpatched #no-vendor-advisory #high #corroborated\n\n## Tags\n #corroborated",
@@ -4358,6 +4449,14 @@
    "sev": "High",
    "year": "2026",
    "kev": false,
+   "apts": []
+  },
+  "CVE-2026-58704": {
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-58704.md",
+   "body": "# CVE-2026-58704\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** High  \n**Year:** 2026\n\n## Summary\n`September-2026-Mobile-And-Windows-OOB-Pixel-ZeroDay-Windows-RDS-Emergency-Update.md` \u2014 CVE-2026-58704 identified + KEV 09-16 + KB5124008 domain-trust regression\n\n## Where it appears in this vault\n- `X_Intel/x-intel-2026-09-17.md` \u2014 `September-2026-Mobile-And-Windows-OOB-Pixel-ZeroDay-Windows-RDS-Emergency-Update.md` \u2014 CVE-2026-58704 identified + KEV 09-16 + KB5124008 domain-trust regression\n- `X_Intel/x-intel-tracker.md` \u2014 Pixel zero-day now has a CVE: CVE-2026-58704** (logic error \u2192 permission bypass in the Pixel Cellular Modem; **KEV 2026-09-16** per CCCS AV26-920 Update 1). Malwarebytes adds the precondition \u2014 **adjacent-network access plus basic device privileges**, so it is a chain component, not standalone RTO. Plus a **fourth September regression: KB5124008 breaks domain trust**, preventing logins with valid domain credentials; Microsoft has since published a workaround | -> Threat_Intel/CVEs/2026/High/September-2026-Mobile-And-Windows-OOB-Pixel-ZeroDay-Windows-RDS-Emergency-Update.md (appended)\n- `X_Intel/x-intel-tracker.md` \u2014 CVE-2026-58704 (Pixel Cellular Modem) added 2026-09-16** \u2014 confirmed via **CCCS AV26-920 Update 1**, which states it verbatim.\n- `X_Intel/x-intel-tracker.md` \u2014 AV26-931 **ISC BIND 9** (\u22649.18.50/9.18.50-S1/9.20.27/9.20.27-S1/9.21.25) \u00b7 AV26-930 **Apple** (iOS/iPadOS <27 and <26.7; macOS Golden Gate <27, Tahoe <26.7, Sequoia <15.8; tvOS/watchOS/visionOS/Safari/Xcode <27) \u00b7 AV26-929 **Oracle September 2026 CSPU** (~50 product lines) \u00b7 AV26-928 **HPE** (Networking EdgeConnect SD-WAN Gateways and Orchestrator, HPESBNW05135) \u00b7 AV26-927 **[Control Systems] Phoenix Contact** (IOL MA8 EIP/PN DI8, 9 \u00d7 Pepperl+Fuchs ICE2/ICE3, 4 \u00d7 Carlo Gavazzi \u2014 firmware <1.7.4; CERT@VDE VDE-2026-014/027/028) \u00b7 AV26-926 **Google Chrome** (<153.0.8010.48) \u00b7 **AV26-920 Update 1 \u2014 Android September rollup, records CISA adding CVE-2026-58704 to KEV on 2026-09-16**.\n- `X_Intel/x-intel-tracker.md` \u2014 Step 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Windows Plan9 mount failure, **sixth consecutive sweep**; the tool now reports the workspace as wedged and instructs no further retries). **No CVE-coverage line this run.** Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-76460, CVE-2026-76423, CVE-2026-20176, CVE-2026-20211, CVE-2026-20307, CVE-2026-20284, CVE-2026-78159, CVE-2026-78006, CVE-2026-89026, CVE-2026-77692, CVE-2026-76163, CVE-2026-19667, CVE-2026-19666, CVE-2026-80274, CVE-2026-19662, CVE-2026-19668, CVE-2026-75029, CVE-2026-81563, CVE-2026-81736, CVE-2026-77119, CVE-2026-19941, CVE-2026-78301, CVE-2026-19033, CVE-2026-58704, CVE-2026-34182, CVE-2026-0628, CVE-2026-55945** (this run), plus **CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310** carried over. **Running `make_cve_notes.py` manually from Windows would clear the whole backlog \u2014 it is now 36 CVEs deep.**\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-58704\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-58704\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-58704\n\n## Tags\n#cve #2026 #high #auto-stub",
+   "sev": "High",
+   "year": "2026",
+   "kev": true,
    "apts": []
   },
   "CVE-2026-61857": {
@@ -4499,6 +4598,22 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-77119": {
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-77119.md",
+   "body": "# CVE-2026-77119\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** High  \n**Year:** 2026\n\n## Summary\nrss:cccs-2026-09-16-av26-931 / (feed) 2026-09-17T08:02Z @TheHackersNews | 2026-09-16..17 | CCCS AV26-931 / THN / ISC | **ISC BIND 9 \u2014 14 flaws**, 8 \u00d7 CVSS 7.5, no known exploitation. Headline **CVE-2026-77692**: a **single unauthenticated DoH request with an invalid SIG(0) record + premature connection close** crashes `named` (CWE-476). Four DNSSEC integrity/cache-poisoning flaws (**CVE-2026-77119, -19941, -78301**, + zone-transfer TSIG flaw). **Fixes are 9.20.29 / 9.21.26 / 9.20.29-S1 \u2014 the versions listed in AV26-931 are affected-range bounds, not fixes** | -> Threat_Intel/CVEs/2026/High/CVE-2026-77692-BIND9-DoH-SIG0-NULL-Deref-Crash-Plus-13-More-ISC-2026.md (new)\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 rss:cccs-2026-09-16-av26-931 / (feed) 2026-09-17T08:02Z @TheHackersNews | 2026-09-16..17 | CCCS AV26-931 / THN / ISC | **ISC BIND 9 \u2014 14 flaws**, 8 \u00d7 CVSS 7.5, no known exploitation. Headline **CVE-2026-77692**: a **single unauthenticated DoH request with an invalid SIG(0) record + premature connection close** crashes `named` (CWE-476). Four DNSSEC integrity/cache-poisoning flaws (**CVE-2026-77119, -19941, -78301**, + zone-transfer TSIG flaw). **Fixes are 9.20.29 / 9.21.26 / 9.20.29-S1 \u2014 the versions listed in AV26-931 are affected-range bounds, not fixes** | -> Threat_Intel/CVEs/2026/High/CVE-2026-77692-BIND9-DoH-SIG0-NULL-Deref-Crash-Plus-13-More-ISC-2026.md (new)\n- `X_Intel/x-intel-tracker.md` \u2014 Step 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Windows Plan9 mount failure, **sixth consecutive sweep**; the tool now reports the workspace as wedged and instructs no further retries). **No CVE-coverage line this run.** Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-76460, CVE-2026-76423, CVE-2026-20176, CVE-2026-20211, CVE-2026-20307, CVE-2026-20284, CVE-2026-78159, CVE-2026-78006, CVE-2026-89026, CVE-2026-77692, CVE-2026-76163, CVE-2026-19667, CVE-2026-19666, CVE-2026-80274, CVE-2026-19662, CVE-2026-19668, CVE-2026-75029, CVE-2026-81563, CVE-2026-81736, CVE-2026-77119, CVE-2026-19941, CVE-2026-78301, CVE-2026-19033, CVE-2026-58704, CVE-2026-34182, CVE-2026-0628, CVE-2026-55945** (this run), plus **CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310** carried over. **Running `make_cve_notes.py` manually from Windows would clear the whole backlog \u2014 it is now 36 CVEs deep.**\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-77119\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-77119\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-77119\n\n## Tags\n#cve #2026 #high #auto-stub",
+   "sev": "High",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-77692": {
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-77692-BIND9-DoH-SIG0-NULL-Deref-Crash-Plus-13-More-ISC-2026.md",
+   "body": "# ISC BIND 9 \u2014 14 Flaws Including CVE-2026-77692: One Unauthenticated DoH Request Crashes `named`\n\n\u26a0\ufe0f **Verification:** Corroborated \u2014 3 independent sources\n\n> Source: ISC advisory set, `kb.isc.org/docs/cve-2026-<id>` \u2014 public disclosure 2026-09-16\n> Source: [Canadian Centre for Cyber Security AV26-931](https://cyber.gc.ca/en/alerts-advisories/isc-bind-security-advisory-av26-931) \u2014 2026-09-16\n> Source: X @TheHackersNews `2026-09-17T08:02Z` \u2014 \"BIND 9 Update Fixes 14 Flaws, Including an Unauthenticated Crash Over DNS-over-HTTPS\"\n\n**Type:** CVE cluster / DoS, resource exhaustion, DNSSEC cache poisoning | **Severity:** High (8 \u00d7 CVSS 7.5) | **Date:** 2026-09-17\n\n## Summary\nISC disclosed **14 vulnerabilities in BIND 9** on **2026-09-16**. **Eight are High (CVSS 7.5)**; the rest Medium. **No known active exploitation** as of publication. Pre-notification 2026-09-09; version list revised 2026-09-11.\n\n**Fixed versions: 9.20.29 (stable), 9.21.26 (development), 9.20.29-S1 (Supported Preview Edition)**, released 2026-09-16. **9.20.29 closes all 14; 9.21.26 closes 13** (CVE-2026-19662 is 9.20.x-only).\n\n> \u26a0\ufe0f **Correction to a common misreading, including CCCS AV26-931.** The version strings **9.18.50 / 9.18.50-S1 / 9.20.27 / 9.20.27-S1 / 9.21.25** are the **upper bounds of the affected ranges**, *not* fixed versions. AV26-931 lists them as \"affected prior to or equal to\", which is correct, but the numbers are easily mistaken for patch targets. **Patch to 9.20.29 / 9.21.26 / 9.20.29-S1.**\n\n### The headline flaw \u2014 CVE-2026-77692\n- **CVSS 7.5** (`AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H`), **CWE-476 NULL pointer dereference**.\n- **Mechanism:** a **single crafted DNS-over-HTTPS request carrying a cryptographically invalid SIG(0) record**, followed by **premature closure of the transport connection**, aborts `named`.\n- **Affected:** 9.20.0\u20139.20.27, 9.21.0\u20139.21.25, 9.20.9-S1\u20139.20.27-S1. **9.18 not affected.**\n- Unauthenticated, no user interaction, one request.\n\n### Crash / assertion-failure (DoS)\n| CVE | Condition |\n|---|---|\n| **CVE-2026-77692** | DoH + invalid SIG(0) + connection close \u2192 abort (above) |\n| **CVE-2026-76163** | No global `options` block in `named.conf` **plus** a **TKEY query** \u2192 assertion failure, hard exit. 9.18 unaffected. |\n| **CVE-2026-19667** | Crafted response producing a negative answer of **exactly 65,536 bytes** \u2192 zero-byte negative-cache entry \u2192 abort |\n| **CVE-2026-19666** | Only resolvers running **dns64 with `break-dnssec yes`**, and only when the bad answer comes from cache |\n| **CVE-2026-80274** | `named` stores one denial proof at cache time, serves a different one later \u2192 abort or wrong record |\n| **CVE-2026-19662** | **Use-after-free** in cached NOQNAME proof data. **9.20.x only, \u2264 9.20.27** \u2014 the reason 9.21.26 closes 13 not 14 |\n\n### Resource exhaustion\n| CVE | Mechanism |\n|---|---|\n| **CVE-2026-19668** (CVSS 5.3) | CPU exhaustion \u2014 a delegated zone whose DS/DNSKEY records carry **many distinct key tags with no valid match** forces repeated key-tag matching per recursive query. Bounded by `max-validations-per-fetch`. **No workaround.** |\n| **CVE-2026-75029** | Negative-cache memory bloat from a message full of identical SOA/CNAME/DNAME records; `named` now keeps only the first copy |\n| **CVE-2026-81563** | **qpcache reference leak** answering an SVCB/HTTPS **AliasMode** query whose target held **>13 ServiceMode records**; cache grows past `max-cache-size` until lookups fail |\n| **CVE-2026-81736** | Disproportionate CPU assembling one response from a cached tree of **interlinked AliasMode HTTPS/SVCB records**; now capped per query |\n\n### DNSSEC integrity / cache poisoning\n| CVE | Mechanism |\n|---|---|\n| **CVE-2026-77119** (CVSS 5.9) | A validating resolver accepts a **valid NSEC3 record from an unrelated sibling zone** as proof that a secure delegation is insecure \u2192 forged unsigned answers accepted. **No workaround.** |\n| **CVE-2026-19941** | An **inapplicable NSEC record** accepted as proof no wildcard exists, masking a victim's wildcard record \u2192 **forged DNSSEC-validated NXDOMAIN**. Fix requires wildcard-denial and name-nonexistence proofs be signed by the same zone. |\n| **CVE-2026-78301** | **Out-of-zone database nodes becoming authoritative zone cuts.** Needs a malformed zone with an NS or DNAME node above its origin, loaded via transfer. On a recursing server `named` may follow the unintended delegation and cache attacker data for names outside the configured zone. |\n| **CVE-2026-19033** *(ID unconfirmed \u2014 see below)* | `named` could accept a **TSIG-signed AXFR/IXFR in which individual messages were unsigned**, processing them before verifying later signatures; for TSIG-gated secondary zones it could begin serving zone data before the final signed message arrived, with no rollback. Fix requires a TSIG signature on **every** incoming transfer message. |\n\n> \u26a0\ufe0f **CVE ID discrepancy on the zone-transfer flaw.** One trade source gives **CVE-2026-1903**, another **CVE-2026-19033**. The 14-item count only reconciles with **CVE-2026-19033**. Treat CVE-2026-1903 as a likely typo, **unverified**. Confirm against the ISC knowledgebase before citing.\n\n## Why this matters\n1. **CVE-2026-77692 is the cheapest possible DoS against a service that everything else depends on.** One unauthenticated DoH request, no state to build up, no amplification needed. If your resolver answers DoH from the internet, it can be dropped by a single packet-equivalent.\n2. **DoH is the newest and least-hardened transport in BIND, and it shows.** Two of the fourteen touch DoH or transport teardown. Organisations that enabled DoH for privacy reasons have quietly enlarged the attack surface of the most load-bearing service they run.\n3. **The four DNSSEC flaws are the more serious half of this release and will get the least attention.** Three of them let an attacker obtain **DNSSEC-validated forged answers** \u2014 a validating resolver actively vouching for attacker data. That is worse than an outage: it is a silent trust failure, it persists in cache, and there is no error for anyone to notice.\n4. **CVE-2026-77119 and CVE-2026-19668 have no workaround.** Patching is the whole control. Config hardening does not help.\n5. **Three of the crash conditions are configuration-gated** (`dns64 break-dnssec yes`, missing global `options` block, 9.20.x-only UAF). Inventory matters more than usual here \u2014 the applicable set differs per resolver.\n6. **SVCB/HTTPS AliasMode appears twice as a resource-exhaustion vector.** As HTTPS RR adoption grows for ECH and HTTP/3 discovery, expect more of this record type in attacker-controlled zones.\n\n## Action\n1. **Upgrade to 9.20.29, 9.21.26 or 9.20.29-S1.** Do not target the version numbers quoted in CCCS AV26-931 \u2014 those are affected-range bounds.\n2. **Identify every resolver exposing DoH to untrusted networks** and prioritise those for CVE-2026-77692.\n3. **Inventory config-gated conditions:** `dns64` + `break-dnssec yes` (CVE-2026-19666); `named.conf` files with **no global `options` block** (CVE-2026-76163); any remaining 9.20.x (CVE-2026-19662).\n4. **Confirm `max-validations-per-fetch` and `max-cache-size` are set** \u2014 they bound CVE-2026-19668 and CVE-2026-81563 respectively.\n5. **Treat validating resolvers as the priority tier**, not the authoritative servers \u2014 the cache-poisoning set only bites on validation.\n6. **Verify the zone-transfer CVE ID** against `kb.isc.org` before quoting it in any advisory you issue internally.\n7. **If running the Supported Preview Edition**, note the separate `-S1` track and that 9.21.26 does *not* close CVE-2026-19662.\n\n## Cross-reference\n- `Vendor-Advisory-Roundup-*` \u2014 CCCS AV26-931 is the advisory that surfaced this.\n- `CVE-2026-91752` (GNU libextractor, AV26-923) \u2014 same CCCS advisory window.\n- `Oracle-September-2026-CSPU-672-CVEs-104-Critical-Fusion-Middleware-2026.md` \u2014 same month's patch-volume context.\n\n#cve #bind #bind9 #isc #dns #doh #dns-over-https #dnssec #nsec3 #cache-poisoning #dos #null-dereference #use-after-free #tsig #svcb #resource-exhaustion #high #corroborated\n\n## Tags\n #corroborated",
+   "sev": "High",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-83527": {
    "file": "Threat_Intel/CVEs/2026/High/CVE-2026-83527.md",
    "body": "# CVE-2026-83527\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** High  \n**Year:** 2026\n\n## Summary\nrss:cccs-2026-09-08-av26-897 | 2026-09-08 | CCCS | Ivanti Sept 2026 \u2014 EPMM CVE-2026-18851, Sentry CVE-2026-83527, Neurons for ITSM multiple | -> Threat_Intel/CVEs/2026/High/Ivanti-September-2026-Security-Update-EPMM-Neurons-ITSM-Sentry-AV26-897.md (new)\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 rss:cccs-2026-09-08-av26-897 | 2026-09-08 | CCCS | Ivanti Sept 2026 \u2014 EPMM CVE-2026-18851, Sentry CVE-2026-83527, Neurons for ITSM multiple | -> Threat_Intel/CVEs/2026/High/Ivanti-September-2026-Security-Update-EPMM-Neurons-ITSM-Sentry-AV26-897.md (new)\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-83527\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-83527\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-83527\n\n## Tags\n#cve #2026 #high #auto-stub",
@@ -4555,9 +4670,73 @@
    "kev": true,
    "apts": []
   },
+  "CVE-2026-19033": {
+   "file": "Threat_Intel/CVEs/2026/Low/CVE-2026-19033.md",
+   "body": "# CVE-2026-19033\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Low  \n**Year:** 2026\n\n## Summary\n7. **BIND zone-transfer CVE ID** \u2014 sources split between CVE-2026-1903 and CVE-2026-19033; verify against kb.isc.org.\n\n## Where it appears in this vault\n- `X_Intel/x-intel-2026-09-17.md` \u2014 7. **BIND zone-transfer CVE ID** \u2014 sources split between CVE-2026-1903 and CVE-2026-19033; verify against kb.isc.org.\n- `X_Intel/x-intel-tracker.md` \u2014 Step 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Windows Plan9 mount failure, **sixth consecutive sweep**; the tool now reports the workspace as wedged and instructs no further retries). **No CVE-coverage line this run.** Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-76460, CVE-2026-76423, CVE-2026-20176, CVE-2026-20211, CVE-2026-20307, CVE-2026-20284, CVE-2026-78159, CVE-2026-78006, CVE-2026-89026, CVE-2026-77692, CVE-2026-76163, CVE-2026-19667, CVE-2026-19666, CVE-2026-80274, CVE-2026-19662, CVE-2026-19668, CVE-2026-75029, CVE-2026-81563, CVE-2026-81736, CVE-2026-77119, CVE-2026-19941, CVE-2026-78301, CVE-2026-19033, CVE-2026-58704, CVE-2026-34182, CVE-2026-0628, CVE-2026-55945** (this run), plus **CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310** carried over. **Running `make_cve_notes.py` manually from Windows would clear the whole backlog \u2014 it is now 36 CVEs deep.**\n- `X_Intel/x-intel-tracker.md` \u2014 All 19 new notes and all 6 appends were verified present and correctly structured; all note paths cited in this section resolve; CVE IDs match between tracker and note bodies. Three source discrepancies were **recorded rather than silently resolved**: the BIND zone-transfer CVE ID (CVE-2026-1903 vs CVE-2026-19033 \u2014 only the latter reconciles with the 14-item count); Sophos's 973 vs this vault's 974 Patch Tuesday count (immaterial, noted in the append); and ESET's own \"modular C++\" vs derived coverage's \"modular C\" description of SparroWocky. One **correction to a government advisory** was made explicit: **CCCS AV26-931 lists BIND affected-range bounds that are easily misread as fixed versions** \u2014 the note states the actual fixes (9.20.29 / 9.21.26 / 9.20.29-S1) and flags the trap. One unverifiable premise was **marked unconfirmed rather than dropped**: the reported WIRED story on where Flock cameras are assembled could not be located, and Flock's only published facility handles drones and refurbishment, not camera assembly.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-19033\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-19033\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-19033\n\n## Tags\n#cve #2026 #low #auto-stub",
+   "sev": "Low",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-19290": {
    "file": "Threat_Intel/CVEs/2026/Low/CVE-2026-19290.md",
    "body": "# CVE-2026-19290\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Low  \n**Year:** 2026\n\n## Summary\n10. **Run `Dashboards/make_cve_notes.py` manually from Windows** \u2014 nine CVEs now lack auto-generated stubs across five sweeps: CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310.\n\n## Where it appears in this vault\n- `X_Intel/x-intel-2026-09-16.md` \u2014 10. **Run `Dashboards/make_cve_notes.py` manually from Windows** \u2014 nine CVEs now lack auto-generated stubs across five sweeps: CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310.\n- `X_Intel/x-intel-tracker.md` \u2014 AV26-925 Docker (Sandboxes <0.43.0) \u00b7 AV26-924 Mozilla (Firefox <156; ESR <115.41/140.16/153.3) \u00b7 AV26-923 GNU libextractor <1.15 (**CVE-2026-91752**, OLE2 stack overflow) \u00b7 AV26-922 IBM (Langflow OSS scanner-blocklist bypass; MQ **CVE-2026-13293** Java messaging RCE; Sterling File Gateway **CVE-2026-19290** improper access control) \u00b7 AV26-921 Cisco (**CVE-2026-76461**, KEV) \u00b7 AV26-920 Android Sept rollup \u00b7 AV26-919 Samsung SMR-SEP-2026 \u00b7 AV26-918 MongoDB (<7.0.43/8.0.32/8.3.11/9.0.1, SERVER-134063).\n- `X_Intel/x-intel-tracker.md` \u2014 Step 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Windows Plan9 mount failure, **fifth consecutive sweep**). **No CVE-coverage line this run.** Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-5430**, **CVE-2026-87886**, **CVE-2026-91752**, **CVE-2026-13293**, **CVE-2026-19290** (this run), plus **CVE-2026-56711**, **CVE-2026-73324**, **CVE-2026-85706** and **CVE-2026-0310** carried over. **The shell has now been unavailable for five straight sweeps \u2014 this has stopped being a transient failure and should be treated as a standing defect.** Running `make_cve_notes.py` manually from Windows would clear the whole backlog.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-19290\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-19290\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-19290\n\n## Tags\n#cve #2026 #low #auto-stub",
+   "sev": "Low",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-19662": {
+   "file": "Threat_Intel/CVEs/2026/Low/CVE-2026-19662.md",
+   "body": "# CVE-2026-19662\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Low  \n**Year:** 2026\n\n## Summary\nStep 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Windows Plan9 mount failure, **sixth consecutive sweep**; the tool now reports the workspace as wedged and instructs no further retries). **No CVE-coverage line this run.** Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-76460, CVE-2026-76423, CVE-2026-20176, CVE-2026-20211, CVE-2026-20307, CVE-2026-20284, CVE-2026-78159, CVE-2026-78006, CVE-2026-89026, CVE-2026-77692, CVE-2026-76163, CVE-2026-19667, CVE-2026-19666, CVE-2026-80274, CVE-2026-19662, CVE-2026-19668, CVE-2026-75029, CVE-2026-81563, CVE-2026-81736, CVE-2026-77119, CVE-2026-19941, CVE-2026-78301, CVE-2026-19033, CVE-2026-58704, CVE-2026-34182, CVE-2026-0628, CVE-2026-55945** (this run), plus **CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310** carried over. **Running `make_cve_notes.py` manually from Windows would clear the whole backlog \u2014 it is now 36 CVEs deep.**\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 Step 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Windows Plan9 mount failure, **sixth consecutive sweep**; the tool now reports the workspace as wedged and instructs no further retries). **No CVE-coverage line this run.** Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-76460, CVE-2026-76423, CVE-2026-20176, CVE-2026-20211, CVE-2026-20307, CVE-2026-20284, CVE-2026-78159, CVE-2026-78006, CVE-2026-89026, CVE-2026-77692, CVE-2026-76163, CVE-2026-19667, CVE-2026-19666, CVE-2026-80274, CVE-2026-19662, CVE-2026-19668, CVE-2026-75029, CVE-2026-81563, CVE-2026-81736, CVE-2026-77119, CVE-2026-19941, CVE-2026-78301, CVE-2026-19033, CVE-2026-58704, CVE-2026-34182, CVE-2026-0628, CVE-2026-55945** (this run), plus **CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310** carried over. **Running `make_cve_notes.py` manually from Windows would clear the whole backlog \u2014 it is now 36 CVEs deep.**\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-19662\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-19662\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-19662\n\n## Tags\n#cve #2026 #low #auto-stub",
+   "sev": "Low",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-19666": {
+   "file": "Threat_Intel/CVEs/2026/Low/CVE-2026-19666.md",
+   "body": "# CVE-2026-19666\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Low  \n**Year:** 2026\n\n## Summary\nStep 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Windows Plan9 mount failure, **sixth consecutive sweep**; the tool now reports the workspace as wedged and instructs no further retries). **No CVE-coverage line this run.** Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-76460, CVE-2026-76423, CVE-2026-20176, CVE-2026-20211, CVE-2026-20307, CVE-2026-20284, CVE-2026-78159, CVE-2026-78006, CVE-2026-89026, CVE-2026-77692, CVE-2026-76163, CVE-2026-19667, CVE-2026-19666, CVE-2026-80274, CVE-2026-19662, CVE-2026-19668, CVE-2026-75029, CVE-2026-81563, CVE-2026-81736, CVE-2026-77119, CVE-2026-19941, CVE-2026-78301, CVE-2026-19033, CVE-2026-58704, CVE-2026-34182, CVE-2026-0628, CVE-2026-55945** (this run), plus **CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310** carried over. **Running `make_cve_notes.py` manually from Windows would clear the whole backlog \u2014 it is now 36 CVEs deep.**\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 Step 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Windows Plan9 mount failure, **sixth consecutive sweep**; the tool now reports the workspace as wedged and instructs no further retries). **No CVE-coverage line this run.** Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-76460, CVE-2026-76423, CVE-2026-20176, CVE-2026-20211, CVE-2026-20307, CVE-2026-20284, CVE-2026-78159, CVE-2026-78006, CVE-2026-89026, CVE-2026-77692, CVE-2026-76163, CVE-2026-19667, CVE-2026-19666, CVE-2026-80274, CVE-2026-19662, CVE-2026-19668, CVE-2026-75029, CVE-2026-81563, CVE-2026-81736, CVE-2026-77119, CVE-2026-19941, CVE-2026-78301, CVE-2026-19033, CVE-2026-58704, CVE-2026-34182, CVE-2026-0628, CVE-2026-55945** (this run), plus **CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310** carried over. **Running `make_cve_notes.py` manually from Windows would clear the whole backlog \u2014 it is now 36 CVEs deep.**\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-19666\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-19666\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-19666\n\n## Tags\n#cve #2026 #low #auto-stub",
+   "sev": "Low",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-19667": {
+   "file": "Threat_Intel/CVEs/2026/Low/CVE-2026-19667.md",
+   "body": "# CVE-2026-19667\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Low  \n**Year:** 2026\n\n## Summary\nStep 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Windows Plan9 mount failure, **sixth consecutive sweep**; the tool now reports the workspace as wedged and instructs no further retries). **No CVE-coverage line this run.** Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-76460, CVE-2026-76423, CVE-2026-20176, CVE-2026-20211, CVE-2026-20307, CVE-2026-20284, CVE-2026-78159, CVE-2026-78006, CVE-2026-89026, CVE-2026-77692, CVE-2026-76163, CVE-2026-19667, CVE-2026-19666, CVE-2026-80274, CVE-2026-19662, CVE-2026-19668, CVE-2026-75029, CVE-2026-81563, CVE-2026-81736, CVE-2026-77119, CVE-2026-19941, CVE-2026-78301, CVE-2026-19033, CVE-2026-58704, CVE-2026-34182, CVE-2026-0628, CVE-2026-55945** (this run), plus **CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310** carried over. **Running `make_cve_notes.py` manually from Windows would clear the whole backlog \u2014 it is now 36 CVEs deep.**\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 Step 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Windows Plan9 mount failure, **sixth consecutive sweep**; the tool now reports the workspace as wedged and instructs no further retries). **No CVE-coverage line this run.** Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-76460, CVE-2026-76423, CVE-2026-20176, CVE-2026-20211, CVE-2026-20307, CVE-2026-20284, CVE-2026-78159, CVE-2026-78006, CVE-2026-89026, CVE-2026-77692, CVE-2026-76163, CVE-2026-19667, CVE-2026-19666, CVE-2026-80274, CVE-2026-19662, CVE-2026-19668, CVE-2026-75029, CVE-2026-81563, CVE-2026-81736, CVE-2026-77119, CVE-2026-19941, CVE-2026-78301, CVE-2026-19033, CVE-2026-58704, CVE-2026-34182, CVE-2026-0628, CVE-2026-55945** (this run), plus **CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310** carried over. **Running `make_cve_notes.py` manually from Windows would clear the whole backlog \u2014 it is now 36 CVEs deep.**\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-19667\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-19667\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-19667\n\n## Tags\n#cve #2026 #low #auto-stub",
+   "sev": "Low",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-19668": {
+   "file": "Threat_Intel/CVEs/2026/Low/CVE-2026-19668.md",
+   "body": "# CVE-2026-19668\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Low  \n**Year:** 2026\n\n## Summary\nStep 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Windows Plan9 mount failure, **sixth consecutive sweep**; the tool now reports the workspace as wedged and instructs no further retries). **No CVE-coverage line this run.** Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-76460, CVE-2026-76423, CVE-2026-20176, CVE-2026-20211, CVE-2026-20307, CVE-2026-20284, CVE-2026-78159, CVE-2026-78006, CVE-2026-89026, CVE-2026-77692, CVE-2026-76163, CVE-2026-19667, CVE-2026-19666, CVE-2026-80274, CVE-2026-19662, CVE-2026-19668, CVE-2026-75029, CVE-2026-81563, CVE-2026-81736, CVE-2026-77119, CVE-2026-19941, CVE-2026-78301, CVE-2026-19033, CVE-2026-58704, CVE-2026-34182, CVE-2026-0628, CVE-2026-55945** (this run), plus **CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310** carried over. **Running `make_cve_notes.py` manually from Windows would clear the whole backlog \u2014 it is now 36 CVEs deep.**\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 Step 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Windows Plan9 mount failure, **sixth consecutive sweep**; the tool now reports the workspace as wedged and instructs no further retries). **No CVE-coverage line this run.** Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-76460, CVE-2026-76423, CVE-2026-20176, CVE-2026-20211, CVE-2026-20307, CVE-2026-20284, CVE-2026-78159, CVE-2026-78006, CVE-2026-89026, CVE-2026-77692, CVE-2026-76163, CVE-2026-19667, CVE-2026-19666, CVE-2026-80274, CVE-2026-19662, CVE-2026-19668, CVE-2026-75029, CVE-2026-81563, CVE-2026-81736, CVE-2026-77119, CVE-2026-19941, CVE-2026-78301, CVE-2026-19033, CVE-2026-58704, CVE-2026-34182, CVE-2026-0628, CVE-2026-55945** (this run), plus **CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310** carried over. **Running `make_cve_notes.py` manually from Windows would clear the whole backlog \u2014 it is now 36 CVEs deep.**\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-19668\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-19668\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-19668\n\n## Tags\n#cve #2026 #low #auto-stub",
+   "sev": "Low",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-19941": {
+   "file": "Threat_Intel/CVEs/2026/Low/CVE-2026-19941.md",
+   "body": "# CVE-2026-19941\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Low  \n**Year:** 2026\n\n## Summary\nStep 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Windows Plan9 mount failure, **sixth consecutive sweep**; the tool now reports the workspace as wedged and instructs no further retries). **No CVE-coverage line this run.** Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-76460, CVE-2026-76423, CVE-2026-20176, CVE-2026-20211, CVE-2026-20307, CVE-2026-20284, CVE-2026-78159, CVE-2026-78006, CVE-2026-89026, CVE-2026-77692, CVE-2026-76163, CVE-2026-19667, CVE-2026-19666, CVE-2026-80274, CVE-2026-19662, CVE-2026-19668, CVE-2026-75029, CVE-2026-81563, CVE-2026-81736, CVE-2026-77119, CVE-2026-19941, CVE-2026-78301, CVE-2026-19033, CVE-2026-58704, CVE-2026-34182, CVE-2026-0628, CVE-2026-55945** (this run), plus **CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310** carried over. **Running `make_cve_notes.py` manually from Windows would clear the whole backlog \u2014 it is now 36 CVEs deep.**\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 Step 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Windows Plan9 mount failure, **sixth consecutive sweep**; the tool now reports the workspace as wedged and instructs no further retries). **No CVE-coverage line this run.** Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-76460, CVE-2026-76423, CVE-2026-20176, CVE-2026-20211, CVE-2026-20307, CVE-2026-20284, CVE-2026-78159, CVE-2026-78006, CVE-2026-89026, CVE-2026-77692, CVE-2026-76163, CVE-2026-19667, CVE-2026-19666, CVE-2026-80274, CVE-2026-19662, CVE-2026-19668, CVE-2026-75029, CVE-2026-81563, CVE-2026-81736, CVE-2026-77119, CVE-2026-19941, CVE-2026-78301, CVE-2026-19033, CVE-2026-58704, CVE-2026-34182, CVE-2026-0628, CVE-2026-55945** (this run), plus **CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310** carried over. **Running `make_cve_notes.py` manually from Windows would clear the whole backlog \u2014 it is now 36 CVEs deep.**\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-19941\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-19941\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-19941\n\n## Tags\n#cve #2026 #low #auto-stub",
+   "sev": "Low",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-20211": {
+   "file": "Threat_Intel/CVEs/2026/Low/CVE-2026-20211.md",
+   "body": "# CVE-2026-20211\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Low  \n**Year:** 2026\n\n## Summary\nStep 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Windows Plan9 mount failure, **sixth consecutive sweep**; the tool now reports the workspace as wedged and instructs no further retries). **No CVE-coverage line this run.** Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-76460, CVE-2026-76423, CVE-2026-20176, CVE-2026-20211, CVE-2026-20307, CVE-2026-20284, CVE-2026-78159, CVE-2026-78006, CVE-2026-89026, CVE-2026-77692, CVE-2026-76163, CVE-2026-19667, CVE-2026-19666, CVE-2026-80274, CVE-2026-19662, CVE-2026-19668, CVE-2026-75029, CVE-2026-81563, CVE-2026-81736, CVE-2026-77119, CVE-2026-19941, CVE-2026-78301, CVE-2026-19033, CVE-2026-58704, CVE-2026-34182, CVE-2026-0628, CVE-2026-55945** (this run), plus **CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310** carried over. **Running `make_cve_notes.py` manually from Windows would clear the whole backlog \u2014 it is now 36 CVEs deep.**\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 Step 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Windows Plan9 mount failure, **sixth consecutive sweep**; the tool now reports the workspace as wedged and instructs no further retries). **No CVE-coverage line this run.** Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-76460, CVE-2026-76423, CVE-2026-20176, CVE-2026-20211, CVE-2026-20307, CVE-2026-20284, CVE-2026-78159, CVE-2026-78006, CVE-2026-89026, CVE-2026-77692, CVE-2026-76163, CVE-2026-19667, CVE-2026-19666, CVE-2026-80274, CVE-2026-19662, CVE-2026-19668, CVE-2026-75029, CVE-2026-81563, CVE-2026-81736, CVE-2026-77119, CVE-2026-19941, CVE-2026-78301, CVE-2026-19033, CVE-2026-58704, CVE-2026-34182, CVE-2026-0628, CVE-2026-55945** (this run), plus **CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310** carried over. **Running `make_cve_notes.py` manually from Windows would clear the whole backlog \u2014 it is now 36 CVEs deep.**\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-20211\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-20211\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-20211\n\n## Tags\n#cve #2026 #low #auto-stub",
+   "sev": "Low",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-20307": {
+   "file": "Threat_Intel/CVEs/2026/Low/CVE-2026-20307.md",
+   "body": "# CVE-2026-20307\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Low  \n**Year:** 2026\n\n## Summary\nStep 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Windows Plan9 mount failure, **sixth consecutive sweep**; the tool now reports the workspace as wedged and instructs no further retries). **No CVE-coverage line this run.** Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-76460, CVE-2026-76423, CVE-2026-20176, CVE-2026-20211, CVE-2026-20307, CVE-2026-20284, CVE-2026-78159, CVE-2026-78006, CVE-2026-89026, CVE-2026-77692, CVE-2026-76163, CVE-2026-19667, CVE-2026-19666, CVE-2026-80274, CVE-2026-19662, CVE-2026-19668, CVE-2026-75029, CVE-2026-81563, CVE-2026-81736, CVE-2026-77119, CVE-2026-19941, CVE-2026-78301, CVE-2026-19033, CVE-2026-58704, CVE-2026-34182, CVE-2026-0628, CVE-2026-55945** (this run), plus **CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310** carried over. **Running `make_cve_notes.py` manually from Windows would clear the whole backlog \u2014 it is now 36 CVEs deep.**\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 Step 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Windows Plan9 mount failure, **sixth consecutive sweep**; the tool now reports the workspace as wedged and instructs no further retries). **No CVE-coverage line this run.** Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-76460, CVE-2026-76423, CVE-2026-20176, CVE-2026-20211, CVE-2026-20307, CVE-2026-20284, CVE-2026-78159, CVE-2026-78006, CVE-2026-89026, CVE-2026-77692, CVE-2026-76163, CVE-2026-19667, CVE-2026-19666, CVE-2026-80274, CVE-2026-19662, CVE-2026-19668, CVE-2026-75029, CVE-2026-81563, CVE-2026-81736, CVE-2026-77119, CVE-2026-19941, CVE-2026-78301, CVE-2026-19033, CVE-2026-58704, CVE-2026-34182, CVE-2026-0628, CVE-2026-55945** (this run), plus **CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310** carried over. **Running `make_cve_notes.py` manually from Windows would clear the whole backlog \u2014 it is now 36 CVEs deep.**\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-20307\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-20307\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-20307\n\n## Tags\n#cve #2026 #low #auto-stub",
    "sev": "Low",
    "year": "2026",
    "kev": false,
@@ -4598,6 +4777,54 @@
   "CVE-2026-64449": {
    "file": "Threat_Intel/CVEs/2026/Low/CVE-2026-64449.md",
    "body": "# CVE-2026-64449\n\n\u2705 **Verification:** Verified \u2014 7 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Low  \n**Year:** 2026\n\n## Summary\n@CVEnew (Jul-27): **CVE-2026-64449** \u2014 Linux kernel *staging: vme_user* bounds fix (SLAVE-path helpers buffer bound to kern_buf size). Auto-CVE feed, low-signal staging-driver fix; logged not promoted.\n\n## Where it appears in this vault\n- `X_Intel/x-intel-2026-07-27.md` \u2014 @CVEnew (Jul-27): **CVE-2026-64449** \u2014 Linux kernel *staging: vme_user* bounds fix (SLAVE-path helpers buffer bound to kern_buf size). Auto-CVE feed, low-signal staging-driver fix; logged not promoted.\n- `X_Intel/x-intel-tracker.md` \u2014 Logged/minor -> X_Intel/x-intel-2026-07-27.md (evening addendum): @DailyDarkWeb ShinyHunters data reused for $2k BTC sextortion (Jul-26); @DarkWebInformer Egyptian Football Association ~9.8GB leak claim (Jul-26, UNVERIFIED); @The_Cyber_News BitMart exchange permanent shutdown (Jul-26); @CVEnew CVE-2026-64449 Linux staging vme_user bounds fix (Jul-27, auto-CVE low-signal).\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-64449\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-64449\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-64449\n\n## Tags\n#cve #2026 #low #auto-stub #verified",
+   "sev": "Low",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-75029": {
+   "file": "Threat_Intel/CVEs/2026/Low/CVE-2026-75029.md",
+   "body": "# CVE-2026-75029\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Low  \n**Year:** 2026\n\n## Summary\nStep 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Windows Plan9 mount failure, **sixth consecutive sweep**; the tool now reports the workspace as wedged and instructs no further retries). **No CVE-coverage line this run.** Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-76460, CVE-2026-76423, CVE-2026-20176, CVE-2026-20211, CVE-2026-20307, CVE-2026-20284, CVE-2026-78159, CVE-2026-78006, CVE-2026-89026, CVE-2026-77692, CVE-2026-76163, CVE-2026-19667, CVE-2026-19666, CVE-2026-80274, CVE-2026-19662, CVE-2026-19668, CVE-2026-75029, CVE-2026-81563, CVE-2026-81736, CVE-2026-77119, CVE-2026-19941, CVE-2026-78301, CVE-2026-19033, CVE-2026-58704, CVE-2026-34182, CVE-2026-0628, CVE-2026-55945** (this run), plus **CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310** carried over. **Running `make_cve_notes.py` manually from Windows would clear the whole backlog \u2014 it is now 36 CVEs deep.**\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 Step 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Windows Plan9 mount failure, **sixth consecutive sweep**; the tool now reports the workspace as wedged and instructs no further retries). **No CVE-coverage line this run.** Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-76460, CVE-2026-76423, CVE-2026-20176, CVE-2026-20211, CVE-2026-20307, CVE-2026-20284, CVE-2026-78159, CVE-2026-78006, CVE-2026-89026, CVE-2026-77692, CVE-2026-76163, CVE-2026-19667, CVE-2026-19666, CVE-2026-80274, CVE-2026-19662, CVE-2026-19668, CVE-2026-75029, CVE-2026-81563, CVE-2026-81736, CVE-2026-77119, CVE-2026-19941, CVE-2026-78301, CVE-2026-19033, CVE-2026-58704, CVE-2026-34182, CVE-2026-0628, CVE-2026-55945** (this run), plus **CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310** carried over. **Running `make_cve_notes.py` manually from Windows would clear the whole backlog \u2014 it is now 36 CVEs deep.**\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-75029\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-75029\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-75029\n\n## Tags\n#cve #2026 #low #auto-stub",
+   "sev": "Low",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-76163": {
+   "file": "Threat_Intel/CVEs/2026/Low/CVE-2026-76163.md",
+   "body": "# CVE-2026-76163\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Low  \n**Year:** 2026\n\n## Summary\nStep 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Windows Plan9 mount failure, **sixth consecutive sweep**; the tool now reports the workspace as wedged and instructs no further retries). **No CVE-coverage line this run.** Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-76460, CVE-2026-76423, CVE-2026-20176, CVE-2026-20211, CVE-2026-20307, CVE-2026-20284, CVE-2026-78159, CVE-2026-78006, CVE-2026-89026, CVE-2026-77692, CVE-2026-76163, CVE-2026-19667, CVE-2026-19666, CVE-2026-80274, CVE-2026-19662, CVE-2026-19668, CVE-2026-75029, CVE-2026-81563, CVE-2026-81736, CVE-2026-77119, CVE-2026-19941, CVE-2026-78301, CVE-2026-19033, CVE-2026-58704, CVE-2026-34182, CVE-2026-0628, CVE-2026-55945** (this run), plus **CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310** carried over. **Running `make_cve_notes.py` manually from Windows would clear the whole backlog \u2014 it is now 36 CVEs deep.**\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 Step 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Windows Plan9 mount failure, **sixth consecutive sweep**; the tool now reports the workspace as wedged and instructs no further retries). **No CVE-coverage line this run.** Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-76460, CVE-2026-76423, CVE-2026-20176, CVE-2026-20211, CVE-2026-20307, CVE-2026-20284, CVE-2026-78159, CVE-2026-78006, CVE-2026-89026, CVE-2026-77692, CVE-2026-76163, CVE-2026-19667, CVE-2026-19666, CVE-2026-80274, CVE-2026-19662, CVE-2026-19668, CVE-2026-75029, CVE-2026-81563, CVE-2026-81736, CVE-2026-77119, CVE-2026-19941, CVE-2026-78301, CVE-2026-19033, CVE-2026-58704, CVE-2026-34182, CVE-2026-0628, CVE-2026-55945** (this run), plus **CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310** carried over. **Running `make_cve_notes.py` manually from Windows would clear the whole backlog \u2014 it is now 36 CVEs deep.**\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-76163\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-76163\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-76163\n\n## Tags\n#cve #2026 #low #auto-stub",
+   "sev": "Low",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-78301": {
+   "file": "Threat_Intel/CVEs/2026/Low/CVE-2026-78301.md",
+   "body": "# CVE-2026-78301\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Low  \n**Year:** 2026\n\n## Summary\nStep 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Windows Plan9 mount failure, **sixth consecutive sweep**; the tool now reports the workspace as wedged and instructs no further retries). **No CVE-coverage line this run.** Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-76460, CVE-2026-76423, CVE-2026-20176, CVE-2026-20211, CVE-2026-20307, CVE-2026-20284, CVE-2026-78159, CVE-2026-78006, CVE-2026-89026, CVE-2026-77692, CVE-2026-76163, CVE-2026-19667, CVE-2026-19666, CVE-2026-80274, CVE-2026-19662, CVE-2026-19668, CVE-2026-75029, CVE-2026-81563, CVE-2026-81736, CVE-2026-77119, CVE-2026-19941, CVE-2026-78301, CVE-2026-19033, CVE-2026-58704, CVE-2026-34182, CVE-2026-0628, CVE-2026-55945** (this run), plus **CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310** carried over. **Running `make_cve_notes.py` manually from Windows would clear the whole backlog \u2014 it is now 36 CVEs deep.**\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 Step 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Windows Plan9 mount failure, **sixth consecutive sweep**; the tool now reports the workspace as wedged and instructs no further retries). **No CVE-coverage line this run.** Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-76460, CVE-2026-76423, CVE-2026-20176, CVE-2026-20211, CVE-2026-20307, CVE-2026-20284, CVE-2026-78159, CVE-2026-78006, CVE-2026-89026, CVE-2026-77692, CVE-2026-76163, CVE-2026-19667, CVE-2026-19666, CVE-2026-80274, CVE-2026-19662, CVE-2026-19668, CVE-2026-75029, CVE-2026-81563, CVE-2026-81736, CVE-2026-77119, CVE-2026-19941, CVE-2026-78301, CVE-2026-19033, CVE-2026-58704, CVE-2026-34182, CVE-2026-0628, CVE-2026-55945** (this run), plus **CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310** carried over. **Running `make_cve_notes.py` manually from Windows would clear the whole backlog \u2014 it is now 36 CVEs deep.**\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-78301\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-78301\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-78301\n\n## Tags\n#cve #2026 #low #auto-stub",
+   "sev": "Low",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-80274": {
+   "file": "Threat_Intel/CVEs/2026/Low/CVE-2026-80274.md",
+   "body": "# CVE-2026-80274\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Low  \n**Year:** 2026\n\n## Summary\nStep 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Windows Plan9 mount failure, **sixth consecutive sweep**; the tool now reports the workspace as wedged and instructs no further retries). **No CVE-coverage line this run.** Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-76460, CVE-2026-76423, CVE-2026-20176, CVE-2026-20211, CVE-2026-20307, CVE-2026-20284, CVE-2026-78159, CVE-2026-78006, CVE-2026-89026, CVE-2026-77692, CVE-2026-76163, CVE-2026-19667, CVE-2026-19666, CVE-2026-80274, CVE-2026-19662, CVE-2026-19668, CVE-2026-75029, CVE-2026-81563, CVE-2026-81736, CVE-2026-77119, CVE-2026-19941, CVE-2026-78301, CVE-2026-19033, CVE-2026-58704, CVE-2026-34182, CVE-2026-0628, CVE-2026-55945** (this run), plus **CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310** carried over. **Running `make_cve_notes.py` manually from Windows would clear the whole backlog \u2014 it is now 36 CVEs deep.**\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 Step 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Windows Plan9 mount failure, **sixth consecutive sweep**; the tool now reports the workspace as wedged and instructs no further retries). **No CVE-coverage line this run.** Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-76460, CVE-2026-76423, CVE-2026-20176, CVE-2026-20211, CVE-2026-20307, CVE-2026-20284, CVE-2026-78159, CVE-2026-78006, CVE-2026-89026, CVE-2026-77692, CVE-2026-76163, CVE-2026-19667, CVE-2026-19666, CVE-2026-80274, CVE-2026-19662, CVE-2026-19668, CVE-2026-75029, CVE-2026-81563, CVE-2026-81736, CVE-2026-77119, CVE-2026-19941, CVE-2026-78301, CVE-2026-19033, CVE-2026-58704, CVE-2026-34182, CVE-2026-0628, CVE-2026-55945** (this run), plus **CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310** carried over. **Running `make_cve_notes.py` manually from Windows would clear the whole backlog \u2014 it is now 36 CVEs deep.**\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-80274\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-80274\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-80274\n\n## Tags\n#cve #2026 #low #auto-stub",
+   "sev": "Low",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-81563": {
+   "file": "Threat_Intel/CVEs/2026/Low/CVE-2026-81563.md",
+   "body": "# CVE-2026-81563\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Low  \n**Year:** 2026\n\n## Summary\nStep 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Windows Plan9 mount failure, **sixth consecutive sweep**; the tool now reports the workspace as wedged and instructs no further retries). **No CVE-coverage line this run.** Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-76460, CVE-2026-76423, CVE-2026-20176, CVE-2026-20211, CVE-2026-20307, CVE-2026-20284, CVE-2026-78159, CVE-2026-78006, CVE-2026-89026, CVE-2026-77692, CVE-2026-76163, CVE-2026-19667, CVE-2026-19666, CVE-2026-80274, CVE-2026-19662, CVE-2026-19668, CVE-2026-75029, CVE-2026-81563, CVE-2026-81736, CVE-2026-77119, CVE-2026-19941, CVE-2026-78301, CVE-2026-19033, CVE-2026-58704, CVE-2026-34182, CVE-2026-0628, CVE-2026-55945** (this run), plus **CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310** carried over. **Running `make_cve_notes.py` manually from Windows would clear the whole backlog \u2014 it is now 36 CVEs deep.**\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 Step 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Windows Plan9 mount failure, **sixth consecutive sweep**; the tool now reports the workspace as wedged and instructs no further retries). **No CVE-coverage line this run.** Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-76460, CVE-2026-76423, CVE-2026-20176, CVE-2026-20211, CVE-2026-20307, CVE-2026-20284, CVE-2026-78159, CVE-2026-78006, CVE-2026-89026, CVE-2026-77692, CVE-2026-76163, CVE-2026-19667, CVE-2026-19666, CVE-2026-80274, CVE-2026-19662, CVE-2026-19668, CVE-2026-75029, CVE-2026-81563, CVE-2026-81736, CVE-2026-77119, CVE-2026-19941, CVE-2026-78301, CVE-2026-19033, CVE-2026-58704, CVE-2026-34182, CVE-2026-0628, CVE-2026-55945** (this run), plus **CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310** carried over. **Running `make_cve_notes.py` manually from Windows would clear the whole backlog \u2014 it is now 36 CVEs deep.**\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-81563\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-81563\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-81563\n\n## Tags\n#cve #2026 #low #auto-stub",
+   "sev": "Low",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-81736": {
+   "file": "Threat_Intel/CVEs/2026/Low/CVE-2026-81736.md",
+   "body": "# CVE-2026-81736\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Low  \n**Year:** 2026\n\n## Summary\nStep 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Windows Plan9 mount failure, **sixth consecutive sweep**; the tool now reports the workspace as wedged and instructs no further retries). **No CVE-coverage line this run.** Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-76460, CVE-2026-76423, CVE-2026-20176, CVE-2026-20211, CVE-2026-20307, CVE-2026-20284, CVE-2026-78159, CVE-2026-78006, CVE-2026-89026, CVE-2026-77692, CVE-2026-76163, CVE-2026-19667, CVE-2026-19666, CVE-2026-80274, CVE-2026-19662, CVE-2026-19668, CVE-2026-75029, CVE-2026-81563, CVE-2026-81736, CVE-2026-77119, CVE-2026-19941, CVE-2026-78301, CVE-2026-19033, CVE-2026-58704, CVE-2026-34182, CVE-2026-0628, CVE-2026-55945** (this run), plus **CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310** carried over. **Running `make_cve_notes.py` manually from Windows would clear the whole backlog \u2014 it is now 36 CVEs deep.**\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 Step 9 dashboard refresh did not run** (sandbox shell unavailable \u2014 Windows Plan9 mount failure, **sixth consecutive sweep**; the tool now reports the workspace as wedged and instructs no further retries). **No CVE-coverage line this run.** Vault note files are current; generated dashboards and auto-created CVE stubs remain stale. `make_cve_notes.py` is **not** part of the Windows sync script, so the following newly-referenced CVEs still lack auto-generated stubs: **CVE-2026-76460, CVE-2026-76423, CVE-2026-20176, CVE-2026-20211, CVE-2026-20307, CVE-2026-20284, CVE-2026-78159, CVE-2026-78006, CVE-2026-89026, CVE-2026-77692, CVE-2026-76163, CVE-2026-19667, CVE-2026-19666, CVE-2026-80274, CVE-2026-19662, CVE-2026-19668, CVE-2026-75029, CVE-2026-81563, CVE-2026-81736, CVE-2026-77119, CVE-2026-19941, CVE-2026-78301, CVE-2026-19033, CVE-2026-58704, CVE-2026-34182, CVE-2026-0628, CVE-2026-55945** (this run), plus **CVE-2026-5430, CVE-2026-87886, CVE-2026-91752, CVE-2026-13293, CVE-2026-19290, CVE-2026-56711, CVE-2026-73324, CVE-2026-85706, CVE-2026-0310** carried over. **Running `make_cve_notes.py` manually from Windows would clear the whole backlog \u2014 it is now 36 CVEs deep.**\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-81736\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-81736\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-81736\n\n## Tags\n#cve #2026 #low #auto-stub",
    "sev": "Low",
    "year": "2026",
    "kev": false,
@@ -4758,6 +4985,14 @@
   "CVE-2026-18685": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-18685.md",
    "body": "# CVE-2026-18685\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nGL.iNet GL-MT3000 CVE-2026-18685 / CVE-2026-18684 (companion command-injection CVEs) \u2014 captured in the CVE-2026-18686 note's \"Related\" section.\n\n## Where it appears in this vault\n- `X_Intel/x-intel-2026-08-08.md` \u2014 GL.iNet GL-MT3000 CVE-2026-18685 / CVE-2026-18684 (companion command-injection CVEs) \u2014 captured in the CVE-2026-18686 note's \"Related\" section.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-18685\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-18685\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-18685\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-1903": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-1903.md",
+   "body": "# CVE-2026-1903\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\n7. **BIND zone-transfer CVE ID** \u2014 sources split between CVE-2026-1903 and CVE-2026-19033; verify against kb.isc.org.\n\n## Where it appears in this vault\n- `X_Intel/x-intel-2026-09-17.md` \u2014 7. **BIND zone-transfer CVE ID** \u2014 sources split between CVE-2026-1903 and CVE-2026-19033; verify against kb.isc.org.\n- `X_Intel/x-intel-tracker.md` \u2014 All 19 new notes and all 6 appends were verified present and correctly structured; all note paths cited in this section resolve; CVE IDs match between tracker and note bodies. Three source discrepancies were **recorded rather than silently resolved**: the BIND zone-transfer CVE ID (CVE-2026-1903 vs CVE-2026-19033 \u2014 only the latter reconciles with the 14-item count); Sophos's 973 vs this vault's 974 Patch Tuesday count (immaterial, noted in the append); and ESET's own \"modular C++\" vs derived coverage's \"modular C\" description of SparroWocky. One **correction to a government advisory** was made explicit: **CCCS AV26-931 lists BIND affected-range bounds that are easily misread as fixed versions** \u2014 the note states the actual fixes (9.20.29 / 9.21.26 / 9.20.29-S1) and flags the trap. One unverifiable premise was **marked unconfirmed rather than dropped**: the reported WIRED story on where Flock cameras are assembled could not be located, and Flock's only published facility handles drones and refurbishment, not camera assembly.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-1903\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-1903\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-1903\n\n## Tags\n#cve #2026 #unrated #auto-stub",
    "sev": "",
    "year": "2026",
    "kev": false,
@@ -5366,94 +5601,94 @@
  },
  "recent": [
   {
-   "title": "Win11-26H2-Phantom-DLLs-xtajitse-xtajitf-Sideloading-Surface-Hexacorn-2026",
-   "file": "Guides/Win11-26H2-Phantom-DLLs-xtajitse-xtajitf-Sideloading-Surface-Hexacorn-2026.md",
-   "cat": "technique",
-   "ts": "2026-09-16"
-  },
-  {
-   "title": "PhantomRaven-LLM-Generated-Infostealer-npm-RDD-Bug-Bounty-Sourcing-CrowdStrike-2026",
-   "file": "Guides/AI-BugBounty/PhantomRaven-LLM-Generated-Infostealer-npm-RDD-Bug-Bounty-Sourcing-CrowdStrike-2026.md",
-   "cat": "ai-bugbounty",
-   "ts": "2026-09-16"
-  },
-  {
-   "title": "Minnesota-Water-Utilities-Internet-Exposed-PLCs-Default-Credentials-CISA-AA26-097A-2026",
-   "file": "Threat_Intel/Minnesota-Water-Utilities-Internet-Exposed-PLCs-Default-Credentials-CISA-AA26-097A-2026.md",
-   "cat": "other",
-   "ts": "2026-09-16"
-  },
-  {
-   "title": "CenterPoint-Energy-Customer-Data-Breach-Dark-Web-Leak-2026",
-   "file": "Threat_Intel/Breaches/CenterPoint-Energy-Customer-Data-Breach-Dark-Web-Leak-2026.md",
-   "cat": "breach",
-   "ts": "2026-09-16"
-  },
-  {
-   "title": "CVE-2025-13166",
-   "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-13166.md",
+   "title": "CVE-2025-70873",
+   "file": "Threat_Intel/CVEs/2025/Critical/CVE-2025-70873.md",
    "cat": "cve",
-   "ts": "2026-09-16"
+   "ts": "2026-09-18"
   },
   {
-   "title": "CVE-2025-40575",
-   "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-40575.md",
+   "title": "CVE-2026-20176",
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-20176.md",
    "cat": "cve",
-   "ts": "2026-09-16"
+   "ts": "2026-09-18"
   },
   {
-   "title": "CVE-2025-40576",
-   "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-40576.md",
+   "title": "CVE-2026-20284",
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-20284.md",
    "cat": "cve",
-   "ts": "2026-09-16"
+   "ts": "2026-09-18"
   },
   {
-   "title": "CVE-2025-40577",
-   "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-40577.md",
+   "title": "CVE-2026-34182",
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-34182.md",
    "cat": "cve",
-   "ts": "2026-09-16"
+   "ts": "2026-09-18"
   },
   {
-   "title": "CVE-2025-40578",
-   "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-40578.md",
+   "title": "CVE-2026-76423",
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-76423.md",
    "cat": "cve",
-   "ts": "2026-09-16"
+   "ts": "2026-09-18"
   },
   {
-   "title": "CVE-2025-5802",
-   "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-5802.md",
+   "title": "CVE-2026-0628",
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-0628.md",
    "cat": "cve",
-   "ts": "2026-09-16"
+   "ts": "2026-09-18"
   },
   {
-   "title": "CVE-2026-39987-PreAuth-RCE",
-   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-39987-PreAuth-RCE.md",
+   "title": "CVE-2026-55945",
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-55945.md",
    "cat": "cve",
-   "ts": "2026-09-16"
+   "ts": "2026-09-18"
   },
   {
-   "title": "CVE-2026-5430-WSO2-API-Manager-JWT-Signature-Verification-Bypass-Forged-Admin-Tokens-2026",
-   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-5430-WSO2-API-Manager-JWT-Signature-Verification-Bypass-Forged-Admin-Tokens-2026.md",
+   "title": "CVE-2026-58704",
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-58704.md",
    "cat": "cve",
-   "ts": "2026-09-16"
+   "ts": "2026-09-18"
   },
   {
-   "title": "CVE-2026-60004-Gitea-DiffPatch-Code-Injection-RCE-KEV-Exploited",
-   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-60004-Gitea-DiffPatch-Code-Injection-RCE-KEV-Exploited.md",
+   "title": "CVE-2026-77119",
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-77119.md",
    "cat": "cve",
-   "ts": "2026-09-16"
+   "ts": "2026-09-18"
   },
   {
-   "title": "CVE-2026-WooCommerce-Wholesale-Lead-Capture-Unauth-File-Upload-PHP-Webshell-2026",
-   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-WooCommerce-Wholesale-Lead-Capture-Unauth-File-Upload-PHP-Webshell-2026.md",
+   "title": "CVE-2026-19033",
+   "file": "Threat_Intel/CVEs/2026/Low/CVE-2026-19033.md",
    "cat": "cve",
-   "ts": "2026-09-16"
+   "ts": "2026-09-18"
   },
   {
-   "title": "LiteSpeed-Enterprise-Shared-Hosting-Low-Privilege-User-To-Root-2026",
-   "file": "Threat_Intel/CVEs/2026/Critical/LiteSpeed-Enterprise-Shared-Hosting-Low-Privilege-User-To-Root-2026.md",
+   "title": "CVE-2026-19662",
+   "file": "Threat_Intel/CVEs/2026/Low/CVE-2026-19662.md",
    "cat": "cve",
-   "ts": "2026-09-16"
+   "ts": "2026-09-18"
+  },
+  {
+   "title": "CVE-2026-19666",
+   "file": "Threat_Intel/CVEs/2026/Low/CVE-2026-19666.md",
+   "cat": "cve",
+   "ts": "2026-09-18"
+  },
+  {
+   "title": "CVE-2026-19667",
+   "file": "Threat_Intel/CVEs/2026/Low/CVE-2026-19667.md",
+   "cat": "cve",
+   "ts": "2026-09-18"
+  },
+  {
+   "title": "CVE-2026-19668",
+   "file": "Threat_Intel/CVEs/2026/Low/CVE-2026-19668.md",
+   "cat": "cve",
+   "ts": "2026-09-18"
+  },
+  {
+   "title": "CVE-2026-19941",
+   "file": "Threat_Intel/CVEs/2026/Low/CVE-2026-19941.md",
+   "cat": "cve",
+   "ts": "2026-09-18"
   }
  ],
  "kev_referenced": [
@@ -5553,6 +5788,7 @@
   "CVE-2026-55040",
   "CVE-2026-55255",
   "CVE-2026-58644",
+  "CVE-2026-58704",
   "CVE-2026-59310",
   "CVE-2026-59822",
   "CVE-2026-60004",
@@ -5566,6 +5802,7 @@
   "CVE-2026-72530",
   "CVE-2026-73570",
   "CVE-2026-75650",
+  "CVE-2026-76460",
   "CVE-2026-76461",
   "CVE-2026-8037",
   "CVE-2026-81578",
@@ -6210,6 +6447,13 @@
    "cves": 547,
    "breaches": 128,
    "malware": 154
+  },
+  {
+   "date": "2026-09-18",
+   "intel_items": 1502,
+   "cves": 576,
+   "breaches": 131,
+   "malware": 155
   }
  ]
 }
