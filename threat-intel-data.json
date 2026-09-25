@@ -1,79 +1,79 @@
 {
- "generated": "2026-09-24 20:45",
- "today": "2026-09-24",
+ "generated": "2026-09-25 20:45",
+ "today": "2026-09-25",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
-  "cves": 602,
-  "breaches": 136,
-  "malware": 163,
-  "supplychain": 71,
+  "cves": 625,
+  "breaches": 137,
+  "malware": 168,
+  "supplychain": 73,
   "tools": 94,
   "commands": 13,
-  "guides": 287,
-  "intel_items": 1530,
-  "kev": 136
+  "guides": 297,
+  "intel_items": 1602,
+  "kev": 140
  },
  "windows": {
   "week": {
-   "total": 32,
+   "total": 100,
    "by_cat": {
-    "cve": 13,
-    "malware": 4,
-    "breach": 3,
-    "technique": 4,
-    "misc": 4,
-    "supplychain": 1,
-    "other": 2,
-    "ai-bugbounty": 1
+    "technique": 10,
+    "breach": 5,
+    "cve": 31,
+    "misc": 30,
+    "malware": 11,
+    "supplychain": 3,
+    "other": 3,
+    "ai-bugbounty": 7
    },
    "by_src": {}
   },
   "month": {
-   "total": 524,
+   "total": 590,
    "by_cat": {
-    "cve": 136,
+    "cve": 153,
+    "malware": 78,
+    "technique": 51,
+    "ai-bugbounty": 53,
     "supplychain": 25,
-    "ai-bugbounty": 48,
-    "breach": 63,
-    "malware": 70,
-    "technique": 44,
-    "other": 50,
+    "other": 51,
+    "breach": 65,
     "tool": 14,
-    "misc": 72,
+    "misc": 98,
     "command": 2
    },
    "by_src": {}
   },
   "year": {
-   "total": 1530,
+   "total": 1602,
    "by_cat": {
-    "ai-bugbounty": 110,
-    "malware": 188,
-    "other": 110,
+    "ai-bugbounty": 116,
+    "malware": 196,
+    "other": 111,
     "tool": 58,
-    "misc": 300,
+    "misc": 326,
     "command": 6,
-    "technique": 135,
-    "cve": 375,
-    "breach": 161,
-    "supplychain": 87
+    "technique": 142,
+    "cve": 394,
+    "breach": 164,
+    "supplychain": 89
    },
    "by_src": {}
   },
   "all": {
-   "total": 1530,
+   "total": 1602,
    "by_cat": {
-    "ai-bugbounty": 110,
-    "malware": 188,
-    "other": 110,
+    "ai-bugbounty": 116,
+    "malware": 196,
+    "other": 111,
     "tool": 58,
-    "misc": 300,
+    "misc": 326,
     "command": 6,
-    "technique": 135,
-    "cve": 375,
-    "breach": 161,
-    "supplychain": 87
+    "technique": 142,
+    "cve": 394,
+    "breach": 164,
+    "supplychain": 89
    },
    "by_src": {}
   }
@@ -1753,13 +1753,14 @@
  ],
  "apt_activity_windows": {
   "week": {
-   "Salt Typhoon": 1
+   "Lazarus Group": 1
   },
   "month": {
    "Fire Ant": 5,
    "Sandworm": 4,
    "APT28": 1,
-   "Salt Typhoon": 1
+   "Salt Typhoon": 1,
+   "Lazarus Group": 1
   },
   "year": {
    "Sandworm": 6,
@@ -1770,7 +1771,8 @@
    "APT41": 2,
    "Volt Typhoon": 1,
    "Gamaredon": 1,
-   "APT29": 1
+   "APT29": 1,
+   "Lazarus Group": 1
   },
   "all": {
    "Sandworm": 6,
@@ -1781,7 +1783,8 @@
    "APT41": 2,
    "Volt Typhoon": 1,
    "Gamaredon": 1,
-   "APT29": 1
+   "APT29": 1,
+   "Lazarus Group": 1
   }
  },
  "apt_activity_monthly": {
@@ -1856,10 +1859,10 @@
   ]
  },
  "cve_sev": {
-  "Critical": 247,
-  "High": 177,
-  "Low": 30,
-  "Medium": 23
+  "Critical": 256,
+  "High": 179,
+  "Low": 31,
+  "Medium": 24
  },
  "cve_year": {
   "2015": 3,
@@ -1871,9 +1874,9 @@
   "2021": 11,
   "2022": 9,
   "2023": 14,
-  "2024": 13,
+  "2024": 14,
   "2025": 27,
-  "2026": 506
+  "2026": 528
  },
  "cve_month": {
   "2025-10": 1,
@@ -1882,7 +1885,7 @@
   "2026-06": 108,
   "2026-07": 16,
   "2026-08": 84,
-  "2026-09": 119
+  "2026-09": 138
  },
  "top_cve": [
   {
@@ -1893,7 +1896,7 @@
   },
   {
    "id": "CVE-2026-76460",
-   "n": 66,
+   "n": 67,
    "sev": "Critical",
    "kev": true
   },
@@ -1910,22 +1913,22 @@
    "kev": false
   },
   {
+   "id": "CVE-2026-87886",
+   "n": 60,
+   "sev": "High",
+   "kev": true
+  },
+  {
    "id": "CVE-2026-56711",
    "n": 59,
    "sev": "High",
    "kev": false
   },
   {
-   "id": "CVE-2026-87886",
-   "n": 58,
-   "sev": "High",
-   "kev": true
-  },
-  {
    "id": "CVE-2026-5430",
    "n": 57,
    "sev": "Critical",
-   "kev": false
+   "kev": true
   },
   {
    "id": "CVE-2026-91752",
@@ -2525,6 +2528,14 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2024-0244": {
+   "file": "Threat_Intel/CVEs/2024/Low/CVE-2024-0244.md",
+   "body": "# CVE-2024-0244\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Low  \n**Year:** 2024\n\n## Summary\nZDI:** technical write-up of **CVE-2024-0244**, a Canon MF753Cdw BJNP heap overflow leading to an arbitrary free and RCE (Pwn2Own Toronto 2023). Preparation for Pwn2Own Ireland 2026 (Canon imageFORCE 1643F).\n\n## Where it appears in this vault\n- `X_Intel/x-intel-2026-09-24.md` \u2014 ZDI:** technical write-up of **CVE-2024-0244**, a Canon MF753Cdw BJNP heap overflow leading to an arbitrary free and RCE (Pwn2Own Toronto 2023). Preparation for Pwn2Own Ireland 2026 (Canon imageFORCE 1643F).\n- `X_Intel/x-intel-tracker.md` \u2014 rss:zdi-2026-09-23-canon-cve-2024-0244 | 2026-09-23 | ZDI | Canon MF753Cdw BJNP heap overflow write-up | -> X_Intel/x-intel-2026-09-24.md\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2024-0244\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2024-0244\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-0244\n\n## Tags\n#cve #2024 #low #auto-stub",
+   "sev": "Low",
+   "year": "2024",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2024-28834": {
    "file": "Threat_Intel/CVEs/2024/Medium/CVE-2024-28834.md",
    "body": "# CVE-2024-28834\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Medium  \n**Year:** 2024\n\n## Summary\nGnuTLS 'Minerva' timing side-channel in ECDSA nonce handling.\n\n## Where it appears in this vault\n- `BugBounty/systemd-resolved-v260-security-audit.md` \u2014 Excluded CVEs (per scope):** CVE-2024-28834, CVE-2025-4598, CVE-2026-4105\n- `BugBounty/systemd-testing-plan.md` \u2014 [ ] Verify vulnerability is NOT in patched CVE list (CVE-2025-4598, CVE-2026-4105, CVE-2024-28834)\n- `BugBounty/scopes/systemd-scope.md` \u2014 CVE-2024-28834 | systemd-journald | Local privilege escalation | Patched |\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2024-28834\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2024-28834\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-28834\n\n## Tags\n#cve #2024 #medium #auto-stub #verified",
@@ -3019,6 +3030,14 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-28324": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-28324-28325-SolarWinds-Observability-Self-Hosted-Unauth-RCE-2026.md",
+   "body": "# CVE-2026-28324 / CVE-2026-28325: SolarWinds Observability Self-Hosted Unauthenticated RCE (fixed 2026.2.3)\n\n\u2705 **Verification:** Verified. Vendor advisory via SecurityWeek, CCCS AV26-950, @SecurityWeek (X)\n\n> Source: [SecurityWeek](https://www.securityweek.com/solarwinds-patches-critical-rce-flaws-in-observability-self-hosted/) \u2014 2026-09-24\n> Source: [CCCS AV26-950](https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-950) \u2014 2026-09-23 | [@SecurityWeek (X)](https://x.com/SecurityWeek/status/2103072680371245333) \u2014 2026-09-24\n\n**Type:** CVE / unauthenticated RCE, monitoring platform | **Severity:** Critical | **Date:** 2026-09-24\n\n## Summary\n| CVE | CVSS | Class | Condition |\n|---|---|---|---|\n| CVE-2026-28324 | 9.8 | Insufficient integrity check leading to unauthenticated RCE | Deployments running a non-default, non-secure configuration |\n| CVE-2026-28325 | 8.8 | Deserialization of untrusted data leading to unauthenticated RCE | Installations configured for a specific communication mode |\n\n- **Affected:** all versions up to 2026.2.2. **Fixed: 2026.2.3.**\n- **Exploitation:** none reported by SolarWinds.\n- **Reporter:** Kai Huang (Armadin). He also reported last week's Access Rights Manager flaw, CVE-2026-28326.\n\n## Why this matters\n- This is the **second SolarWinds unauthenticated RCE from the same researcher in about a week**, after ARM CVE-2026-28326. Observability platforms hold broad read credentials to the estate they monitor.\n- Both CVEs depend on configuration. Do not triage on the default-config assumption: **check which configuration and communication mode each deployment actually runs.**\n\n## Action\n1. Upgrade to **2026.2.3**.\n2. Until then, confirm the deployment is not in the insecure configuration or communication mode named in the advisory, and restrict network access to the platform.\n3. Rotate the monitoring service accounts if any instance was internet-reachable.\n\n## Cross-reference\n- `Threat_Intel/CVEs/2026/Critical/CVE-2026-28326-SolarWinds-Access-Rights-Manager-Unauth-RCE-2026.md`\n\n## Tags\n#cve #solarwinds #observability #rce #deserialization #unauthenticated",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-28326": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-28326-SolarWinds-Access-Rights-Manager-Unauth-RCE-2026.md",
    "body": "# CVE-2026-28326 \u2014 SolarWinds Access Rights Manager: Unauthenticated Remote Code Execution\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n> Source: [Canadian Centre for Cyber Security AV26-941](https://cyber.gc.ca/en/alerts-advisories/solarwinds-security-advisory-av26-941) \u2014 2026-09-18\n\n**Type:** CVE / unauthenticated remote code execution | **Severity:** Critical | **Date:** 2026-09-20\n\n## Summary\n**CVE-2026-28326** is an **unauthenticated remote code execution** flaw in **SolarWinds Access Rights Manager (ARM)**, affecting **all versions prior to 2026.2**. Vendor disclosure 2026-09-17. **No CVSS score and no exploitation statement** appear in the CCCS advisory; the mechanism is not described.\n\n## Why this matters\n1. **ARM's whole function is privileged Active Directory access.** It exists to enumerate, report on and *modify* AD permissions, file-share ACLs and group membership. Its service account is therefore one of the most powerful non-Domain-Admin identities in a typical estate \u2014 and frequently is a Domain Admin in practice.\n2. **Unauthenticated RCE on ARM is a short path to domain compromise** that does not require any of the noisy steps defenders watch for. No Kerberoasting, no DCSync, no credential dumping \u2014 the tool is already authorised to make the changes.\n3. **SolarWinds ARM has a history of exactly this bug class.** Repeated unauthenticated RCE and deserialization findings in prior years mean exploit development against it is a well-trodden path, and proof-of-concept turnaround after disclosure has historically been short.\n4. **No CVSS and no mechanism published is itself a planning problem.** Absence of an exploitation statement is not evidence of absence; treat the short-notice, thin advisory as a reason to patch early rather than a reason to wait for detail.\n\n## Action\n1. **Upgrade ARM to 2026.2.**\n2. **Confirm the ARM web/API endpoints are not internet-reachable** and are restricted to an administrative network.\n3. **Review and constrain the ARM service account.** If it holds Domain Admin, treat reducing that as a follow-on project with a date attached.\n4. **Audit ARM's own change history for permission modifications your team did not request**, covering at least the period since the last version upgrade.\n\n## Cross-reference\n- `Active-Directory-Silent-Domain-Takeover-54-Minutes-LOTL-Qualys-2026.md` \u2014 what an attacker does once they hold AD-modification rights.\n- `DCSync-Attack-Steal-AD-Password-Hashes-DRSUAPI-2026.md` \u2014 the noisy alternative that ARM access makes unnecessary.\n\n#cve #solarwinds #access-rights-manager #arm #active-directory #rce #unauthenticated #identity #critical #single-source\n\n## Tags\n #single-source #unverified",
@@ -3363,6 +3382,14 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-48842": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-48842-Roundcube-VirtuserQuery-PreAuth-SQLi-Actively-Exploited-2026.md",
+   "body": "# CVE-2026-48842: Roundcube Pre-Auth SQL Injection in virtuser_query \u2014 Actively Exploited Four Months After Patch\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 2 sources (BleepingComputer, SecurityWeek), both apparently drawing on the same CCCS/Shadowserver alert\n\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/critical-roundcube-flaw-now-actively-exploited-in-code-injection-attacks/) \u2014 2026-09-24\n> Source: [SecurityWeek](https://www.securityweek.com/roundcube-webmail-vulnerability-in-attackers-crosshairs/) \u2014 2026-09-25\n\n**Type:** CVE / pre-authenticated SQL injection | **Severity:** Critical | **Date:** 2026-09-24\n\n## Summary\n- **Component:** Roundcube's built-in **`virtuser_query`** plugin, which handles database-driven lookups mapping users to email addresses.\n- **Flaw:** pre-authenticated SQL injection in how the plugin builds its database queries \u2014 an unauthenticated attacker with no privileges can inject SQL, bypass authentication, and pull data straight from the database without any user interaction.\n- **Affected:** Roundcube versions **prior to 1.6.16 and 1.7.1**.\n- **Patched:** **May 2026.** Exploitation was first flagged roughly **four months later**, in September 2026.\n- **Exposure:** Shadowserver tracks **over 523,000** internet-exposed Roundcube instances.\n\n## Why this matters\n- Roundcube is one of the most widely deployed open-source webmail platforms, frequently run by smaller hosts and ISPs that patch slowly \u2014 the same pattern seen repeatedly with Roundcube CVEs this year.\n- Pre-auth + SQLi + no user interaction is about as bad a combination as an application-layer bug gets: mass-scannable, and directly useful for account takeover / credential harvesting against a webmail platform that itself sits on a pile of email credentials.\n- The 4-month gap between patch and exploitation is the recurring lesson here, not the bug itself: webmail admins are not treating Roundcube patches as urgent.\n\n## Action\n1. Update to **Roundcube 1.6.16 or 1.7.1** immediately.\n2. If you cannot patch immediately: **disable or remove the `virtuser_query` plugin** \u2014 this fully closes the attack vector per vendor guidance.\n3. Check exposure: Shadowserver's Roundcube scan data can confirm whether your instance is internet-visible.\n4. Review Roundcube database logs for anomalous queries pre-dating the patch, since exploitation may have started before public reporting.\n\n## Cross-reference\n- Other Roundcube CVEs tracked this year \u2014 search vault for prior `Roundcube` entries under Threat_Intel/CVEs.\n\n## Tags\n#cve #roundcube #sqli #webmail #pre-auth #actively-exploited",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-48907": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-48907.md",
    "body": "# CVE-2026-48907\n\n\u2705 **Verification:** Verified \u2014 4 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2026\n\n## Summary\n(X feed) | 2026-06-28 | @DarkWebInformer (repost) | CVE-2026-48907 Joomla Content Editor (JCE <2.9.99.5) \u2014 GitHub scanner github.com/gh1mau/masta-cve-2026-48907 | -> APPENDED Threat_Intel/CVEs/2026/Critical/Joomla-JCE-Plugin-MaxSeverity-RCE-2026.md\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 (X feed) | 2026-06-28 | @DarkWebInformer (repost) | CVE-2026-48907 Joomla Content Editor (JCE <2.9.99.5) \u2014 GitHub scanner github.com/gh1mau/masta-cve-2026-48907 | -> APPENDED Threat_Intel/CVEs/2026/Critical/Joomla-JCE-Plugin-MaxSeverity-RCE-2026.md\n- `X_Intel/x-intel-tracker.md` \u2014 Methodology: sandbox curl egress blocked (HTTP=000) \u2014 web_fetch fallback. **BleepingComputer** readable (channel Jun28 13:52 GMT; freshest in-window-adjacent = \"Clean GitHub repo\" Jun27 14:22 UTC [kept \u2014 new/untracked, missed by prior sweep]; rest Jun25\u201326 already tracked + sponsored/Anthropic-Cowork product items skipped). **SANS ISC** readable (lastBuild Jun28 14:00; newest = YARA-X release Jun28 07:56 [kept \u2014 new since last sweep, which saw lastBuild Jun27]; \"Ports Hear\" Jun25 + \"Linux Process Masquerading\" Jun24 tracked). **Malwarebytes** readable but freshest Jun26 12:44 (tracked, out-of-window). **THN feedburner** STALE (newest Jun13). **Project Zero** out-of-window (newest May13 Pixel10). **Krebs** = reCAPTCHA challenge page. **SecurityWeek**, **The Record** = empty bodies. **Schneier** = gzip/binary undecodable. Both kept items are ~just outside the strict 24h window but newly surfaced and untracked, so captured per \"capture new untracked intel\" intent. Freshest CVE/breach/TTP intel this sweep again led by the live X feed (Splunk CVE-2026-20251, StegoAd Edge extensions, libssh2 CVE-2026-55200 PoC, pedit COW CVE-2026-46331 PoC, Joomla CVE-2026-48907 scanner, Akira ransomware DFIR).\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-48907\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-48907\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-48907\n\n## Tags\n#cve #2026 #critical #auto-stub #verified",
@@ -3480,7 +3507,7 @@
    "body": "# CVE-2026-5430 \u2014 WSO2 API Manager JWT Signature Verification Bypass \u2192 Forged Admin Tokens, Exploited In The Wild\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 2 independent sources\n\n> Source: [The Hacker News](https://thehackernews.com/2026/09/active-exploitation-attempts-target.html) \u2014 2026-09-16\n> Source: [SecurityWeek](https://www.securityweek.com/enterprises-warned-of-attacks-exploiting-wso2-vulnerability/) \u2014 2026-09-16\n\n**Type:** CVE / improper cryptographic signature verification \u2192 authentication bypass | **Severity:** Critical (CVSS 9.8) | **Date:** 2026-09-16\n\n## Summary\n**CVE-2026-5430** is an **improper cryptographic signature verification** flaw in **WSO2 API Manager**. The JWT validation path does not correctly verify the token signature, so an unauthenticated attacker can **forge a JWT asserting administrative identity** and have the gateway accept it. Result is authentication bypass and full account/tenant takeover on the API management plane.\n\n**Exploitation status:** **Active exploitation in the wild confirmed by watchTowr.** SecurityWeek reports attackers are using it to reach valuable enterprise data behind the gateway. Discovery credited to the **Hacktron Team**.\n\n## Why this matters\n1. **An API gateway is a credential concentrator.** WSO2 APIM sits in front of backend services and holds the client secrets, backend credentials and token-issuance keys for everything it fronts. Forging an admin token there is not one application compromised \u2014 it is authority over every API the gateway publishes.\n2. **Signature-verification bugs defeat every downstream control at once.** MFA, session expiry, IP allow-listing and rate limits all sit *after* identity is established. If identity can be minted, none of them apply. There is no compensating control short of blocking the path.\n3. **It repeats the CVE-2026-82329 (JFrog Artifactory) pattern exactly** \u2014 auth bypass via token minting on an infrastructure control plane, exploited within days. Two independent products, same failure class, same window. Token-issuance code is the recurring weak point and deserves standing review, not incident-driven review.\n4. **Forged tokens leave thin logs.** A validly-structured admin JWT produces authentication *successes*, not failures. Detection has to key on anomalous admin activity and token characteristics, not on failed-login telemetry.\n\n## Action\n1. **Patch to the fixed WSO2 API Manager release immediately.** Treat as emergency change \u2014 pre-auth, CVSS 9.8, confirmed in-the-wild.\n2. **Assume compromise** on any internet-reachable APIM instance unpatched since disclosure. Forged-token access may predate the public advisory.\n3. **Rotate the token-signing keypair** and every backend credential, client secret and API key stored in or issued by the gateway. Patching alone does not invalidate tokens already forged.\n4. **Hunt** for admin-scope API calls from unusual source IPs or user-agents; JWTs with anomalous `iss`/`kid`/`alg` values (check specifically for `alg` confusion and unexpected `kid` references); new API subscriptions, applications or throttling-policy changes; and bulk data reads through published APIs.\n5. **Audit every JWT validation path you own** for the same class of defect \u2014 algorithm confusion, unverified `kid` lookup, signature check skipped on a code branch.\n\n## Cross-reference\n- `CVE-2026-82329-JFrog-Artifactory-Auth-Bypass-Admin-Token-Minting.md` \u2014 same failure class (control-plane token minting), same exploitation tempo.\n- `CVE-2026-76461-Cisco-Secure-Email-Gateway-SQLi-Root-RCE-KEV-Exploited-2026.md` \u2014 same window, internet-facing appliance, exploited pre-auth.\n- `Edge-Device-Exposure-Convergence-NCSC-Tenable-Microsoft-2026-08-27.md` \u2014 the structural argument this instantiates.\n\n#cve #wso2 #api-manager #jwt #authentication-bypass #signature-verification #unauthenticated #exploited #critical #api-security #corroborated\n\n## Tags\n #corroborated #unverified",
    "sev": "Critical",
    "year": "2026",
-   "kev": false,
+   "kev": true,
    "apts": []
   },
   "CVE-2026-55040": {
@@ -3643,6 +3670,14 @@
    "kev": true,
    "apts": []
   },
+  "CVE-2026-63077": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-63077-JetBrains-TeamCity-Auth-Bypass-Agent-Protocol-RCE-Ransomware-KEV-2026.md",
+   "body": "# CVE-2026-63077: JetBrains TeamCity On-Premises Auth Bypass to Unauthenticated OS Command Execution, Now Used by Ransomware\n\n\u2705 **Verification:** Verified. CISA KEV update, JetBrains advisory, reported by BleepingComputer\n\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/cisa-ransomware-gangs-now-exploiting-critical-teamcity-flaw/) \u2014 2026-09-24\n> Source: [@BleepinComputer (X)](https://x.com/BleepinComputer/status/2103072690093396005) \u2014 2026-09-24 | [@TheCyberSecHub (X)](https://x.com/TheCyberSecHub/status/2103072862022287404) \u2014 2026-09-24\n\n**Type:** CVE / authentication bypass leading to RCE, CI/CD | **Severity:** Critical | **Date:** 2026-09-24\n\n## Summary\n- **CVE-2026-63077** is a critical authentication bypass in **JetBrains TeamCity On-Premises**. It gives unauthenticated OS command execution through the **TeamCity agent polling protocol**, with the privileges of the server process.\n- **Fixed in 2025.11.7 and 2026.1.3**, released 2026-07-25.\n- **Timeline:**\n  - CISA added it to KEV on **2026-08-05** with a 3-day federal deadline.\n  - JetBrains confirmed in-the-wild exploitation on **2026-08-07** and published IOCs.\n  - On **2026-09-23**, CISA changed the KEV entry to **\"Known to be used in ransomware campaigns.\"** No attack details were released.\n- **Exposure:** Shadowserver counts **about 160 internet-exposed servers still unpatched**, down from about 700 right after the patch.\n\n## Why this matters\n- **CISA has now flagged four TeamCity flaws as exploited since October 2023, and ransomware used all four.** APT29 (SVR) mass-targeted TeamCity in 2024.\n- The build server holds stored credentials, signing material and deployment secrets. Its compromise reaches **downstream build artifacts and pipelines**, not only the host.\n- JetBrains was itself breached through an unpatched TeamCity instance (the Cadence incident, 2026-09-05; see cross-reference), and AWS credentials were extracted. The vendor-side precedent is already in this vault.\n- The remaining unpatched servers have been exposed for two months after an exploited-in-the-wild notice. Treat any of them as **compromised until proven otherwise**, not only as unpatched.\n\n## Action\n1. Upgrade to **2025.11.7 / 2026.1.3** or later. If you cannot patch, restrict TeamCity to trusted networks (JetBrains' only interim guidance).\n2. For any instance that was internet-exposed and unpatched after 2026-07-25:\n   - Hunt using JetBrains' published IOCs.\n   - Review agent registrations, new admin users, build configuration changes and plugin uploads.\n   - **Rotate every secret stored in TeamCity**: VCS tokens, cloud keys, signing keys and deployment credentials.\n3. Check downstream artifacts built during the exposure window for tampering.\n\n## Cross-reference\n- `Threat_Intel/SupplyChain/JetBrains-Cadence-TeamCity-Breach-AWS-Credential-Theft-2026.md`: JetBrains breached through TeamCity, AWS credentials taken.\n- `Threat_Intel/CVEs/2023/Critical/CVE-2023-42793.md`: the earlier TeamCity auth bypass, used by APT29 and ransomware.\n\n## Tags\n#cve #teamcity #jetbrains #cicd #ransomware #cisa-kev #auth-bypass #rce #supply-chain",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": true,
+   "apts": []
+  },
   "CVE-2026-63219": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-63219-58400-GeoNetwork-Unauth-RCE-Chain-Government-Geoportals.md",
    "body": "# CVE-2026-63219 + CVE-2026-58400 \u2014 GeoNetwork Unauthenticated RCE Chain (Government Geoportal Backends)\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n**Type:** cve | **Severity:** Critical | **Date logged:** 2026-09-02\n**CVEs:** CVE-2026-63219 (CVSS 8.6), CVE-2026-58400 (CVSS 9.1)\n**Fixed:** 4.4.12 and 4.2.17, shipped 2026-07-08\n**Details published:** 2026-08-31\n**Exploitation:** None reported\n\n## Summary\n\nTwo GeoNetwork flaws chain into **unauthenticated remote code execution** on the open-source geospatial metadata catalog that sits behind many government geoportals \u2014 including the backend of the European **INSPIRE** geoportal. Patches shipped 2026-07-08; details went public 2026-08-31.\n\n## The chain\n\n| CVE | CVSS | What it is |\n|---|---|---|\n| **CVE-2026-63219** | 8.6 | **Missing authorization check** on the formatter upload endpoint. An unauthenticated user can write arbitrary `.xsl` or `.zip` formatter files into the GeoNetwork formatter directory. |\n| **CVE-2026-58400** | 9.1 | **Unsafe configuration of the Saxon XSLT processor** used to render formatters. A loaded stylesheet can call `java.lang.Runtime.exec()` or `java.lang.ProcessBuilder` and run OS commands as the GeoNetwork process user. |\n\n**Attack path:** upload a malicious formatter through the unprotected endpoint \u2192 issue a follow-up `GET` to any public record \u2192 Saxon executes the stylesheet \u2192 code execution.\n\nCVE-2026-58400 alone is scored as requiring high privileges, because you need upload rights. **CVE-2026-63219 removes that precondition entirely.** That is the whole story: two individually survivable bugs compose into pre-auth RCE, and neither one's CVSS describes the result.\n\n## Regression origin\n\nEthiack reports the chain is reachable **starting at version 4.0.6**, when the formatter endpoint was refactored and the authorization line was dropped. This is a deleted-line regression, not a design flaw \u2014 which means it is the kind of thing a diff-aware test would have caught and a scanner would not.\n\n## Read the exposure figure precisely\n\nEthiack fingerprinted **121 internet-exposed deployments running affected versions across 39 countries**, of which it says **89% were government-, military- or national-agency-related**.\n\n\u26a0\ufe0f That describes *exposed instances running vulnerable versions* \u2014 **not confirmed victims, and not compromises** \u2014 and the fingerprinting is single-sourced to the reporting vendor. Same document-class discipline this vault applies to leak-site claims: **a scan count is evidence of exposure, never of intrusion.**\n\n## Action\n\n1. Upgrade to **4.4.12** or **4.2.17**.\n2. If you cannot patch immediately, **block unauthenticated access to the formatter upload endpoint** at the reverse proxy.\n3. **Hunt retroactively.** Patches shipped 2026-07-08 but details went public 2026-08-31 \u2014 any instance still on an affected version has an ~8-week exposure window with a public write-up now available. Look for unexpected `.xsl` / `.zip` files in the formatter directory and for child processes spawned by the GeoNetwork JVM.\n4. Execution is as the GeoNetwork process user \u2014 review what that account reaches, starting with database credentials and catalog storage.\n\n## Open questions\n\n- No exploitation in the wild reported; no IOCs published.\n- **The article's description of the Saxon configuration reads as internally contradictory** \u2014 it states secure processing is enabled and extension functions disabled, then describes extension functions executing. Confirm the exact unsafe setting against the upstream GeoNetwork advisory before building detections on it.\n\n## Sources\n\n> Source: [The Hacker News \u2014 GeoNetwork Fixes Unauthenticated RCE Chain Affecting Government Geoportal Backends](https://thehackernews.com/2026/09/geonetwork-fixes-unauthenticated-rce.html) \u2014 2026-09-02\n> Source: [X \u2014 @TheHackersNews](https://x.com/TheHackersNews/status/2095078995100639298) \u2014 2026-09-02\n\n## Tags\n\n#cve-2026-63219 #cve-2026-58400 #geonetwork #osgeo #xslt #saxon #unauthenticated-rce #government #inspire #exploit-chain #ethiack #unverified",
@@ -3670,6 +3705,14 @@
   "CVE-2026-65643": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-65643-cPanel-WHM-Parked-Addon-Domain-Root-Code-Execution.md",
    "body": "# CVE-2026-65643 \u2014 cPanel & WHM: Parked / Addon Domain Handling \u2192 Arbitrary File Write \u2192 Root Code Execution\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 2 independent sources\n\n**Severity:** Critical (vendor rating)\n**Affected:** **All supported versions** of cPanel & WHM\n**Precondition:** an **authenticated account holder** who can add **parked or addon domains** \u2014 i.e. an ordinary hosting customer\n\n## Mechanism\nAn authenticated account holder able to add a parked or addon domain can **create arbitrary files on the server**. cPanel states plainly: *successful exploitation leads to code execution as the root user, giving an attacker full control of the server.*\n\n## Why the low bar matters\nThe privilege required is the privilege every shared-hosting customer already has. On a shared cPanel box this is a **single-tenant-to-whole-server** escalation: one customer account \u2014 bought for a few dollars, or taken over via a weak password \u2014 becomes root over every other tenant on the machine. For hosting providers this is a **multi-tenant isolation failure**, not a customer-side patch item.\n\n## Patched versions\n- 11.110.0.141 or later\n- 11.134.0.53 or later\n- 11.136.0.37 or later\n- 11.138.0.2 or later\n- 11.138.1.7 or later (**WP Squared**)\n\n\u26a0\ufe0f The notification names **WP Squared** in the patched list and **does not mention DNSOnly**. DNSOnly operators should seek explicit vendor confirmation rather than assume coverage.\n\nNote: cPanel patched three separate flaws in July 2026, and the fixed builds named in those advisories overlap this line \u2014 verify the running build number rather than assuming the July update covered this.\n\n## Action\n1. Patch to the listed builds immediately. Verify with `/usr/local/cpanel/cpanel -V`, not from memory of the last update.\n2. Hosting providers: audit for unexpected root-owned files with recent mtimes, new cron entries, and modified system binaries created around domain-add operations.\n3. Review parked/addon domain creation logs for anomalous entries.\n4. Assume shared-tenant compromise where the box was unpatched and any account was untrusted.\n\n> Source: [The Hacker News](https://thehackernews.com/2026/08/critical-cpanel-flaw-could-let-one.html) \u2014 2026-08-28\n> Source: [CCCS WebPros security advisory AV26-854](https://www.cyber.gc.ca/en/alerts-advisories/webpros-security-advisory-av26-854) \u2014 2026-08-27\n\n## Tags\n#cve #cpanel #whm #webpros #privilege-escalation #root #shared-hosting #multi-tenant #arbitrary-file-write #unverified",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-65660": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-65660-SharePoint-Code-Injection-Actively-Exploited-2026.md",
+   "body": "# CVE-2026-65660: Microsoft SharePoint Server Code Injection \u2014 Actively Exploited, Chains Toward Pre-Auth RCE\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 source (national CERT advisory)\n\n> Source: [Canadian Centre for Cyber Security \u2014 AL26-023](https://cyber.gc.ca/en/alerts-advisories/al26-023-vulnerability-impacting-microsoft-sharepoint-server-cve-2026-65660) \u2014 2026-09-24\n\n**Type:** CVE / code injection (CWE-94) | **Severity:** Critical | **Date:** 2026-09-24\n\n## Summary\n- **CWE-94** \u2014 Improper Control of Generation of Code (\"Code Injection\") in Microsoft SharePoint Server.\n- **Affected:**\n  - SharePoint Enterprise Server 2016 \u2014 versions prior to **16.0.5565.1001**\n  - SharePoint Server 2019 \u2014 versions prior to **16.0.10417.20198**\n  - SharePoint Server Subscription Edition \u2014 versions prior to **16.0.19725.20522**\n- **Exploitation:** actively exploited. CCCS notes it is **particularly dangerous when chained with other SharePoint flaws**, potentially enabling **pre-authentication remote code execution** on SharePoint servers configured to permit anonymous access.\n- **End-of-life note:** SharePoint Server **2016 and 2019 reached end-of-life on 2026-07-15** \u2014 those versions no longer receive security updates regardless of this advisory, making migration off them the only real fix for that population.\n\n## Why this matters\n- This is at least the **fourth** SharePoint on-prem RCE-class flaw tracked in this vault in 2026 (see cross-references) \u2014 SharePoint Server continues to be a recurring, high-value target for chained exploitation, and threat actors have repeatedly demonstrated the ability to combine \"smaller\" SharePoint bugs into full pre-auth RCE.\n- Anonymous-access-enabled SharePoint deployments (common in extranet/public-facing setups) are the highest-risk population here.\n- Organizations still running SharePoint 2016/2019 past EOL have no vendor patch path and should prioritize migration, not just this specific update.\n\n## Action\n1. Patch to the fixed builds listed above immediately.\n2. **Restrict internet exposure** of SharePoint servers, particularly anonymous-access configurations.\n3. Enable **AMSI integration** for SharePoint.\n4. Enforce **MFA for SharePoint administrators**.\n5. Monitor for IOCs: suspicious administrative activity and **web shell deployment** \u2014 CCCS specifically calls out web shells as the expected post-exploitation artifact.\n6. If still on SharePoint 2016/2019 (EOL 2026-07-15), treat migration to a supported version as the priority remediation, not just this patch.\n\n## Cross-reference\n- `Threat_Intel/CVEs/2026/Critical/CVE-2026-45454-SharePoint-Webshell-RCE.md`\n- `Threat_Intel/CVEs/2026/Critical/CVE-2026-50522-Microsoft-SharePoint-OnPrem-RCE-ActiveExploitation.md`\n- `Threat_Intel/CVEs/2026/Critical/CVE-2026-55040-SharePoint-Auth-Bypass-Exploited.md`\n- `Threat_Intel/CVEs/2026/Critical/SharePoint-Server-RCE-2026.md`\n- `Threat_Intel/CVEs/2026/High/Microsoft-SharePoint-RCE-Active-Exploitation-2026.md`\n\n## Tags\n#cve #sharepoint #code-injection #rce #actively-exploited #on-prem",
    "sev": "Critical",
    "year": "2026",
    "kev": false,
@@ -3726,6 +3769,14 @@
   "CVE-2026-67401": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-67401-cPanel-WHM-Mail-Privileged-Account-Root-Code-Execution.md",
    "body": "# CVE-2026-67401 \u2014 cPanel & WHM: Mail-Privileged Hosting Account \u2192 Root Code Execution\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n> Source: [The Hacker News](https://thehackernews.com/2026/09/) \u2014 2026-09-09 (via X @TheHackersNews, post 2097601366911078484, \"New cPanel Flaw Lets a Hosting Account\u2026\")\n\n**Type:** CVE / local privilege escalation \u2192 root code execution | **Severity:** Critical | **Date:** 2026-09-09\n\n## Summary\n**CVE-2026-67401** allows a hosting account holding **mail privileges** to **execute code as the root user** on a cPanel & WHM server. cPanel states that **every supported version of cPanel & WHM is affected** and has released fixed builds. The precondition is not an administrative role or a compromised operator credential \u2014 it is an ordinary tenant mailbox function, which on a shared-hosting box is issued by default to every customer. Exploitation therefore starts from the lowest-privilege identity the platform issues and terminates at full control of a machine hosting many unrelated customers. No exploitation status was stated in the source reporting.\n\n## Why this matters\n- **This is a tenant-isolation break, not a server hardening gap.** The security boundary cPanel sells is \"customer A cannot reach customer B.\" A mail-privileged account reaching root dissolves that boundary for every account on the box simultaneously \u2014 sibling tenants' databases, mail spools, TLS private keys, and site content all fall in one step.\n- **The attacker does not need to compromise anything to get the precondition.** A shared-hosting account costs a few dollars. Purchasing legitimate access on the same physical server as the intended target is a viable, cheap targeting method, and it leaves no intrusion artefact at the acquisition stage.\n- **This is the second cPanel privilege-to-root flaw tracked in this vault inside two weeks** (see `CVE-2026-65643`, 2026-08-28, parked/addon domain handling \u2192 arbitrary file write \u2192 root). Two independent low-privilege-to-root paths in the same control plane in the same month is a pattern, not coincidence: **the cPanel privilege model repeatedly grants tenant-facing subsystems root-adjacent write access.** Treat further findings in this class as expected and set the patch cadence accordingly.\n- **The remediation clock belongs to the hosting provider, not the site owner.** Customers of shared hosting cannot patch this and in most cases cannot even see the build number. Any organisation with a marketing site, mail domain, or staging environment on shared cPanel is carrying a risk it does not control and probably has not inventoried.\n- **Post-root, the highest-value loot is credentials, not content.** cPanel boxes hold customer FTP/SSH keys, database passwords, mail account passwords, and API tokens for downstream services. Compromise here is best modelled as a credential-harvesting event with a long tail.\n\n## Action\n1. **Patch immediately to the cPanel-published fixed builds.** Verify the running build directly with `/usr/local/cpanel/cpanel -V` \u2014 do not accept a change ticket, an auto-update setting, or a prior cPanel patch (including the 2026-08 CVE-2026-65643 fix) as evidence of coverage; the fixed-build lines overlap and are easy to misread.\n2. **Confirm coverage for non-standard editions explicitly.** As with CVE-2026-65643, verify with the vendor whether **DNSOnly** and **WP Squared** builds are in scope rather than assuming the main line covers them.\n3. **Hunt for post-exploitation artefacts rather than exploitation attempts**, since no detection signature is published: root-owned files with recent mtimes outside package-managed paths, new or modified entries under `/etc/cron.d/`, `/var/spool/cron/`, unexpected setuid binaries (`find / -perm -4000 -newer /etc/hostname`), modified `/etc/passwd` and `/etc/shadow`, and new SSH authorized_keys under any account including root.\n4. **Correlate against mail subsystem activity.** Review Exim/Dovecot logs and cPanel mail-account creation and modification logs for accounts created or reconfigured shortly before anomalous root-owned filesystem changes.\n5. **Rotate on the assumption of full disclosure where the box ran unpatched with any untrusted tenant**: all tenant database credentials, FTP/SSH keys, mail passwords, API tokens stored in site configuration, and any TLS private key held on the host.\n6. **Hosting providers: treat this as a customer-notification event.** The blast radius crosses organisational boundaries in the same way an MSP RMM compromise does.\n7. **Tenants of third-party shared hosting: ask the provider for the running build in writing.** Absent that, treat the hosted data as exposed and rotate anything reused elsewhere.\n\n## Cross-reference\n- `CVE-2026-65643-cPanel-WHM-Parked-Addon-Domain-Root-Code-Execution.md` \u2014 second low-privilege-tenant-to-root flaw in the same product line within two weeks; same multi-tenant isolation failure, different subsystem.\n- `Vendor-Advisory-Roundup-CCCS-AV26-877-882-2026-09-03.md` \u2014 same \"credential-holding infrastructure treated as ordinary application software\" triage error.\n\n#cve #cve-2026-67401 #cpanel #whm #webpros #privilege-escalation #root #shared-hosting #multi-tenant #tenant-isolation #mail #critical\n\n## Tags\n #unverified",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-68492": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-68492.md",
+   "body": "# CVE-2026-68492\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2026\n\n## Summary\nrss:cccs-2026-09-24-av26-961-webpros | 2026-09-24 | CCCS (cyber.gc.ca) | WebPros advisory bundle: CVE-2026-68492 Plesk RCE-as-root, CVE-2026-87898 cPanel CalDAV (+ corroborates 87899/87900) | -> Threat_Intel/CVEs/2026/Critical/CVE-2026-87899-cPanel-CalDAV-CardDAV-Account-To-Root-WP-Toolkit-CVE-2026-87900-2026.md (appended)\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 rss:cccs-2026-09-24-av26-961-webpros | 2026-09-24 | CCCS (cyber.gc.ca) | WebPros advisory bundle: CVE-2026-68492 Plesk RCE-as-root, CVE-2026-87898 cPanel CalDAV (+ corroborates 87899/87900) | -> Threat_Intel/CVEs/2026/Critical/CVE-2026-87899-cPanel-CalDAV-CardDAV-Account-To-Root-WP-Toolkit-CVE-2026-87900-2026.md (appended)\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-68492\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-68492\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-68492\n\n## Tags\n#cve #2026 #critical #auto-stub",
    "sev": "Critical",
    "year": "2026",
    "kev": false,
@@ -3947,6 +3998,14 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-84412": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-84412-Adobe-Campaign-Classic-CVSS10-Code-Injection-APSB26-142-2026.md",
+   "body": "# CVE-2026-84412: Adobe Campaign Classic CVSS 10.0 Unauthenticated Code Injection (APSB26-142)\n\n\u26a0\ufe0f **Verification:** Single source (SecAlerts aggregator on X). Confirm the version matrix against Adobe APSB26-142 before acting.\n\n> Source: [@SecAlertsCo (X)](https://x.com/SecAlertsCo/status/2103074259530658205) \u2014 2026-09-24\n\n**Type:** CVE / code injection, marketing platform | **Severity:** Critical | **Date:** 2026-09-24\n\n## Summary\n- **CVE-2026-84412**: code injection in **Adobe Campaign Classic**, rated **CVSS 10.0**.\n- **Attack conditions:** network-exploitable with **no authentication**.\n- **Impact:** arbitrary code execution in the context of the current user.\n- **Patch:** Adobe bulletin **APSB26-142**.\n- **Exploitation:** no exploitation status was stated in the source.\n\n## Why this matters\n- Campaign Classic instances hold customer PII, email-sending infrastructure and integrations with CRM and data warehouses. Code execution on one gives both a data-theft path and a **trusted mail-sending platform for phishing**.\n- This lands in the same Adobe cycle as nine critical fixes in **Connect** and **AEM Forms JEE** (CCCS AV26-953, 2026-09-23). See `Threat_Intel/CVEs/2026/High/Vendor-Advisory-Roundup-CCCS-2026-09-23-Chrome154-Adobe-Forcepoint-Dell-NVIDIA-GitHub-Ubiquiti-HPE.md`.\n\n## Action\n1. Apply APSB26-142 to on-prem and hybrid Campaign Classic deployments.\n2. Restrict the Campaign web and SOAP interfaces to known networks until patched.\n3. Review Campaign workflows and JavaScript activities for unexpected changes.\n\n## Tags\n#cve #adobe #campaign-classic #code-injection #cvss10 #unauthenticated",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-85046": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-85046-Chrome-V8-Type-Confusion-ZeroDay-Exploited-2026.md",
    "body": "# CVE-2026-85046 \u2014 Chrome V8 Type Confusion Zero-Day, Actively Exploited in the Wild\n\n\u2705 **Verification:** Verified \u2014 5 independent sources\n\n**Type:** cve | **Severity:** Critical | **Date logged:** 2026-09-04\n**Product:** Google Chrome \u2014 V8 JavaScript/WebAssembly engine\n**Fixed in:** Chrome **152.0.7977.82 / .83** (emergency out-of-band release)\n**Impact:** Arbitrary code execution inside the browser renderer sandbox via a crafted HTML page\n**Status:** **Actively exploited in the wild** \u2014 Google confirmed an exploit exists; targets and actor undisclosed\n\n## Summary\n\nGoogle shipped an **emergency Chrome update** for **CVE-2026-85046**, a **type confusion** flaw in **V8**, the JavaScript and WebAssembly engine Chrome uses to process web content. A crafted HTML page achieves **arbitrary code execution inside the renderer sandbox**. Google confirmed **real-world exploitation** but, per its standard practice, withheld attack details, targeting, and actor attribution until a majority of users have updated.\n\n## Reading the sandbox qualifier honestly\n\nThe \"inside the sandbox\" framing consistently causes under-prioritisation, and it should not here.\n\n- **A renderer-only bug is still full access to everything the tab holds** \u2014 session cookies, tokens in memory, the DOM of every same-process origin, and the credential autofill surface. For a browser that is now the primary enterprise application client, that is the crown-jewel boundary, not a stepping stone to it.\n- **Renderer RCE is the standard first stage of a chain.** Every in-the-wild Chrome chain this vault has logged pairs a V8 or WebAssembly bug with a separate sandbox-escape primitive. The absence of a disclosed escape means the escape was not disclosed, not that the operator lacks one.\n- **V8 type confusion is the single most productive Chrome bug class** and the one with the shortest interval from patch to public n-day exploit, because the patch diff points directly at the affected optimisation path. Assume a working public exploit within days of this note.\n\n## Relationship to the 2026-09-02 browser patch cycle\n\nThis is **not** the same event as `Threat_Intel/Browser-Patch-Cycle-Chrome-Firefox-2026-09-02.md`. That note covered a scheduled Chrome/Firefox round with **no reported exploitation**, and explicitly recorded that Chrome fixed versions had not been captured. This is an **out-of-band emergency release two days later with confirmed exploitation**. An estate that treated the 09-02 cycle as routine and deferred it is now two patch levels behind on an actively exploited engine bug.\n\n## Action\n\n1. **Force Chrome to 152.0.7977.82/.83 or later now.** Chrome updates on relaunch \u2014 pushing the binary is not the same as applying it. **Measure relaunch compliance, not download compliance**; the gap between the two is where this bug lives.\n2. Update every **Chromium derivative**: Edge, Brave, Vivaldi, Opera, Electron applications, and embedded CEF/WebView2 components. Electron apps are the reliably forgotten surface and ship their own pinned Chromium.\n3. Enforce a **maximum browser version age** policy via management (Chrome Enterprise / Intune) rather than relying on user relaunch.\n4. **Hunt:** renderer process crashes (`chrome.exe` / `Google Chrome Helper (Renderer)`) clustered by user or by site, unexpected child processes spawned from a renderer, and outbound connections from browser processes to newly-seen domains.\n5. Treat as **in-scope for KEV-style SLA** \u2014 confirmed exploitation on a universally deployed client.\n\n## Open questions\n\n- **Whether a sandbox escape was chained.** Google has not said. This is the question that determines whether the impact is tab-scoped or host-scoped.\n- Targeting: no indication yet whether this is commercial-surveillance, state-aligned, or criminal use.\n- No IOCs published.\n- Whether the bug affects Chrome for Android and iOS builds on the same timeline.\n\n## Sources\n\n> Source: [@TheHackersNews](https://x.com/TheHackersNews/status/2095773697412079741) \u2014 2026-09-04 07:19 UTC \u2014 \"Attackers are exploiting a Chrome V8 zero-day. CVE-2026-85046 allows arbitrary code execution inside the browser sandbox via a crafted HTML page. Google fixed it in Chrome 152.0.7977.82/.83.\"\n> Source: [@The_Cyber_News](https://x.com/The_Cyber_News/status/2095767967577600011) \u2014 2026-09-04 06:56 UTC \u2014 emergency Chrome security update for a critical zero-day already exploited in real-world attacks.\n\n## Tags\n\n#cve-2026-85046 #chrome #v8 #type-confusion #zero-day #exploited-in-the-wild #browser #emergency-patch #critical #verified\n\n---\n\n## Update \u2014 2026-09-05: Fixed version captured; CCCS advisory updated\n\n- **Fixed in Chrome 152.** The release resolves **12 vulnerabilities** in total, of which CVE-2026-85046 is the actively-exploited V8 type confusion.\n- This is **Google's sixth Chrome zero-day of 2026**.\n- **CCCS AV26-883 was reissued as Update 1** on 2026-09-04, indicating the advisory materially changed after first publication \u2014 normally a shift in exploitation status or affected-version scope.\n\n### Reinforcing the 2026-09-04 conclusion\n\nThe prior sweep recorded that the 2026-09-02 Chrome/Firefox cycle was logged as *no exploitation reported* and had its fixed versions uncaptured \u2014 and that two days later Google shipped an emergency out-of-band release for a V8 bug under active exploitation. Sixth zero-day of the year is the number that settles the argument:\n\n> **Browser patching should be run as a standing maximum-version-age policy, not as a per-advisory triage decision.** At six exploited zero-days in eight months, the base rate is high enough that per-advisory triage is guaranteed to be wrong several times a year, and the cost of being wrong is renderer-level access to every session token and cookie in the process.\n\nThe advisory being **reissued as Update 1** is itself the operational lesson: a triage decision made against the first publication of an advisory can be invalidated by the second, and few estates re-open a closed patch ticket when a CCCS/vendor advisory increments.\n\n### Sources\n\n> Source: [SecurityWeek \u2014 Google Patches 6th Chrome Zero-Day of 2026](https://www.securityweek.com/google-patches-6th-chrome-zero-day-of-2026/) \u2014 2026-09-04\n> Source: [CCCS AV26-883 \u2014 Google security advisory, Update 1](https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-883) \u2014 2026-09-04\n> Source: [Clubic \u2014 Chrome : Google corrige 12 nouvelles vuln\u00e9rabilit\u00e9s dont une faille 0-day](https://www.clubic.com/actualite-628300-chrome-google-12-nouvelles-vulnerabilites-dont-une-faille-0-day.html) \u2014 2026-09-04",
@@ -3957,7 +4016,7 @@
   },
   "CVE-2026-85102": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-85102-85103-Check-Point-VPN-Certificate-Auth-Bypass-ASN1-Heap-Overflow-2026.md",
-   "body": "# CVE-2026-85102 / CVE-2026-85103 \u2014 Check Point VPN Certificate Auth Bypass + ASN.1 Heap Overflow, Both CVSS 9.8\n\n\u2705 **Verification:** Verified \u2014 4 independent sources\n\n> Source: [The Hacker News](https://thehackernews.com/2026/09/check-point-discloses-two-98-rated-vpn.html) \u2014 2026-09-10\n> Source: [CCCS AV26-902](https://cyber.gc.ca/en/alerts-advisories/check-point-security-advisory-av26-902) \u2014 2026-09-09\n\n**Type:** CVE / pre-authentication RCE \u2014 VPN gateway and management server | **Severity:** Critical | **Date:** 2026-09-11\n\n## Summary\nCheck Point has disclosed two vulnerabilities, **both rated CVSS 9.8**, both patched:\n\n- **CVE-2026-85102** \u2014 **authentication bypass plus remote code execution in VPN certificate handling**. Affects **Remote Access VPN and Site-to-Site VPN** on Check Point **Security Gateways** and **Spark Firewall**. Reference **`sk1000117`**.\n- **CVE-2026-85103** \u2014 **heap overflow in ASN.1 decoding** leading to **remote code execution**. Affects **Security Gateways and the Security Management Server**. Reference **`sk1000118`**.\n\nCheck Point states that exploitation requires unspecified **\"specific conditions\"**. **No confirmed in-the-wild exploitation at time of writing.** Patches are available for both.\n\nThe distinguishing detail is the **CVE-2026-85103 scope**: it reaches the **Security Management Server**, not only the gateway. That places a **security management plane** in the affected set rather than only the enforcement point.\n\n## Why this matters\n1. **Certificate-parsing code is pre-authentication by definition.** The gateway must parse an attacker-supplied certificate in order to decide whether to trust it. That means the vulnerable code path is reachable by **anyone who can complete a TCP handshake to the VPN listener** \u2014 no credential, no account, no MFA, and no conditional-access policy sits in front of it. For an internet-facing Remote Access VPN, the exposed population is the entire internet.\n\n2. **\"Specific conditions\" from a vendor is not a mitigating control.** The phrase is unspecified, unenumerated and unverifiable by the customer. It cannot be used to demonstrate non-exposure, it cannot be turned into a detection, and it does not change the patch decision. Historically, vendor qualifiers of this shape on edge appliances have been resolved by researchers within days of the advisory \u2014 and once resolved, the qualifier disappears while the exposure does not. Treat it as an unknown, not as a reduction.\n\n3. **The Security Management Server being in scope makes this a management-plane issue as well as an edge one.** This is the **second instance in this sweep alone** of a security vendor's management plane being in the affected set \u2014 the Cisco Secure FMC authentication bypass is the other. The management server holds the policy and the credentials for the gateways it administers; code execution there is authority over the enforcement layer, not a peer compromise. Estates that scope \"VPN patching\" to the gateways will close half of CVE-2026-85103.\n\n4. **No confirmed exploitation is a statement about today, and the product line has a short history.** Check Point VPN has prior exploited-flaw precedent in this vault, including a Qilin-associated zero-day. The pattern for internet-facing VPN gateways across vendors \u2014 NetScaler, Fortinet, Ivanti, Cisco \u2014 is bulletin, then reconstruction by patch diffing, then exploitation, on a days-to-weeks clock. Plan on that curve rather than on the current exploitation status.\n\n5. **ASN.1 decoding is a recurring high-yield bug class and a poor candidate for compensating controls.** It is a complex binary parser handling attacker-controlled structure, historically productive of memory-safety bugs across OpenSSL, Kerberos and every VPN implementation. It cannot be disabled, rate-limited meaningfully, or placed behind authentication, because it *is* the authentication.\n\n## Action\n1. **Patch both CVEs now, on gateways and on the Security Management Server.** Work from Check Point references **`sk1000117`** (CVE-2026-85102) and **`sk1000118`** (CVE-2026-85103). Confirm the fixed build on each device individually rather than relying on a central compliance report.\n2. **Enumerate the full affected estate before declaring the cycle closed.** In scope: **Security Gateways**, **Spark Firewall** appliances, **Remote Access VPN** and **Site-to-Site VPN** configurations, and the **Security Management Server**. Spark units in branch offices and small sites are the population most likely to be missing from the asset inventory.\n3. **Do not defer on the strength of \"specific conditions\" or \"no in-the-wild exploitation.\"** Neither is a control. Both CVEs are CVSS 9.8 pre-authentication on an internet-facing listener; schedule them against that, not against the current exploitation status.\n4. **Restrict the management server's reachability independently of the patch.** The Security Management Server should not be reachable from the internet or from general user VLANs under any configuration. If CVE-2026-85103 is the only reason you discover it is, that finding outlives this CVE.\n5. **Hunt for pre-patch exploitation on any gateway that was internet-reachable.** There is no published IOC set, so hunt on behaviour:\n   - **Gateway process crashes, restarts or core dumps in the VPN daemon** with no change-management explanation \u2014 the expected first-order artefact of an unreliable heap overflow.\n   - **Successful VPN sessions with no corresponding authentication event**, or sessions for accounts that did not initiate them.\n   - **Unexpected outbound connections originating from the gateway or management server itself**, particularly to newly-registered or low-reputation destinations.\n   - **Configuration and policy diffs against the last known-good backup** \u2014 on both gateway and management server. Code execution on the management plane permits durable rule changes that survive the patch.\n   - New or modified local accounts, scheduled tasks/cron entries, and unexpected files in administrator-writable paths on the appliance.\n6. **If compromise cannot be excluded on a gateway, rotate what it held.** VPN pre-shared keys, certificate private keys and the issuing CA trust for VPN authentication, RADIUS/TACACS+ secrets, SNMP communities, and any administrator credential used against the management server. Certificate material specifically: a stolen gateway key is not invalidated by patching and must be reissued and revoked.\n7. **Watch for reconstruction from the patch.** Once fixed builds are public, patch diffing is the standard second stage \u2014 the vault has recorded it explicitly for MikroTik RouterOS this month. Assume the \"specific conditions\" qualifier has a shelf life measured in days after a researcher takes an interest.\n\n## Update \u2014 2026-09-13: Dutch NCSC warns exploitation \"imminent\"\n\nThe **Dutch NCSC** has warned that **exploitation of CVE-2026-85102 and CVE-2026-85103 is imminent**, urging immediate patching. This is exactly the curve predicted above (bulletin \u2192 reconstruction \u2192 exploitation on a days clock) and removes any basis for deferring on the \"no confirmed exploitation / specific conditions\" language. Treat the patch as emergency.\n\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/dutch-ncsc-critical-check-point-vpn-flaws-exploitation-is-imminent/) \u2014 2026-09-12\n> Source: [SecurityWeek](https://www.securityweek.com/check-point-patches-critical-vpn-vulnerabilities/) \u2014 2026-09-11\n\n## Cross-reference\n- `CheckPoint-VPN-ZeroDay-Qilin-2026.md` \u2014 prior Check Point VPN flaw exploited by a Qilin affiliate; the same product line, the same internet-facing listener, and the reason \"no confirmed exploitation\" should not drive the schedule here.\n- `CVE-2026-20079-Cisco-Secure-FMC-Auth-Bypass-Exploited-Qilin-Sandworm-2026.md` \u2014 same sweep; a security vendor's management plane at CVSS 10.0, already exploited by three clusters. The CVE-2026-85103 management-server scope is the same structural problem one step earlier in its lifecycle.\n- `CVE-2026-16232-CheckPoint-SmartConsole-Auth-Bypass-CISA-KEV.md` \u2014 earlier Check Point authentication bypass that reached KEV; precedent for this product family's exploitation curve.\n- `CVE-2026-18574-CheckPoint-Management-Auth-Bypass-RCE.md` \u2014 prior Check Point *management* auth bypass with RCE; CVE-2026-85103 repeats the management-plane exposure.\n- `CVE-2026-19490-19489-Citrix-NetScaler-Auth-Bypass.md` \u2014 the comparator curve: bulletin to confirmed in-the-wild exploitation in days on an internet-facing VPN gateway.\n- `CVE-2026-11999-wolfSSL-X509-TrustChain-Bypass.md` \u2014 same class of failure in certificate/trust-chain handling, different implementation.\n\n#cve #check-point #vpn #security-gateway #spark-firewall #management-server #authentication-bypass #rce #asn1 #certificate-parsing #pre-auth #edge-device #critical #corroborated\n\n## Tags\n #corroborated #verified",
+   "body": "# CVE-2026-85102 / CVE-2026-85103 \u2014 Check Point VPN Certificate Auth Bypass + ASN.1 Heap Overflow, Both CVSS 9.8\n\n\u2705 **Verification:** Verified \u2014 4 independent sources\n\n> Source: [The Hacker News](https://thehackernews.com/2026/09/check-point-discloses-two-98-rated-vpn.html) \u2014 2026-09-10\n> Source: [CCCS AV26-902](https://cyber.gc.ca/en/alerts-advisories/check-point-security-advisory-av26-902) \u2014 2026-09-09\n\n**Type:** CVE / pre-authentication RCE \u2014 VPN gateway and management server | **Severity:** Critical | **Date:** 2026-09-11\n\n## Summary\nCheck Point has disclosed two vulnerabilities, **both rated CVSS 9.8**, both patched:\n\n- **CVE-2026-85102** \u2014 **authentication bypass plus remote code execution in VPN certificate handling**. Affects **Remote Access VPN and Site-to-Site VPN** on Check Point **Security Gateways** and **Spark Firewall**. Reference **`sk1000117`**.\n- **CVE-2026-85103** \u2014 **heap overflow in ASN.1 decoding** leading to **remote code execution**. Affects **Security Gateways and the Security Management Server**. Reference **`sk1000118`**.\n\nCheck Point states that exploitation requires unspecified **\"specific conditions\"**. **No confirmed in-the-wild exploitation at time of writing.** Patches are available for both.\n\nThe distinguishing detail is the **CVE-2026-85103 scope**: it reaches the **Security Management Server**, not only the gateway. That places a **security management plane** in the affected set rather than only the enforcement point.\n\n## Why this matters\n1. **Certificate-parsing code is pre-authentication by definition.** The gateway must parse an attacker-supplied certificate in order to decide whether to trust it. That means the vulnerable code path is reachable by **anyone who can complete a TCP handshake to the VPN listener** \u2014 no credential, no account, no MFA, and no conditional-access policy sits in front of it. For an internet-facing Remote Access VPN, the exposed population is the entire internet.\n\n2. **\"Specific conditions\" from a vendor is not a mitigating control.** The phrase is unspecified, unenumerated and unverifiable by the customer. It cannot be used to demonstrate non-exposure, it cannot be turned into a detection, and it does not change the patch decision. Historically, vendor qualifiers of this shape on edge appliances have been resolved by researchers within days of the advisory \u2014 and once resolved, the qualifier disappears while the exposure does not. Treat it as an unknown, not as a reduction.\n\n3. **The Security Management Server being in scope makes this a management-plane issue as well as an edge one.** This is the **second instance in this sweep alone** of a security vendor's management plane being in the affected set \u2014 the Cisco Secure FMC authentication bypass is the other. The management server holds the policy and the credentials for the gateways it administers; code execution there is authority over the enforcement layer, not a peer compromise. Estates that scope \"VPN patching\" to the gateways will close half of CVE-2026-85103.\n\n4. **No confirmed exploitation is a statement about today, and the product line has a short history.** Check Point VPN has prior exploited-flaw precedent in this vault, including a Qilin-associated zero-day. The pattern for internet-facing VPN gateways across vendors \u2014 NetScaler, Fortinet, Ivanti, Cisco \u2014 is bulletin, then reconstruction by patch diffing, then exploitation, on a days-to-weeks clock. Plan on that curve rather than on the current exploitation status.\n\n5. **ASN.1 decoding is a recurring high-yield bug class and a poor candidate for compensating controls.** It is a complex binary parser handling attacker-controlled structure, historically productive of memory-safety bugs across OpenSSL, Kerberos and every VPN implementation. It cannot be disabled, rate-limited meaningfully, or placed behind authentication, because it *is* the authentication.\n\n## Action\n1. **Patch both CVEs now, on gateways and on the Security Management Server.** Work from Check Point references **`sk1000117`** (CVE-2026-85102) and **`sk1000118`** (CVE-2026-85103). Confirm the fixed build on each device individually rather than relying on a central compliance report.\n2. **Enumerate the full affected estate before declaring the cycle closed.** In scope: **Security Gateways**, **Spark Firewall** appliances, **Remote Access VPN** and **Site-to-Site VPN** configurations, and the **Security Management Server**. Spark units in branch offices and small sites are the population most likely to be missing from the asset inventory.\n3. **Do not defer on the strength of \"specific conditions\" or \"no in-the-wild exploitation.\"** Neither is a control. Both CVEs are CVSS 9.8 pre-authentication on an internet-facing listener; schedule them against that, not against the current exploitation status.\n4. **Restrict the management server's reachability independently of the patch.** The Security Management Server should not be reachable from the internet or from general user VLANs under any configuration. If CVE-2026-85103 is the only reason you discover it is, that finding outlives this CVE.\n5. **Hunt for pre-patch exploitation on any gateway that was internet-reachable.** There is no published IOC set, so hunt on behaviour:\n   - **Gateway process crashes, restarts or core dumps in the VPN daemon** with no change-management explanation \u2014 the expected first-order artefact of an unreliable heap overflow.\n   - **Successful VPN sessions with no corresponding authentication event**, or sessions for accounts that did not initiate them.\n   - **Unexpected outbound connections originating from the gateway or management server itself**, particularly to newly-registered or low-reputation destinations.\n   - **Configuration and policy diffs against the last known-good backup** \u2014 on both gateway and management server. Code execution on the management plane permits durable rule changes that survive the patch.\n   - New or modified local accounts, scheduled tasks/cron entries, and unexpected files in administrator-writable paths on the appliance.\n6. **If compromise cannot be excluded on a gateway, rotate what it held.** VPN pre-shared keys, certificate private keys and the issuing CA trust for VPN authentication, RADIUS/TACACS+ secrets, SNMP communities, and any administrator credential used against the management server. Certificate material specifically: a stolen gateway key is not invalidated by patching and must be reissued and revoked.\n7. **Watch for reconstruction from the patch.** Once fixed builds are public, patch diffing is the standard second stage \u2014 the vault has recorded it explicitly for MikroTik RouterOS this month. Assume the \"specific conditions\" qualifier has a shelf life measured in days after a researcher takes an interest.\n\n## Update \u2014 2026-09-13: Dutch NCSC warns exploitation \"imminent\"\n\nThe **Dutch NCSC** has warned that **exploitation of CVE-2026-85102 and CVE-2026-85103 is imminent**, urging immediate patching. This is exactly the curve predicted above (bulletin \u2192 reconstruction \u2192 exploitation on a days clock) and removes any basis for deferring on the \"no confirmed exploitation / specific conditions\" language. Treat the patch as emergency.\n\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/dutch-ncsc-critical-check-point-vpn-flaws-exploitation-is-imminent/) \u2014 2026-09-12\n> Source: [SecurityWeek](https://www.securityweek.com/check-point-patches-critical-vpn-vulnerabilities/) \u2014 2026-09-11\n\n## Cross-reference\n- `CheckPoint-VPN-ZeroDay-Qilin-2026.md` \u2014 prior Check Point VPN flaw exploited by a Qilin affiliate; the same product line, the same internet-facing listener, and the reason \"no confirmed exploitation\" should not drive the schedule here.\n- `CVE-2026-20079-Cisco-Secure-FMC-Auth-Bypass-Exploited-Qilin-Sandworm-2026.md` \u2014 same sweep; a security vendor's management plane at CVSS 10.0, already exploited by three clusters. The CVE-2026-85103 management-server scope is the same structural problem one step earlier in its lifecycle.\n- `CVE-2026-16232-CheckPoint-SmartConsole-Auth-Bypass-CISA-KEV.md` \u2014 earlier Check Point authentication bypass that reached KEV; precedent for this product family's exploitation curve.\n- `CVE-2026-18574-CheckPoint-Management-Auth-Bypass-RCE.md` \u2014 prior Check Point *management* auth bypass with RCE; CVE-2026-85103 repeats the management-plane exposure.\n- `CVE-2026-19490-19489-Citrix-NetScaler-Auth-Bypass.md` \u2014 the comparator curve: bulletin to confirmed in-the-wild exploitation in days on an internet-facing VPN gateway.\n- `CVE-2026-11999-wolfSSL-X509-TrustChain-Bypass.md` \u2014 same class of failure in certificate/trust-chain handling, different implementation.\n\n#cve #check-point #vpn #security-gateway #spark-firewall #management-server #authentication-bypass #rce #asn1 #certificate-parsing #pre-auth #edge-device #critical #corroborated\n\n## Tags\n #corroborated #verified\n\n\n## Update \u2014 2026-09-24: Check Point confirms in-the-wild exploitation of CVE-2026-85102; KEV deadline 2026-09-25; certificate IOCs\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/check-point-warns-of-hackers-exploiting-security-gateway-vpn-rce-flaw/) \u2014 2026-09-23\n\n**Exploitation**\n- **CVE-2026-85102** (pre-auth RCE in VPN certificate handling, Security Gateway) is **confirmed exploited**. Attacks against **Spark** customers began on **2026-09-12**, from VPN and proxy infrastructure. The Dutch NCSC's \"imminent\" warning (2026-09-10) came two days earlier.\n- **CVE-2026-93616** (pre-auth path traversal in the Management web service, leading to script execution and Java class loading) has been **exploited as a zero-day since 2026-07-23**.\n- CISA added both to KEV with a **federal deadline of 2026-09-25**.\n\n**Malicious certificate subject IOCs** (Check Point says the list may be incomplete):\n- `CN=vpn,OU=users,O=global`\n- `CN=vpn-user,OU=users,O=global`\n- `CN=vpnuser,OU=users,O=global`\n\n**Fixes**\n- **LivePatch Take 26** on R81.20, R82 and R82.10. Customers who installed an earlier offline LivePatch still need Take 26.\n- Or Jumbo Hotfix R81.20 T166, R82 T126, R82.10 T44 or R81.10 T190, or later.\n- Spark: R82.00.10 Build 2325 or R81.10.17 Build 4968, or later.\n- Verify with `cpinfo -y CPupdates` in expert mode.\n\n**Workaround if you can't patch**\n- Disable VPN implied rules.\n- Pin Site-to-Site UDP/500 and UDP/4500 to peer IPs.\n- Restrict Remote Access VPN to the required services (UDP/500, UDP/4500, TCP/443, TCP/80) and to known source ranges.\n- These steps don't apply to locally managed Spark.\n\nAdvisories: sk1000117 (85102) and sk1000171 (93616 hunting).",
    "sev": "Critical",
    "year": "2026",
    "kev": true,
@@ -4003,9 +4062,33 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-87898": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-87898.md",
+   "body": "# CVE-2026-87898\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2026\n\n## Summary\nrss:cccs-2026-09-24-av26-961-webpros | 2026-09-24 | CCCS (cyber.gc.ca) | WebPros advisory bundle: CVE-2026-68492 Plesk RCE-as-root, CVE-2026-87898 cPanel CalDAV (+ corroborates 87899/87900) | -> Threat_Intel/CVEs/2026/Critical/CVE-2026-87899-cPanel-CalDAV-CardDAV-Account-To-Root-WP-Toolkit-CVE-2026-87900-2026.md (appended)\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 rss:cccs-2026-09-24-av26-961-webpros | 2026-09-24 | CCCS (cyber.gc.ca) | WebPros advisory bundle: CVE-2026-68492 Plesk RCE-as-root, CVE-2026-87898 cPanel CalDAV (+ corroborates 87899/87900) | -> Threat_Intel/CVEs/2026/Critical/CVE-2026-87899-cPanel-CalDAV-CardDAV-Account-To-Root-WP-Toolkit-CVE-2026-87900-2026.md (appended)\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-87898\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-87898\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-87898\n\n## Tags\n#cve #2026 #critical #auto-stub",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-87899": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-87899-cPanel-CalDAV-CardDAV-Account-To-Root-WP-Toolkit-CVE-2026-87900-2026.md",
+   "body": "# CVE-2026-87899: cPanel CalDAV/CardDAV, Any Hosting Account to Root (plus CVE-2026-87900 WP Toolkit and CVE-2026-68490)\n\n\u2705 **Verification:** Verified. Vendor advisory as reported by The Hacker News\n\n> Source: [The Hacker News](https://thehackernews.com/2026/09/new-cpanel-flaw-lets-hosting-account_0272795595.html) \u2014 2026-09-23\n\n**Type:** CVE / local privilege escalation to root, shared hosting | **Severity:** Critical | **Date:** 2026-09-24\n\n## Summary\n| CVE | Component | Impact |\n|---|---|---|\n| **CVE-2026-87899** | cPanel CalDAV/CardDAV service | **Any logged-in cPanel account runs code as root.** No other prerequisite. |\n| CVE-2026-87900 | WP Toolkit database creation (\u2264 6.11.2-10794) | A logged-in user can modify **other accounts' databases**. Fixed in **6.11.3**. |\n| CVE-2026-68490 | cPanel CalDAV/CardDAV service | A local user can read other accounts' calendar events and contacts. |\n\n- **Affected:** cPanel & WHM **version 120 and later**.\n- **Fixed builds:** **11.134.0.57, 11.136.0.41, 11.138.0.8**, and WP Squared **11.138.1.11**. Fixed builds exist only for the 134, 136 and 138 lines.\n- **Exploitation:** none reported, and not in KEV as of 2026-09-23. There is no workaround and no guidance on detecting prior compromise.\n- **Reporter:** Ali Mustafa (rz1027). He is credited with at least seven cPanel/Plesk flaws since 2026-08-27.\n\n## Why this matters\n- On shared hosting, **any tenant is the attacker**. A single compromised or purchased hosting account gives root over every site on the box.\n- It combines with the **pre-auth WordPress local file include (CVE-2026-87902)**, which was exploited within hours of disclosure this week. That flaw gives web-user execution on one tenant, and this one turns it into root across all tenants.\n- It is the fourth account-to-root path on cPanel-family hosting recorded this month: the Acronis cPanel plugin (CVE-2026-87886), the WHM Parked/Addon Domain flaw (CVE-2026-65643), the WHM Mail flaw (CVE-2026-67401), and now this one.\n\n## Action\n1. Run `/usr/local/cpanel/scripts/upcp --force`, or in WHM go to *Upgrade to Latest Version*. The update also repairs calendar and contact permissions.\n2. **WP Toolkit is a separate package.** Update `wp-toolkit-cpanel` manually to **6.11.3** with the installer script (`--version 6.11.3`).\n3. Hosts on lines other than 134, 136 or 138 must move to a fixed line.\n4. There is no vendor guidance for detecting prior compromise. Review root process ancestry from the CalDAV service and look for unexpected root-owned files.\n\n## Cross-reference\n- `Threat_Intel/CVEs/2026/Critical/CVE-2026-87902-WordPress-Core-Template-Resolution-Unauth-RCE-7.1.2-2026.md`\n- `Threat_Intel/CVEs/2026/High/CVE-2026-87886-Acronis-cPanel-Backup-Plugin-Insecure-Permissions-Local-PrivEsc-Exploited-2026.md`\n- `Threat_Intel/CVEs/2026/Critical/CVE-2026-65643-cPanel-WHM-Parked-Addon-Domain-Root-Code-Execution.md`\n- `Threat_Intel/CVEs/2026/Critical/CVE-2026-67401-cPanel-WHM-Mail-Privileged-Account-Root-Code-Execution.md`\n\n## Tags\n#cve #cpanel #whm #wp-toolkit #privesc #root #shared-hosting #caldav\n\n## Update \u2014 2026-09-24: WebPros advisory bundle adds Plesk RCE (CVE-2026-68492) and a second cPanel CalDAV issue (CVE-2026-87898)\n> Source: [Canadian Centre for Cyber Security \u2014 AV26-961](https://cyber.gc.ca/en/alerts-advisories/webpros-security-advisory-av26-961) \u2014 2026-09-24\n\nThe Canadian Centre for Cyber Security's WebPros advisory (AV26-961) bundles this cPanel/WP Toolkit disclosure with two additional flaws in the same vendor's product line:\n\n| CVE | Component | Affected versions | Impact |\n|---|---|---|---|\n| **CVE-2026-68492** | **Plesk** RESTful API and Site Import extension | Plesk 18.0.34\u201318.0.80.7, 18.0.81.0; Plesk RESTful API 2.4.2\u20132.4.6; Site Import extension \u22641.12.1 | **Arbitrary code execution as root** |\n| **CVE-2026-87898** | cPanel CalDAV/CardDAV service | cPanel/WHM < 11.134.0.57, < 11.136.0.41, < 11.138.0.8 | Additional CalDAV/CardDAV vulnerability, same service as CVE-2026-87899/68490 above |\n\n**Why it matters:** this is now the *fifth* disclosed account-to-root / RCE-as-root path across the WebPros (cPanel + Plesk) product family in September 2026 alone, and the first to hit Plesk specifically rather than cPanel/WHM. Hosts running Plesk should treat this with the same urgency as the cPanel CalDAV chain \u2014 patch the RESTful API and Site Import extension per vendor guidance, in addition to the cPanel/WHM build updates above.\n\n#plesk #webpros #rce #root",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-87900": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-87899-cPanel-CalDAV-CardDAV-Account-To-Root-WP-Toolkit-CVE-2026-87900-2026.md",
+   "body": "# CVE-2026-87899: cPanel CalDAV/CardDAV, Any Hosting Account to Root (plus CVE-2026-87900 WP Toolkit and CVE-2026-68490)\n\n\u2705 **Verification:** Verified. Vendor advisory as reported by The Hacker News\n\n> Source: [The Hacker News](https://thehackernews.com/2026/09/new-cpanel-flaw-lets-hosting-account_0272795595.html) \u2014 2026-09-23\n\n**Type:** CVE / local privilege escalation to root, shared hosting | **Severity:** Critical | **Date:** 2026-09-24\n\n## Summary\n| CVE | Component | Impact |\n|---|---|---|\n| **CVE-2026-87899** | cPanel CalDAV/CardDAV service | **Any logged-in cPanel account runs code as root.** No other prerequisite. |\n| CVE-2026-87900 | WP Toolkit database creation (\u2264 6.11.2-10794) | A logged-in user can modify **other accounts' databases**. Fixed in **6.11.3**. |\n| CVE-2026-68490 | cPanel CalDAV/CardDAV service | A local user can read other accounts' calendar events and contacts. |\n\n- **Affected:** cPanel & WHM **version 120 and later**.\n- **Fixed builds:** **11.134.0.57, 11.136.0.41, 11.138.0.8**, and WP Squared **11.138.1.11**. Fixed builds exist only for the 134, 136 and 138 lines.\n- **Exploitation:** none reported, and not in KEV as of 2026-09-23. There is no workaround and no guidance on detecting prior compromise.\n- **Reporter:** Ali Mustafa (rz1027). He is credited with at least seven cPanel/Plesk flaws since 2026-08-27.\n\n## Why this matters\n- On shared hosting, **any tenant is the attacker**. A single compromised or purchased hosting account gives root over every site on the box.\n- It combines with the **pre-auth WordPress local file include (CVE-2026-87902)**, which was exploited within hours of disclosure this week. That flaw gives web-user execution on one tenant, and this one turns it into root across all tenants.\n- It is the fourth account-to-root path on cPanel-family hosting recorded this month: the Acronis cPanel plugin (CVE-2026-87886), the WHM Parked/Addon Domain flaw (CVE-2026-65643), the WHM Mail flaw (CVE-2026-67401), and now this one.\n\n## Action\n1. Run `/usr/local/cpanel/scripts/upcp --force`, or in WHM go to *Upgrade to Latest Version*. The update also repairs calendar and contact permissions.\n2. **WP Toolkit is a separate package.** Update `wp-toolkit-cpanel` manually to **6.11.3** with the installer script (`--version 6.11.3`).\n3. Hosts on lines other than 134, 136 or 138 must move to a fixed line.\n4. There is no vendor guidance for detecting prior compromise. Review root process ancestry from the CalDAV service and look for unexpected root-owned files.\n\n## Cross-reference\n- `Threat_Intel/CVEs/2026/Critical/CVE-2026-87902-WordPress-Core-Template-Resolution-Unauth-RCE-7.1.2-2026.md`\n- `Threat_Intel/CVEs/2026/High/CVE-2026-87886-Acronis-cPanel-Backup-Plugin-Insecure-Permissions-Local-PrivEsc-Exploited-2026.md`\n- `Threat_Intel/CVEs/2026/Critical/CVE-2026-65643-cPanel-WHM-Parked-Addon-Domain-Root-Code-Execution.md`\n- `Threat_Intel/CVEs/2026/Critical/CVE-2026-67401-cPanel-WHM-Mail-Privileged-Account-Root-Code-Execution.md`\n\n## Tags\n#cve #cpanel #whm #wp-toolkit #privesc #root #shared-hosting #caldav\n\n## Update \u2014 2026-09-24: WebPros advisory bundle adds Plesk RCE (CVE-2026-68492) and a second cPanel CalDAV issue (CVE-2026-87898)\n> Source: [Canadian Centre for Cyber Security \u2014 AV26-961](https://cyber.gc.ca/en/alerts-advisories/webpros-security-advisory-av26-961) \u2014 2026-09-24\n\nThe Canadian Centre for Cyber Security's WebPros advisory (AV26-961) bundles this cPanel/WP Toolkit disclosure with two additional flaws in the same vendor's product line:\n\n| CVE | Component | Affected versions | Impact |\n|---|---|---|---|\n| **CVE-2026-68492** | **Plesk** RESTful API and Site Import extension | Plesk 18.0.34\u201318.0.80.7, 18.0.81.0; Plesk RESTful API 2.4.2\u20132.4.6; Site Import extension \u22641.12.1 | **Arbitrary code execution as root** |\n| **CVE-2026-87898** | cPanel CalDAV/CardDAV service | cPanel/WHM < 11.134.0.57, < 11.136.0.41, < 11.138.0.8 | Additional CalDAV/CardDAV vulnerability, same service as CVE-2026-87899/68490 above |\n\n**Why it matters:** this is now the *fifth* disclosed account-to-root / RCE-as-root path across the WebPros (cPanel + Plesk) product family in September 2026 alone, and the first to hit Plesk specifically rather than cPanel/WHM. Hosts running Plesk should treat this with the same urgency as the cPanel CalDAV chain \u2014 patch the RESTful API and Site Import extension per vendor guidance, in addition to the cPanel/WHM build updates above.\n\n#plesk #webpros #rce #root",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-87902": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-87902-WordPress-Core-Template-Resolution-Unauth-RCE-7.1.2-2026.md",
-   "body": "# CVE-2026-87902 \u2014 WordPress Core: Unauthenticated Code Execution via Page Template Resolution (fixed in 7.1.2)\n\n\u26a0\ufe0f **Verification:** Corroborated \u2014 2 independent sources\n\n> Source: [The Hacker News](https://thehackernews.com/2026/09/wordpress-issues-patch-for-critical.html) \u2014 2026-09-22\n> Source: [@The_Cyber_News (X)](https://x.com/The_Cyber_News/status/2102701071403761916) \u2014 2026-09-23 (citing cybersecuritynews.com)\n\n**Type:** CVE / unauthenticated remote code execution (conditional) | **Severity:** Critical | **Date:** 2026-09-23\n\n## Summary\n\nWordPress has released **7.1.2** to fix **CVE-2026-87902**, a critical flaw in **WordPress page template resolution** \u2014 the core mechanism that decides which PHP template file renders a requested page. A remote, **unauthenticated** attacker can influence template resolution and cause WordPress to **include a readable local PHP file located outside the active theme directory**, producing code execution **on vulnerable sites under specific conditions**.\n\nThe qualifier matters and should not be dropped in retelling: this is a **local file include reached without authentication**, not a universal unauthenticated RCE. Exploitation needs a readable, attacker-useful PHP file already present on the host \u2014 which on a shared or plugin-heavy installation is a low bar, and on a hardened single-purpose install may not exist at all.\n\n## Why this matters\n\n- **This is the third distinct WordPress *core* code-execution issue recorded in this vault in under a week,** after `Click2Shell` (admin CSRF \u2192 theme install \u2192 RCE, fixed 7.1.1, 2026-09-17) and `Comment2Shell` / CVE-2026-93485 (anonymous comment XSS \u2192 RCE via admin session). Core, not plugins. The plugin ecosystem has historically absorbed the blame for WordPress RCE; three core issues in seven days is a different signal and worth calling out explicitly.\n- **The \"specific conditions\" clause is where the risk actually lives.** Multi-tenant and shared hosting is the worst case: the more PHP files reachable on the filesystem, the more likely a usable include target exists. This vault has recorded two shared-hosting privilege-escalation chains this month already (Acronis cPanel plugin CVE-2026-87886, LiteSpeed Enterprise). **A pre-auth local file include on the same class of box composes with those** \u2014 one gets you execution as the web user, the others get you root across every tenant.\n- **Patch adoption is the real exposure curve.** WordPress core auto-updates for minor releases reach most installs quickly, which is the good news; the population that matters is the one with auto-updates disabled for change-control reasons, which correlates strongly with the managed, higher-value estates.\n\n## Action\n\n1. **Update to WordPress 7.1.2 immediately** on every install.\n2. **Verify auto-update actually fired.** Check `WP_AUTO_UPDATE_CORE`, any host-level update suppression, and the reported core version \u2014 do not assume.\n3. **On shared or multi-tenant hosting, treat this as higher severity than the headline**, because the precondition (readable PHP outside the theme directory) is effectively guaranteed.\n4. **Hunt for exploitation:** requests with unusual template, page-template or path-like parameters; PHP execution originating from files outside the active theme; new or modified files in `wp-content/uploads`; unexpected outbound connections from the web user.\n5. **Reduce the include surface:** remove unused themes and plugins, disallow PHP execution in uploads directories, and confirm `open_basedir` / per-tenant isolation is actually enforced on shared hosts.\n6. **Check whether 7.1.1 was ever applied.** A site still on 7.1.0 is exposed to Click2Shell *and* this flaw.\n\n## Cross-reference\n\n- `Threat_Intel/CVEs/2026/High/Click2Shell-WordPress-Admin-CSRF-Theme-Install-RCE-WP-7.1.1-2026.md`\n- `Threat_Intel/CVEs/2026/Critical/CVE-2026-93485-WordPress-Core-Comment2Shell-Anonymous-Comment-XSS-To-RCE-2026.md`\n- `Threat_Intel/CVEs/2026/Critical/LiteSpeed-Enterprise-Shared-Hosting-Low-Privilege-User-To-Root-2026.md`\n\n## Tags\n#cve #wordpress #wordpress-core #lfi #rce #unauthenticated #shared-hosting #template-resolution #critical #corroborated",
+   "body": "# CVE-2026-87902 \u2014 WordPress Core: Unauthenticated Code Execution via Page Template Resolution (fixed in 7.1.2)\n\n\u26a0\ufe0f **Verification:** Corroborated \u2014 2 independent sources\n\n> Source: [The Hacker News](https://thehackernews.com/2026/09/wordpress-issues-patch-for-critical.html) \u2014 2026-09-22\n> Source: [@The_Cyber_News (X)](https://x.com/The_Cyber_News/status/2102701071403761916) \u2014 2026-09-23 (citing cybersecuritynews.com)\n\n**Type:** CVE / unauthenticated remote code execution (conditional) | **Severity:** Critical | **Date:** 2026-09-23\n\n## Summary\n\nWordPress has released **7.1.2** to fix **CVE-2026-87902**, a critical flaw in **WordPress page template resolution** \u2014 the core mechanism that decides which PHP template file renders a requested page. A remote, **unauthenticated** attacker can influence template resolution and cause WordPress to **include a readable local PHP file located outside the active theme directory**, producing code execution **on vulnerable sites under specific conditions**.\n\nThe qualifier matters and should not be dropped in retelling: this is a **local file include reached without authentication**, not a universal unauthenticated RCE. Exploitation needs a readable, attacker-useful PHP file already present on the host \u2014 which on a shared or plugin-heavy installation is a low bar, and on a hardened single-purpose install may not exist at all.\n\n## Why this matters\n\n- **This is the third distinct WordPress *core* code-execution issue recorded in this vault in under a week,** after `Click2Shell` (admin CSRF \u2192 theme install \u2192 RCE, fixed 7.1.1, 2026-09-17) and `Comment2Shell` / CVE-2026-93485 (anonymous comment XSS \u2192 RCE via admin session). Core, not plugins. The plugin ecosystem has historically absorbed the blame for WordPress RCE; three core issues in seven days is a different signal and worth calling out explicitly.\n- **The \"specific conditions\" clause is where the risk actually lives.** Multi-tenant and shared hosting is the worst case: the more PHP files reachable on the filesystem, the more likely a usable include target exists. This vault has recorded two shared-hosting privilege-escalation chains this month already (Acronis cPanel plugin CVE-2026-87886, LiteSpeed Enterprise). **A pre-auth local file include on the same class of box composes with those** \u2014 one gets you execution as the web user, the others get you root across every tenant.\n- **Patch adoption is the real exposure curve.** WordPress core auto-updates for minor releases reach most installs quickly, which is the good news; the population that matters is the one with auto-updates disabled for change-control reasons, which correlates strongly with the managed, higher-value estates.\n\n## Action\n\n1. **Update to WordPress 7.1.2 immediately** on every install.\n2. **Verify auto-update actually fired.** Check `WP_AUTO_UPDATE_CORE`, any host-level update suppression, and the reported core version \u2014 do not assume.\n3. **On shared or multi-tenant hosting, treat this as higher severity than the headline**, because the precondition (readable PHP outside the theme directory) is effectively guaranteed.\n4. **Hunt for exploitation:** requests with unusual template, page-template or path-like parameters; PHP execution originating from files outside the active theme; new or modified files in `wp-content/uploads`; unexpected outbound connections from the web user.\n5. **Reduce the include surface:** remove unused themes and plugins, disallow PHP execution in uploads directories, and confirm `open_basedir` / per-tenant isolation is actually enforced on shared hosts.\n6. **Check whether 7.1.1 was ever applied.** A site still on 7.1.0 is exposed to Click2Shell *and* this flaw.\n\n## Cross-reference\n\n- `Threat_Intel/CVEs/2026/High/Click2Shell-WordPress-Admin-CSRF-Theme-Install-RCE-WP-7.1.1-2026.md`\n- `Threat_Intel/CVEs/2026/Critical/CVE-2026-93485-WordPress-Core-Comment2Shell-Anonymous-Comment-XSS-To-RCE-2026.md`\n- `Threat_Intel/CVEs/2026/Critical/LiteSpeed-Enterprise-Shared-Hosting-Low-Privilege-User-To-Root-2026.md`\n\n## Tags\n#cve #wordpress #wordpress-core #lfi #rce #unauthenticated #shared-hosting #template-resolution #critical #corroborated\n\n\n## Update \u2014 2026-09-24: exploited in the wild within hours of disclosure; CVSS 9.2; CCCS AV26-952\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-start-exploiting-critical-wordpress-flaw-for-code-execution/) \u2014 2026-09-23 | [The Hacker News](https://thehackernews.com/2026/09/attackers-exploit-wordpress-cve-2026.html) \u2014 2026-09-24 | [SecurityWeek](https://www.securityweek.com/critical-wordpress-vulnerability-exploited-immediately-after-disclosure/) \u2014 2026-09-24 | [CCCS AV26-952](https://cyber.gc.ca/en/alerts-advisories/wordpress-security-advisory-av26-952) \u2014 2026-09-23\n\n- **Status: exploited in the wild.** Attackers moved from probing to exploitation **within hours of disclosure**. They **write files to disk that run shell commands when accessed**, i.e. web shells.\n- **CVSS 9.2.** The mechanism: path traversal that makes `get_page_template()` include an attacker-chosen local `.php` file. GHSA-7hp8-65ch-5whp.\n- **Fixed in 7.1.2** (CCCS AV26-952 confirms \"WordPress before 7.1.2\").\n- **Changed action:** if a site ran < 7.1.2 at any point after 2026-09-22, **don't only patch; hunt for dropped PHP files.** Look for PHP files modified since 2026-09-22 in `wp-content/`, uploads and theme directories, and for web-server logs with traversal sequences in template-related parameters.\n- **Chain risk realised this week:** the cPanel account-to-root flaw **CVE-2026-87899**, disclosed the same day, gives the root step on shared hosting. See `CVE-2026-87899-cPanel-CalDAV-CardDAV-Account-To-Root-WP-Toolkit-CVE-2026-87900-2026.md`.",
    "sev": "Critical",
    "year": "2026",
    "kev": false,
@@ -4041,6 +4124,14 @@
    "sev": "Critical",
    "year": "2026",
    "kev": false,
+   "apts": []
+  },
+  "CVE-2026-93616": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-93616.md",
+   "body": "# CVE-2026-93616\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2026\n\n## Summary\nCheck Point CVE-2026-85102 confirmed exploited; CVE-2026-93616 zero-day since 07-23; certificate IOCs; KEV 09-25 | `Threat_Intel/CVEs/2026/Critical/CVE-2026-85102-85103-Check-Point-VPN-Certificate-Auth-Bypass-ASN1-Heap-Overflow-2026.md` |\n\n## Where it appears in this vault\n- `X_Intel/x-intel-2026-09-24.md` \u2014 Check Point CVE-2026-85102 confirmed exploited; CVE-2026-93616 zero-day since 07-23; certificate IOCs; KEV 09-25 | `Threat_Intel/CVEs/2026/Critical/CVE-2026-85102-85103-Check-Point-VPN-Certificate-Auth-Bypass-ASN1-Heap-Overflow-2026.md` |\n- `X_Intel/x-intel-tracker.md` \u2014 rss:bleeping-2026-09-23-checkpoint-gateway-exploited | 2026-09-23 | BleepingComputer | CVE-2026-85102 confirmed exploited; CVE-2026-93616 zero-day since 07-23; certificate IOCs; KEV 09-25 | -> Threat_Intel/CVEs/2026/Critical/CVE-2026-85102-85103-Check-Point-VPN-Certificate-Auth-Bypass-ASN1-Heap-Overflow-2026.md\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-93616\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-93616\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-93616\n\n## Tags\n#cve #2026 #critical #auto-stub",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": true,
    "apts": []
   },
   "CVE-2026-94127": {
@@ -4451,14 +4542,6 @@
    "kev": false,
    "apts": []
   },
-  "CVE-2026-48842": {
-   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-48842-Roundcube-Webmail-Exploited-In-The-Wild-2026.md",
-   "body": "# CVE-2026-48842 \u2014 Roundcube Webmail Exploited in the Wild, Four Months After the Patch\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n> Source: [CCCS AV26-503 Update 1](https://cyber.gc.ca/en/alerts-advisories/roundcube-security-advisory-av26-503) \u2014 2026-09-21\n\n**Type:** Vulnerability / exploitation status update | **Severity:** High | **Date:** 2026-09-22\n\n## Summary\nCCCS updated advisory **AV26-503** on 2026-09-21: **open-source reporting indicates CVE-2026-48842 is being exploited in the wild.** The original advisory was published **2026-05-25** and covers **Roundcube Webmail prior to 1.6.16 and prior to 1.7.1**. Patched releases **1.6.16** and **1.7.1** are available on GitHub. No CVSS is given in the advisory.\n\n**Not in the CISA KEV catalog** as of version 2026.09.21 (verified locally).\n\n## Why this matters\n1. **Roundcube is the webmail of the long tail, and that is precisely why it gets exploited.** It runs on shared hosting, university departments, ISPs, small government bodies and self-hosted mail servers \u2014 organisations with a real mail service and no patch programme. The install base is large, distributed, and unmanaged, which is the ideal profile for slow-burn exploitation.\n2. **Four months from patch to observed exploitation is the same interval as the Zyxel switch flaw recorded in this sweep.** Two unrelated products, same week, same shape: a fix ships, a device or service class that nobody owns stays unpatched, exploitation arrives on the attacker's schedule. The patch-to-exploit window is not shortening uniformly \u2014 for *unowned* infrastructure it barely matters, because the patch is never applied at all.\n3. **Webmail compromise is credential and correspondence access in one step.** Unlike a mail *client* bug, a Roundcube flaw is server-side and multi-user: it reaches everyone's mailbox on that host, along with session tokens and address books. For espionage purposes that is more valuable than a domain admin account.\n4. **This vault already holds `Roundcube-Exploit-China-Academic-Espionage-2026.md`** \u2014 Roundcube exploitation against academic institutions by a China-nexus actor. That note concerns a different issue, but the targeting profile established there is the one to assume here until attribution appears: academic and small-government mail servers, espionage-motivated, low noise.\n\n## Action\n1. **Upgrade to Roundcube 1.6.16 or 1.7.1.** Both have been available since May.\n2. **Inventory Roundcube instances properly** \u2014 this is software that arrives via hosting panels and departmental IT, so a central asset list will understate it. Check cPanel/Plesk-managed hosts, which bundle it.\n3. **Assume mailbox compromise on any instance that was internet-facing and unpatched since May.** Force password resets and invalidate all sessions; do not rely on patching alone.\n4. **Hunt:** unexpected PHP files under the Roundcube webroot and `plugins/` directory, new or modified `config/config.inc.php`, anomalous `sessions` table entries, IMAP logins from unusual geographies, and mail forwarding or filter rules created server-side.\n5. **Check for persistence in mail rules specifically.** Auto-forward rules survive password resets and are the standard follow-on to webmail compromise.\n6. **Put the Roundcube admin/webmail interface behind MFA or a reverse proxy with authentication** where the user population allows it.\n\n## Cross-reference\n- `Roundcube-Exploit-China-Academic-Espionage-2026.md` \u2014 prior Roundcube exploitation, academic targeting.\n- `CVE-2026-7273-Zyxel-GS1900-Stack-Overflow-OS-Command-Execution-KEV-2026.md` \u2014 same patch-to-exploitation interval, unowned infrastructure.\n\n#cve #roundcube #webmail #email #exploited-in-the-wild #shared-hosting #espionage #high #unverified\n\n## Tags\n #unverified",
-   "sev": "High",
-   "year": "2026",
-   "kev": false,
-   "apts": []
-  },
   "CVE-2026-5027": {
    "file": "Threat_Intel/CVEs/2026/High/CVE-2026-5027-Langflow-Path-Traversal.md",
    "body": "# CVE-2026-5027 \u2014 Langflow Path Traversal (Actively Exploited)\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n**Severity:** High\n**Product:** Langflow (AI/LLM application development platform)\n**Type:** Path traversal \u2192 arbitrary file write\n**Status:** Actively exploited in the wild\n\n## Summary\nAttackers are actively exploiting CVE-2026-5027, a high-severity path traversal vulnerability in the AI development platform Langflow, to write arbitrary files on exposed servers. Arbitrary file write commonly escalates to remote code execution (e.g., dropping webshells or poisoning startup/config files).\n\n## Exploitation\n- Path traversal allows writing files outside the intended directory on exposed Langflow servers.\n- Part of the broader trend of attackers targeting internet-exposed AI/LLM tooling.\n\n## Remediation\n- Update Langflow to the patched release.\n- Do not expose Langflow directly to the internet; place behind authentication/VPN.\n- Hunt for unexpected files/webshells on Langflow hosts.\n\n## Sources\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/path-traversal-flaw-in-ai-dev-platform-langflow-exploited-in-attacks/) \u2014 2026-06-10\n\n---\n*Captured via x-bugbounty-intel-sweep \u2014 2026-06-13*\n\n## Tags\n #unverified",
@@ -4753,6 +4836,14 @@
   "CVE-2026-77692": {
    "file": "Threat_Intel/CVEs/2026/High/CVE-2026-77692-BIND9-DoH-SIG0-NULL-Deref-Crash-Plus-13-More-ISC-2026.md",
    "body": "# ISC BIND 9 \u2014 14 Flaws Including CVE-2026-77692: One Unauthenticated DoH Request Crashes `named`\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 2 independent sources\n\n> Source: ISC advisory set, `kb.isc.org/docs/cve-2026-<id>` \u2014 public disclosure 2026-09-16\n> Source: [Canadian Centre for Cyber Security AV26-931](https://cyber.gc.ca/en/alerts-advisories/isc-bind-security-advisory-av26-931) \u2014 2026-09-16\n> Source: X @TheHackersNews `2026-09-17T08:02Z` \u2014 \"BIND 9 Update Fixes 14 Flaws, Including an Unauthenticated Crash Over DNS-over-HTTPS\"\n\n**Type:** CVE cluster / DoS, resource exhaustion, DNSSEC cache poisoning | **Severity:** High (8 \u00d7 CVSS 7.5) | **Date:** 2026-09-17\n\n## Summary\nISC disclosed **14 vulnerabilities in BIND 9** on **2026-09-16**. **Eight are High (CVSS 7.5)**; the rest Medium. **No known active exploitation** as of publication. Pre-notification 2026-09-09; version list revised 2026-09-11.\n\n**Fixed versions: 9.20.29 (stable), 9.21.26 (development), 9.20.29-S1 (Supported Preview Edition)**, released 2026-09-16. **9.20.29 closes all 14; 9.21.26 closes 13** (CVE-2026-19662 is 9.20.x-only).\n\n> \u26a0\ufe0f **Correction to a common misreading, including CCCS AV26-931.** The version strings **9.18.50 / 9.18.50-S1 / 9.20.27 / 9.20.27-S1 / 9.21.25** are the **upper bounds of the affected ranges**, *not* fixed versions. AV26-931 lists them as \"affected prior to or equal to\", which is correct, but the numbers are easily mistaken for patch targets. **Patch to 9.20.29 / 9.21.26 / 9.20.29-S1.**\n\n### The headline flaw \u2014 CVE-2026-77692\n- **CVSS 7.5** (`AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H`), **CWE-476 NULL pointer dereference**.\n- **Mechanism:** a **single crafted DNS-over-HTTPS request carrying a cryptographically invalid SIG(0) record**, followed by **premature closure of the transport connection**, aborts `named`.\n- **Affected:** 9.20.0\u20139.20.27, 9.21.0\u20139.21.25, 9.20.9-S1\u20139.20.27-S1. **9.18 not affected.**\n- Unauthenticated, no user interaction, one request.\n\n### Crash / assertion-failure (DoS)\n| CVE | Condition |\n|---|---|\n| **CVE-2026-77692** | DoH + invalid SIG(0) + connection close \u2192 abort (above) |\n| **CVE-2026-76163** | No global `options` block in `named.conf` **plus** a **TKEY query** \u2192 assertion failure, hard exit. 9.18 unaffected. |\n| **CVE-2026-19667** | Crafted response producing a negative answer of **exactly 65,536 bytes** \u2192 zero-byte negative-cache entry \u2192 abort |\n| **CVE-2026-19666** | Only resolvers running **dns64 with `break-dnssec yes`**, and only when the bad answer comes from cache |\n| **CVE-2026-80274** | `named` stores one denial proof at cache time, serves a different one later \u2192 abort or wrong record |\n| **CVE-2026-19662** | **Use-after-free** in cached NOQNAME proof data. **9.20.x only, \u2264 9.20.27** \u2014 the reason 9.21.26 closes 13 not 14 |\n\n### Resource exhaustion\n| CVE | Mechanism |\n|---|---|\n| **CVE-2026-19668** (CVSS 5.3) | CPU exhaustion \u2014 a delegated zone whose DS/DNSKEY records carry **many distinct key tags with no valid match** forces repeated key-tag matching per recursive query. Bounded by `max-validations-per-fetch`. **No workaround.** |\n| **CVE-2026-75029** | Negative-cache memory bloat from a message full of identical SOA/CNAME/DNAME records; `named` now keeps only the first copy |\n| **CVE-2026-81563** | **qpcache reference leak** answering an SVCB/HTTPS **AliasMode** query whose target held **>13 ServiceMode records**; cache grows past `max-cache-size` until lookups fail |\n| **CVE-2026-81736** | Disproportionate CPU assembling one response from a cached tree of **interlinked AliasMode HTTPS/SVCB records**; now capped per query |\n\n### DNSSEC integrity / cache poisoning\n| CVE | Mechanism |\n|---|---|\n| **CVE-2026-77119** (CVSS 5.9) | A validating resolver accepts a **valid NSEC3 record from an unrelated sibling zone** as proof that a secure delegation is insecure \u2192 forged unsigned answers accepted. **No workaround.** |\n| **CVE-2026-19941** | An **inapplicable NSEC record** accepted as proof no wildcard exists, masking a victim's wildcard record \u2192 **forged DNSSEC-validated NXDOMAIN**. Fix requires wildcard-denial and name-nonexistence proofs be signed by the same zone. |\n| **CVE-2026-78301** | **Out-of-zone database nodes becoming authoritative zone cuts.** Needs a malformed zone with an NS or DNAME node above its origin, loaded via transfer. On a recursing server `named` may follow the unintended delegation and cache attacker data for names outside the configured zone. |\n| **CVE-2026-19033** *(ID unconfirmed \u2014 see below)* | `named` could accept a **TSIG-signed AXFR/IXFR in which individual messages were unsigned**, processing them before verifying later signatures; for TSIG-gated secondary zones it could begin serving zone data before the final signed message arrived, with no rollback. Fix requires a TSIG signature on **every** incoming transfer message. |\n\n> \u26a0\ufe0f **CVE ID discrepancy on the zone-transfer flaw.** One trade source gives **CVE-2026-1903**, another **CVE-2026-19033**. The 14-item count only reconciles with **CVE-2026-19033**. Treat CVE-2026-1903 as a likely typo, **unverified**. Confirm against the ISC knowledgebase before citing.\n\n## Why this matters\n1. **CVE-2026-77692 is the cheapest possible DoS against a service that everything else depends on.** One unauthenticated DoH request, no state to build up, no amplification needed. If your resolver answers DoH from the internet, it can be dropped by a single packet-equivalent.\n2. **DoH is the newest and least-hardened transport in BIND, and it shows.** Two of the fourteen touch DoH or transport teardown. Organisations that enabled DoH for privacy reasons have quietly enlarged the attack surface of the most load-bearing service they run.\n3. **The four DNSSEC flaws are the more serious half of this release and will get the least attention.** Three of them let an attacker obtain **DNSSEC-validated forged answers** \u2014 a validating resolver actively vouching for attacker data. That is worse than an outage: it is a silent trust failure, it persists in cache, and there is no error for anyone to notice.\n4. **CVE-2026-77119 and CVE-2026-19668 have no workaround.** Patching is the whole control. Config hardening does not help.\n5. **Three of the crash conditions are configuration-gated** (`dns64 break-dnssec yes`, missing global `options` block, 9.20.x-only UAF). Inventory matters more than usual here \u2014 the applicable set differs per resolver.\n6. **SVCB/HTTPS AliasMode appears twice as a resource-exhaustion vector.** As HTTPS RR adoption grows for ECH and HTTP/3 discovery, expect more of this record type in attacker-controlled zones.\n\n## Action\n1. **Upgrade to 9.20.29, 9.21.26 or 9.20.29-S1.** Do not target the version numbers quoted in CCCS AV26-931 \u2014 those are affected-range bounds.\n2. **Identify every resolver exposing DoH to untrusted networks** and prioritise those for CVE-2026-77692.\n3. **Inventory config-gated conditions:** `dns64` + `break-dnssec yes` (CVE-2026-19666); `named.conf` files with **no global `options` block** (CVE-2026-76163); any remaining 9.20.x (CVE-2026-19662).\n4. **Confirm `max-validations-per-fetch` and `max-cache-size` are set** \u2014 they bound CVE-2026-19668 and CVE-2026-81563 respectively.\n5. **Treat validating resolvers as the priority tier**, not the authoritative servers \u2014 the cache-poisoning set only bites on validation.\n6. **Verify the zone-transfer CVE ID** against `kb.isc.org` before quoting it in any advisory you issue internally.\n7. **If running the Supported Preview Edition**, note the separate `-S1` track and that 9.21.26 does *not* close CVE-2026-19662.\n\n## Cross-reference\n- `Vendor-Advisory-Roundup-*` \u2014 CCCS AV26-931 is the advisory that surfaced this.\n- `CVE-2026-91752` (GNU libextractor, AV26-923) \u2014 same CCCS advisory window.\n- `Oracle-September-2026-CSPU-672-CVEs-104-Critical-Fusion-Middleware-2026.md` \u2014 same month's patch-volume context.\n\n#cve #bind #bind9 #isc #dns #doh #dns-over-https #dnssec #nsec3 #cache-poisoning #dos #null-dereference #use-after-free #tsig #svcb #resource-exhaustion #high #corroborated\n\n## Tags\n #corroborated #unverified",
+   "sev": "High",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-80521": {
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-80521-Linux-AF_UNIX-GC-UAF-Container-Escape-Ubuntu-Unpatched-Public-Exploit-2026.md",
+   "body": "# CVE-2026-80521: Linux AF_UNIX Garbage-Collector UAF, Container Escape to Host Root (Ubuntu unpatched, public exploit)\n\n\u2705 **Verification:** Verified. DepthFirst research, upstream commit, Ubuntu tracker (via The Hacker News)\n\n> Source: [The Hacker News](https://thehackernews.com/2026/09/exploit-released-for-unpatched-ubuntu.html) \u2014 2026-09-23\n\n**Type:** CVE / kernel use-after-free, container escape | **Severity:** High (CVSS 7.8) | **Date:** 2026-09-24\n\n## Summary\n- **Bug:** a use-after-free caused by a race in the **AF_UNIX socket garbage collector** that handles **SCM_RIGHTS** file-descriptor passing.\n- **Impact:** escape from a container to **host root**, bypassing namespaces, cgroups and seccomp. **AF_UNIX is allowed by the default Docker and Kubernetes seccomp profiles.**\n- **Vulnerable code:** introduced in kernel **6.10** and backported to **6.1 and 6.6**.\n- **Upstream fix:** 2026-08-06, mainline **7.2** and stable **7.1.10** (commit `594d905195024b228c962627ae5ae7c17bd582a4`).\n- **Ubuntu is unpatched:**\n  - 26.04 LTS is vulnerable.\n  - 24.04 and 22.04 are vulnerable through their newer kernel packages, including the **AWS, Azure and GCP cloud kernels**.\n  - Tracker status: \"vulnerable, work in progress\".\n- **Exploit:** DepthFirst published a public exploit targeting Ubuntu 26.04 (GitHub `Markakd/Container_escape`).\n- **Exploitation status:** not in KEV, and no confirmed attacks.\n- **Discovery:** DepthFirst's AI model **dfs-large1** with a human-operated harness. It was used to win a Google kernelCTF slot (2026-07-24) and reported on 2026-08-05. An OpenAI researcher found the same bug independently, and the commit credits Kyle Zeng.\n\n## Why this matters\n- There is a **public exploit and no distro patch** on the most widely deployed cloud container host OS. The gap is seven weeks after the upstream fix and still open.\n- **AI-assisted discovery that was also found independently by a second AI lab** is the recurring pattern this quarter. About 5,700 Linux kernel CVEs have been published in 2026 so far, a record.\n\n## Action\n1. There is **no workaround**. Options:\n   - Build the upstream patch into your own kernels.\n   - Move untrusted and multi-tenant workloads onto **microVM isolation** (Firecracker, Kata).\n2. Track the Ubuntu USN for 26.04, 24.04 HWE and the cloud kernels, and patch on release.\n3. Detection: an unprivileged container process that spawns host-namespace processes, and unexpected root processes whose parent is a container runtime.\n\n## Tags\n#cve #linux-kernel #af_unix #uaf #container-escape #ubuntu #kubernetes #public-exploit #ai-assisted-discovery",
    "sev": "High",
    "year": "2026",
    "kev": false,
@@ -5102,6 +5193,14 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-12974": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-12974.md",
+   "body": "# CVE-2026-12974\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-12974\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-12974\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-12974\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-1519": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-1519.md",
    "body": "# CVE-2026-1519\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nDifferent from CVE-2026-1519 (which is BIND 9)\n\n## Where it appears in this vault\n- `BugBounty/findings/systemd-resolved-findings.md` \u2014 Different from CVE-2026-1519 (which is BIND 9)\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-1519\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-1519\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-1519\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
@@ -5182,6 +5281,14 @@
    "kev": true,
    "apts": []
   },
+  "CVE-2026-20212": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-20212.md",
+   "body": "# CVE-2026-20212\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nCisco Nexus 9000 CVE-2026-20212:** root RCE through two debug ports reachable by default.\n\n## Where it appears in this vault\n- `Threat_Intel/InfraTrust-Pulse-Sept-2026-Management-Plane-Exploitation-Eclypsium.md` \u2014 Cisco Nexus 9000 CVE-2026-20212:** root RCE through two debug ports reachable by default.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-20212\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-20212\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-20212\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-20267": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-20267.md",
    "body": "# CVE-2026-20267\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-20267\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-20267\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-20267\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
@@ -5193,6 +5300,14 @@
   "CVE-2026-20272": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-20272.md",
    "body": "# CVE-2026-20272\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-20272\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-20272\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-20272\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-20293": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-20293.md",
+   "body": "# CVE-2026-20293\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nUEFI Shell Secure Boot bypass** (CERT/CC VU#718077): **CVE-2026-20293** (Cisco), **CVE-2026-33197** (AMI Aptio), **CVE-2026-6485** (Insyde). Fixes from AMI, Dell, Cisco, Lenovo and Supermicro.\n\n## Where it appears in this vault\n- `Threat_Intel/InfraTrust-Pulse-Sept-2026-Management-Plane-Exploitation-Eclypsium.md` \u2014 UEFI Shell Secure Boot bypass** (CERT/CC VU#718077): **CVE-2026-20293** (Cisco), **CVE-2026-33197** (AMI Aptio), **CVE-2026-6485** (Insyde). Fixes from AMI, Dell, Cisco, Lenovo and Supermicro.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-20293\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-20293\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-20293\n\n## Tags\n#cve #2026 #unrated #auto-stub",
    "sev": "",
    "year": "2026",
    "kev": false,
@@ -5262,9 +5377,33 @@
    "kev": true,
    "apts": []
   },
+  "CVE-2026-28325": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-28325.md",
+   "body": "# CVE-2026-28325\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-28325\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-28325\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-28325\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-31431": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-31431.md",
+   "body": "# CVE-2026-31431\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nCopyFail CVE-2026-31431** (Linux kernel LPE, in KEV since May) now appears in **19 advisories from 6 vendors**, 14 of them Dell. Kernel flaws keep propagating into appliance firmware for months after the upstream fix.\n\n## Where it appears in this vault\n- `Threat_Intel/InfraTrust-Pulse-Sept-2026-Management-Plane-Exploitation-Eclypsium.md` \u2014 CopyFail CVE-2026-31431** (Linux kernel LPE, in KEV since May) now appears in **19 advisories from 6 vendors**, 14 of them Dell. Kernel flaws keep propagating into appliance firmware for months after the upstream fix.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-31431\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-31431\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-31431\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": true,
+   "apts": []
+  },
   "CVE-2026-31694": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-31694.md",
    "body": "# CVE-2026-31694\n\n\u2705 **Verification:** Verified \u2014 4 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\n(X feed) | 2026-07-07 | @portbuster1337 (repost hackerhouse) | lpe-toolkit \u2014 multi-arch Linux LPE toolkit; +PEdit COW CVE-2026-46331, DirtyClone CVE-2026-43503, Bad Epoll CVE-2026-46242, FUSE OOB CVE-2026-31694 | -> Tools/lpe-toolkit.md (new)\n\n## Where it appears in this vault\n- `Tools/lpe-toolkit.md` \u2014 FUSE OOB** \u2014 CVE-2026-31694\n- `X_Intel/x-intel-tracker.md` \u2014 (X feed) | 2026-07-07 | @portbuster1337 (repost hackerhouse) | lpe-toolkit \u2014 multi-arch Linux LPE toolkit; +PEdit COW CVE-2026-46331, DirtyClone CVE-2026-43503, Bad Epoll CVE-2026-46242, FUSE OOB CVE-2026-31694 | -> Tools/lpe-toolkit.md (new)\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-31694\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-31694\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-31694\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-33197": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-33197.md",
+   "body": "# CVE-2026-33197\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nUEFI Shell Secure Boot bypass** (CERT/CC VU#718077): **CVE-2026-20293** (Cisco), **CVE-2026-33197** (AMI Aptio), **CVE-2026-6485** (Insyde). Fixes from AMI, Dell, Cisco, Lenovo and Supermicro.\n\n## Where it appears in this vault\n- `Threat_Intel/InfraTrust-Pulse-Sept-2026-Management-Plane-Exploitation-Eclypsium.md` \u2014 UEFI Shell Secure Boot bypass** (CERT/CC VU#718077): **CVE-2026-20293** (Cisco), **CVE-2026-33197** (AMI Aptio), **CVE-2026-6485** (Insyde). Fixes from AMI, Dell, Cisco, Lenovo and Supermicro.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-33197\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-33197\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-33197\n\n## Tags\n#cve #2026 #unrated #auto-stub",
    "sev": "",
    "year": "2026",
    "kev": false,
@@ -5646,6 +5785,14 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-6485": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-6485.md",
+   "body": "# CVE-2026-6485\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nUEFI Shell Secure Boot bypass** (CERT/CC VU#718077): **CVE-2026-20293** (Cisco), **CVE-2026-33197** (AMI Aptio), **CVE-2026-6485** (Insyde). Fixes from AMI, Dell, Cisco, Lenovo and Supermicro.\n\n## Where it appears in this vault\n- `Threat_Intel/InfraTrust-Pulse-Sept-2026-Management-Plane-Exploitation-Eclypsium.md` \u2014 UEFI Shell Secure Boot bypass** (CERT/CC VU#718077): **CVE-2026-20293** (Cisco), **CVE-2026-33197** (AMI Aptio), **CVE-2026-6485** (Insyde). Fixes from AMI, Dell, Cisco, Lenovo and Supermicro.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-6485\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-6485\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-6485\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-65638": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-65638.md",
    "body": "# CVE-2026-65638\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-65638\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-65638\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-65638\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
@@ -5678,9 +5825,25 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-67279": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-67279.md",
+   "body": "# CVE-2026-67279\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-67279\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-67279\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-67279\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-67631": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-67631.md",
    "body": "# CVE-2026-67631\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-67631\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-67631\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-67631\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-68490": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-68490.md",
+   "body": "# CVE-2026-68490\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-68490\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-68490\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-68490\n\n## Tags\n#cve #2026 #unrated #auto-stub",
    "sev": "",
    "year": "2026",
    "kev": false,
@@ -5713,6 +5876,14 @@
   "CVE-2026-69829": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-69829.md",
    "body": "# CVE-2026-69829\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-69829\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-69829\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-69829\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-73456": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-73456.md",
+   "body": "# CVE-2026-73456\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nArista:** 34 advisories. **CVE-2026-73453** (P4Runtime, TCP/9559) and **CVE-2026-73456** (gNPSI) are unauthenticated RCEs in features disabled by default; not exploited.\n\n## Where it appears in this vault\n- `Threat_Intel/InfraTrust-Pulse-Sept-2026-Management-Plane-Exploitation-Eclypsium.md` \u2014 Arista:** 34 advisories. **CVE-2026-73453** (P4Runtime, TCP/9559) and **CVE-2026-73456** (gNPSI) are unauthenticated RCEs in features disabled by default; not exploited.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-73456\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-73456\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-73456\n\n## Tags\n#cve #2026 #unrated #auto-stub",
    "sev": "",
    "year": "2026",
    "kev": false,
@@ -5769,94 +5940,94 @@
  },
  "recent": [
   {
-   "title": "Rogue-External-MFA-Provider-Password-Theft-At-Login-2026",
-   "file": "Guides/Rogue-External-MFA-Provider-Password-Theft-At-Login-2026.md",
-   "cat": "technique",
-   "ts": "2026-09-23"
+   "title": "technique-cache-key-injection",
+   "file": "BugBounty/references/technique-cache-key-injection.md",
+   "cat": "other",
+   "ts": "2026-09-25"
   },
   {
-   "title": "GPT-6-Astra-Autonomous-Cryptanalysis-Unbroken-Enigma-Message-2026",
-   "file": "Guides/AI-BugBounty/GPT-6-Astra-Autonomous-Cryptanalysis-Unbroken-Enigma-Message-2026.md",
+   "title": "technique-stopping-redirects",
+   "file": "BugBounty/references/technique-stopping-redirects.md",
+   "cat": "other",
+   "ts": "2026-09-25"
+  },
+  {
+   "title": "OT-ICS-NIST-SP800-82r4-CISA-FBI-Third-Party-Integrator-Risk-2026",
+   "file": "Guides/OT-ICS-NIST-SP800-82r4-CISA-FBI-Third-Party-Integrator-Risk-2026.md",
+   "cat": "technique",
+   "ts": "2026-09-25"
+  },
+  {
+   "title": "URL-Parser-Confusion-Three-Tricks-SANS-ISC-2026",
+   "file": "Guides/URL-Parser-Confusion-Three-Tricks-SANS-ISC-2026.md",
+   "cat": "technique",
+   "ts": "2026-09-25"
+  },
+  {
+   "title": "HEIF-Heist-Facebook-Instagram-RCE-HEIC-AVIF-Image-Bounty-2026",
+   "file": "Guides/AI-BugBounty/HEIF-Heist-Facebook-Instagram-RCE-HEIC-AVIF-Image-Bounty-2026.md",
    "cat": "ai-bugbounty",
-   "ts": "2026-09-23"
+   "ts": "2026-09-25"
   },
   {
-   "title": "artoken-eviltokens-m365-phaas-2026",
-   "file": "Guides/phishing/artoken-eviltokens-m365-phaas-2026.md",
-   "cat": "technique",
-   "ts": "2026-09-23"
+   "title": "SalesBleed-Salesforce-Agentforce-Trusted-URL-Bypass-Zenity-Labs-2026",
+   "file": "Guides/AI-BugBounty/SalesBleed-Salesforce-Agentforce-Trusted-URL-Bypass-Zenity-Labs-2026.md",
+   "cat": "ai-bugbounty",
+   "ts": "2026-09-25"
   },
   {
-   "title": "Colorado-Water-Utilities-Foreign-Manipulation-Pumps-Alarms-Remote-Access-2026",
-   "file": "Threat_Intel/Colorado-Water-Utilities-Foreign-Manipulation-Pumps-Alarms-Remote-Access-2026.md",
-   "cat": "other",
-   "ts": "2026-09-23"
-  },
-  {
-   "title": "Forescout-Only-13-Percent-OT-Network-Segments-Fully-Isolated-2026",
-   "file": "Threat_Intel/Forescout-Only-13-Percent-OT-Network-Segments-Fully-Isolated-2026.md",
-   "cat": "other",
-   "ts": "2026-09-23"
-  },
-  {
-   "title": "SideCopy-India-Academia-ReverseRAT-Spearphishing-2026",
-   "file": "Threat_Intel/APT_Groups/SideCopy-India-Academia-ReverseRAT-Spearphishing-2026.md",
+   "title": "Storm-2570-Ransomware-Affiliate-Qilin-DragonForce-Anubis-BERT-2026",
+   "file": "Threat_Intel/APT_Groups/Storm-2570-Ransomware-Affiliate-Qilin-DragonForce-Anubis-BERT-2026.md",
    "cat": "malware",
-   "ts": "2026-09-23"
+   "ts": "2026-09-25"
   },
   {
-   "title": "ShinyHunters-FBI-Claim-PeopleSoft-ZeroDay-Retraction-Demand-2026",
-   "file": "Threat_Intel/Breaches/ShinyHunters-FBI-Claim-PeopleSoft-ZeroDay-Retraction-Demand-2026.md",
+   "title": "bitget-crypto-exchange-hack-2026",
+   "file": "Threat_Intel/Breaches/bitget-crypto-exchange-hack-2026.md",
    "cat": "breach",
-   "ts": "2026-09-23"
+   "ts": "2026-09-25"
   },
   {
-   "title": "Arista-VeloCloud-Orchestrator-CVSS10-ZeroDay-Exploited-2026",
-   "file": "Threat_Intel/CVEs/2026/Critical/Arista-VeloCloud-Orchestrator-CVSS10-ZeroDay-Exploited-2026.md",
+   "title": "CVE-2026-48842-Roundcube-VirtuserQuery-PreAuth-SQLi-Actively-Exploited-2026",
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-48842-Roundcube-VirtuserQuery-PreAuth-SQLi-Actively-Exploited-2026.md",
    "cat": "cve",
-   "ts": "2026-09-23"
+   "ts": "2026-09-25"
   },
   {
-   "title": "CVE-2026-86296-D-Link-DIR-822A-MaxSeverity-Public-PoC-No-Patch-2026",
-   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-86296-D-Link-DIR-822A-MaxSeverity-Public-PoC-No-Patch-2026.md",
+   "title": "CVE-2026-65660-SharePoint-Code-Injection-Actively-Exploited-2026",
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-65660-SharePoint-Code-Injection-Actively-Exploited-2026.md",
    "cat": "cve",
-   "ts": "2026-09-23"
+   "ts": "2026-09-25"
   },
   {
-   "title": "CVE-2026-87902-WordPress-Core-Template-Resolution-Unauth-RCE-7.1.2-2026",
-   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-87902-WordPress-Core-Template-Resolution-Unauth-RCE-7.1.2-2026.md",
+   "title": "CVE-2026-68492",
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-68492.md",
    "cat": "cve",
-   "ts": "2026-09-23"
+   "ts": "2026-09-25"
   },
   {
-   "title": "CVE-2026-91843-Check-Point-Security-Management-Log-Server-Unauth-Root-RCE-2026",
-   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-91843-Check-Point-Security-Management-Log-Server-Unauth-Root-RCE-2026.md",
+   "title": "CVE-2026-87898",
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-87898.md",
    "cat": "cve",
-   "ts": "2026-09-23"
+   "ts": "2026-09-25"
   },
   {
-   "title": "CVE-2026-94127-F5-BIG-IP-APM-Unauthenticated-RCE-ZeroDay-Exploited-2026",
-   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-94127-F5-BIG-IP-APM-Unauthenticated-RCE-ZeroDay-Exploited-2026.md",
+   "title": "CVE-2026-87899-cPanel-CalDAV-CardDAV-Account-To-Root-WP-Toolkit-CVE-2026-87900-2026",
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-87899-cPanel-CalDAV-CardDAV-Account-To-Root-WP-Toolkit-CVE-2026-87900-2026.md",
    "cat": "cve",
-   "ts": "2026-09-23"
+   "ts": "2026-09-25"
   },
   {
-   "title": "Linux-Kernel-ARM64-KVM-Guest-Host-Memory-ReadWrite-2026",
-   "file": "Threat_Intel/CVEs/2026/Critical/Linux-Kernel-ARM64-KVM-Guest-Host-Memory-ReadWrite-2026.md",
-   "cat": "cve",
-   "ts": "2026-09-23"
+   "title": "Carbonato-Docker-Botnet-Hermes-AI-Agent-2026",
+   "file": "Threat_Intel/Malware/Carbonato-Docker-Botnet-Hermes-AI-Agent-2026.md",
+   "cat": "malware",
+   "ts": "2026-09-25"
   },
   {
-   "title": "NextJS-ImageResponse-Crafted-SVG-Server-Code-Execution-2026",
-   "file": "Threat_Intel/CVEs/2026/Critical/NextJS-ImageResponse-Crafted-SVG-Server-Code-Execution-2026.md",
-   "cat": "cve",
-   "ts": "2026-09-23"
-  },
-  {
-   "title": "SharePoint-Server-RCE-2026",
-   "file": "Threat_Intel/CVEs/2026/Critical/SharePoint-Server-RCE-2026.md",
-   "cat": "cve",
-   "ts": "2026-09-23"
+   "title": "Macfinger-ClickFix-AMOS-Stealer-macOS-2026",
+   "file": "Threat_Intel/Malware/Macfinger-ClickFix-AMOS-Stealer-macOS-2026.md",
+   "cat": "malware",
+   "ts": "2026-09-25"
   }
  ],
  "kev_referenced": [
@@ -5935,6 +6106,7 @@
   "CVE-2026-20349",
   "CVE-2026-20700",
   "CVE-2026-21962",
+  "CVE-2026-31431",
   "CVE-2026-33017",
   "CVE-2026-33825",
   "CVE-2026-34197",
@@ -5956,6 +6128,7 @@
   "CVE-2026-50522",
   "CVE-2026-50751",
   "CVE-2026-53266",
+  "CVE-2026-5430",
   "CVE-2026-55040",
   "CVE-2026-55255",
   "CVE-2026-58644",
@@ -5965,6 +6138,7 @@
   "CVE-2026-60004",
   "CVE-2026-60137",
   "CVE-2026-63030",
+  "CVE-2026-63077",
   "CVE-2026-64849",
   "CVE-2026-65400",
   "CVE-2026-67277",
@@ -5994,6 +6168,7 @@
   "CVE-2026-87491",
   "CVE-2026-87886",
   "CVE-2026-9082",
+  "CVE-2026-93616",
   "CVE-2026-94127",
   "CVE-2026-9586"
  ],
@@ -6036,6 +6211,10 @@
    "n": 1
   },
   {
+   "t": "Browser Xs Leak Visited Status Code And Lna Navigation Bypass Ctbb 193 2026",
+   "n": 1
+  },
+  {
    "t": "C2 Hunting Shodan Censys Cobaltstrike Server Fingerprinting 2026",
    "n": 1
   },
@@ -6053,10 +6232,6 @@
   },
   {
    "t": "Csrf Token Not Bound To Session",
-   "n": 1
-  },
-  {
-   "t": "Css Injection Webmail Password Token Theft 2026",
    "n": 1
   }
  ],
@@ -6659,10 +6834,17 @@
   },
   {
    "date": "2026-09-24",
-   "intel_items": 1530,
-   "cves": 602,
+   "intel_items": 1578,
+   "cves": 621,
    "breaches": 136,
-   "malware": 163
+   "malware": 166
+  },
+  {
+   "date": "2026-09-25",
+   "intel_items": 1602,
+   "cves": 625,
+   "breaches": 137,
+   "malware": 168
   }
  ]
 }
