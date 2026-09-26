@@ -1,79 +1,79 @@
 {
- "generated": "2026-09-25 20:45",
- "today": "2026-09-25",
+ "generated": "2026-09-26 20:45",
+ "today": "2026-09-26",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
-  "cves": 625,
-  "breaches": 137,
+  "cves": 630,
+  "breaches": 143,
   "malware": 168,
   "supplychain": 73,
   "tools": 94,
   "commands": 13,
-  "guides": 297,
-  "intel_items": 1602,
-  "kev": 140
+  "guides": 299,
+  "intel_items": 1631,
+  "kev": 144
  },
  "windows": {
   "week": {
-   "total": 100,
+   "total": 129,
    "by_cat": {
     "technique": 10,
-    "breach": 5,
-    "cve": 31,
-    "misc": 30,
-    "malware": 11,
-    "supplychain": 3,
+    "breach": 15,
+    "cve": 39,
+    "misc": 34,
+    "malware": 12,
+    "supplychain": 4,
     "other": 3,
-    "ai-bugbounty": 7
+    "ai-bugbounty": 12
    },
    "by_src": {}
   },
   "month": {
-   "total": 590,
+   "total": 615,
    "by_cat": {
-    "cve": 153,
-    "malware": 78,
-    "technique": 51,
-    "ai-bugbounty": 53,
-    "supplychain": 25,
+    "cve": 160,
+    "malware": 77,
+    "ai-bugbounty": 58,
+    "supplychain": 26,
     "other": 51,
-    "breach": 65,
+    "breach": 75,
     "tool": 14,
-    "misc": 98,
+    "misc": 102,
+    "technique": 50,
     "command": 2
    },
    "by_src": {}
   },
   "year": {
-   "total": 1602,
+   "total": 1631,
    "by_cat": {
-    "ai-bugbounty": 116,
-    "malware": 196,
+    "ai-bugbounty": 121,
+    "malware": 197,
     "other": 111,
     "tool": 58,
-    "misc": 326,
+    "misc": 330,
     "command": 6,
     "technique": 142,
-    "cve": 394,
-    "breach": 164,
-    "supplychain": 89
+    "cve": 402,
+    "breach": 174,
+    "supplychain": 90
    },
    "by_src": {}
   },
   "all": {
-   "total": 1602,
+   "total": 1631,
    "by_cat": {
-    "ai-bugbounty": 116,
-    "malware": 196,
+    "ai-bugbounty": 121,
+    "malware": 197,
     "other": 111,
     "tool": 58,
-    "misc": 326,
+    "misc": 330,
     "command": 6,
     "technique": 142,
-    "cve": 394,
-    "breach": 164,
-    "supplychain": 89
+    "cve": 402,
+    "breach": 174,
+    "supplychain": 90
    },
    "by_src": {}
   }
@@ -1859,8 +1859,8 @@
   ]
  },
  "cve_sev": {
-  "Critical": 256,
-  "High": 179,
+  "Critical": 258,
+  "High": 182,
   "Low": 31,
   "Medium": 24
  },
@@ -1876,7 +1876,7 @@
   "2023": 14,
   "2024": 14,
   "2025": 27,
-  "2026": 528
+  "2026": 533
  },
  "cve_month": {
   "2025-10": 1,
@@ -1885,7 +1885,7 @@
   "2026-06": 108,
   "2026-07": 16,
   "2026-08": 84,
-  "2026-09": 138
+  "2026-09": 146
  },
  "top_cve": [
   {
@@ -1913,6 +1913,12 @@
    "kev": false
   },
   {
+   "id": "CVE-2026-5430",
+   "n": 60,
+   "sev": "Critical",
+   "kev": true
+  },
+  {
    "id": "CVE-2026-87886",
    "n": 60,
    "sev": "High",
@@ -1923,12 +1929,6 @@
    "n": 59,
    "sev": "High",
    "kev": false
-  },
-  {
-   "id": "CVE-2026-5430",
-   "n": 57,
-   "sev": "Critical",
-   "kev": true
   },
   {
    "id": "CVE-2026-91752",
@@ -3504,7 +3504,7 @@
   },
   "CVE-2026-5430": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-5430-WSO2-API-Manager-JWT-Signature-Verification-Bypass-Forged-Admin-Tokens-2026.md",
-   "body": "# CVE-2026-5430 \u2014 WSO2 API Manager JWT Signature Verification Bypass \u2192 Forged Admin Tokens, Exploited In The Wild\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 2 independent sources\n\n> Source: [The Hacker News](https://thehackernews.com/2026/09/active-exploitation-attempts-target.html) \u2014 2026-09-16\n> Source: [SecurityWeek](https://www.securityweek.com/enterprises-warned-of-attacks-exploiting-wso2-vulnerability/) \u2014 2026-09-16\n\n**Type:** CVE / improper cryptographic signature verification \u2192 authentication bypass | **Severity:** Critical (CVSS 9.8) | **Date:** 2026-09-16\n\n## Summary\n**CVE-2026-5430** is an **improper cryptographic signature verification** flaw in **WSO2 API Manager**. The JWT validation path does not correctly verify the token signature, so an unauthenticated attacker can **forge a JWT asserting administrative identity** and have the gateway accept it. Result is authentication bypass and full account/tenant takeover on the API management plane.\n\n**Exploitation status:** **Active exploitation in the wild confirmed by watchTowr.** SecurityWeek reports attackers are using it to reach valuable enterprise data behind the gateway. Discovery credited to the **Hacktron Team**.\n\n## Why this matters\n1. **An API gateway is a credential concentrator.** WSO2 APIM sits in front of backend services and holds the client secrets, backend credentials and token-issuance keys for everything it fronts. Forging an admin token there is not one application compromised \u2014 it is authority over every API the gateway publishes.\n2. **Signature-verification bugs defeat every downstream control at once.** MFA, session expiry, IP allow-listing and rate limits all sit *after* identity is established. If identity can be minted, none of them apply. There is no compensating control short of blocking the path.\n3. **It repeats the CVE-2026-82329 (JFrog Artifactory) pattern exactly** \u2014 auth bypass via token minting on an infrastructure control plane, exploited within days. Two independent products, same failure class, same window. Token-issuance code is the recurring weak point and deserves standing review, not incident-driven review.\n4. **Forged tokens leave thin logs.** A validly-structured admin JWT produces authentication *successes*, not failures. Detection has to key on anomalous admin activity and token characteristics, not on failed-login telemetry.\n\n## Action\n1. **Patch to the fixed WSO2 API Manager release immediately.** Treat as emergency change \u2014 pre-auth, CVSS 9.8, confirmed in-the-wild.\n2. **Assume compromise** on any internet-reachable APIM instance unpatched since disclosure. Forged-token access may predate the public advisory.\n3. **Rotate the token-signing keypair** and every backend credential, client secret and API key stored in or issued by the gateway. Patching alone does not invalidate tokens already forged.\n4. **Hunt** for admin-scope API calls from unusual source IPs or user-agents; JWTs with anomalous `iss`/`kid`/`alg` values (check specifically for `alg` confusion and unexpected `kid` references); new API subscriptions, applications or throttling-policy changes; and bulk data reads through published APIs.\n5. **Audit every JWT validation path you own** for the same class of defect \u2014 algorithm confusion, unverified `kid` lookup, signature check skipped on a code branch.\n\n## Cross-reference\n- `CVE-2026-82329-JFrog-Artifactory-Auth-Bypass-Admin-Token-Minting.md` \u2014 same failure class (control-plane token minting), same exploitation tempo.\n- `CVE-2026-76461-Cisco-Secure-Email-Gateway-SQLi-Root-RCE-KEV-Exploited-2026.md` \u2014 same window, internet-facing appliance, exploited pre-auth.\n- `Edge-Device-Exposure-Convergence-NCSC-Tenable-Microsoft-2026-08-27.md` \u2014 the structural argument this instantiates.\n\n#cve #wso2 #api-manager #jwt #authentication-bypass #signature-verification #unauthenticated #exploited #critical #api-security #corroborated\n\n## Tags\n #corroborated #unverified",
+   "body": "# CVE-2026-5430 \u2014 WSO2 API Manager JWT Signature Verification Bypass \u2192 Forged Admin Tokens, Exploited In The Wild\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 2 independent sources\n\n> Source: [The Hacker News](https://thehackernews.com/2026/09/active-exploitation-attempts-target.html) \u2014 2026-09-16\n> Source: [SecurityWeek](https://www.securityweek.com/enterprises-warned-of-attacks-exploiting-wso2-vulnerability/) \u2014 2026-09-16\n\n**Type:** CVE / improper cryptographic signature verification \u2192 authentication bypass | **Severity:** Critical (CVSS 9.8) | **Date:** 2026-09-16\n\n## Summary\n**CVE-2026-5430** is an **improper cryptographic signature verification** flaw in **WSO2 API Manager**. The JWT validation path does not correctly verify the token signature, so an unauthenticated attacker can **forge a JWT asserting administrative identity** and have the gateway accept it. Result is authentication bypass and full account/tenant takeover on the API management plane.\n\n**Exploitation status:** **Active exploitation in the wild confirmed by watchTowr.** SecurityWeek reports attackers are using it to reach valuable enterprise data behind the gateway. Discovery credited to the **Hacktron Team**.\n\n## Why this matters\n1. **An API gateway is a credential concentrator.** WSO2 APIM sits in front of backend services and holds the client secrets, backend credentials and token-issuance keys for everything it fronts. Forging an admin token there is not one application compromised \u2014 it is authority over every API the gateway publishes.\n2. **Signature-verification bugs defeat every downstream control at once.** MFA, session expiry, IP allow-listing and rate limits all sit *after* identity is established. If identity can be minted, none of them apply. There is no compensating control short of blocking the path.\n3. **It repeats the CVE-2026-82329 (JFrog Artifactory) pattern exactly** \u2014 auth bypass via token minting on an infrastructure control plane, exploited within days. Two independent products, same failure class, same window. Token-issuance code is the recurring weak point and deserves standing review, not incident-driven review.\n4. **Forged tokens leave thin logs.** A validly-structured admin JWT produces authentication *successes*, not failures. Detection has to key on anomalous admin activity and token characteristics, not on failed-login telemetry.\n\n## Action\n1. **Patch to the fixed WSO2 API Manager release immediately.** Treat as emergency change \u2014 pre-auth, CVSS 9.8, confirmed in-the-wild.\n2. **Assume compromise** on any internet-reachable APIM instance unpatched since disclosure. Forged-token access may predate the public advisory.\n3. **Rotate the token-signing keypair** and every backend credential, client secret and API key stored in or issued by the gateway. Patching alone does not invalidate tokens already forged.\n4. **Hunt** for admin-scope API calls from unusual source IPs or user-agents; JWTs with anomalous `iss`/`kid`/`alg` values (check specifically for `alg` confusion and unexpected `kid` references); new API subscriptions, applications or throttling-policy changes; and bulk data reads through published APIs.\n5. **Audit every JWT validation path you own** for the same class of defect \u2014 algorithm confusion, unverified `kid` lookup, signature check skipped on a code branch.\n\n## Cross-reference\n- `CVE-2026-82329-JFrog-Artifactory-Auth-Bypass-Admin-Token-Minting.md` \u2014 same failure class (control-plane token minting), same exploitation tempo.\n- `CVE-2026-76461-Cisco-Secure-Email-Gateway-SQLi-Root-RCE-KEV-Exploited-2026.md` \u2014 same window, internet-facing appliance, exploited pre-auth.\n- `Edge-Device-Exposure-Convergence-NCSC-Tenable-Microsoft-2026-08-27.md` \u2014 the structural argument this instantiates.\n\n#cve #wso2 #api-manager #jwt #authentication-bypass #signature-verification #unauthenticated #exploited #critical #api-security #corroborated\n\n## Tags\n #corroborated #unverified\n\n## Update \u2014 2026-09-26: exploitation start date pinned, CISA federal deadline, paired Adobe Commerce advisory\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/cisa-warns-of-sharepoint-wso2-adobe-commerce-flaws-exploited-in-attacks/) \u2014 2026-09-25\n\n- **watchTowr observed limited exploitation attempts beginning 2026-09-13** using forged JWT tokens \u2014 pins the actual start of in-the-wild activity roughly three days before the advisory's disclosure date noted above.\n- **CISA deadline for Federal agencies: 2026-09-27** to apply patches or mitigations.\n- Same CISA advisory also warns of **CVE-2026-65660** (SharePoint, see separate note) and **CVE-2026-71362** (Adobe Commerce/Magento authorization bypass, no auth or user interaction required, exploited per Sansec \u2014 see new note `CVE-2026-71362-Adobe-Commerce-Magento-Authorization-Bypass-Exploited-2026.md`) \u2014 three unrelated products, one coordinated CISA warning, same week.",
    "sev": "Critical",
    "year": "2026",
    "kev": true,
@@ -3712,10 +3712,10 @@
   },
   "CVE-2026-65660": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-65660-SharePoint-Code-Injection-Actively-Exploited-2026.md",
-   "body": "# CVE-2026-65660: Microsoft SharePoint Server Code Injection \u2014 Actively Exploited, Chains Toward Pre-Auth RCE\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 source (national CERT advisory)\n\n> Source: [Canadian Centre for Cyber Security \u2014 AL26-023](https://cyber.gc.ca/en/alerts-advisories/al26-023-vulnerability-impacting-microsoft-sharepoint-server-cve-2026-65660) \u2014 2026-09-24\n\n**Type:** CVE / code injection (CWE-94) | **Severity:** Critical | **Date:** 2026-09-24\n\n## Summary\n- **CWE-94** \u2014 Improper Control of Generation of Code (\"Code Injection\") in Microsoft SharePoint Server.\n- **Affected:**\n  - SharePoint Enterprise Server 2016 \u2014 versions prior to **16.0.5565.1001**\n  - SharePoint Server 2019 \u2014 versions prior to **16.0.10417.20198**\n  - SharePoint Server Subscription Edition \u2014 versions prior to **16.0.19725.20522**\n- **Exploitation:** actively exploited. CCCS notes it is **particularly dangerous when chained with other SharePoint flaws**, potentially enabling **pre-authentication remote code execution** on SharePoint servers configured to permit anonymous access.\n- **End-of-life note:** SharePoint Server **2016 and 2019 reached end-of-life on 2026-07-15** \u2014 those versions no longer receive security updates regardless of this advisory, making migration off them the only real fix for that population.\n\n## Why this matters\n- This is at least the **fourth** SharePoint on-prem RCE-class flaw tracked in this vault in 2026 (see cross-references) \u2014 SharePoint Server continues to be a recurring, high-value target for chained exploitation, and threat actors have repeatedly demonstrated the ability to combine \"smaller\" SharePoint bugs into full pre-auth RCE.\n- Anonymous-access-enabled SharePoint deployments (common in extranet/public-facing setups) are the highest-risk population here.\n- Organizations still running SharePoint 2016/2019 past EOL have no vendor patch path and should prioritize migration, not just this specific update.\n\n## Action\n1. Patch to the fixed builds listed above immediately.\n2. **Restrict internet exposure** of SharePoint servers, particularly anonymous-access configurations.\n3. Enable **AMSI integration** for SharePoint.\n4. Enforce **MFA for SharePoint administrators**.\n5. Monitor for IOCs: suspicious administrative activity and **web shell deployment** \u2014 CCCS specifically calls out web shells as the expected post-exploitation artifact.\n6. If still on SharePoint 2016/2019 (EOL 2026-07-15), treat migration to a supported version as the priority remediation, not just this patch.\n\n## Cross-reference\n- `Threat_Intel/CVEs/2026/Critical/CVE-2026-45454-SharePoint-Webshell-RCE.md`\n- `Threat_Intel/CVEs/2026/Critical/CVE-2026-50522-Microsoft-SharePoint-OnPrem-RCE-ActiveExploitation.md`\n- `Threat_Intel/CVEs/2026/Critical/CVE-2026-55040-SharePoint-Auth-Bypass-Exploited.md`\n- `Threat_Intel/CVEs/2026/Critical/SharePoint-Server-RCE-2026.md`\n- `Threat_Intel/CVEs/2026/High/Microsoft-SharePoint-RCE-Active-Exploitation-2026.md`\n\n## Tags\n#cve #sharepoint #code-injection #rce #actively-exploited #on-prem",
+   "body": "# CVE-2026-65660: Microsoft SharePoint Server Code Injection \u2014 Actively Exploited, Chains Toward Pre-Auth RCE\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 source (national CERT advisory)\n\n> Source: [Canadian Centre for Cyber Security \u2014 AL26-023](https://cyber.gc.ca/en/alerts-advisories/al26-023-vulnerability-impacting-microsoft-sharepoint-server-cve-2026-65660) \u2014 2026-09-24\n\n**Type:** CVE / code injection (CWE-94) | **Severity:** Critical | **Date:** 2026-09-24\n\n## Summary\n- **CWE-94** \u2014 Improper Control of Generation of Code (\"Code Injection\") in Microsoft SharePoint Server.\n- **Affected:**\n  - SharePoint Enterprise Server 2016 \u2014 versions prior to **16.0.5565.1001**\n  - SharePoint Server 2019 \u2014 versions prior to **16.0.10417.20198**\n  - SharePoint Server Subscription Edition \u2014 versions prior to **16.0.19725.20522**\n- **Exploitation:** actively exploited. CCCS notes it is **particularly dangerous when chained with other SharePoint flaws**, potentially enabling **pre-authentication remote code execution** on SharePoint servers configured to permit anonymous access.\n- **End-of-life note:** SharePoint Server **2016 and 2019 reached end-of-life on 2026-07-15** \u2014 those versions no longer receive security updates regardless of this advisory, making migration off them the only real fix for that population.\n\n## Why this matters\n- This is at least the **fourth** SharePoint on-prem RCE-class flaw tracked in this vault in 2026 (see cross-references) \u2014 SharePoint Server continues to be a recurring, high-value target for chained exploitation, and threat actors have repeatedly demonstrated the ability to combine \"smaller\" SharePoint bugs into full pre-auth RCE.\n- Anonymous-access-enabled SharePoint deployments (common in extranet/public-facing setups) are the highest-risk population here.\n- Organizations still running SharePoint 2016/2019 past EOL have no vendor patch path and should prioritize migration, not just this specific update.\n\n## Action\n1. Patch to the fixed builds listed above immediately.\n2. **Restrict internet exposure** of SharePoint servers, particularly anonymous-access configurations.\n3. Enable **AMSI integration** for SharePoint.\n4. Enforce **MFA for SharePoint administrators**.\n5. Monitor for IOCs: suspicious administrative activity and **web shell deployment** \u2014 CCCS specifically calls out web shells as the expected post-exploitation artifact.\n6. If still on SharePoint 2016/2019 (EOL 2026-07-15), treat migration to a supported version as the priority remediation, not just this patch.\n\n## Cross-reference\n- `Threat_Intel/CVEs/2026/Critical/CVE-2026-45454-SharePoint-Webshell-RCE.md`\n- `Threat_Intel/CVEs/2026/Critical/CVE-2026-50522-Microsoft-SharePoint-OnPrem-RCE-ActiveExploitation.md`\n- `Threat_Intel/CVEs/2026/Critical/CVE-2026-55040-SharePoint-Auth-Bypass-Exploited.md`\n- `Threat_Intel/CVEs/2026/Critical/SharePoint-Server-RCE-2026.md`\n- `Threat_Intel/CVEs/2026/High/Microsoft-SharePoint-RCE-Active-Exploitation-2026.md`\n\n## Tags\n#cve #sharepoint #code-injection #rce #actively-exploited #on-prem\n\n## Update \u2014 2026-09-26: second independent source, CVSS confirmed, X corroboration\n\n> Source: [The Hacker News](https://thehackernews.com/2026/09/sharepoint-rce-and-mikrotik-routeros.html) \u2014 2026-09-26 | [@TheCyberSecHub (X)](https://x.com/TheCyberSecHub/status/2103788329561153793) \u2014 2026-09-26\n\n- **CVSS confirmed at 8.8** (code injection allowing an authorized attacker to execute code over a network).\n- The Hacker News independently states: **\"As of 9/25/2026, Microsoft had reliable evidence of observed attacks against exploitation\"** \u2014 this is a second, independent confirmation of active exploitation beyond the original CCCS advisory.\n- Reported in the same article alongside the MikroTik \"MikroTrick\" chain (see `MikroTrick-MikroTik-RouterOS-Unauthenticated-SSH-Takeover-2026.md`), both actively exploited and both surfaced together in this sweep.\n\n**Verification upgraded to Verified \u2014 2 independent sources (CCCS, The Hacker News).**",
    "sev": "Critical",
    "year": "2026",
-   "kev": false,
+   "kev": true,
    "apts": []
   },
   "CVE-2026-66066": {
@@ -3804,6 +3804,14 @@
    "sev": "Critical",
    "year": "2026",
    "kev": false,
+   "apts": []
+  },
+  "CVE-2026-71362": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-71362-Adobe-Commerce-Magento-Authorization-Bypass-Exploited-2026.md",
+   "body": "# CVE-2026-71362: Adobe Commerce / Magento Authorization Bypass \u2014 Actively Exploited, No Account or User Interaction Required\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 source (BleepingComputer, citing Sansec + CISA)\n\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/cisa-warns-of-sharepoint-wso2-adobe-commerce-flaws-exploited-in-attacks/) \u2014 2026-09-25\n\n**Type:** CVE / authorization bypass | **Severity:** Critical | **Date:** 2026-09-25\n\n## Summary\n- **CVE-2026-71362** \u2014 an authorization bypass in **Adobe Commerce and Magento**.\n- Requires **no existing account, no administrator privileges, and no user interaction** to exploit.\n- **Actively exploited in the wild**, documented by ecommerce security firm **Sansec**.\n- **CISA deadline for Federal agencies: 2026-09-27** to patch/mitigate.\n- Warned about in the same CISA advisory as CVE-2026-65660 (SharePoint) and CVE-2026-5430 (WSO2 API Manager) \u2014 see cross-references.\n\n## Why this matters\n- Magento/Adobe Commerce is a recurring high-value e-commerce target; unauthenticated authorization bypass on a payment-adjacent platform is a direct path to card-skimmer (Magecart-style) injection or order/customer data theft.\n- Grouped with two other unrelated-product critical flaws in the same week's CISA warning \u2014 indicates a broad coordinated push of exploitation activity across multiple platforms right now, not an isolated incident.\n\n## Action\n1. Apply Adobe's patch/mitigation for CVE-2026-71362 immediately \u2014 treat as emergency given zero preconditions for exploitation.\n2. Check for indicators of e-commerce skimmer injection (Magecart patterns) if the instance was unpatched and internet-facing.\n3. Coordinate patching alongside the SharePoint and WSO2 items from the same advisory if your org runs any of the three.\n\n## Cross-reference\n- `Threat_Intel/CVEs/2026/Critical/CVE-2026-65660-SharePoint-Code-Injection-Actively-Exploited-2026.md`\n- `Threat_Intel/CVEs/2026/Critical/CVE-2026-5430-WSO2-API-Manager-JWT-Signature-Verification-Bypass-Forged-Admin-Tokens-2026.md`\n\n## Tags\n#cve #adobe-commerce #magento #authorization-bypass #ecommerce #actively-exploited #critical #cisa-kev",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": true,
    "apts": []
   },
   "CVE-2026-72529": {
@@ -3913,6 +3921,14 @@
   "CVE-2026-78006": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-78159-CVE-2026-78006-Events-Calendar-WordPress-Unauth-RCE-240k-Sites-2026.md",
    "body": "# CVE-2026-78159 & CVE-2026-78006 \u2014 The Events Calendar (WordPress): Two Independent Unauthenticated RCE Chains, ~240,000 Sites Affected\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n> Source: [SecurityWeek](https://www.securityweek.com/unauthenticated-rce-flaws-could-expose-200000-wordpress-sites-to-takeover/) \u2014 2026-09-16\n> Source: Defiant / Wordfence (Wordfence Argus) \u2014 vendor disclosure\n\n**Type:** CVE / unauthenticated code injection + PHP object injection \u2192 RCE | **Severity:** Critical (CVSS 9.8 \u00d72) | **Date:** 2026-09-16\n\n## Summary\nTwo **CVSS 9.8 unauthenticated remote code execution** flaws in **The Events Calendar** by **StellarWP** \u2014 **600,000+ active installations**. Both were found by **Defiant** via **Wordfence Argus**. Roughly **240,000 sites run versions prior to 6.17 and are affected by both**.\n\n| CVE | Class | Mechanism | Fixed in |\n|---|---|---|---|\n| **CVE-2026-78159** | Unauthenticated **code injection** | Insufficient validation lets an attacker inject a **plain-array payload** that bypasses checks and **executes during processing of single-event HTML, including the comment area** | **6.17.3.1**, released 2026-08-25 |\n| **CVE-2026-78006** | Unauthenticated **PHP object injection** | Exploitable when **comments on events are enabled and visible**. Insufficient protections in a plugin function are bypassed by a commenter **without authentication or approval**, because the injected payload reaches the vulnerable function **before moderation occurs** | **6.17.4.1**, released 2026-09-10 |\n\nBoth are **independent exploitation chains** and both lead to **full compromise of the WordPress installation**.\n\n**Exploitation status: no in-the-wild exploitation reported.** Between 2026-09-10 and 2026-09-14 the plugin was downloaded just over **300,000** times, which suggests roughly **half of installations may still be vulnerable to CVE-2026-78006**. The exact vulnerable-site count is unknown because both flaws require comments to be enabled. **No IOCs published.**\n\n## Why this matters\n1. **\"Payload reaches the vulnerable function before moderation\" is the whole finding, and it generalises.** Comment moderation is widely treated as a security control. It is not \u2014 it is a *publication* control. Anything that parses, deserialises, or renders the comment on the way into the queue runs before a human ever sees it. Any plugin that touches unapproved comment content should be reviewed on this basis.\n2. **Two independent unauth-RCE chains in one plugin, three weeks apart.** That is a code-quality signal about the plugin, not two unlucky bugs. Sites that patched on 2026-08-25 and considered the matter closed were still fully exploitable until 2026-09-10.\n3. **The download-count arithmetic is the actionable number.** 300,000 downloads against 600,000 installs in the four days after the second fix means roughly half the install base is still exposed to a CVSS 9.8 unauthenticated RCE with a published mechanism and no exploitation yet. That gap closes as soon as someone weaponises it.\n4. **No exploitation yet is a scheduling window, not an all-clear.** The mechanism for both is now public and specific enough to reproduce.\n5. **This lands in a week already carrying two other WordPress compromises** \u2014 the Admin Menu Editor Pro maintainer breach and the mass-exploited WooCommerce Wholesale Lead Capture upload flaw. Any one of the three reaches every tenant on a shared host, which is the same population the Acronis cPanel and LiteSpeed root escalations apply to. Triage them as one chain.\n\n## Action\n1. **Update The Events Calendar to 6.17.4.1 or later.** 6.17.3.1 only closes CVE-2026-78159.\n2. **If you cannot patch immediately, disable comments on events** \u2014 it breaks the exploitation path for CVE-2026-78006 and removes the comment-area vector for CVE-2026-78159.\n3. **Enumerate plugin versions across every site you host**, not just your own. ~240,000 sites on pre-6.17 is a shared-hosting problem.\n4. **Review the wider plugin estate for the moderation assumption** \u2014 anything that deserialises, renders or parses comment content before approval.\n5. **Check for post-exploitation artefacts anyway**: unexpected admin users, modified `wp-config.php`, new PHP files in `wp-content/uploads`, scheduled-task additions.\n6. **Shared hosts: treat this together with the Acronis cPanel and LiteSpeed root escalations.** A web shell on one tenant plus a local root bug is a whole-server compromise.\n\n## Cross-reference\n- `WordPress-Admin-Menu-Editor-Pro-Maintainer-Compromise-Trojanized-Update-Backdoor-2026.md` \u2014 same window, supply-chain route to the same foothold.\n- `WooCommerce-Wholesale-Lead-Capture-Unauth-File-Upload-PHP-Webshell-2026.md` \u2014 same window, mass-exploited.\n- `CVE-2026-87886-Acronis-cPanel-Backup-Plugin-Insecure-Permissions-Local-PrivEsc-Exploited-2026.md` \u2014 the escalation that turns any of these into full host compromise.\n- `LiteSpeed-Enterprise-Shared-Hosting-Low-Privilege-User-To-Root-2026.md` \u2014 same shared-hosting privilege-boundary class.\n- `WordPress-Five-Critical-Plugin-Theme-Flaws-2026-08-29.md` \u2014 prior multi-plugin roundup.\n\n#cve #wordpress #events-calendar #stellarwp #plugin #unauthenticated #rce #code-injection #php-object-injection #deserialization #comments #wordfence #defiant #cvss98 #critical #corroborated\n\n## Tags\n #corroborated #unverified",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-80155": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-80155-Lantronix-SLC-EMG-OOB-Mgmt-Auth-Bypass-2026.md",
+   "body": "# CVE-2026-80155: Lantronix SLC/EMG Out-of-Band Management \u2014 CVSS 10 Unauthenticated Path Traversal to RCE\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 source (SecAlerts)\n\n> Source: [SecAlerts vulnerability page](https://secalerts.co/vulnerability/CVE-2026-80155) \u2014 2026-09-26 | [@SecAlertsCo (X)](https://x.com/SecAlertsCo/status/2103739185479712782) \u2014 2026-09-26\n\n**Type:** CVE / path traversal (CWE-22) \u2192 RCE | **Severity:** Critical | **Date:** 2026-09-26\n\n## Summary\n- **CVSS 10.0** \u2014 `AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H`. No authentication and no user interaction required.\n- **Root cause:** the web management portal's upload endpoint builds session-cookie file paths with `snprintf` into a fixed-size buffer. A cookie of a specific crafted length truncates the path at a critical delimiter, enabling path traversal that redirects authentication checks to arbitrary files (e.g. local user databases).\n- **Impact:** unauthenticated remote attackers can read sensitive config files, upload files to arbitrary filesystem locations, and achieve RCE \u2014 full loss of confidentiality, integrity and availability. Devices are out-of-band management gateways, so a compromise can also reach downstream serial-connected equipment (a common OT/ICS console-server use case).\n\n## Affected products\n| Product | Vulnerable | Fixed |\n|---|---|---|\n| Lantronix SLC8000 | before v9.7.0.5 | v9.7.0.5 |\n| Lantronix SLC9000 | before v9.7.0.2 | v9.7.0.2 |\n| Lantronix EMG8500 | before v9.7.0.1 | v9.7.0.1 |\n| Lantronix EMG7500 | before v9.7.0.1 | v9.7.0.1 |\n| Lantronix SLB882 | all versions | **no patch available** |\n| Lantronix SLCx-03 | all versions | **no patch available** |\n| Lantronix SLCx-02 | all versions | **no patch available** |\n\n## Why this matters\n- CVSS 10 with zero preconditions on an internet- or OT-network-facing management appliance is as bad as it gets. These are console/out-of-band management servers \u2014 often deployed specifically to provide \"last resort\" access to critical infrastructure, so a compromise here can be worse than compromising the primary device it manages.\n- Three product lines (SLB882, SLCx-03, SLCx-02) have **no patch available at all** \u2014 compensating controls (network isolation, disabling the web management portal, restricting to management VLAN) are the only option for those.\n- This vault previously tracked a separate Lantronix flaw (`CVE-2025-67038-Lantronix-BRIDGEBREAK-Exploited.md`) \u2014 Lantronix OOB management gear is a recurring target; consider a standing review of any Lantronix estate.\n\n## Action\n1. Patch SLC8000/SLC9000/EMG8500/EMG7500 to the fixed firmware versions above immediately.\n2. For SLB882, SLCx-03, SLCx-02 (no patch): remove the web management portal from any reachable network, restrict access to an isolated management VLAN, and treat as compromised if internet-exposed.\n3. Audit exposure \u2014 Lantronix OOB devices are frequently deployed for remote serial console access and can be forgotten once initially racked.\n4. Monitor for unexpected file uploads, new local user accounts, or session-cookie anomalies in device logs.\n\n## Cross-reference\n- `Threat_Intel/CVEs/2025/High/CVE-2025-67038-Lantronix-BRIDGEBREAK-Exploited.md`\n\n## Tags\n#cve #lantronix #path-traversal #cvss10 #unauthenticated #rce #ot #out-of-band-management #critical",
    "sev": "Critical",
    "year": "2026",
    "kev": false,
@@ -4088,10 +4104,10 @@
   },
   "CVE-2026-87902": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-87902-WordPress-Core-Template-Resolution-Unauth-RCE-7.1.2-2026.md",
-   "body": "# CVE-2026-87902 \u2014 WordPress Core: Unauthenticated Code Execution via Page Template Resolution (fixed in 7.1.2)\n\n\u26a0\ufe0f **Verification:** Corroborated \u2014 2 independent sources\n\n> Source: [The Hacker News](https://thehackernews.com/2026/09/wordpress-issues-patch-for-critical.html) \u2014 2026-09-22\n> Source: [@The_Cyber_News (X)](https://x.com/The_Cyber_News/status/2102701071403761916) \u2014 2026-09-23 (citing cybersecuritynews.com)\n\n**Type:** CVE / unauthenticated remote code execution (conditional) | **Severity:** Critical | **Date:** 2026-09-23\n\n## Summary\n\nWordPress has released **7.1.2** to fix **CVE-2026-87902**, a critical flaw in **WordPress page template resolution** \u2014 the core mechanism that decides which PHP template file renders a requested page. A remote, **unauthenticated** attacker can influence template resolution and cause WordPress to **include a readable local PHP file located outside the active theme directory**, producing code execution **on vulnerable sites under specific conditions**.\n\nThe qualifier matters and should not be dropped in retelling: this is a **local file include reached without authentication**, not a universal unauthenticated RCE. Exploitation needs a readable, attacker-useful PHP file already present on the host \u2014 which on a shared or plugin-heavy installation is a low bar, and on a hardened single-purpose install may not exist at all.\n\n## Why this matters\n\n- **This is the third distinct WordPress *core* code-execution issue recorded in this vault in under a week,** after `Click2Shell` (admin CSRF \u2192 theme install \u2192 RCE, fixed 7.1.1, 2026-09-17) and `Comment2Shell` / CVE-2026-93485 (anonymous comment XSS \u2192 RCE via admin session). Core, not plugins. The plugin ecosystem has historically absorbed the blame for WordPress RCE; three core issues in seven days is a different signal and worth calling out explicitly.\n- **The \"specific conditions\" clause is where the risk actually lives.** Multi-tenant and shared hosting is the worst case: the more PHP files reachable on the filesystem, the more likely a usable include target exists. This vault has recorded two shared-hosting privilege-escalation chains this month already (Acronis cPanel plugin CVE-2026-87886, LiteSpeed Enterprise). **A pre-auth local file include on the same class of box composes with those** \u2014 one gets you execution as the web user, the others get you root across every tenant.\n- **Patch adoption is the real exposure curve.** WordPress core auto-updates for minor releases reach most installs quickly, which is the good news; the population that matters is the one with auto-updates disabled for change-control reasons, which correlates strongly with the managed, higher-value estates.\n\n## Action\n\n1. **Update to WordPress 7.1.2 immediately** on every install.\n2. **Verify auto-update actually fired.** Check `WP_AUTO_UPDATE_CORE`, any host-level update suppression, and the reported core version \u2014 do not assume.\n3. **On shared or multi-tenant hosting, treat this as higher severity than the headline**, because the precondition (readable PHP outside the theme directory) is effectively guaranteed.\n4. **Hunt for exploitation:** requests with unusual template, page-template or path-like parameters; PHP execution originating from files outside the active theme; new or modified files in `wp-content/uploads`; unexpected outbound connections from the web user.\n5. **Reduce the include surface:** remove unused themes and plugins, disallow PHP execution in uploads directories, and confirm `open_basedir` / per-tenant isolation is actually enforced on shared hosts.\n6. **Check whether 7.1.1 was ever applied.** A site still on 7.1.0 is exposed to Click2Shell *and* this flaw.\n\n## Cross-reference\n\n- `Threat_Intel/CVEs/2026/High/Click2Shell-WordPress-Admin-CSRF-Theme-Install-RCE-WP-7.1.1-2026.md`\n- `Threat_Intel/CVEs/2026/Critical/CVE-2026-93485-WordPress-Core-Comment2Shell-Anonymous-Comment-XSS-To-RCE-2026.md`\n- `Threat_Intel/CVEs/2026/Critical/LiteSpeed-Enterprise-Shared-Hosting-Low-Privilege-User-To-Root-2026.md`\n\n## Tags\n#cve #wordpress #wordpress-core #lfi #rce #unauthenticated #shared-hosting #template-resolution #critical #corroborated\n\n\n## Update \u2014 2026-09-24: exploited in the wild within hours of disclosure; CVSS 9.2; CCCS AV26-952\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-start-exploiting-critical-wordpress-flaw-for-code-execution/) \u2014 2026-09-23 | [The Hacker News](https://thehackernews.com/2026/09/attackers-exploit-wordpress-cve-2026.html) \u2014 2026-09-24 | [SecurityWeek](https://www.securityweek.com/critical-wordpress-vulnerability-exploited-immediately-after-disclosure/) \u2014 2026-09-24 | [CCCS AV26-952](https://cyber.gc.ca/en/alerts-advisories/wordpress-security-advisory-av26-952) \u2014 2026-09-23\n\n- **Status: exploited in the wild.** Attackers moved from probing to exploitation **within hours of disclosure**. They **write files to disk that run shell commands when accessed**, i.e. web shells.\n- **CVSS 9.2.** The mechanism: path traversal that makes `get_page_template()` include an attacker-chosen local `.php` file. GHSA-7hp8-65ch-5whp.\n- **Fixed in 7.1.2** (CCCS AV26-952 confirms \"WordPress before 7.1.2\").\n- **Changed action:** if a site ran < 7.1.2 at any point after 2026-09-22, **don't only patch; hunt for dropped PHP files.** Look for PHP files modified since 2026-09-22 in `wp-content/`, uploads and theme directories, and for web-server logs with traversal sequences in template-related parameters.\n- **Chain risk realised this week:** the cPanel account-to-root flaw **CVE-2026-87899**, disclosed the same day, gives the root step on shared hosting. See `CVE-2026-87899-cPanel-CalDAV-CardDAV-Account-To-Root-WP-Toolkit-CVE-2026-87900-2026.md`.",
+   "body": "# CVE-2026-87902 \u2014 WordPress Core: Unauthenticated Code Execution via Page Template Resolution (fixed in 7.1.2)\n\n\u26a0\ufe0f **Verification:** Corroborated \u2014 2 independent sources\n\n> Source: [The Hacker News](https://thehackernews.com/2026/09/wordpress-issues-patch-for-critical.html) \u2014 2026-09-22\n> Source: [@The_Cyber_News (X)](https://x.com/The_Cyber_News/status/2102701071403761916) \u2014 2026-09-23 (citing cybersecuritynews.com)\n\n**Type:** CVE / unauthenticated remote code execution (conditional) | **Severity:** Critical | **Date:** 2026-09-23\n\n## Summary\n\nWordPress has released **7.1.2** to fix **CVE-2026-87902**, a critical flaw in **WordPress page template resolution** \u2014 the core mechanism that decides which PHP template file renders a requested page. A remote, **unauthenticated** attacker can influence template resolution and cause WordPress to **include a readable local PHP file located outside the active theme directory**, producing code execution **on vulnerable sites under specific conditions**.\n\nThe qualifier matters and should not be dropped in retelling: this is a **local file include reached without authentication**, not a universal unauthenticated RCE. Exploitation needs a readable, attacker-useful PHP file already present on the host \u2014 which on a shared or plugin-heavy installation is a low bar, and on a hardened single-purpose install may not exist at all.\n\n## Why this matters\n\n- **This is the third distinct WordPress *core* code-execution issue recorded in this vault in under a week,** after `Click2Shell` (admin CSRF \u2192 theme install \u2192 RCE, fixed 7.1.1, 2026-09-17) and `Comment2Shell` / CVE-2026-93485 (anonymous comment XSS \u2192 RCE via admin session). Core, not plugins. The plugin ecosystem has historically absorbed the blame for WordPress RCE; three core issues in seven days is a different signal and worth calling out explicitly.\n- **The \"specific conditions\" clause is where the risk actually lives.** Multi-tenant and shared hosting is the worst case: the more PHP files reachable on the filesystem, the more likely a usable include target exists. This vault has recorded two shared-hosting privilege-escalation chains this month already (Acronis cPanel plugin CVE-2026-87886, LiteSpeed Enterprise). **A pre-auth local file include on the same class of box composes with those** \u2014 one gets you execution as the web user, the others get you root across every tenant.\n- **Patch adoption is the real exposure curve.** WordPress core auto-updates for minor releases reach most installs quickly, which is the good news; the population that matters is the one with auto-updates disabled for change-control reasons, which correlates strongly with the managed, higher-value estates.\n\n## Action\n\n1. **Update to WordPress 7.1.2 immediately** on every install.\n2. **Verify auto-update actually fired.** Check `WP_AUTO_UPDATE_CORE`, any host-level update suppression, and the reported core version \u2014 do not assume.\n3. **On shared or multi-tenant hosting, treat this as higher severity than the headline**, because the precondition (readable PHP outside the theme directory) is effectively guaranteed.\n4. **Hunt for exploitation:** requests with unusual template, page-template or path-like parameters; PHP execution originating from files outside the active theme; new or modified files in `wp-content/uploads`; unexpected outbound connections from the web user.\n5. **Reduce the include surface:** remove unused themes and plugins, disallow PHP execution in uploads directories, and confirm `open_basedir` / per-tenant isolation is actually enforced on shared hosts.\n6. **Check whether 7.1.1 was ever applied.** A site still on 7.1.0 is exposed to Click2Shell *and* this flaw.\n\n## Cross-reference\n\n- `Threat_Intel/CVEs/2026/High/Click2Shell-WordPress-Admin-CSRF-Theme-Install-RCE-WP-7.1.1-2026.md`\n- `Threat_Intel/CVEs/2026/Critical/CVE-2026-93485-WordPress-Core-Comment2Shell-Anonymous-Comment-XSS-To-RCE-2026.md`\n- `Threat_Intel/CVEs/2026/Critical/LiteSpeed-Enterprise-Shared-Hosting-Low-Privilege-User-To-Root-2026.md`\n\n## Tags\n#cve #wordpress #wordpress-core #lfi #rce #unauthenticated #shared-hosting #template-resolution #critical #corroborated\n\n\n## Update \u2014 2026-09-24: exploited in the wild within hours of disclosure; CVSS 9.2; CCCS AV26-952\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-start-exploiting-critical-wordpress-flaw-for-code-execution/) \u2014 2026-09-23 | [The Hacker News](https://thehackernews.com/2026/09/attackers-exploit-wordpress-cve-2026.html) \u2014 2026-09-24 | [SecurityWeek](https://www.securityweek.com/critical-wordpress-vulnerability-exploited-immediately-after-disclosure/) \u2014 2026-09-24 | [CCCS AV26-952](https://cyber.gc.ca/en/alerts-advisories/wordpress-security-advisory-av26-952) \u2014 2026-09-23\n\n- **Status: exploited in the wild.** Attackers moved from probing to exploitation **within hours of disclosure**. They **write files to disk that run shell commands when accessed**, i.e. web shells.\n- **CVSS 9.2.** The mechanism: path traversal that makes `get_page_template()` include an attacker-chosen local `.php` file. GHSA-7hp8-65ch-5whp.\n- **Fixed in 7.1.2** (CCCS AV26-952 confirms \"WordPress before 7.1.2\").\n- **Changed action:** if a site ran < 7.1.2 at any point after 2026-09-22, **don't only patch; hunt for dropped PHP files.** Look for PHP files modified since 2026-09-22 in `wp-content/`, uploads and theme directories, and for web-server logs with traversal sequences in template-related parameters.\n- **Chain risk realised this week:** the cPanel account-to-root flaw **CVE-2026-87899**, disclosed the same day, gives the root step on shared hosting. See `CVE-2026-87899-cPanel-CalDAV-CardDAV-Account-To-Root-WP-Toolkit-CVE-2026-87900-2026.md`.\n\n## Update \u2014 2026-09-26: CISA KEV addition confirmed\n> Source: [CCCS AV26-952 Update 1](https://cyber.gc.ca/en/alerts-advisories/wordpress-security-advisory-av26-952) \u2014 2026-09-25\n\n- **CISA added CVE-2026-87902 to the Known Exploited Vulnerabilities (KEV) catalog on 2026-09-25**, formalizing the active-exploitation status already tracked above. No new technical detail beyond the KEV listing itself.",
    "sev": "Critical",
    "year": "2026",
-   "kev": false,
+   "kev": true,
    "apts": []
   },
   "CVE-2026-89026": {
@@ -4489,6 +4505,14 @@
   "CVE-2026-41096": {
    "file": "Threat_Intel/CVEs/2026/High/CVE-2026-41096-Windows-DNS-Client-RCE.md",
    "body": "# CVE-2026-41096 \u2014 RCE in Windows DNS Client\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n## Summary\nAnalysis of a **remote code execution vulnerability in the Windows DNS Client** (CVE-2026-41096 / PT-2026-40237). Client-side parsing of malicious DNS responses can lead to code execution.\n\n## Technical Details\n- Component: Windows DNS Client (resolver)\n- Vuln ID: CVE-2026-41096 | Positive Technologies ID: PT-2026-40237\n- Vector: malicious/crafted DNS responses processed by the client \u2192 memory corruption \u2192 RCE\n- Detailed technical write-up published by @ptdbugs (PT)\n\n## Impact\n- Code execution on Windows endpoints that resolve attacker-influenced DNS\n- Useful in MITM / rogue DNS / coffee-shop network scenarios\n\n## Mitigations\n- Apply Microsoft patch for CVE-2026-41096\n- Use DNS over HTTPS/TLS to trusted resolvers; egress-filter DNS\n- Monitor for unexpected svchost/dnscache behavior\n\n## Sources\n- @ptdbugs / Positive Technologies (2026-06-08) \u2014 tweet 2063954869845742028\n\n## Tags\n#CVE #CVE-2026-41096 #Windows #DNSClient #RCE #PositiveTechnologies #BugBounty #unverified",
+   "sev": "High",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-42608": {
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-42608-Grav-CMS-Path-Traversal-ShinyHunters-vs-Clop-2026.md",
+   "body": "# CVE-2026-42608: Grav CMS Path Traversal \u2014 ShinyHunters Used It to Hack Clop's Own Leak Site\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 source (BleepingComputer)\n\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/shinyhunters-hacked-clop-leak-site-using-grav-cms-path-traversal-flaw/) \u2014 2026-09-25\n\n**Type:** CVE / path traversal \u2192 unauthenticated file upload | **Severity:** High | **Date:** 2026-09-25\n\n## Summary\n- **CVE-2026-42608** \u2014 unauthenticated path traversal in **Grav CMS core** (not the Form plugin), affecting the `/tmp/forms` upload path handling.\n- **Exploitation mechanism:** attacker manipulates the `__unique_form_id__` POST parameter with directory traversal sequences (e.g. `../../../shhq`), causing the upload path to resolve **outside** the intended `/tmp/forms` directory, allowing files to be written elsewhere within the Grav installation.\n- **Fixed in Grav 1.7.53.4.** The flaw had actually already been fixed in **Grav 2.0 beta.2 (April 2026)** but was never backported to the 1.7 branch until this incident forced it.\n- **The incident that surfaced it:** the extortion group **ShinyHunters breached the Clop ransomware gang's own Tor data-leak site**, which was running an unpatched **Grav 1.7.43**. ShinyHunters defaced the site with a Pok\u00e9mon logo and claimed to have stolen Clop's source code, CMS plugins, server logs, and private encryption keys, then demanded ransom from Clop itself and threatened to publish the stolen files. Clop moved to a new Tor address and publicly denied any relationship or negotiation with ShinyHunters; ShinyHunters was later quietly removed from its own leak-site listing, suggesting negotiations occurred despite the public denial. Clop claims the compromised server held only website content.\n\n## Why this matters\n- A ransomware/extortion gang's own infrastructure running unpatched, publicly-known-vulnerability-class software is a reminder that \"criminal infrastructure\" is still just infrastructure, and criminal-on-criminal exploitation happens with the same techniques used against legitimate targets.\n- The underlying CVE is relevant regardless of the criminal drama: **any org running Grav CMS 1.7.x is exposed to unauthenticated file writes** via this traversal, which is a realistic path to RCE depending on what's writable and web-servable.\n- Worth watching whether the \"stolen source code/encryption keys\" claim, if real, degrades Clop's future operational security.\n\n## Action\n1. If running Grav CMS, upgrade to **1.7.53.4** (1.7 branch) or **2.0+** immediately.\n2. Audit for unexpected files written under the Grav web root, particularly outside `/tmp/forms`.\n3. Treat this as a live demonstration of the traversal technique \u2014 check any other CMS/upload handler you run for similar user-controlled-path-component patterns.\n\n## Tags\n#cve #grav-cms #path-traversal #file-upload #shinyhunters #clop #ransomware-drama #high",
    "sev": "High",
    "year": "2026",
    "kev": false,
@@ -5830,7 +5854,7 @@
    "body": "# CVE-2026-67279\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-67279\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-67279\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-67279\n\n## Tags\n#cve #2026 #unrated #auto-stub",
    "sev": "",
    "year": "2026",
-   "kev": false,
+   "kev": true,
    "apts": []
   },
   "CVE-2026-67631": {
@@ -5940,94 +5964,94 @@
  },
  "recent": [
   {
-   "title": "technique-cache-key-injection",
-   "file": "BugBounty/references/technique-cache-key-injection.md",
+   "title": "optus-myhub-graphql-guest-file-disclosure-finding",
+   "file": "BugBounty/findings/optus-myhub-graphql-guest-file-disclosure-finding.md",
    "cat": "other",
-   "ts": "2026-09-25"
+   "ts": "2026-09-26"
   },
   {
-   "title": "technique-stopping-redirects",
-   "file": "BugBounty/references/technique-stopping-redirects.md",
+   "title": "optus-myhub-guest-document-destruction-chain-finding",
+   "file": "BugBounty/findings/optus-myhub-guest-document-destruction-chain-finding.md",
    "cat": "other",
-   "ts": "2026-09-25"
+   "ts": "2026-09-26"
   },
   {
-   "title": "OT-ICS-NIST-SP800-82r4-CISA-FBI-Third-Party-Integrator-Risk-2026",
-   "file": "Guides/OT-ICS-NIST-SP800-82r4-CISA-FBI-Third-Party-Integrator-Risk-2026.md",
-   "cat": "technique",
-   "ts": "2026-09-25"
+   "title": "session-2026-09-26",
+   "file": "BugBounty/notes/session-2026-09-26.md",
+   "cat": "other",
+   "ts": "2026-09-26"
   },
   {
-   "title": "URL-Parser-Confusion-Three-Tricks-SANS-ISC-2026",
-   "file": "Guides/URL-Parser-Confusion-Three-Tricks-SANS-ISC-2026.md",
-   "cat": "technique",
-   "ts": "2026-09-25"
+   "title": "optus-myhub-graphql-guest-file-disclosure-report",
+   "file": "BugBounty/reports/optus-myhub-graphql-guest-file-disclosure-report.md",
+   "cat": "other",
+   "ts": "2026-09-26"
   },
   {
-   "title": "HEIF-Heist-Facebook-Instagram-RCE-HEIC-AVIF-Image-Bounty-2026",
-   "file": "Guides/AI-BugBounty/HEIF-Heist-Facebook-Instagram-RCE-HEIC-AVIF-Image-Bounty-2026.md",
+   "title": "optus-myhub-guest-document-destruction-report",
+   "file": "BugBounty/reports/optus-myhub-guest-document-destruction-report.md",
+   "cat": "other",
+   "ts": "2026-09-26"
+  },
+  {
+   "title": "optus-scope",
+   "file": "BugBounty/scopes/optus-scope.md",
+   "cat": "other",
+   "ts": "2026-09-26"
+  },
+  {
+   "title": "Microsoft-Titan-JWT-None-Algorithm-17-Trillion-Records-Faav-2026",
+   "file": "Guides/AI-BugBounty/Microsoft-Titan-JWT-None-Algorithm-17-Trillion-Records-Faav-2026.md",
    "cat": "ai-bugbounty",
-   "ts": "2026-09-25"
+   "ts": "2026-09-26"
   },
   {
-   "title": "SalesBleed-Salesforce-Agentforce-Trusted-URL-Bypass-Zenity-Labs-2026",
-   "file": "Guides/AI-BugBounty/SalesBleed-Salesforce-Agentforce-Trusted-URL-Bypass-Zenity-Labs-2026.md",
+   "title": "OpenAI-Agent-Australian-Medicare-Portal-Access-Control-Bypass-2026",
+   "file": "Guides/AI-BugBounty/OpenAI-Agent-Australian-Medicare-Portal-Access-Control-Bypass-2026.md",
    "cat": "ai-bugbounty",
-   "ts": "2026-09-25"
+   "ts": "2026-09-26"
   },
   {
-   "title": "Storm-2570-Ransomware-Affiliate-Qilin-DragonForce-Anubis-BERT-2026",
-   "file": "Threat_Intel/APT_Groups/Storm-2570-Ransomware-Affiliate-Qilin-DragonForce-Anubis-BERT-2026.md",
-   "cat": "malware",
-   "ts": "2026-09-25"
+   "title": "Storm-3168-JADEPUFFER-Agentic-Ransomware-Azure-Service-Principal-2026",
+   "file": "Guides/AI-BugBounty/Storm-3168-JADEPUFFER-Agentic-Ransomware-Azure-Service-Principal-2026.md",
+   "cat": "ai-bugbounty",
+   "ts": "2026-09-26"
+  },
+  {
+   "title": "Adif-Renfe-Spain-Rail-Cyberattack-AI-Assisted-2026",
+   "file": "Threat_Intel/Breaches/Adif-Renfe-Spain-Rail-Cyberattack-AI-Assisted-2026.md",
+   "cat": "breach",
+   "ts": "2026-09-26"
   },
   {
    "title": "bitget-crypto-exchange-hack-2026",
    "file": "Threat_Intel/Breaches/bitget-crypto-exchange-hack-2026.md",
    "cat": "breach",
-   "ts": "2026-09-25"
+   "ts": "2026-09-26"
   },
   {
-   "title": "CVE-2026-48842-Roundcube-VirtuserQuery-PreAuth-SQLi-Actively-Exploited-2026",
-   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-48842-Roundcube-VirtuserQuery-PreAuth-SQLi-Actively-Exploited-2026.md",
-   "cat": "cve",
-   "ts": "2026-09-25"
+   "title": "Dyfed-Powys-Police-Wales-Cyberattack-2026",
+   "file": "Threat_Intel/Breaches/Dyfed-Powys-Police-Wales-Cyberattack-2026.md",
+   "cat": "breach",
+   "ts": "2026-09-26"
   },
   {
-   "title": "CVE-2026-65660-SharePoint-Code-Injection-Actively-Exploited-2026",
-   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-65660-SharePoint-Code-Injection-Actively-Exploited-2026.md",
-   "cat": "cve",
-   "ts": "2026-09-25"
+   "title": "Kiteworks-Precautionary-Shutdown-Federal-Threat-Intel-2026",
+   "file": "Threat_Intel/Breaches/Kiteworks-Precautionary-Shutdown-Federal-Threat-Intel-2026.md",
+   "cat": "breach",
+   "ts": "2026-09-26"
   },
   {
-   "title": "CVE-2026-68492",
-   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-68492.md",
-   "cat": "cve",
-   "ts": "2026-09-25"
+   "title": "Labcorp-Security-Settlement-2.3M-2026",
+   "file": "Threat_Intel/Breaches/Labcorp-Security-Settlement-2.3M-2026.md",
+   "cat": "breach",
+   "ts": "2026-09-26"
   },
   {
-   "title": "CVE-2026-87898",
-   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-87898.md",
-   "cat": "cve",
-   "ts": "2026-09-25"
-  },
-  {
-   "title": "CVE-2026-87899-cPanel-CalDAV-CardDAV-Account-To-Root-WP-Toolkit-CVE-2026-87900-2026",
-   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-87899-cPanel-CalDAV-CardDAV-Account-To-Root-WP-Toolkit-CVE-2026-87900-2026.md",
-   "cat": "cve",
-   "ts": "2026-09-25"
-  },
-  {
-   "title": "Carbonato-Docker-Botnet-Hermes-AI-Agent-2026",
-   "file": "Threat_Intel/Malware/Carbonato-Docker-Botnet-Hermes-AI-Agent-2026.md",
-   "cat": "malware",
-   "ts": "2026-09-25"
-  },
-  {
-   "title": "Macfinger-ClickFix-AMOS-Stealer-macOS-2026",
-   "file": "Threat_Intel/Malware/Macfinger-ClickFix-AMOS-Stealer-macOS-2026.md",
-   "cat": "malware",
-   "ts": "2026-09-25"
+   "title": "Rydox-Marketplace-Admin-Guilty-Plea-2026",
+   "file": "Threat_Intel/Breaches/Rydox-Marketplace-Admin-Guilty-Plea-2026.md",
+   "cat": "breach",
+   "ts": "2026-09-26"
   }
  ],
  "kev_referenced": [
@@ -6141,8 +6165,11 @@
   "CVE-2026-63077",
   "CVE-2026-64849",
   "CVE-2026-65400",
+  "CVE-2026-65660",
   "CVE-2026-67277",
+  "CVE-2026-67279",
   "CVE-2026-68820",
+  "CVE-2026-71362",
   "CVE-2026-72529",
   "CVE-2026-72530",
   "CVE-2026-7273",
@@ -6167,6 +6194,7 @@
   "CVE-2026-86218",
   "CVE-2026-87491",
   "CVE-2026-87886",
+  "CVE-2026-87902",
   "CVE-2026-9082",
   "CVE-2026-93616",
   "CVE-2026-94127",
@@ -6844,6 +6872,13 @@
    "intel_items": 1602,
    "cves": 625,
    "breaches": 137,
+   "malware": 168
+  },
+  {
+   "date": "2026-09-26",
+   "intel_items": 1631,
+   "cves": 630,
+   "breaches": 143,
    "malware": 168
   }
  ]
