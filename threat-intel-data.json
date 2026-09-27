@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-26 20:45",
- "today": "2026-09-26",
+ "generated": "2026-09-27 20:45",
+ "today": "2026-09-27",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
@@ -30,16 +30,16 @@
    "by_src": {}
   },
   "month": {
-   "total": 615,
+   "total": 608,
    "by_cat": {
-    "cve": 160,
-    "malware": 77,
-    "ai-bugbounty": 58,
-    "supplychain": 26,
-    "other": 51,
+    "cve": 159,
+    "malware": 75,
+    "supplychain": 25,
     "breach": 75,
     "tool": 14,
     "misc": 102,
+    "other": 50,
+    "ai-bugbounty": 56,
     "technique": 50,
     "command": 2
    },
@@ -5964,6 +5964,24 @@
  },
  "recent": [
   {
+   "title": "goatclub-source-tree-observations",
+   "file": "BugBounty/notes/goatclub-source-tree-observations.md",
+   "cat": "other",
+   "ts": "2026-09-27"
+  },
+  {
+   "title": "session-2026-09-27",
+   "file": "BugBounty/notes/session-2026-09-27.md",
+   "cat": "other",
+   "ts": "2026-09-27"
+  },
+  {
+   "title": "goatclub-scope",
+   "file": "BugBounty/scopes/goatclub-scope.md",
+   "cat": "other",
+   "ts": "2026-09-27"
+  },
+  {
    "title": "optus-myhub-graphql-guest-file-disclosure-finding",
    "file": "BugBounty/findings/optus-myhub-graphql-guest-file-disclosure-finding.md",
    "cat": "other",
@@ -6032,24 +6050,6 @@
   {
    "title": "Dyfed-Powys-Police-Wales-Cyberattack-2026",
    "file": "Threat_Intel/Breaches/Dyfed-Powys-Police-Wales-Cyberattack-2026.md",
-   "cat": "breach",
-   "ts": "2026-09-26"
-  },
-  {
-   "title": "Kiteworks-Precautionary-Shutdown-Federal-Threat-Intel-2026",
-   "file": "Threat_Intel/Breaches/Kiteworks-Precautionary-Shutdown-Federal-Threat-Intel-2026.md",
-   "cat": "breach",
-   "ts": "2026-09-26"
-  },
-  {
-   "title": "Labcorp-Security-Settlement-2.3M-2026",
-   "file": "Threat_Intel/Breaches/Labcorp-Security-Settlement-2.3M-2026.md",
-   "cat": "breach",
-   "ts": "2026-09-26"
-  },
-  {
-   "title": "Rydox-Marketplace-Admin-Guilty-Plea-2026",
-   "file": "Threat_Intel/Breaches/Rydox-Marketplace-Admin-Guilty-Plea-2026.md",
    "cat": "breach",
    "ts": "2026-09-26"
   }
@@ -6876,6 +6876,13 @@
   },
   {
    "date": "2026-09-26",
+   "intel_items": 1631,
+   "cves": 630,
+   "breaches": 143,
+   "malware": 168
+  },
+  {
+   "date": "2026-09-27",
    "intel_items": 1631,
    "cves": 630,
    "breaches": 143,
