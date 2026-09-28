@@ -1,28 +1,28 @@
 {
- "generated": "2026-09-27 20:45",
- "today": "2026-09-27",
+ "generated": "2026-09-28 20:45",
+ "today": "2026-09-28",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
-  "cves": 630,
+  "cves": 644,
   "breaches": 143,
-  "malware": 168,
+  "malware": 170,
   "supplychain": 73,
   "tools": 94,
   "commands": 13,
   "guides": 299,
-  "intel_items": 1631,
-  "kev": 144
+  "intel_items": 1643,
+  "kev": 147
  },
  "windows": {
   "week": {
-   "total": 129,
+   "total": 141,
    "by_cat": {
     "technique": 10,
-    "breach": 15,
-    "cve": 39,
+    "breach": 16,
+    "cve": 48,
     "misc": 34,
-    "malware": 12,
+    "malware": 14,
     "supplychain": 4,
     "other": 3,
     "ai-bugbounty": 12
@@ -30,49 +30,49 @@
    "by_src": {}
   },
   "month": {
-   "total": 608,
+   "total": 592,
    "by_cat": {
-    "cve": 159,
+    "misc": 99,
+    "other": 45,
+    "cve": 160,
+    "breach": 72,
     "malware": 75,
-    "supplychain": 25,
-    "breach": 75,
-    "tool": 14,
-    "misc": 102,
-    "other": 50,
-    "ai-bugbounty": 56,
+    "ai-bugbounty": 55,
+    "tool": 13,
+    "supplychain": 21,
     "technique": 50,
     "command": 2
    },
    "by_src": {}
   },
   "year": {
-   "total": 1631,
+   "total": 1643,
    "by_cat": {
     "ai-bugbounty": 121,
-    "malware": 197,
+    "malware": 199,
     "other": 111,
     "tool": 58,
     "misc": 330,
     "command": 6,
     "technique": 142,
-    "cve": 402,
-    "breach": 174,
+    "cve": 411,
+    "breach": 175,
     "supplychain": 90
    },
    "by_src": {}
   },
   "all": {
-   "total": 1631,
+   "total": 1643,
    "by_cat": {
     "ai-bugbounty": 121,
-    "malware": 197,
+    "malware": 199,
     "other": 111,
     "tool": 58,
     "misc": 330,
     "command": 6,
     "technique": 142,
-    "cve": 402,
-    "breach": 174,
+    "cve": 411,
+    "breach": 175,
     "supplychain": 90
    },
    "by_src": {}
@@ -1758,7 +1758,6 @@
   "month": {
    "Fire Ant": 5,
    "Sandworm": 4,
-   "APT28": 1,
    "Salt Typhoon": 1,
    "Lazarus Group": 1
   },
@@ -1859,9 +1858,9 @@
   ]
  },
  "cve_sev": {
-  "Critical": 258,
-  "High": 182,
-  "Low": 31,
+  "Critical": 260,
+  "High": 183,
+  "Low": 34,
   "Medium": 24
  },
  "cve_year": {
@@ -1871,12 +1870,12 @@
   "2018": 3,
   "2019": 6,
   "2020": 4,
-  "2021": 11,
+  "2021": 14,
   "2022": 9,
-  "2023": 14,
+  "2023": 15,
   "2024": 14,
-  "2025": 27,
-  "2026": 533
+  "2025": 30,
+  "2026": 540
  },
  "cve_month": {
   "2025-10": 1,
@@ -1885,7 +1884,7 @@
   "2026-06": 108,
   "2026-07": 16,
   "2026-08": 84,
-  "2026-09": 146
+  "2026-09": 155
  },
  "top_cve": [
   {
@@ -2232,6 +2231,30 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2021-43008": {
+   "file": "Threat_Intel/CVEs/2021/Low/CVE-2021-43008.md",
+   "body": "# CVE-2021-43008\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Low  \n**Year:** 2021\n\n## Summary\n2. **CVE-2021-43008 (arbitrary local file read via rogue-server LOAD DATA LOCAL INFILE, <=4.6.2)** -- PATCHED. `MYSQLI_OPT_LOCAL_INFILE=false` set post-connect (line 1249, mysqli driver); `PDO::MYSQL_ATTR_LOCAL_INFILE=>false` set in PDO driver options array (line 1286); classic `mysql` extension path additionally refuses to connect at all if `mysql.allow_local_infile` ini is on (lines 1254-1256), directing the user to MySQLi/PDO instead. All three match the documented 4.6.3 fix.\n\n## Where it appears in this vault\n- `BugBounty/notes/goatclub-adminer-4-8-1-source-deepdive-observations.md` \u2014 2. **CVE-2021-43008 (arbitrary local file read via rogue-server LOAD DATA LOCAL INFILE, <=4.6.2)** -- PATCHED. `MYSQLI_OPT_LOCAL_INFILE=false` set post-connect (line 1249, mysqli driver); `PDO::MYSQL_ATTR_LOCAL_INFILE=>false` set in PDO driver options array (line 1286); classic `mysql` extension path additionally refuses to connect at all if `mysql.allow_local_infile` ini is on (lines 1254-1256), directing the user to MySQLi/PDO instead. All three match the documented 4.6.3 fix.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2021-43008\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2021-43008\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-43008\n\n## Tags\n#cve #2021 #low #auto-stub",
+   "sev": "Low",
+   "year": "2021",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2021-21311": {
+   "file": "Threat_Intel/CVEs/2021/Unrated/CVE-2021-21311.md",
+   "body": "# CVE-2021-21311\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2021\n\n## Summary\n1. **CVE-2021-21311 (SSRF response-body reflection, elastic/clickhouse drivers, <4.7.9)** -- PATCHED, confirmed present at `rootQuery()` line 1054: error path emits `lang(32).\" $http_response_header[0]\"` (status line only), NOT the raw response body -- matches the exact upstream fix commit `ccd2374b`. ClickHouse driver is not even bundled in this build (grepped, zero matches) -- only the Elasticsearch driver's `rootQuery()` carries this code path.\n\n## Where it appears in this vault\n- `BugBounty/notes/goatclub-adminer-4-8-1-source-deepdive-observations.md` \u2014 1. **CVE-2021-21311 (SSRF response-body reflection, elastic/clickhouse drivers, <4.7.9)** -- PATCHED, confirmed present at `rootQuery()` line 1054: error path emits `lang(32).\" $http_response_header[0]\"` (status line only), NOT the raw response body -- matches the exact upstream fix commit `ccd2374b`. ClickHouse driver is not even bundled in this build (grepped, zero matches) -- only the Elasticsearch driver's `rootQuery()` carries this code path.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2021-21311\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2021-21311\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-21311\n\n## Tags\n#cve #2021 #unrated #auto-stub",
+   "sev": "",
+   "year": "2021",
+   "kev": true,
+   "apts": []
+  },
+  "CVE-2021-29625": {
+   "file": "Threat_Intel/CVEs/2021/Unrated/CVE-2021-29625.md",
+   "body": "# CVE-2021-29625\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2021\n\n## Summary\n3. **CVE-2021-29625 (XSS via `doc_link()`, PDO server_info reflected into href, 4.6.1-4.8.0)** -- PATCHED, confirmed at `doc_link()` line 1531: the server-version string is passed through `preg_replace('~^(\\d\\.?\\d).*~s','\\1',$nh)` BEFORE being concatenated into the URL (restricts to a short numeric token), and the final href is wrapped in `h()` (Adminer's htmlspecialchars-equivalent escaper) before echo. Matches documented 4.8.1 fix behaviour.\n\n## Where it appears in this vault\n- `BugBounty/notes/goatclub-adminer-4-8-1-source-deepdive-observations.md` \u2014 3. **CVE-2021-29625 (XSS via `doc_link()`, PDO server_info reflected into href, 4.6.1-4.8.0)** -- PATCHED, confirmed at `doc_link()` line 1531: the server-version string is passed through `preg_replace('~^(\\d\\.?\\d).*~s','\\1',$nh)` BEFORE being concatenated into the URL (restricts to a short numeric token), and the final href is wrapped in `h()` (Adminer's htmlspecialchars-equivalent escaper) before echo. Matches documented 4.8.1 fix behaviour.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2021-29625\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2021-29625\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-29625\n\n## Tags\n#cve #2021 #unrated #auto-stub",
+   "sev": "",
+   "year": "2021",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2021-42278": {
    "file": "Threat_Intel/CVEs/2021/Unrated/CVE-2021-42278.md",
    "body": "# CVE-2021-42278\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2021\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2021-42278\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2021-42278\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42278\n\n## Tags\n#cve #2021 #unrated #auto-stub #verified",
@@ -2399,6 +2422,14 @@
   "CVE-2023-0476": {
    "file": "Threat_Intel/CVEs/2023/Low/CVE-2023-0476.md",
    "body": "# CVE-2023-0476\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Low  \n**Year:** 2023\n\n## Summary\nCVE-2023-0476** \u2014 Tenable.sc: Authenticated blind LDAP injection, allows data generation in Active Directory\n\n## Where it appears in this vault\n- `BugBounty/05-Injection-Variants.md` \u2014 CVE-2023-0476** \u2014 Tenable.sc: Authenticated blind LDAP injection, allows data generation in Active Directory\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2023-0476\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2023-0476\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-0476\n\n## Tags\n#cve #2023 #low #auto-stub #verified",
+   "sev": "Low",
+   "year": "2023",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2023-45196": {
+   "file": "Threat_Intel/CVEs/2023/Low/CVE-2023-45196.md",
+   "body": "# CVE-2023-45196\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Low  \n**Year:** 2023\n\n## Summary\n6. **CVE-2023-45196 (DoS via attacker-controlled HTTP-redirect-responding service, elastic/clickhouse drivers)** -- code path PRESENT / UNMITIGATED as far as source shows: `rootQuery()`'s `stream_context_create(['http'=>['method'=>...,'content'=>...,'header'=>...,'ignore_errors'=>1]])` (line 1054) sets NO `timeout` and NO `max_redirects` override, so PHP's ini defaults apply (`default_socket_timeout`, and `follow_location`=1 with an internal cap around 20 redirects for the http:// stream wrapper). No hardening was ever backported to original (vrana) Adminer post-4.8.1 per the public advisory (\"Adminer is no longer supported... fixed in AdminerEvo 4.8.4\" -- a different, forked codebase). This is DoS-class and explicitly OUT OF SCOPE for this program's vuln types and RoE (no live-host testing permitted regardless) -- recorded as intel only, not queued for any active test.\n\n## Where it appears in this vault\n- `BugBounty/notes/goatclub-adminer-4-8-1-source-deepdive-observations.md` \u2014 6. **CVE-2023-45196 (DoS via attacker-controlled HTTP-redirect-responding service, elastic/clickhouse drivers)** -- code path PRESENT / UNMITIGATED as far as source shows: `rootQuery()`'s `stream_context_create(['http'=>['method'=>...,'content'=>...,'header'=>...,'ignore_errors'=>1]])` (line 1054) sets NO `timeout` and NO `max_redirects` override, so PHP's ini defaults apply (`default_socket_timeout`, and `follow_location`=1 with an internal cap around 20 redirects for the http:// stream wrapper). No hardening was ever backported to original (vrana) Adminer post-4.8.1 per the public advisory (\"Adminer is no longer supported... fixed in AdminerEvo 4.8.4\" -- a different, forked codebase). This is DoS-class and explicitly OUT OF SCOPE for this program's vuln types and RoE (no live-host testing permitted regardless) -- recorded as intel only, not queued for any active test.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2023-45196\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2023-45196\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-45196\n\n## Tags\n#cve #2023 #low #auto-stub",
    "sev": "Low",
    "year": "2023",
    "kev": false,
@@ -2618,6 +2649,22 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2025-8678": {
+   "file": "Threat_Intel/CVEs/2025/Low/CVE-2025-8678.md",
+   "body": "# CVE-2025-8678\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Low  \n**Year:** 2025\n\n## Summary\nwp-crontrol 1.19.1 CLEAN. Every state-changing handler is manage_options + per-action nonce, with a second edit_files gate on all PHP-cron create/edit/delete (src/bootstrap.php:272, :513, :2844-2846). The eval() at bootstrap.php:2823 is reachable only via run-cron, which needs manage_options + nonce and executes only previously stored super-admin-authored code behind an AUTH_SALT-keyed integrity check (src/event.php:470-480). CVE-2025-8678 (blind SSRF, 1.17.0-1.19.1) is version-in-range but requires Administrator, who can already run PHP cron by design - low value.\n\n## Where it appears in this vault\n- `BugBounty/leads/goatclub-third-party-plugin-advisory-matches-leads.md` \u2014 wp-crontrol 1.19.1 CLEAN. Every state-changing handler is manage_options + per-action nonce, with a second edit_files gate on all PHP-cron create/edit/delete (src/bootstrap.php:272, :513, :2844-2846). The eval() at bootstrap.php:2823 is reachable only via run-cron, which needs manage_options + nonce and executes only previously stored super-admin-authored code behind an AUTH_SALT-keyed integrity check (src/event.php:470-480). CVE-2025-8678 (blind SSRF, 1.17.0-1.19.1) is version-in-range but requires Administrator, who can already run PHP cron by design - low value.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-8678\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-8678\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-8678\n\n## Tags\n#cve #2025 #low #auto-stub",
+   "sev": "Low",
+   "year": "2025",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2025-11379": {
+   "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-11379.md",
+   "body": "# CVE-2025-11379\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2025\n\n## Summary\nA1 - CVE-2025-11379, WebP Express <=0.25.9. DEPLOYED VERSION IN RANGE. Best item in this set.\n\n## Where it appears in this vault\n- `BugBounty/leads/goatclub-third-party-plugin-advisory-matches-leads.md` \u2014 A1 - CVE-2025-11379, WebP Express <=0.25.9. DEPLOYED VERSION IN RANGE. Best item in this set.\n- `BugBounty/notes/goatclub-webp-express-cve-live-verification-observations.md` \u2014 WebP Express CVE-2025-11379 \u2014 live verification: NOT EXPLOITABLE\n- `BugBounty/notes/goatclub-webp-express-cve-live-verification-observations.md` \u2014 CVE-2025-11379 is real and WebP Express 0.25.9 is genuinely unpatched in the\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-11379\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-11379\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-11379\n\n## Tags\n#cve #2025 #unrated #auto-stub",
+   "sev": "",
+   "year": "2025",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2025-12345": {
    "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-12345.md",
    "body": "# CVE-2025-12345\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2025\n\n## Summary\nCVE ID            | CVE-2025-12345               |\n\n## Where it appears in this vault\n- `Templates/CVE Tracker Template.md` \u2014 CVE ID            | CVE-2025-12345               |\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-12345\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-12345\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-12345\n\n## Tags\n#cve #2025 #unrated #auto-stub #verified",
@@ -2736,6 +2783,14 @@
    "sev": "",
    "year": "2025",
    "kev": true,
+   "apts": []
+  },
+  "CVE-2025-55166": {
+   "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-55166.md",
+   "body": "# CVE-2025-55166\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2025\n\n## Summary\nA2 - CVE-2025-55166, enshrined/svg-sanitize <0.22.0 vendored inside SVG Support. IN RANGE.\n\n## Where it appears in this vault\n- `BugBounty/leads/goatclub-third-party-plugin-advisory-matches-leads.md` \u2014 A2 - CVE-2025-55166, enshrined/svg-sanitize <0.22.0 vendored inside SVG Support. IN RANGE.\n- `BugBounty/leads/goatclub-third-party-plugin-advisory-matches-leads.md` \u2014 fixed the unrelated CVE-2026-48973 and CVE-2025-55166. Deployed 2.5.14 is still in range, so the mechanism stands, but\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-55166\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-55166\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-55166\n\n## Tags\n#cve #2025 #unrated #auto-stub",
+   "sev": "",
+   "year": "2025",
+   "kev": false,
    "apts": []
   },
   "CVE-2025-5802": {
@@ -3120,7 +3175,7 @@
   },
   "CVE-2026-35273": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-35273-Oracle-PeopleSoft-0Day-RCE.md",
-   "body": "# CVE-2026-35273 \u2014 Oracle PeopleSoft Suite Zero-Day (Unauthenticated RCE)\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 2 independent sources\n\n**Severity:** Critical\n**Product:** Oracle PeopleSoft Suite\n**Type:** Unauthenticated remote code execution (zero-day)\n**Status:** Actively exploited in the wild \u2014 ShinyHunters data-theft attacks\n**Threat actor:** ShinyHunters (extortion gang) \u2014 claims data from 100+ organizations\n\n## Summary\nOracle is warning about a critical PeopleSoft Suite zero-day, CVE-2026-35273, allowing unauthenticated remote code execution. The flaw is being actively exploited by the ShinyHunters extortion group in data-theft attacks. Oracle has issued mitigations. ShinyHunters claims to have stolen data from over 100 organizations running PeopleSoft.\n\n## Exploitation\n- Unauthenticated RCE against internet-facing PeopleSoft servers.\n- Tied to an ongoing ShinyHunters mass data-theft / extortion campaign.\n\n## Remediation\n- Apply Oracle's mitigations/patches for CVE-2026-35273 immediately.\n- Treat internet-exposed PeopleSoft instances as potentially compromised; hunt for webshells, exfil, and anomalous DB access.\n- Restrict external exposure; rotate credentials and secrets.\n\n## Sources\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/oracle-mitigates-peoplesoft-zero-day-exploited-in-data-theft-attacks/) \u2014 2026-06-11\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/oracle-peoplesoft-servers-hacked-in-shinyhunters-data-theft-attacks/) \u2014 2026-06-10\n\n---\n*Captured via x-bugbounty-intel-sweep \u2014 2026-06-13*\n\n## Tags\n #unverified\n\n## Update 2026-06-30 \u2014 Confirmed victim: Nissan Americas\nNissan Americas confirmed a data breach affecting current and former employees across four countries, attributed to exploitation of the Oracle PeopleSoft 0-day. See [[Nissan-Breach-Oracle-PeopleSoft-2026]].\n> Source: [@The_Cyber_News (X)](https://x.com/The_Cyber_News/status/2071815348719104170) \u2014 2026-06-30\n*Appended via x-bugbounty-intel-sweep \u2014 2026-06-30*\n\n## Update 2026-07-01 \u2014 Additional victim: NAIC\nThe National Association of Insurance Commissioners (NAIC) says the **ShinyHunters** extortion group breached its systems by exploiting the Oracle PeopleSoft zero-day, but claims **only publicly available data, outdated logs, and configuration files** were stolen. Adds to the PeopleSoft/ShinyHunters victim list (alongside Nissan).\n> Source: [BleepingComputer \u2014 NAIC says public data stolen in ShinyHunters' PeopleSoft breach](https://www.bleepingcomputer.com/news/security/naic-says-public-data-stolen-in-shinyhunters-peoplesoft-breach/) \u2014 2026-06-29\n*Appended via x-bugbounty-intel-sweep \u2014 2026-07-01*",
+   "body": "# CVE-2026-35273 \u2014 Oracle PeopleSoft Suite Zero-Day (Unauthenticated RCE)\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 2 independent sources\n\n**Severity:** Critical\n**Product:** Oracle PeopleSoft Suite\n**Type:** Unauthenticated remote code execution (zero-day)\n**Status:** Actively exploited in the wild \u2014 ShinyHunters data-theft attacks\n**Threat actor:** ShinyHunters (extortion gang) \u2014 claims data from 100+ organizations\n\n## Summary\nOracle is warning about a critical PeopleSoft Suite zero-day, CVE-2026-35273, allowing unauthenticated remote code execution. The flaw is being actively exploited by the ShinyHunters extortion group in data-theft attacks. Oracle has issued mitigations. ShinyHunters claims to have stolen data from over 100 organizations running PeopleSoft.\n\n## Exploitation\n- Unauthenticated RCE against internet-facing PeopleSoft servers.\n- Tied to an ongoing ShinyHunters mass data-theft / extortion campaign.\n\n## Remediation\n- Apply Oracle's mitigations/patches for CVE-2026-35273 immediately.\n- Treat internet-exposed PeopleSoft instances as potentially compromised; hunt for webshells, exfil, and anomalous DB access.\n- Restrict external exposure; rotate credentials and secrets.\n\n## Sources\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/oracle-mitigates-peoplesoft-zero-day-exploited-in-data-theft-attacks/) \u2014 2026-06-11\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/oracle-peoplesoft-servers-hacked-in-shinyhunters-data-theft-attacks/) \u2014 2026-06-10\n\n---\n*Captured via x-bugbounty-intel-sweep \u2014 2026-06-13*\n\n## Tags\n #unverified\n\n## Update 2026-06-30 \u2014 Confirmed victim: Nissan Americas\nNissan Americas confirmed a data breach affecting current and former employees across four countries, attributed to exploitation of the Oracle PeopleSoft 0-day. See [[Nissan-Breach-Oracle-PeopleSoft-2026]].\n> Source: [@The_Cyber_News (X)](https://x.com/The_Cyber_News/status/2071815348719104170) \u2014 2026-06-30\n*Appended via x-bugbounty-intel-sweep \u2014 2026-06-30*\n\n## Update 2026-07-01 \u2014 Additional victim: NAIC\nThe National Association of Insurance Commissioners (NAIC) says the **ShinyHunters** extortion group breached its systems by exploiting the Oracle PeopleSoft zero-day, but claims **only publicly available data, outdated logs, and configuration files** were stolen. Adds to the PeopleSoft/ShinyHunters victim list (alongside Nissan).\n> Source: [BleepingComputer \u2014 NAIC says public data stolen in ShinyHunters' PeopleSoft breach](https://www.bleepingcomputer.com/news/security/naic-says-public-data-stolen-in-shinyhunters-peoplesoft-breach/) \u2014 2026-06-29\n*Appended via x-bugbounty-intel-sweep \u2014 2026-07-01*\n\n## Update 2026-09-28 \u2014 WAF-bypass technique, mass exploitation confirmed by Google, web shells deployed\n> Source: [The Hacker News](https://thehackernews.com/2026/09/attackers-bypass-wafs-to-exploit-oracle.html) \u2014 2026-09-26\n\nGoogle (Mandiant/GTIG) now describes **mass exploitation** of CVE-2026-35273 across multiple global sectors, with attackers **bypassing WAFs** in front of PeopleSoft deployments to deliver **web shells**. Activity is linked to **ShinyHunters**, consistent with the extortion campaign already tracked in this note (Nissan, NAIC, and 100+ claimed victims). This is a technical escalation from \"flaw exploited\" to \"WAF-evading mass exploitation with web shell persistence\" \u2014 organizations with any WAF-fronted PeopleSoft instance should not treat the WAF as sufficient mitigation and should hunt for web shells regardless of WAF status.\n\n*Appended via x-bugbounty-intel-sweep \u2014 2026-09-28*",
    "sev": "Critical",
    "year": "2026",
    "kev": true,
@@ -3712,7 +3767,7 @@
   },
   "CVE-2026-65660": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-65660-SharePoint-Code-Injection-Actively-Exploited-2026.md",
-   "body": "# CVE-2026-65660: Microsoft SharePoint Server Code Injection \u2014 Actively Exploited, Chains Toward Pre-Auth RCE\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 source (national CERT advisory)\n\n> Source: [Canadian Centre for Cyber Security \u2014 AL26-023](https://cyber.gc.ca/en/alerts-advisories/al26-023-vulnerability-impacting-microsoft-sharepoint-server-cve-2026-65660) \u2014 2026-09-24\n\n**Type:** CVE / code injection (CWE-94) | **Severity:** Critical | **Date:** 2026-09-24\n\n## Summary\n- **CWE-94** \u2014 Improper Control of Generation of Code (\"Code Injection\") in Microsoft SharePoint Server.\n- **Affected:**\n  - SharePoint Enterprise Server 2016 \u2014 versions prior to **16.0.5565.1001**\n  - SharePoint Server 2019 \u2014 versions prior to **16.0.10417.20198**\n  - SharePoint Server Subscription Edition \u2014 versions prior to **16.0.19725.20522**\n- **Exploitation:** actively exploited. CCCS notes it is **particularly dangerous when chained with other SharePoint flaws**, potentially enabling **pre-authentication remote code execution** on SharePoint servers configured to permit anonymous access.\n- **End-of-life note:** SharePoint Server **2016 and 2019 reached end-of-life on 2026-07-15** \u2014 those versions no longer receive security updates regardless of this advisory, making migration off them the only real fix for that population.\n\n## Why this matters\n- This is at least the **fourth** SharePoint on-prem RCE-class flaw tracked in this vault in 2026 (see cross-references) \u2014 SharePoint Server continues to be a recurring, high-value target for chained exploitation, and threat actors have repeatedly demonstrated the ability to combine \"smaller\" SharePoint bugs into full pre-auth RCE.\n- Anonymous-access-enabled SharePoint deployments (common in extranet/public-facing setups) are the highest-risk population here.\n- Organizations still running SharePoint 2016/2019 past EOL have no vendor patch path and should prioritize migration, not just this specific update.\n\n## Action\n1. Patch to the fixed builds listed above immediately.\n2. **Restrict internet exposure** of SharePoint servers, particularly anonymous-access configurations.\n3. Enable **AMSI integration** for SharePoint.\n4. Enforce **MFA for SharePoint administrators**.\n5. Monitor for IOCs: suspicious administrative activity and **web shell deployment** \u2014 CCCS specifically calls out web shells as the expected post-exploitation artifact.\n6. If still on SharePoint 2016/2019 (EOL 2026-07-15), treat migration to a supported version as the priority remediation, not just this patch.\n\n## Cross-reference\n- `Threat_Intel/CVEs/2026/Critical/CVE-2026-45454-SharePoint-Webshell-RCE.md`\n- `Threat_Intel/CVEs/2026/Critical/CVE-2026-50522-Microsoft-SharePoint-OnPrem-RCE-ActiveExploitation.md`\n- `Threat_Intel/CVEs/2026/Critical/CVE-2026-55040-SharePoint-Auth-Bypass-Exploited.md`\n- `Threat_Intel/CVEs/2026/Critical/SharePoint-Server-RCE-2026.md`\n- `Threat_Intel/CVEs/2026/High/Microsoft-SharePoint-RCE-Active-Exploitation-2026.md`\n\n## Tags\n#cve #sharepoint #code-injection #rce #actively-exploited #on-prem\n\n## Update \u2014 2026-09-26: second independent source, CVSS confirmed, X corroboration\n\n> Source: [The Hacker News](https://thehackernews.com/2026/09/sharepoint-rce-and-mikrotik-routeros.html) \u2014 2026-09-26 | [@TheCyberSecHub (X)](https://x.com/TheCyberSecHub/status/2103788329561153793) \u2014 2026-09-26\n\n- **CVSS confirmed at 8.8** (code injection allowing an authorized attacker to execute code over a network).\n- The Hacker News independently states: **\"As of 9/25/2026, Microsoft had reliable evidence of observed attacks against exploitation\"** \u2014 this is a second, independent confirmation of active exploitation beyond the original CCCS advisory.\n- Reported in the same article alongside the MikroTik \"MikroTrick\" chain (see `MikroTrick-MikroTik-RouterOS-Unauthenticated-SSH-Takeover-2026.md`), both actively exploited and both surfaced together in this sweep.\n\n**Verification upgraded to Verified \u2014 2 independent sources (CCCS, The Hacker News).**",
+   "body": "# CVE-2026-65660: Microsoft SharePoint Server Code Injection \u2014 Actively Exploited, Chains Toward Pre-Auth RCE\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 source (national CERT advisory)\n\n> Source: [Canadian Centre for Cyber Security \u2014 AL26-023](https://cyber.gc.ca/en/alerts-advisories/al26-023-vulnerability-impacting-microsoft-sharepoint-server-cve-2026-65660) \u2014 2026-09-24\n\n**Type:** CVE / code injection (CWE-94) | **Severity:** Critical | **Date:** 2026-09-24\n\n## Summary\n- **CWE-94** \u2014 Improper Control of Generation of Code (\"Code Injection\") in Microsoft SharePoint Server.\n- **Affected:**\n  - SharePoint Enterprise Server 2016 \u2014 versions prior to **16.0.5565.1001**\n  - SharePoint Server 2019 \u2014 versions prior to **16.0.10417.20198**\n  - SharePoint Server Subscription Edition \u2014 versions prior to **16.0.19725.20522**\n- **Exploitation:** actively exploited. CCCS notes it is **particularly dangerous when chained with other SharePoint flaws**, potentially enabling **pre-authentication remote code execution** on SharePoint servers configured to permit anonymous access.\n- **End-of-life note:** SharePoint Server **2016 and 2019 reached end-of-life on 2026-07-15** \u2014 those versions no longer receive security updates regardless of this advisory, making migration off them the only real fix for that population.\n\n## Why this matters\n- This is at least the **fourth** SharePoint on-prem RCE-class flaw tracked in this vault in 2026 (see cross-references) \u2014 SharePoint Server continues to be a recurring, high-value target for chained exploitation, and threat actors have repeatedly demonstrated the ability to combine \"smaller\" SharePoint bugs into full pre-auth RCE.\n- Anonymous-access-enabled SharePoint deployments (common in extranet/public-facing setups) are the highest-risk population here.\n- Organizations still running SharePoint 2016/2019 past EOL have no vendor patch path and should prioritize migration, not just this specific update.\n\n## Action\n1. Patch to the fixed builds listed above immediately.\n2. **Restrict internet exposure** of SharePoint servers, particularly anonymous-access configurations.\n3. Enable **AMSI integration** for SharePoint.\n4. Enforce **MFA for SharePoint administrators**.\n5. Monitor for IOCs: suspicious administrative activity and **web shell deployment** \u2014 CCCS specifically calls out web shells as the expected post-exploitation artifact.\n6. If still on SharePoint 2016/2019 (EOL 2026-07-15), treat migration to a supported version as the priority remediation, not just this patch.\n\n## Cross-reference\n- `Threat_Intel/CVEs/2026/Critical/CVE-2026-45454-SharePoint-Webshell-RCE.md`\n- `Threat_Intel/CVEs/2026/Critical/CVE-2026-50522-Microsoft-SharePoint-OnPrem-RCE-ActiveExploitation.md`\n- `Threat_Intel/CVEs/2026/Critical/CVE-2026-55040-SharePoint-Auth-Bypass-Exploited.md`\n- `Threat_Intel/CVEs/2026/Critical/SharePoint-Server-RCE-2026.md`\n- `Threat_Intel/CVEs/2026/High/Microsoft-SharePoint-RCE-Active-Exploitation-2026.md`\n\n## Tags\n#cve #sharepoint #code-injection #rce #actively-exploited #on-prem\n\n## Update \u2014 2026-09-26: second independent source, CVSS confirmed, X corroboration\n\n> Source: [The Hacker News](https://thehackernews.com/2026/09/sharepoint-rce-and-mikrotik-routeros.html) \u2014 2026-09-26 | [@TheCyberSecHub (X)](https://x.com/TheCyberSecHub/status/2103788329561153793) \u2014 2026-09-26\n\n- **CVSS confirmed at 8.8** (code injection allowing an authorized attacker to execute code over a network).\n- The Hacker News independently states: **\"As of 9/25/2026, Microsoft had reliable evidence of observed attacks against exploitation\"** \u2014 this is a second, independent confirmation of active exploitation beyond the original CCCS advisory.\n- Reported in the same article alongside the MikroTik \"MikroTrick\" chain (see `MikroTrick-MikroTik-RouterOS-Unauthenticated-SSH-Takeover-2026.md`), both actively exploited and both surfaced together in this sweep.\n\n**Verification upgraded to Verified \u2014 2 independent sources (CCCS, The Hacker News).**\n\n## Update \u2014 2026-09-28: CISA KEV deadline, federal patch mandate\n\n> Source: [SecurityWeek](https://www.securityweek.com/microsoft-sharepoint-flaw-cve-2026-65660-now-exploited-in-attacks/) \u2014 2026-09-28\n\n- CISA added CVE-2026-65660 to the Known Exploited Vulnerabilities (KEV) catalog with a **federal patch deadline of 2026-09-28**, confirming active exploitation status set out in the 2026-09-26 update above.\n- Corroborates prior CCCS/THN reporting; no new technical detail beyond the KEV listing and deadline.\n\n*Appended via x-bugbounty-intel-sweep \u2014 2026-09-28*",
    "sev": "Critical",
    "year": "2026",
    "kev": true,
@@ -3990,6 +4045,14 @@
    "kev": true,
    "apts": []
   },
+  "CVE-2026-82384": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-82384-Apache-Roller-XMLRPC-Unauth-Deserialization-RCE-2026.md",
+   "body": "# CVE-2026-82384 \u2014 Apache Roller 6.1.5 Unauthenticated XML-RPC Deserialization RCE\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 source (SecAlerts), corroborated by 1 secondary X post (UpwindMDR)\n\n> Source: [@SecAlertsCo (X)](https://x.com/SecAlertsCo/status/2104508839064199363) \u2014 2026-09-28 | [secalerts.co vulnerability page](https://secalerts.co/vulnerability/) \u2014 2026-09-28 | corroborating mention: [@UpwindMDR (X)](https://x.com/UpwindMDR/status/2104495934495240563) \u2014 2026-09-28\n\n**Severity:** Critical (CVSS 9.8) | **Product:** Apache Roller \u2264 6.1.5 | **Type:** Unauthenticated deserialization \u2192 full RCE | **Status:** Disclosed; exploitation status not yet confirmed in sourced reporting\n\n## Summary\nApache Roller (open-source blog/weblog server software) versions up to and including **6.1.5** are vulnerable to **unauthenticated deserialization** via the **XML-RPC endpoint**, with **no authentication and no user interaction required**, yielding **full remote code execution**. CVSS scored at **9.8**. SecAlerts flags \"CVE Risk 90/100.\"\n\n## Why this matters\n- Pre-auth deserialization-to-RCE on an internet-facing blog/CMS platform is a classic mass-exploitation profile (webshell drops, botnet recruitment, ransomware footholds) \u2014 same class of bug as prior WordPress/Confluence/XML-RPC deserialization incidents tracked elsewhere in this vault.\n- No auth + no interaction means this is scannable and exploitable at internet scale with minimal attacker effort.\n\n## Action\n1. Identify any internet-facing Apache Roller instances (\u2264 6.1.5) in the environment.\n2. Apply the vendor fix once available/confirmed, or disable/restrict the XML-RPC endpoint as an interim mitigation.\n3. Treat any exposed instance as potentially compromised pending patch; check for webshells and unexpected process execution.\n4. Revisit this note once a primary-source advisory (Apache Security, NVD/MITRE) is located \u2014 currently only secondary (SecAlerts/X) sourcing is available.\n\n## Tags\n#cve #apache-roller #xmlrpc #deserialization #rce #unauthenticated #unverified\n\n*Captured via x-bugbounty-intel-sweep \u2014 2026-09-28*",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-82923": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-82923-WordPress-AI-Website-Builder-Unauth-Arbitrary-Plugin-Install.md",
    "body": "# CVE-2026-82923 \u2014 WordPress AI Website Builder: Unauthenticated Arbitrary Plugin Installation\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n> Source: [SecAlerts \u2014 CVE-2026-82923](https://secalerts.co/vulnerability/CVE-2026-82923) \u2014 2026-09-11\n> Corroborating signal: [@SecAlertsCo](https://x.com/SecAlertsCo/status/2098334500144984319) \u2014 2026-09-11\n\n**Type:** CVE | **Severity:** Critical (CVSS 9.8) | **Date:** 2026-09-11\n\n## Summary\n\n**CVE-2026-82923**, **CVSS 9.8**. The **WordPress AI Website Builder** plugin registers **REST API routes with no authentication and no `permission_callback`**. An **unauthenticated** attacker can therefore invoke those routes to **install arbitrary plugins** on the target site \u2014 which is arbitrary code execution, since an installed plugin is PHP that WordPress loads and runs.\n\n**SecAlerts' guidance is to remove the GitHub build immediately** rather than wait for a fix. That guidance is notable in itself: the recommended remediation is removal, not upgrade, because the distribution channel does not support pushing one.\n\n**Verification caveat:** this is **single-source at time of writing** \u2014 a vulnerability-feed aggregator entry, with the vendor's own X account as corroborating signal, which is the same source. No vendor advisory, no independent write-up, and **no fixed version** has been read this sweep. The CVSS and the mechanism are as reported by SecAlerts. The missing-`permission_callback` mechanism is entirely consistent with dozens of prior WordPress REST CVEs, so the claim is plausible on its face, but it is not corroborated.\n\n## Why this matters\n\n1. **A missing `permission_callback` is a mechanical failure class, and it is trivially greppable across an estate.** `register_rest_route()` without a `permission_callback`, or with `'permission_callback' => '__return_true'`, is a one-line defect that WordPress core has warned about since 5.5. It requires no exploit development to find and no exploit development to abuse \u2014 the route is simply open. Any organisation running WordPress at scale can scan its entire plugin set for this pattern in minutes, and should, because this CVE is one instance of a population.\n\n2. **\"Install arbitrary plugin\" is the maximal WordPress primitive, and it is the quietest one.** It is not a memory-corruption bug or a webshell dropped through an upload bypass \u2014 it is a **supported administrative feature** being invoked by someone who should not be able to invoke it. The result is a normally-installed, normally-registered plugin. File-integrity monitoring sees a legitimate plugin install. Upload-path detections do not fire because nothing abnormal touched the upload path. The forensic artefact is an ordinary administrative action with no administrator behind it.\n\n3. **A GitHub-distributed plugin sits outside the wordpress.org review and auto-update path.** There is no plugin-directory listing to be closed, no security team to force a release, and \u2014 critically \u2014 **no auto-update channel to push a fix through**. Sites running this build will not receive a patch automatically even if one is written. This is why the published guidance is removal: there is no vendor channel to fix it in place.\n\n4. **The AI-builder category concentrates this risk.** These plugins exist to generate and modify site structure programmatically, so they legitimately need high-privilege operations exposed over REST. That makes a missing permission check maximally damaging by design, and it makes the \"install a plugin\" capability an intended feature of the codebase rather than a chained side effect.\n\n5. **CVSS 9.8 with no fixed version is an unusual combination.** Most critical WordPress CVEs land with a patched release in the same advisory. Here the remediation is uninstallation, which means every currently-deployed instance is vulnerable with no upgrade path \u2014 the exposure population does not shrink over time the way a normal CVE's does.\n\n## Action\n\n1. **Remove the WordPress AI Website Builder plugin now.** Deactivation is insufficient if the REST routes register on plugin load \u2014 **delete the plugin directory**. There is no fixed version to upgrade to.\n\n2. **Grep the entire plugin estate for the failure class, not just this plugin.** Search all of `wp-content/plugins/` for `register_rest_route` calls lacking a `permission_callback` or using `__return_true`. This CVE is a sample of a population and the search cost is near zero.\n\n3. **Enumerate installed plugins against a known-good baseline on every site that ran this plugin.** The exploitation outcome is a plugin that looks installed normally. Compare the current plugin list and the `active_plugins` option against your last known-good deployment record, and treat any unaccounted entry as a compromise.\n\n4. **Review access logs for `POST` and `PUT` to `/wp-json/` routes belonging to this plugin**, and for any `/wp-json/wp/v2/plugins` activity from unauthenticated sources. Scope the review back to the plugin's installation date, not to the disclosure date \u2014 there is no evidence about when this became known to attackers.\n\n5. **Block unauthenticated `/wp-json/` traffic at the edge where the site does not need a public REST API.** Most WordPress sites do not. This is the control that generalises beyond this one plugin.\n\n6. **Inventory every plugin installed from a GitHub build rather than wordpress.org**, across the estate. These are outside auto-update and outside the plugin-directory security review, and they need a manual patch-tracking owner. If nobody owns that list, the list is the finding.\n\n7. **Reconcile on the next sweep:** fixed version (if any), vendor advisory, independent corroboration, and whether exploitation has been observed. Promote verification status only on a second independent source.\n\n## Cross-reference\n\n- `CVE-2026-19598-WordPress-Pods-Unauth-Privilege-Escalation-ForceUpdate.md` \u2014 same shape: unauthenticated access to a privileged WordPress operation via missing capability enforcement.\n- `CVE-2026-63030-WordPress-wp2shell-PreAuth-RCE.md` \u2014 pre-auth RCE in a WordPress plugin; the alternative route to the same outcome.\n- `CVE-2026-15748-Forminator-WordPress-Unauth-FileUpload-RCE.md` \u2014 the upload-path variant, which unlike this one leaves obvious artefacts.\n- `WordPress-Five-Critical-Plugin-Theme-Flaws-2026-08-29.md` \u2014 the recurring plugin-ecosystem pattern this belongs to.\n- `AI-Orchestration-Platforms-14-Vulnerabilities-Endor-Labs-Flowise-Langflow-Dify-2026.md` \u2014 AI-adjacent tooling shipping privileged execution paths without an access-control model.\n\n#cve #cve-2026-82923 #wordpress #plugin #rest-api #permission-callback #unauthenticated #arbitrary-plugin-install #rce #ai-builder #github-distributed #single-source\n\n## Tags\n #single-source #unverified",
@@ -4105,6 +4168,14 @@
   "CVE-2026-87902": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-87902-WordPress-Core-Template-Resolution-Unauth-RCE-7.1.2-2026.md",
    "body": "# CVE-2026-87902 \u2014 WordPress Core: Unauthenticated Code Execution via Page Template Resolution (fixed in 7.1.2)\n\n\u26a0\ufe0f **Verification:** Corroborated \u2014 2 independent sources\n\n> Source: [The Hacker News](https://thehackernews.com/2026/09/wordpress-issues-patch-for-critical.html) \u2014 2026-09-22\n> Source: [@The_Cyber_News (X)](https://x.com/The_Cyber_News/status/2102701071403761916) \u2014 2026-09-23 (citing cybersecuritynews.com)\n\n**Type:** CVE / unauthenticated remote code execution (conditional) | **Severity:** Critical | **Date:** 2026-09-23\n\n## Summary\n\nWordPress has released **7.1.2** to fix **CVE-2026-87902**, a critical flaw in **WordPress page template resolution** \u2014 the core mechanism that decides which PHP template file renders a requested page. A remote, **unauthenticated** attacker can influence template resolution and cause WordPress to **include a readable local PHP file located outside the active theme directory**, producing code execution **on vulnerable sites under specific conditions**.\n\nThe qualifier matters and should not be dropped in retelling: this is a **local file include reached without authentication**, not a universal unauthenticated RCE. Exploitation needs a readable, attacker-useful PHP file already present on the host \u2014 which on a shared or plugin-heavy installation is a low bar, and on a hardened single-purpose install may not exist at all.\n\n## Why this matters\n\n- **This is the third distinct WordPress *core* code-execution issue recorded in this vault in under a week,** after `Click2Shell` (admin CSRF \u2192 theme install \u2192 RCE, fixed 7.1.1, 2026-09-17) and `Comment2Shell` / CVE-2026-93485 (anonymous comment XSS \u2192 RCE via admin session). Core, not plugins. The plugin ecosystem has historically absorbed the blame for WordPress RCE; three core issues in seven days is a different signal and worth calling out explicitly.\n- **The \"specific conditions\" clause is where the risk actually lives.** Multi-tenant and shared hosting is the worst case: the more PHP files reachable on the filesystem, the more likely a usable include target exists. This vault has recorded two shared-hosting privilege-escalation chains this month already (Acronis cPanel plugin CVE-2026-87886, LiteSpeed Enterprise). **A pre-auth local file include on the same class of box composes with those** \u2014 one gets you execution as the web user, the others get you root across every tenant.\n- **Patch adoption is the real exposure curve.** WordPress core auto-updates for minor releases reach most installs quickly, which is the good news; the population that matters is the one with auto-updates disabled for change-control reasons, which correlates strongly with the managed, higher-value estates.\n\n## Action\n\n1. **Update to WordPress 7.1.2 immediately** on every install.\n2. **Verify auto-update actually fired.** Check `WP_AUTO_UPDATE_CORE`, any host-level update suppression, and the reported core version \u2014 do not assume.\n3. **On shared or multi-tenant hosting, treat this as higher severity than the headline**, because the precondition (readable PHP outside the theme directory) is effectively guaranteed.\n4. **Hunt for exploitation:** requests with unusual template, page-template or path-like parameters; PHP execution originating from files outside the active theme; new or modified files in `wp-content/uploads`; unexpected outbound connections from the web user.\n5. **Reduce the include surface:** remove unused themes and plugins, disallow PHP execution in uploads directories, and confirm `open_basedir` / per-tenant isolation is actually enforced on shared hosts.\n6. **Check whether 7.1.1 was ever applied.** A site still on 7.1.0 is exposed to Click2Shell *and* this flaw.\n\n## Cross-reference\n\n- `Threat_Intel/CVEs/2026/High/Click2Shell-WordPress-Admin-CSRF-Theme-Install-RCE-WP-7.1.1-2026.md`\n- `Threat_Intel/CVEs/2026/Critical/CVE-2026-93485-WordPress-Core-Comment2Shell-Anonymous-Comment-XSS-To-RCE-2026.md`\n- `Threat_Intel/CVEs/2026/Critical/LiteSpeed-Enterprise-Shared-Hosting-Low-Privilege-User-To-Root-2026.md`\n\n## Tags\n#cve #wordpress #wordpress-core #lfi #rce #unauthenticated #shared-hosting #template-resolution #critical #corroborated\n\n\n## Update \u2014 2026-09-24: exploited in the wild within hours of disclosure; CVSS 9.2; CCCS AV26-952\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-start-exploiting-critical-wordpress-flaw-for-code-execution/) \u2014 2026-09-23 | [The Hacker News](https://thehackernews.com/2026/09/attackers-exploit-wordpress-cve-2026.html) \u2014 2026-09-24 | [SecurityWeek](https://www.securityweek.com/critical-wordpress-vulnerability-exploited-immediately-after-disclosure/) \u2014 2026-09-24 | [CCCS AV26-952](https://cyber.gc.ca/en/alerts-advisories/wordpress-security-advisory-av26-952) \u2014 2026-09-23\n\n- **Status: exploited in the wild.** Attackers moved from probing to exploitation **within hours of disclosure**. They **write files to disk that run shell commands when accessed**, i.e. web shells.\n- **CVSS 9.2.** The mechanism: path traversal that makes `get_page_template()` include an attacker-chosen local `.php` file. GHSA-7hp8-65ch-5whp.\n- **Fixed in 7.1.2** (CCCS AV26-952 confirms \"WordPress before 7.1.2\").\n- **Changed action:** if a site ran < 7.1.2 at any point after 2026-09-22, **don't only patch; hunt for dropped PHP files.** Look for PHP files modified since 2026-09-22 in `wp-content/`, uploads and theme directories, and for web-server logs with traversal sequences in template-related parameters.\n- **Chain risk realised this week:** the cPanel account-to-root flaw **CVE-2026-87899**, disclosed the same day, gives the root step on shared hosting. See `CVE-2026-87899-cPanel-CalDAV-CardDAV-Account-To-Root-WP-Toolkit-CVE-2026-87900-2026.md`.\n\n## Update \u2014 2026-09-26: CISA KEV addition confirmed\n> Source: [CCCS AV26-952 Update 1](https://cyber.gc.ca/en/alerts-advisories/wordpress-security-advisory-av26-952) \u2014 2026-09-25\n\n- **CISA added CVE-2026-87902 to the Known Exploited Vulnerabilities (KEV) catalog on 2026-09-25**, formalizing the active-exploitation status already tracked above. No new technical detail beyond the KEV listing itself.",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": true,
+   "apts": []
+  },
+  "CVE-2026-88771": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-88771-88772-Citrix-NetScaler-Dual-RCE-ZeroDays-2026.md",
+   "body": "# CVE-2026-88771 / CVE-2026-88772 \u2014 Citrix NetScaler ADC/Gateway Dual RCE Zero-Days (Actively Exploited)\n\n\u2705 **Verification:** Verified \u2014 4 independent sources (BleepingComputer, SecurityWeek, The Hacker News, CCCS)\n\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/citrix-admins-warned-to-shut-down-netscalers-over-2-exploited-zero-days/) \u2014 2026-09-27 | [SecurityWeek](https://www.securityweek.com/citrix-confirms-2-netscaler-zero-days-after-admins-pulled-the-plug/) \u2014 2026-09-28 | [The Hacker News](https://thehackernews.com/2026/09/warning-two-unpatched-citrix-netscaler.html) \u2014 2026-09-27 | [CCCS AL26-024](https://cyber.gc.ca/en/alerts-advisories/al26-024-critical-vulnerabilities-affecting-citrix-netscaler-adc-netscaler-gateway-cve-2026-88771-cve-2026-88772) \u2014 2026-09-27 | [BleepingComputer \u2014 CISA federal deadline](https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-exploited-citrix-flaws-by-wednesday/) \u2014 2026-09-28\n\n**Severity:** Critical | **Product:** Citrix NetScaler ADC / NetScaler Gateway | **Type:** Unauthenticated remote code execution (dual zero-day) | **Status:** Actively exploited in the wild\n\n## Summary\nCitrix confirmed two critical, unauthenticated remote code execution vulnerabilities in NetScaler ADC and NetScaler Gateway \u2014 **CVE-2026-88771** and **CVE-2026-88772** \u2014 are being actively exploited. Notably, **one of the two flaws affects every NetScaler deployment in its default configuration** (per The Hacker News), making this an unusually broad exposure window rather than a narrow edge-case bug. Admins reportedly began pulling NetScaler appliances offline on their own initiative before Citrix's official confirmation, and Citrix shipped patches alongside six other, lower-severity flaws in the same release. CCCS (Canada) confirms active exploitation \"across multiple customer environments worldwide.\" CISA has ordered US federal agencies to patch by **Wednesday, 2026-09-30** (per BleepingComputer's \"by Wednesday\" framing on 2026-09-28).\n\n## Why this matters\n- NetScaler ADC/Gateway is a recurring, high-value target class in this vault (see cross-references below) \u2014 this is the latest in a long line of NetScaler pre-auth RCE/auth-bypass chains dating back to CVE-2019-19781, and continuing through CVE-2026-19489/19490 and CVE-2026-8451/8452 earlier this year.\n- One flaw reportedly affects **every deployment in default configuration** \u2014 this is a much wider blast radius than a typical NetScaler CVE, which usually requires a specific feature (Gateway, AAA vServer, etc.) to be enabled.\n- The pattern of admins shutting down appliances before vendor confirmation suggests either leaked/observed exploitation intelligence reached defenders early, or in-the-wild indicators were visible enough to act on without waiting for an official advisory.\n\n## Action\n1. Patch NetScaler ADC and NetScaler Gateway to the fixed builds immediately \u2014 treat as emergency/out-of-band patching given confirmed active exploitation.\n2. If patching cannot happen immediately, follow Citrix's guidance on temporary shutdown/isolation for internet-facing appliances.\n3. Hunt for post-exploitation indicators (web shells, unexpected config changes, anomalous admin sessions) on any NetScaler appliance that was internet-facing during the exposure window.\n4. US federal entities: CISA deadline is 2026-09-30 \u2014 do not wait past this.\n\n## Cross-reference\n- `Threat_Intel/CVEs/2026/Critical/CVE-2026-19490-19489-Citrix-NetScaler-Auth-Bypass.md`\n- `Threat_Intel/CVEs/2026/High/CVE-2026-8451-Citrix-NetScaler-Memory-Overread.md`\n- `Threat_Intel/CVEs/2026/High/CVE-2026-8452.md`\n- `Threat_Intel/CVEs/2026/High/CISA-KEV-2026-08-26-Six-Flaws-NetScaler-Linux-SQLServer-AjaxPro.md`\n\n## Tags\n#cve #citrix #netscaler #rce #actively-exploited #zero-day #dual-cve\n\n*Captured via x-bugbounty-intel-sweep \u2014 2026-09-28*",
    "sev": "Critical",
    "year": "2026",
    "kev": true,
@@ -5209,6 +5280,14 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-100696": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-100696.md",
+   "body": "# CVE-2026-100696\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\n7. Newer AdminerEvo-fork CVEs (CVE-2026-100696/100697, 'Adminer 4.16.0-6.0.1') are a DIFFERENT, later-versioned fork's codebase (AdminerEvo continued version numbering past the original project's abandonment at 4.8.1) -- not applicable to this file, recorded as not-applicable rather than silently dropped.\n\n## Where it appears in this vault\n- `BugBounty/notes/goatclub-adminer-4-8-1-source-deepdive-observations.md` \u2014 7. Newer AdminerEvo-fork CVEs (CVE-2026-100696/100697, 'Adminer 4.16.0-6.0.1') are a DIFFERENT, later-versioned fork's codebase (AdminerEvo continued version numbering past the original project's abandonment at 4.8.1) -- not applicable to this file, recorded as not-applicable rather than silently dropped.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-100696\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-100696\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-100696\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-12345": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-12345.md",
    "body": "# CVE-2026-12345\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u2139\ufe0f **Enriched** \u2014 this note now contains captured intel beyond the auto-stub baseline. Verify specifics against the linked sources.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\n{ label: \"\ud83d\udc1e New CVE\",            template: \"Templates/CVE Tracker Template.md\",         folder: \"Threat_Intel/CVEs\", ask: \"CVE id (e.g. CVE-2026-12345)\" },\n\n## Where it appears in this vault\n- `\ud83c\udfe0 SOC Vault Homepage.md` \u2014 { label: \"\ud83d\udc1e New CVE\",            template: \"Templates/CVE Tracker Template.md\",         folder: \"Threat_Intel/CVEs\", ask: \"CVE id (e.g. CVE-2026-12345)\" },\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-12345\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-12345\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-12345\n\n## Tags\n#cve #2026 #unrated #enriched #verified\n\n---\n\n## \u26a0\ufe0f FALSE POSITIVE \u2014 not a real CVE reference (flagged 2026-09-04)\n\n**This stub should not exist and its identifier is not a real vulnerability in this vault's scope.**\n\n`make_cve_notes.py` extracted `CVE-2026-12345` from a **placeholder example string** in `\ud83c\udfe0 SOC Vault Homepage.md`:\n\n`ask: \"CVE id (e.g. CVE-2026-12345)\"`\n\n\u2014 which is the prompt text of a Templater quick-add button, not an intel reference. `CVE-2026-12345` is the conventional dummy identifier used in documentation examples.\n\n**Impact:** it inflates the `referenced` count in the CVE-coverage metric by one and adds a permanent empty stub to `Threat_Intel/CVEs/2026/Unrated/`.\n\n**Recommended fix (left for the vault owner \u2014 this sweep does not delete files):**\n1. Delete this file.\n2. Add an exclusion to `Dashboards/make_cve_notes.py` so the CVE regex skips: (a) matches inside `e.g.`/`example` contexts, (b) an explicit denylist containing `CVE-2026-12345`, or (c) the `\ud83c\udfe0 SOC Vault Homepage.md` file entirely, since it is a navigation page rather than an intel note.\n\nOption (b) is the smallest safe change. Without it this stub will be silently regenerated on every sweep.\n\n## Tags\n#false-positive #enriched-error #tooling-bug #do-not-cite #verified",
@@ -5220,6 +5299,14 @@
   "CVE-2026-12974": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-12974.md",
    "body": "# CVE-2026-12974\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-12974\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-12974\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-12974\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-13340": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-13340.md",
+   "body": "# CVE-2026-13340\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nA3 - .svgz skips the sanitiser entirely. CVE-2026-13340, fixed in 2.5.17 (NOT novel - corrected 2026-09-28).\n\n## Where it appears in this vault\n- `BugBounty/leads/goatclub-third-party-plugin-advisory-matches-leads.md` \u2014 A3 - .svgz skips the sanitiser entirely. CVE-2026-13340, fixed in 2.5.17 (NOT novel - corrected 2026-09-28).\n- `BugBounty/leads/goatclub-third-party-plugin-advisory-matches-leads.md` \u2014 register as \"patched 2.5.15\". BOTH are wrong. The svgz bypass is CVE-2026-13340 and was fixed in **2.5.17**; 2.5.15\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-13340\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-13340\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-13340\n\n## Tags\n#cve #2026 #unrated #auto-stub",
    "sev": "",
    "year": "2026",
    "kev": false,
@@ -5633,6 +5720,14 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-48973": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-48973.md",
+   "body": "# CVE-2026-48973\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nfixed the unrelated CVE-2026-48973 and CVE-2025-55166. Deployed 2.5.14 is still in range, so the mechanism stands, but\n\n## Where it appears in this vault\n- `BugBounty/leads/goatclub-third-party-plugin-advisory-matches-leads.md` \u2014 fixed the unrelated CVE-2026-48973 and CVE-2025-55166. Deployed 2.5.14 is still in range, so the mechanism stands, but\n- `BugBounty/leads/goatclub-third-party-plugin-advisory-matches-leads.md` \u2014 SVG Support CVE-2026-48973 (<=2.5.14) code matches at functions/featured-image.php:140/:149/:160 BUT is likely UNREACHABLE: the nonce action 'svg-support-featured' verified at :136 is generated NOWHERE in the entire tree. A Contributor cannot forge an HMAC keyed by NONCE_SALT. Consistent with Patchstack 'unlikely to be exploited'. Downgrade, do not chase.\n- `BugBounty/notes/goatclub-campaign-distillation-coverage-audit-observations.md` \u2014 SVG Support CVE-2026-48973 unreachable* \u2014 rests on `wp_create_nonce('svg-support-featured')`\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-48973\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-48973\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-48973\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-50343": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-50343.md",
    "body": "# CVE-2026-50343\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-50343\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-50343\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-50343\n\n## Tags\n#cve #2026 #unrated #auto-stub",
@@ -5960,98 +6055,106 @@
    "year": "2026",
    "kev": true,
    "apts": []
+  },
+  "CVE-2026-88772": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-88772.md",
+   "body": "# CVE-2026-88772\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-88772\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-88772\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-88772\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": true,
+   "apts": []
   }
  },
  "recent": [
   {
-   "title": "goatclub-source-tree-observations",
-   "file": "BugBounty/notes/goatclub-source-tree-observations.md",
+   "title": "goatclub-acf-template-stored-xss-admin-escalation-finding",
+   "file": "BugBounty/findings/goatclub-acf-template-stored-xss-admin-escalation-finding.md",
    "cat": "other",
-   "ts": "2026-09-27"
+   "ts": "2026-09-28"
   },
   {
-   "title": "session-2026-09-27",
-   "file": "BugBounty/notes/session-2026-09-27.md",
+   "title": "goatclub-get-token-auth-bypass-finding",
+   "file": "BugBounty/findings/goatclub-get-token-auth-bypass-finding.md",
    "cat": "other",
-   "ts": "2026-09-27"
+   "ts": "2026-09-28"
   },
   {
-   "title": "goatclub-scope",
-   "file": "BugBounty/scopes/goatclub-scope.md",
+   "title": "goatclub-jwt-no-authorization-draw-control-finding",
+   "file": "BugBounty/findings/goatclub-jwt-no-authorization-draw-control-finding.md",
    "cat": "other",
-   "ts": "2026-09-27"
+   "ts": "2026-09-28"
   },
   {
-   "title": "optus-myhub-graphql-guest-file-disclosure-finding",
-   "file": "BugBounty/findings/optus-myhub-graphql-guest-file-disclosure-finding.md",
+   "title": "goatclub-login-csrf-hook-priority-finding",
+   "file": "BugBounty/findings/goatclub-login-csrf-hook-priority-finding.md",
    "cat": "other",
-   "ts": "2026-09-26"
+   "ts": "2026-09-28"
   },
   {
-   "title": "optus-myhub-guest-document-destruction-chain-finding",
-   "file": "BugBounty/findings/optus-myhub-guest-document-destruction-chain-finding.md",
+   "title": "goatclub-maintenance-mode-static-cookie-bypass-finding",
+   "file": "BugBounty/findings/goatclub-maintenance-mode-static-cookie-bypass-finding.md",
    "cat": "other",
-   "ts": "2026-09-26"
+   "ts": "2026-09-28"
   },
   {
-   "title": "session-2026-09-26",
-   "file": "BugBounty/notes/session-2026-09-26.md",
+   "title": "goatclub-order-forgery-mass-assignment-finding",
+   "file": "BugBounty/findings/goatclub-order-forgery-mass-assignment-finding.md",
    "cat": "other",
-   "ts": "2026-09-26"
+   "ts": "2026-09-28"
   },
   {
-   "title": "optus-myhub-graphql-guest-file-disclosure-report",
-   "file": "BugBounty/reports/optus-myhub-graphql-guest-file-disclosure-report.md",
+   "title": "goatclub-pre-draw-server-seed-disclosure-finding",
+   "file": "BugBounty/findings/goatclub-pre-draw-server-seed-disclosure-finding.md",
    "cat": "other",
-   "ts": "2026-09-26"
+   "ts": "2026-09-28"
   },
   {
-   "title": "optus-myhub-guest-document-destruction-report",
-   "file": "BugBounty/reports/optus-myhub-guest-document-destruction-report.md",
+   "title": "goatclub-svg-support-svgz-sanitiser-bypass-finding",
+   "file": "BugBounty/findings/goatclub-svg-support-svgz-sanitiser-bypass-finding.md",
    "cat": "other",
-   "ts": "2026-09-26"
+   "ts": "2026-09-28"
   },
   {
-   "title": "optus-scope",
-   "file": "BugBounty/scopes/optus-scope.md",
+   "title": "goatclub-adminer-unrestricted-in-tree-reachability-leads",
+   "file": "BugBounty/leads/goatclub-adminer-unrestricted-in-tree-reachability-leads.md",
    "cat": "other",
-   "ts": "2026-09-26"
+   "ts": "2026-09-28"
   },
   {
-   "title": "Microsoft-Titan-JWT-None-Algorithm-17-Trillion-Records-Faav-2026",
-   "file": "Guides/AI-BugBounty/Microsoft-Titan-JWT-None-Algorithm-17-Trillion-Records-Faav-2026.md",
-   "cat": "ai-bugbounty",
-   "ts": "2026-09-26"
+   "title": "goatclub-cross-site-billing-email-rewrite-sync-id-collision-leads",
+   "file": "BugBounty/leads/goatclub-cross-site-billing-email-rewrite-sync-id-collision-leads.md",
+   "cat": "other",
+   "ts": "2026-09-28"
   },
   {
-   "title": "OpenAI-Agent-Australian-Medicare-Portal-Access-Control-Bypass-2026",
-   "file": "Guides/AI-BugBounty/OpenAI-Agent-Australian-Medicare-Portal-Access-Control-Bypass-2026.md",
-   "cat": "ai-bugbounty",
-   "ts": "2026-09-26"
+   "title": "goatclub-goat-api-get-token-auth-bypass-candidate-leads",
+   "file": "BugBounty/leads/goatclub-goat-api-get-token-auth-bypass-candidate-leads.md",
+   "cat": "other",
+   "ts": "2026-09-28"
   },
   {
-   "title": "Storm-3168-JADEPUFFER-Agentic-Ransomware-Azure-Service-Principal-2026",
-   "file": "Guides/AI-BugBounty/Storm-3168-JADEPUFFER-Agentic-Ransomware-Azure-Service-Principal-2026.md",
-   "cat": "ai-bugbounty",
-   "ts": "2026-09-26"
+   "title": "goatclub-goatclub-acf-flexible-template-no-capability-check-leads",
+   "file": "BugBounty/leads/goatclub-goatclub-acf-flexible-template-no-capability-check-leads.md",
+   "cat": "other",
+   "ts": "2026-09-28"
   },
   {
-   "title": "Adif-Renfe-Spain-Rail-Cyberattack-AI-Assisted-2026",
-   "file": "Threat_Intel/Breaches/Adif-Renfe-Spain-Rail-Cyberattack-AI-Assisted-2026.md",
-   "cat": "breach",
-   "ts": "2026-09-26"
+   "title": "goatclub-goatclub-clear-add-checkout-price-leads",
+   "file": "BugBounty/leads/goatclub-goatclub-clear-add-checkout-price-leads.md",
+   "cat": "other",
+   "ts": "2026-09-28"
   },
   {
-   "title": "bitget-crypto-exchange-hack-2026",
-   "file": "Threat_Intel/Breaches/bitget-crypto-exchange-hack-2026.md",
-   "cat": "breach",
-   "ts": "2026-09-26"
+   "title": "goatclub-goatclub-verify-winner-unbounded-enum-and-guess-oracle-leads",
+   "file": "BugBounty/leads/goatclub-goatclub-verify-winner-unbounded-enum-and-guess-oracle-leads.md",
+   "cat": "other",
+   "ts": "2026-09-28"
   },
   {
-   "title": "Dyfed-Powys-Police-Wales-Cyberattack-2026",
-   "file": "Threat_Intel/Breaches/Dyfed-Powys-Police-Wales-Cyberattack-2026.md",
-   "cat": "breach",
-   "ts": "2026-09-26"
+   "title": "goatclub-jsintel-minor-client-derived-items-leads",
+   "file": "BugBounty/leads/goatclub-jsintel-minor-client-derived-items-leads.md",
+   "cat": "other",
+   "ts": "2026-09-28"
   }
  ],
  "kev_referenced": [
@@ -6072,6 +6175,7 @@
   "CVE-2019-2725",
   "CVE-2020-10189",
   "CVE-2020-14882",
+  "CVE-2021-21311",
   "CVE-2021-21551",
   "CVE-2021-23758",
   "CVE-2021-26855",
@@ -6195,6 +6299,8 @@
   "CVE-2026-87491",
   "CVE-2026-87886",
   "CVE-2026-87902",
+  "CVE-2026-88771",
+  "CVE-2026-88772",
   "CVE-2026-9082",
   "CVE-2026-93616",
   "CVE-2026-94127",
@@ -6887,6 +6993,13 @@
    "cves": 630,
    "breaches": 143,
    "malware": 168
+  },
+  {
+   "date": "2026-09-28",
+   "intel_items": 1643,
+   "cves": 644,
+   "breaches": 143,
+   "malware": 170
   }
  ]
 }
