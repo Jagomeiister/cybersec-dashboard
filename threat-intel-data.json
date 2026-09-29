@@ -1,10 +1,10 @@
 {
- "generated": "2026-09-28 20:45",
- "today": "2026-09-28",
+ "generated": "2026-09-29 20:45",
+ "today": "2026-09-29",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
-  "cves": 644,
+  "cves": 650,
   "breaches": 143,
   "malware": 170,
   "supplychain": 73,
@@ -30,17 +30,17 @@
    "by_src": {}
   },
   "month": {
-   "total": 592,
+   "total": 584,
    "by_cat": {
-    "misc": 99,
-    "other": 45,
-    "cve": 160,
-    "breach": 72,
     "malware": 75,
-    "ai-bugbounty": 55,
     "tool": 13,
     "supplychain": 21,
+    "ai-bugbounty": 53,
     "technique": 50,
+    "breach": 71,
+    "other": 43,
+    "cve": 158,
+    "misc": 98,
     "command": 2
    },
    "by_src": {}
@@ -1860,7 +1860,7 @@
  "cve_sev": {
   "Critical": 260,
   "High": 183,
-  "Low": 34,
+  "Low": 35,
   "Medium": 24
  },
  "cve_year": {
@@ -1871,8 +1871,8 @@
   "2019": 6,
   "2020": 4,
   "2021": 14,
-  "2022": 9,
-  "2023": 15,
+  "2022": 13,
+  "2023": 17,
   "2024": 14,
   "2025": 30,
   "2026": 540
@@ -2305,6 +2305,14 @@
     "APT28"
    ]
   },
+  "CVE-2022-31813": {
+   "file": "Threat_Intel/CVEs/2022/Low/CVE-2022-31813.md",
+   "body": "# CVE-2022-31813\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Low  \n**Year:** 2022\n\n## Summary\nCVE-2022-31813 | mod_proxy | X-Forwarded-For dropped via hop-by-hop mechanism, allows IP spoof to backend | 2.4.52-1ubuntu4.1 | null |\n\n## Where it appears in this vault\n- `BugBounty/notes/goatclub-apache-2-4-52-advisory-match-and-corpus-sweep-observations.md` \u2014 CVE-2022-31813 | mod_proxy | X-Forwarded-For dropped via hop-by-hop mechanism, allows IP spoof to backend | 2.4.52-1ubuntu4.1 | null |\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2022-31813\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2022-31813\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-31813\n\n## Tags\n#cve #2022 #low #auto-stub",
+   "sev": "Low",
+   "year": "2022",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2022-45910": {
    "file": "Threat_Intel/CVEs/2022/Low/CVE-2022-45910.md",
    "body": "# CVE-2022-45910\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Low  \n**Year:** 2022\n\n## Summary\nCVE-2022-45910** \u2014 Apache ManifoldCF: LDAP injection in user lookup allows manipulation of LDAP search queries\n\n## Where it appears in this vault\n- `BugBounty/05-Injection-Variants.md` \u2014 CVE-2022-45910** \u2014 Apache ManifoldCF: LDAP injection in user lookup allows manipulation of LDAP search queries\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2022-45910\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2022-45910\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-45910\n\n## Tags\n#cve #2022 #low #auto-stub #verified",
@@ -2329,6 +2337,14 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2022-22720": {
+   "file": "Threat_Intel/CVEs/2022/Unrated/CVE-2022-22720.md",
+   "body": "# CVE-2022-22720\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2022\n\n## Summary\nCVE-2022-22720 | core | HTTP request smuggling via malformed chunked/error handling | 2.4.52-1ubuntu2 (PRE-DATES jammy's GA base of 2.4.52-1ubuntu4) | false \u2014 fixed before jammy ever shipped, cannot be present regardless of patch level |\n\n## Where it appears in this vault\n- `BugBounty/notes/goatclub-apache-2-4-52-advisory-match-and-corpus-sweep-observations.md` \u2014 CVE-2022-22720 | core | HTTP request smuggling via malformed chunked/error handling | 2.4.52-1ubuntu2 (PRE-DATES jammy's GA base of 2.4.52-1ubuntu4) | false \u2014 fixed before jammy ever shipped, cannot be present regardless of patch level |\n- `BugBounty/notes/goatclub-apache-2-4-52-advisory-match-and-corpus-sweep-observations.md` \u2014 The captured `Server: Apache/2.4.52 (Ubuntu)` header does NOT include the Debian/Ubuntu package suffix (`-1ubuntuN.M`). Confirmed against ubuntu.com/security: jammy's apache2 stays pinned at upstream base string `2.4.52` for its ENTIRE support life while receiving backported point-release security fixes under a climbing `-1ubuntu4.X` suffix \u2014 X=1 through at least X=20 observed above, spanning CVEs from 2022 through 2026. A `2.4.52-1ubuntu4.20` box is fully patched against everything in the table above; a hypothetical unpatched `2.4.52-1ubuntu4` (GA, March 2022) is vulnerable to all of it bar the Windows-only and pre-GA items. The version banner alone cannot distinguish these. Every `present` value above is therefore `null` (advisory read, not checked) except the two explicit `false` entries (Windows-only CVE-2024-38472 on a Linux host; CVE-2022-22720 fixed pre-GA so structurally absent regardless of patch level). None of this can be resolved without either (a) the exact `dpkg -l apache2` version string, unobtainable without host/shell access we don't have, or (b) live-host authorisation to send a request that would reveal the patch level indirectly (e.g. a differential-response probe) \u2014 which is itself blocked by the current scope ruling.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2022-22720\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2022-22720\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-22720\n\n## Tags\n#cve #2022 #unrated #auto-stub",
+   "sev": "",
+   "year": "2022",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2022-2526": {
    "file": "Threat_Intel/CVEs/2022/Unrated/CVE-2022-2526.md",
    "body": "# CVE-2022-2526\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2022\n\n## Summary\nFinding 8: DNS Stream Use-After-Free (Historical \u2014 CVE-2022-2526)\n\n## Where it appears in this vault\n- `BugBounty/findings/systemd-resolved-findings.md` \u2014 Finding 8: DNS Stream Use-After-Free (Historical \u2014 CVE-2022-2526)\n- `BugBounty/findings/systemd-resolved-findings.md` \u2014 CVE**: CVE-2022-2526\n- `BugBounty/findings/systemd-resolved-findings.md` \u2014 CVE-2022-2526 is a known, patched CVE\n- `BugBounty/findings/systemd-resolved-findings.md` \u2014 https://nvd.nist.gov/vuln/detail/CVE-2022-2526 \u2014 DnsStream UAF\n- `BugBounty/notes/systemd-resolved-observations.md` \u2014 CVE-2022-2526 | DnsStream UAF | v252+ |\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2022-2526\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2022-2526\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-2526\n\n## Tags\n#cve #2022 #unrated #auto-stub #verified",
@@ -2343,6 +2359,22 @@
    "sev": "",
    "year": "2022",
    "kev": true,
+   "apts": []
+  },
+  "CVE-2022-35235": {
+   "file": "Threat_Intel/CVEs/2022/Unrated/CVE-2022-35235.md",
+   "body": "# CVE-2022-35235\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2022\n\n## Summary\nCVE-2022-35235 | <= 2.6 | 3.0 | Directory traversal / arbitrary file read | Administrator+ |\n\n## Where it appears in this vault\n- `BugBounty/leads/goatclub-r6-styles-embeds-wpide-file-manager-code-editor-leads.md` \u2014 CVE-2022-35235 | <= 2.6 | 3.0 | Directory traversal / arbitrary file read | Administrator+ |\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2022-35235\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2022-35235\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-35235\n\n## Tags\n#cve #2022 #unrated #auto-stub",
+   "sev": "",
+   "year": "2022",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2022-40217": {
+   "file": "Threat_Intel/CVEs/2022/Unrated/CVE-2022-40217.md",
+   "body": "# CVE-2022-40217\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2022\n\n## Summary\nCVE-2022-40217 | <= 2.6 | 3.0 | Arbitrary file upload / file edit | Administrator+ |\n\n## Where it appears in this vault\n- `BugBounty/leads/goatclub-r6-styles-embeds-wpide-file-manager-code-editor-leads.md` \u2014 CVE-2022-40217 | <= 2.6 | 3.0 | Arbitrary file upload / file edit | Administrator+ |\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2022-40217\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2022-40217\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40217\n\n## Tags\n#cve #2022 #unrated #auto-stub",
+   "sev": "",
+   "year": "2022",
+   "kev": false,
    "apts": []
   },
   "CVE-2023-20198": {
@@ -2443,12 +2475,28 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2023-25690": {
+   "file": "Threat_Intel/CVEs/2023/Unrated/CVE-2023-25690.md",
+   "body": "# CVE-2023-25690\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2023\n\n## Summary\nCVE-2023-25690 | mod_proxy, mod_rewrite | HTTP request smuggling via RewriteRule/ProxyPassMatch substitution into backend URL | 2.4.52-1ubuntu4.4 | null |\n\n## Where it appears in this vault\n- `BugBounty/notes/goatclub-apache-2-4-52-advisory-match-and-corpus-sweep-observations.md` \u2014 CVE-2023-25690 | mod_proxy, mod_rewrite | HTTP request smuggling via RewriteRule/ProxyPassMatch substitution into backend URL | 2.4.52-1ubuntu4.4 | null |\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2023-25690\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2023-25690\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-25690\n\n## Tags\n#cve #2023 #unrated #auto-stub",
+   "sev": "",
+   "year": "2023",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2023-27350": {
    "file": "Threat_Intel/CVEs/2023/Unrated/CVE-2023-27350.md",
    "body": "# CVE-2023-27350\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2023\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2023-27350\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2023-27350\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-27350\n\n## Tags\n#cve #2023 #unrated #auto-stub #verified",
    "sev": "",
    "year": "2023",
    "kev": true,
+   "apts": []
+  },
+  "CVE-2023-38709": {
+   "file": "Threat_Intel/CVEs/2023/Unrated/CVE-2023-38709.md",
+   "body": "# CVE-2023-38709\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2023\n\n## Summary\nCVE-2023-38709 | core | HTTP response splitting from malicious/reflected backend response | 2.4.52-1ubuntu4.9 | null |\n\n## Where it appears in this vault\n- `BugBounty/notes/goatclub-apache-2-4-52-advisory-match-and-corpus-sweep-observations.md` \u2014 CVE-2023-38709 | core | HTTP response splitting from malicious/reflected backend response | 2.4.52-1ubuntu4.9 | null |\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2023-38709\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2023-38709\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38709\n\n## Tags\n#cve #2023 #unrated #auto-stub",
+   "sev": "",
+   "year": "2023",
+   "kev": false,
    "apts": []
   },
   "CVE-2023-49733": {
@@ -6067,94 +6115,94 @@
  },
  "recent": [
   {
-   "title": "goatclub-acf-template-stored-xss-admin-escalation-finding",
-   "file": "BugBounty/findings/goatclub-acf-template-stored-xss-admin-escalation-finding.md",
+   "title": "goatclub-git-directory-exposed-finding",
+   "file": "BugBounty/findings/goatclub-git-directory-exposed-finding.md",
    "cat": "other",
-   "ts": "2026-09-28"
+   "ts": "2026-09-29"
   },
   {
-   "title": "goatclub-get-token-auth-bypass-finding",
-   "file": "BugBounty/findings/goatclub-get-token-auth-bypass-finding.md",
+   "title": "goatclub-ajax-order-guest-nonce-reuse-verbose-error-leads",
+   "file": "BugBounty/leads/goatclub-ajax-order-guest-nonce-reuse-verbose-error-leads.md",
    "cat": "other",
-   "ts": "2026-09-28"
+   "ts": "2026-09-29"
   },
   {
-   "title": "goatclub-jwt-no-authorization-draw-control-finding",
-   "file": "BugBounty/findings/goatclub-jwt-no-authorization-draw-control-finding.md",
+   "title": "goatclub-live-host-work-items-blocked-leads",
+   "file": "BugBounty/leads/goatclub-live-host-work-items-blocked-leads.md",
    "cat": "other",
-   "ts": "2026-09-28"
+   "ts": "2026-09-29"
   },
   {
-   "title": "goatclub-login-csrf-hook-priority-finding",
-   "file": "BugBounty/findings/goatclub-login-csrf-hook-priority-finding.md",
+   "title": "goatclub-r6-styles-embeds-wpide-file-manager-code-editor-leads",
+   "file": "BugBounty/leads/goatclub-r6-styles-embeds-wpide-file-manager-code-editor-leads.md",
    "cat": "other",
-   "ts": "2026-09-28"
+   "ts": "2026-09-29"
   },
   {
-   "title": "goatclub-maintenance-mode-static-cookie-bypass-finding",
-   "file": "BugBounty/findings/goatclub-maintenance-mode-static-cookie-bypass-finding.md",
+   "title": "goatclub-staging-main-host-unblocks-runtime-gated-candidates-leads",
+   "file": "BugBounty/leads/goatclub-staging-main-host-unblocks-runtime-gated-candidates-leads.md",
    "cat": "other",
-   "ts": "2026-09-28"
+   "ts": "2026-09-29"
   },
   {
-   "title": "goatclub-order-forgery-mass-assignment-finding",
-   "file": "BugBounty/findings/goatclub-order-forgery-mass-assignment-finding.md",
+   "title": "bb-bot--host-column-review-outcome-observations",
+   "file": "BugBounty/notes/bb-bot--host-column-review-outcome-observations.md",
    "cat": "other",
-   "ts": "2026-09-28"
+   "ts": "2026-09-29"
   },
   {
-   "title": "goatclub-pre-draw-server-seed-disclosure-finding",
-   "file": "BugBounty/findings/goatclub-pre-draw-server-seed-disclosure-finding.md",
+   "title": "goatclub-apache-2-4-52-advisory-match-and-corpus-sweep-observations",
+   "file": "BugBounty/notes/goatclub-apache-2-4-52-advisory-match-and-corpus-sweep-observations.md",
    "cat": "other",
-   "ts": "2026-09-28"
+   "ts": "2026-09-29"
   },
   {
-   "title": "goatclub-svg-support-svgz-sanitiser-bypass-finding",
-   "file": "BugBounty/findings/goatclub-svg-support-svgz-sanitiser-bypass-finding.md",
+   "title": "goatclub-caido-25-capture-full-extraction-observations",
+   "file": "BugBounty/notes/goatclub-caido-25-capture-full-extraction-observations.md",
    "cat": "other",
-   "ts": "2026-09-28"
+   "ts": "2026-09-29"
   },
   {
-   "title": "goatclub-adminer-unrestricted-in-tree-reachability-leads",
-   "file": "BugBounty/leads/goatclub-adminer-unrestricted-in-tree-reachability-leads.md",
+   "title": "goatclub-jsintel-admin-inline-js-nonce-provenance-observations",
+   "file": "BugBounty/notes/goatclub-jsintel-admin-inline-js-nonce-provenance-observations.md",
    "cat": "other",
-   "ts": "2026-09-28"
+   "ts": "2026-09-29"
   },
   {
-   "title": "goatclub-cross-site-billing-email-rewrite-sync-id-collision-leads",
-   "file": "BugBounty/leads/goatclub-cross-site-billing-email-rewrite-sync-id-collision-leads.md",
+   "title": "goatclub-lane1-passive-recon-halted-scope-conflict-observations",
+   "file": "BugBounty/notes/goatclub-lane1-passive-recon-halted-scope-conflict-observations.md",
    "cat": "other",
-   "ts": "2026-09-28"
+   "ts": "2026-09-29"
   },
   {
-   "title": "goatclub-goat-api-get-token-auth-bypass-candidate-leads",
-   "file": "BugBounty/leads/goatclub-goat-api-get-token-auth-bypass-candidate-leads.md",
+   "title": "goatclub-lane3-live-probe-halted-scope-conflict-observations",
+   "file": "BugBounty/notes/goatclub-lane3-live-probe-halted-scope-conflict-observations.md",
    "cat": "other",
-   "ts": "2026-09-28"
+   "ts": "2026-09-29"
   },
   {
-   "title": "goatclub-goatclub-acf-flexible-template-no-capability-check-leads",
-   "file": "BugBounty/leads/goatclub-goatclub-acf-flexible-template-no-capability-check-leads.md",
+   "title": "goatclub-learn-stage-scope-reconciled-and-register-repaired-observations",
+   "file": "BugBounty/notes/goatclub-learn-stage-scope-reconciled-and-register-repaired-observations.md",
    "cat": "other",
-   "ts": "2026-09-28"
+   "ts": "2026-09-29"
   },
   {
-   "title": "goatclub-goatclub-clear-add-checkout-price-leads",
-   "file": "BugBounty/leads/goatclub-goatclub-clear-add-checkout-price-leads.md",
+   "title": "goatclub-recon-lane1-scope-conflict-declined-observations",
+   "file": "BugBounty/notes/goatclub-recon-lane1-scope-conflict-declined-observations.md",
    "cat": "other",
-   "ts": "2026-09-28"
+   "ts": "2026-09-29"
   },
   {
-   "title": "goatclub-goatclub-verify-winner-unbounded-enum-and-guess-oracle-leads",
-   "file": "BugBounty/leads/goatclub-goatclub-verify-winner-unbounded-enum-and-guess-oracle-leads.md",
+   "title": "goatclub-register-hazard-growth-48-exercise-items-false-settlements-static-observations",
+   "file": "BugBounty/notes/goatclub-register-hazard-growth-48-exercise-items-false-settlements-static-observations.md",
    "cat": "other",
-   "ts": "2026-09-28"
+   "ts": "2026-09-29"
   },
   {
-   "title": "goatclub-jsintel-minor-client-derived-items-leads",
-   "file": "BugBounty/leads/goatclub-jsintel-minor-client-derived-items-leads.md",
+   "title": "goatclub-scope-8th-confirmation-register-integrity-observations",
+   "file": "BugBounty/notes/goatclub-scope-8th-confirmation-register-integrity-observations.md",
    "cat": "other",
-   "ts": "2026-09-28"
+   "ts": "2026-09-29"
   }
  ],
  "kev_referenced": [
@@ -6998,6 +7046,13 @@
    "date": "2026-09-28",
    "intel_items": 1643,
    "cves": 644,
+   "breaches": 143,
+   "malware": 170
+  },
+  {
+   "date": "2026-09-29",
+   "intel_items": 1643,
+   "cves": 650,
    "breaches": 143,
    "malware": 170
   }
