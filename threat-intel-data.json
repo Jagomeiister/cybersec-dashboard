@@ -1,79 +1,79 @@
 {
- "generated": "2026-09-29 20:45",
- "today": "2026-09-29",
+ "generated": "2026-09-30 20:45",
+ "today": "2026-09-30",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
-  "cves": 650,
-  "breaches": 143,
-  "malware": 170,
-  "supplychain": 73,
+  "cves": 653,
+  "breaches": 144,
+  "malware": 171,
+  "supplychain": 74,
   "tools": 94,
   "commands": 13,
-  "guides": 299,
-  "intel_items": 1643,
+  "guides": 301,
+  "intel_items": 1654,
   "kev": 147
  },
  "windows": {
   "week": {
-   "total": 141,
+   "total": 137,
    "by_cat": {
-    "technique": 10,
-    "breach": 16,
-    "cve": 48,
+    "technique": 9,
+    "breach": 18,
+    "cve": 45,
     "misc": 34,
     "malware": 14,
+    "ai-bugbounty": 12,
     "supplychain": 4,
-    "other": 3,
-    "ai-bugbounty": 12
+    "other": 1
    },
    "by_src": {}
   },
   "month": {
-   "total": 584,
+   "total": 585,
    "by_cat": {
-    "malware": 75,
-    "tool": 13,
+    "malware": 72,
     "supplychain": 21,
-    "ai-bugbounty": 53,
-    "technique": 50,
-    "breach": 71,
+    "breach": 72,
     "other": 43,
-    "cve": 158,
+    "technique": 50,
+    "ai-bugbounty": 53,
+    "cve": 162,
     "misc": 98,
+    "tool": 12,
     "command": 2
    },
    "by_src": {}
   },
   "year": {
-   "total": 1643,
+   "total": 1654,
    "by_cat": {
-    "ai-bugbounty": 121,
-    "malware": 199,
+    "ai-bugbounty": 122,
+    "malware": 201,
     "other": 111,
     "tool": 58,
     "misc": 330,
     "command": 6,
-    "technique": 142,
-    "cve": 411,
-    "breach": 175,
-    "supplychain": 90
+    "technique": 143,
+    "cve": 415,
+    "breach": 177,
+    "supplychain": 91
    },
    "by_src": {}
   },
   "all": {
-   "total": 1643,
+   "total": 1654,
    "by_cat": {
-    "ai-bugbounty": 121,
-    "malware": 199,
+    "ai-bugbounty": 122,
+    "malware": 201,
     "other": 111,
     "tool": 58,
     "misc": 330,
     "command": 6,
-    "technique": 142,
-    "cve": 411,
-    "breach": 175,
-    "supplychain": 90
+    "technique": 143,
+    "cve": 415,
+    "breach": 177,
+    "supplychain": 91
    },
    "by_src": {}
   }
@@ -1859,7 +1859,7 @@
  },
  "cve_sev": {
   "Critical": 260,
-  "High": 183,
+  "High": 186,
   "Low": 35,
   "Medium": 24
  },
@@ -1875,7 +1875,7 @@
   "2023": 17,
   "2024": 14,
   "2025": 30,
-  "2026": 540
+  "2026": 543
  },
  "cve_month": {
   "2025-10": 1,
@@ -1884,7 +1884,7 @@
   "2026-06": 108,
   "2026-07": 16,
   "2026-08": 84,
-  "2026-09": 155
+  "2026-09": 159
  },
  "top_cve": [
   {
@@ -4223,7 +4223,7 @@
   },
   "CVE-2026-88771": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-88771-88772-Citrix-NetScaler-Dual-RCE-ZeroDays-2026.md",
-   "body": "# CVE-2026-88771 / CVE-2026-88772 \u2014 Citrix NetScaler ADC/Gateway Dual RCE Zero-Days (Actively Exploited)\n\n\u2705 **Verification:** Verified \u2014 4 independent sources (BleepingComputer, SecurityWeek, The Hacker News, CCCS)\n\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/citrix-admins-warned-to-shut-down-netscalers-over-2-exploited-zero-days/) \u2014 2026-09-27 | [SecurityWeek](https://www.securityweek.com/citrix-confirms-2-netscaler-zero-days-after-admins-pulled-the-plug/) \u2014 2026-09-28 | [The Hacker News](https://thehackernews.com/2026/09/warning-two-unpatched-citrix-netscaler.html) \u2014 2026-09-27 | [CCCS AL26-024](https://cyber.gc.ca/en/alerts-advisories/al26-024-critical-vulnerabilities-affecting-citrix-netscaler-adc-netscaler-gateway-cve-2026-88771-cve-2026-88772) \u2014 2026-09-27 | [BleepingComputer \u2014 CISA federal deadline](https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-exploited-citrix-flaws-by-wednesday/) \u2014 2026-09-28\n\n**Severity:** Critical | **Product:** Citrix NetScaler ADC / NetScaler Gateway | **Type:** Unauthenticated remote code execution (dual zero-day) | **Status:** Actively exploited in the wild\n\n## Summary\nCitrix confirmed two critical, unauthenticated remote code execution vulnerabilities in NetScaler ADC and NetScaler Gateway \u2014 **CVE-2026-88771** and **CVE-2026-88772** \u2014 are being actively exploited. Notably, **one of the two flaws affects every NetScaler deployment in its default configuration** (per The Hacker News), making this an unusually broad exposure window rather than a narrow edge-case bug. Admins reportedly began pulling NetScaler appliances offline on their own initiative before Citrix's official confirmation, and Citrix shipped patches alongside six other, lower-severity flaws in the same release. CCCS (Canada) confirms active exploitation \"across multiple customer environments worldwide.\" CISA has ordered US federal agencies to patch by **Wednesday, 2026-09-30** (per BleepingComputer's \"by Wednesday\" framing on 2026-09-28).\n\n## Why this matters\n- NetScaler ADC/Gateway is a recurring, high-value target class in this vault (see cross-references below) \u2014 this is the latest in a long line of NetScaler pre-auth RCE/auth-bypass chains dating back to CVE-2019-19781, and continuing through CVE-2026-19489/19490 and CVE-2026-8451/8452 earlier this year.\n- One flaw reportedly affects **every deployment in default configuration** \u2014 this is a much wider blast radius than a typical NetScaler CVE, which usually requires a specific feature (Gateway, AAA vServer, etc.) to be enabled.\n- The pattern of admins shutting down appliances before vendor confirmation suggests either leaked/observed exploitation intelligence reached defenders early, or in-the-wild indicators were visible enough to act on without waiting for an official advisory.\n\n## Action\n1. Patch NetScaler ADC and NetScaler Gateway to the fixed builds immediately \u2014 treat as emergency/out-of-band patching given confirmed active exploitation.\n2. If patching cannot happen immediately, follow Citrix's guidance on temporary shutdown/isolation for internet-facing appliances.\n3. Hunt for post-exploitation indicators (web shells, unexpected config changes, anomalous admin sessions) on any NetScaler appliance that was internet-facing during the exposure window.\n4. US federal entities: CISA deadline is 2026-09-30 \u2014 do not wait past this.\n\n## Cross-reference\n- `Threat_Intel/CVEs/2026/Critical/CVE-2026-19490-19489-Citrix-NetScaler-Auth-Bypass.md`\n- `Threat_Intel/CVEs/2026/High/CVE-2026-8451-Citrix-NetScaler-Memory-Overread.md`\n- `Threat_Intel/CVEs/2026/High/CVE-2026-8452.md`\n- `Threat_Intel/CVEs/2026/High/CISA-KEV-2026-08-26-Six-Flaws-NetScaler-Linux-SQLServer-AjaxPro.md`\n\n## Tags\n#cve #citrix #netscaler #rce #actively-exploited #zero-day #dual-cve\n\n*Captured via x-bugbounty-intel-sweep \u2014 2026-09-28*",
+   "body": "# CVE-2026-88771 / CVE-2026-88772 \u2014 Citrix NetScaler ADC/Gateway Dual RCE Zero-Days (Actively Exploited)\n\n\u2705 **Verification:** Verified \u2014 4 independent sources (BleepingComputer, SecurityWeek, The Hacker News, CCCS)\n\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/citrix-admins-warned-to-shut-down-netscalers-over-2-exploited-zero-days/) \u2014 2026-09-27 | [SecurityWeek](https://www.securityweek.com/citrix-confirms-2-netscaler-zero-days-after-admins-pulled-the-plug/) \u2014 2026-09-28 | [The Hacker News](https://thehackernews.com/2026/09/warning-two-unpatched-citrix-netscaler.html) \u2014 2026-09-27 | [CCCS AL26-024](https://cyber.gc.ca/en/alerts-advisories/al26-024-critical-vulnerabilities-affecting-citrix-netscaler-adc-netscaler-gateway-cve-2026-88771-cve-2026-88772) \u2014 2026-09-27 | [BleepingComputer \u2014 CISA federal deadline](https://www.bleepingcomputer.com/news/security/cisa-orders-feds-to-patch-exploited-citrix-flaws-by-wednesday/) \u2014 2026-09-28\n\n**Severity:** Critical | **Product:** Citrix NetScaler ADC / NetScaler Gateway | **Type:** Unauthenticated remote code execution (dual zero-day) | **Status:** Actively exploited in the wild\n\n## Summary\nCitrix confirmed two critical, unauthenticated remote code execution vulnerabilities in NetScaler ADC and NetScaler Gateway \u2014 **CVE-2026-88771** and **CVE-2026-88772** \u2014 are being actively exploited. Notably, **one of the two flaws affects every NetScaler deployment in its default configuration** (per The Hacker News), making this an unusually broad exposure window rather than a narrow edge-case bug. Admins reportedly began pulling NetScaler appliances offline on their own initiative before Citrix's official confirmation, and Citrix shipped patches alongside six other, lower-severity flaws in the same release. CCCS (Canada) confirms active exploitation \"across multiple customer environments worldwide.\" CISA has ordered US federal agencies to patch by **Wednesday, 2026-09-30** (per BleepingComputer's \"by Wednesday\" framing on 2026-09-28).\n\n## Why this matters\n- NetScaler ADC/Gateway is a recurring, high-value target class in this vault (see cross-references below) \u2014 this is the latest in a long line of NetScaler pre-auth RCE/auth-bypass chains dating back to CVE-2019-19781, and continuing through CVE-2026-19489/19490 and CVE-2026-8451/8452 earlier this year.\n- One flaw reportedly affects **every deployment in default configuration** \u2014 this is a much wider blast radius than a typical NetScaler CVE, which usually requires a specific feature (Gateway, AAA vServer, etc.) to be enabled.\n- The pattern of admins shutting down appliances before vendor confirmation suggests either leaked/observed exploitation intelligence reached defenders early, or in-the-wild indicators were visible enough to act on without waiting for an official advisory.\n\n## Action\n1. Patch NetScaler ADC and NetScaler Gateway to the fixed builds immediately \u2014 treat as emergency/out-of-band patching given confirmed active exploitation.\n2. If patching cannot happen immediately, follow Citrix's guidance on temporary shutdown/isolation for internet-facing appliances.\n3. Hunt for post-exploitation indicators (web shells, unexpected config changes, anomalous admin sessions) on any NetScaler appliance that was internet-facing during the exposure window.\n4. US federal entities: CISA deadline is 2026-09-30 \u2014 do not wait past this.\n\n## Cross-reference\n- `Threat_Intel/CVEs/2026/Critical/CVE-2026-19490-19489-Citrix-NetScaler-Auth-Bypass.md`\n- `Threat_Intel/CVEs/2026/High/CVE-2026-8451-Citrix-NetScaler-Memory-Overread.md`\n- `Threat_Intel/CVEs/2026/High/CVE-2026-8452.md`\n- `Threat_Intel/CVEs/2026/High/CISA-KEV-2026-08-26-Six-Flaws-NetScaler-Linux-SQLServer-AjaxPro.md`\n\n## Tags\n#cve #citrix #netscaler #rce #actively-exploited #zero-day #dual-cve\n\n*Captured via x-bugbounty-intel-sweep \u2014 2026-09-28*\n\n\n## Update \u2014 2026-09-30\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-exploit-citrix-netscaler-zero-day-to-deploy-web-shells/) \u2014 Tue, 29 Sep 2026\n\nAttackers exploit CVE-2026-88772 to install web shells and tunneling malware, obtain root access, and pivot into internal networks. Hunt for new web shells and unexpected tunnels on NetScaler appliances; CISA federal deadline is 2026-09-30.",
    "sev": "Critical",
    "year": "2026",
    "kev": true,
@@ -6115,6 +6115,72 @@
  },
  "recent": [
   {
+   "title": "Kubernetes-Operator-Privilege-Risks-OperTraitors-2026",
+   "file": "Guides/Kubernetes-Operator-Privilege-Risks-OperTraitors-2026.md",
+   "cat": "technique",
+   "ts": "2026-09-30"
+  },
+  {
+   "title": "AI-Agent-Breach-of-DIVD-Nonprofit-2026",
+   "file": "Guides/AI-BugBounty/AI-Agent-Breach-of-DIVD-Nonprofit-2026.md",
+   "cat": "ai-bugbounty",
+   "ts": "2026-09-30"
+  },
+  {
+   "title": "Star-Blizzard-RedFlick-Phishing-2026",
+   "file": "Threat_Intel/APT_Groups/Star-Blizzard-RedFlick-Phishing-2026.md",
+   "cat": "malware",
+   "ts": "2026-09-30"
+  },
+  {
+   "title": "Kiteworks-Precautionary-Shutdown-Federal-Threat-Intel-2026",
+   "file": "Threat_Intel/Breaches/Kiteworks-Precautionary-Shutdown-Federal-Threat-Intel-2026.md",
+   "cat": "breach",
+   "ts": "2026-09-30"
+  },
+  {
+   "title": "Pentagon-DMDC-Data-Breach-3M-2026",
+   "file": "Threat_Intel/Breaches/Pentagon-DMDC-Data-Breach-3M-2026.md",
+   "cat": "breach",
+   "ts": "2026-09-30"
+  },
+  {
+   "title": "CVE-2026-88771-88772-Citrix-NetScaler-Dual-RCE-ZeroDays-2026",
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-88771-88772-Citrix-NetScaler-Dual-RCE-ZeroDays-2026.md",
+   "cat": "cve",
+   "ts": "2026-09-30"
+  },
+  {
+   "title": "Apple-CoreGraphics-Zero-Day-Exploited-iOS-26.7.1-2026",
+   "file": "Threat_Intel/CVEs/2026/High/Apple-CoreGraphics-Zero-Day-Exploited-iOS-26.7.1-2026.md",
+   "cat": "cve",
+   "ts": "2026-09-30"
+  },
+  {
+   "title": "OpenSSL-WolfSSL-Dozen-Vulns-Patched-2026-09",
+   "file": "Threat_Intel/CVEs/2026/High/OpenSSL-WolfSSL-Dozen-Vulns-Patched-2026-09.md",
+   "cat": "cve",
+   "ts": "2026-09-30"
+  },
+  {
+   "title": "Spectre-v2-Branch-Target-Reuse-BTR-Root-Hash-Leak-2026",
+   "file": "Threat_Intel/CVEs/2026/High/Spectre-v2-Branch-Target-Reuse-BTR-Root-Hash-Leak-2026.md",
+   "cat": "cve",
+   "ts": "2026-09-30"
+  },
+  {
+   "title": "Custom-ChatGPTs-ClickFix-RAT-2026",
+   "file": "Threat_Intel/Malware/Custom-ChatGPTs-ClickFix-RAT-2026.md",
+   "cat": "malware",
+   "ts": "2026-09-30"
+  },
+  {
+   "title": "PhantomSub-101-npm-WhatsApp-Group-Add-2026",
+   "file": "Threat_Intel/SupplyChain/PhantomSub-101-npm-WhatsApp-Group-Add-2026.md",
+   "cat": "supplychain",
+   "ts": "2026-09-30"
+  },
+  {
    "title": "goatclub-git-directory-exposed-finding",
    "file": "BugBounty/findings/goatclub-git-directory-exposed-finding.md",
    "cat": "other",
@@ -6135,72 +6201,6 @@
   {
    "title": "goatclub-r6-styles-embeds-wpide-file-manager-code-editor-leads",
    "file": "BugBounty/leads/goatclub-r6-styles-embeds-wpide-file-manager-code-editor-leads.md",
-   "cat": "other",
-   "ts": "2026-09-29"
-  },
-  {
-   "title": "goatclub-staging-main-host-unblocks-runtime-gated-candidates-leads",
-   "file": "BugBounty/leads/goatclub-staging-main-host-unblocks-runtime-gated-candidates-leads.md",
-   "cat": "other",
-   "ts": "2026-09-29"
-  },
-  {
-   "title": "bb-bot--host-column-review-outcome-observations",
-   "file": "BugBounty/notes/bb-bot--host-column-review-outcome-observations.md",
-   "cat": "other",
-   "ts": "2026-09-29"
-  },
-  {
-   "title": "goatclub-apache-2-4-52-advisory-match-and-corpus-sweep-observations",
-   "file": "BugBounty/notes/goatclub-apache-2-4-52-advisory-match-and-corpus-sweep-observations.md",
-   "cat": "other",
-   "ts": "2026-09-29"
-  },
-  {
-   "title": "goatclub-caido-25-capture-full-extraction-observations",
-   "file": "BugBounty/notes/goatclub-caido-25-capture-full-extraction-observations.md",
-   "cat": "other",
-   "ts": "2026-09-29"
-  },
-  {
-   "title": "goatclub-jsintel-admin-inline-js-nonce-provenance-observations",
-   "file": "BugBounty/notes/goatclub-jsintel-admin-inline-js-nonce-provenance-observations.md",
-   "cat": "other",
-   "ts": "2026-09-29"
-  },
-  {
-   "title": "goatclub-lane1-passive-recon-halted-scope-conflict-observations",
-   "file": "BugBounty/notes/goatclub-lane1-passive-recon-halted-scope-conflict-observations.md",
-   "cat": "other",
-   "ts": "2026-09-29"
-  },
-  {
-   "title": "goatclub-lane3-live-probe-halted-scope-conflict-observations",
-   "file": "BugBounty/notes/goatclub-lane3-live-probe-halted-scope-conflict-observations.md",
-   "cat": "other",
-   "ts": "2026-09-29"
-  },
-  {
-   "title": "goatclub-learn-stage-scope-reconciled-and-register-repaired-observations",
-   "file": "BugBounty/notes/goatclub-learn-stage-scope-reconciled-and-register-repaired-observations.md",
-   "cat": "other",
-   "ts": "2026-09-29"
-  },
-  {
-   "title": "goatclub-recon-lane1-scope-conflict-declined-observations",
-   "file": "BugBounty/notes/goatclub-recon-lane1-scope-conflict-declined-observations.md",
-   "cat": "other",
-   "ts": "2026-09-29"
-  },
-  {
-   "title": "goatclub-register-hazard-growth-48-exercise-items-false-settlements-static-observations",
-   "file": "BugBounty/notes/goatclub-register-hazard-growth-48-exercise-items-false-settlements-static-observations.md",
-   "cat": "other",
-   "ts": "2026-09-29"
-  },
-  {
-   "title": "goatclub-scope-8th-confirmation-register-integrity-observations",
-   "file": "BugBounty/notes/goatclub-scope-8th-confirmation-register-integrity-observations.md",
    "cat": "other",
    "ts": "2026-09-29"
   }
@@ -7055,6 +7055,13 @@
    "cves": 650,
    "breaches": 143,
    "malware": 170
+  },
+  {
+   "date": "2026-09-30",
+   "intel_items": 1654,
+   "cves": 653,
+   "breaches": 144,
+   "malware": 171
   }
  ]
 }
