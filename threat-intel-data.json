@@ -1,6 +1,6 @@
 {
- "generated": "2026-09-30 20:45",
- "today": "2026-09-30",
+ "generated": "2026-10-02 20:45",
+ "today": "2026-10-02",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
@@ -16,31 +16,30 @@
  },
  "windows": {
   "week": {
-   "total": 137,
+   "total": 58,
    "by_cat": {
-    "technique": 9,
-    "breach": 18,
-    "cve": 45,
-    "misc": 34,
-    "malware": 14,
-    "ai-bugbounty": 12,
-    "supplychain": 4,
-    "other": 1
+    "ai-bugbounty": 8,
+    "cve": 23,
+    "misc": 5,
+    "breach": 14,
+    "malware": 5,
+    "supplychain": 2,
+    "technique": 1
    },
    "by_src": {}
   },
   "month": {
-   "total": 585,
+   "total": 485,
    "by_cat": {
-    "malware": 72,
-    "supplychain": 21,
-    "breach": 72,
-    "other": 43,
-    "technique": 50,
-    "ai-bugbounty": 53,
-    "cve": 162,
-    "misc": 98,
-    "tool": 12,
+    "cve": 153,
+    "other": 34,
+    "supplychain": 16,
+    "malware": 52,
+    "misc": 70,
+    "ai-bugbounty": 47,
+    "breach": 55,
+    "technique": 46,
+    "tool": 10,
     "command": 2
    },
    "by_src": {}
@@ -1756,7 +1755,6 @@
    "Lazarus Group": 1
   },
   "month": {
-   "Fire Ant": 5,
    "Sandworm": 4,
    "Salt Typhoon": 1,
    "Lazarus Group": 1
@@ -7058,6 +7056,13 @@
   },
   {
    "date": "2026-09-30",
+   "intel_items": 1654,
+   "cves": 653,
+   "breaches": 144,
+   "malware": 171
+  },
+  {
+   "date": "2026-10-02",
    "intel_items": 1654,
    "cves": 653,
    "breaches": 144,
