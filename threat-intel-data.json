@@ -1,77 +1,76 @@
 {
- "generated": "2026-10-02 20:45",
- "today": "2026-10-02",
+ "generated": "2026-10-03 20:45",
+ "today": "2026-10-03",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
-  "cves": 653,
-  "breaches": 144,
-  "malware": 171,
+  "cves": 656,
+  "breaches": 146,
+  "malware": 172,
   "supplychain": 74,
   "tools": 94,
   "commands": 13,
-  "guides": 301,
-  "intel_items": 1654,
-  "kev": 147
+  "guides": 302,
+  "intel_items": 1661,
+  "kev": 148
  },
  "windows": {
   "week": {
-   "total": 58,
+   "total": 36,
    "by_cat": {
-    "ai-bugbounty": 8,
-    "cve": 23,
-    "misc": 5,
-    "breach": 14,
+    "cve": 18,
+    "breach": 8,
+    "ai-bugbounty": 3,
     "malware": 5,
-    "supplychain": 2,
+    "supplychain": 1,
     "technique": 1
    },
    "by_src": {}
   },
   "month": {
-   "total": 485,
+   "total": 447,
    "by_cat": {
-    "cve": 153,
-    "other": 34,
-    "supplychain": 16,
-    "malware": 52,
-    "misc": 70,
-    "ai-bugbounty": 47,
+    "malware": 50,
+    "cve": 145,
+    "misc": 56,
+    "other": 29,
     "breach": 55,
-    "technique": 46,
-    "tool": 10,
+    "technique": 44,
+    "supplychain": 13,
+    "ai-bugbounty": 45,
+    "tool": 8,
     "command": 2
    },
    "by_src": {}
   },
   "year": {
-   "total": 1654,
+   "total": 1661,
    "by_cat": {
-    "ai-bugbounty": 122,
-    "malware": 201,
+    "ai-bugbounty": 123,
+    "malware": 203,
     "other": 111,
     "tool": 58,
     "misc": 330,
     "command": 6,
     "technique": 143,
-    "cve": 415,
-    "breach": 177,
+    "cve": 417,
+    "breach": 179,
     "supplychain": 91
    },
    "by_src": {}
   },
   "all": {
-   "total": 1654,
+   "total": 1661,
    "by_cat": {
-    "ai-bugbounty": 122,
-    "malware": 201,
+    "ai-bugbounty": 123,
+    "malware": 203,
     "other": 111,
     "tool": 58,
     "misc": 330,
     "command": 6,
     "technique": 143,
-    "cve": 415,
-    "breach": 177,
+    "cve": 417,
+    "breach": 179,
     "supplychain": 91
    },
    "by_src": {}
@@ -1751,9 +1750,7 @@
   }
  ],
  "apt_activity_windows": {
-  "week": {
-   "Lazarus Group": 1
-  },
+  "week": {},
   "month": {
    "Sandworm": 4,
    "Salt Typhoon": 1,
@@ -1856,7 +1853,7 @@
   ]
  },
  "cve_sev": {
-  "Critical": 260,
+  "Critical": 262,
   "High": 186,
   "Low": 35,
   "Medium": 24
@@ -1872,8 +1869,8 @@
   "2022": 13,
   "2023": 17,
   "2024": 14,
-  "2025": 30,
-  "2026": 543
+  "2025": 31,
+  "2026": 545
  },
  "cve_month": {
   "2025-10": 1,
@@ -1882,7 +1879,8 @@
   "2026-06": 108,
   "2026-07": 16,
   "2026-08": 84,
-  "2026-09": 159
+  "2026-09": 159,
+  "2026-10": 2
  },
  "top_cve": [
   {
@@ -2831,6 +2829,14 @@
    "kev": true,
    "apts": []
   },
+  "CVE-2025-43960": {
+   "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-43960.md",
+   "body": "# CVE-2025-43960\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2025\n\n## Summary\nCVE-2025-43960** \u2014 a memory-consumption denial of service affecting Adminer 4.8.1, conditional\n\n## Where it appears in this vault\n- `BugBounty/reports/goatclub-web-root-admin-tooling-and-dev-artifacts-report.md` \u2014 CVE-2025-43960** \u2014 a memory-consumption denial of service affecting Adminer 4.8.1, conditional\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-43960\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-43960\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-43960\n\n## Tags\n#cve #2025 #unrated #auto-stub",
+   "sev": "",
+   "year": "2025",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2025-55166": {
    "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-55166.md",
    "body": "# CVE-2025-55166\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2025\n\n## Summary\nA2 - CVE-2025-55166, enshrined/svg-sanitize <0.22.0 vendored inside SVG Support. IN RANGE.\n\n## Where it appears in this vault\n- `BugBounty/leads/goatclub-third-party-plugin-advisory-matches-leads.md` \u2014 A2 - CVE-2025-55166, enshrined/svg-sanitize <0.22.0 vendored inside SVG Support. IN RANGE.\n- `BugBounty/leads/goatclub-third-party-plugin-advisory-matches-leads.md` \u2014 fixed the unrelated CVE-2026-48973 and CVE-2025-55166. Deployed 2.5.14 is still in range, so the mechanism stands, but\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-55166\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-55166\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-55166\n\n## Tags\n#cve #2025 #unrated #auto-stub",
@@ -2911,6 +2917,14 @@
    "sev": "Critical",
    "year": "2026",
    "kev": false,
+   "apts": []
+  },
+  "CVE-2026-104286": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-104286-Fortinet-FortiMail-Path-Traversal-Zero-Day-2026.md",
+   "body": "# CVE-2026-104286 \u2014 Fortinet FortiMail path traversal (exploited zero-day)\n\n- Critical (CVSS 9.8) path traversal in FortiMail; unauthenticated attackers can write arbitrary files -> unauthorized code execution.\n- Actively exploited as a zero-day; added to CISA KEV.\n- Action: apply Fortinet fixed release immediately, review FortiMail for unexpected files/webshells.\n\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/fortinet-warns-of-critical-fortimail-flaw-exploited-in-zero-day-attacks/) \u2014 Thu, 01 Oct 2026\n> Source: [The Hacker News](https://thehackernews.com/2026/10/critical-fortimail-zero-day-flaw.html) \u2014 Fri, 02 Oct 2026\n> Source: [SecurityWeek](https://www.securityweek.com/exploited-fortinet-fortimail-zero-day-calls-for-urgent-action/) \u2014 Fri, 02 Oct 2026",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": true,
    "apts": []
   },
   "CVE-2026-10520": {
@@ -4241,6 +4255,14 @@
    "sev": "Critical",
    "year": "2026",
    "kev": true,
+   "apts": []
+  },
+  "CVE-2026-90970": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-90970-GitLab-AI-Gateway-Duo-Sandbox-Escape-RCE-2026.md",
+   "body": "# CVE-2026-90970 \u2014 GitLab AI Gateway sandbox escape \u2192 RCE\n\n- Product: self-hosted GitLab AI Gateway (Duo Agent Platform). GitLab.com and GitLab Dedicated already protected.\n- Affected: versions prior to 19.2.4, 19.3.2, 19.4.1. Fixed: 19.2.4, 19.3.2, 19.4.1.\n- Root cause: improper neutralization; an authenticated user with Duo Agent Platform access can escape the prompt template sandbox via a crafted flow configuration, achieving arbitrary command execution.\n- Requirements: low privileges + Duo Agent Platform access. CVSS not stated in the article (reported as \"critical\" by vendor/press).\n- Exploitation: none reported as of 2026-10-02. GitLab contacted self-hosted customers before disclosure.\n- Action: upgrade self-hosted AI Gateway immediately; review who holds Duo Agent Platform access.\n- Bug bounty angle: prompt-template/flow-config sandbox escapes (template injection) in AI agent platforms.\n\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/gitlab-warns-of-critical-rce-vulnerability-in-ai-gateway-service/) \u2014 Fri, 02 Oct 2026",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
    "apts": []
   },
   "CVE-2026-91843": {
@@ -6113,94 +6135,94 @@
  },
  "recent": [
   {
-   "title": "Kubernetes-Operator-Privilege-Risks-OperTraitors-2026",
-   "file": "Guides/Kubernetes-Operator-Privilege-Risks-OperTraitors-2026.md",
-   "cat": "technique",
-   "ts": "2026-09-30"
-  },
-  {
-   "title": "AI-Agent-Breach-of-DIVD-Nonprofit-2026",
-   "file": "Guides/AI-BugBounty/AI-Agent-Breach-of-DIVD-Nonprofit-2026.md",
-   "cat": "ai-bugbounty",
-   "ts": "2026-09-30"
-  },
-  {
-   "title": "Star-Blizzard-RedFlick-Phishing-2026",
-   "file": "Threat_Intel/APT_Groups/Star-Blizzard-RedFlick-Phishing-2026.md",
-   "cat": "malware",
-   "ts": "2026-09-30"
-  },
-  {
-   "title": "Kiteworks-Precautionary-Shutdown-Federal-Threat-Intel-2026",
-   "file": "Threat_Intel/Breaches/Kiteworks-Precautionary-Shutdown-Federal-Threat-Intel-2026.md",
+   "title": "Frontline-Education-School-Employee-Data-Breach-2026",
+   "file": "Threat_Intel/Breaches/Frontline-Education-School-Employee-Data-Breach-2026.md",
    "cat": "breach",
-   "ts": "2026-09-30"
+   "ts": "2026-10-03"
   },
   {
-   "title": "Pentagon-DMDC-Data-Breach-3M-2026",
-   "file": "Threat_Intel/Breaches/Pentagon-DMDC-Data-Breach-3M-2026.md",
-   "cat": "breach",
-   "ts": "2026-09-30"
-  },
-  {
-   "title": "CVE-2026-88771-88772-Citrix-NetScaler-Dual-RCE-ZeroDays-2026",
-   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-88771-88772-Citrix-NetScaler-Dual-RCE-ZeroDays-2026.md",
+   "title": "CVE-2025-43960",
+   "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-43960.md",
    "cat": "cve",
-   "ts": "2026-09-30"
+   "ts": "2026-10-03"
   },
   {
-   "title": "Apple-CoreGraphics-Zero-Day-Exploited-iOS-26.7.1-2026",
-   "file": "Threat_Intel/CVEs/2026/High/Apple-CoreGraphics-Zero-Day-Exploited-iOS-26.7.1-2026.md",
+   "title": "CVE-2026-90970-GitLab-AI-Gateway-Duo-Sandbox-Escape-RCE-2026",
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-90970-GitLab-AI-Gateway-Duo-Sandbox-Escape-RCE-2026.md",
    "cat": "cve",
-   "ts": "2026-09-30"
+   "ts": "2026-10-03"
   },
   {
-   "title": "OpenSSL-WolfSSL-Dozen-Vulns-Patched-2026-09",
-   "file": "Threat_Intel/CVEs/2026/High/OpenSSL-WolfSSL-Dozen-Vulns-Patched-2026-09.md",
-   "cat": "cve",
-   "ts": "2026-09-30"
-  },
-  {
-   "title": "Spectre-v2-Branch-Target-Reuse-BTR-Root-Hash-Leak-2026",
-   "file": "Threat_Intel/CVEs/2026/High/Spectre-v2-Branch-Target-Reuse-BTR-Root-Hash-Leak-2026.md",
-   "cat": "cve",
-   "ts": "2026-09-30"
-  },
-  {
-   "title": "Custom-ChatGPTs-ClickFix-RAT-2026",
-   "file": "Threat_Intel/Malware/Custom-ChatGPTs-ClickFix-RAT-2026.md",
+   "title": "CloudSyncD-macOS-Fake-Zoom-Installer-Backdoor-2026",
+   "file": "Threat_Intel/Malware/CloudSyncD-macOS-Fake-Zoom-Installer-Backdoor-2026.md",
    "cat": "malware",
-   "ts": "2026-09-30"
+   "ts": "2026-10-03"
   },
   {
-   "title": "PhantomSub-101-npm-WhatsApp-Group-Add-2026",
-   "file": "Threat_Intel/SupplyChain/PhantomSub-101-npm-WhatsApp-Group-Add-2026.md",
-   "cat": "supplychain",
-   "ts": "2026-09-30"
-  },
-  {
-   "title": "goatclub-git-directory-exposed-finding",
-   "file": "BugBounty/findings/goatclub-git-directory-exposed-finding.md",
+   "title": "goatclub-served-ide-config-directory-finding",
+   "file": "BugBounty/findings/goatclub-served-ide-config-directory-finding.md",
    "cat": "other",
-   "ts": "2026-09-29"
+   "ts": "2026-10-02"
   },
   {
-   "title": "goatclub-ajax-order-guest-nonce-reuse-verbose-error-leads",
-   "file": "BugBounty/leads/goatclub-ajax-order-guest-nonce-reuse-verbose-error-leads.md",
+   "title": "goatclub-committed-ide-config-discloses-agency-client-list-leads",
+   "file": "BugBounty/leads/goatclub-committed-ide-config-discloses-agency-client-list-leads.md",
    "cat": "other",
-   "ts": "2026-09-29"
+   "ts": "2026-10-02"
   },
   {
-   "title": "goatclub-live-host-work-items-blocked-leads",
-   "file": "BugBounty/leads/goatclub-live-host-work-items-blocked-leads.md",
+   "title": "goatclub-wayback-cdx-lane-leads",
+   "file": "BugBounty/leads/goatclub-wayback-cdx-lane-leads.md",
    "cat": "other",
-   "ts": "2026-09-29"
+   "ts": "2026-10-02"
   },
   {
-   "title": "goatclub-r6-styles-embeds-wpide-file-manager-code-editor-leads",
-   "file": "BugBounty/leads/goatclub-r6-styles-embeds-wpide-file-manager-code-editor-leads.md",
+   "title": "goatclub-live-existence-checks-observations",
+   "file": "BugBounty/notes/goatclub-live-existence-checks-observations.md",
    "cat": "other",
-   "ts": "2026-09-29"
+   "ts": "2026-10-02"
+  },
+  {
+   "title": "goatclub-wayback-cdx-lane-observations",
+   "file": "BugBounty/notes/goatclub-wayback-cdx-lane-observations.md",
+   "cat": "other",
+   "ts": "2026-10-02"
+  },
+  {
+   "title": "optus-myhub-pair-adjudication-observations",
+   "file": "BugBounty/notes/optus-myhub-pair-adjudication-observations.md",
+   "cat": "other",
+   "ts": "2026-10-02"
+  },
+  {
+   "title": "session-2026-10-02",
+   "file": "BugBounty/notes/session-2026-10-02.md",
+   "cat": "other",
+   "ts": "2026-10-02"
+  },
+  {
+   "title": "goatclub-served-ide-config-directory-primitive",
+   "file": "BugBounty/primitives/goatclub-served-ide-config-directory-primitive.md",
+   "cat": "other",
+   "ts": "2026-10-02"
+  },
+  {
+   "title": "goatclub-web-root-admin-tooling-and-dev-artifacts-report",
+   "file": "BugBounty/reports/goatclub-web-root-admin-tooling-and-dev-artifacts-report.md",
+   "cat": "other",
+   "ts": "2026-10-02"
+  },
+  {
+   "title": "optus-myhub-graphql-guest-file-disclosure-report",
+   "file": "BugBounty/reports/optus-myhub-graphql-guest-file-disclosure-report.md",
+   "cat": "other",
+   "ts": "2026-10-02"
+  },
+  {
+   "title": "optus-myhub-guest-document-destruction-report",
+   "file": "BugBounty/reports/optus-myhub-guest-document-destruction-report.md",
+   "cat": "other",
+   "ts": "2026-10-02"
   }
  ],
  "kev_referenced": [
@@ -6264,6 +6286,7 @@
   "CVE-2025-67038",
   "CVE-2025-8088",
   "CVE-2026-0257",
+  "CVE-2026-104286",
   "CVE-2026-10520",
   "CVE-2026-15409",
   "CVE-2026-15410",
@@ -7063,10 +7086,17 @@
   },
   {
    "date": "2026-10-02",
-   "intel_items": 1654,
-   "cves": 653,
-   "breaches": 144,
+   "intel_items": 1658,
+   "cves": 654,
+   "breaches": 145,
    "malware": 171
+  },
+  {
+   "date": "2026-10-03",
+   "intel_items": 1661,
+   "cves": 656,
+   "breaches": 146,
+   "malware": 172
   }
  ]
 }
