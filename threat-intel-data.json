@@ -1,50 +1,50 @@
 {
- "generated": "2026-10-03 20:45",
- "today": "2026-10-03",
+ "generated": "2026-10-04 20:45",
+ "today": "2026-10-04",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
-  "cves": 656,
-  "breaches": 146,
+  "cves": 657,
+  "breaches": 147,
   "malware": 172,
   "supplychain": 74,
   "tools": 94,
   "commands": 13,
   "guides": 302,
-  "intel_items": 1661,
+  "intel_items": 1664,
   "kev": 148
  },
  "windows": {
   "week": {
-   "total": 36,
+   "total": 30,
    "by_cat": {
-    "cve": 18,
-    "breach": 8,
-    "ai-bugbounty": 3,
-    "malware": 5,
+    "cve": 15,
+    "breach": 7,
+    "malware": 4,
+    "ai-bugbounty": 2,
     "supplychain": 1,
     "technique": 1
    },
    "by_src": {}
   },
   "month": {
-   "total": 447,
+   "total": 412,
    "by_cat": {
-    "malware": 50,
-    "cve": 145,
-    "misc": 56,
-    "other": 29,
-    "breach": 55,
-    "technique": 44,
-    "supplychain": 13,
-    "ai-bugbounty": 45,
+    "cve": 136,
+    "breach": 53,
+    "ai-bugbounty": 44,
+    "technique": 42,
+    "misc": 48,
+    "malware": 46,
+    "other": 21,
     "tool": 8,
+    "supplychain": 12,
     "command": 2
    },
    "by_src": {}
   },
   "year": {
-   "total": 1661,
+   "total": 1664,
    "by_cat": {
     "ai-bugbounty": 123,
     "malware": 203,
@@ -53,14 +53,14 @@
     "misc": 330,
     "command": 6,
     "technique": 143,
-    "cve": 417,
-    "breach": 179,
+    "cve": 418,
+    "breach": 181,
     "supplychain": 91
    },
    "by_src": {}
   },
   "all": {
-   "total": 1661,
+   "total": 1664,
    "by_cat": {
     "ai-bugbounty": 123,
     "malware": 203,
@@ -69,8 +69,8 @@
     "misc": 330,
     "command": 6,
     "technique": 143,
-    "cve": 417,
-    "breach": 179,
+    "cve": 418,
+    "breach": 181,
     "supplychain": 91
    },
    "by_src": {}
@@ -1853,7 +1853,7 @@
   ]
  },
  "cve_sev": {
-  "Critical": 262,
+  "Critical": 263,
   "High": 186,
   "Low": 35,
   "Medium": 24
@@ -1870,7 +1870,7 @@
   "2023": 17,
   "2024": 14,
   "2025": 31,
-  "2026": 545
+  "2026": 546
  },
  "cve_month": {
   "2025-10": 1,
@@ -1880,7 +1880,7 @@
   "2026-07": 16,
   "2026-08": 84,
   "2026-09": 159,
-  "2026-10": 2
+  "2026-10": 3
  },
  "top_cve": [
   {
@@ -6135,6 +6135,24 @@
  },
  "recent": [
   {
+   "title": "DTU-Denmark-University-IAM-Breach-200k-2026-10",
+   "file": "Threat_Intel/Breaches/DTU-Denmark-University-IAM-Breach-200k-2026-10.md",
+   "cat": "breach",
+   "ts": "2026-10-04"
+  },
+  {
+   "title": "Kodak-ShinyHunters-Breach-2026",
+   "file": "Threat_Intel/Breaches/Kodak-ShinyHunters-Breach-2026.md",
+   "cat": "breach",
+   "ts": "2026-10-04"
+  },
+  {
+   "title": "Fortra-BoKS-Critical-Vulns-Auth-Bypass-RCE-2026-10",
+   "file": "Threat_Intel/CVEs/2026/Critical/Fortra-BoKS-Critical-Vulns-Auth-Bypass-RCE-2026-10.md",
+   "cat": "cve",
+   "ts": "2026-10-04"
+  },
+  {
    "title": "Frontline-Education-School-Employee-Data-Breach-2026",
    "file": "Threat_Intel/Breaches/Frontline-Education-School-Employee-Data-Breach-2026.md",
    "cat": "breach",
@@ -6203,24 +6221,6 @@
   {
    "title": "goatclub-served-ide-config-directory-primitive",
    "file": "BugBounty/primitives/goatclub-served-ide-config-directory-primitive.md",
-   "cat": "other",
-   "ts": "2026-10-02"
-  },
-  {
-   "title": "goatclub-web-root-admin-tooling-and-dev-artifacts-report",
-   "file": "BugBounty/reports/goatclub-web-root-admin-tooling-and-dev-artifacts-report.md",
-   "cat": "other",
-   "ts": "2026-10-02"
-  },
-  {
-   "title": "optus-myhub-graphql-guest-file-disclosure-report",
-   "file": "BugBounty/reports/optus-myhub-graphql-guest-file-disclosure-report.md",
-   "cat": "other",
-   "ts": "2026-10-02"
-  },
-  {
-   "title": "optus-myhub-guest-document-destruction-report",
-   "file": "BugBounty/reports/optus-myhub-guest-document-destruction-report.md",
    "cat": "other",
    "ts": "2026-10-02"
   }
@@ -7096,6 +7096,13 @@
    "intel_items": 1661,
    "cves": 656,
    "breaches": 146,
+   "malware": 172
+  },
+  {
+   "date": "2026-10-04",
+   "intel_items": 1664,
+   "cves": 657,
+   "breaches": 147,
    "malware": 172
   }
  ]
