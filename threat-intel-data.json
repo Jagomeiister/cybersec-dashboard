@@ -1,76 +1,74 @@
 {
- "generated": "2026-10-06 20:45",
- "today": "2026-10-06",
+ "generated": "2026-10-07 20:45",
+ "today": "2026-10-07",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
-  "cves": 657,
-  "breaches": 147,
-  "malware": 172,
+  "cves": 660,
+  "breaches": 151,
+  "malware": 174,
   "supplychain": 74,
   "tools": 94,
   "commands": 13,
-  "guides": 302,
-  "intel_items": 1664,
+  "guides": 303,
+  "intel_items": 1676,
   "kev": 148
  },
  "windows": {
   "week": {
-   "total": 21,
+   "total": 23,
    "by_cat": {
     "cve": 7,
+    "ai-bugbounty": 4,
     "malware": 4,
-    "ai-bugbounty": 2,
-    "supplychain": 1,
-    "breach": 6,
-    "technique": 1
+    "breach": 8
    },
    "by_src": {}
   },
   "month": {
-   "total": 351,
+   "total": 349,
    "by_cat": {
-    "cve": 112,
-    "other": 16,
-    "breach": 46,
-    "tool": 8,
-    "malware": 43,
-    "command": 2,
-    "ai-bugbounty": 37,
+    "cve": 111,
+    "malware": 42,
+    "breach": 47,
+    "other": 14,
+    "ai-bugbounty": 40,
     "misc": 40,
     "technique": 36,
-    "supplychain": 11
+    "supplychain": 11,
+    "command": 1,
+    "tool": 7
    },
    "by_src": {}
   },
   "year": {
-   "total": 1664,
+   "total": 1676,
    "by_cat": {
-    "ai-bugbounty": 123,
-    "malware": 203,
+    "ai-bugbounty": 126,
+    "malware": 205,
     "other": 111,
     "tool": 58,
     "misc": 330,
     "command": 6,
     "technique": 143,
-    "cve": 418,
-    "breach": 181,
+    "cve": 421,
+    "breach": 185,
     "supplychain": 91
    },
    "by_src": {}
   },
   "all": {
-   "total": 1664,
+   "total": 1676,
    "by_cat": {
-    "ai-bugbounty": 123,
-    "malware": 203,
+    "ai-bugbounty": 126,
+    "malware": 205,
     "other": 111,
     "tool": 58,
     "misc": 330,
     "command": 6,
     "technique": 143,
-    "cve": 418,
-    "breach": 181,
+    "cve": 421,
+    "breach": 185,
     "supplychain": 91
    },
    "by_src": {}
@@ -1853,8 +1851,8 @@
   ]
  },
  "cve_sev": {
-  "Critical": 263,
-  "High": 186,
+  "Critical": 264,
+  "High": 188,
   "Low": 35,
   "Medium": 24
  },
@@ -1870,7 +1868,7 @@
   "2023": 17,
   "2024": 14,
   "2025": 31,
-  "2026": 546
+  "2026": 549
  },
  "cve_month": {
   "2025-10": 1,
@@ -1880,7 +1878,7 @@
   "2026-07": 16,
   "2026-08": 84,
   "2026-09": 159,
-  "2026-10": 3
+  "2026-10": 6
  },
  "top_cve": [
   {
@@ -3116,6 +3114,14 @@
   "CVE-2026-20303": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-20303-Cisco-SDWAN-IOSXE-August-2026.md",
    "body": "# Cisco Catalyst SD-WAN & IOS XE \u2014 August 2026 Patch Batch (3\u00d7 CVSS 9.9)\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 2 independent sources\n\n**Type:** Vendor patch batch / critical CVEs | **Date:** 2026-08-06\n\n## Summary\nCisco patched **12 Catalyst SD-WAN and IOS XE flaws**, including **three CVSS 9.9** bugs and a **9.8 command-injection** issue. Found via **internal testing using frontier AI models**; **not known to be actively exploited**.\n\n## Key CVEs\n- **CVE-2026-20303** (9.9) \u2014 SD-WAN improper input validation.\n- **CVE-2026-20304** (9.9) \u2014 SD-WAN improper access control.\n- **CVE-2026-20310** (9.9) \u2014 SD-WAN improper link resolution before file access.\n- **CVE-2026-20272** (9.8) \u2014 IOS XE improper neutralization of special elements (command / OS / argument injection).\n- **CVE-2026-20267** (9.0) \u2014 IOS XE improper access control.\n\n## Fixed Versions\nIOS XE **17.9.10, 17.12.8, 17.15.6, 17.18.4/17.18.4a, 26.1.2** (first fixed).\n\n## Action\n- Patch to fixed IOS XE trains; prioritize internet-reachable SD-WAN managers/edges.\n- Restrict management-plane access; monitor for injection attempts pending upgrade.\n\n> Source: [The Hacker News](https://thehackernews.com/2026/08/cisco-patches-12-sd-wan-and-ios-xe.html) \u2014 2026-08-06 (RSS: THN feedburner)\n> Source: [SecurityWeek](https://www.securityweek.com/cisco-patches-critical-sd-wan-ios-xe-fmc-vulnerabilities/) \u2014 2026-08-06\n\n## Tags\n #cve #cisco #unverified",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-21589": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-21589-Atlassian-Data-Center-File-Access.md",
+   "body": "# CVE-2026-21589 \u2014 Atlassian Jira/Confluence Data Center critical file access\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/atlassian-warns-of-critical-file-access-flaw-in-jira-confluence/) \u2014 Tue, 06 Oct 2026\n> Source: [SecurityWeek](https://www.securityweek.com/atlassian-patches-critical-vulnerability-affecting-8-products/) \u2014 Wed, 07 Oct 2026\n\n- Severity: Critical\n- Unauthenticated arbitrary file access in web application root directories; 8 Atlassian products patched, incl. self-hosted Data Center Jira/Confluence.\n- Action: patch; review exposed web roots.",
    "sev": "Critical",
    "year": "2026",
    "kev": false,
@@ -6135,6 +6141,78 @@
  },
  "recent": [
   {
+   "title": "bb-bot-gui-audit-2026-10-07-observations",
+   "file": "BugBounty/notes/bb-bot-gui-audit-2026-10-07-observations.md",
+   "cat": "other",
+   "ts": "2026-10-07"
+  },
+  {
+   "title": "session-2026-10-07",
+   "file": "BugBounty/notes/session-2026-10-07.md",
+   "cat": "other",
+   "ts": "2026-10-07"
+  },
+  {
+   "title": "ai-security-news-2026-10-07",
+   "file": "Guides/AI-BugBounty/ai-security-news-2026-10-07.md",
+   "cat": "ai-bugbounty",
+   "ts": "2026-10-07"
+  },
+  {
+   "title": "Arizona-Court-System-Breach-1M-2026-10",
+   "file": "Threat_Intel/Breaches/Arizona-Court-System-Breach-1M-2026-10.md",
+   "cat": "breach",
+   "ts": "2026-10-07"
+  },
+  {
+   "title": "ASOS-Snowflake-Breach-2026-10",
+   "file": "Threat_Intel/Breaches/ASOS-Snowflake-Breach-2026-10.md",
+   "cat": "breach",
+   "ts": "2026-10-07"
+  },
+  {
+   "title": "Osaka-Metropolitan-University-Ransomware-2026-10",
+   "file": "Threat_Intel/Breaches/Osaka-Metropolitan-University-Ransomware-2026-10.md",
+   "cat": "breach",
+   "ts": "2026-10-07"
+  },
+  {
+   "title": "South-Korea-Bank-Hacks-AI-Agents-2026-10",
+   "file": "Threat_Intel/Breaches/South-Korea-Bank-Hacks-AI-Agents-2026-10.md",
+   "cat": "breach",
+   "ts": "2026-10-07"
+  },
+  {
+   "title": "CVE-2026-21589-Atlassian-Data-Center-File-Access",
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-21589-Atlassian-Data-Center-File-Access.md",
+   "cat": "cve",
+   "ts": "2026-10-07"
+  },
+  {
+   "title": "LibreOffice-OpenOffice-Code-Exec-2026-10",
+   "file": "Threat_Intel/CVEs/2026/High/LibreOffice-OpenOffice-Code-Exec-2026-10.md",
+   "cat": "cve",
+   "ts": "2026-10-07"
+  },
+  {
+   "title": "Ninja-Forms-WordPress-Plugin-Exploited-2026-10",
+   "file": "Threat_Intel/CVEs/2026/High/Ninja-Forms-WordPress-Plugin-Exploited-2026-10.md",
+   "cat": "cve",
+   "ts": "2026-10-07"
+  },
+  {
+   "title": "ATM-Malware-Creator-Arrest-2026-10",
+   "file": "Threat_Intel/Malware/ATM-Malware-Creator-Arrest-2026-10.md",
+   "cat": "malware",
+   "ts": "2026-10-07"
+  },
+  {
+   "title": "ClickFix-Ukraine-Lunex-Stealer-2026-10",
+   "file": "Threat_Intel/Malware/ClickFix-Ukraine-Lunex-Stealer-2026-10.md",
+   "cat": "malware",
+   "ts": "2026-10-07"
+  },
+  {
    "title": "account-takeover-open-redirect-regex-bypass-technique-guide",
    "file": "Guides/account-takeover-open-redirect-regex-bypass-technique-guide.md",
    "cat": "technique",
@@ -6149,78 +6227,6 @@
   {
    "title": "Active-Directory-Silent-Domain-Takeover-54-Minutes-LOTL-Qualys-2026",
    "file": "Guides/Active-Directory-Silent-Domain-Takeover-54-Minutes-LOTL-Qualys-2026.md",
-   "cat": "technique",
-   "ts": "2026-10-05"
-  },
-  {
-   "title": "airdrop-quickshare-six-flaws-2026",
-   "file": "Guides/airdrop-quickshare-six-flaws-2026.md",
-   "cat": "technique",
-   "ts": "2026-10-05"
-  },
-  {
-   "title": "amsi-scriptblock-logging-bypass-technique-guide",
-   "file": "Guides/amsi-scriptblock-logging-bypass-technique-guide.md",
-   "cat": "technique",
-   "ts": "2026-10-05"
-  },
-  {
-   "title": "Android-VPN-Lockdown-Bypass-Hardware-Offload-Real-IP-Leak-Mullvad-2026",
-   "file": "Guides/Android-VPN-Lockdown-Bypass-Hardware-Offload-Real-IP-Leak-Mullvad-2026.md",
-   "cat": "technique",
-   "ts": "2026-10-05"
-  },
-  {
-   "title": "APT Groups and Operations",
-   "file": "Guides/APT Groups and Operations.md",
-   "cat": "technique",
-   "ts": "2026-10-05"
-  },
-  {
-   "title": "asd-alert-cms-exploitation-campaign-2026",
-   "file": "Guides/asd-alert-cms-exploitation-campaign-2026.md",
-   "cat": "technique",
-   "ts": "2026-10-05"
-  },
-  {
-   "title": "Automated-SSH-Actors-22-Seconds-Login-to-Persistence-2026",
-   "file": "Guides/Automated-SSH-Actors-22-Seconds-Login-to-Persistence-2026.md",
-   "cat": "technique",
-   "ts": "2026-10-05"
-  },
-  {
-   "title": "AWS-Access-Key-Exposure-Detection-CloudTrail-Attribution-Gaps-2026",
-   "file": "Guides/AWS-Access-Key-Exposure-Detection-CloudTrail-Attribution-Gaps-2026.md",
-   "cat": "technique",
-   "ts": "2026-10-05"
-  },
-  {
-   "title": "azure-conditional-access-bypass-kql-guide",
-   "file": "Guides/azure-conditional-access-bypass-kql-guide.md",
-   "cat": "technique",
-   "ts": "2026-10-05"
-  },
-  {
-   "title": "bitskrieg-bitlocker-bypass-technique-guide",
-   "file": "Guides/bitskrieg-bitlocker-bypass-technique-guide.md",
-   "cat": "technique",
-   "ts": "2026-10-05"
-  },
-  {
-   "title": "bluekit-browser-in-the-middle-phishing-kit-guide",
-   "file": "Guides/bluekit-browser-in-the-middle-phishing-kit-guide.md",
-   "cat": "technique",
-   "ts": "2026-10-05"
-  },
-  {
-   "title": "browser-in-the-browser-malware-delivery-technique-guide",
-   "file": "Guides/browser-in-the-browser-malware-delivery-technique-guide.md",
-   "cat": "malware",
-   "ts": "2026-10-05"
-  },
-  {
-   "title": "browser-security-tool-blind-spot-guide",
-   "file": "Guides/browser-security-tool-blind-spot-guide.md",
    "cat": "technique",
    "ts": "2026-10-05"
   }
@@ -7118,6 +7124,13 @@
    "cves": 657,
    "breaches": 147,
    "malware": 172
+  },
+  {
+   "date": "2026-10-07",
+   "intel_items": 1676,
+   "cves": 660,
+   "breaches": 151,
+   "malware": 174
   }
  ]
 }
