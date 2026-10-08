@@ -1,75 +1,77 @@
 {
- "generated": "2026-10-07 20:45",
- "today": "2026-10-07",
+ "generated": "2026-10-08 20:45",
+ "today": "2026-10-08",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
-  "cves": 660,
-  "breaches": 151,
-  "malware": 174,
-  "supplychain": 74,
+  "cves": 669,
+  "breaches": 154,
+  "malware": 178,
+  "supplychain": 75,
   "tools": 94,
   "commands": 13,
-  "guides": 303,
-  "intel_items": 1676,
-  "kev": 148
+  "guides": 305,
+  "intel_items": 1711,
+  "kev": 150
  },
  "windows": {
   "week": {
-   "total": 23,
+   "total": 55,
    "by_cat": {
-    "cve": 7,
-    "ai-bugbounty": 4,
-    "malware": 4,
-    "breach": 8
+    "cve": 11,
+    "ai-bugbounty": 7,
+    "malware": 10,
+    "breach": 18,
+    "misc": 8,
+    "supplychain": 1
    },
    "by_src": {}
   },
   "month": {
-   "total": 349,
+   "total": 358,
    "by_cat": {
-    "cve": 111,
-    "malware": 42,
-    "breach": 47,
-    "other": 14,
-    "ai-bugbounty": 40,
-    "misc": 40,
-    "technique": 36,
-    "supplychain": 11,
+    "cve": 112,
+    "malware": 45,
+    "ai-bugbounty": 41,
+    "technique": 35,
+    "breach": 51,
+    "other": 9,
+    "misc": 46,
+    "supplychain": 12,
     "command": 1,
-    "tool": 7
+    "tool": 6
    },
    "by_src": {}
   },
   "year": {
-   "total": 1676,
+   "total": 1711,
    "by_cat": {
-    "ai-bugbounty": 126,
-    "malware": 205,
+    "ai-bugbounty": 129,
+    "malware": 212,
     "other": 111,
     "tool": 58,
-    "misc": 330,
+    "misc": 338,
     "command": 6,
     "technique": 143,
-    "cve": 421,
-    "breach": 185,
-    "supplychain": 91
+    "cve": 427,
+    "breach": 195,
+    "supplychain": 92
    },
    "by_src": {}
   },
   "all": {
-   "total": 1676,
+   "total": 1711,
    "by_cat": {
-    "ai-bugbounty": 126,
-    "malware": 205,
+    "ai-bugbounty": 129,
+    "malware": 212,
     "other": 111,
     "tool": 58,
-    "misc": 330,
+    "misc": 338,
     "command": 6,
     "technique": 143,
-    "cve": 421,
-    "breach": 185,
-    "supplychain": 91
+    "cve": 427,
+    "breach": 195,
+    "supplychain": 92
    },
    "by_src": {}
   }
@@ -1851,9 +1853,9 @@
   ]
  },
  "cve_sev": {
-  "Critical": 264,
+  "Critical": 267,
   "High": 188,
-  "Low": 35,
+  "Low": 36,
   "Medium": 24
  },
  "cve_year": {
@@ -1868,7 +1870,7 @@
   "2023": 17,
   "2024": 14,
   "2025": 31,
-  "2026": 549
+  "2026": 558
  },
  "cve_month": {
   "2025-10": 1,
@@ -1877,8 +1879,8 @@
   "2026-06": 108,
   "2026-07": 16,
   "2026-08": 84,
-  "2026-09": 159,
-  "2026-10": 6
+  "2026-09": 160,
+  "2026-10": 11
  },
  "top_cve": [
   {
@@ -2877,6 +2879,38 @@
     "Turla"
    ]
   },
+  "CVE-2026-106382": {
+   "file": "Threat_Intel/CVEs/2026/Critical/Chrome-155-247-Vulns-4-Critical-UAF-2026-10.md",
+   "body": "# Chrome 155 \u2014 247 Vulnerabilities Patched, 4 Critical Use-After-Free\n\n> Source: [SecurityWeek](https://www.securityweek.com/chrome-155-update-patches-247-vulnerabilities/) \u2014 Wed, 07 Oct 2026\n\n**Type:** CVE / browser patch | **Severity:** Critical | **Date:** 2026-10-07 | **Tags:** #cve #chrome #uaf\n\n## Summary\n- Chrome 155 fixes **247** flaws.\n- Critical UAFs: **CVE-2026-106382, CVE-2026-106197, CVE-2026-106358, CVE-2026-106347** (components: Chromecast, Browser, Navigation, Track).\n- **No in-the-wild exploitation** reported.\n- Fixed: **155.0.8059.39/.40** (Win/macOS), **155.0.8059.39** (Linux).\n\n## Actions\nPush Chrome/Chromium-based browser updates. Track Edge/Brave/Opera downstream releases. See [[Browser-Patch-Cycle-Chrome-Firefox-2026-09-02]].",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-106197": {
+   "file": "Threat_Intel/CVEs/2026/Critical/Chrome-155-247-Vulns-4-Critical-UAF-2026-10.md",
+   "body": "# Chrome 155 \u2014 247 Vulnerabilities Patched, 4 Critical Use-After-Free\n\n> Source: [SecurityWeek](https://www.securityweek.com/chrome-155-update-patches-247-vulnerabilities/) \u2014 Wed, 07 Oct 2026\n\n**Type:** CVE / browser patch | **Severity:** Critical | **Date:** 2026-10-07 | **Tags:** #cve #chrome #uaf\n\n## Summary\n- Chrome 155 fixes **247** flaws.\n- Critical UAFs: **CVE-2026-106382, CVE-2026-106197, CVE-2026-106358, CVE-2026-106347** (components: Chromecast, Browser, Navigation, Track).\n- **No in-the-wild exploitation** reported.\n- Fixed: **155.0.8059.39/.40** (Win/macOS), **155.0.8059.39** (Linux).\n\n## Actions\nPush Chrome/Chromium-based browser updates. Track Edge/Brave/Opera downstream releases. See [[Browser-Patch-Cycle-Chrome-Firefox-2026-09-02]].",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-106358": {
+   "file": "Threat_Intel/CVEs/2026/Critical/Chrome-155-247-Vulns-4-Critical-UAF-2026-10.md",
+   "body": "# Chrome 155 \u2014 247 Vulnerabilities Patched, 4 Critical Use-After-Free\n\n> Source: [SecurityWeek](https://www.securityweek.com/chrome-155-update-patches-247-vulnerabilities/) \u2014 Wed, 07 Oct 2026\n\n**Type:** CVE / browser patch | **Severity:** Critical | **Date:** 2026-10-07 | **Tags:** #cve #chrome #uaf\n\n## Summary\n- Chrome 155 fixes **247** flaws.\n- Critical UAFs: **CVE-2026-106382, CVE-2026-106197, CVE-2026-106358, CVE-2026-106347** (components: Chromecast, Browser, Navigation, Track).\n- **No in-the-wild exploitation** reported.\n- Fixed: **155.0.8059.39/.40** (Win/macOS), **155.0.8059.39** (Linux).\n\n## Actions\nPush Chrome/Chromium-based browser updates. Track Edge/Brave/Opera downstream releases. See [[Browser-Patch-Cycle-Chrome-Firefox-2026-09-02]].",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-106347": {
+   "file": "Threat_Intel/CVEs/2026/Critical/Chrome-155-247-Vulns-4-Critical-UAF-2026-10.md",
+   "body": "# Chrome 155 \u2014 247 Vulnerabilities Patched, 4 Critical Use-After-Free\n\n> Source: [SecurityWeek](https://www.securityweek.com/chrome-155-update-patches-247-vulnerabilities/) \u2014 Wed, 07 Oct 2026\n\n**Type:** CVE / browser patch | **Severity:** Critical | **Date:** 2026-10-07 | **Tags:** #cve #chrome #uaf\n\n## Summary\n- Chrome 155 fixes **247** flaws.\n- Critical UAFs: **CVE-2026-106382, CVE-2026-106197, CVE-2026-106358, CVE-2026-106347** (components: Chromecast, Browser, Navigation, Track).\n- **No in-the-wild exploitation** reported.\n- Fixed: **155.0.8059.39/.40** (Win/macOS), **155.0.8059.39** (Linux).\n\n## Actions\nPush Chrome/Chromium-based browser updates. Track Edge/Brave/Opera downstream releases. See [[Browser-Patch-Cycle-Chrome-Firefox-2026-09-02]].",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-20354": {
    "file": "Threat_Intel/CVEs/2026/Critical/Cisco-Secure-Email-SMIME-Unpatched-IOS-XR-Nexus-Critical-2026-09.md",
    "body": "# Cisco, September 2026 \u2014 Unpatched Secure Email S/MIME Flaws (CVE-2026-20354 / -20355) Alongside Critical IOS XR and Nexus Fixes\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 2 independent sources\n\n**Type:** cve | **Severity:** Critical (IOS XR / Nexus) and High (Secure Email, **unpatched**) | **Date logged:** 2026-09-04\n**Advisory:** Cisco round of 2026-09-03; relayed as **CCCS AV26-876**\n**Status:** IOS XR and Nexus \u2014 **patched**. Secure Email S/MIME \u2014 **publicly known, no fix available**.\n\n## Summary\n\nCisco published a September round with two very different halves:\n\n**Half one \u2014 unpatched and publicly known.** **CVE-2026-20354** and **CVE-2026-20355** are **S/MIME handling flaws in Cisco Secure Email** that can **expose the content of encrypted email**. Cisco has disclosed them as publicly known with **no fix currently available**; mitigation is configuration and monitoring only.\n\n**Half two \u2014 patched and critical.** The same round fixed **critical remote code execution and authentication bypass** flaws in **Cisco IOS XR** and **Nexus 9000 Series** switching products.\n\n**Also in scope per CCCS AV26-876:** Desk Phone 9800 Series and Video Phone 8875 prior to 5.0(1); IP Phone 7800/8800 prior to 14.4(1)SR3; IP Phone 8845/8865 prior to 14.4(1)SR4; Wireless IP Phone 8821.\n\n## Why the unpatched half is the more interesting one\n\nA security appliance that fails **open on the confidentiality control it exists to provide** is a distinct failure class from a vulnerable appliance.\n\n- **The control silently stops working.** S/MIME's entire value is the assurance that message content is unreadable in transit and at rest on intermediaries. A flaw that exposes plaintext at the gateway does not produce an error, an alert, or a user-visible change \u2014 senders and recipients see a successfully encrypted exchange.\n- **It is the messages chosen for S/MIME that are exposed.** Nobody encrypts routine mail. The population of affected messages is, by construction, the subset the organisation considered sensitive enough to warrant the friction \u2014 legal, M&A, HR, clinical, regulated communications.\n- **\"Publicly known with no patch\" is the worst square on the grid** and it is under-tracked. Vulnerability management programmes are built to consume patches; an advisory with no fix has no field to write a remediation date into and routinely falls out of the process entirely. This vault has now logged several of these \u2014 the honest handling is a **tracked compensating control with a review date**, not a deferred ticket.\n\n## Action\n\n**Secure Email (no patch available):**\n1. **Inventory who actually relies on S/MIME through the gateway**, and tell them. This is a disclosure decision, not just a technical one \u2014 parties who exchanged encrypted mail under an assumption that no longer held may have regulatory notification obligations.\n2. Consider **suspending gateway-side S/MIME processing** and moving sensitive exchange to endpoint-to-endpoint encryption where the gateway is not in the decryption path, for the duration.\n3. Monitor Cisco's advisory for a fixed release and treat this as an **open risk item with a named owner and a review date**, not a backlog entry.\n\n**IOS XR / Nexus (patched):**\n4. **Patch IOS XR and Nexus 9000 now** \u2014 critical RCE and authentication bypass on core switching and carrier-grade routing.\n5. Confirm management planes for both are **off the internet and on a segregated admin network**.\n6. Hunt for unexpected configuration changes, new local accounts, and unaccounted-for reloads on affected platforms.\n\n**Phones:**\n7. Update the Desk Phone 9800, Video Phone 8875 and IP Phone 7800/8800/8845/8865/8821 fleets to the fixed loads. Handsets are rarely in the patch programme at all, sit on voice VLANs with wide internal reachability, and have microphones.\n\n## Open questions\n\n- CVE identifiers for the IOS XR and Nexus critical flaws were not captured in this read \u2014 pull from the Cisco advisories.\n- Whether the S/MIME flaws are exploitable remotely by a sender, or require a position on the appliance. This determines whether the exposure is active or opportunistic.\n- No exploitation reported for any item in the round.\n\n## Sources\n\n> Source: [SecurityWeek \u2014 Cisco Warns of Unpatched Secure Email Flaws, Patches Critical Switch Vulnerabilities](https://www.securityweek.com/cisco-warns-of-unpatched-secure-email-flaws-patches-critical-switch-vulnerabilities/) \u2014 Thu, 03 Sep 2026 10:30 UTC\n> Source: [CCCS \u2014 Cisco security advisory (AV26-876)](https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-876) \u2014 2026-09-03 13:13 UTC\n\n## Tags\n\n#cisco #cve-2026-20354 #cve-2026-20355 #secure-email #smime #unpatched #ios-xr #nexus-9000 #rce #authentication-bypass #cccs-av26-876 #critical #unverified",
@@ -2912,6 +2946,14 @@
   "CVE-2026-0768": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-0768-Langflow-Unauth-Python-Code-Execution-Exploited.md",
    "body": "# CVE-2026-0768 \u2014 Langflow Unauthenticated Python Code Execution (root)\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n**CVE:** CVE-2026-0768\n**CVSS:** 9.8 (Critical)\n**Status:** **Exploited in the wild** \u2014 attacker activity probing for OpenAI and AWS credentials\n**Reported by:** VulnCheck\n\n## What it is\nLack of proper validation of user-supplied input allows execution of **arbitrary Python code in the context of the root user**. No authentication required.\n\n## What the attackers are actually doing\nThe exploitation is not generic crypto-mining or webshell dropping. Observed activity **probes for OpenAI and AWS credentials** on the compromised host. Langflow is an LLM-workflow builder, so by design it is where API keys for model providers and cloud storage are configured. **The vulnerability is the door; the credential store is the target.**\n\nThis is the same shape as the METR incident logged this sweep and the SANS coding-agent honeypot finding: AI orchestration hosts are being treated by attackers as credential caches rather than as compute.\n\n## Related Langflow entries in this vault\n- `Threat_Intel/CVEs/2026/Critical/CVE-2026-33017-Langflow-Unauth-RCE.md`\n- `Threat_Intel/CVEs/2026/High/CVE-2026-5027-Langflow-Path-Traversal.md`\n- `Threat_Intel/CISA-KEV-Langflow-Ncentral-Tomcat-DeepSeek-AI-Campaign-2026.md`\n- CVE-2025-3248 (prior Langflow RCE, referenced in the same source)\n\n**Langflow now has four separate unauthenticated-code-execution or file-access CVEs tracked here.** Treat any internet-exposed Langflow instance as a standing liability rather than a patch queue item.\n\n## Action\n1. **Take Langflow off the public internet.** It is an internal developer tool; there is no version of this product that has earned an internet-facing deployment.\n2. Patch to the fixed release.\n3. **Rotate every model-provider and cloud credential configured in Langflow** on any instance that was internet-reachable \u2014 the observed activity is credential probing, so patching alone leaves the loss in place.\n4. Check IAM/CloudTrail and OpenAI org usage logs for anomalous key use, including **usage-quota anomalies** rather than only access-denied events.\n\n## Open questions\n- Affected version range not enumerated in the read.\n- No IOCs published in the source read.\n\n> Source: [The Hacker News \u2014 Attackers Exploit Critical Langflow and Rails Flaws in Credential-Probing and C2 Activity](https://thehackernews.com/2026/09/attackers-exploit-critical-langflow-and.html) \u2014 Tue, 01 Sep 2026\n\n## Tags\n#cve-2026-0768 #langflow #unauthenticated-rce #credential-theft #openai #aws #ai-infrastructure #exploited-in-the-wild #vulncheck #single-source #unverified",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-102255": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-102255-SonicWall-SMA1000-WorkPlace-SSRF-2026-10.md",
+   "body": "# CVE-2026-102255 \u2014 SonicWall SMA1000 Appliance WorkPlace Pre-Auth SSRF (Max Severity)\n\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-max-severity-ssrf-flaw-in-sma1000-gateways/) \u2014 Wed, 07 Oct 2026\n\n**Type:** CVE / SSRF | **Severity:** Critical (vendor: maximum) | **Date:** 2026-10-07 | **Tags:** #cve #sonicwall #sma1000 #ssrf #edge-device\n\n## Summary\n- Unauthenticated, low-complexity **server-side request forgery** in the SMA1000 **Appliance WorkPlace** interface, caused by an unintended alternate access path.\n- Affected: SMA1000 **6210, 7210, 8200v**. Not affected: SMA 100 series, SSL-VPN on SonicWall firewalls.\n- Hotfixes released 2026-10-06; advisory **SNWLID-2026-0017**. No workaround.\n- **Not exploited** per SonicWall (as of disclosure). Shadowserver sees ~400 exposed SMA1000 appliances.\n\n## Why it matters\nSMA1000 was hit by the CVE-2026-83548/83549 pre-auth SSRF zero-day chain in September (CISA KEV). Same product, same bug class: expect fast weaponization. See [[CVE-2026-83548-83549-SonicWall-SMA1000-ZeroDay-Chain-Exploited-2026-09]].\n\n## Actions\n- Apply SNWLID-2026-0017 hotfix now; restrict WorkPlace/management exposure.\n- Hunt for outbound requests from SMA1000 to internal metadata/admin endpoints.",
    "sev": "Critical",
    "year": "2026",
    "kev": false,
@@ -3121,7 +3163,7 @@
   },
   "CVE-2026-21589": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-21589-Atlassian-Data-Center-File-Access.md",
-   "body": "# CVE-2026-21589 \u2014 Atlassian Jira/Confluence Data Center critical file access\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/atlassian-warns-of-critical-file-access-flaw-in-jira-confluence/) \u2014 Tue, 06 Oct 2026\n> Source: [SecurityWeek](https://www.securityweek.com/atlassian-patches-critical-vulnerability-affecting-8-products/) \u2014 Wed, 07 Oct 2026\n\n- Severity: Critical\n- Unauthenticated arbitrary file access in web application root directories; 8 Atlassian products patched, incl. self-hosted Data Center Jira/Confluence.\n- Action: patch; review exposed web roots.",
+   "body": "# CVE-2026-21589 \u2014 Atlassian Jira/Confluence Data Center critical file access\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/atlassian-warns-of-critical-file-access-flaw-in-jira-confluence/) \u2014 Tue, 06 Oct 2026\n> Source: [SecurityWeek](https://www.securityweek.com/atlassian-patches-critical-vulnerability-affecting-8-products/) \u2014 Wed, 07 Oct 2026\n\n- Severity: Critical\n- Unauthenticated arbitrary file access in web application root directories; 8 Atlassian products patched, incl. self-hosted Data Center Jira/Confluence.\n- Action: patch; review exposed web roots.\n\n\n## Update \u2014 2026-10-08 (exploited after public PoC)\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-atlassian-flaw-after-public-poc-release/) \u2014 Wed, 07 Oct 2026\n> Source: [The Hacker News](https://thehackernews.com/2026/10/atlassian-data-center-flaw-draws.html) \u2014 Wed, 07 Oct 2026\n> Source: [SANS ISC](https://isc.sans.edu/diary/rss/33406) \u2014 Wed, 07 Oct 2026\n- **Active exploitation** began within ~2 hours of public details, after a public PoC. Unauthenticated, across Jira, Confluence and Bitbucket Data Center.\n- SANS ISC honeypots see scans. Attackers target config files in the web root (DB creds, secrets).\n- Action escalated: **patch immediately**. If patched late, rotate any secrets readable from the web root and review access logs for known-path file reads.",
    "sev": "Critical",
    "year": "2026",
    "kev": false,
@@ -4303,6 +4345,14 @@
    "kev": true,
    "apts": []
   },
+  "CVE-2026-94545": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-94545.md",
+   "body": "# CVE-2026-94545\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2026\n\n## Summary\n2104973925142733264 | 2026-09-29 | @ThreatWire_ | Next.js CVE-2026-94545 public PoC (EQSTLab) | -> Threat_Intel/CVEs/2026/Critical/NextJS-ImageResponse-Crafted-SVG-Server-Code-Execution-2026.md (appended)\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 2104973925142733264 | 2026-09-29 | @ThreatWire_ | Next.js CVE-2026-94545 public PoC (EQSTLab) | -> Threat_Intel/CVEs/2026/Critical/NextJS-ImageResponse-Crafted-SVG-Server-Code-Execution-2026.md (appended)\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-94545\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-94545\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-94545\n\n## Tags\n#cve #2026 #critical #auto-stub",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-9586": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-9586-Sangoma-Switchvox-Unauth-SQLi-RCE-Exploited-2026.md",
    "body": "# CVE-2026-9586 \u2014 Sangoma Switchvox Unauthenticated SQL Injection to RCE (Exploited in the Wild)\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 2 independent sources\n\n**Type:** cve | **Severity:** Critical (CVSS 9.3) | **Date logged:** 2026-09-03\n**Product:** Sangoma Switchvox (SMB Edition 8.3) VoIP platform\n**Impact:** Unauthenticated SQL injection leading to remote code execution\n**Status:** **Actively exploited** \u2014 attackers deploying reverse shells\n\n## Summary\n\n**CVE-2026-9586** is an **unauthenticated SQL injection** in the Sangoma Switchvox VoIP platform that leads to **remote code execution**. Attackers are exploiting it in the wild to **deploy reverse shells**.\n\n## Why a PBX compromise is worse than its CVSS suggests\n\nA phone system is not a peripheral. A compromised PBX gives an attacker:\n\n- **A trusted internal network position.** VoIP servers are routinely placed with broad internal reachability and are almost never segmented as tightly as their access warrants.\n- **Call metadata and often call recordings** \u2014 who spoke to whom, when, for how long. That is a targeting dataset for social engineering and, for legal, HR or executive functions, a confidentiality incident on its own.\n- **Outbound calling under the organisation's own caller ID.** Vishing from the victim's real number defeats the primary verification heuristic staff are taught. This sweep also carries Unit 42's *Spring Ring* Teams-vishing research; a compromised PBX is a materially better position than a spoofed one.\n- **Toll fraud**, the classic and immediate monetisation.\n\n## Action\n\n1. **Patch Switchvox immediately.** Exploitation is unauthenticated and active.\n2. **Remove the Switchvox admin and web interfaces from internet exposure.** Unauthenticated pre-auth RCE on an internet-facing appliance means exposure equals compromise.\n3. **Assume compromise on any internet-reachable instance.** Hunt for reverse-shell processes, unexpected outbound connections from the PBX, new admin users and modified dialplan/extension configuration.\n4. Review call-detail records for anomalous outbound volume and destinations (toll fraud is the fastest confirmation signal).\n5. Rotate SIP trunk credentials and any directory/LDAP bind accounts the PBX holds.\n6. **Segment the PBX.** It should not be able to reach general server VLANs.\n\n## Open questions\n\n- Exact affected/fixed version ranges beyond \"SMB Edition 8.3\" not captured \u2014 pull from the Sangoma advisory.\n- No IOCs published in the read.\n- Whether the flaw is in a specific endpoint or broadly reachable is unstated.\n\n## Sources\n\n> Source: [BleepingComputer \u2014 Hackers exploit Sangoma Switchvox flaw to deploy reverse shells](https://www.bleepingcomputer.com/news/security/hackers-exploit-sangoma-switchvox-flaw-to-deploy-reverse-shells/) \u2014 2026-09-02\n> Source: [The Hacker News \u2014 Attackers Exploit Critical Switchvox Flaw to Deploy Reverse Shells Without Credentials](https://thehackernews.com/2026/09/attackers-exploit-critical-switchvox.html) \u2014 2026-09-02\n\n## Tags\n\n#cve-2026-9586 #sangoma #switchvox #voip #pbx #sql-injection #unauthenticated-rce #exploited-in-the-wild #reverse-shell #unverified",
@@ -5154,6 +5204,14 @@
    "kev": true,
    "apts": []
   },
+  "CVE-2026-42271": {
+   "file": "Threat_Intel/CVEs/2026/Low/CVE-2026-42271.md",
+   "body": "# CVE-2026-42271\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Low  \n**Year:** 2026\n\n## Summary\nSee [[PoeLLM-Exposed-AI-Server-Cryptomining-Botnet-2026-10]]. LiteLLM CVE-2026-42271 + CVE-2026-48710 chain = unauthenticated RCE. A good AI-infra target class for bounty recon.\n\n## Where it appears in this vault\n- `Guides/AI-BugBounty/ai-security-news-2026-10-08.md` \u2014 See [[PoeLLM-Exposed-AI-Server-Cryptomining-Botnet-2026-10]]. LiteLLM CVE-2026-42271 + CVE-2026-48710 chain = unauthenticated RCE. A good AI-infra target class for bounty recon.\n- `Threat_Intel/Malware/PoeLLM-Exposed-AI-Server-Cryptomining-Botnet-2026-10.md` \u2014 Propagation: infected hosts scan ports **3000/4000** (Gotenberg/LiteLLM) and exploit **CVE-2026-42271** (LiteLLM MCP test endpoints). Horizon3.ai showed it chains with **CVE-2026-48710** for unauthenticated RCE.\n- `Threat_Intel/Malware/PoeLLM-Exposed-AI-Server-Cryptomining-Botnet-2026-10.md` \u2014 Patch LiteLLM (CVE-2026-42271/48710), never expose LiteLLM/Ollama directly to the internet, IP-allowlist AI endpoints.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-42271\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-42271\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42271\n\n## Tags\n#cve #2026 #low #auto-stub",
+   "sev": "Low",
+   "year": "2026",
+   "kev": true,
+   "apts": []
+  },
   "CVE-2026-46539": {
    "file": "Threat_Intel/CVEs/2026/Low/CVE-2026-46539.md",
    "body": "# CVE-2026-46539\n\n\u2705 **Verification:** Verified \u2014 4 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Low  \n**Year:** 2026\n\n## Summary\n@CVEnew (3h) \u2014 CVE-2026-46539: \"sm page duplicator\" WordPress plugin (\u2264 latest) stored-value SQLi when duplicating a page (auto-CVE, low-signal WP plugin).\n\n## Where it appears in this vault\n- `X_Intel/x-intel-2026-08-03.md` \u2014 @CVEnew (3h) \u2014 CVE-2026-46539: \"sm page duplicator\" WordPress plugin (\u2264 latest) stored-value SQLi when duplicating a page (auto-CVE, low-signal WP plugin).\n- `X_Intel/x-intel-tracker.md` \u2014 Logged/minor -> X_Intel/x-intel-2026-08-03.md: CVE-2026-46539 sm-page-duplicator WP SQLi (auto-CVE); ANY.RUN Suricata changelog; DPRK ClickFix fake-macOS-update repost (Jul-31, older); assorted product/non-security filler.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-46539\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-46539\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-46539\n\n## Tags\n#cve #2026 #low #auto-stub #verified",
@@ -5786,6 +5844,14 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-48710": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-48710.md",
+   "body": "# CVE-2026-48710\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nSee [[PoeLLM-Exposed-AI-Server-Cryptomining-Botnet-2026-10]]. LiteLLM CVE-2026-42271 + CVE-2026-48710 chain = unauthenticated RCE. A good AI-infra target class for bounty recon.\n\n## Where it appears in this vault\n- `Guides/AI-BugBounty/ai-security-news-2026-10-08.md` \u2014 See [[PoeLLM-Exposed-AI-Server-Cryptomining-Botnet-2026-10]]. LiteLLM CVE-2026-42271 + CVE-2026-48710 chain = unauthenticated RCE. A good AI-infra target class for bounty recon.\n- `Threat_Intel/Malware/PoeLLM-Exposed-AI-Server-Cryptomining-Botnet-2026-10.md` \u2014 Propagation: infected hosts scan ports **3000/4000** (Gotenberg/LiteLLM) and exploit **CVE-2026-42271** (LiteLLM MCP test endpoints). Horizon3.ai showed it chains with **CVE-2026-48710** for unauthenticated RCE.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-48710\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-48710\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-48710\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": true,
+   "apts": []
+  },
   "CVE-2026-48717": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-48717.md",
    "body": "# CVE-2026-48717\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-48717\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-48717\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-48717\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
@@ -6141,94 +6207,94 @@
  },
  "recent": [
   {
-   "title": "bb-bot-gui-audit-2026-10-07-observations",
-   "file": "BugBounty/notes/bb-bot-gui-audit-2026-10-07-observations.md",
-   "cat": "other",
-   "ts": "2026-10-07"
-  },
-  {
-   "title": "session-2026-10-07",
-   "file": "BugBounty/notes/session-2026-10-07.md",
-   "cat": "other",
-   "ts": "2026-10-07"
-  },
-  {
-   "title": "ai-security-news-2026-10-07",
-   "file": "Guides/AI-BugBounty/ai-security-news-2026-10-07.md",
+   "title": "ai-security-news-2026-10-08",
+   "file": "Guides/AI-BugBounty/ai-security-news-2026-10-08.md",
    "cat": "ai-bugbounty",
-   "ts": "2026-10-07"
+   "ts": "2026-10-08"
+  },
+  {
+   "title": "Hafnium-Zhang-Yu-10M-Reward-State-Dept-2026-10",
+   "file": "Threat_Intel/APT_Groups/Hafnium-Zhang-Yu-10M-Reward-State-Dept-2026-10.md",
+   "cat": "malware",
+   "ts": "2026-10-08"
+  },
+  {
+   "title": "Advantest-Ransomware-Data-Breach-2026-10",
+   "file": "Threat_Intel/Breaches/Advantest-Ransomware-Data-Breach-2026-10.md",
+   "cat": "breach",
+   "ts": "2026-10-08"
   },
   {
    "title": "Arizona-Court-System-Breach-1M-2026-10",
    "file": "Threat_Intel/Breaches/Arizona-Court-System-Breach-1M-2026-10.md",
    "cat": "breach",
-   "ts": "2026-10-07"
+   "ts": "2026-10-08"
   },
   {
-   "title": "ASOS-Snowflake-Breach-2026-10",
-   "file": "Threat_Intel/Breaches/ASOS-Snowflake-Breach-2026-10.md",
+   "title": "FortiBleed-Fortinet-Credential-Compromise-2026",
+   "file": "Threat_Intel/Breaches/FortiBleed-Fortinet-Credential-Compromise-2026.md",
    "cat": "breach",
-   "ts": "2026-10-07"
+   "ts": "2026-10-08"
   },
   {
-   "title": "Osaka-Metropolitan-University-Ransomware-2026-10",
-   "file": "Threat_Intel/Breaches/Osaka-Metropolitan-University-Ransomware-2026-10.md",
+   "title": "Kodak-ShinyHunters-Breach-2026",
+   "file": "Threat_Intel/Breaches/Kodak-ShinyHunters-Breach-2026.md",
    "cat": "breach",
-   "ts": "2026-10-07"
+   "ts": "2026-10-08"
   },
   {
-   "title": "South-Korea-Bank-Hacks-AI-Agents-2026-10",
-   "file": "Threat_Intel/Breaches/South-Korea-Bank-Hacks-AI-Agents-2026-10.md",
+   "title": "Oracle-Health-Breach-Tally-20M-2026-10",
+   "file": "Threat_Intel/Breaches/Oracle-Health-Breach-Tally-20M-2026-10.md",
    "cat": "breach",
-   "ts": "2026-10-07"
+   "ts": "2026-10-08"
+  },
+  {
+   "title": "Southern-Company-Georgia-Alabama-Power-Breach-400k-2026-10",
+   "file": "Threat_Intel/Breaches/Southern-Company-Georgia-Alabama-Power-Breach-400k-2026-10.md",
+   "cat": "breach",
+   "ts": "2026-10-08"
+  },
+  {
+   "title": "Chrome-155-247-Vulns-4-Critical-UAF-2026-10",
+   "file": "Threat_Intel/CVEs/2026/Critical/Chrome-155-247-Vulns-4-Critical-UAF-2026-10.md",
+   "cat": "cve",
+   "ts": "2026-10-08"
+  },
+  {
+   "title": "CVE-2026-102255-SonicWall-SMA1000-WorkPlace-SSRF-2026-10",
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-102255-SonicWall-SMA1000-WorkPlace-SSRF-2026-10.md",
+   "cat": "cve",
+   "ts": "2026-10-08"
   },
   {
    "title": "CVE-2026-21589-Atlassian-Data-Center-File-Access",
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-21589-Atlassian-Data-Center-File-Access.md",
    "cat": "cve",
-   "ts": "2026-10-07"
+   "ts": "2026-10-08"
   },
   {
-   "title": "LibreOffice-OpenOffice-Code-Exec-2026-10",
-   "file": "Threat_Intel/CVEs/2026/High/LibreOffice-OpenOffice-Code-Exec-2026-10.md",
+   "title": "CVE-2026-94545",
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-94545.md",
    "cat": "cve",
-   "ts": "2026-10-07"
+   "ts": "2026-10-08"
   },
   {
-   "title": "Ninja-Forms-WordPress-Plugin-Exploited-2026-10",
-   "file": "Threat_Intel/CVEs/2026/High/Ninja-Forms-WordPress-Plugin-Exploited-2026-10.md",
+   "title": "NextJS-ImageResponse-Crafted-SVG-Server-Code-Execution-2026",
+   "file": "Threat_Intel/CVEs/2026/Critical/NextJS-ImageResponse-Crafted-SVG-Server-Code-Execution-2026.md",
    "cat": "cve",
-   "ts": "2026-10-07"
+   "ts": "2026-10-08"
   },
   {
-   "title": "ATM-Malware-Creator-Arrest-2026-10",
-   "file": "Threat_Intel/Malware/ATM-Malware-Creator-Arrest-2026-10.md",
-   "cat": "malware",
-   "ts": "2026-10-07"
+   "title": "CVE-2026-42271",
+   "file": "Threat_Intel/CVEs/2026/Low/CVE-2026-42271.md",
+   "cat": "cve",
+   "ts": "2026-10-08"
   },
   {
-   "title": "ClickFix-Ukraine-Lunex-Stealer-2026-10",
-   "file": "Threat_Intel/Malware/ClickFix-Ukraine-Lunex-Stealer-2026-10.md",
-   "cat": "malware",
-   "ts": "2026-10-07"
-  },
-  {
-   "title": "account-takeover-open-redirect-regex-bypass-technique-guide",
-   "file": "Guides/account-takeover-open-redirect-regex-bypass-technique-guide.md",
-   "cat": "technique",
-   "ts": "2026-10-05"
-  },
-  {
-   "title": "Active Directory",
-   "file": "Guides/Active Directory.md",
-   "cat": "technique",
-   "ts": "2026-10-05"
-  },
-  {
-   "title": "Active-Directory-Silent-Domain-Takeover-54-Minutes-LOTL-Qualys-2026",
-   "file": "Guides/Active-Directory-Silent-Domain-Takeover-54-Minutes-LOTL-Qualys-2026.md",
-   "cat": "technique",
-   "ts": "2026-10-05"
+   "title": "CVE-2026-106197",
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-106197.md",
+   "cat": "cve",
+   "ts": "2026-10-08"
   }
  ],
  "kev_referenced": [
@@ -6323,9 +6389,11 @@
   "CVE-2026-39987",
   "CVE-2026-42016",
   "CVE-2026-42018",
+  "CVE-2026-42271",
   "CVE-2026-42897",
   "CVE-2026-46817",
   "CVE-2026-48282",
+  "CVE-2026-48710",
   "CVE-2026-48907",
   "CVE-2026-48908",
   "CVE-2026-50522",
@@ -7131,6 +7199,13 @@
    "cves": 660,
    "breaches": 151,
    "malware": 174
+  },
+  {
+   "date": "2026-10-08",
+   "intel_items": 1711,
+   "cves": 669,
+   "breaches": 154,
+   "malware": 178
   }
  ]
 }
