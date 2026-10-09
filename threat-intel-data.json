@@ -1,77 +1,77 @@
 {
- "generated": "2026-10-08 20:45",
- "today": "2026-10-08",
+ "generated": "2026-10-09 20:45",
+ "today": "2026-10-09",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
-  "cves": 669,
-  "breaches": 154,
-  "malware": 178,
+  "cves": 687,
+  "breaches": 157,
+  "malware": 181,
   "supplychain": 75,
   "tools": 94,
   "commands": 13,
-  "guides": 305,
-  "intel_items": 1711,
-  "kev": 150
+  "guides": 308,
+  "intel_items": 1759,
+  "kev": 155
  },
  "windows": {
   "week": {
-   "total": 55,
+   "total": 101,
    "by_cat": {
-    "cve": 11,
-    "ai-bugbounty": 7,
-    "malware": 10,
-    "breach": 18,
-    "misc": 8,
-    "supplychain": 1
+    "cve": 25,
+    "malware": 22,
+    "breach": 25,
+    "ai-bugbounty": 10,
+    "misc": 15,
+    "supplychain": 2,
+    "technique": 2
    },
    "by_src": {}
   },
   "month": {
-   "total": 358,
+   "total": 360,
    "by_cat": {
-    "cve": 112,
-    "malware": 45,
-    "ai-bugbounty": 41,
-    "technique": 35,
-    "breach": 51,
-    "other": 9,
-    "misc": 46,
+    "cve": 113,
+    "technique": 32,
+    "breach": 53,
+    "other": 7,
+    "ai-bugbounty": 34,
+    "misc": 51,
+    "malware": 53,
     "supplychain": 12,
-    "command": 1,
-    "tool": 6
+    "tool": 5
    },
    "by_src": {}
   },
   "year": {
-   "total": 1711,
+   "total": 1759,
    "by_cat": {
-    "ai-bugbounty": 129,
-    "malware": 212,
+    "ai-bugbounty": 133,
+    "malware": 224,
     "other": 111,
     "tool": 58,
-    "misc": 338,
+    "misc": 346,
     "command": 6,
-    "technique": 143,
-    "cve": 427,
-    "breach": 195,
-    "supplychain": 92
+    "technique": 145,
+    "cve": 441,
+    "breach": 202,
+    "supplychain": 93
    },
    "by_src": {}
   },
   "all": {
-   "total": 1711,
+   "total": 1759,
    "by_cat": {
-    "ai-bugbounty": 129,
-    "malware": 212,
+    "ai-bugbounty": 133,
+    "malware": 224,
     "other": 111,
     "tool": 58,
-    "misc": 338,
+    "misc": 346,
     "command": 6,
-    "technique": 143,
-    "cve": 427,
-    "breach": 195,
-    "supplychain": 92
+    "technique": 145,
+    "cve": 441,
+    "breach": 202,
+    "supplychain": 93
    },
    "by_src": {}
   }
@@ -1853,24 +1853,24 @@
   ]
  },
  "cve_sev": {
-  "Critical": 267,
-  "High": 188,
+  "Critical": 275,
+  "High": 191,
   "Low": 36,
   "Medium": 24
  },
  "cve_year": {
-  "2015": 3,
+  "2015": 4,
   "2016": 1,
   "2017": 5,
   "2018": 3,
-  "2019": 6,
+  "2019": 7,
   "2020": 4,
-  "2021": 14,
+  "2021": 15,
   "2022": 13,
-  "2023": 17,
+  "2023": 18,
   "2024": 14,
   "2025": 31,
-  "2026": 558
+  "2026": 572
  },
  "cve_month": {
   "2025-10": 1,
@@ -1880,7 +1880,7 @@
   "2026-07": 16,
   "2026-08": 84,
   "2026-09": 160,
-  "2026-10": 11
+  "2026-10": 25
  },
  "top_cve": [
   {
@@ -1983,6 +1983,14 @@
    "kev": true,
    "apts": []
   },
+  "CVE-2015-2291": {
+   "file": "Threat_Intel/CVEs/2015/Unrated/CVE-2015-2291.md",
+   "body": "# CVE-2015-2291\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2015\n\n## Summary\nMANTLEMAZE also does BYOVD with the vulnerable Intel driver (**CVE-2015-2291**) to kill EDR.\n\n## Where it appears in this vault\n- `Guides/AI-BugBounty/ai-security-news-2026-10-09.md` \u2014 MANTLEMAZE also does BYOVD with the vulnerable Intel driver (**CVE-2015-2291**) to kill EDR.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2015-2291\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2015-2291\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-2291\n\n## Tags\n#cve #2015 #unrated #auto-stub",
+   "sev": "",
+   "year": "2015",
+   "kev": true,
+   "apts": []
+  },
   "CVE-2016-3714": {
    "file": "Threat_Intel/CVEs/2016/Critical/CVE-2016-3714.md",
    "body": "# CVE-2016-3714\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2016\n\n## Summary\nImageMagick 'ImageTragick' command injection / RCE via crafted image files.\n\n## Where it appears in this vault\n- `BugBounty/02-file-upload-vulnerabilities.md` \u2014 CVE-2016-3714 (ImageTragick)** \u2014 arbitrary code execution when processing user-supplied images.\n- `BugBounty/02-file-upload-vulnerabilities.md` \u2014 ImageTragick CVE-2016-3714**: Widely discussed at Black Hat/DEF CON circuit post-disclosure\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2016-3714\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2016-3714\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-3714\n\n## Tags\n#cve #2016 #critical #auto-stub #verified",
@@ -2073,6 +2081,14 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2019-11510": {
+   "file": "Threat_Intel/CVEs/2019/Critical/CVE-2019-11510.md",
+   "body": "# CVE-2019-11510\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2019\n\n## Summary\nJoint advisory AA26-281A: *Chinese Government-linked Cyber Threat Actors Combine Automated and Hands-on Hacking Tools to Steal Sensitive Data* (ASD's ACSC with FBI, CISA, NSA, NCSC-UK, Cyber Centre, NCSC-NZ, Japan NPA/NCO, Spain CNI) | 8 Oct 2026 | Government, healthcare, critical manufacturing, IT, law enforcement, education and religious organisations. Exchange/O365 and legacy edge CVEs, e.g. CVE-2019-11510 (Pulse), CVE-2021-22205 (GitLab). | Enforce MFA on webmail/VPN and reduce internet-exposed login pages. Monitor for unexpected AD replication (DCSync), renamed SoftEther VPN binaries (conhost.exe/dllhost.exe), mass EWS mail pulls and password spraying. Vet the advisory's IOCs before blocking, because many date back to 2016. |\n\n## Where it appears in this vault\n- `Reports/Australia/AU-Roundup-2026-10-09.md` \u2014 Joint advisory AA26-281A: *Chinese Government-linked Cyber Threat Actors Combine Automated and Hands-on Hacking Tools to Steal Sensitive Data* (ASD's ACSC with FBI, CISA, NSA, NCSC-UK, Cyber Centre, NCSC-NZ, Japan NPA/NCO, Spain CNI) | 8 Oct 2026 | Government, healthcare, critical manufacturing, IT, law enforcement, education and religious organisations. Exchange/O365 and legacy edge CVEs, e.g. CVE-2019-11510 (Pulse), CVE-2021-22205 (GitLab). | Enforce MFA on webmail/VPN and reduce internet-exposed login pages. Monitor for unexpected AD replication (DCSync), renamed SoftEther VPN binaries (conhost.exe/dllhost.exe), mass EWS mail pulls and password spraying. Vet the advisory's IOCs before blocking, because many date back to 2016. |\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2019-11510\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2019-11510\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-11510\n\n## Tags\n#cve #2019 #critical #auto-stub",
+   "sev": "Critical",
+   "year": "2019",
+   "kev": true,
+   "apts": []
+  },
   "CVE-2019-19781": {
    "file": "Threat_Intel/CVEs/2019/Critical/CVE-2019-19781.md",
    "body": "# CVE-2019-19781\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2019\n\n## Summary\nCitrix ADC/Gateway (NetScaler) directory traversal leading to unauthenticated RCE.\n\n## Where it appears in this vault\n- `Threat_Intel/APT_Groups/APT41/APT41-Profile.md` \u2014 `T1190` Exploit Public-Facing Application \u2014 CVE-2019-19781 (Citrix ADC), CVE-2020-10189 (Zoho ManageEngine), CVE-2021-26855 (ProxyLogon), CVE-2021-44228 (Log4Shell), CVE-2021-44207 (USAHerds).\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2019-19781\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2019-19781\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2019-19781\n\n## Tags\n#cve #2019 #critical #auto-stub #verified",
@@ -2147,6 +2163,14 @@
    "sev": "High",
    "year": "2020",
    "kev": false,
+   "apts": []
+  },
+  "CVE-2021-22205": {
+   "file": "Threat_Intel/CVEs/2021/Critical/CVE-2021-22205.md",
+   "body": "# CVE-2021-22205\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2021\n\n## Summary\nJoint advisory AA26-281A: *Chinese Government-linked Cyber Threat Actors Combine Automated and Hands-on Hacking Tools to Steal Sensitive Data* (ASD's ACSC with FBI, CISA, NSA, NCSC-UK, Cyber Centre, NCSC-NZ, Japan NPA/NCO, Spain CNI) | 8 Oct 2026 | Government, healthcare, critical manufacturing, IT, law enforcement, education and religious organisations. Exchange/O365 and legacy edge CVEs, e.g. CVE-2019-11510 (Pulse), CVE-2021-22205 (GitLab). | Enforce MFA on webmail/VPN and reduce internet-exposed login pages. Monitor for unexpected AD replication (DCSync), renamed SoftEther VPN binaries (conhost.exe/dllhost.exe), mass EWS mail pulls and password spraying. Vet the advisory's IOCs before blocking, because many date back to 2016. |\n\n## Where it appears in this vault\n- `Reports/Australia/AU-Roundup-2026-10-09.md` \u2014 Joint advisory AA26-281A: *Chinese Government-linked Cyber Threat Actors Combine Automated and Hands-on Hacking Tools to Steal Sensitive Data* (ASD's ACSC with FBI, CISA, NSA, NCSC-UK, Cyber Centre, NCSC-NZ, Japan NPA/NCO, Spain CNI) | 8 Oct 2026 | Government, healthcare, critical manufacturing, IT, law enforcement, education and religious organisations. Exchange/O365 and legacy edge CVEs, e.g. CVE-2019-11510 (Pulse), CVE-2021-22205 (GitLab). | Enforce MFA on webmail/VPN and reduce internet-exposed login pages. Monitor for unexpected AD replication (DCSync), renamed SoftEther VPN binaries (conhost.exe/dllhost.exe), mass EWS mail pulls and password spraying. Vet the advisory's IOCs before blocking, because many date back to 2016. |\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2021-22205\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2021-22205\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-22205\n\n## Tags\n#cve #2021 #critical #auto-stub",
+   "sev": "Critical",
+   "year": "2021",
+   "kev": true,
    "apts": []
   },
   "CVE-2021-26855": {
@@ -2485,6 +2509,14 @@
    "sev": "",
    "year": "2023",
    "kev": true,
+   "apts": []
+  },
+  "CVE-2023-38646": {
+   "file": "Threat_Intel/CVEs/2023/Unrated/CVE-2023-38646.md",
+   "body": "# CVE-2023-38646\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2023\n\n## Summary\nBug-bounty angle: mobile backend APIs (unauthenticated listing endpoints, IDOR on user IDs) and exposed Metabase (`/api/session/properties` setup-token leak, CVE-2023-38646 class) are worth checking in scope.\n\n## Where it appears in this vault\n- `Threat_Intel/Breaches/Japan-JPCERT-Web-Data-Leaks-Mobile-API-Metabase-2026-10.md` \u2014 Bug-bounty angle: mobile backend APIs (unauthenticated listing endpoints, IDOR on user IDs) and exposed Metabase (`/api/session/properties` setup-token leak, CVE-2023-38646 class) are worth checking in scope.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2023-38646\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2023-38646\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38646\n\n## Tags\n#cve #2023 #unrated #auto-stub",
+   "sev": "",
+   "year": "2023",
+   "kev": false,
    "apts": []
   },
   "CVE-2023-38709": {
@@ -2975,6 +3007,14 @@
    "kev": true,
    "apts": []
   },
+  "CVE-2026-107406": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-107406-Citrix-NetScaler-SAML-Memory-Overflow-RCE-2026-10.md",
+   "body": "# CVE-2026-107406 \u2014 Citrix NetScaler ADC/Gateway SAML Memory Overflow (RCE/DoS)\n\n> Source: [The Hacker News](https://thehackernews.com/2026/10/citrix-patches-critical-netscaler-flaw.html) \u2014 2026-10-09 (via X @TheHackersNews 2108471092230963409)\n> Source: [SecurityWeek](https://www.securityweek.com/citrix-urges-immediate-patching-of-critical-netscaler-vulnerability/) \u2014 Fri, 09 Oct 2026 06:53 UTC\n> Source: X @citrix 2108297236463382860 (vendor guidance), @mattjay 2108339348433215747\n\n**Type:** CVE / memory corruption | **Severity:** Critical (CVSS 9.5) | **Date:** 2026-10-08 | **Tags:** #cve #citrix #netscaler #saml #edge-device\n\n## Summary\n- Critical **memory overflow** in NetScaler ADC and NetScaler Gateway, reachable when the appliance is configured as a **SAML IdP or SP**. Impact: RCE or DoS.\n- Citrix issued \"immediate guidance\" on 2026-10-08 and urges upgrading to the recommended builds.\n- **No evidence of exploitation** of this CVE yet, but THN notes three *other* NetScaler bugs are under active exploitation.\n- @mattjay: this is **not** last week's NetScaler critical, and the builds people just rushed to patch to are **also affected**.\n\n## Why it matters\nThird NetScaler critical in weeks (see [[CVE-2026-88771-88772-Citrix-NetScaler-Dual-RCE-ZeroDays-2026]], [[CVE-2026-19490-19489-Citrix-NetScaler-Auth-Bypass]]). Memory bugs in NetScaler pre-auth paths have historically been weaponized within days (CitrixBleed pattern).\n\n## Actions\n- Inventory NetScaler instances with SAML IdP/SP config (`show authentication samlIdPProfile`, `show authentication samlAction`).\n- Upgrade to the fixed builds in the Citrix bulletin; re-verify builds patched last week.\n- Hunt: nsppe crashes/core dumps, unexpected restarts, new files under `/var/netscaler/logon/` and `/var/vpn/`.",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-12847": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-12847-GeoVision-GVIO-Box-DVRSearch-Overflow.md",
    "body": "# CVE-2026-12847 \u2014 GeoVision GV-I/O Box 4E DVRSearch Buffer Overflow (CVSS 10.0)\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n**Product:** GeoVision GV-I/O Box 4E (I/O control appliance).\n**Flaw:** Stack/heap buffer overflow in **DVRSearch**, a UDP service that runs **by default**.\n**Impact:** **Unauthenticated, no-interaction full system compromise** (remote code execution). CVSS 10.0.\n**Attribution of discovery:** Confirmed by **Cisco Talos**.\n\n## Why it matters\n- DVRSearch listens on UDP and is exposed by default \u2014 network-reachable pre-auth RCE on an IoT/OT-adjacent device.\n- Class: classic memory-safety overflow in an embedded listener; trivially wormable if internet-exposed.\n\n## Actions\n- Inventory GeoVision GV-I/O Box devices; restrict/Block DVRSearch UDP exposure at the perimeter.\n- Apply vendor firmware once available; segment IoT/OT VLANs.\n\n> Source: X @SecAlertsCo (tweet 2070591788151160928) \u2014 2026-06-26; Talos-confirmed.\n\n## Tags\n #unverified",
@@ -3163,7 +3203,7 @@
   },
   "CVE-2026-21589": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-21589-Atlassian-Data-Center-File-Access.md",
-   "body": "# CVE-2026-21589 \u2014 Atlassian Jira/Confluence Data Center critical file access\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/atlassian-warns-of-critical-file-access-flaw-in-jira-confluence/) \u2014 Tue, 06 Oct 2026\n> Source: [SecurityWeek](https://www.securityweek.com/atlassian-patches-critical-vulnerability-affecting-8-products/) \u2014 Wed, 07 Oct 2026\n\n- Severity: Critical\n- Unauthenticated arbitrary file access in web application root directories; 8 Atlassian products patched, incl. self-hosted Data Center Jira/Confluence.\n- Action: patch; review exposed web roots.\n\n\n## Update \u2014 2026-10-08 (exploited after public PoC)\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-atlassian-flaw-after-public-poc-release/) \u2014 Wed, 07 Oct 2026\n> Source: [The Hacker News](https://thehackernews.com/2026/10/atlassian-data-center-flaw-draws.html) \u2014 Wed, 07 Oct 2026\n> Source: [SANS ISC](https://isc.sans.edu/diary/rss/33406) \u2014 Wed, 07 Oct 2026\n- **Active exploitation** began within ~2 hours of public details, after a public PoC. Unauthenticated, across Jira, Confluence and Bitbucket Data Center.\n- SANS ISC honeypots see scans. Attackers target config files in the web root (DB creds, secrets).\n- Action escalated: **patch immediately**. If patched late, rotate any secrets readable from the web root and review access logs for known-path file reads.",
+   "body": "# CVE-2026-21589 \u2014 Atlassian Jira/Confluence Data Center critical file access\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/atlassian-warns-of-critical-file-access-flaw-in-jira-confluence/) \u2014 Tue, 06 Oct 2026\n> Source: [SecurityWeek](https://www.securityweek.com/atlassian-patches-critical-vulnerability-affecting-8-products/) \u2014 Wed, 07 Oct 2026\n\n- Severity: Critical\n- Unauthenticated arbitrary file access in web application root directories; 8 Atlassian products patched, incl. self-hosted Data Center Jira/Confluence.\n- Action: patch; review exposed web roots.\n\n\n## Update \u2014 2026-10-08 (exploited after public PoC)\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-atlassian-flaw-after-public-poc-release/) \u2014 Wed, 07 Oct 2026\n> Source: [The Hacker News](https://thehackernews.com/2026/10/atlassian-data-center-flaw-draws.html) \u2014 Wed, 07 Oct 2026\n> Source: [SANS ISC](https://isc.sans.edu/diary/rss/33406) \u2014 Wed, 07 Oct 2026\n- **Active exploitation** began within ~2 hours of public details, after a public PoC. Unauthenticated, across Jira, Confluence and Bitbucket Data Center.\n- SANS ISC honeypots see scans. Attackers target config files in the web root (DB creds, secrets).\n- Action escalated: **patch immediately**. If patched late, rotate any secrets readable from the web root and review access logs for known-path file reads.\n\n\n## Update 2026-10-09\n> Source: [SecurityWeek](https://www.securityweek.com/attackers-target-critical-atlassian-vulnerability-within-hours-of-poc-publication/) \u2014 Thu, 08 Oct 2026\n- SecurityWeek confirms exploitation of CVE-2026-21589 in self-hosted Data Center products began within hours of PoC publication.",
    "sev": "Critical",
    "year": "2026",
    "kev": false,
@@ -3287,6 +3327,14 @@
    "sev": "Critical",
    "year": "2026",
    "kev": true,
+   "apts": []
+  },
+  "CVE-2026-39773": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-39773-WordPress-Doctreat-Core-Unauth-PrivEsc.md",
+   "body": "# CVE-2026-39773 \u2014 WordPress Doctreat Core plugin unauthenticated privilege escalation\n\n> Source: X @SecAlertsCo 2108481685322944806 \u2014 2026-10-09 ([SecAlerts](https://secalerts.co/vulnerability/CVE-2026-39773))\n\n**Type:** CVE / privesc | **Severity:** Critical (CVSS 10.0) | **Date:** 2026-10-09 | **Tags:** #cve #wordpress #plugin #privesc\n\n## Summary\n- Doctreat Core plugin **<= 1.7.0** (doctor directory theme companion). Unauthenticated privilege escalation, full site takeover, no login needed.\n\n## Actions\n- Update past 1.7.0 or disable the plugin. Audit for new administrator accounts and changed `wp_capabilities` usermeta.\n- Recon: `nuclei -tags wordpress` / check `/wp-content/plugins/doctreat_core/` readme for version.",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
    "apts": []
   },
   "CVE-2026-39808": {
@@ -4065,6 +4113,14 @@
    "kev": true,
    "apts": []
   },
+  "CVE-2026-76504": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-76504.md",
+   "body": "# CVE-2026-76504\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2026\n\n## Summary\nCisco Catalyst SD-WAN Manager CVE-2026-76504 (CVSS 9.8)** was disclosed 30 Sep. It is an authentication bypass to admin API that was exploited in the wild, and no workaround exists. Fixed builds are 20.9.10.1, 20.12.8.2, 20.15.6.1, 20.18.4.1, 26.1.2.1 and 26.2.1.\n\n## Where it appears in this vault\n- `Reports/Australia/AU-Roundup-2026-10-09.md` \u2014 Cisco Catalyst SD-WAN Manager CVE-2026-76504 (CVSS 9.8)** was disclosed 30 Sep. It is an authentication bypass to admin API that was exploited in the wild, and no workaround exists. Fixed builds are 20.9.10.1, 20.12.8.2, 20.15.6.1, 20.18.4.1, 26.1.2.1 and 26.2.1.\n- `Reports/Australia/AU-Roundup-2026-10-09.md` \u2014 3. **Cisco SD-WAN Manager CVE-2026-76504:** Patch, and hunt `serviceproxy-access.log` for encoded `/j_security_check` POSTs (e.g. `%6a`) and `vmanage-server.log` for `viptela-reserved-` usernames from September onward.\n- `Reports/Australia/AU-Roundup-2026-10-09.md` \u2014 [CSA Labs: Cisco SD-WAN CVE-2026-76504 research note](https://labs.cloudsecurityalliance.org/research/csa-research-note-cisco-sdwan-cve-2026-76504-20261002-csa-st/)\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-76504\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-76504\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-76504\n\n## Tags\n#cve #2026 #critical #auto-stub",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": true,
+   "apts": []
+  },
   "CVE-2026-76657": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-76657-HPE-Networking-Fabric-Composer-API-Auth-Bypass.md",
    "body": "# CVE-2026-76657 \u2014 HPE Networking Fabric Composer API Authentication Bypass (CVSS 10.0)\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n**Type:** cve | **Severity:** Critical (CVSS 10.0) | **Date logged:** 2026-09-04\n**Product:** HPE Networking **Fabric Composer** \u2014 API\n**Impact:** Unauthenticated attacker obtains **full administrative access**. No credentials required.\n**Status:** Patch available. No public exploitation reported at time of logging.\n\n## Summary\n\n**CVE-2026-76657** is an **authentication bypass in the HPE Networking Fabric Composer API** rated **CVSS 10.0**. An unauthenticated attacker reaching the API obtains **full administrative access** to the platform.\n\n## Why a fabric controller is a worse target than a switch\n\nFabric Composer is the **management and orchestration plane for a data-centre switching fabric** \u2014 it does not forward traffic, it decides how traffic is forwarded across every switch it manages. Administrative control of it is therefore a superset of administrative control of the individual devices:\n\n- **Arbitrary re-segmentation.** VLAN, VRF and policy changes made from the controller are legitimate, authorised configuration changes as far as every downstream switch is concerned. There is no exploit signature on the data-plane devices to find.\n- **Traffic redirection and mirroring at fabric scale** \u2014 a SPAN/ERSPAN destination configured centrally is a passive tap on any segment, invisible to endpoint and application telemetry.\n- **It sits below every control that assumes the network is the boundary.** Micro-segmentation, east-west firewalling and zero-trust network policy are all *expressed* through the fabric. Owning the thing that expresses them makes them advisory.\n\nThe generalisable point, and one this vault keeps re-deriving: **management planes are consistently under-rated relative to the devices they manage.** A CVSS 10 pre-auth bypass on an orchestrator is not equivalent to a CVSS 10 on one switch; it is that CVSS 10 multiplied by the fabric.\n\n## Action\n\n1. **Patch Fabric Composer immediately** \u2014 pre-auth, no credentials, CVSS 10.\n2. **Verify the API is not internet-reachable.** It should not be, and for an orchestration plane the honest control is network reachability, not authentication. Confirm rather than assume \u2014 verify from outside your own perimeter.\n3. **Restrict management-plane access to a dedicated admin network** with its own authentication path, and treat any host that can reach it as a tier-0 asset.\n4. **Assume compromise on any instance that was internet-exposed.** Hunt for: new or modified administrative accounts, API tokens issued outside change windows, unexpected configuration pushes, and newly configured mirror/SPAN destinations.\n5. **Diff the running fabric configuration against a known-good out-of-band baseline.** Because attacker actions here look like legitimate configuration, configuration diffing is the detection \u2014 not log alerting.\n\n## Open questions\n\n- Affected and fixed version ranges not captured in the read \u2014 pull from the HPE security bulletin.\n- Whether the bypass is reachable on the standard management listener or requires a specific API path.\n- No IOCs published.\n- Relationship, if any, to the ArubaOS-CX critical RCE patched by HPE the previous day (see `HPE-ArubaOS-CX-Critical-RCE-2026-09.md`) \u2014 two critical HPE networking flaws in 48 hours warrants asking whether they came from the same research effort.\n\n## Sources\n\n> Source: [@SecAlertsCo](https://x.com/SecAlertsCo/status/2095809711794782543) \u2014 2026-09-04 09:42 UTC \u2014 \"HPE Networking Fabric Composer API: CVE-2026-76657 is a CVSS 10 auth bypass giving unauthenticated attackers full administrative access. No credentials needed. Patch immediately.\"\n\n## Tags\n\n#cve-2026-76657 #hpe #fabric-composer #authentication-bypass #management-plane #network-orchestration #cvss-10 #critical #unverified",
@@ -4401,6 +4457,22 @@
    "kev": true,
    "apts": []
   },
+  "CVE-2026-96207": {
+   "file": "Threat_Intel/CVEs/2026/Critical/Microsoft-Cloud-Services-5-Critical-CVEs-Partner-Center-CVSS10-2026-10.md",
+   "body": "# Microsoft discloses 5 critical cloud-service CVEs (Partner Center CVSS 10.0)\n\n> Source: X @DailyDarkWeb 2108446809815425052 \u2014 2026-10-09 (primary: MSRC update guide, CVE-2026-96207)\n\n**Type:** CVE / cloud service | **Severity:** Critical | **Date:** 2026-10-08 | **Tags:** #cve #microsoft #azure #cloud\n\n## CVEs (published by MSRC 2026-10-08)\n| CVE | CVSS | Service | Class |\n|---|---|---|---|\n| CVE-2026-96207 | 10.0 | Partner Center | Improper certificate validation, unauthenticated network privesc |\n| CVE-2026-94510 | 9.9 | Bookings | Authorization bypass via user-controlled key (IDOR) |\n| CVE-2026-77900 | 9.8 | Azure App Service for Linux | Missing authentication, code execution |\n| CVE-2026-88131 | 9.8 | Dataverse | Deserialization of untrusted data, RCE |\n| CVE-2026-69435 | 9.6 | Azure SRE Agent | Missing authorization, privesc (authenticated) |\n\n## Notes\n- Fixes are deployed server-side by Microsoft; no customer patch. No public exploit or ITW exploitation reported.\n- Bug-bounty angle: Bookings (user-controlled key) and Azure SRE Agent (AI agent authz) are good classes to study for MSRC cloud bounty scope.\n\n## Actions\n- Check each MSRC entry for tenant-side guidance; review Partner Center / GDAP relationships and Bookings sharing settings.",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-94510": {
+   "file": "Threat_Intel/CVEs/2026/Critical/Microsoft-Cloud-Services-5-Critical-CVEs-Partner-Center-CVSS10-2026-10.md",
+   "body": "# Microsoft discloses 5 critical cloud-service CVEs (Partner Center CVSS 10.0)\n\n> Source: X @DailyDarkWeb 2108446809815425052 \u2014 2026-10-09 (primary: MSRC update guide, CVE-2026-96207)\n\n**Type:** CVE / cloud service | **Severity:** Critical | **Date:** 2026-10-08 | **Tags:** #cve #microsoft #azure #cloud\n\n## CVEs (published by MSRC 2026-10-08)\n| CVE | CVSS | Service | Class |\n|---|---|---|---|\n| CVE-2026-96207 | 10.0 | Partner Center | Improper certificate validation, unauthenticated network privesc |\n| CVE-2026-94510 | 9.9 | Bookings | Authorization bypass via user-controlled key (IDOR) |\n| CVE-2026-77900 | 9.8 | Azure App Service for Linux | Missing authentication, code execution |\n| CVE-2026-88131 | 9.8 | Dataverse | Deserialization of untrusted data, RCE |\n| CVE-2026-69435 | 9.6 | Azure SRE Agent | Missing authorization, privesc (authenticated) |\n\n## Notes\n- Fixes are deployed server-side by Microsoft; no customer patch. No public exploit or ITW exploitation reported.\n- Bug-bounty angle: Bookings (user-controlled key) and Azure SRE Agent (AI agent authz) are good classes to study for MSRC cloud bounty scope.\n\n## Actions\n- Check each MSRC entry for tenant-side guidance; review Partner Center / GDAP relationships and Bookings sharing settings.",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-86219": {
    "file": "Threat_Intel/CVEs/2026/Critical/Perl-Auth-Stack-CVE-2026-86219-SASL-Nonce-Replay-CVE-2026-86304-MojoX-SAML-Bypass-2026.md",
    "body": "# Perl Authentication Stack \u2014 CVE-2026-86219 (SASL DIGEST-MD5 Nonce Replay) and CVE-2026-86304 (MojoX SAML Trust-Anchor Bypass)\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n> Source: [SecAlerts (@SecAlertsCo, X)](https://x.com/SecAlertsCo/status/2097609934909161962) \u2014 2026-09-09 (CVE-2026-86219)\n> Source: [SecAlerts (@SecAlertsCo, X)](https://x.com/SecAlertsCo/status/2097549469382213917) \u2014 2026-09-09 (CVE-2026-86304)\n\n**Type:** CVE pair \u2014 authentication bypass in libraries | **Severity:** Critical (both CVSS 9.8, per source) | **Date:** 2026-09-09\n\n## Summary\nTwo **CVSS 9.8** authentication defects in widely-consumed Perl authentication libraries surfaced on the same day.\n\n**CVE-2026-86219** \u2014 **`Authen::SASL::Perl::DIGEST_MD5`** before **2.2100** **fails to verify nonces in `server_step`**, permitting **replayed authentication attacks**. DIGEST-MD5 challenge-response security rests entirely on the server issuing a fresh nonce and rejecting reuse; without that check the captured or observed authentication exchange becomes reusable, and the mechanism degrades to something weaker than a static password.\n\n**CVE-2026-86304** \u2014 a **SAML authentication bypass in `MojoX::Authentication`**: `parse_assertion` constructs a **`Net::SAML2::Binding::POST` object without a trust anchor**. With no trust anchor, the SAML assertion signature is not validated against a trusted issuer certificate, so an attacker can present a **self-signed or attacker-forged assertion** asserting any identity and **skip authentication entirely**.\n\nBoth are **library-level** defects. **Both are single-source** \u2014 a CVE-feed bot \u2014 and must be confirmed against **NVD** and **MetaCPAN** before remediation is scheduled or communicated.\n\n## Why this matters\n- **The exposed surface is not a product, it is a dependency graph.** Neither of these is an appliance you patch once. The affected population is every downstream application that pulls these distributions, directly or transitively, plus anything vendored into a container image or a frozen `cpanfile`. Remediation is an **SBOM problem**: you cannot act until you can answer \"where does this live,\" and most estates cannot answer that for Perl.\n- **Perl is disproportionately present in exactly the systems that are hardest to inventory** \u2014 legacy internal applications, ISP and hosting provisioning tooling, bioinformatics and scientific pipelines, build glue, and long-lived middleware. These are systems with no vendor advisory channel and often no owner. They will not be patched by any process that waits for a vendor notification.\n- **The two defects fail in the same way for different reasons, which is the more useful observation than either CVE alone.** In both cases the code performs the ritual of authentication \u2014 a challenge is issued, an assertion is parsed \u2014 while omitting the single verification step that makes the ritual meaningful. A nonce that is never checked and a signature that is never anchored are the same bug expressed in two protocols. **Audit your own authentication code for the equivalent omission**; this class is not confined to these two distributions.\n- **CVE-2026-86304 is the more dangerous of the pair in practice.** A missing trust anchor means the attacker does not need to observe or capture anything \u2014 they mint an assertion. There is no network position requirement, no timing window, and the resulting session is indistinguishable from a legitimate SSO login in application logs. Replay (86219) at least requires prior observation of a valid exchange.\n- **Single-source status is a real caveat, not boilerplate.** CVE-feed bots reproduce CVE descriptions verbatim, including reserved, disputed and later-rejected entries, and version boundaries in bot posts are frequently truncated. **Confirm the fixed version 2.2100 on MetaCPAN and the CVE records on NVD before raising emergency change.** Do not communicate CVSS 9.8 to stakeholders on the strength of this note alone.\n- **This vault has now recorded a third Perl-ecosystem CVE in 2026** (see `CVE-2026-13766-DBIx-QuickORM-Perl-SQLi.md`). Perl CPAN modules are receiving renewed security research attention against a code base with decades of accumulated, lightly-reviewed cryptographic and protocol handling.\n\n## Action\n1. **Verify before acting.** Confirm both CVE records on **NVD** and confirm the `Authen::SASL` fixed release (**2.2100**) and any `MojoX::Authentication` fixed release on **MetaCPAN**. Record whichever fixed version MetaCPAN states for MojoX \u2014 the source post did not provide one.\n2. **Inventory the dependency, do not wait to be told.** Sweep for `Authen::SASL`, `Authen::SASL::Perl::DIGEST_MD5`, `MojoX::Authentication` and `Net::SAML2` across: `cpanfile` / `Makefile.PL` / `dist.ini`, `cpanfile.snapshot` and `carton` local libraries, OS packages (`dpkg -l | grep -i libauthen-sasl`, `rpm -qa | grep -i perl-Authen-SASL`), vendored `lib/` trees, and container image layers. Transitive pulls are the common case for `Authen::SASL` \u2014 it is a dependency of common LDAP and mail tooling, not usually a direct one.\n3. **Upgrade `Authen::SASL` to 2.2100 or later** wherever found, including inside container base images. Rebuild and redeploy images; upgrading the host package does not fix a frozen image.\n4. **For `MojoX::Authentication`, treat SAML login as bypassed until proven otherwise.** If a fixed release is not yet available, the compensating control is to explicitly supply and enforce a trust anchor (the IdP signing certificate) in the `Net::SAML2::Binding::POST` construction, or to disable the SAML login path and fall back to a directly-validated mechanism.\n5. **Prefer removing DIGEST-MD5 over patching it.** DIGEST-MD5 was deprecated by RFC 6331 in 2011 for reasons that predate this CVE. Where the SASL mechanism list can be constrained, disable DIGEST-MD5 server-side and require SCRAM-SHA-256 or a TLS-protected mechanism. That closes this bug and the next one in the same mechanism.\n6. **Hunt for the bypass signature in SAML-consuming applications**: assertions whose issuer or signing certificate does not match the configured IdP, successful logins with no corresponding authentication event at the IdP, and sessions for identities that exist in the application but not in the directory. **The absence of a matching IdP-side event is the highest-value detection here**, because the application-side log will look normal.\n7. **For DIGEST-MD5 replay, look for repeated identical authentication exchanges** \u2014 same nonce, same response digest \u2014 across separate sessions or source addresses.\n8. **Rotate credentials for any account that authenticated over DIGEST-MD5** on an affected build, and invalidate all sessions issued through an affected `MojoX::Authentication` SAML path.\n\n## Cross-reference\n- `CVE-2026-13766-DBIx-QuickORM-Perl-SQLi.md` \u2014 third Perl-ecosystem CVE tracked in 2026; supports the renewed-research-attention observation.\n- `CVE-2026-18963-Keycloak-Reset-Credentials-Bypass-Account-Takeover.md` \u2014 same defect class at the identity-provider layer rather than the library layer.\n- `Vendor-Advisory-Roundup-CCCS-AV26-877-882-2026-09-03.md` \u2014 the Mendix SAML account-hijacking entry; a second SAML trust-validation failure recorded within a week.\n\n#cve #cve-2026-86219 #cve-2026-86304 #perl #cpan #authen-sasl #digest-md5 #mojox #net-saml2 #saml #authentication-bypass #replay-attack #trust-anchor #supply-chain #sbom #dependency #critical\n\n## Tags\n #unverified",
@@ -4508,6 +4580,14 @@
   "CVE-2026-10523": {
    "file": "Threat_Intel/CVEs/2026/High/CVE-2026-10523-10520-Ivanti-Sentry-PoC.md",
    "body": "# CVE-2026-10520 / CVE-2026-10523 \u2014 Ivanti Sentry (Public PoC)\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n**Severity:** High (tentative \u2014 confirm CVSS from Ivanti/NVD).\n**Affected:** **Ivanti Sentry** (mobile gateway / standalone Sentry). Confirm version matrix from Ivanti advisory.\n**Type:** Vulnerability chain (CVE-2026-10520 \u2192 CVE-2026-10523) with **public PoC**.\n**PoC:** `github.com/gagaltotal/CVE-2026-10523-Ivanti-sentry`.\n\n## Summary\nPublic PoC/exploit code was released for an Ivanti Sentry vulnerability chain (**CVE-2026-10520** and **CVE-2026-10523**). Ivanti edge products (Sentry, Connect Secure, EPMM) have a strong recent track record of in-the-wild exploitation, so public PoC against Sentry warrants priority attention. Map the exact impact (auth bypass / RCE) from the Ivanti advisory.\n\n## Why it matters\n- Ivanti gateways are internet-facing, high-value footholds with a history of mass exploitation.\n- Public PoC accelerates opportunistic scanning and weaponization.\n\n## Defender actions\n- Apply Ivanti's fixed Sentry release for CVE-2026-10520/10523; check CISA KEV.\n- Restrict Sentry admin interfaces; place behind VPN/management segmentation where possible.\n- Hunt using IOCs from the Ivanti advisory; review Sentry logs for exploitation attempts matching the public PoC.\n\n## Sources\n> Source: [@ptdbugs (X) \u2014 PoC for CVE-2026-10523 (Ivanti Sentry, also CVE-2026-10520)](https://x.com/ptdbugs/status/2069300392215646606) \u2014 2026-06-23\n\n*Captured via x-bugbounty-intel-sweep \u2014 2026-06-25*\n\n## Tags\n#cve #ivanti #sentry #poc #edge #2026 #unverified",
+   "sev": "High",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-107181": {
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-107181-Telegram-Desktop-OneClick-File-Theft-PoC.md",
+   "body": "# CVE-2026-107181 \u2014 Telegram Desktop one-click local file / session theft (PoC)\n\n> Source: X @ThreatWire_ 2108382416830120042 \u2014 2026-10-09 (threatwire.tech write-up)\n\n**Type:** CVE | **Severity:** High (CVSS 8.6) | **Date:** 2026-10-09 | **Tags:** #cve #telegram #client-side #poc\n\n## Summary\n- Telegram Desktop **before 7.2.9**: a crafted external link can exfiltrate local files and session data after one click.\n- Public PoC write-up exists. Not in CISA KEV.\n\n## Actions\n- Update to 7.2.9+; set a local passcode (limits session theft).\n- Related: [[Telegram-Desktop-HTML-Export-Hidden-JavaScript-Message-Exfiltration-2026]].",
    "sev": "High",
    "year": "2026",
    "kev": false,
@@ -5095,6 +5175,22 @@
   "CVE-2026-87886": {
    "file": "Threat_Intel/CVEs/2026/High/CVE-2026-87886-Acronis-cPanel-Backup-Plugin-Insecure-Permissions-Local-PrivEsc-Exploited-2026.md",
    "body": "# CVE-2026-87886 \u2014 Acronis Backup Plugin for cPanel/WHM/Plesk: Insecure File Permissions \u2192 Local Root Privilege Escalation, Exploited\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 2 independent sources\n\n> Source: [SecurityWeek](https://www.securityweek.com/acronis-patches-exploited-vulnerability-in-cpanel-backup-plugin/) \u2014 2026-09-16\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/acronis-warns-of-actively-exploited-flaw-in-its-cpanel-backup-plugin/) \u2014 2026-09-15\n> Source: X @SecurityWeek \u2014 2026-09-16 (feed item, tweet 2100008597\u2026)\n\n**Type:** CVE / insecure file permissions \u2192 local privilege escalation | **Severity:** High | **Date:** 2026-09-16\n\n## Summary\n**CVE-2026-87886** is an **insecure file permissions** flaw in the **Acronis backup plugin for cPanel, WebHost Manager (WHM) and Plesk** on Linux. A low-privileged local user can abuse the plugin's file permissions to escalate privileges on the host. Acronis has shipped a patch and reports the flaw as **exploited**.\n\n**Affected:** Acronis backup plugin deployments on cPanel / WHM / Plesk (Linux). **Patched** \u2014 apply the vendor update.\n\n## Why this matters\n1. **On shared hosting, \"local privilege escalation\" means cross-tenant compromise.** A cPanel box hosts many unrelated customers. Any one of them \u2014 or anyone who has popped a single vulnerable site on the box \u2014 becomes root over every other tenant on the server. The blast radius is the whole machine, not the attacking account.\n2. **Backup agents are high-value by design.** The plugin exists to read every customer's files and credentials and to write them somewhere else. Root on the backup path is also access to the backup destination and its stored credentials.\n3. **It lands alongside the LiteSpeed Enterprise shared-hosting root flaw in the same week.** Two independent shared-hosting privilege-boundary failures in days. The hosting control-plane stack (cPanel/WHM/Plesk and its plugin ecosystem) is receiving attention and should be treated as a tier-0 patch target, not a commodity one.\n4. **Exploited status with a local-only vector is still urgent** on shared hosting, because initial access to *some* account on a shared box is cheap \u2014 a single vulnerable WordPress install supplies it.\n\n## Action\n1. **Apply the Acronis plugin update** across all cPanel/WHM/Plesk hosts now.\n2. **Audit plugin file and directory permissions** post-patch \u2014 confirm the fix actually changed ownership/mode on your systems rather than assuming.\n3. **Assume tenant compromise** on any shared host that was unpatched and had a compromised customer account in the window. Root access invalidates per-tenant isolation retroactively.\n4. **Rotate** backup-destination credentials, control-panel admin passwords and any API tokens reachable from the host.\n5. **Hunt** for unexpected setuid binaries, cron entries, new local accounts, and modifications under the plugin's install path.\n\n## Cross-reference\n- `LiteSpeed-Enterprise-Shared-Hosting-Low-Privilege-User-To-Root-2026.md` \u2014 same week, same shared-hosting privilege-boundary failure class.\n- `CVE-2026-5430-WSO2-API-Manager-JWT-Signature-Verification-Bypass-Forged-Admin-Tokens-2026.md` \u2014 same sweep window, exploited.\n\n#cve #acronis #cpanel #whm #plesk #shared-hosting #privilege-escalation #local #backup #exploited #high #corroborated\n\n## Tags\n #corroborated #unverified",
+   "sev": "High",
+   "year": "2026",
+   "kev": true,
+   "apts": []
+  },
+  "CVE-2026-88778": {
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-88778.md",
+   "body": "# CVE-2026-88778\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** High  \n**Year:** 2026\n\n## Summary\nCritical alert: exploitation of Citrix NetScaler ADC and Gateway vulnerabilities (updated advice) | ~1 Oct 2026 (overnight update) | NetScaler ADC/Gateway 14.1 before 14.1-73.37; 13.1 before 13.1-64.23; ADC FIPS before 14.1-73.37 FIPS; FIPS/NDcPP before 13.1-37.279. Australian businesses are confirmed as targets. | Patch per Citrix bulletin CTX697096. Hunt for compromise back to at least 4 Sep using Citrix IOCs in NetScaler Console. Look for command injection, a Perl persistence/listener script, reverse shells and per-victim webshells. CVE-2026-88778 (ISN prediction, CVSS 8.8) is part of the same disclosure. |\n\n## Where it appears in this vault\n- `Reports/Australia/AU-Roundup-2026-10-09.md` \u2014 Critical alert: exploitation of Citrix NetScaler ADC and Gateway vulnerabilities (updated advice) | ~1 Oct 2026 (overnight update) | NetScaler ADC/Gateway 14.1 before 14.1-73.37; 13.1 before 13.1-64.23; ADC FIPS before 14.1-73.37 FIPS; FIPS/NDcPP before 13.1-37.279. Australian businesses are confirmed as targets. | Patch per Citrix bulletin CTX697096. Hunt for compromise back to at least 4 Sep using Citrix IOCs in NetScaler Console. Look for command injection, a Perl persistence/listener script, reverse shells and per-victim webshells. CVE-2026-88778 (ISN prediction, CVSS 8.8) is part of the same disclosure. |\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-88778\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-88778\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-88778\n\n## Tags\n#cve #2026 #high #auto-stub",
+   "sev": "High",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-88779": {
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-88779.md",
+   "body": "# CVE-2026-88779\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** High  \n**Year:** 2026\n\n## Summary\nRelated: Citrix NetScaler SAML memory-overflow DoS, CVE-2026-88779 (CVSS 8.7), CTX697174 | 3 Oct 2026 (Citrix) | NetScaler ADC/Gateway configured for SAML SP/IdP | Apply CTX697174 patches. A secondary source reports a CISA KEV due date of 7 Oct. ACSC-specific guidance was not confirmed. |\n\n## Where it appears in this vault\n- `Reports/Australia/AU-Roundup-2026-10-09.md` \u2014 Related: Citrix NetScaler SAML memory-overflow DoS, CVE-2026-88779 (CVSS 8.7), CTX697174 | 3 Oct 2026 (Citrix) | NetScaler ADC/Gateway configured for SAML SP/IdP | Apply CTX697174 patches. A secondary source reports a CISA KEV due date of 7 Oct. ACSC-specific guidance was not confirmed. |\n- `Reports/Australia/AU-Roundup-2026-10-09.md` \u2014 [CyberStack: Citrix NetScaler CVE-2026-88779 SAML DoS](https://cyberstack.org/n/citrix-netscaler-saml-acsc-20261003)\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-88779\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-88779\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-88779\n\n## Tags\n#cve #2026 #high #auto-stub",
    "sev": "High",
    "year": "2026",
    "kev": true,
@@ -6108,6 +6204,14 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-69435": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-69435.md",
+   "body": "# CVE-2026-69435\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-69435\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-69435\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-69435\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-69590": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-69590.md",
    "body": "# CVE-2026-69590\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-69590\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-69590\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-69590\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
@@ -6164,6 +6268,14 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-77900": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-77900.md",
+   "body": "# CVE-2026-77900\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-77900\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-77900\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-77900\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-83549": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-83549.md",
    "body": "# CVE-2026-83549\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-83549\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-83549\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-83549\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
@@ -6196,6 +6308,14 @@
    "kev": true,
    "apts": []
   },
+  "CVE-2026-88131": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-88131.md",
+   "body": "# CVE-2026-88131\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-88131\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-88131\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-88131\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-88772": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-88772.md",
    "body": "# CVE-2026-88772\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-88772\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-88772\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-88772\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
@@ -6207,98 +6327,99 @@
  },
  "recent": [
   {
-   "title": "ai-security-news-2026-10-08",
-   "file": "Guides/AI-BugBounty/ai-security-news-2026-10-08.md",
+   "title": "Gateway-Backend-Parser-Differential-JWT-Bypass-json-Suffix-Fragment-2026",
+   "file": "Guides/Gateway-Backend-Parser-Differential-JWT-Bypass-json-Suffix-Fragment-2026.md",
+   "cat": "technique",
+   "ts": "2026-10-09"
+  },
+  {
+   "title": "ai-security-news-2026-10-09",
+   "file": "Guides/AI-BugBounty/ai-security-news-2026-10-09.md",
    "cat": "ai-bugbounty",
-   "ts": "2026-10-08"
+   "ts": "2026-10-09"
+  },
+  {
+   "title": "Wazza-Phishkit-Banking-Gov-Manufacturing-2026-10",
+   "file": "Guides/phishing/Wazza-Phishkit-Banking-Gov-Manufacturing-2026-10.md",
+   "cat": "technique",
+   "ts": "2026-10-09"
+  },
+  {
+   "title": "AU-Roundup-2026-10-09",
+   "file": "Reports/Australia/AU-Roundup-2026-10-09.md",
+   "cat": "other",
+   "ts": "2026-10-09"
+  },
+  {
+   "title": "Sigma-Watch-2026-10-09",
+   "file": "Reports/Sigma/Sigma-Watch-2026-10-09.md",
+   "cat": "other",
+   "ts": "2026-10-09"
+  },
+  {
+   "title": "Flax-Typhoon-Integrity-Tech-MicroScan-FishHub-Takedown-2026-10",
+   "file": "Threat_Intel/APT_Groups/Flax-Typhoon-Integrity-Tech-MicroScan-FishHub-Takedown-2026-10.md",
+   "cat": "malware",
+   "ts": "2026-10-09"
   },
   {
    "title": "Hafnium-Zhang-Yu-10M-Reward-State-Dept-2026-10",
    "file": "Threat_Intel/APT_Groups/Hafnium-Zhang-Yu-10M-Reward-State-Dept-2026-10.md",
    "cat": "malware",
-   "ts": "2026-10-08"
+   "ts": "2026-10-09"
   },
   {
-   "title": "Advantest-Ransomware-Data-Breach-2026-10",
-   "file": "Threat_Intel/Breaches/Advantest-Ransomware-Data-Breach-2026-10.md",
+   "title": "UAT-11985-AI-Event-Lures-QR-Google-AitM-Taiwan-2026-10",
+   "file": "Threat_Intel/APT_Groups/UAT-11985-AI-Event-Lures-QR-Google-AitM-Taiwan-2026-10.md",
+   "cat": "malware",
+   "ts": "2026-10-09"
+  },
+  {
+   "title": "ASOS-Snowflake-Breach-2026-10",
+   "file": "Threat_Intel/Breaches/ASOS-Snowflake-Breach-2026-10.md",
    "cat": "breach",
-   "ts": "2026-10-08"
+   "ts": "2026-10-09"
   },
   {
-   "title": "Arizona-Court-System-Breach-1M-2026-10",
-   "file": "Threat_Intel/Breaches/Arizona-Court-System-Breach-1M-2026-10.md",
+   "title": "Cybercrime-Prosecutions-Roundup-2026-10-08",
+   "file": "Threat_Intel/Breaches/Cybercrime-Prosecutions-Roundup-2026-10-08.md",
    "cat": "breach",
-   "ts": "2026-10-08"
+   "ts": "2026-10-09"
   },
   {
-   "title": "FortiBleed-Fortinet-Credential-Compromise-2026",
-   "file": "Threat_Intel/Breaches/FortiBleed-Fortinet-Credential-Compromise-2026.md",
+   "title": "IDCF-Cloud-Japan-Ransomware-Outage-2026-10",
+   "file": "Threat_Intel/Breaches/IDCF-Cloud-Japan-Ransomware-Outage-2026-10.md",
    "cat": "breach",
-   "ts": "2026-10-08"
+   "ts": "2026-10-09"
   },
   {
-   "title": "Kodak-ShinyHunters-Breach-2026",
-   "file": "Threat_Intel/Breaches/Kodak-ShinyHunters-Breach-2026.md",
+   "title": "Japan-JPCERT-Web-Data-Leaks-Mobile-API-Metabase-2026-10",
+   "file": "Threat_Intel/Breaches/Japan-JPCERT-Web-Data-Leaks-Mobile-API-Metabase-2026-10.md",
    "cat": "breach",
-   "ts": "2026-10-08"
+   "ts": "2026-10-09"
   },
   {
-   "title": "Oracle-Health-Breach-Tally-20M-2026-10",
-   "file": "Threat_Intel/Breaches/Oracle-Health-Breach-Tally-20M-2026-10.md",
-   "cat": "breach",
-   "ts": "2026-10-08"
-  },
-  {
-   "title": "Southern-Company-Georgia-Alabama-Power-Breach-400k-2026-10",
-   "file": "Threat_Intel/Breaches/Southern-Company-Georgia-Alabama-Power-Breach-400k-2026-10.md",
-   "cat": "breach",
-   "ts": "2026-10-08"
-  },
-  {
-   "title": "Chrome-155-247-Vulns-4-Critical-UAF-2026-10",
-   "file": "Threat_Intel/CVEs/2026/Critical/Chrome-155-247-Vulns-4-Critical-UAF-2026-10.md",
+   "title": "CVE-2015-2291",
+   "file": "Threat_Intel/CVEs/2015/Unrated/CVE-2015-2291.md",
    "cat": "cve",
-   "ts": "2026-10-08"
+   "ts": "2026-10-09"
   },
   {
-   "title": "CVE-2026-102255-SonicWall-SMA1000-WorkPlace-SSRF-2026-10",
-   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-102255-SonicWall-SMA1000-WorkPlace-SSRF-2026-10.md",
+   "title": "CVE-2019-11510",
+   "file": "Threat_Intel/CVEs/2019/Critical/CVE-2019-11510.md",
    "cat": "cve",
-   "ts": "2026-10-08"
+   "ts": "2026-10-09"
   },
   {
-   "title": "CVE-2026-21589-Atlassian-Data-Center-File-Access",
-   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-21589-Atlassian-Data-Center-File-Access.md",
+   "title": "CVE-2021-22205",
+   "file": "Threat_Intel/CVEs/2021/Critical/CVE-2021-22205.md",
    "cat": "cve",
-   "ts": "2026-10-08"
-  },
-  {
-   "title": "CVE-2026-94545",
-   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-94545.md",
-   "cat": "cve",
-   "ts": "2026-10-08"
-  },
-  {
-   "title": "NextJS-ImageResponse-Crafted-SVG-Server-Code-Execution-2026",
-   "file": "Threat_Intel/CVEs/2026/Critical/NextJS-ImageResponse-Crafted-SVG-Server-Code-Execution-2026.md",
-   "cat": "cve",
-   "ts": "2026-10-08"
-  },
-  {
-   "title": "CVE-2026-42271",
-   "file": "Threat_Intel/CVEs/2026/Low/CVE-2026-42271.md",
-   "cat": "cve",
-   "ts": "2026-10-08"
-  },
-  {
-   "title": "CVE-2026-106197",
-   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-106197.md",
-   "cat": "cve",
-   "ts": "2026-10-08"
+   "ts": "2026-10-09"
   }
  ],
  "kev_referenced": [
   "CVE-2015-1641",
+  "CVE-2015-2291",
   "CVE-2015-3246",
   "CVE-2015-5287",
   "CVE-2016-3714",
@@ -6310,6 +6431,7 @@
   "CVE-2018-14847",
   "CVE-2019-1068",
   "CVE-2019-11043",
+  "CVE-2019-11510",
   "CVE-2019-18935",
   "CVE-2019-19781",
   "CVE-2019-2725",
@@ -6317,6 +6439,7 @@
   "CVE-2020-14882",
   "CVE-2021-21311",
   "CVE-2021-21551",
+  "CVE-2021-22205",
   "CVE-2021-23758",
   "CVE-2021-26855",
   "CVE-2021-3560",
@@ -6424,6 +6547,7 @@
   "CVE-2026-75650",
   "CVE-2026-76460",
   "CVE-2026-76461",
+  "CVE-2026-76504",
   "CVE-2026-8037",
   "CVE-2026-81578",
   "CVE-2026-81963",
@@ -6444,6 +6568,7 @@
   "CVE-2026-87902",
   "CVE-2026-88771",
   "CVE-2026-88772",
+  "CVE-2026-88779",
   "CVE-2026-9082",
   "CVE-2026-93616",
   "CVE-2026-94127",
@@ -7206,6 +7331,13 @@
    "cves": 669,
    "breaches": 154,
    "malware": 178
+  },
+  {
+   "date": "2026-10-09",
+   "intel_items": 1759,
+   "cves": 687,
+   "breaches": 157,
+   "malware": 181
   }
  ]
 }
