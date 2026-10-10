@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-09 20:45",
- "today": "2026-10-09",
+ "generated": "2026-10-10 20:45",
+ "today": "2026-10-10",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
@@ -16,12 +16,12 @@
  },
  "windows": {
   "week": {
-   "total": 101,
+   "total": 95,
    "by_cat": {
-    "cve": 25,
-    "malware": 22,
-    "breach": 25,
+    "breach": 23,
+    "cve": 23,
     "ai-bugbounty": 10,
+    "malware": 20,
     "misc": 15,
     "supplychain": 2,
     "technique": 2
@@ -29,17 +29,17 @@
    "by_src": {}
   },
   "month": {
-   "total": 360,
+   "total": 337,
    "by_cat": {
-    "cve": 113,
-    "technique": 32,
-    "breach": 53,
-    "other": 7,
-    "ai-bugbounty": 34,
-    "misc": 51,
-    "malware": 53,
+    "cve": 104,
+    "technique": 25,
+    "breach": 52,
+    "other": 6,
+    "ai-bugbounty": 33,
+    "malware": 51,
     "supplychain": 12,
-    "tool": 5
+    "tool": 4,
+    "misc": 50
    },
    "by_src": {}
   },
@@ -1752,7 +1752,6 @@
  "apt_activity_windows": {
   "week": {},
   "month": {
-   "Sandworm": 4,
    "Salt Typhoon": 1,
    "Lazarus Group": 1
   },
@@ -7334,6 +7333,13 @@
   },
   {
    "date": "2026-10-09",
+   "intel_items": 1759,
+   "cves": 687,
+   "breaches": 157,
+   "malware": 181
+  },
+  {
+   "date": "2026-10-10",
    "intel_items": 1759,
    "cves": 687,
    "breaches": 157,
