@@ -1,78 +1,78 @@
 {
- "generated": "2026-10-12 20:45",
- "today": "2026-10-12",
+ "generated": "2026-10-13 20:45",
+ "today": "2026-10-13",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
-  "cves": 707,
-  "breaches": 161,
-  "malware": 182,
+  "cves": 719,
+  "breaches": 164,
+  "malware": 184,
   "supplychain": 77,
   "tools": 96,
   "commands": 13,
-  "guides": 309,
-  "intel_items": 1807,
+  "guides": 312,
+  "intel_items": 1832,
   "kev": 166
  },
  "windows": {
   "week": {
-   "total": 140,
+   "total": 164,
    "by_cat": {
-    "cve": 38,
-    "breach": 33,
-    "ai-bugbounty": 13,
-    "malware": 28,
-    "misc": 17,
-    "supplychain": 6,
+    "cve": 43,
+    "breach": 45,
+    "ai-bugbounty": 15,
+    "malware": 32,
+    "misc": 16,
+    "supplychain": 8,
     "technique": 2,
     "tool": 3
    },
    "by_src": {}
   },
   "month": {
-   "total": 343,
+   "total": 362,
    "by_cat": {
-    "ai-bugbounty": 30,
-    "supplychain": 14,
-    "breach": 61,
-    "technique": 16,
-    "cve": 107,
+    "breach": 72,
     "tool": 5,
-    "malware": 53,
+    "cve": 111,
+    "malware": 57,
     "other": 5,
+    "supplychain": 15,
+    "technique": 15,
+    "ai-bugbounty": 30,
     "misc": 52
    },
    "by_src": {}
   },
   "year": {
-   "total": 1807,
+   "total": 1832,
    "by_cat": {
-    "ai-bugbounty": 136,
-    "malware": 232,
+    "ai-bugbounty": 138,
+    "malware": 236,
     "other": 111,
     "tool": 61,
     "misc": 348,
     "command": 6,
     "technique": 145,
-    "cve": 457,
-    "breach": 214,
-    "supplychain": 97
+    "cve": 462,
+    "breach": 226,
+    "supplychain": 99
    },
    "by_src": {}
   },
   "all": {
-   "total": 1807,
+   "total": 1832,
    "by_cat": {
-    "ai-bugbounty": 136,
-    "malware": 232,
+    "ai-bugbounty": 138,
+    "malware": 236,
     "other": 111,
     "tool": 61,
     "misc": 348,
     "command": 6,
     "technique": 145,
-    "cve": 457,
-    "breach": 214,
-    "supplychain": 97
+    "cve": 462,
+    "breach": 226,
+    "supplychain": 99
    },
    "by_src": {}
   }
@@ -1853,7 +1853,7 @@
   ]
  },
  "cve_sev": {
-  "Critical": 278,
+  "Critical": 280,
   "High": 192,
   "Low": 36,
   "Medium": 24
@@ -1869,8 +1869,8 @@
   "2022": 14,
   "2023": 20,
   "2024": 15,
-  "2025": 34,
-  "2026": 579
+  "2025": 37,
+  "2026": 588
  },
  "cve_month": {
   "2025-10": 1,
@@ -1880,7 +1880,7 @@
   "2026-07": 16,
   "2026-08": 84,
   "2026-09": 160,
-  "2026-10": 41
+  "2026-10": 46
  },
  "top_cve": [
   {
@@ -1897,7 +1897,7 @@
   },
   {
    "id": "CVE-2026-85706",
-   "n": 62,
+   "n": 63,
    "sev": "Critical",
    "kev": true
   },
@@ -2941,6 +2941,30 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2025-41450": {
+   "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-41450.md",
+   "body": "# CVE-2025-41450\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2025\n\n## Summary\nKnown AK-SM 800A flaws (2025): **CVE-2025-41450** (auth bypass, <4.2), **CVE-2025-41451** (command injection/RCE), **CVE-2025-41452** (DoS) \u2014 latter two fixed in 4.3.1. Claroty: thousands of AK-SM 800A interfaces internet-reachable.\n\n## Where it appears in this vault\n- `Threat_Intel/Breaches/Danfoss-Refrigeration-Controller-Attack-French-Supermarkets-2026-10.md` \u2014 Known AK-SM 800A flaws (2025): **CVE-2025-41450** (auth bypass, <4.2), **CVE-2025-41451** (command injection/RCE), **CVE-2025-41452** (DoS) \u2014 latter two fixed in 4.3.1. Claroty: thousands of AK-SM 800A interfaces internet-reachable.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-41450\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-41450\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-41450\n\n## Tags\n#cve #2025 #unrated #auto-stub",
+   "sev": "",
+   "year": "2025",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2025-41451": {
+   "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-41451.md",
+   "body": "# CVE-2025-41451\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2025\n\n## Summary\nKnown AK-SM 800A flaws (2025): **CVE-2025-41450** (auth bypass, <4.2), **CVE-2025-41451** (command injection/RCE), **CVE-2025-41452** (DoS) \u2014 latter two fixed in 4.3.1. Claroty: thousands of AK-SM 800A interfaces internet-reachable.\n\n## Where it appears in this vault\n- `Threat_Intel/Breaches/Danfoss-Refrigeration-Controller-Attack-French-Supermarkets-2026-10.md` \u2014 Known AK-SM 800A flaws (2025): **CVE-2025-41450** (auth bypass, <4.2), **CVE-2025-41451** (command injection/RCE), **CVE-2025-41452** (DoS) \u2014 latter two fixed in 4.3.1. Claroty: thousands of AK-SM 800A interfaces internet-reachable.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-41451\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-41451\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-41451\n\n## Tags\n#cve #2025 #unrated #auto-stub",
+   "sev": "",
+   "year": "2025",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2025-41452": {
+   "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-41452.md",
+   "body": "# CVE-2025-41452\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2025\n\n## Summary\nKnown AK-SM 800A flaws (2025): **CVE-2025-41450** (auth bypass, <4.2), **CVE-2025-41451** (command injection/RCE), **CVE-2025-41452** (DoS) \u2014 latter two fixed in 4.3.1. Claroty: thousands of AK-SM 800A interfaces internet-reachable.\n\n## Where it appears in this vault\n- `Threat_Intel/Breaches/Danfoss-Refrigeration-Controller-Attack-French-Supermarkets-2026-10.md` \u2014 Known AK-SM 800A flaws (2025): **CVE-2025-41450** (auth bypass, <4.2), **CVE-2025-41451** (command injection/RCE), **CVE-2025-41452** (DoS) \u2014 latter two fixed in 4.3.1. Claroty: thousands of AK-SM 800A interfaces internet-reachable.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-41452\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-41452\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-41452\n\n## Tags\n#cve #2025 #unrated #auto-stub",
+   "sev": "",
+   "year": "2025",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2025-43510": {
    "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-43510.md",
    "body": "# CVE-2025-43510\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2025\n\n## Summary\nDarkSword** (first public ~2026-03): Safari `WebContent` sandbox escape leveraging **WebGPU** to inject into the `mediaplaybackd` daemon, gaining privileged file-system access. Uses a chain of 6 flaws incl. zero-days: **CVE-2025-31277, CVE-2025-43529, CVE-2026-20700, CVE-2025-14174, CVE-2025-43510, CVE-2025-43520**. Impacts **iOS 18.4\u201318.7**.\n\n## Where it appears in this vault\n- `Threat_Intel/Malware/DarkSword-Leaked-Kit-Chinese-Actor-FakeLogin-GHOSTBLADE-2026.md` \u2014 DarkSword** (first public ~2026-03): Safari `WebContent` sandbox escape leveraging **WebGPU** to inject into the `mediaplaybackd` daemon, gaining privileged file-system access. Uses a chain of 6 flaws incl. zero-days: **CVE-2025-31277, CVE-2025-43529, CVE-2026-20700, CVE-2025-14174, CVE-2025-43510, CVE-2025-43520**. Impacts **iOS 18.4\u201318.7**.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-43510\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-43510\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-43510\n\n## Tags\n#cve #2025 #unrated #auto-stub #verified",
@@ -3089,7 +3113,7 @@
   },
   "CVE-2026-102255": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-102255-SonicWall-SMA1000-WorkPlace-SSRF-2026-10.md",
-   "body": "# CVE-2026-102255 \u2014 SonicWall SMA1000 Appliance WorkPlace Pre-Auth SSRF (Max Severity)\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 2 independent sources\n\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-max-severity-ssrf-flaw-in-sma1000-gateways/) \u2014 Wed, 07 Oct 2026\n\n**Type:** CVE / SSRF | **Severity:** Critical (vendor: maximum) | **Date:** 2026-10-07 | **Tags:** #cve #sonicwall #sma1000 #ssrf #edge-device\n\n## Summary\n- Unauthenticated, low-complexity **server-side request forgery** in the SMA1000 **Appliance WorkPlace** interface, caused by an unintended alternate access path.\n- Affected: SMA1000 **6210, 7210, 8200v**. Not affected: SMA 100 series, SSL-VPN on SonicWall firewalls.\n- Hotfixes released 2026-10-06; advisory **SNWLID-2026-0017**. No workaround.\n- **Not exploited** per SonicWall (as of disclosure). Shadowserver sees ~400 exposed SMA1000 appliances.\n\n## Why it matters\nSMA1000 was hit by the CVE-2026-83548/83549 pre-auth SSRF zero-day chain in September (CISA KEV). Same product, same bug class: expect fast weaponization. See [[CVE-2026-83548-83549-SonicWall-SMA1000-ZeroDay-Chain-Exploited-2026-09]].\n\n## Actions\n- Apply SNWLID-2026-0017 hotfix now; restrict WorkPlace/management exposure.\n- Hunt for outbound requests from SMA1000 to internal metadata/admin endpoints.\n\n\n## Update 2026-10-11 \u2014 Now exploited in the wild\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/max-severity-sonicwall-sma1000-flaw-now-exploited-in-attacks/) \u2014 Fri, 09 Oct 2026\n> Source: [CCCS AV26-1017 Update 1](https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-1017) \u2014 2026-10-09\n- CVE-2026-102255 now actively exploited (status changed from \"not exploited\").\n- Affected: SMA1000 6210/7210/8200v, 12.4.3-03670 (platform-hotfix) and earlier, 12.5.0-03082 (platform-hotfix) and earlier.\n- Action: patch immediately; treat unpatched exposed appliances as potentially compromised.\n\n## Tags\n#unverified\n\n\n## Update 2026-10-12 \u2014 Exploitation timeline (CVSS 10.0)\n> Source: [SecurityWeek](https://www.securityweek.com/critical-sonicwall-vulnerability-exploited-days-after-disclosure/) \u2014 Mon, 12 Oct 2026\n- CVSS **10.0**; fixed in **12.5.0-03082** and **12.4.3-03670** (hotfix builds).\n- Disclosed 10-06; **Defused** honeypots saw first exploitation attempts **10-08**; **Previdian** (formerly KEVIntel) also observed attempts.\n- **Horizon3.ai**: can lead to full device takeover. No actor/IOCs published yet.",
+   "body": "# CVE-2026-102255 \u2014 SonicWall SMA1000 Appliance WorkPlace Pre-Auth SSRF (Max Severity)\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 2 independent sources\n\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-max-severity-ssrf-flaw-in-sma1000-gateways/) \u2014 Wed, 07 Oct 2026\n\n**Type:** CVE / SSRF | **Severity:** Critical (vendor: maximum) | **Date:** 2026-10-07 | **Tags:** #cve #sonicwall #sma1000 #ssrf #edge-device\n\n## Summary\n- Unauthenticated, low-complexity **server-side request forgery** in the SMA1000 **Appliance WorkPlace** interface, caused by an unintended alternate access path.\n- Affected: SMA1000 **6210, 7210, 8200v**. Not affected: SMA 100 series, SSL-VPN on SonicWall firewalls.\n- Hotfixes released 2026-10-06; advisory **SNWLID-2026-0017**. No workaround.\n- **Not exploited** per SonicWall (as of disclosure). Shadowserver sees ~400 exposed SMA1000 appliances.\n\n## Why it matters\nSMA1000 was hit by the CVE-2026-83548/83549 pre-auth SSRF zero-day chain in September (CISA KEV). Same product, same bug class: expect fast weaponization. See [[CVE-2026-83548-83549-SonicWall-SMA1000-ZeroDay-Chain-Exploited-2026-09]].\n\n## Actions\n- Apply SNWLID-2026-0017 hotfix now; restrict WorkPlace/management exposure.\n- Hunt for outbound requests from SMA1000 to internal metadata/admin endpoints.\n\n\n## Update 2026-10-11 \u2014 Now exploited in the wild\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/max-severity-sonicwall-sma1000-flaw-now-exploited-in-attacks/) \u2014 Fri, 09 Oct 2026\n> Source: [CCCS AV26-1017 Update 1](https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-1017) \u2014 2026-10-09\n- CVE-2026-102255 now actively exploited (status changed from \"not exploited\").\n- Affected: SMA1000 6210/7210/8200v, 12.4.3-03670 (platform-hotfix) and earlier, 12.5.0-03082 (platform-hotfix) and earlier.\n- Action: patch immediately; treat unpatched exposed appliances as potentially compromised.\n\n## Tags\n#unverified\n\n\n## Update 2026-10-12 \u2014 Exploitation timeline (CVSS 10.0)\n> Source: [SecurityWeek](https://www.securityweek.com/critical-sonicwall-vulnerability-exploited-days-after-disclosure/) \u2014 Mon, 12 Oct 2026\n- CVSS **10.0**; fixed in **12.5.0-03082** and **12.4.3-03670** (hotfix builds).\n- Disclosed 10-06; **Defused** honeypots saw first exploitation attempts **10-08**; **Previdian** (formerly KEVIntel) also observed attempts.\n- **Horizon3.ai**: can lead to full device takeover. No actor/IOCs published yet.\n\n\n## Update 2026-10-13\n> Source: [The Hacker News](https://thehackernews.com/2026/10/critical-sonicwall-sma-1000-flaw.html) \u2014 Mon, 12 Oct 2026 10:36 UTC\n- THN: **135 exploitation attempts** observed against CVE-2026-102255 (CVSS 10.0 pre-auth SSRF) after the patch; exploitation began within days of disclosure. Patch SMA 1000 now and review WorkPlace logs for SSRF requests.",
    "sev": "Critical",
    "year": "2026",
    "kev": false,
@@ -4371,7 +4395,7 @@
   },
   "CVE-2026-85097": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-85097-Bricksforge-WordPress-Unauth-RCE-Exploited-2026-10.md",
-   "body": "# CVE-2026-85097 \u2014 Bricksforge WordPress Plugin Unauthenticated RCE (Exploited)\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 source (cites Patchstack telemetry)\n\n> Source: [The Hacker News](https://thehackernews.com/2026/10/attackers-exploit-cvss-100-bricksforge.html) \u2014 Mon, 12 Oct 2026\n\n**Type:** CVE / Unauth file upload -> RCE | **Severity:** Critical (CVSS 10.0) | **Date:** 2026-10-12 | **Tags:** #cve #wordpress #bricksforge #rce #exploited #file-upload\n\n## Summary\n- **Bricksforge** (Bricks Builder add-on) <= **3.1.8.9**: unauthenticated arbitrary PHP upload -> RCE. Fixed in **3.1.8.10** (update to **4.0.1** recommended).\n- Root cause: no validation of the `url` field inside the `temporaryFileUploads` parameter.\n- **Exploited since 2026-10-07 21:47 UTC** (Patchstack), from 63 IPs.\n\n## Exploit chain\n1. Obtain nonce via AJAX action `bricksforge_regenerate_nonce`.\n2. Upload a GIF/PHP polyglot.\n3. Submit form via `/wp-json/bricksforge/v1/form_submit` or `admin-ajax.php?action=bricksforge_form_submit`.\n\n## IOCs (top source IPs)\n`177.75.57[.]20`, `23.97.62[.]146`, `84.247.60[.]125`, `38.154.185[.]97`, `150.109.16[.]166`, `153.75.90[.]146`\n\n## Hunting\n- Unexpected `.php` (or GIF-header PHP) in `/wp-content/uploads/bricksforge/tmp/`.\n- POSTs to `bricksforge/v1/form_submit` preceded by `bricksforge_regenerate_nonce` from the same IP.\n\n## Related campaign (same article) \u2014 XSS -> admin persistence\n- **CVE-2026-93836** WPC Product Bundles (CVSS 7.1) \u2014 fixed 8.6.7.\n- **CVE-2026-94504** Ninja Forms (CVSS 7.1) \u2014 fixed 3.15.4.\n- Payload `x.js` creates a hidden admin account + \"magic login\" URL.\n\n## Bug bounty angle\nClassic WP plugin upload sinks: look for user-controlled URL/path fields inside \"temporary upload\" JSON blobs and nonce endpoints exposed to unauthenticated users.\n\n## Tags\n#unverified",
+   "body": "# CVE-2026-85097 \u2014 Bricksforge WordPress Plugin Unauthenticated RCE (Exploited)\n\n\u2705 **Verification:** Verified \u2014 2 independent sources (THN + SecurityWeek)\n\n> Source: [The Hacker News](https://thehackernews.com/2026/10/attackers-exploit-cvss-100-bricksforge.html) \u2014 Mon, 12 Oct 2026\n\n**Type:** CVE / Unauth file upload -> RCE | **Severity:** Critical (CVSS 10.0) | **Date:** 2026-10-12 | **Tags:** #cve #wordpress #bricksforge #rce #exploited #file-upload\n\n## Summary\n- **Bricksforge** (Bricks Builder add-on) <= **3.1.8.9**: unauthenticated arbitrary PHP upload -> RCE. Fixed in **3.1.8.10** (update to **4.0.1** recommended).\n- Root cause: no validation of the `url` field inside the `temporaryFileUploads` parameter.\n- **Exploited since 2026-10-07 21:47 UTC** (Patchstack), from 63 IPs.\n\n## Exploit chain\n1. Obtain nonce via AJAX action `bricksforge_regenerate_nonce`.\n2. Upload a GIF/PHP polyglot.\n3. Submit form via `/wp-json/bricksforge/v1/form_submit` or `admin-ajax.php?action=bricksforge_form_submit`.\n\n## IOCs (top source IPs)\n`177.75.57[.]20`, `23.97.62[.]146`, `84.247.60[.]125`, `38.154.185[.]97`, `150.109.16[.]166`, `153.75.90[.]146`\n\n## Hunting\n- Unexpected `.php` (or GIF-header PHP) in `/wp-content/uploads/bricksforge/tmp/`.\n- POSTs to `bricksforge/v1/form_submit` preceded by `bricksforge_regenerate_nonce` from the same IP.\n\n## Related campaign (same article) \u2014 XSS -> admin persistence\n- **CVE-2026-93836** WPC Product Bundles (CVSS 7.1) \u2014 fixed 8.6.7.\n- **CVE-2026-94504** Ninja Forms (CVSS 7.1) \u2014 fixed 3.15.4.\n- Payload `x.js` creates a hidden admin account + \"magic login\" URL.\n\n## Bug bounty angle\nClassic WP plugin upload sinks: look for user-controlled URL/path fields inside \"temporary upload\" JSON blobs and nonce endpoints exposed to unauthenticated users.\n\n## Tags\n#verified\n\n\n## Update 2026-10-13\n> Source: [SecurityWeek](https://www.securityweek.com/bricksforge-wordpress-plugin-vulnerability-exploited-in-the-wild/) \u2014 Mon, 12 Oct 2026 13:14 UTC\n- SecurityWeek independently confirms in-the-wild exploitation (site takeover). Verification upgraded: 2 independent sources.",
    "sev": "Critical",
    "year": "2026",
    "kev": false,
@@ -4407,6 +4431,14 @@
    "sev": "Critical",
    "year": "2026",
    "kev": true,
+   "apts": []
+  },
+  "CVE-2026-85947": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-85947-MarkLogic-Server-Five-Critical-Privilege-Escalation-Flaws-2026-10.md",
+   "body": "# MarkLogic Server \u2014 5 Critical Flaws (CVE-2026-85947/85948/85955/85956/9191) Delegated Admin \u2192 Persistent Admin\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 source (citing Progress advisories)\n\n> Source: [The Hacker News](https://thehackernews.com/2026/10/two-critical-marklogic-flaws-could-give.html) \u2014 Tue, 13 Oct 2026 08:44 UTC\n\n**Type:** CVE / Privilege escalation | **Severity:** Critical (CVSS 9.6\u20139.9) | **Date:** 2026-10-12 | **Tags:** #cve #marklogic #progress #privesc #xquery-injection #database\n\n## Summary\n- Progress published **31 MarkLogic Server flaws** on 2026-10-12; **5 critical**. Fixes shipped **2026-09-10** in **11.3.7** and **12.1.0**. August builds (11.3.6, 12.0.3) remain vulnerable. No patched 12.0.x.\n- None in CISA KEV as of 2026-10-13; exploitation status not stated.\n\n| CVE | CVSS | Precondition | Impact |\n|---|---|---|---|\n| CVE-2026-85947 | 9.9 | Forest-management privileges | Create persistent administrator account (attach forest to arbitrary DB) |\n| CVE-2026-85948 | 9.9 | manage-user privileges | XQuery injection in deprecated Management API path \u2192 persistent admin |\n| CVE-2026-85955 | 9.9 | Query execution + `xdmp-eval-in` | Server-side code with elevated permissions |\n| CVE-2026-85956 | 9.6 | Delegated DB admin | Backup/restore forests outside own DB (security DB) |\n| CVE-2026-9191 | 9.6 | Code via REST/XDBC eval paths | Unauthorized actions / session compromise |\n\nResearchers: rexnets (85947, 85948, 85956), WaltWhitehat (9191); four reported via Bugcrowd.\n\n## Actions\n- Upgrade to 11.3.7 / 12.1.0. Read upgrade notes first: older mlcp fails with `XDMP-ISOLATED`; `xdmp:eval-in()` now needs both `xdmp-eval-in` and `xdmp-eval`.\n- Audit delegated forest/database privileges and roles holding `xdmp-eval-in`.\n- Audit for unexpected admin users created before upgrade (patch may not remove them).\n\n## Bug bounty angle\nDelegated-admin models are a rich privesc target: any \"scoped admin\" that can attach/restore storage objects outside its scope (forests, backups) can usually reach the security database. Bugcrowd programs paid for these.\n\n## Tags\n#unverified",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
    "apts": []
   },
   "CVE-2026-86060": {
@@ -4535,6 +4567,14 @@
    "sev": "Critical",
    "year": "2026",
    "kev": true,
+   "apts": []
+  },
+  "CVE-2026-97229": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-97229-GitLab-CICD-Regex-Integer-Overflow-Unauth-RCE-2026-10.md",
+   "body": "# CVE-2026-97229 \u2014 GitLab CE/EE CI/CD Regex Integer Overflow \u2192 Unauthenticated RCE (CVSS 10.0)\n\n\u2705 **Verification:** Verified \u2014 2 independent sources\n\n> Source: [The Hacker News](https://thehackernews.com/2026/10/gitlab-patches-cvss-100-flaw-that-could.html) \u2014 Tue, 13 Oct 2026 08:43 UTC\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/gitlab-warns-of-max-severity-rce-flaw-in-regex-compiler-engine/) \u2014 Mon, 12 Oct 2026 13:09 UTC\n\n**Type:** CVE / RCE | **Severity:** Critical (CVSS 10.0) | **Date:** 2026-10-12 | **Tags:** #cve #gitlab #rce #cicd #regex #integer-overflow #unauthenticated\n\n## Summary\n- **CVE-2026-97229**: integer overflow from insufficient regular expression validation in GitLab's CI/CD regular expression compiler engine.\n- Under certain (unspecified) conditions, an **unauthenticated** user can run arbitrary code on the GitLab server via a crafted regex in a CI/CD configuration/component.\n- No in-the-wild exploitation reported as of 2026-10-13. No workaround published.\n\n## Affected / Fixed\n| Branch | Affected | Fixed |\n|---|---|---|\n| 19.2 | < 19.2.8 | 19.2.8 |\n| 19.3 | < 19.3.5 | 19.3.5 |\n| 19.4 | < 19.4.2 | 19.4.2 |\n\n## Other fixes in the same patch release\n- **CVE-2026-92883** (CVSS 8.7) \u2014 stored XSS via crafted repository (authenticated).\n- **CVE-2026-16301** (CVSS 8.5) \u2014 improper authorization in downstream pipeline creation; Developer role can run pipelines on protected branches.\n- **CVE-2026-14814** (CVSS 8.2) \u2014 permissive regex \u2192 poisoning of cached raw repository file responses; may expose protected CI variables to targeted pipelines.\n\n## Actions\n- Upgrade self-managed GitLab immediately (GitLab.com already patched).\n- Until patched: restrict anonymous access / sign-up on internet-facing instances; review CI includes from untrusted projects.\n- Hunt: unusual child processes of the Rails/Sidekiq/regex-evaluating workers; crashes in CI config validation shortly before suspicious activity.\n\n## Bug bounty angle\nRegex engines compiled server-side from user input (CI `rules:if`, `only/except` regex, branch protections) are a parser-to-memory-corruption attack surface. Look for any feature that compiles user regex in a native engine (RE2/Onigmo bindings) and fuzz length/quantifier boundaries.\n\n## Related\n- [[CVE-2026-90970-GitLab-AI-Gateway-Duo-Sandbox-Escape-RCE-2026]]\n- [[CVE-2026-85706-GitLab-Commits-API-Path-Traversal-Arbitrary-File-Read-2026]]\n\n## Tags\n#verified",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
    "apts": []
   },
   "CVE-2026-9802": {
@@ -5668,6 +5708,14 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-14814": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-14814.md",
+   "body": "# CVE-2026-14814\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-14814\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-14814\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-14814\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-1519": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-1519.md",
    "body": "# CVE-2026-1519\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nDifferent from CVE-2026-1519 (which is BIND 9)\n\n## Where it appears in this vault\n- `BugBounty/findings/systemd-resolved-findings.md` \u2014 Different from CVE-2026-1519 (which is BIND 9)\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-1519\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-1519\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-1519\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
@@ -5679,6 +5727,14 @@
   "CVE-2026-15579": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-15579.md",
    "body": "# CVE-2026-15579\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nAV26-938** | Moxa | **CVE-2026-15579** \u2014 out-of-bounds write in **TN-4500B Series** Ethernet switches \u2264 v2.0. Rail/rugged OT deployments. |\n\n## Where it appears in this vault\n- `Threat_Intel/Vendor-Advisory-Roundup-CCCS-AV26-932-942-2026-09-17-18.md` \u2014 AV26-938** | Moxa | **CVE-2026-15579** \u2014 out-of-bounds write in **TN-4500B Series** Ethernet switches \u2264 v2.0. Rail/rugged OT deployments. |\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-15579\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-15579\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-15579\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-16301": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-16301.md",
+   "body": "# CVE-2026-16301\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-16301\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-16301\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-16301\n\n## Tags\n#cve #2026 #unrated #auto-stub",
    "sev": "",
    "year": "2026",
    "kev": false,
@@ -6436,6 +6492,30 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-85948": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-85948.md",
+   "body": "# CVE-2026-85948\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-85948\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-85948\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-85948\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-85955": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-85955.md",
+   "body": "# CVE-2026-85955\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-85955\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-85955\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-85955\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-85956": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-85956.md",
+   "body": "# CVE-2026-85956\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-85956\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-85956\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-85956\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-87491": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-87491.md",
    "body": "# CVE-2026-87491\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-87491\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-87491\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-87491\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
@@ -6460,6 +6540,22 @@
    "kev": true,
    "apts": []
   },
+  "CVE-2026-9191": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-9191.md",
+   "body": "# CVE-2026-9191\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-9191\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-9191\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-9191\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-92883": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-92883.md",
+   "body": "# CVE-2026-92883\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-92883\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-92883\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-92883\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-93836": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-93836.md",
    "body": "# CVE-2026-93836\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-93836\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-93836\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-93836\n\n## Tags\n#cve #2026 #unrated #auto-stub",
@@ -6479,94 +6575,94 @@
  },
  "recent": [
   {
-   "title": "account-takeover-open-redirect-regex-bypass-technique-guide",
-   "file": "Guides/account-takeover-open-redirect-regex-bypass-technique-guide.md",
-   "cat": "technique",
-   "ts": "2026-10-12"
+   "title": "goatclub-caido-amplifies-every-request-fivefold-leads",
+   "file": "BugBounty/leads/goatclub-caido-amplifies-every-request-fivefold-leads.md",
+   "cat": "other",
+   "ts": "2026-10-13"
   },
   {
-   "title": "Active Directory",
-   "file": "Guides/Active Directory.md",
-   "cat": "technique",
-   "ts": "2026-10-12"
+   "title": "goatclub-adminer-live-200-unrecorded-and-against-a-stated-limit-observations",
+   "file": "BugBounty/notes/goatclub-adminer-live-200-unrecorded-and-against-a-stated-limit-observations.md",
+   "cat": "other",
+   "ts": "2026-10-13"
   },
   {
-   "title": "Active-Directory-Silent-Domain-Takeover-54-Minutes-LOTL-Qualys-2026",
-   "file": "Guides/Active-Directory-Silent-Domain-Takeover-54-Minutes-LOTL-Qualys-2026.md",
-   "cat": "technique",
-   "ts": "2026-10-12"
+   "title": "goatclub-webroot-artifact-existence-checks-2026-10-13-observations",
+   "file": "BugBounty/notes/goatclub-webroot-artifact-existence-checks-2026-10-13-observations.md",
+   "cat": "other",
+   "ts": "2026-10-13"
   },
   {
-   "title": "airdrop-quickshare-six-flaws-2026",
-   "file": "Guides/airdrop-quickshare-six-flaws-2026.md",
-   "cat": "technique",
-   "ts": "2026-10-12"
+   "title": "optus-myhub-delete-oracle-control-observations",
+   "file": "BugBounty/notes/optus-myhub-delete-oracle-control-observations.md",
+   "cat": "other",
+   "ts": "2026-10-13"
   },
   {
-   "title": "amsi-scriptblock-logging-bypass-technique-guide",
-   "file": "Guides/amsi-scriptblock-logging-bypass-technique-guide.md",
-   "cat": "technique",
-   "ts": "2026-10-12"
+   "title": "optus-myhub-discriminator-run-observations",
+   "file": "BugBounty/notes/optus-myhub-discriminator-run-observations.md",
+   "cat": "other",
+   "ts": "2026-10-13"
   },
   {
-   "title": "Android-VPN-Lockdown-Bypass-Hardware-Offload-Real-IP-Leak-Mullvad-2026",
-   "file": "Guides/Android-VPN-Lockdown-Bypass-Hardware-Offload-Real-IP-Leak-Mullvad-2026.md",
-   "cat": "technique",
-   "ts": "2026-10-12"
+   "title": "session-2026-10-13-goatclub",
+   "file": "BugBounty/notes/session-2026-10-13-goatclub.md",
+   "cat": "other",
+   "ts": "2026-10-13"
   },
   {
-   "title": "APT Groups and Operations",
-   "file": "Guides/APT Groups and Operations.md",
-   "cat": "technique",
-   "ts": "2026-10-12"
+   "title": "session-2026-10-13",
+   "file": "BugBounty/notes/session-2026-10-13.md",
+   "cat": "other",
+   "ts": "2026-10-13"
   },
   {
-   "title": "asd-alert-cms-exploitation-campaign-2026",
-   "file": "Guides/asd-alert-cms-exploitation-campaign-2026.md",
-   "cat": "technique",
-   "ts": "2026-10-12"
+   "title": "optus-myhub-graphql-guest-file-disclosure-report",
+   "file": "BugBounty/reports/optus-myhub-graphql-guest-file-disclosure-report.md",
+   "cat": "other",
+   "ts": "2026-10-13"
   },
   {
-   "title": "Automated-SSH-Actors-22-Seconds-Login-to-Persistence-2026",
-   "file": "Guides/Automated-SSH-Actors-22-Seconds-Login-to-Persistence-2026.md",
-   "cat": "technique",
-   "ts": "2026-10-12"
+   "title": "optus-myhub-guest-document-destruction-report",
+   "file": "BugBounty/reports/optus-myhub-guest-document-destruction-report.md",
+   "cat": "other",
+   "ts": "2026-10-13"
   },
   {
-   "title": "AWS-Access-Key-Exposure-Detection-CloudTrail-Attribution-Gaps-2026",
-   "file": "Guides/AWS-Access-Key-Exposure-Detection-CloudTrail-Attribution-Gaps-2026.md",
-   "cat": "technique",
-   "ts": "2026-10-12"
+   "title": "anthropic-eval-models-offline-after-govt-site-incidents-2026-10",
+   "file": "Guides/AI-BugBounty/anthropic-eval-models-offline-after-govt-site-incidents-2026-10.md",
+   "cat": "ai-bugbounty",
+   "ts": "2026-10-13"
   },
   {
-   "title": "azure-conditional-access-bypass-kql-guide",
-   "file": "Guides/azure-conditional-access-bypass-kql-guide.md",
-   "cat": "technique",
-   "ts": "2026-10-12"
+   "title": "phishing-hidden-prompt-injection-targeting-ai-email-summarizers-2026",
+   "file": "Guides/AI-BugBounty/phishing-hidden-prompt-injection-targeting-ai-email-summarizers-2026.md",
+   "cat": "ai-bugbounty",
+   "ts": "2026-10-13"
   },
   {
-   "title": "bitskrieg-bitlocker-bypass-technique-guide",
-   "file": "Guides/bitskrieg-bitlocker-bypass-technique-guide.md",
+   "title": "Detection-Digest-2026-10-13",
+   "file": "Guides/Detections/Detection-Digest-2026-10-13.md",
    "cat": "technique",
-   "ts": "2026-10-12"
+   "ts": "2026-10-13"
   },
   {
-   "title": "bluekit-browser-in-the-middle-phishing-kit-guide",
-   "file": "Guides/bluekit-browser-in-the-middle-phishing-kit-guide.md",
-   "cat": "technique",
-   "ts": "2026-10-12"
+   "title": "Repo-Health-2026-10-13",
+   "file": "Reports/RepoHealth/Repo-Health-2026-10-13.md",
+   "cat": "other",
+   "ts": "2026-10-13"
   },
   {
-   "title": "browser-in-the-browser-malware-delivery-technique-guide",
-   "file": "Guides/browser-in-the-browser-malware-delivery-technique-guide.md",
-   "cat": "malware",
-   "ts": "2026-10-12"
+   "title": "Ahold-Delhaize-Cyberattack-Systems-Offline-2026-10",
+   "file": "Threat_Intel/Breaches/Ahold-Delhaize-Cyberattack-Systems-Offline-2026-10.md",
+   "cat": "breach",
+   "ts": "2026-10-13"
   },
   {
-   "title": "browser-security-tool-blind-spot-guide",
-   "file": "Guides/browser-security-tool-blind-spot-guide.md",
-   "cat": "technique",
-   "ts": "2026-10-12"
+   "title": "Cybercrime-Prosecutions-Roundup-2026-10-11",
+   "file": "Threat_Intel/Breaches/Cybercrime-Prosecutions-Roundup-2026-10-11.md",
+   "cat": "breach",
+   "ts": "2026-10-13"
   }
  ],
  "kev_referenced": [
@@ -7522,6 +7618,13 @@
    "cves": 707,
    "breaches": 161,
    "malware": 182
+  },
+  {
+   "date": "2026-10-13",
+   "intel_items": 1832,
+   "cves": 719,
+   "breaches": 164,
+   "malware": 184
   }
  ]
 }
