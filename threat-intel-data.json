@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-14 20:45",
- "today": "2026-10-14",
+ "generated": "2026-10-16 20:45",
+ "today": "2026-10-16",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
@@ -12,51 +12,50 @@
   "commands": 13,
   "guides": 314,
   "intel_items": 1877,
-  "kev": 168
+  "kev": 171
  },
  "windows": {
   "week": {
-   "total": 199,
+   "total": 130,
    "by_cat": {
-    "breach": 53,
-    "ai-bugbounty": 16,
-    "malware": 32,
-    "misc": 16,
-    "cve": 68,
-    "supplychain": 9,
-    "technique": 2,
-    "tool": 3
+    "cve": 56,
+    "breach": 36,
+    "malware": 16,
+    "ai-bugbounty": 10,
+    "tool": 3,
+    "supplychain": 7,
+    "misc": 2
    },
    "by_src": {}
   },
   "month": {
-   "total": 405,
+   "total": 393,
    "by_cat": {
-    "cve": 139,
-    "malware": 59,
+    "cve": 136,
+    "malware": 54,
     "other": 5,
-    "supplychain": 16,
-    "breach": 82,
-    "technique": 15,
+    "supplychain": 15,
+    "breach": 81,
+    "technique": 14,
     "tool": 4,
-    "ai-bugbounty": 33,
-    "misc": 52
+    "misc": 52,
+    "ai-bugbounty": 32
    },
    "by_src": {}
   },
   "year": {
-   "total": 1877,
+   "total": 1874,
    "by_cat": {
-    "ai-bugbounty": 141,
+    "ai-bugbounty": 140,
     "malware": 238,
     "other": 111,
     "tool": 61,
     "misc": 348,
     "command": 6,
-    "technique": 145,
-    "cve": 490,
+    "technique": 144,
     "breach": 237,
-    "supplychain": 100
+    "supplychain": 100,
+    "cve": 489
    },
    "by_src": {}
   },
@@ -3145,7 +3144,7 @@
    "body": "# CVE-2026-105134 / CVE-2026-105133 \u2014 AhsayCBS Auth Bypass + OS Command Injection Chain (Exploited, Unpatched)\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 2 independent sources\n\n> Source: [The Hacker News](https://thehackernews.com/2026/10/attackers-exploit-ahsaycbs-flaws-to.html) \u2014 Fri, 09 Oct 2026\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/unpatched-ahsaycbs-flaws-exploited-to-deploy-webshells-mine-crypto/) \u2014 Fri, 09 Oct 2026\n\n**Type:** CVE / auth bypass + command injection | **Severity:** Critical (CVSS v4 9.3 + 5.5) | **Date:** 2026-10-09 | **Tags:** #cve #ahsay #backup #exploited #zeroday #xmrig #webshell\n\n## Summary\n| CVE | CVSS v4 | Type | Component |\n|---|---|---|---|\n| CVE-2026-105134 | 9.3 | OS command injection | Replication Receiver |\n| CVE-2026-105133 | 5.5 | Improper authentication | `checkSysPwd()` in `com/ahsay/obs/api/ApiStructsAction.java` |\n\n- Chained: remote auth bypass -> arbitrary command execution on the AhsayCBS backup management server.\n- CVEs published 2026-10-04. NVD says fixed in **10.3.4**; Huntress reports 10.3.4 is **also affected** -> effectively unpatched.\n- Exploitation began 2026-10-07 23:20 UTC (Huntress); ~5 orgs hit by 10-08.\n\n## Post-exploitation observed\n- Recon, web shells, XMRig miner as `edge.exe` (masquerading as Microsoft Edge).\n- `certutil.exe` downloads vulnerable driver `WinRing0x64.sys` to %TEMP%.\n- `Taskgmr.ps1` (launched via curl, likely AI-assisted) pauses mining when Task Manager opens; kills Task Manager after 1h overnight.\n\n## IOCs\n- Files: `edge.exe`, `Taskgmr.ps1`, `WinRing0x64.sys` (in %TEMP%)\n- LOLBin: `certutil.exe` download\n- No IPs/hashes published.\n\n## Actions\n- Restrict AhsayCBS management/Replication Receiver to trusted IPs or VPN.\n- Hunt: new .jsp/web shells in AhsayCBS webapps, `edge.exe` outside Program Files, WinRing0x64.sys load events, certutil URL downloads.\n\n## Tags\n#unverified",
    "sev": "Critical",
    "year": "2026",
-   "kev": false,
+   "kev": true,
    "apts": []
   },
   "CVE-2026-10520": {
@@ -3363,7 +3362,7 @@
    "body": "# CVE-2026-21589 \u2014 Atlassian Jira/Confluence Data Center critical file access\n\n\u2705 **Verification:** Verified \u2014 4 independent sources\n\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/atlassian-warns-of-critical-file-access-flaw-in-jira-confluence/) \u2014 Tue, 06 Oct 2026\n> Source: [SecurityWeek](https://www.securityweek.com/atlassian-patches-critical-vulnerability-affecting-8-products/) \u2014 Wed, 07 Oct 2026\n\n- Severity: Critical\n- Unauthenticated arbitrary file access in web application root directories; 8 Atlassian products patched, incl. self-hosted Data Center Jira/Confluence.\n- Action: patch; review exposed web roots.\n\n\n## Update \u2014 2026-10-08 (exploited after public PoC)\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-atlassian-flaw-after-public-poc-release/) \u2014 Wed, 07 Oct 2026\n> Source: [The Hacker News](https://thehackernews.com/2026/10/atlassian-data-center-flaw-draws.html) \u2014 Wed, 07 Oct 2026\n> Source: [SANS ISC](https://isc.sans.edu/diary/rss/33406) \u2014 Wed, 07 Oct 2026\n- **Active exploitation** began within ~2 hours of public details, after a public PoC. Unauthenticated, across Jira, Confluence and Bitbucket Data Center.\n- SANS ISC honeypots see scans. Attackers target config files in the web root (DB creds, secrets).\n- Action escalated: **patch immediately**. If patched late, rotate any secrets readable from the web root and review access logs for known-path file reads.\n\n\n## Update 2026-10-09\n> Source: [SecurityWeek](https://www.securityweek.com/attackers-target-critical-atlassian-vulnerability-within-hours-of-poc-publication/) \u2014 Thu, 08 Oct 2026\n- SecurityWeek confirms exploitation of CVE-2026-21589 in self-hosted Data Center products began within hours of PoC publication.\n\n## Tags\n#verified",
    "sev": "Critical",
    "year": "2026",
-   "kev": false,
+   "kev": true,
    "apts": []
   },
   "CVE-2026-21962": {
@@ -5774,7 +5773,7 @@
    "body": "# CVE-2026-105133\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-105133\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-105133\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-105133\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
    "sev": "",
    "year": "2026",
-   "kev": false,
+   "kev": true,
    "apts": []
   },
   "CVE-2026-105445": {
@@ -7091,6 +7090,8 @@
   "CVE-2026-0257",
   "CVE-2026-104286",
   "CVE-2026-104935",
+  "CVE-2026-105133",
+  "CVE-2026-105134",
   "CVE-2026-10520",
   "CVE-2026-15409",
   "CVE-2026-15410",
@@ -7106,6 +7107,7 @@
   "CVE-2026-20316",
   "CVE-2026-20349",
   "CVE-2026-20700",
+  "CVE-2026-21589",
   "CVE-2026-21962",
   "CVE-2026-31431",
   "CVE-2026-33017",
@@ -7979,6 +7981,20 @@
   },
   {
    "date": "2026-10-14",
+   "intel_items": 1877,
+   "cves": 763,
+   "breaches": 167,
+   "malware": 184
+  },
+  {
+   "date": "2026-10-15",
+   "intel_items": 1877,
+   "cves": 763,
+   "breaches": 167,
+   "malware": 184
+  },
+  {
+   "date": "2026-10-16",
    "intel_items": 1877,
    "cves": 763,
    "breaches": 167,
