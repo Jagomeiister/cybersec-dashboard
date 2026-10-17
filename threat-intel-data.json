@@ -1,77 +1,78 @@
 {
- "generated": "2026-10-16 20:45",
- "today": "2026-10-16",
+ "generated": "2026-10-17 20:45",
+ "today": "2026-10-17",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
-  "cves": 763,
-  "breaches": 167,
-  "malware": 184,
-  "supplychain": 78,
-  "tools": 96,
+  "cves": 787,
+  "breaches": 171,
+  "malware": 189,
+  "supplychain": 80,
+  "tools": 97,
   "commands": 13,
-  "guides": 314,
-  "intel_items": 1877,
-  "kev": 171
+  "guides": 320,
+  "intel_items": 1986,
+  "kev": 176
  },
  "windows": {
   "week": {
-   "total": 130,
+   "total": 203,
    "by_cat": {
-    "cve": 56,
-    "breach": 36,
-    "malware": 16,
-    "ai-bugbounty": 10,
-    "tool": 3,
-    "supplychain": 7,
-    "misc": 2
+    "cve": 88,
+    "breach": 47,
+    "tool": 4,
+    "supplychain": 10,
+    "ai-bugbounty": 21,
+    "malware": 23,
+    "misc": 9,
+    "technique": 1
    },
    "by_src": {}
   },
   "month": {
-   "total": 393,
+   "total": 488,
    "by_cat": {
-    "cve": 136,
-    "malware": 54,
-    "other": 5,
-    "supplychain": 15,
-    "breach": 81,
-    "technique": 14,
-    "tool": 4,
-    "misc": 52,
-    "ai-bugbounty": 32
+    "cve": 177,
+    "malware": 68,
+    "breach": 97,
+    "technique": 15,
+    "misc": 59,
+    "supplychain": 18,
+    "other": 3,
+    "ai-bugbounty": 46,
+    "tool": 5
    },
    "by_src": {}
   },
   "year": {
-   "total": 1874,
+   "total": 1983,
    "by_cat": {
-    "ai-bugbounty": 140,
-    "malware": 238,
+    "ai-bugbounty": 154,
+    "malware": 252,
     "other": 111,
-    "tool": 61,
-    "misc": 348,
+    "tool": 63,
+    "misc": 355,
     "command": 6,
-    "technique": 144,
-    "breach": 237,
-    "supplychain": 100,
-    "cve": 489
+    "technique": 145,
+    "breach": 255,
+    "supplychain": 104,
+    "cve": 538
    },
    "by_src": {}
   },
   "all": {
-   "total": 1877,
+   "total": 1986,
    "by_cat": {
-    "ai-bugbounty": 141,
-    "malware": 238,
+    "ai-bugbounty": 155,
+    "malware": 252,
     "other": 111,
-    "tool": 61,
-    "misc": 348,
+    "tool": 63,
+    "misc": 355,
     "command": 6,
-    "technique": 145,
-    "cve": 490,
-    "breach": 237,
-    "supplychain": 100
+    "technique": 146,
+    "cve": 539,
+    "breach": 255,
+    "supplychain": 104
    },
    "by_src": {}
   }
@@ -1264,7 +1265,7 @@
   },
   {
    "group": "Salt Typhoon",
-   "body": "# Salt Typhoon \u2014 APT Profile\n\n\u2705 **Verification:** Verified \u2014 8 independent sources\n\n## Snapshot\n| Field | Value |\n|---|---|\n| Attribution | PRC state-sponsored; contractors (incl. sanctioned Sichuan Juxinhe Network Technology) supporting Chinese intelligence services |\n| Aliases | GhostEmperor, FamousSparrow, Earth Estries, UNC2286, UNC5807, RedMike, OPERATOR PANDA |\n| MITRE ATT&CK ID | G1045 |\n| First seen | 2019 |\n| Status | Active |\n| Motivation | Espionage (telecom intercept / metadata collection) |\n\n## Overview\nSalt Typhoon is a China-nexus cyber-espionage actor active since at least 2019, responsible for numerous compromises of network infrastructure at major US telecom and ISP providers. It is distinguished by **deep exploitation of network-edge devices** (especially Cisco routers), **living-off-the-network-device** persistence (GRE tunnels, loopback manipulation, config/credential dumping), and targeting of **lawful-intercept (CALEA/wiretap) systems** and high-value individuals' communications. MITRE assigned it **G1045** in Feb 2025.\n\n## Attribution & Origin\nPRC state-sponsored. The Aug 2025 joint advisory and US Treasury link the activity to **contractors supporting Chinese intelligence services** (MSS, with PLA references).\n- **17 Jan 2025** \u2014 US Treasury OFAC **sanctioned Sichuan Juxinhe Network Technology Co., Ltd.** for direct involvement with Salt Typhoon.\n- The Aug 2025 advisory also names **Beijing Huanyu Tianqiong Information Technology Co., Ltd.** and **Sichuan Zhixin Ruijie Network Technology Co., Ltd.** as providing cyber products/services to China's intelligence services.\n\n## Motivation & Objectives\nCyber-espionage / long-term intelligence collection. Specifically targets **telecom intercept capability**: call detail records and metadata, geolocation, SMS, and in some cases call audio of high-value targets \u2014 plus access to **lawful-intercept (CALEA / court-ordered wiretap) systems**.\n\n## Target Profile\nPrimary sector: **telecommunications providers and ISPs**. US carriers reported breached include **AT&T, Verizon, Lumen, T-Mobile** (reporting cites at least nine US telecoms). Also government, transportation, lodging/hospitality and military networks (per the Aug 2025 advisory). Targets of intelligence value include **lawful-intercept / CALEA wiretap systems** and the communications of high-profile individuals (reporting cites people associated with 2024 US presidential campaigns and government officials).\n\nRegions: United States (epicentre) plus **APAC, EMEA and others** \u2014 affected telecoms reported across the US, Italy, a UK-affiliated US telecom, South Africa and Thailand, with earlier Earth Estries victims across a dozen-plus countries (Taiwan, Philippines, India, Indonesia, Malaysia, Vietnam, etc.).\n\n**APAC / Australia relevance \u2014 key government guidance.**\n- **3 Dec 2024** \u2014 CISA/NSA/FBI + **ASD's ACSC (Australia)**, Canada's CCCS and NZ's NCSC-NZ released **\"Enhanced Visibility and Hardening Guidance for Communications Infrastructure\"** \u2014 a joint guide (not a numbered AAxx-xxx advisory) with ~three dozen visibility/hardening best practices for telecom defenders. Cisco and Google Cloud Security contributed.\n- **27 Aug 2025** \u2014 Multinational Joint Cybersecurity Advisory **AA25-239A**, \"Countering Chinese State-Sponsored Actors Compromise of Networks Worldwide to Feed Global Espionage System.\" Co-sealed by 13+ partners **including Australia (ASD's ACSC)** \u2014 confirming APAC relevance \u2014 plus Canada (CSE/Cyber Centre), Germany (BfV, BND, BSI), Japan (NCO) and other Five Eyes/EU partners alongside CISA, NSA, FBI. It documents PRC APT targeting of telecom/government/transport/lodging/military and edge routers (backbone, PE and CE routers).\n\n## TTPs \u2014 MITRE ATT&CK\nTechnique IDs verified against the MITRE ATT&CK G1045 page. Techniques marked **(G1045)** are formally attributed on the MITRE page; others are flagged \"consistent with reported TTPs\" to avoid overstating attribution.\n\n**Initial Access**\n- `T1190` Exploit Public-Facing Application *(G1045)* \u2014 exploited CVE-2018-0171 (Cisco Smart Install RCE) for initial access; also Cisco IOS XE Web UI CVEs (CVE-2023-20198 / CVE-2023-20273).\n- `T1078` Valid Accounts \u2014 *consistent with reported TTPs*; used stolen telecom-employee credentials.\n- `T1133` External Remote Services \u2014 *consistent with reported TTPs*; abuse of remote management/SSH on edge devices.\n\n**Credential Access**\n- `T1110.002` Brute Force: Password Cracking *(G1045)* \u2014 cracked weakly-encrypted passwords from device config files.\n\n**Persistence**\n- `T1098.004` Account Manipulation: SSH Authorized Keys *(G1045)* \u2014 added authorized_keys for root/users on Linux-level network devices.\n- `T1136` Create Account *(G1045)* \u2014 created Linux users via /etc/shadow and /etc/passwd on devices.\n\n**Defense Evasion**\n- `T1686` Disable or Modify System Firewall *(G1045)* \u2014 modified ACLs and loopback interface addresses.\n- `T1685.006` Disable or Modify Tools: Clear Linux/Mac System Logs *(G1045)* \u2014 cleared .bash_history, auth.log, lastlog, wtmp, btmp.\n- `T1601` Modify System Image (network devices) \u2014 *consistent with reported TTPs* (edge-device firmware/config tampering is a hallmark).\n\n**Collection / Discovery**\n- `T1040` Network Sniffing *(G1045)* \u2014 packet capture between interfaces (via JumbledPath).\n- `T1602.002` Data from Configuration Repository: Network Device Config Dump *(G1045)* \u2014 dumped device configs to harvest credentials.\n- `T1590.004` Gather Victim Network Information: Network Topology *(G1045)* \u2014 used configs to map upstream/downstream segments.\n\n**Lateral Movement / C2**\n- `T1021.004` Remote Services: SSH *(G1045)* \u2014 used a manipulated loopback as SSH source to pivot and bypass ACLs.\n- `T1572` Protocol Tunneling *(G1045)* \u2014 created GRE tunnels via device config changes.\n- `T1071` Application Layer Protocol \u2014 *consistent with reported TTPs* (HTTP/S for C2 blending).\n\n**Exfiltration**\n- `T1048.003` Exfil Over Unencrypted Non-C2 Protocol *(G1045)* \u2014 exfiltrated configs over FTP/TFTP.\n\n**Resource Development**\n- `T1587.001` Develop Capabilities: Malware *(G1045)* \u2014 built JumbledPath.\n\n## Tooling & Malware\n- **Demodex** \u2014 Windows kernel-mode rootkit (the original GhostEmperor signature tool; Kaspersky).\n- **GhostSpider, Deed RAT / SNAPPYBEE, Crowdoor, SparrowDoor, HemiGate, Zingdoor, TrillClient** \u2014 backdoors/stealers in the Earth Estries arsenal (Trend Micro).\n- **JumbledPath** (MITRE **S1206**) \u2014 custom Go/ELF utility for remote packet capture on Cisco devices via an actor-defined jump-host; also clears logs (Cisco Talos).\n- **Living-off-the-network-device:** GRE tunnels for persistence/exfil, loopback-address manipulation to bypass ACLs, native config/credential dumping.\n- **Network-edge exploitation:** CVE-2018-0171 (Cisco IOS/IOS XE Smart Install RCE \u2014 confirmed by MITRE/Talos), CVE-2023-20198 (IOS XE Web UI auth bypass, CVSS 10.0) and CVE-2023-20273 (priv-esc to root). Much initial access also came from **stolen/valid credentials** rather than only CVEs.\n\n## Notable Campaigns & Timeline\n- **2021** \u2014 Kaspersky documents **GhostEmperor** using the Demodex rootkit against Southeast Asian govt/telecom.\n- **Nov 2024** \u2014 Trend Micro publishes \"Game of Emperor,\" detailing long-term **Earth Estries** intrusions and the GhostSpider/Demodex toolset across 12+ countries.\n- **Oct\u2013Nov 2024** \u2014 WSJ and others disclose Salt Typhoon breaches of US telecoms (AT&T, Verizon, Lumen; later reported at least nine carriers), including access to wiretap/CALEA systems and comms of political figures.\n- **3 Dec 2024** \u2014 CISA/NSA/FBI + ACSC/CCCS/NCSC-NZ publish \"Enhanced Visibility and Hardening Guidance for Communications Infrastructure.\"\n- **17 Jan 2025** \u2014 US Treasury OFAC sanctions **Sichuan Juxinhe Network Technology Co., Ltd.** and an individual, tying the firm to Salt Typhoon.\n- **13 Feb 2025** \u2014 Recorded Future (Insikt/RedMike) reports exploitation of 1,000+ Cisco IOS XE devices (CVE-2023-20198/20273) Dec 2024\u2013Jan 2025.\n- **20 Feb 2025** \u2014 Cisco Talos publishes \"Weathering the Storm,\" confirming CVE-2018-0171 use, stolen credentials, and the JumbledPath utility.\n- **27 Aug 2025** \u2014 13+ nation multinational advisory **AA25-239A** published, naming associated PRC contractor firms and broadening the targeted-sector picture.\n\n## Detection & Hunting\n- **Network-device integrity monitoring:** alert on unauthorised config changes, new local accounts (/etc/passwd, /etc/shadow), added SSH authorized_keys, and loopback-address changes.\n- **Config monitoring & diffing:** continuously baseline and diff router/switch configs; flag new GRE tunnels, ACL modifications and unexpected SNMP/TFTP/FTP activity.\n- **Log integrity:** monitor for cleared logs (.bash_history, auth.log, wtmp/btmp/lastlog) \u2014 gaps are a strong indicator.\n- **NetFlow / traffic analysis:** hunt for GRE/tunnelled traffic, config exfil over FTP/TFTP, anomalous device-to-device SSH (especially sourced from loopback), and unexpected packet-capture activity.\n- Monitor management-plane access and any access to lawful-intercept/CALEA systems.\n\n## Mitigations\n- **Patch and harden Cisco/edge gear:** remediate CVE-2018-0171, CVE-2023-20198, CVE-2023-20273; disable Smart Install and the IOS XE HTTP/HTTPS web UI where not required.\n- **Reduce attack surface:** disable unneeded services/protocols (Telnet, unauthenticated SNMP, TFTP); restrict management interfaces to out-of-band/allow-listed hosts.\n- **Strong credential hygiene/MFA:** eliminate weak/legacy password encryption, rotate device credentials, enforce phishing-resistant MFA.\n- Apply the Dec 2024 Enhanced Visibility & Hardening Guidance and AA25-239A recommendations; centralise/forward logs to tamper-resistant storage.\n\n## Activity Log\n<!-- Append-only -->\n- _(seed)_ 2026-06-17 \u2014 Profile created.\n\n## Trend Tracking\n| Date | Event Type | Description | Source |\n|---|---|---|---|\n| | | | |\n\n## References\n- MITRE ATT&CK Group G1045 (Salt Typhoon): https://attack.mitre.org/groups/G1045/\n- CISA Enhanced Visibility and Hardening Guidance for Communications Infrastructure (Dec 2024): https://www.cisa.gov/resources-tools/resources/enhanced-visibility-and-hardening-guidance-communications-infrastructure\n- CISA news release on the Dec 2024 guide: https://www.cisa.gov/news-events/news/cisa-nsa-fbi-and-international-partners-publish-guide-protecting-communications-infrastructure\n- CISA Advisory AA25-239A (Aug 2025 multinational advisory): https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-239a\n- ASD's ACSC (Australia) listing of the same advisory: https://www.cyber.gov.au/about-us/view-all-content/alerts-and-advisories/countering-chinese-state-sponsored-actors-compromise-of-networks-worldwide-to-feed-global-espionage-system\n- US Treasury sanctions press release (Jan 2025): https://home.treasury.gov/news/press-releases/jy2792\n- Cisco Talos \"Weathering the storm\" (Feb 2025): https://blog.talosintelligence.com/salt-typhoon-analysis/\n- Trend Micro \"Game of Emperor: Unveiling Long Term Earth Estries Cyber Intrusions\" (Nov 2024): https://www.trendmicro.com/en_us/research/24/k/earth-estries.html\n- Kaspersky/Malpedia GhostEmperor (Demodex): https://malpedia.caad.fkie.fraunhofer.de/actor/ghostemperor\n- MITRE ATT&CK Software S1206 (JumbledPath): https://attack.mitre.org/software/S1206\n\n---\n*Profile generated for CyberSec Vault \u2014 2026-06-17*\n\n## Tags\n #verified\n\n---\n\n## Activity Log \u2014 2026-08-06\n**Chinese telcos retain deep US presence despite Salt Typhoon links (House committee).** A U.S. House committee report concluded that **three Chinese telecommunications giants** continue to hold footholds in the U.S. internet ecosystem despite their alleged role in prior Chinese hacking campaigns (incl. Salt Typhoon telecom intrusions). Policy/exposure signal \u2014 ongoing supply-chain and interconnection risk from PRC-linked carriers.\n\n### Trend Tracking\n- Reinforces persistence of PRC telecom access vectors underpinning Salt Typhoon-style operations; watch for regulatory action (FCC/House) and continued targeting of US carrier infrastructure.\n\n> Source: [The Record](https://therecord.media/chinese-hackers-telecoms-house) \u2014 2026-08-05",
+   "body": "# Salt Typhoon \u2014 APT Profile\n\n\u2705 **Verification:** Verified \u2014 8 independent sources\n\n## Snapshot\n| Field | Value |\n|---|---|\n| Attribution | PRC state-sponsored; contractors (incl. sanctioned Sichuan Juxinhe Network Technology) supporting Chinese intelligence services |\n| Aliases | GhostEmperor, FamousSparrow, Earth Estries, UNC2286, UNC5807, RedMike, OPERATOR PANDA |\n| MITRE ATT&CK ID | G1045 |\n| First seen | 2019 |\n| Status | Active |\n| Motivation | Espionage (telecom intercept / metadata collection) |\n\n## Overview\nSalt Typhoon is a China-nexus cyber-espionage actor active since at least 2019, responsible for numerous compromises of network infrastructure at major US telecom and ISP providers. It is distinguished by **deep exploitation of network-edge devices** (especially Cisco routers), **living-off-the-network-device** persistence (GRE tunnels, loopback manipulation, config/credential dumping), and targeting of **lawful-intercept (CALEA/wiretap) systems** and high-value individuals' communications. MITRE assigned it **G1045** in Feb 2025.\n\n## Attribution & Origin\nPRC state-sponsored. The Aug 2025 joint advisory and US Treasury link the activity to **contractors supporting Chinese intelligence services** (MSS, with PLA references).\n- **17 Jan 2025** \u2014 US Treasury OFAC **sanctioned Sichuan Juxinhe Network Technology Co., Ltd.** for direct involvement with Salt Typhoon.\n- The Aug 2025 advisory also names **Beijing Huanyu Tianqiong Information Technology Co., Ltd.** and **Sichuan Zhixin Ruijie Network Technology Co., Ltd.** as providing cyber products/services to China's intelligence services.\n\n## Motivation & Objectives\nCyber-espionage / long-term intelligence collection. Specifically targets **telecom intercept capability**: call detail records and metadata, geolocation, SMS, and in some cases call audio of high-value targets \u2014 plus access to **lawful-intercept (CALEA / court-ordered wiretap) systems**.\n\n## Target Profile\nPrimary sector: **telecommunications providers and ISPs**. US carriers reported breached include **AT&T, Verizon, Lumen, T-Mobile** (reporting cites at least nine US telecoms). Also government, transportation, lodging/hospitality and military networks (per the Aug 2025 advisory). Targets of intelligence value include **lawful-intercept / CALEA wiretap systems** and the communications of high-profile individuals (reporting cites people associated with 2024 US presidential campaigns and government officials).\n\nRegions: United States (epicentre) plus **APAC, EMEA and others** \u2014 affected telecoms reported across the US, Italy, a UK-affiliated US telecom, South Africa and Thailand, with earlier Earth Estries victims across a dozen-plus countries (Taiwan, Philippines, India, Indonesia, Malaysia, Vietnam, etc.).\n\n**APAC / Australia relevance \u2014 key government guidance.**\n- **3 Dec 2024** \u2014 CISA/NSA/FBI + **ASD's ACSC (Australia)**, Canada's CCCS and NZ's NCSC-NZ released **\"Enhanced Visibility and Hardening Guidance for Communications Infrastructure\"** \u2014 a joint guide (not a numbered AAxx-xxx advisory) with ~three dozen visibility/hardening best practices for telecom defenders. Cisco and Google Cloud Security contributed.\n- **27 Aug 2025** \u2014 Multinational Joint Cybersecurity Advisory **AA25-239A**, \"Countering Chinese State-Sponsored Actors Compromise of Networks Worldwide to Feed Global Espionage System.\" Co-sealed by 13+ partners **including Australia (ASD's ACSC)** \u2014 confirming APAC relevance \u2014 plus Canada (CSE/Cyber Centre), Germany (BfV, BND, BSI), Japan (NCO) and other Five Eyes/EU partners alongside CISA, NSA, FBI. It documents PRC APT targeting of telecom/government/transport/lodging/military and edge routers (backbone, PE and CE routers).\n\n## TTPs \u2014 MITRE ATT&CK\nTechnique IDs verified against the MITRE ATT&CK G1045 page. Techniques marked **(G1045)** are formally attributed on the MITRE page; others are flagged \"consistent with reported TTPs\" to avoid overstating attribution.\n\n**Initial Access**\n- `T1190` Exploit Public-Facing Application *(G1045)* \u2014 exploited CVE-2018-0171 (Cisco Smart Install RCE) for initial access; also Cisco IOS XE Web UI CVEs (CVE-2023-20198 / CVE-2023-20273).\n- `T1078` Valid Accounts \u2014 *consistent with reported TTPs*; used stolen telecom-employee credentials.\n- `T1133` External Remote Services \u2014 *consistent with reported TTPs*; abuse of remote management/SSH on edge devices.\n\n**Credential Access**\n- `T1110.002` Brute Force: Password Cracking *(G1045)* \u2014 cracked weakly-encrypted passwords from device config files.\n\n**Persistence**\n- `T1098.004` Account Manipulation: SSH Authorized Keys *(G1045)* \u2014 added authorized_keys for root/users on Linux-level network devices.\n- `T1136` Create Account *(G1045)* \u2014 created Linux users via /etc/shadow and /etc/passwd on devices.\n\n**Defense Evasion**\n- `T1686` Disable or Modify System Firewall *(G1045)* \u2014 modified ACLs and loopback interface addresses.\n- `T1685.006` Disable or Modify Tools: Clear Linux/Mac System Logs *(G1045)* \u2014 cleared .bash_history, auth.log, lastlog, wtmp, btmp.\n- `T1601` Modify System Image (network devices) \u2014 *consistent with reported TTPs* (edge-device firmware/config tampering is a hallmark).\n\n**Collection / Discovery**\n- `T1040` Network Sniffing *(G1045)* \u2014 packet capture between interfaces (via JumbledPath).\n- `T1602.002` Data from Configuration Repository: Network Device Config Dump *(G1045)* \u2014 dumped device configs to harvest credentials.\n- `T1590.004` Gather Victim Network Information: Network Topology *(G1045)* \u2014 used configs to map upstream/downstream segments.\n\n**Lateral Movement / C2**\n- `T1021.004` Remote Services: SSH *(G1045)* \u2014 used a manipulated loopback as SSH source to pivot and bypass ACLs.\n- `T1572` Protocol Tunneling *(G1045)* \u2014 created GRE tunnels via device config changes.\n- `T1071` Application Layer Protocol \u2014 *consistent with reported TTPs* (HTTP/S for C2 blending).\n\n**Exfiltration**\n- `T1048.003` Exfil Over Unencrypted Non-C2 Protocol *(G1045)* \u2014 exfiltrated configs over FTP/TFTP.\n\n**Resource Development**\n- `T1587.001` Develop Capabilities: Malware *(G1045)* \u2014 built JumbledPath.\n\n## Tooling & Malware\n- **Demodex** \u2014 Windows kernel-mode rootkit (the original GhostEmperor signature tool; Kaspersky).\n- **GhostSpider, Deed RAT / SNAPPYBEE, Crowdoor, SparrowDoor, HemiGate, Zingdoor, TrillClient** \u2014 backdoors/stealers in the Earth Estries arsenal (Trend Micro).\n- **JumbledPath** (MITRE **S1206**) \u2014 custom Go/ELF utility for remote packet capture on Cisco devices via an actor-defined jump-host; also clears logs (Cisco Talos).\n- **Living-off-the-network-device:** GRE tunnels for persistence/exfil, loopback-address manipulation to bypass ACLs, native config/credential dumping.\n- **Network-edge exploitation:** CVE-2018-0171 (Cisco IOS/IOS XE Smart Install RCE \u2014 confirmed by MITRE/Talos), CVE-2023-20198 (IOS XE Web UI auth bypass, CVSS 10.0) and CVE-2023-20273 (priv-esc to root). Much initial access also came from **stolen/valid credentials** rather than only CVEs.\n\n## Notable Campaigns & Timeline\n- **2021** \u2014 Kaspersky documents **GhostEmperor** using the Demodex rootkit against Southeast Asian govt/telecom.\n- **Nov 2024** \u2014 Trend Micro publishes \"Game of Emperor,\" detailing long-term **Earth Estries** intrusions and the GhostSpider/Demodex toolset across 12+ countries.\n- **Oct\u2013Nov 2024** \u2014 WSJ and others disclose Salt Typhoon breaches of US telecoms (AT&T, Verizon, Lumen; later reported at least nine carriers), including access to wiretap/CALEA systems and comms of political figures.\n- **3 Dec 2024** \u2014 CISA/NSA/FBI + ACSC/CCCS/NCSC-NZ publish \"Enhanced Visibility and Hardening Guidance for Communications Infrastructure.\"\n- **17 Jan 2025** \u2014 US Treasury OFAC sanctions **Sichuan Juxinhe Network Technology Co., Ltd.** and an individual, tying the firm to Salt Typhoon.\n- **13 Feb 2025** \u2014 Recorded Future (Insikt/RedMike) reports exploitation of 1,000+ Cisco IOS XE devices (CVE-2023-20198/20273) Dec 2024\u2013Jan 2025.\n- **20 Feb 2025** \u2014 Cisco Talos publishes \"Weathering the Storm,\" confirming CVE-2018-0171 use, stolen credentials, and the JumbledPath utility.\n- **27 Aug 2025** \u2014 13+ nation multinational advisory **AA25-239A** published, naming associated PRC contractor firms and broadening the targeted-sector picture.\n\n## Detection & Hunting\n- **Network-device integrity monitoring:** alert on unauthorised config changes, new local accounts (/etc/passwd, /etc/shadow), added SSH authorized_keys, and loopback-address changes.\n- **Config monitoring & diffing:** continuously baseline and diff router/switch configs; flag new GRE tunnels, ACL modifications and unexpected SNMP/TFTP/FTP activity.\n- **Log integrity:** monitor for cleared logs (.bash_history, auth.log, wtmp/btmp/lastlog) \u2014 gaps are a strong indicator.\n- **NetFlow / traffic analysis:** hunt for GRE/tunnelled traffic, config exfil over FTP/TFTP, anomalous device-to-device SSH (especially sourced from loopback), and unexpected packet-capture activity.\n- Monitor management-plane access and any access to lawful-intercept/CALEA systems.\n\n## Mitigations\n- **Patch and harden Cisco/edge gear:** remediate CVE-2018-0171, CVE-2023-20198, CVE-2023-20273; disable Smart Install and the IOS XE HTTP/HTTPS web UI where not required.\n- **Reduce attack surface:** disable unneeded services/protocols (Telnet, unauthenticated SNMP, TFTP); restrict management interfaces to out-of-band/allow-listed hosts.\n- **Strong credential hygiene/MFA:** eliminate weak/legacy password encryption, rotate device credentials, enforce phishing-resistant MFA.\n- Apply the Dec 2024 Enhanced Visibility & Hardening Guidance and AA25-239A recommendations; centralise/forward logs to tamper-resistant storage.\n\n## Activity Log\n<!-- Append-only -->\n- _(seed)_ 2026-06-17 \u2014 Profile created.\n\n## Trend Tracking\n| Date | Event Type | Description | Source |\n|---|---|---|---|\n| | | | |\n\n## References\n- MITRE ATT&CK Group G1045 (Salt Typhoon): https://attack.mitre.org/groups/G1045/\n- CISA Enhanced Visibility and Hardening Guidance for Communications Infrastructure (Dec 2024): https://www.cisa.gov/resources-tools/resources/enhanced-visibility-and-hardening-guidance-communications-infrastructure\n- CISA news release on the Dec 2024 guide: https://www.cisa.gov/news-events/news/cisa-nsa-fbi-and-international-partners-publish-guide-protecting-communications-infrastructure\n- CISA Advisory AA25-239A (Aug 2025 multinational advisory): https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-239a\n- ASD's ACSC (Australia) listing of the same advisory: https://www.cyber.gov.au/about-us/view-all-content/alerts-and-advisories/countering-chinese-state-sponsored-actors-compromise-of-networks-worldwide-to-feed-global-espionage-system\n- US Treasury sanctions press release (Jan 2025): https://home.treasury.gov/news/press-releases/jy2792\n- Cisco Talos \"Weathering the storm\" (Feb 2025): https://blog.talosintelligence.com/salt-typhoon-analysis/\n- Trend Micro \"Game of Emperor: Unveiling Long Term Earth Estries Cyber Intrusions\" (Nov 2024): https://www.trendmicro.com/en_us/research/24/k/earth-estries.html\n- Kaspersky/Malpedia GhostEmperor (Demodex): https://malpedia.caad.fkie.fraunhofer.de/actor/ghostemperor\n- MITRE ATT&CK Software S1206 (JumbledPath): https://attack.mitre.org/software/S1206\n\n---\n*Profile generated for CyberSec Vault \u2014 2026-06-17*\n\n## Tags\n #verified\n\n---\n\n## Activity Log \u2014 2026-08-06\n**Chinese telcos retain deep US presence despite Salt Typhoon links (House committee).** A U.S. House committee report concluded that **three Chinese telecommunications giants** continue to hold footholds in the U.S. internet ecosystem despite their alleged role in prior Chinese hacking campaigns (incl. Salt Typhoon telecom intrusions). Policy/exposure signal \u2014 ongoing supply-chain and interconnection risk from PRC-linked carriers.\n\n### Trend Tracking\n- Reinforces persistence of PRC telecom access vectors underpinning Salt Typhoon-style operations; watch for regulatory action (FCC/House) and continued targeting of US carrier infrastructure.\n\n> Source: [The Record](https://therecord.media/chinese-hackers-telecoms-house) \u2014 2026-08-05\n\n\n## Activity Log \u2014 2026-10-17\n> Source: [Industrial Cyber](https://industrialcyber.co/industrial-cyber-attacks/mitre-attck-v20-expands-critical-infrastructure-threat-coverage-with-new-it-and-ot-attack-techniques/) \u2014 2026-10-16\n- 2026-10-16: ATT&CK v20 updates the Salt Typhoon group entry as part of its critical-infrastructure expansion. See [[MITRE-ATTACK-v20-New-ICS-Techniques-C0064-C0066-IOControl-NIMBUS-MANTICORE-2026-10]].\n\n## Trend Tracking \u2014 2026-10-17\n- Continued telecom and critical-infrastructure focus is reflected in MITRE's refreshed technique mappings.",
    "aliases": [
     "GhostEmperor",
     "FamousSparrow",
@@ -1857,10 +1858,10 @@
   ]
  },
  "cve_sev": {
-  "Critical": 285,
-  "High": 193,
+  "Critical": 296,
+  "High": 198,
   "Low": 36,
-  "Medium": 24
+  "Medium": 25
  },
  "cve_year": {
   "2015": 6,
@@ -1872,9 +1873,9 @@
   "2021": 17,
   "2022": 14,
   "2023": 20,
-  "2024": 15,
-  "2025": 37,
-  "2026": 632
+  "2024": 16,
+  "2025": 38,
+  "2026": 654
  },
  "cve_month": {
   "2025-10": 1,
@@ -1884,7 +1885,7 @@
   "2026-07": 16,
   "2026-08": 84,
   "2026-09": 160,
-  "2026-10": 74
+  "2026-10": 123
  },
  "top_cve": [
   {
@@ -2751,6 +2752,14 @@
    "kev": true,
    "apts": []
   },
+  "CVE-2024-47575": {
+   "file": "Threat_Intel/CVEs/2024/Unrated/CVE-2024-47575.md",
+   "body": "# CVE-2024-47575\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2024\n\n## Summary\nPEERSTITCH: Memory-Resident ARM64 FortiGate Implant (CL-STA-0954), via FortiManager CVE-2024-47575 and FortiOS CVE-2025-61624\n\n## Where it appears in this vault\n- `Threat_Intel/Malware/PEERSTITCH-FortiGate-ARM64-Memory-Resident-Implant-CL-STA-0954-2026-10.md` \u2014 PEERSTITCH: Memory-Resident ARM64 FortiGate Implant (CL-STA-0954), via FortiManager CVE-2024-47575 and FortiOS CVE-2025-61624\n- `Threat_Intel/Malware/PEERSTITCH-FortiGate-ARM64-Memory-Resident-Implant-CL-STA-0954-2026-10.md` \u2014 Source: [Unit 42](https://unit42.paloaltonetworks.com/fortimanager-cve-2024-47575-peerstitch-malware/) \u2014 2026-10-14\n- `Threat_Intel/Malware/PEERSTITCH-FortiGate-ARM64-Memory-Resident-Implant-CL-STA-0954-2026-10.md` \u2014 Actor **CL-STA-0954** (a state-nexus cluster) abused **FortiManager CVE-2024-47575** (\"FortiJump\") to reach **500+ managed FortiGate firewalls**. The investigated victim was a telecom MSP.\n- `Threat_Intel/Malware/PEERSTITCH-FortiGate-ARM64-Memory-Resident-Implant-CL-STA-0954-2026-10.md` \u2014 Patch FortiManager (CVE-2024-47575) and FortiOS (CVE-2025-61624). Audit FortiManager for rogue registered devices.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2024-47575\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2024-47575\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2024-47575\n\n## Tags\n#cve #2024 #unrated #auto-stub",
+   "sev": "",
+   "year": "2024",
+   "kev": true,
+   "apts": []
+  },
   "CVE-2025-49113": {
    "file": "Threat_Intel/CVEs/2025/Critical/CVE-2025-49113.md",
    "body": "# CVE-2025-49113\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2025\n\n## Summary\nC2 architecture:** built almost entirely on infrastructure Lazarus **does not own** \u2014 compromised **Roundcube webmail** installations and CMS platforms (many vulnerable to **CVE-2025-49113**), infected with **RelayShell**, a previously undocumented **PHP webshell** acting as a communication relay between implants and operators via **simple text files**.\n\n## Where it appears in this vault\n- `Threat_Intel/APT_Groups/Lazarus/Lazarus-Profile.md` \u2014 C2 architecture:** built almost entirely on infrastructure Lazarus **does not own** \u2014 compromised **Roundcube webmail** installations and CMS platforms (many vulnerable to **CVE-2025-49113**), infected with **RelayShell**, a previously undocumented **PHP webshell** acting as a communication relay between implants and operators via **simple text files**.\n- `X_Intel/x-intel-tracker.md` \u2014 rss:thn-2026-08-12-lazarus-zeroday | 2026-08-12 | The Hacker News / Check Point | CVE-2026-68820 Windows AFD.sys WinSock LPE\u2192SYSTEM, sole in-the-wild flaw in Aug PT, exploited by Lazarus since early July; Operation Dream Job, \"Troy\" backdoor, RelayShell PHP webshell on compromised Roundcube (CVE-2025-49113); FR/DE/BR/IN defense+aerospace; web-verified | -> Threat_Intel/CVEs/2026/High/CVE-2026-68820-Windows-AFD-WinSock-LPE-Lazarus-ZeroDay.md (new) + APPENDED Threat_Intel/APT_Groups/Lazarus/Lazarus-Profile.md\n- `X_Intel/x-intel-tracker.md` \u2014 Verification: web-verified via WebSearch \u2014 CVE-2026-58231 SAP (eSecurityPlanet/BC/THN/cvemon: CVSS 10.0, Data Hub Adapter, Defused exploitation +3d); CVE-2026-65400 macOS Screen Sharing (BC/NCSC-NL/SC Media/TechRepublic: CVSS 7.1, port 5900, root+Monero, fixed Aug-6 Tahoe 26.6.1); Taiwan autonomous AI attack (CNN/Tom's Hardware/Security Affairs/GBHackers/TechTimes: Hermes+OpenClaw, Jul 1\u20134, 1,395 files, 21 systems, 85 accounts, 2,500+ records, nuclear agency + 7 energy firms, \"authorized pentest\" jailbreak); CVE-2026-68820 Lazarus (Check Point Research/THN/BC/SecurityWeek/Help Net/Security Affairs: AFD.sys WinSock, exploited since early July, Troy backdoor, RelayShell on Roundcube CVE-2025-49113, FR/DE/BR/IN).\n- `X_Intel/x-intel-tracker.md` \u2014 Notes: 24 created / 4 appended. New CVEs referenced: CVE-2026-58231, CVE-2026-55040, CVE-2026-48362, CVE-2026-68820, CVE-2026-65400, CVE-2026-20349, CVE-2026-50656, CVE-2026-59310 (append), CVE-2025-49113 (referenced).\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-49113\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-49113\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-49113\n\n## Tags\n#cve #2025 #critical #auto-stub #verified",
@@ -2823,6 +2832,14 @@
    "sev": "Low",
    "year": "2025",
    "kev": false,
+   "apts": []
+  },
+  "CVE-2025-61624": {
+   "file": "Threat_Intel/CVEs/2025/Medium/CVE-2025-61624.md",
+   "body": "# CVE-2025-61624\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Medium  \n**Year:** 2025\n\n## Summary\nPEERSTITCH: Memory-Resident ARM64 FortiGate Implant (CL-STA-0954), via FortiManager CVE-2024-47575 and FortiOS CVE-2025-61624\n\n## Where it appears in this vault\n- `Threat_Intel/Malware/PEERSTITCH-FortiGate-ARM64-Memory-Resident-Implant-CL-STA-0954-2026-10.md` \u2014 PEERSTITCH: Memory-Resident ARM64 FortiGate Implant (CL-STA-0954), via FortiManager CVE-2024-47575 and FortiOS CVE-2025-61624\n- `Threat_Intel/Malware/PEERSTITCH-FortiGate-ARM64-Memory-Resident-Implant-CL-STA-0954-2026-10.md` \u2014 It also exploited **CVE-2025-61624** (CVSS 5.4), a CLI path traversal in FortiOS, FortiPAM, FortiProxy and FortiSwitchManager, to deliver the implant.\n- `Threat_Intel/Malware/PEERSTITCH-FortiGate-ARM64-Memory-Resident-Implant-CL-STA-0954-2026-10.md` \u2014 Patch FortiManager (CVE-2024-47575) and FortiOS (CVE-2025-61624). Audit FortiManager for rogue registered devices.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-61624\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-61624\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-61624\n\n## Tags\n#cve #2025 #medium #auto-stub",
+   "sev": "Medium",
+   "year": "2025",
+   "kev": true,
    "apts": []
   },
   "CVE-2025-11379": {
@@ -3045,7 +3062,7 @@
   },
   "CVE-2026-106382": {
    "file": "Threat_Intel/CVEs/2026/Critical/Chrome-155-247-Vulns-4-Critical-UAF-2026-10.md",
-   "body": "# Chrome 155 \u2014 247 Vulnerabilities Patched, 4 Critical Use-After-Free\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n> Source: [SecurityWeek](https://www.securityweek.com/chrome-155-update-patches-247-vulnerabilities/) \u2014 Wed, 07 Oct 2026\n\n**Type:** CVE / browser patch | **Severity:** Critical | **Date:** 2026-10-07 | **Tags:** #cve #chrome #uaf\n\n## Summary\n- Chrome 155 fixes **247** flaws.\n- Critical UAFs: **CVE-2026-106382, CVE-2026-106197, CVE-2026-106358, CVE-2026-106347** (components: Chromecast, Browser, Navigation, Track).\n- **No in-the-wild exploitation** reported.\n- Fixed: **155.0.8059.39/.40** (Win/macOS), **155.0.8059.39** (Linux).\n\n## Actions\nPush Chrome/Chromium-based browser updates. Track Edge/Brave/Opera downstream releases. See [[Browser-Patch-Cycle-Chrome-Firefox-2026-09-02]].\n\n## Tags\n#unverified\n\n\n## Update 2026-10-14 \u2014 Chrome 155.0.8059.79/.80 (37 fixes) + Firefox 158 (77 fixes) + Chrome VRP changes\n> Source: [SecurityWeek](https://www.securityweek.com/chrome-firefox-updates-patch-114-flaws-as-mozilla-unveils-firefox-enterprise/) \u2014 Wed, 14 Oct 2026\n> Source: [SecurityWeek](https://www.securityweek.com/google-partially-reverses-chrome-bug-bounty-cuts/) \u2014 Tue, 13 Oct 2026\n\n- **Chrome 155.0.8059.79/.80** fixes **37 bugs**: **7 critical** (an ANGLE buffer overflow; use-after-frees in Browser, PDF, Network, Core, SVG, and Media) and 29 high. **At least 15 were reported by Xinyang Ge (Anthropic) using Claude**, the latest data point for AI-assisted browser bug discovery.\n- **Firefox 158** fixes **77 bugs**, 30 high: UAF, **sandbox escape**, JIT miscompilation. 9 were found by Amy Burnett (OpenAI). ESR 153.5 / 115.43 and Thunderbird were also patched. Mozilla also announced **Firefox Enterprise**.\n- No in-the-wild exploitation mentioned.\n- **Chrome VRP:** Google is restructuring rewards to **favour complex memory-safety bugs**, partly reversing earlier payout cuts. Bug-bounty takeaway: shallow or AI-found duplicates pay less, and full exploit chains and memory-corruption bugs with demonstrated impact pay more.",
+   "body": "# Chrome 155 \u2014 247 Vulnerabilities Patched, 4 Critical Use-After-Free\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n> Source: [SecurityWeek](https://www.securityweek.com/chrome-155-update-patches-247-vulnerabilities/) \u2014 Wed, 07 Oct 2026\n\n**Type:** CVE / browser patch | **Severity:** Critical | **Date:** 2026-10-07 | **Tags:** #cve #chrome #uaf\n\n## Summary\n- Chrome 155 fixes **247** flaws.\n- Critical UAFs: **CVE-2026-106382, CVE-2026-106197, CVE-2026-106358, CVE-2026-106347** (components: Chromecast, Browser, Navigation, Track).\n- **No in-the-wild exploitation** reported.\n- Fixed: **155.0.8059.39/.40** (Win/macOS), **155.0.8059.39** (Linux).\n\n## Actions\nPush Chrome/Chromium-based browser updates. Track Edge/Brave/Opera downstream releases. See [[Browser-Patch-Cycle-Chrome-Firefox-2026-09-02]].\n\n## Tags\n#unverified\n\n\n## Update 2026-10-14 \u2014 Chrome 155.0.8059.79/.80 (37 fixes) + Firefox 158 (77 fixes) + Chrome VRP changes\n> Source: [SecurityWeek](https://www.securityweek.com/chrome-firefox-updates-patch-114-flaws-as-mozilla-unveils-firefox-enterprise/) \u2014 Wed, 14 Oct 2026\n> Source: [SecurityWeek](https://www.securityweek.com/google-partially-reverses-chrome-bug-bounty-cuts/) \u2014 Tue, 13 Oct 2026\n\n- **Chrome 155.0.8059.79/.80** fixes **37 bugs**: **7 critical** (an ANGLE buffer overflow; use-after-frees in Browser, PDF, Network, Core, SVG, and Media) and 29 high. **At least 15 were reported by Xinyang Ge (Anthropic) using Claude**, the latest data point for AI-assisted browser bug discovery.\n- **Firefox 158** fixes **77 bugs**, 30 high: UAF, **sandbox escape**, JIT miscompilation. 9 were found by Amy Burnett (OpenAI). ESR 153.5 / 115.43 and Thunderbird were also patched. Mozilla also announced **Firefox Enterprise**.\n- No in-the-wild exploitation mentioned.\n- **Chrome VRP:** Google is restructuring rewards to **favour complex memory-safety bugs**, partly reversing earlier payout cuts. Bug-bounty takeaway: shallow or AI-found duplicates pay less, and full exploit chains and memory-corruption bugs with demonstrated impact pay more.\n\n\n## Update 2026-10-17\n> Source: [Malwarebytes](https://www.malwarebytes.com/blog/bugs/2026/10/update-chrome-google-fixes-37-security-flaws-including-seven-critical-bugs) \u2014 2026-10-15\n> Source: [Clubic](https://www.clubic.com/actualite-634240-chrome-patch-plus-d-une-trentaine-de-vulnerabilites.html) \u2014 2026-10-15\n> Source: [CCCS AV26-1045](https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1045) / [AV26-1060](https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1060) \u2014 2026-10-15/16\n- A follow-up update fixes **37 flaws (7 critical)** in 155.0.8059.79/.80. A further build, **155.0.8059.84/.85** (Win/Mac) and .84 (Linux), followed on Oct 16 (AV26-1060). Edge lagged at the time.\n- Mozilla's matching advisory AV26-1057 covers Firefox 158, ESR 153.5/115.43 and Thunderbird.",
    "sev": "Critical",
    "year": "2026",
    "kev": false,
@@ -3053,7 +3070,7 @@
   },
   "CVE-2026-106197": {
    "file": "Threat_Intel/CVEs/2026/Critical/Chrome-155-247-Vulns-4-Critical-UAF-2026-10.md",
-   "body": "# Chrome 155 \u2014 247 Vulnerabilities Patched, 4 Critical Use-After-Free\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n> Source: [SecurityWeek](https://www.securityweek.com/chrome-155-update-patches-247-vulnerabilities/) \u2014 Wed, 07 Oct 2026\n\n**Type:** CVE / browser patch | **Severity:** Critical | **Date:** 2026-10-07 | **Tags:** #cve #chrome #uaf\n\n## Summary\n- Chrome 155 fixes **247** flaws.\n- Critical UAFs: **CVE-2026-106382, CVE-2026-106197, CVE-2026-106358, CVE-2026-106347** (components: Chromecast, Browser, Navigation, Track).\n- **No in-the-wild exploitation** reported.\n- Fixed: **155.0.8059.39/.40** (Win/macOS), **155.0.8059.39** (Linux).\n\n## Actions\nPush Chrome/Chromium-based browser updates. Track Edge/Brave/Opera downstream releases. See [[Browser-Patch-Cycle-Chrome-Firefox-2026-09-02]].\n\n## Tags\n#unverified\n\n\n## Update 2026-10-14 \u2014 Chrome 155.0.8059.79/.80 (37 fixes) + Firefox 158 (77 fixes) + Chrome VRP changes\n> Source: [SecurityWeek](https://www.securityweek.com/chrome-firefox-updates-patch-114-flaws-as-mozilla-unveils-firefox-enterprise/) \u2014 Wed, 14 Oct 2026\n> Source: [SecurityWeek](https://www.securityweek.com/google-partially-reverses-chrome-bug-bounty-cuts/) \u2014 Tue, 13 Oct 2026\n\n- **Chrome 155.0.8059.79/.80** fixes **37 bugs**: **7 critical** (an ANGLE buffer overflow; use-after-frees in Browser, PDF, Network, Core, SVG, and Media) and 29 high. **At least 15 were reported by Xinyang Ge (Anthropic) using Claude**, the latest data point for AI-assisted browser bug discovery.\n- **Firefox 158** fixes **77 bugs**, 30 high: UAF, **sandbox escape**, JIT miscompilation. 9 were found by Amy Burnett (OpenAI). ESR 153.5 / 115.43 and Thunderbird were also patched. Mozilla also announced **Firefox Enterprise**.\n- No in-the-wild exploitation mentioned.\n- **Chrome VRP:** Google is restructuring rewards to **favour complex memory-safety bugs**, partly reversing earlier payout cuts. Bug-bounty takeaway: shallow or AI-found duplicates pay less, and full exploit chains and memory-corruption bugs with demonstrated impact pay more.",
+   "body": "# Chrome 155 \u2014 247 Vulnerabilities Patched, 4 Critical Use-After-Free\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n> Source: [SecurityWeek](https://www.securityweek.com/chrome-155-update-patches-247-vulnerabilities/) \u2014 Wed, 07 Oct 2026\n\n**Type:** CVE / browser patch | **Severity:** Critical | **Date:** 2026-10-07 | **Tags:** #cve #chrome #uaf\n\n## Summary\n- Chrome 155 fixes **247** flaws.\n- Critical UAFs: **CVE-2026-106382, CVE-2026-106197, CVE-2026-106358, CVE-2026-106347** (components: Chromecast, Browser, Navigation, Track).\n- **No in-the-wild exploitation** reported.\n- Fixed: **155.0.8059.39/.40** (Win/macOS), **155.0.8059.39** (Linux).\n\n## Actions\nPush Chrome/Chromium-based browser updates. Track Edge/Brave/Opera downstream releases. See [[Browser-Patch-Cycle-Chrome-Firefox-2026-09-02]].\n\n## Tags\n#unverified\n\n\n## Update 2026-10-14 \u2014 Chrome 155.0.8059.79/.80 (37 fixes) + Firefox 158 (77 fixes) + Chrome VRP changes\n> Source: [SecurityWeek](https://www.securityweek.com/chrome-firefox-updates-patch-114-flaws-as-mozilla-unveils-firefox-enterprise/) \u2014 Wed, 14 Oct 2026\n> Source: [SecurityWeek](https://www.securityweek.com/google-partially-reverses-chrome-bug-bounty-cuts/) \u2014 Tue, 13 Oct 2026\n\n- **Chrome 155.0.8059.79/.80** fixes **37 bugs**: **7 critical** (an ANGLE buffer overflow; use-after-frees in Browser, PDF, Network, Core, SVG, and Media) and 29 high. **At least 15 were reported by Xinyang Ge (Anthropic) using Claude**, the latest data point for AI-assisted browser bug discovery.\n- **Firefox 158** fixes **77 bugs**, 30 high: UAF, **sandbox escape**, JIT miscompilation. 9 were found by Amy Burnett (OpenAI). ESR 153.5 / 115.43 and Thunderbird were also patched. Mozilla also announced **Firefox Enterprise**.\n- No in-the-wild exploitation mentioned.\n- **Chrome VRP:** Google is restructuring rewards to **favour complex memory-safety bugs**, partly reversing earlier payout cuts. Bug-bounty takeaway: shallow or AI-found duplicates pay less, and full exploit chains and memory-corruption bugs with demonstrated impact pay more.\n\n\n## Update 2026-10-17\n> Source: [Malwarebytes](https://www.malwarebytes.com/blog/bugs/2026/10/update-chrome-google-fixes-37-security-flaws-including-seven-critical-bugs) \u2014 2026-10-15\n> Source: [Clubic](https://www.clubic.com/actualite-634240-chrome-patch-plus-d-une-trentaine-de-vulnerabilites.html) \u2014 2026-10-15\n> Source: [CCCS AV26-1045](https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1045) / [AV26-1060](https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1060) \u2014 2026-10-15/16\n- A follow-up update fixes **37 flaws (7 critical)** in 155.0.8059.79/.80. A further build, **155.0.8059.84/.85** (Win/Mac) and .84 (Linux), followed on Oct 16 (AV26-1060). Edge lagged at the time.\n- Mozilla's matching advisory AV26-1057 covers Firefox 158, ESR 153.5/115.43 and Thunderbird.",
    "sev": "Critical",
    "year": "2026",
    "kev": false,
@@ -3061,7 +3078,7 @@
   },
   "CVE-2026-106358": {
    "file": "Threat_Intel/CVEs/2026/Critical/Chrome-155-247-Vulns-4-Critical-UAF-2026-10.md",
-   "body": "# Chrome 155 \u2014 247 Vulnerabilities Patched, 4 Critical Use-After-Free\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n> Source: [SecurityWeek](https://www.securityweek.com/chrome-155-update-patches-247-vulnerabilities/) \u2014 Wed, 07 Oct 2026\n\n**Type:** CVE / browser patch | **Severity:** Critical | **Date:** 2026-10-07 | **Tags:** #cve #chrome #uaf\n\n## Summary\n- Chrome 155 fixes **247** flaws.\n- Critical UAFs: **CVE-2026-106382, CVE-2026-106197, CVE-2026-106358, CVE-2026-106347** (components: Chromecast, Browser, Navigation, Track).\n- **No in-the-wild exploitation** reported.\n- Fixed: **155.0.8059.39/.40** (Win/macOS), **155.0.8059.39** (Linux).\n\n## Actions\nPush Chrome/Chromium-based browser updates. Track Edge/Brave/Opera downstream releases. See [[Browser-Patch-Cycle-Chrome-Firefox-2026-09-02]].\n\n## Tags\n#unverified\n\n\n## Update 2026-10-14 \u2014 Chrome 155.0.8059.79/.80 (37 fixes) + Firefox 158 (77 fixes) + Chrome VRP changes\n> Source: [SecurityWeek](https://www.securityweek.com/chrome-firefox-updates-patch-114-flaws-as-mozilla-unveils-firefox-enterprise/) \u2014 Wed, 14 Oct 2026\n> Source: [SecurityWeek](https://www.securityweek.com/google-partially-reverses-chrome-bug-bounty-cuts/) \u2014 Tue, 13 Oct 2026\n\n- **Chrome 155.0.8059.79/.80** fixes **37 bugs**: **7 critical** (an ANGLE buffer overflow; use-after-frees in Browser, PDF, Network, Core, SVG, and Media) and 29 high. **At least 15 were reported by Xinyang Ge (Anthropic) using Claude**, the latest data point for AI-assisted browser bug discovery.\n- **Firefox 158** fixes **77 bugs**, 30 high: UAF, **sandbox escape**, JIT miscompilation. 9 were found by Amy Burnett (OpenAI). ESR 153.5 / 115.43 and Thunderbird were also patched. Mozilla also announced **Firefox Enterprise**.\n- No in-the-wild exploitation mentioned.\n- **Chrome VRP:** Google is restructuring rewards to **favour complex memory-safety bugs**, partly reversing earlier payout cuts. Bug-bounty takeaway: shallow or AI-found duplicates pay less, and full exploit chains and memory-corruption bugs with demonstrated impact pay more.",
+   "body": "# Chrome 155 \u2014 247 Vulnerabilities Patched, 4 Critical Use-After-Free\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n> Source: [SecurityWeek](https://www.securityweek.com/chrome-155-update-patches-247-vulnerabilities/) \u2014 Wed, 07 Oct 2026\n\n**Type:** CVE / browser patch | **Severity:** Critical | **Date:** 2026-10-07 | **Tags:** #cve #chrome #uaf\n\n## Summary\n- Chrome 155 fixes **247** flaws.\n- Critical UAFs: **CVE-2026-106382, CVE-2026-106197, CVE-2026-106358, CVE-2026-106347** (components: Chromecast, Browser, Navigation, Track).\n- **No in-the-wild exploitation** reported.\n- Fixed: **155.0.8059.39/.40** (Win/macOS), **155.0.8059.39** (Linux).\n\n## Actions\nPush Chrome/Chromium-based browser updates. Track Edge/Brave/Opera downstream releases. See [[Browser-Patch-Cycle-Chrome-Firefox-2026-09-02]].\n\n## Tags\n#unverified\n\n\n## Update 2026-10-14 \u2014 Chrome 155.0.8059.79/.80 (37 fixes) + Firefox 158 (77 fixes) + Chrome VRP changes\n> Source: [SecurityWeek](https://www.securityweek.com/chrome-firefox-updates-patch-114-flaws-as-mozilla-unveils-firefox-enterprise/) \u2014 Wed, 14 Oct 2026\n> Source: [SecurityWeek](https://www.securityweek.com/google-partially-reverses-chrome-bug-bounty-cuts/) \u2014 Tue, 13 Oct 2026\n\n- **Chrome 155.0.8059.79/.80** fixes **37 bugs**: **7 critical** (an ANGLE buffer overflow; use-after-frees in Browser, PDF, Network, Core, SVG, and Media) and 29 high. **At least 15 were reported by Xinyang Ge (Anthropic) using Claude**, the latest data point for AI-assisted browser bug discovery.\n- **Firefox 158** fixes **77 bugs**, 30 high: UAF, **sandbox escape**, JIT miscompilation. 9 were found by Amy Burnett (OpenAI). ESR 153.5 / 115.43 and Thunderbird were also patched. Mozilla also announced **Firefox Enterprise**.\n- No in-the-wild exploitation mentioned.\n- **Chrome VRP:** Google is restructuring rewards to **favour complex memory-safety bugs**, partly reversing earlier payout cuts. Bug-bounty takeaway: shallow or AI-found duplicates pay less, and full exploit chains and memory-corruption bugs with demonstrated impact pay more.\n\n\n## Update 2026-10-17\n> Source: [Malwarebytes](https://www.malwarebytes.com/blog/bugs/2026/10/update-chrome-google-fixes-37-security-flaws-including-seven-critical-bugs) \u2014 2026-10-15\n> Source: [Clubic](https://www.clubic.com/actualite-634240-chrome-patch-plus-d-une-trentaine-de-vulnerabilites.html) \u2014 2026-10-15\n> Source: [CCCS AV26-1045](https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1045) / [AV26-1060](https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1060) \u2014 2026-10-15/16\n- A follow-up update fixes **37 flaws (7 critical)** in 155.0.8059.79/.80. A further build, **155.0.8059.84/.85** (Win/Mac) and .84 (Linux), followed on Oct 16 (AV26-1060). Edge lagged at the time.\n- Mozilla's matching advisory AV26-1057 covers Firefox 158, ESR 153.5/115.43 and Thunderbird.",
    "sev": "Critical",
    "year": "2026",
    "kev": false,
@@ -3069,7 +3086,7 @@
   },
   "CVE-2026-106347": {
    "file": "Threat_Intel/CVEs/2026/Critical/Chrome-155-247-Vulns-4-Critical-UAF-2026-10.md",
-   "body": "# Chrome 155 \u2014 247 Vulnerabilities Patched, 4 Critical Use-After-Free\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n> Source: [SecurityWeek](https://www.securityweek.com/chrome-155-update-patches-247-vulnerabilities/) \u2014 Wed, 07 Oct 2026\n\n**Type:** CVE / browser patch | **Severity:** Critical | **Date:** 2026-10-07 | **Tags:** #cve #chrome #uaf\n\n## Summary\n- Chrome 155 fixes **247** flaws.\n- Critical UAFs: **CVE-2026-106382, CVE-2026-106197, CVE-2026-106358, CVE-2026-106347** (components: Chromecast, Browser, Navigation, Track).\n- **No in-the-wild exploitation** reported.\n- Fixed: **155.0.8059.39/.40** (Win/macOS), **155.0.8059.39** (Linux).\n\n## Actions\nPush Chrome/Chromium-based browser updates. Track Edge/Brave/Opera downstream releases. See [[Browser-Patch-Cycle-Chrome-Firefox-2026-09-02]].\n\n## Tags\n#unverified\n\n\n## Update 2026-10-14 \u2014 Chrome 155.0.8059.79/.80 (37 fixes) + Firefox 158 (77 fixes) + Chrome VRP changes\n> Source: [SecurityWeek](https://www.securityweek.com/chrome-firefox-updates-patch-114-flaws-as-mozilla-unveils-firefox-enterprise/) \u2014 Wed, 14 Oct 2026\n> Source: [SecurityWeek](https://www.securityweek.com/google-partially-reverses-chrome-bug-bounty-cuts/) \u2014 Tue, 13 Oct 2026\n\n- **Chrome 155.0.8059.79/.80** fixes **37 bugs**: **7 critical** (an ANGLE buffer overflow; use-after-frees in Browser, PDF, Network, Core, SVG, and Media) and 29 high. **At least 15 were reported by Xinyang Ge (Anthropic) using Claude**, the latest data point for AI-assisted browser bug discovery.\n- **Firefox 158** fixes **77 bugs**, 30 high: UAF, **sandbox escape**, JIT miscompilation. 9 were found by Amy Burnett (OpenAI). ESR 153.5 / 115.43 and Thunderbird were also patched. Mozilla also announced **Firefox Enterprise**.\n- No in-the-wild exploitation mentioned.\n- **Chrome VRP:** Google is restructuring rewards to **favour complex memory-safety bugs**, partly reversing earlier payout cuts. Bug-bounty takeaway: shallow or AI-found duplicates pay less, and full exploit chains and memory-corruption bugs with demonstrated impact pay more.",
+   "body": "# Chrome 155 \u2014 247 Vulnerabilities Patched, 4 Critical Use-After-Free\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n> Source: [SecurityWeek](https://www.securityweek.com/chrome-155-update-patches-247-vulnerabilities/) \u2014 Wed, 07 Oct 2026\n\n**Type:** CVE / browser patch | **Severity:** Critical | **Date:** 2026-10-07 | **Tags:** #cve #chrome #uaf\n\n## Summary\n- Chrome 155 fixes **247** flaws.\n- Critical UAFs: **CVE-2026-106382, CVE-2026-106197, CVE-2026-106358, CVE-2026-106347** (components: Chromecast, Browser, Navigation, Track).\n- **No in-the-wild exploitation** reported.\n- Fixed: **155.0.8059.39/.40** (Win/macOS), **155.0.8059.39** (Linux).\n\n## Actions\nPush Chrome/Chromium-based browser updates. Track Edge/Brave/Opera downstream releases. See [[Browser-Patch-Cycle-Chrome-Firefox-2026-09-02]].\n\n## Tags\n#unverified\n\n\n## Update 2026-10-14 \u2014 Chrome 155.0.8059.79/.80 (37 fixes) + Firefox 158 (77 fixes) + Chrome VRP changes\n> Source: [SecurityWeek](https://www.securityweek.com/chrome-firefox-updates-patch-114-flaws-as-mozilla-unveils-firefox-enterprise/) \u2014 Wed, 14 Oct 2026\n> Source: [SecurityWeek](https://www.securityweek.com/google-partially-reverses-chrome-bug-bounty-cuts/) \u2014 Tue, 13 Oct 2026\n\n- **Chrome 155.0.8059.79/.80** fixes **37 bugs**: **7 critical** (an ANGLE buffer overflow; use-after-frees in Browser, PDF, Network, Core, SVG, and Media) and 29 high. **At least 15 were reported by Xinyang Ge (Anthropic) using Claude**, the latest data point for AI-assisted browser bug discovery.\n- **Firefox 158** fixes **77 bugs**, 30 high: UAF, **sandbox escape**, JIT miscompilation. 9 were found by Amy Burnett (OpenAI). ESR 153.5 / 115.43 and Thunderbird were also patched. Mozilla also announced **Firefox Enterprise**.\n- No in-the-wild exploitation mentioned.\n- **Chrome VRP:** Google is restructuring rewards to **favour complex memory-safety bugs**, partly reversing earlier payout cuts. Bug-bounty takeaway: shallow or AI-found duplicates pay less, and full exploit chains and memory-corruption bugs with demonstrated impact pay more.\n\n\n## Update 2026-10-17\n> Source: [Malwarebytes](https://www.malwarebytes.com/blog/bugs/2026/10/update-chrome-google-fixes-37-security-flaws-including-seven-critical-bugs) \u2014 2026-10-15\n> Source: [Clubic](https://www.clubic.com/actualite-634240-chrome-patch-plus-d-une-trentaine-de-vulnerabilites.html) \u2014 2026-10-15\n> Source: [CCCS AV26-1045](https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1045) / [AV26-1060](https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1060) \u2014 2026-10-15/16\n- A follow-up update fixes **37 flaws (7 critical)** in 155.0.8059.79/.80. A further build, **155.0.8059.84/.85** (Win/Mac) and .84 (Linux), followed on Oct 16 (AV26-1060). Edge lagged at the time.\n- Mozilla's matching advisory AV26-1057 covers Firefox 158, ESR 153.5/115.43 and Thunderbird.",
    "sev": "Critical",
    "year": "2026",
    "kev": false,
@@ -3115,9 +3132,33 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-101019": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-101019-104939-15176-NGINX-Memory-Bugs-TLS-Client-Cert-Skip-F5-Juniper-2026-10.md",
+   "body": "# NGINX 1.30.6 / 1.31.7: Five Flaws Including Possible RCE and a TLS Client-Cert Check Skip (CVE-2026-101019, CVE-2026-104939, CVE-2026-15176), Plus F5 and Juniper Criticals\n\n\u26a0\ufe0f **Verification:** Corroborated by 3 sources plus CCCS\n\n> Source: [The Hacker News](https://thehackernews.com/2026/10/nginx-fixes-5-flaws-including-possible.html) \u2014 2026-10-15\n> Source: [CCCS AV26-1049 F5](https://cyber.gc.ca/en/alerts-advisories/f5-security-advisory-av26-1049) \u2014 2026-10-15\n> Source: [CCCS AV26-1043 Juniper](https://cyber.gc.ca/en/alerts-advisories/juniper-networks-security-advisory-av26-1043) \u2014 2026-10-15\n> Source: [SecurityWeek](https://www.securityweek.com/f5-juniper-networks-patch-critical-vulnerabilities/) \u2014 2026-10-16\n> Source: X @SecurityWeek (2111398312565715210) \u2014 2026-10-17\n\n**Type:** CVE / memory corruption + TLS auth bypass | **Severity:** Critical | **Date:** 2026-10-15 | **Tags:** #cve #nginx #f5 #juniper #tls #mtls\n\n## Summary\n- NGINX shipped fixes on 2026-10-14 for 5 bugs, one of which dates back to 2005.\n  - Three memory bugs can crash a worker or, in some configurations, give RCE.\n  - A TLS session forgery bug may let a client **skip client-certificate (mTLS) verification**.\n- Affected: NGINX OSS before 1.30.6/1.31.7, NGINX Plus before 37.0.5.1/37.1.0.1, and NGINX Ingress Controller before 5.7.0.\n- F5 and Juniper also patched critical flaws, some allowing RCE or full device takeover. Juniper's affect many Junos OS and Junos OS Evolved trains (23.2R2-S7.7 through 26.2R1-S2).\n\n## Actions\n- Upgrade NGINX and Ingress Controller. If you depend on `ssl_verify_client`, prioritize the TLS session forgery fix.\n- Bug bounty angle: on mTLS-protected endpoints behind old NGINX, test whether TLS session resumption bypasses the client-cert check (in scope only).\n- Related: [[CVE-2026-42945-Nginx-Rift-PoolSlip-RCE]], [[CVE-2026-42530-42055-NGINX-RCE]], [[CVE-2026-4342-ingress-nginx]]\n\n## Tags\n#verified",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-102255": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-102255-SonicWall-SMA1000-WorkPlace-SSRF-2026-10.md",
    "body": "# CVE-2026-102255 \u2014 SonicWall SMA1000 Appliance WorkPlace Pre-Auth SSRF (Max Severity)\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 2 independent sources\n\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-max-severity-ssrf-flaw-in-sma1000-gateways/) \u2014 Wed, 07 Oct 2026\n\n**Type:** CVE / SSRF | **Severity:** Critical (vendor: maximum) | **Date:** 2026-10-07 | **Tags:** #cve #sonicwall #sma1000 #ssrf #edge-device\n\n## Summary\n- Unauthenticated, low-complexity **server-side request forgery** in the SMA1000 **Appliance WorkPlace** interface, caused by an unintended alternate access path.\n- Affected: SMA1000 **6210, 7210, 8200v**. Not affected: SMA 100 series, SSL-VPN on SonicWall firewalls.\n- Hotfixes released 2026-10-06; advisory **SNWLID-2026-0017**. No workaround.\n- **Not exploited** per SonicWall (as of disclosure). Shadowserver sees ~400 exposed SMA1000 appliances.\n\n## Why it matters\nSMA1000 was hit by the CVE-2026-83548/83549 pre-auth SSRF zero-day chain in September (CISA KEV). Same product, same bug class: expect fast weaponization. See [[CVE-2026-83548-83549-SonicWall-SMA1000-ZeroDay-Chain-Exploited-2026-09]].\n\n## Actions\n- Apply SNWLID-2026-0017 hotfix now; restrict WorkPlace/management exposure.\n- Hunt for outbound requests from SMA1000 to internal metadata/admin endpoints.\n\n\n## Update 2026-10-11 \u2014 Now exploited in the wild\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/max-severity-sonicwall-sma1000-flaw-now-exploited-in-attacks/) \u2014 Fri, 09 Oct 2026\n> Source: [CCCS AV26-1017 Update 1](https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-1017) \u2014 2026-10-09\n- CVE-2026-102255 now actively exploited (status changed from \"not exploited\").\n- Affected: SMA1000 6210/7210/8200v, 12.4.3-03670 (platform-hotfix) and earlier, 12.5.0-03082 (platform-hotfix) and earlier.\n- Action: patch immediately; treat unpatched exposed appliances as potentially compromised.\n\n## Tags\n#unverified\n\n\n## Update 2026-10-12 \u2014 Exploitation timeline (CVSS 10.0)\n> Source: [SecurityWeek](https://www.securityweek.com/critical-sonicwall-vulnerability-exploited-days-after-disclosure/) \u2014 Mon, 12 Oct 2026\n- CVSS **10.0**; fixed in **12.5.0-03082** and **12.4.3-03670** (hotfix builds).\n- Disclosed 10-06; **Defused** honeypots saw first exploitation attempts **10-08**; **Previdian** (formerly KEVIntel) also observed attempts.\n- **Horizon3.ai**: can lead to full device takeover. No actor/IOCs published yet.\n\n\n## Update 2026-10-13\n> Source: [The Hacker News](https://thehackernews.com/2026/10/critical-sonicwall-sma-1000-flaw.html) \u2014 Mon, 12 Oct 2026 10:36 UTC\n- THN: **135 exploitation attempts** observed against CVE-2026-102255 (CVSS 10.0 pre-auth SSRF) after the patch; exploitation began within days of disclosure. Patch SMA 1000 now and review WorkPlace logs for SSRF requests.",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-102764": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-102764-BeyondTrust-Remote-Support-Zero-Day-Armory-Castle-UNC5221-2026-10.md",
+   "body": "# CVE-2026-102764: BeyondTrust Remote Support Zero-Day Exploited by China-Nexus Armory Castle (UNC5221 / Warp Panda)\n\n\u26a0\ufe0f **Verification:** Corroborated by 5+ independent sources plus a national CERT (CCCS AL26-025)\n\n> Source: [The Hacker News](https://thehackernews.com/2026/10/china-linked-hackers-exploited.html) \u2014 2026-10-16\n> Source: [SecurityWeek](https://www.securityweek.com/chinese-apt-exploited-beyondtrust-vulnerability-as-zero-day/) \u2014 2026-10-16\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/beyondtrust-patches-zero-day-exploited-in-attacks-since-august/) \u2014 2026-10-16\n> Source: [The Record](https://therecord.media/beyond-trust-cyberattack-china) \u2014 2026-10-16\n> Source: [CCCS AL26-025](https://cyber.gc.ca/en/alerts-advisories/al26-025-critical-vulnerability-impacting-beyondtrust-remote-support-cve-2026-102764) / [AV26-1054 U1](https://cyber.gc.ca/en/alerts-advisories/beyondtrust-security-advisory-av26-1054) \u2014 2026-10-16\n> Source: X @SecurityWeek (2111366855801630852) \u2014 2026-10-17\n\n**Type:** CVE / auth bypass (CWE-290) | **Severity:** Critical (CVSS 9.3) | **Date:** 2026-10-16 | **Tags:** #cve #beyondtrust #zeroday #kev #china #unc5221 #apt\n\n## Summary\n- The flaw is improper origin validation (authentication bypass by spoofing) in an internal messaging component of **BeyondTrust Remote Support** (formerly Bomgar). It affects all RS versions up to and including **26.2.3**.\n- An unauthenticated remote attacker can perform file operations or upload files, which leads to full appliance compromise.\n- It has been exploited as a zero-day since **late August 2026**. CISA added it to **KEV on 2026-10-16**.\n- The actor is **Armory Castle** (aka UNC5221 / Warp Panda, China-nexus espionage). After initial access it deploys custom tooling, then wipes logs and artifacts (anti-forensics).\n\n## Actions\n- Patch RS immediately. Treat any internet-exposed RS appliance as potentially compromised since August.\n- Hunt for unexpected file uploads or new files on the appliance, gaps in log continuity, and outbound sessions from the RS host to rare destinations.\n- Rotate credentials and session keys stored in or brokered by RS (it is a privileged-access jump point).\n- Related: [[CVE-2026-40138-40141-BeyondTrust-IGS-PRA-Flaws]]\n\n## Tags\n#verified #kev #exploited",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": true,
+   "apts": []
+  },
+  "CVE-2026-103849": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-103849-BlockStrap-Magento-Adobe-Commerce-Unauth-PHP-RCE-2026-10.md",
+   "body": "# CVE-2026-103849 \"BlockStrap\": Magento / Adobe Commerce Unauthenticated PHP Code Execution (CVSS 10)\n\n\u26a0\ufe0f **Verification:** Corroborated by 2+ sources plus a vendor advisory\n\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/critical-blockstrap-flaw-lets-hackers-run-code-on-magento-servers/) \u2014 2026-10-16\n> Source: [CCCS AV26-1039 Adobe](https://cyber.gc.ca/en/alerts-advisories/adobe-security-advisory-av26-1039) \u2014 2026-10-14\n> Source: [The Hacker News ThreatsDay](https://thehackernews.com/2026/10/threatsday-adobe-rce-dns-wallet-theft.html) \u2014 2026-10-15\n> Source: X @IntCyberDigest (2111373901645160760) \u2014 2026-10-17\n\n**Type:** CVE / pre-auth RCE | **Severity:** Critical (CVSS 10) | **Date:** 2026-10-16 | **Tags:** #cve #magento #adobe-commerce #ecommerce #rce #bugbounty\n\n## Summary\n- This maximum-severity flaw lets an unauthenticated attacker execute arbitrary PHP on Magento Open Source and Adobe Commerce servers.\n- Adobe patched it on **2026-10-13** (in the October bulletin with 176 vulns). Sansec reproduced **4 distinct exploit routes within a day** of the patch.\n- Adobe still gave stores a 30-day patch window. Last month's sister bug was mass-exploited within 3 days, so expect exploitation imminently.\n\n## Actions\n- Apply the Oct 13 Adobe Commerce/Magento patch now, without waiting for the 30-day window.\n- Put a WAF in front of storefronts, then hunt for new PHP files in pub/ and var/ and for unexpected admin users or injected skimmer JS.\n- Bug bounty angle: retest Magento targets in scope for unpatched instances (version fingerprint only, no exploitation outside scope).\n- Related: [[StyleSmuggler-Magento-Adobe-Commerce-PreAuth-RCE-ZeroDay-2026]], [[CVE-2026-71362-Adobe-Commerce-Magento-Authorization-Bypass-Exploited-2026]]\n\n## Tags\n#verified #exploitation-imminent",
    "sev": "Critical",
    "year": "2026",
    "kev": false,
@@ -3133,7 +3174,7 @@
   },
   "CVE-2026-104935": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-104935-Ivanti-Connect-Secure-Zero-Day-Chain-UTA0576-2026-10.md",
-   "body": "# CVE-2026-104935 \u2014 Ivanti Connect Secure Zero-Day Chain (Auth Bypass + RCE \u2192 Root), Exploited by UTA0576\n\n\u2705 **Verification:** Verified \u2014 4 independent sources\n\n> Source: [SecurityWeek](https://www.securityweek.com/ivanti-zero-day-chain-gave-attackers-root-access-to-fully-patched-vpn/) \u2014 Tue, 13 Oct 2026 18:43 UTC\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/ivanti-warns-of-connect-secure-zero-day-exploited-in-attacks/) \u2014 Tue, 13 Oct 2026\n> Source: [SecurityWeek (Citrix/Fortinet/Ivanti roundup)](https://www.securityweek.com/citrix-fortinet-ivanti-patch-29-vulnerabilities-across-their-products/) \u2014 Wed, 14 Oct 2026\n> Source: [Canadian Centre for Cyber Security AV26-1035](https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-1035) \u2014 2026-10-13\n\n**Type:** CVE / exploited zero-day | **Severity:** Critical (Ivanti rates High; no CVSS published) | **Date:** 2026-10-14\n\n## Summary\n- **CVE-2026-104935** covers an **authentication bypass plus RCE** in **Ivanti Connect Secure**. Chained with a **third privilege-escalation zero-day that is still unpatched**, it gives **unauthenticated root on fully patched appliances**. Ivanti promises the third fix \"in coming weeks\".\n- **Fixed versions:** 22.8R2.5, 25.1.1.2, 25.1.3.0, 25.1.3.1.\n- **Added to CISA KEV** (per CCCS).\n- **Volexity** found exploitation starting **2026-10-03** and attributes it to a new cluster, **UTA0576**. Motive is likely criminal (low confidence). Volexity has medium confidence the actor **uses LLMs for exploit development**.\n- Ivanti says \"a limited number of customers\" were affected.\n\n## Post-exploitation (Volexity)\n- Stole domain credentials stored on the appliance.\n- Queried AD for **LAPS passwords** and **BitLocker recovery keys**.\n- Ran password spraying and a custom Kerberos credential-testing tool.\n- **Tampered with logs.** No web shell or persistent backdoor was observed, so a missing implant does not mean the appliance is clean.\n\n## Same-day Ivanti fixes (7 total)\n- **CVE-2026-109412** \u2014 Neurons Patch for Intune, critical auth information leak.\n- **CVE-2026-106042** \u2014 Xtraction, critical request redirect that captures EPMM connector credentials.\n\n## Action\n1. Upgrade ICS to a fixed build now and run the Integrity Checker Tool (internal and external).\n2. Because the privilege-escalation link is unpatched, **restrict management and user portals to known IPs** where possible, and watch for the third fix.\n3. **Assume credential theft** on any appliance exposed since Oct 3: rotate every credential stored on the appliance, plus the AD service accounts it uses. Review LAPS/BitLocker attribute reads by the appliance's account.\n4. Forward appliance logs off-box (the actor tampers with local logs). Hunt for Kerberos pre-auth failures and spraying from VPN IP pools.\n\n## Related\n- [[CVE-2026-1337-Ivanti-RCE]]\n- [[Ivanti-September-2026-Security-Update-EPMM-Neurons-ITSM-Sentry-AV26-897]]\n\n## Tags\n#cve #ivanti #connect-secure #vpn #zero-day #kev #uta0576 #volexity #llm-exploit-dev #verified",
+   "body": "# CVE-2026-104935 \u2014 Ivanti Connect Secure Zero-Day Chain (Auth Bypass + RCE \u2192 Root), Exploited by UTA0576\n\n\u2705 **Verification:** Verified \u2014 4 independent sources\n\n> Source: [SecurityWeek](https://www.securityweek.com/ivanti-zero-day-chain-gave-attackers-root-access-to-fully-patched-vpn/) \u2014 Tue, 13 Oct 2026 18:43 UTC\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/ivanti-warns-of-connect-secure-zero-day-exploited-in-attacks/) \u2014 Tue, 13 Oct 2026\n> Source: [SecurityWeek (Citrix/Fortinet/Ivanti roundup)](https://www.securityweek.com/citrix-fortinet-ivanti-patch-29-vulnerabilities-across-their-products/) \u2014 Wed, 14 Oct 2026\n> Source: [Canadian Centre for Cyber Security AV26-1035](https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-1035) \u2014 2026-10-13\n\n**Type:** CVE / exploited zero-day | **Severity:** Critical (Ivanti rates High; no CVSS published) | **Date:** 2026-10-14\n\n## Summary\n- **CVE-2026-104935** covers an **authentication bypass plus RCE** in **Ivanti Connect Secure**. Chained with a **third privilege-escalation zero-day that is still unpatched**, it gives **unauthenticated root on fully patched appliances**. Ivanti promises the third fix \"in coming weeks\".\n- **Fixed versions:** 22.8R2.5, 25.1.1.2, 25.1.3.0, 25.1.3.1.\n- **Added to CISA KEV** (per CCCS).\n- **Volexity** found exploitation starting **2026-10-03** and attributes it to a new cluster, **UTA0576**. Motive is likely criminal (low confidence). Volexity has medium confidence the actor **uses LLMs for exploit development**.\n- Ivanti says \"a limited number of customers\" were affected.\n\n## Post-exploitation (Volexity)\n- Stole domain credentials stored on the appliance.\n- Queried AD for **LAPS passwords** and **BitLocker recovery keys**.\n- Ran password spraying and a custom Kerberos credential-testing tool.\n- **Tampered with logs.** No web shell or persistent backdoor was observed, so a missing implant does not mean the appliance is clean.\n\n## Same-day Ivanti fixes (7 total)\n- **CVE-2026-109412** \u2014 Neurons Patch for Intune, critical auth information leak.\n- **CVE-2026-106042** \u2014 Xtraction, critical request redirect that captures EPMM connector credentials.\n\n## Action\n1. Upgrade ICS to a fixed build now and run the Integrity Checker Tool (internal and external).\n2. Because the privilege-escalation link is unpatched, **restrict management and user portals to known IPs** where possible, and watch for the third fix.\n3. **Assume credential theft** on any appliance exposed since Oct 3: rotate every credential stored on the appliance, plus the AD service accounts it uses. Review LAPS/BitLocker attribute reads by the appliance's account.\n4. Forward appliance logs off-box (the actor tampers with local logs). Hunt for Kerberos pre-auth failures and spraying from VPN IP pools.\n\n## Related\n- [[CVE-2026-1337-Ivanti-RCE]]\n- [[Ivanti-September-2026-Security-Update-EPMM-Neurons-ITSM-Sentry-AV26-897]]\n\n## Tags\n#cve #ivanti #connect-secure #vpn #zero-day #kev #uta0576 #volexity #llm-exploit-dev #verified\n\n\n## Update 2026-10-17\n> Source: [The Hacker News](https://thehackernews.com/2026/10/cisa-urges-immediate-ivanti-connect.html) \u2014 2026-10-14\n> Source: [CCCS AV26-1035 U1](https://cyber.gc.ca/en/alerts-advisories/ivanti-security-advisory-av26-1035) \u2014 2026-10-16\n- CISA urges immediate updates, and honeypots have logged **105 exploit attempts**. CVE-2026-104935 is an auth bypass (CVSS 8.6) affecting ICS 25.1.1.1, 25.2.2 and 22.8R2.4 and earlier.\n- CCCS Update 1 says **CVE-2026-111357** is also exploited in the wild. The update also lists Neurons Patch for Intune and Xtraction 2026.2.1 and earlier.",
    "sev": "Critical",
    "year": "2026",
    "kev": true,
@@ -3141,7 +3182,7 @@
   },
   "CVE-2026-105134": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-105134-105133-AhsayCBS-Auth-Bypass-Command-Injection-Exploited-2026-10.md",
-   "body": "# CVE-2026-105134 / CVE-2026-105133 \u2014 AhsayCBS Auth Bypass + OS Command Injection Chain (Exploited, Unpatched)\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 2 independent sources\n\n> Source: [The Hacker News](https://thehackernews.com/2026/10/attackers-exploit-ahsaycbs-flaws-to.html) \u2014 Fri, 09 Oct 2026\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/unpatched-ahsaycbs-flaws-exploited-to-deploy-webshells-mine-crypto/) \u2014 Fri, 09 Oct 2026\n\n**Type:** CVE / auth bypass + command injection | **Severity:** Critical (CVSS v4 9.3 + 5.5) | **Date:** 2026-10-09 | **Tags:** #cve #ahsay #backup #exploited #zeroday #xmrig #webshell\n\n## Summary\n| CVE | CVSS v4 | Type | Component |\n|---|---|---|---|\n| CVE-2026-105134 | 9.3 | OS command injection | Replication Receiver |\n| CVE-2026-105133 | 5.5 | Improper authentication | `checkSysPwd()` in `com/ahsay/obs/api/ApiStructsAction.java` |\n\n- Chained: remote auth bypass -> arbitrary command execution on the AhsayCBS backup management server.\n- CVEs published 2026-10-04. NVD says fixed in **10.3.4**; Huntress reports 10.3.4 is **also affected** -> effectively unpatched.\n- Exploitation began 2026-10-07 23:20 UTC (Huntress); ~5 orgs hit by 10-08.\n\n## Post-exploitation observed\n- Recon, web shells, XMRig miner as `edge.exe` (masquerading as Microsoft Edge).\n- `certutil.exe` downloads vulnerable driver `WinRing0x64.sys` to %TEMP%.\n- `Taskgmr.ps1` (launched via curl, likely AI-assisted) pauses mining when Task Manager opens; kills Task Manager after 1h overnight.\n\n## IOCs\n- Files: `edge.exe`, `Taskgmr.ps1`, `WinRing0x64.sys` (in %TEMP%)\n- LOLBin: `certutil.exe` download\n- No IPs/hashes published.\n\n## Actions\n- Restrict AhsayCBS management/Replication Receiver to trusted IPs or VPN.\n- Hunt: new .jsp/web shells in AhsayCBS webapps, `edge.exe` outside Program Files, WinRing0x64.sys load events, certutil URL downloads.\n\n## Tags\n#unverified",
+   "body": "# CVE-2026-105134 / CVE-2026-105133 \u2014 AhsayCBS Auth Bypass + OS Command Injection Chain (Exploited, Unpatched)\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 2 independent sources\n\n> Source: [The Hacker News](https://thehackernews.com/2026/10/attackers-exploit-ahsaycbs-flaws-to.html) \u2014 Fri, 09 Oct 2026\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/unpatched-ahsaycbs-flaws-exploited-to-deploy-webshells-mine-crypto/) \u2014 Fri, 09 Oct 2026\n\n**Type:** CVE / auth bypass + command injection | **Severity:** Critical (CVSS v4 9.3 + 5.5) | **Date:** 2026-10-09 | **Tags:** #cve #ahsay #backup #exploited #zeroday #xmrig #webshell\n\n## Summary\n| CVE | CVSS v4 | Type | Component |\n|---|---|---|---|\n| CVE-2026-105134 | 9.3 | OS command injection | Replication Receiver |\n| CVE-2026-105133 | 5.5 | Improper authentication | `checkSysPwd()` in `com/ahsay/obs/api/ApiStructsAction.java` |\n\n- Chained: remote auth bypass -> arbitrary command execution on the AhsayCBS backup management server.\n- CVEs published 2026-10-04. NVD says fixed in **10.3.4**; Huntress reports 10.3.4 is **also affected** -> effectively unpatched.\n- Exploitation began 2026-10-07 23:20 UTC (Huntress); ~5 orgs hit by 10-08.\n\n## Post-exploitation observed\n- Recon, web shells, XMRig miner as `edge.exe` (masquerading as Microsoft Edge).\n- `certutil.exe` downloads vulnerable driver `WinRing0x64.sys` to %TEMP%.\n- `Taskgmr.ps1` (launched via curl, likely AI-assisted) pauses mining when Task Manager opens; kills Task Manager after 1h overnight.\n\n## IOCs\n- Files: `edge.exe`, `Taskgmr.ps1`, `WinRing0x64.sys` (in %TEMP%)\n- LOLBin: `certutil.exe` download\n- No IPs/hashes published.\n\n## Actions\n- Restrict AhsayCBS management/Replication Receiver to trusted IPs or VPN.\n- Hunt: new .jsp/web shells in AhsayCBS webapps, `edge.exe` outside Program Files, WinRing0x64.sys load events, certutil URL downloads.\n\n## Tags\n#unverified\n\n\n## Update 2026-10-17\n> Source: [The Hacker News](https://thehackernews.com/2026/10/ahsaycbs-flaws-exploited-to-deploy-web.html) \u2014 2026-10-15\n- **New fixes** were released after the earlier patches proved incomplete. Web shell and XMRig exploitation continues, so re-patch even if you applied 10.3.4.\n- Possibly related: UK backup provider Safe Data Storage had customer backups encrypted via a newly disclosed backup-app flaw. See [[Safe-Data-Storage-UK-Backup-Provider-Ransomware-Customer-Backups-Encrypted-2026-10]].",
    "sev": "Critical",
    "year": "2026",
    "kev": true,
@@ -3155,6 +3196,14 @@
    "kev": true,
    "apts": []
   },
+  "CVE-2026-105740": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-105740-Langflow-Authenticated-RCE-Honeypot-Exploitation-2026-10.md",
+   "body": "# CVE-2026-105740: Langflow Authenticated RCE (CVSS 9.9), 1,423 Honeypot Exploit Attempts\n\n\u26a0\ufe0f **Verification:** Corroborated by 2 sources\n\n> Source: [The Hacker News](https://thehackernews.com/2026/10/langflows-critical-authenticated-rce.html) \u2014 2026-10-15\n> Source: [SecurityWeek In Other News](https://www.securityweek.com/in-other-news-ics-sniper-attack-hacking-xworm-malware-operators-250k-chrome-exploit/) \u2014 2026-10-16\n\n**Type:** CVE / authenticated RCE | **Severity:** Critical (CVSS 9.9) | **Date:** 2026-10-15 | **Tags:** #cve #langflow #ai #llm-infra #exploited\n\n## Summary\n- Authenticated remote code execution in **Langflow**, the open-source AI workflow builder (now owned by IBM).\n- Previdian honeypots logged **1,423 exploit attempts**, and SecurityWeek reports it under active attack.\n- Langflow keeps recurring as a target (see the earlier unauth CVEs). Exposed instances often run with default or weak credentials, or with auto-login enabled, which makes \"authenticated\" close to unauthenticated in practice.\n\n## Actions\n- Patch now. Disable `LANGFLOW_AUTO_LOGIN`, take Langflow off the public internet, and rotate the LLM/API keys stored in flows.\n- AI bug bounty angle: Langflow and Flowise instances on in-scope assets are high-value finds.\n- Related: [[CVE-2026-33017-Langflow-Unauth-RCE]], [[CVE-2026-0768-Langflow-Unauth-Python-Code-Execution-Exploited]], [[AI-Orchestration-Platforms-14-Vulnerabilities-Endor-Labs-Flowise-Langflow-Dify-2026]]\n\n## Tags\n#verified #exploited",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-106173": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-106173-107656-Fortinet-FortiSIEM-FortiSandbox-Critical-2026-10.md",
    "body": "# CVE-2026-106173 / CVE-2026-107656 \u2014 Fortinet FortiSIEM/FortiSandbox Critical Unauthenticated RCE and Auth Bypass (October 2026 PSIRT)\n\n\u2705 **Verification:** Verified \u2014 2 independent sources\n\n> Source: [SecurityWeek](https://www.securityweek.com/citrix-fortinet-ivanti-patch-29-vulnerabilities-across-their-products/) \u2014 Wed, 14 Oct 2026 07:26 UTC\n> Source: [Canadian Centre for Cyber Security AV26-1037](https://cyber.gc.ca/en/alerts-advisories/fortinet-security-advisory-av26-1037) \u2014 2026-10-13\n\n**Type:** CVE | **Severity:** Critical | **Date:** 2026-10-14\n\n## Summary\nFortinet's October PSIRT fixes **13 flaws**:\n- **CVE-2026-106173** \u2014 unauthenticated RCE in the FortiSIEM/FortiSandbox GUI (critical).\n- **CVE-2026-107656** \u2014 authentication bypass in the FortiSIEM/FortiSandbox GUI (critical).\n- **Five high-severity authenticated SQL injections leading to code execution** in **FortiAnalyzer / FortiManager (including Cloud)** and **FortiMail webmail**.\n\nNo in-the-wild exploitation reported, and no CVSS scores in the coverage.\n\n## Why this matters\nFortiSIEM has a history of rapid post-disclosure exploitation (e.g. the 2025 phMonitor command injection). An unauthenticated RCE plus an auth bypass on the same GUI is a likely chain. FortiManager/FortiAnalyzer SQLi to code execution matters because both hold managed-device configs and credentials.\n\n## Action\n- Patch FortiSIEM/FortiSandbox first. Keep their GUIs off the internet and reachable only from a management VLAN.\n- Patch FortiAnalyzer/FortiManager/FortiMail. Audit admin accounts and recent config pushes.\n\n## Related\n- [[CVE-2026-104286-Fortinet-FortiMail-Path-Traversal-Zero-Day-2026]]\n- [[CVE-2026-39808-39813-Fortinet-Critical]]\n\n## Tags\n#cve #fortinet #fortisiem #fortisandbox #fortimanager #unauth-rce #auth-bypass #sqli #verified",
@@ -3166,6 +3215,22 @@
   "CVE-2026-107406": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-107406-Citrix-NetScaler-SAML-Memory-Overflow-RCE-2026-10.md",
    "body": "# CVE-2026-107406 \u2014 Citrix NetScaler ADC/Gateway SAML Memory Overflow (RCE/DoS)\n\n\u2705 **Verification:** Verified \u2014 5 independent sources\n\n> Source: [The Hacker News](https://thehackernews.com/2026/10/citrix-patches-critical-netscaler-flaw.html) \u2014 2026-10-09 (via X @TheHackersNews 2108471092230963409)\n> Source: [SecurityWeek](https://www.securityweek.com/citrix-urges-immediate-patching-of-critical-netscaler-vulnerability/) \u2014 Fri, 09 Oct 2026 06:53 UTC\n> Source: X @citrix 2108297236463382860 (vendor guidance), @mattjay 2108339348433215747\n\n**Type:** CVE / memory corruption | **Severity:** Critical (CVSS 9.5) | **Date:** 2026-10-08 | **Tags:** #cve #citrix #netscaler #saml #edge-device\n\n## Summary\n- Critical **memory overflow** in NetScaler ADC and NetScaler Gateway, reachable when the appliance is configured as a **SAML IdP or SP**. Impact: RCE or DoS.\n- Citrix issued \"immediate guidance\" on 2026-10-08 and urges upgrading to the recommended builds.\n- **No evidence of exploitation** of this CVE yet, but THN notes three *other* NetScaler bugs are under active exploitation.\n- @mattjay: this is **not** last week's NetScaler critical, and the builds people just rushed to patch to are **also affected**.\n\n## Why it matters\nThird NetScaler critical in weeks (see [[CVE-2026-88771-88772-Citrix-NetScaler-Dual-RCE-ZeroDays-2026]], [[CVE-2026-19490-19489-Citrix-NetScaler-Auth-Bypass]]). Memory bugs in NetScaler pre-auth paths have historically been weaponized within days (CitrixBleed pattern).\n\n## Actions\n- Inventory NetScaler instances with SAML IdP/SP config (`show authentication samlIdPProfile`, `show authentication samlAction`).\n- Upgrade to the fixed builds in the Citrix bulletin; re-verify builds patched last week.\n- Hunt: nsppe crashes/core dumps, unexpected restarts, new files under `/var/netscaler/logon/` and `/var/vpn/`.\n\n\n## Update 2026-10-11 \u2014 CCCS fixed versions\n> Source: [CCCS AV26-1023](https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-1023) \u2014 2026-10-09\n> Source: [CCCS AL26-024 Update 2](https://cyber.gc.ca/en/alerts-advisories/al26-024-critical-vulnerabilities-affecting-citrix-netscaler-adc-netscaler-gateway-cve-2026-88771-cve-2026-88772) \u2014 2026-10-09\n- Fixed (CTX697191): NetScaler ADC/Gateway **13.1-64.29**, **14.1-73.46**; ADC FIPS **14.1-73.46 FIPS**, **13.1-37.283 FIPS & NDcPP**.\n- CCCS AL26-024 Update 2 folds CVE-2026-107406 into the CVE-2026-88771/88772 alert; earlier patches do not fully address it.\n\n## Tags\n#verified",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-110447": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-110447-Collabora-CODE-Nextcloud-Command-Execution-Backdoors-Exploited-2026-10.md",
+   "body": "# CVE-2026-110447: Collabora Online Built-in CODE Server (Nextcloud) Command Execution, Exploited to Backdoor Servers\n\n\u26a0\ufe0f **Verification:** Corroborated by 2 independent sources\n\n> Source: [The Hacker News](https://thehackernews.com/2026/10/hackers-backdoor-nextcloud-servers.html) \u2014 2026-10-14\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-exploit-collabora-rce-flaw-to-backdoor-nextcloud-servers/) \u2014 2026-10-15\n\n**Type:** CVE / command execution | **Severity:** Critical | **Date:** 2026-10-15 | **Tags:** #cve #nextcloud #collabora #webshell #exploited\n\n## Summary\n- The flaw is critical command execution in the Nextcloud app **\"Collabora Online - Built-in CODE Server\" (`richdocumentscode`)**.\n- It is being actively exploited to plant web shells and backdoors on Nextcloud servers. The first attack was logged **2026-09-10**, and three admins reported compromises on GitHub.\n\n## Actions\n- Update or disable `richdocumentscode`, and prefer a separately hosted Collabora server.\n- Hunt for new PHP files under apps/ and data/, cron entries added under the www-data user, and unexpected outbound connections from the Nextcloud host.\n\n## Tags\n#verified #exploited",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-111357": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-111357.md",
+   "body": "# CVE-2026-111357\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2026\n\n## Summary\nrss:cccs-2026-10-16-av26-1035u1-ivanti | 2026-10-16 | CCCS | Ivanti AV26-1035 U1 (CVE-2026-111357) | -> Threat_Intel/CVEs/2026/Critical/CVE-2026-104935-Ivanti-Connect-Secure-Zero-Day-Chain-UTA0576-2026-10.md (appended)\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 rss:cccs-2026-10-16-av26-1035u1-ivanti | 2026-10-16 | CCCS | Ivanti AV26-1035 U1 (CVE-2026-111357) | -> Threat_Intel/CVEs/2026/Critical/CVE-2026-104935-Ivanti-Connect-Secure-Zero-Day-Chain-UTA0576-2026-10.md (appended)\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-111357\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-111357\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-111357\n\n## Tags\n#cve #2026 #critical #auto-stub",
    "sev": "Critical",
    "year": "2026",
    "kev": false,
@@ -3359,7 +3424,7 @@
   },
   "CVE-2026-21589": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-21589-Atlassian-Data-Center-File-Access.md",
-   "body": "# CVE-2026-21589 \u2014 Atlassian Jira/Confluence Data Center critical file access\n\n\u2705 **Verification:** Verified \u2014 4 independent sources\n\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/atlassian-warns-of-critical-file-access-flaw-in-jira-confluence/) \u2014 Tue, 06 Oct 2026\n> Source: [SecurityWeek](https://www.securityweek.com/atlassian-patches-critical-vulnerability-affecting-8-products/) \u2014 Wed, 07 Oct 2026\n\n- Severity: Critical\n- Unauthenticated arbitrary file access in web application root directories; 8 Atlassian products patched, incl. self-hosted Data Center Jira/Confluence.\n- Action: patch; review exposed web roots.\n\n\n## Update \u2014 2026-10-08 (exploited after public PoC)\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-atlassian-flaw-after-public-poc-release/) \u2014 Wed, 07 Oct 2026\n> Source: [The Hacker News](https://thehackernews.com/2026/10/atlassian-data-center-flaw-draws.html) \u2014 Wed, 07 Oct 2026\n> Source: [SANS ISC](https://isc.sans.edu/diary/rss/33406) \u2014 Wed, 07 Oct 2026\n- **Active exploitation** began within ~2 hours of public details, after a public PoC. Unauthenticated, across Jira, Confluence and Bitbucket Data Center.\n- SANS ISC honeypots see scans. Attackers target config files in the web root (DB creds, secrets).\n- Action escalated: **patch immediately**. If patched late, rotate any secrets readable from the web root and review access logs for known-path file reads.\n\n\n## Update 2026-10-09\n> Source: [SecurityWeek](https://www.securityweek.com/attackers-target-critical-atlassian-vulnerability-within-hours-of-poc-publication/) \u2014 Thu, 08 Oct 2026\n- SecurityWeek confirms exploitation of CVE-2026-21589 in self-hosted Data Center products began within hours of PoC publication.\n\n## Tags\n#verified",
+   "body": "# CVE-2026-21589 \u2014 Atlassian Jira/Confluence Data Center critical file access\n\n\u2705 **Verification:** Verified \u2014 4 independent sources\n\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/atlassian-warns-of-critical-file-access-flaw-in-jira-confluence/) \u2014 Tue, 06 Oct 2026\n> Source: [SecurityWeek](https://www.securityweek.com/atlassian-patches-critical-vulnerability-affecting-8-products/) \u2014 Wed, 07 Oct 2026\n\n- Severity: Critical\n- Unauthenticated arbitrary file access in web application root directories; 8 Atlassian products patched, incl. self-hosted Data Center Jira/Confluence.\n- Action: patch; review exposed web roots.\n\n\n## Update \u2014 2026-10-08 (exploited after public PoC)\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-atlassian-flaw-after-public-poc-release/) \u2014 Wed, 07 Oct 2026\n> Source: [The Hacker News](https://thehackernews.com/2026/10/atlassian-data-center-flaw-draws.html) \u2014 Wed, 07 Oct 2026\n> Source: [SANS ISC](https://isc.sans.edu/diary/rss/33406) \u2014 Wed, 07 Oct 2026\n- **Active exploitation** began within ~2 hours of public details, after a public PoC. Unauthenticated, across Jira, Confluence and Bitbucket Data Center.\n- SANS ISC honeypots see scans. Attackers target config files in the web root (DB creds, secrets).\n- Action escalated: **patch immediately**. If patched late, rotate any secrets readable from the web root and review access logs for known-path file reads.\n\n\n## Update 2026-10-09\n> Source: [SecurityWeek](https://www.securityweek.com/attackers-target-critical-atlassian-vulnerability-within-hours-of-poc-publication/) \u2014 Thu, 08 Oct 2026\n- SecurityWeek confirms exploitation of CVE-2026-21589 in self-hosted Data Center products began within hours of PoC publication.\n\n## Tags\n#verified\n\n\n## Update 2026-10-17\n> Source: [CCCS AV26-1002 U2](https://cyber.gc.ca/en/alerts-advisories/atlassian-security-advisory-av26-1002) \u2014 2026-10-15\n- Now **exploited in the wild** and added to **CISA KEV on 2026-10-15**. Affects Bamboo, Bitbucket, Confluence, Crowd, Crucible, Fisheye, Jira and JSM Data Center/Server.",
    "sev": "Critical",
    "year": "2026",
    "kev": true,
@@ -4285,6 +4350,14 @@
    "kev": true,
    "apts": []
   },
+  "CVE-2026-76519": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-76519-Cisco-AsyncOS-Secure-Email-Gateway-File-Write-Root-Exploited-2026-10.md",
+   "body": "# CVE-2026-76519: Cisco AsyncOS Secure Email Gateway Arbitrary File Write to Root, Exploited (KEV)\n\n\u26a0\ufe0f **Verification:** Corroborated by 2 sources plus CCCS\n\n> Source: [The Hacker News](https://thehackernews.com/2026/10/cisco-warns-of-active-attacks.html) \u2014 2026-10-14\n> Source: [CCCS AV26-1042 U1](https://cyber.gc.ca/en/alerts-advisories/cisco-security-advisory-av26-1042) \u2014 2026-10-14\n\n**Type:** CVE / unauthenticated file write | **Severity:** Critical | **Date:** 2026-10-14 | **Tags:** #cve #cisco #email-gateway #kev #exploited\n\n## Summary\n- An unauthenticated sender's crafted email attachment can write arbitrary files to the SEG operating system, which can lead to command execution as root.\n- Affected: AsyncOS SEG 15.5 before 15.5.5-014 and 16.5 before 16.5.0-780, and SEWM 15.5 before 15.5.5-006 and 16.5 before 16.5.0-429.\n- Actively exploited and added to **KEV on 2026-10-14**.\n\n## Actions\n- Upgrade now. Hunt for unexpected files in the AsyncOS file system and for persistence mechanisms.\n- Related: [[CVE-2026-76461-Cisco-Secure-Email-Gateway-SQLi-Root-RCE-KEV-Exploited-2026]], [[Cisco-Secure-Email-SMIME-Unpatched-IOS-XR-Nexus-Critical-2026-09]]\n\n## Tags\n#verified #kev",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": true,
+   "apts": []
+  },
   "CVE-2026-76657": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-76657-HPE-Networking-Fabric-Composer-API-Auth-Bypass.md",
    "body": "# CVE-2026-76657 \u2014 HPE Networking Fabric Composer API Authentication Bypass (CVSS 10.0)\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n**Type:** cve | **Severity:** Critical (CVSS 10.0) | **Date logged:** 2026-09-04\n**Product:** HPE Networking **Fabric Composer** \u2014 API\n**Impact:** Unauthenticated attacker obtains **full administrative access**. No credentials required.\n**Status:** Patch available. No public exploitation reported at time of logging.\n\n## Summary\n\n**CVE-2026-76657** is an **authentication bypass in the HPE Networking Fabric Composer API** rated **CVSS 10.0**. An unauthenticated attacker reaching the API obtains **full administrative access** to the platform.\n\n## Why a fabric controller is a worse target than a switch\n\nFabric Composer is the **management and orchestration plane for a data-centre switching fabric** \u2014 it does not forward traffic, it decides how traffic is forwarded across every switch it manages. Administrative control of it is therefore a superset of administrative control of the individual devices:\n\n- **Arbitrary re-segmentation.** VLAN, VRF and policy changes made from the controller are legitimate, authorised configuration changes as far as every downstream switch is concerned. There is no exploit signature on the data-plane devices to find.\n- **Traffic redirection and mirroring at fabric scale** \u2014 a SPAN/ERSPAN destination configured centrally is a passive tap on any segment, invisible to endpoint and application telemetry.\n- **It sits below every control that assumes the network is the boundary.** Micro-segmentation, east-west firewalling and zero-trust network policy are all *expressed* through the fabric. Owning the thing that expresses them makes them advisory.\n\nThe generalisable point, and one this vault keeps re-deriving: **management planes are consistently under-rated relative to the devices they manage.** A CVSS 10 pre-auth bypass on an orchestrator is not equivalent to a CVSS 10 on one switch; it is that CVSS 10 multiplied by the fabric.\n\n## Action\n\n1. **Patch Fabric Composer immediately** \u2014 pre-auth, no credentials, CVSS 10.\n2. **Verify the API is not internet-reachable.** It should not be, and for an orchestration plane the honest control is network reachability, not authentication. Confirm rather than assume \u2014 verify from outside your own perimeter.\n3. **Restrict management-plane access to a dedicated admin network** with its own authentication path, and treat any host that can reach it as a tier-0 asset.\n4. **Assume compromise on any instance that was internet-exposed.** Hunt for: new or modified administrative accounts, API tokens issued outside change windows, unexpected configuration pushes, and newly configured mirror/SPAN destinations.\n5. **Diff the running fabric configuration against a known-good out-of-band baseline.** Because attacker actions here look like legitimate configuration, configuration diffing is the detection \u2014 not log alerting.\n\n## Open questions\n\n- Affected and fixed version ranges not captured in the read \u2014 pull from the HPE security bulletin.\n- Whether the bypass is reachable on the standard management listener or requires a specific API path.\n- No IOCs published.\n- Relationship, if any, to the ArubaOS-CX critical RCE patched by HPE the previous day (see `HPE-ArubaOS-CX-Critical-RCE-2026-09.md`) \u2014 two critical HPE networking flaws in 48 hours warrants asking whether they came from the same research effort.\n\n## Sources\n\n> Source: [@SecAlertsCo](https://x.com/SecAlertsCo/status/2095809711794782543) \u2014 2026-09-04 09:42 UTC \u2014 \"HPE Networking Fabric Composer API: CVE-2026-76657 is a CVSS 10 auth bypass giving unauthenticated attackers full administrative access. No credentials needed. Patch immediately.\"\n\n## Tags\n\n#cve-2026-76657 #hpe #fabric-composer #authentication-bypass #management-plane #network-orchestration #cvss-10 #critical #unverified",
@@ -4408,6 +4481,14 @@
   "CVE-2026-84412": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-84412-Adobe-Campaign-Classic-CVSS10-Code-Injection-APSB26-142-2026.md",
    "body": "# CVE-2026-84412: Adobe Campaign Classic CVSS 10.0 Unauthenticated Code Injection (APSB26-142)\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n> Source: [@SecAlertsCo (X)](https://x.com/SecAlertsCo/status/2103074259530658205) \u2014 2026-09-24\n\n**Type:** CVE / code injection, marketing platform | **Severity:** Critical | **Date:** 2026-09-24\n\n## Summary\n- **CVE-2026-84412**: code injection in **Adobe Campaign Classic**, rated **CVSS 10.0**.\n- **Attack conditions:** network-exploitable with **no authentication**.\n- **Impact:** arbitrary code execution in the context of the current user.\n- **Patch:** Adobe bulletin **APSB26-142**.\n- **Exploitation:** no exploitation status was stated in the source.\n\n## Why this matters\n- Campaign Classic instances hold customer PII, email-sending infrastructure and integrations with CRM and data warehouses. Code execution on one gives both a data-theft path and a **trusted mail-sending platform for phishing**.\n- This lands in the same Adobe cycle as nine critical fixes in **Connect** and **AEM Forms JEE** (CCCS AV26-953, 2026-09-23). See `Threat_Intel/CVEs/2026/High/Vendor-Advisory-Roundup-CCCS-2026-09-23-Chrome154-Adobe-Forcepoint-Dell-NVIDIA-GitHub-Ubiquiti-HPE.md`.\n\n## Action\n1. Apply APSB26-142 to on-prem and hybrid Campaign Classic deployments.\n2. Restrict the Campaign web and SOAP interfaces to known networks until patched.\n3. Review Campaign workflows and JavaScript activities for unexpected changes.\n\n## Tags\n#cve #adobe #campaign-classic #code-injection #cvss10 #unauthenticated #unverified",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-84731": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-84731-Nutanix-Prism-Authentication-Bypass-Unauth-Admin-2026-10.md",
+   "body": "# CVE-2026-84731: Nutanix Prism Authentication Bypass, Unauthenticated Admin (CVSS 9.8)\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 single source (X); vendor advisory NXSA-0058 is referenced\n\n> Source: X @DailyDarkWeb (2111397264556232972) \u2014 2026-10-17\n\n**Type:** CVE / auth bypass | **Severity:** Critical (CVSS 3.1 9.8 / CVSS 4.0 9.3) | **Date:** 2026-10-15 | **Tags:** #cve #nutanix #prism #hci #authbypass\n\n## Summary\n- Nutanix Security Advisory **0058** (published 2026-10-15) covers \"Prism Auth Bypass\". A remote unauthenticated attacker can gain administrative access to Prism.\n- Prism Central/Element administers the whole HCI cluster, which makes it an ideal target for ransomware actors who go after hypervisors.\n\n## Actions\n- Apply the NXSA-0058 fixed versions and keep Prism off the internet, reachable only from management VLANs.\n- Review Prism audit logs for new admin users or API keys.\n\n## Tags\n#unverified",
    "sev": "Critical",
    "year": "2026",
    "kev": false,
@@ -4621,6 +4702,14 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-99999": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-99999-PwnEscape-Linux-Kernel-Guest-to-Host-Memory-Read-Vercel-Sandbox-2026-10.md",
+   "body": "# CVE-2026-99999 \"PwnEscape\": Linux Kernel Networking Flaw Lets Guest VMs Read Host Memory\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 single source, though the vendor (Vercel) confirmed the issue\n\n> Source: [The Hacker News](https://thehackernews.com/2026/10/critical-pwnescape-linux-kernel.html) \u2014 2026-10-15\n\n**Type:** CVE / VM escape (info leak) | **Severity:** Critical | **Date:** 2026-10-15 | **Tags:** #cve #linux-kernel #vm-escape #cloud #sandbox #ai-agents\n\n## Summary\n- A critical Linux kernel networking bug lets code inside a guest VM read **host memory**.\n- It was demonstrated against Vercel's live cloud sandboxes (the kind used to run AI agent code), and **Vercel confirmed** it.\n- This matters for any multi-tenant microVM or sandbox provider that runs untrusted or agent-generated code.\n\n## Actions\n- Track distro kernel updates and prioritize hosts that run untrusted workloads (CI runners, agent sandboxes, FaaS).\n- Related: [[vercel-sandbox-egress-bypass-via-certificate-validation-fetch-2026-10]]\n\n## Tags\n#unverified",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-85504": {
    "file": "Threat_Intel/CVEs/2026/Critical/FreeIPMI-Stack-Buffer-Overflows-CVE-2026-85504-85506.md",
    "body": "# CVE-2026-85504 / CVE-2026-85506 \u2014 FreeIPMI: Unauthenticated Stack Buffer Overflows in Vendor SEL Parsing\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n> Source: [SecAlerts (@SecAlertsCo, X)](https://x.com/SecAlertsCo/status/2096473744730460459) \u2014 2026-09-06 | [SecAlerts (@SecAlertsCo, X)](https://x.com/SecAlertsCo/status/2096412249426399258) \u2014 2026-09-06\n\n**Type:** CVE / memory corruption | **Severity:** Critical (CVSS 9.8 both) | **Date:** 2026-09-06\n\n## Summary\nTwo **stack-based buffer overflows** in **FreeIPMI before 1.6.19**, both rated **CVSS 9.8** and both **requiring no authentication**:\n\n| CVE | Location | Trigger |\n|---|---|---|\n| **CVE-2026-85504** | `_ipmi_sel_oem_fujitsu_get_sel_entry_long_text` | Malformed **Fujitsu SEL** (System Event Log) entries |\n| **CVE-2026-85506** | `idrac-info` subcommand path in `dell get-system-info` | Malformed Dell iDRAC response data |\n\nBoth live in **vendor-specific OEM parsing paths** \u2014 Fujitsu SEL decoding and Dell iDRAC info retrieval. **Fix: upgrade to FreeIPMI 1.6.19.**\n\n## The shape worth recording\nBoth bugs are in **OEM extension code that parses data returned by the BMC**, and that is the interesting part. The trust assumption embedded in an IPMI client is that **the baseboard management controller is a trusted peer** \u2014 so its responses are parsed with far less suspicion than network input from an unknown host.\n\nThat assumption is wrong in two directions:\n\n1. **The BMC is a separate computer with its own firmware, its own vulnerabilities and its own patch cycle** \u2014 usually a much worse one than the host OS. A compromised BMC now attacks the management station that polls it.\n2. **IPMI is frequently reachable on a flat management network.** An attacker on that segment can impersonate a BMC and serve malformed SEL entries to whatever polls it.\n\nThe victim here is the **management station** \u2014 typically a monitoring host, a config-management runner, or a jump box, i.e. a machine with credentials for *every* BMC in the estate. **Compromising the poller is strictly better than compromising any single node it polls.**\n\nThis is the same inversion recorded for agent sandboxing and for detonation hosts: **the tool that inspects the untrusted thing becomes the target.**\n\n## Action\n1. **Upgrade FreeIPMI to 1.6.19** everywhere \u2014 including inside monitoring containers and images, where FreeIPMI is often a transitive dependency of Nagios/Icinga/Zabbix IPMI plugins and will not appear in an OS package audit.\n2. **Inventory where FreeIPMI actually runs.** `ipmitool` is the more familiar binary; FreeIPMI (`ipmi-sel`, `ipmi-oem`, `ipmi-fru`) is frequently present via monitoring plugins that nobody catalogued.\n3. **Segment the IPMI/BMC network properly.** Neither CVE is exploitable by an attacker who cannot reach or impersonate a BMC. Out-of-band management on a routable VLAN is the actual exposure.\n4. **Treat the monitoring host as a tier-0 asset.** It holds BMC credentials for the whole fleet; a stack overflow there is a fleet-wide compromise, not a single-host issue.\n5. If upgrade is blocked, **disable Fujitsu and Dell OEM SEL decoding** in the polling configuration \u2014 the vulnerable paths are vendor-specific, so generic SEL reads avoid them.\n\n#cve #freeipmi #ipmi #bmc #buffer-overflow #unauthenticated #out-of-band-management #critical #cvss98\n\n## Tags\n #unverified",
@@ -4771,6 +4860,14 @@
    "sev": "High",
    "year": "2026",
    "kev": false,
+   "apts": []
+  },
+  "CVE-2026-0322": {
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-0322-PAN-OS-Management-Interface-Authenticated-RCE-Exploited-KEV-2026-10.md",
+   "body": "# CVE-2026-0322: PAN-OS Management Interface Authenticated RCE, Actively Exploited (KEV)\n\n\u26a0\ufe0f **Verification:** Corroborated by 3 sources plus CCCS\n\n> Source: [The Hacker News](https://thehackernews.com/2026/10/palo-alto-networks-patches-pan-os.html) \u2014 2026-10-15\n> Source: [CCCS AV26-1041 U1](https://cyber.gc.ca/en/alerts-advisories/palo-alto-networks-security-advisory-av26-1041) \u2014 2026-10-15\n> Source: [Clubic](https://www.clubic.com/actualite-634345-nouvelle-faille-deja-exploitee-chez-palo-alto-networks-des-pirates-peuvent-prendre-le-controle-de-ses-pare-feu.html) \u2014 2026-10-15\n\n**Type:** CVE / authenticated RCE | **Severity:** High (CVSS 8.6) | **Date:** 2026-10-15 | **Tags:** #cve #paloalto #panos #firewall #kev #exploited\n\n## Summary\n- This is an authenticated RCE in the PAN-OS management interface: a privileged attacker gets code execution as root.\n- Affected: PAN-OS 12.2, 12.1, 11.2, 11.1 and 10.2, plus Prisma Browser before 152.8.5.83.\n- It is exploited in the wild and was added to **KEV on 2026-10-14**.\n- Also from Palo Alto: AV26-1056 covers Idira Secrets Manager (self-hosted) before 13.9.1.\n\n## Actions\n- Patch the affected PAN-OS trains and restrict the management interface to a dedicated management network.\n- Review admin accounts and audit logs for unexpected configuration commits.\n- Related: [[CVE-2026-0310-Palo-Alto-PAN-OS-XML-Buffer-Overflow-Unauth-Root-RCE-2026]], [[CVE-2026-0273-PaloAlto-PANOS-CmdInjection]]\n\n## Tags\n#verified #kev",
+   "sev": "High",
+   "year": "2026",
+   "kev": true,
    "apts": []
   },
   "CVE-2026-0628": {
@@ -5760,6 +5857,22 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-103499": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-103499.md",
+   "body": "# CVE-2026-103499\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-103499\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-103499\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-103499\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-104939": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-104939.md",
+   "body": "# CVE-2026-104939\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-104939\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-104939\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-104939\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-105016": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-105016.md",
    "body": "# CVE-2026-105016\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-105016\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-105016\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-105016\n\n## Tags\n#cve #2026 #unrated #auto-stub",
@@ -5824,6 +5937,22 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-109812": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-109812.md",
+   "body": "# CVE-2026-109812\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-109812\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-109812\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-109812\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-109813": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-109813.md",
+   "body": "# CVE-2026-109813\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-109813\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-109813\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-109813\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-12345": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-12345.md",
    "body": "# CVE-2026-12345\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u2139\ufe0f **Enriched** \u2014 this note now contains captured intel beyond the auto-stub baseline. Verify specifics against the linked sources.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\n{ label: \"\ud83d\udc1e New CVE\",            template: \"Templates/CVE Tracker Template.md\",         folder: \"Threat_Intel/CVEs\", ask: \"CVE id (e.g. CVE-2026-12345)\" },\n\n## Where it appears in this vault\n- `\ud83c\udfe0 SOC Vault Homepage.md` \u2014 { label: \"\ud83d\udc1e New CVE\",            template: \"Templates/CVE Tracker Template.md\",         folder: \"Threat_Intel/CVEs\", ask: \"CVE id (e.g. CVE-2026-12345)\" },\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-12345\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-12345\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-12345\n\n## Tags\n#cve #2026 #unrated #enriched #verified\n\n---\n\n## \u26a0\ufe0f FALSE POSITIVE \u2014 not a real CVE reference (flagged 2026-09-04)\n\n**This stub should not exist and its identifier is not a real vulnerability in this vault's scope.**\n\n`make_cve_notes.py` extracted `CVE-2026-12345` from a **placeholder example string** in `\ud83c\udfe0 SOC Vault Homepage.md`:\n\n`ask: \"CVE id (e.g. CVE-2026-12345)\"`\n\n\u2014 which is the prompt text of a Templater quick-add button, not an intel reference. `CVE-2026-12345` is the conventional dummy identifier used in documentation examples.\n\n**Impact:** it inflates the `referenced` count in the CVE-coverage metric by one and adds a permanent empty stub to `Threat_Intel/CVEs/2026/Unrated/`.\n\n**Recommended fix (left for the vault owner \u2014 this sweep does not delete files):**\n1. Delete this file.\n2. Add an exclusion to `Dashboards/make_cve_notes.py` so the CVE regex skips: (a) matches inside `e.g.`/`example` contexts, (b) an explicit denylist containing `CVE-2026-12345`, or (c) the `\ud83c\udfe0 SOC Vault Homepage.md` file entirely, since it is a navigation page rather than an intel note.\n\nOption (b) is the smallest safe change. Without it this stub will be silently regenerated on every sweep.\n\n## Tags\n#false-positive #enriched-error #tooling-bug #do-not-cite #verified",
@@ -5851,6 +5980,14 @@
   "CVE-2026-14814": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-14814.md",
    "body": "# CVE-2026-14814\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-14814\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-14814\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-14814\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-15176": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-15176.md",
+   "body": "# CVE-2026-15176\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-15176\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-15176\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-15176\n\n## Tags\n#cve #2026 #unrated #auto-stub",
    "sev": "",
    "year": "2026",
    "kev": false,
@@ -6923,94 +7060,94 @@
  },
  "recent": [
   {
+   "title": "MITRE-ATTACK-v20-New-ICS-Techniques-C0064-C0066-IOControl-NIMBUS-MANTICORE-2026-10",
+   "file": "Guides/MITRE-ATTACK-v20-New-ICS-Techniques-C0064-C0066-IOControl-NIMBUS-MANTICORE-2026-10.md",
+   "cat": "technique",
+   "ts": "2026-10-17"
+  },
+  {
+   "title": "AI-Agent-Overreach-CERT-In-OpenAI-Crypto-Wallet-Indirect-Prompt-Injection-2026-10",
+   "file": "Guides/AI-BugBounty/AI-Agent-Overreach-CERT-In-OpenAI-Crypto-Wallet-Indirect-Prompt-Injection-2026-10.md",
+   "cat": "ai-bugbounty",
+   "ts": "2026-10-17"
+  },
+  {
+   "title": "AI-Offensive-Agents-AWS-Continuum-33-of-37-CVEs-XBOW-Chrome-Chain-VulnBump-P256-2026-10",
+   "file": "Guides/AI-BugBounty/AI-Offensive-Agents-AWS-Continuum-33-of-37-CVEs-XBOW-Chrome-Chain-VulnBump-P256-2026-10.md",
+   "cat": "cve",
+   "ts": "2026-10-17"
+  },
+  {
    "title": "anthropic-small-models-self-replication-iot-botnet-warning-2026-10",
    "file": "Guides/AI-BugBounty/anthropic-small-models-self-replication-iot-botnet-warning-2026-10.md",
    "cat": "ai-bugbounty",
-   "ts": "2026-10-14"
+   "ts": "2026-10-17"
   },
   {
-   "title": "vercel-sandbox-egress-bypass-via-certificate-validation-fetch-2026-10",
-   "file": "Guides/AI-BugBounty/vercel-sandbox-egress-bypass-via-certificate-validation-fetch-2026-10.md",
+   "title": "LiteLLM-Gateway-Two-Flaws-Low-Priv-API-Key-Theft-Server-Takeover-Check-Point-2026-10",
+   "file": "Guides/AI-BugBounty/LiteLLM-Gateway-Two-Flaws-Low-Priv-API-Key-Theft-Server-Takeover-Check-Point-2026-10.md",
    "cat": "ai-bugbounty",
-   "ts": "2026-10-14"
+   "ts": "2026-10-17"
+  },
+  {
+   "title": "Open-Weight-Model-Backdoors-Abliterated-Models-Codex-CLI-Credential-Exfil-2026-10",
+   "file": "Guides/AI-BugBounty/Open-Weight-Model-Backdoors-Abliterated-Models-Codex-CLI-Credential-Exfil-2026-10.md",
+   "cat": "ai-bugbounty",
+   "ts": "2026-10-17"
+  },
+  {
+   "title": "Vibe-Coded-Apps-Supabase-Exposure-16000-DBs-Hardcoded-Keys-IoT-Cloud-Takeover-2026-10",
+   "file": "Guides/AI-BugBounty/Vibe-Coded-Apps-Supabase-Exposure-16000-DBs-Hardcoded-Keys-IoT-Cloud-Takeover-2026-10.md",
+   "cat": "ai-bugbounty",
+   "ts": "2026-10-17"
   },
   {
    "title": "DPRK-IT-Workers-FBI-StateDept-Joint-Advisory-2026",
    "file": "Threat_Intel/APT_Groups/DPRK-IT-Workers-FBI-StateDept-Joint-Advisory-2026.md",
    "cat": "malware",
-   "ts": "2026-10-14"
+   "ts": "2026-10-17"
   },
   {
-   "title": "Kimsuky-Operation-GitPower-Ukraine-Experts-GitHub-C2-2026-10",
-   "file": "Threat_Intel/APT_Groups/Kimsuky-Operation-GitPower-Ukraine-Experts-GitHub-C2-2026-10.md",
+   "title": "Silent-Lynx-UAT-6275-TAG-193-CIS-Government-WinRAR-CVE-2025-8088-2026-10",
+   "file": "Threat_Intel/APT_Groups/Silent-Lynx-UAT-6275-TAG-193-CIS-Government-WinRAR-CVE-2025-8088-2026-10.md",
+   "cat": "cve",
+   "ts": "2026-10-17"
+  },
+  {
+   "title": "NimbusManticore-Profile",
+   "file": "Threat_Intel/APT_Groups/NimbusManticore/NimbusManticore-Profile.md",
    "cat": "malware",
-   "ts": "2026-10-14"
+   "ts": "2026-10-17"
   },
   {
-   "title": "Kimsuky-Profile",
-   "file": "Threat_Intel/APT_Groups/Kimsuky/Kimsuky-Profile.md",
+   "title": "SaltTyphoon-Profile",
+   "file": "Threat_Intel/APT_Groups/SaltTyphoon/SaltTyphoon-Profile.md",
    "cat": "malware",
-   "ts": "2026-10-14"
+   "ts": "2026-10-17"
   },
   {
-   "title": "Ahold-Delhaize-Cyberattack-Systems-Offline-2026-10",
-   "file": "Threat_Intel/Breaches/Ahold-Delhaize-Cyberattack-Systems-Offline-2026-10.md",
+   "title": "BAE-Systems-Incident-US-Federal-Bankruptcy-Noticing-Center-Outage-2026-10",
+   "file": "Threat_Intel/Breaches/BAE-Systems-Incident-US-Federal-Bankruptcy-Noticing-Center-Outage-2026-10.md",
    "cat": "breach",
-   "ts": "2026-10-14"
+   "ts": "2026-10-17"
   },
   {
-   "title": "ASOS-Snowflake-Breach-2026-10",
-   "file": "Threat_Intel/Breaches/ASOS-Snowflake-Breach-2026-10.md",
+   "title": "Breach-Roundup-2026-10-14-17-AnneArundel-LAA-DataSuckers-DMDC-ClimbUp-n0n-Maritime",
+   "file": "Threat_Intel/Breaches/Breach-Roundup-2026-10-14-17-AnneArundel-LAA-DataSuckers-DMDC-ClimbUp-n0n-Maritime.md",
    "cat": "breach",
-   "ts": "2026-10-14"
+   "ts": "2026-10-17"
+  },
+  {
+   "title": "Burger-King-Japan-11M-Customer-Records-Breach-2026-10",
+   "file": "Threat_Intel/Breaches/Burger-King-Japan-11M-Customer-Records-Breach-2026-10.md",
+   "cat": "breach",
+   "ts": "2026-10-17"
   },
   {
    "title": "Danfoss-Refrigeration-Controller-Attack-French-Supermarkets-2026-10",
    "file": "Threat_Intel/Breaches/Danfoss-Refrigeration-Controller-Attack-French-Supermarkets-2026-10.md",
    "cat": "breach",
-   "ts": "2026-10-14"
-  },
-  {
-   "title": "Meta-GitHub-Repos-Stolen-Credentials-Source-Code-1500-PII-2026-10",
-   "file": "Threat_Intel/Breaches/Meta-GitHub-Repos-Stolen-Credentials-Source-Code-1500-PII-2026-10.md",
-   "cat": "breach",
-   "ts": "2026-10-14"
-  },
-  {
-   "title": "OpenAI-Insider-Covert-Recording-Device-Executive-Room-Arrest-2026-10",
-   "file": "Threat_Intel/Breaches/OpenAI-Insider-Covert-Recording-Device-Executive-Room-Arrest-2026-10.md",
-   "cat": "breach",
-   "ts": "2026-10-14"
-  },
-  {
-   "title": "UK-Housing-Ombudsman-and-TFG-London-Incidents-2026-10-13",
-   "file": "Threat_Intel/Breaches/UK-Housing-Ombudsman-and-TFG-London-Incidents-2026-10-13.md",
-   "cat": "breach",
-   "ts": "2026-10-14"
-  },
-  {
-   "title": "Chrome-155-247-Vulns-4-Critical-UAF-2026-10",
-   "file": "Threat_Intel/CVEs/2026/Critical/Chrome-155-247-Vulns-4-Critical-UAF-2026-10.md",
-   "cat": "cve",
-   "ts": "2026-10-14"
-  },
-  {
-   "title": "CVE-2026-104935-Ivanti-Connect-Secure-Zero-Day-Chain-UTA0576-2026-10",
-   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-104935-Ivanti-Connect-Secure-Zero-Day-Chain-UTA0576-2026-10.md",
-   "cat": "cve",
-   "ts": "2026-10-14"
-  },
-  {
-   "title": "CVE-2026-106173-107656-Fortinet-FortiSIEM-FortiSandbox-Critical-2026-10",
-   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-106173-107656-Fortinet-FortiSIEM-FortiSandbox-Critical-2026-10.md",
-   "cat": "cve",
-   "ts": "2026-10-14"
-  },
-  {
-   "title": "CVE-2026-39919-Ghostscript-JPEG2000-Heap-Overflow-PDF-Upload-RCE-2026-10",
-   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-39919-Ghostscript-JPEG2000-Heap-Overflow-PDF-Upload-RCE-2026-10.md",
-   "cat": "cve",
-   "ts": "2026-10-14"
+   "ts": "2026-10-17"
   }
  ],
  "kev_referenced": [
@@ -7069,6 +7206,7 @@
   "CVE-2024-38193",
   "CVE-2024-38475",
   "CVE-2024-40766",
+  "CVE-2024-47575",
   "CVE-2025-14174",
   "CVE-2025-14733",
   "CVE-2025-24201",
@@ -7083,11 +7221,14 @@
   "CVE-2025-43529",
   "CVE-2025-49113",
   "CVE-2025-59287",
+  "CVE-2025-61624",
   "CVE-2025-62593",
   "CVE-2025-66376",
   "CVE-2025-67038",
   "CVE-2025-8088",
   "CVE-2026-0257",
+  "CVE-2026-0322",
+  "CVE-2026-102764",
   "CVE-2026-104286",
   "CVE-2026-104935",
   "CVE-2026-105133",
@@ -7159,6 +7300,7 @@
   "CVE-2026-76460",
   "CVE-2026-76461",
   "CVE-2026-76504",
+  "CVE-2026-76519",
   "CVE-2026-8037",
   "CVE-2026-81578",
   "CVE-2026-81963",
@@ -7999,6 +8141,13 @@
    "cves": 763,
    "breaches": 167,
    "malware": 184
+  },
+  {
+   "date": "2026-10-17",
+   "intel_items": 1986,
+   "cves": 787,
+   "breaches": 171,
+   "malware": 189
   }
  ]
 }
