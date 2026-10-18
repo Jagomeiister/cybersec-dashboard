@@ -1,43 +1,43 @@
 {
- "generated": "2026-10-17 20:45",
- "today": "2026-10-17",
+ "generated": "2026-10-18 20:45",
+ "today": "2026-10-18",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
-  "cves": 787,
+  "cves": 788,
   "breaches": 171,
   "malware": 189,
   "supplychain": 80,
   "tools": 97,
   "commands": 13,
   "guides": 320,
-  "intel_items": 1986,
+  "intel_items": 1997,
   "kev": 176
  },
  "windows": {
   "week": {
-   "total": 203,
+   "total": 200,
    "by_cat": {
-    "cve": 88,
-    "breach": 47,
-    "tool": 4,
-    "supplychain": 10,
-    "ai-bugbounty": 21,
-    "malware": 23,
-    "misc": 9,
+    "cve": 91,
+    "breach": 43,
+    "malware": 24,
+    "misc": 11,
+    "ai-bugbounty": 19,
+    "supplychain": 9,
+    "tool": 2,
     "technique": 1
    },
    "by_src": {}
   },
   "month": {
-   "total": 488,
+   "total": 495,
    "by_cat": {
-    "cve": 177,
-    "malware": 68,
-    "breach": 97,
-    "technique": 15,
-    "misc": 59,
-    "supplychain": 18,
+    "technique": 14,
+    "breach": 96,
+    "cve": 180,
+    "misc": 61,
+    "malware": 70,
+    "supplychain": 20,
     "other": 3,
     "ai-bugbounty": 46,
     "tool": 5
@@ -45,34 +45,34 @@
    "by_src": {}
   },
   "year": {
-   "total": 1983,
+   "total": 1994,
    "by_cat": {
     "ai-bugbounty": 154,
-    "malware": 252,
+    "malware": 255,
     "other": 111,
     "tool": 63,
-    "misc": 355,
+    "misc": 357,
     "command": 6,
     "technique": 145,
     "breach": 255,
-    "supplychain": 104,
-    "cve": 538
+    "supplychain": 106,
+    "cve": 542
    },
    "by_src": {}
   },
   "all": {
-   "total": 1986,
+   "total": 1997,
    "by_cat": {
     "ai-bugbounty": 155,
-    "malware": 252,
+    "malware": 255,
     "other": 111,
     "tool": 63,
-    "misc": 355,
+    "misc": 357,
     "command": 6,
     "technique": 146,
-    "cve": 539,
+    "cve": 543,
     "breach": 255,
-    "supplychain": 104
+    "supplychain": 106
    },
    "by_src": {}
   }
@@ -1756,7 +1756,6 @@
   },
   "month": {
    "Kimsuky": 2,
-   "Salt Typhoon": 1,
    "Lazarus Group": 1
   },
   "year": {
@@ -1858,7 +1857,7 @@
   ]
  },
  "cve_sev": {
-  "Critical": 296,
+  "Critical": 297,
   "High": 198,
   "Low": 36,
   "Medium": 25
@@ -1875,7 +1874,7 @@
   "2023": 20,
   "2024": 16,
   "2025": 38,
-  "2026": 654
+  "2026": 655
  },
  "cve_month": {
   "2025-10": 1,
@@ -1885,7 +1884,7 @@
   "2026-07": 16,
   "2026-08": 84,
   "2026-09": 160,
-  "2026-10": 123
+  "2026-10": 127
  },
  "top_cve": [
   {
@@ -3215,6 +3214,14 @@
   "CVE-2026-107406": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-107406-Citrix-NetScaler-SAML-Memory-Overflow-RCE-2026-10.md",
    "body": "# CVE-2026-107406 \u2014 Citrix NetScaler ADC/Gateway SAML Memory Overflow (RCE/DoS)\n\n\u2705 **Verification:** Verified \u2014 5 independent sources\n\n> Source: [The Hacker News](https://thehackernews.com/2026/10/citrix-patches-critical-netscaler-flaw.html) \u2014 2026-10-09 (via X @TheHackersNews 2108471092230963409)\n> Source: [SecurityWeek](https://www.securityweek.com/citrix-urges-immediate-patching-of-critical-netscaler-vulnerability/) \u2014 Fri, 09 Oct 2026 06:53 UTC\n> Source: X @citrix 2108297236463382860 (vendor guidance), @mattjay 2108339348433215747\n\n**Type:** CVE / memory corruption | **Severity:** Critical (CVSS 9.5) | **Date:** 2026-10-08 | **Tags:** #cve #citrix #netscaler #saml #edge-device\n\n## Summary\n- Critical **memory overflow** in NetScaler ADC and NetScaler Gateway, reachable when the appliance is configured as a **SAML IdP or SP**. Impact: RCE or DoS.\n- Citrix issued \"immediate guidance\" on 2026-10-08 and urges upgrading to the recommended builds.\n- **No evidence of exploitation** of this CVE yet, but THN notes three *other* NetScaler bugs are under active exploitation.\n- @mattjay: this is **not** last week's NetScaler critical, and the builds people just rushed to patch to are **also affected**.\n\n## Why it matters\nThird NetScaler critical in weeks (see [[CVE-2026-88771-88772-Citrix-NetScaler-Dual-RCE-ZeroDays-2026]], [[CVE-2026-19490-19489-Citrix-NetScaler-Auth-Bypass]]). Memory bugs in NetScaler pre-auth paths have historically been weaponized within days (CitrixBleed pattern).\n\n## Actions\n- Inventory NetScaler instances with SAML IdP/SP config (`show authentication samlIdPProfile`, `show authentication samlAction`).\n- Upgrade to the fixed builds in the Citrix bulletin; re-verify builds patched last week.\n- Hunt: nsppe crashes/core dumps, unexpected restarts, new files under `/var/netscaler/logon/` and `/var/vpn/`.\n\n\n## Update 2026-10-11 \u2014 CCCS fixed versions\n> Source: [CCCS AV26-1023](https://cyber.gc.ca/en/alerts-advisories/citrix-security-advisory-av26-1023) \u2014 2026-10-09\n> Source: [CCCS AL26-024 Update 2](https://cyber.gc.ca/en/alerts-advisories/al26-024-critical-vulnerabilities-affecting-citrix-netscaler-adc-netscaler-gateway-cve-2026-88771-cve-2026-88772) \u2014 2026-10-09\n- Fixed (CTX697191): NetScaler ADC/Gateway **13.1-64.29**, **14.1-73.46**; ADC FIPS **14.1-73.46 FIPS**, **13.1-37.283 FIPS & NDcPP**.\n- CCCS AL26-024 Update 2 folds CVE-2026-107406 into the CVE-2026-88771/88772 alert; earlier patches do not fully address it.\n\n## Tags\n#verified",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-108097": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-108097.md",
+   "body": "# CVE-2026-108097\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2026\n\n## Summary\n2111627069914288229 | 2026-10-18 | @IntCyberDigest | Drupal CVE-2026-108097 unauth RCE, ~151k sites | -> Threat_Intel/CVEs/2026/Critical/SA-CORE-2026-014-Drupal-Field-UI-Critical-RCE-2026-10.md (appended)\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 2111627069914288229 | 2026-10-18 | @IntCyberDigest | Drupal CVE-2026-108097 unauth RCE, ~151k sites | -> Threat_Intel/CVEs/2026/Critical/SA-CORE-2026-014-Drupal-Field-UI-Critical-RCE-2026-10.md (appended)\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-108097\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-108097\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-108097\n\n## Tags\n#cve #2026 #critical #auto-stub",
    "sev": "Critical",
    "year": "2026",
    "kev": false,
@@ -4704,7 +4711,7 @@
   },
   "CVE-2026-99999": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-99999-PwnEscape-Linux-Kernel-Guest-to-Host-Memory-Read-Vercel-Sandbox-2026-10.md",
-   "body": "# CVE-2026-99999 \"PwnEscape\": Linux Kernel Networking Flaw Lets Guest VMs Read Host Memory\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 single source, though the vendor (Vercel) confirmed the issue\n\n> Source: [The Hacker News](https://thehackernews.com/2026/10/critical-pwnescape-linux-kernel.html) \u2014 2026-10-15\n\n**Type:** CVE / VM escape (info leak) | **Severity:** Critical | **Date:** 2026-10-15 | **Tags:** #cve #linux-kernel #vm-escape #cloud #sandbox #ai-agents\n\n## Summary\n- A critical Linux kernel networking bug lets code inside a guest VM read **host memory**.\n- It was demonstrated against Vercel's live cloud sandboxes (the kind used to run AI agent code), and **Vercel confirmed** it.\n- This matters for any multi-tenant microVM or sandbox provider that runs untrusted or agent-generated code.\n\n## Actions\n- Track distro kernel updates and prioritize hosts that run untrusted workloads (CI runners, agent sandboxes, FaaS).\n- Related: [[vercel-sandbox-egress-bypass-via-certificate-validation-fetch-2026-10]]\n\n## Tags\n#unverified",
+   "body": "# CVE-2026-99999 \"PwnEscape\": Linux Kernel Networking Flaw Lets Guest VMs Read Host Memory\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 single source, though the vendor (Vercel) confirmed the issue\n\n> Source: [The Hacker News](https://thehackernews.com/2026/10/critical-pwnescape-linux-kernel.html) \u2014 2026-10-15\n\n**Type:** CVE / VM escape (info leak) | **Severity:** Critical | **Date:** 2026-10-15 | **Tags:** #cve #linux-kernel #vm-escape #cloud #sandbox #ai-agents\n\n## Summary\n- A critical Linux kernel networking bug lets code inside a guest VM read **host memory**.\n- It was demonstrated against Vercel's live cloud sandboxes (the kind used to run AI agent code), and **Vercel confirmed** it.\n- This matters for any multi-tenant microVM or sandbox provider that runs untrusted or agent-generated code.\n\n## Actions\n- Track distro kernel updates and prioritize hosts that run untrusted workloads (CI runners, agent sandboxes, FaaS).\n- Related: [[vercel-sandbox-egress-bypass-via-certificate-validation-fetch-2026-10]]\n\n## Tags\n#unverified\n\n\n## Update 2026-10-18 (scheduled sweep)\n> Source: [X @PaulosYibelo](https://x.com/PaulosYibelo/status/2111541156572013043) \u2014 2026-10-17T19:33Z\n\n- Researcher (discoverer side) notes VPS/compute providers worldwide spent the weekend emergency-patching and rebooting hypervisors for CVE-2026-99999 \u2014 indicates broad multi-tenant hypervisor exposure, not just Vercel.",
    "sev": "Critical",
    "year": "2026",
    "kev": false,
@@ -7060,6 +7067,72 @@
  },
  "recent": [
   {
+   "title": "goatclub-caido-amplifies-every-request-fivefold-leads",
+   "file": "BugBounty/leads/goatclub-caido-amplifies-every-request-fivefold-leads.md",
+   "cat": "other",
+   "ts": "2026-10-18"
+  },
+  {
+   "title": "session-2026-10-13-goatclub",
+   "file": "BugBounty/notes/session-2026-10-13-goatclub.md",
+   "cat": "other",
+   "ts": "2026-10-18"
+  },
+  {
+   "title": "goatclub-web-root-admin-tooling-and-dev-artifacts-report",
+   "file": "BugBounty/reports/goatclub-web-root-admin-tooling-and-dev-artifacts-report.md",
+   "cat": "other",
+   "ts": "2026-10-18"
+  },
+  {
+   "title": "AI-Offensive-Agents-AWS-Continuum-33-of-37-CVEs-XBOW-Chrome-Chain-VulnBump-P256-2026-10",
+   "file": "Guides/AI-BugBounty/AI-Offensive-Agents-AWS-Continuum-33-of-37-CVEs-XBOW-Chrome-Chain-VulnBump-P256-2026-10.md",
+   "cat": "cve",
+   "ts": "2026-10-18"
+  },
+  {
+   "title": "DPRK-IT-Workers-FBI-StateDept-Joint-Advisory-2026",
+   "file": "Threat_Intel/APT_Groups/DPRK-IT-Workers-FBI-StateDept-Joint-Advisory-2026.md",
+   "cat": "malware",
+   "ts": "2026-10-18"
+  },
+  {
+   "title": "CVE-2026-108097",
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-108097.md",
+   "cat": "cve",
+   "ts": "2026-10-18"
+  },
+  {
+   "title": "CVE-2026-99999-PwnEscape-Linux-Kernel-Guest-to-Host-Memory-Read-Vercel-Sandbox-2026-10",
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-99999-PwnEscape-Linux-Kernel-Guest-to-Host-Memory-Read-Vercel-Sandbox-2026-10.md",
+   "cat": "cve",
+   "ts": "2026-10-18"
+  },
+  {
+   "title": "SA-CORE-2026-014-Drupal-Field-UI-Critical-RCE-2026-10",
+   "file": "Threat_Intel/CVEs/2026/Critical/SA-CORE-2026-014-Drupal-Field-UI-Critical-RCE-2026-10.md",
+   "cat": "cve",
+   "ts": "2026-10-18"
+  },
+  {
+   "title": "Candiru-AdFection-Zero-Click-Spyware-via-Targeted-Ads-Al-Jazeera-2026-10",
+   "file": "Threat_Intel/Malware/Candiru-AdFection-Zero-Click-Spyware-via-Targeted-Ads-Al-Jazeera-2026-10.md",
+   "cat": "malware",
+   "ts": "2026-10-18"
+  },
+  {
+   "title": "ConnectWise-Cloud-Backup-SkyKick-Identity-Compromise-173-M365-Tenants-2026-10",
+   "file": "Threat_Intel/SupplyChain/ConnectWise-Cloud-Backup-SkyKick-Identity-Compromise-173-M365-Tenants-2026-10.md",
+   "cat": "supplychain",
+   "ts": "2026-10-18"
+  },
+  {
+   "title": "x-intel-2026-10-18",
+   "file": "X_Intel/x-intel-2026-10-18.md",
+   "cat": "misc",
+   "ts": "2026-10-18"
+  },
+  {
    "title": "MITRE-ATTACK-v20-New-ICS-Techniques-C0064-C0066-IOControl-NIMBUS-MANTICORE-2026-10",
    "file": "Guides/MITRE-ATTACK-v20-New-ICS-Techniques-C0064-C0066-IOControl-NIMBUS-MANTICORE-2026-10.md",
    "cat": "technique",
@@ -7072,12 +7145,6 @@
    "ts": "2026-10-17"
   },
   {
-   "title": "AI-Offensive-Agents-AWS-Continuum-33-of-37-CVEs-XBOW-Chrome-Chain-VulnBump-P256-2026-10",
-   "file": "Guides/AI-BugBounty/AI-Offensive-Agents-AWS-Continuum-33-of-37-CVEs-XBOW-Chrome-Chain-VulnBump-P256-2026-10.md",
-   "cat": "cve",
-   "ts": "2026-10-17"
-  },
-  {
    "title": "anthropic-small-models-self-replication-iot-botnet-warning-2026-10",
    "file": "Guides/AI-BugBounty/anthropic-small-models-self-replication-iot-botnet-warning-2026-10.md",
    "cat": "ai-bugbounty",
@@ -7087,66 +7154,6 @@
    "title": "LiteLLM-Gateway-Two-Flaws-Low-Priv-API-Key-Theft-Server-Takeover-Check-Point-2026-10",
    "file": "Guides/AI-BugBounty/LiteLLM-Gateway-Two-Flaws-Low-Priv-API-Key-Theft-Server-Takeover-Check-Point-2026-10.md",
    "cat": "ai-bugbounty",
-   "ts": "2026-10-17"
-  },
-  {
-   "title": "Open-Weight-Model-Backdoors-Abliterated-Models-Codex-CLI-Credential-Exfil-2026-10",
-   "file": "Guides/AI-BugBounty/Open-Weight-Model-Backdoors-Abliterated-Models-Codex-CLI-Credential-Exfil-2026-10.md",
-   "cat": "ai-bugbounty",
-   "ts": "2026-10-17"
-  },
-  {
-   "title": "Vibe-Coded-Apps-Supabase-Exposure-16000-DBs-Hardcoded-Keys-IoT-Cloud-Takeover-2026-10",
-   "file": "Guides/AI-BugBounty/Vibe-Coded-Apps-Supabase-Exposure-16000-DBs-Hardcoded-Keys-IoT-Cloud-Takeover-2026-10.md",
-   "cat": "ai-bugbounty",
-   "ts": "2026-10-17"
-  },
-  {
-   "title": "DPRK-IT-Workers-FBI-StateDept-Joint-Advisory-2026",
-   "file": "Threat_Intel/APT_Groups/DPRK-IT-Workers-FBI-StateDept-Joint-Advisory-2026.md",
-   "cat": "malware",
-   "ts": "2026-10-17"
-  },
-  {
-   "title": "Silent-Lynx-UAT-6275-TAG-193-CIS-Government-WinRAR-CVE-2025-8088-2026-10",
-   "file": "Threat_Intel/APT_Groups/Silent-Lynx-UAT-6275-TAG-193-CIS-Government-WinRAR-CVE-2025-8088-2026-10.md",
-   "cat": "cve",
-   "ts": "2026-10-17"
-  },
-  {
-   "title": "NimbusManticore-Profile",
-   "file": "Threat_Intel/APT_Groups/NimbusManticore/NimbusManticore-Profile.md",
-   "cat": "malware",
-   "ts": "2026-10-17"
-  },
-  {
-   "title": "SaltTyphoon-Profile",
-   "file": "Threat_Intel/APT_Groups/SaltTyphoon/SaltTyphoon-Profile.md",
-   "cat": "malware",
-   "ts": "2026-10-17"
-  },
-  {
-   "title": "BAE-Systems-Incident-US-Federal-Bankruptcy-Noticing-Center-Outage-2026-10",
-   "file": "Threat_Intel/Breaches/BAE-Systems-Incident-US-Federal-Bankruptcy-Noticing-Center-Outage-2026-10.md",
-   "cat": "breach",
-   "ts": "2026-10-17"
-  },
-  {
-   "title": "Breach-Roundup-2026-10-14-17-AnneArundel-LAA-DataSuckers-DMDC-ClimbUp-n0n-Maritime",
-   "file": "Threat_Intel/Breaches/Breach-Roundup-2026-10-14-17-AnneArundel-LAA-DataSuckers-DMDC-ClimbUp-n0n-Maritime.md",
-   "cat": "breach",
-   "ts": "2026-10-17"
-  },
-  {
-   "title": "Burger-King-Japan-11M-Customer-Records-Breach-2026-10",
-   "file": "Threat_Intel/Breaches/Burger-King-Japan-11M-Customer-Records-Breach-2026-10.md",
-   "cat": "breach",
-   "ts": "2026-10-17"
-  },
-  {
-   "title": "Danfoss-Refrigeration-Controller-Attack-French-Supermarkets-2026-10",
-   "file": "Threat_Intel/Breaches/Danfoss-Refrigeration-Controller-Attack-French-Supermarkets-2026-10.md",
-   "cat": "breach",
    "ts": "2026-10-17"
   }
  ],
@@ -8146,6 +8153,13 @@
    "date": "2026-10-17",
    "intel_items": 1986,
    "cves": 787,
+   "breaches": 171,
+   "malware": 189
+  },
+  {
+   "date": "2026-10-18",
+   "intel_items": 1997,
+   "cves": 788,
    "breaches": 171,
    "malware": 189
   }
