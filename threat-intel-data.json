@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-18 20:45",
- "today": "2026-10-18",
+ "generated": "2026-10-19 20:45",
+ "today": "2026-10-19",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
@@ -16,12 +16,12 @@
  },
  "windows": {
   "week": {
-   "total": 200,
+   "total": 195,
    "by_cat": {
-    "cve": 91,
-    "breach": 43,
-    "malware": 24,
+    "cve": 89,
     "misc": 11,
+    "malware": 23,
+    "breach": 41,
     "ai-bugbounty": 19,
     "supplychain": 9,
     "tool": 2,
@@ -8158,6 +8158,13 @@
   },
   {
    "date": "2026-10-18",
+   "intel_items": 1997,
+   "cves": 788,
+   "breaches": 171,
+   "malware": 189
+  },
+  {
+   "date": "2026-10-19",
    "intel_items": 1997,
    "cves": 788,
    "breaches": 171,
