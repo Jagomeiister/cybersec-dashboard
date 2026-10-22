@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-20 20:45",
- "today": "2026-10-20",
+ "generated": "2026-10-22 20:45",
+ "today": "2026-10-22",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
@@ -12,18 +12,18 @@
   "commands": 13,
   "guides": 321,
   "intel_items": 2010,
-  "kev": 176
+  "kev": 181
  },
  "windows": {
   "week": {
-   "total": 185,
+   "total": 115,
    "by_cat": {
-    "cve": 88,
-    "breach": 34,
-    "malware": 20,
-    "ai-bugbounty": 17,
-    "supplychain": 7,
+    "cve": 50,
+    "supplychain": 6,
+    "breach": 16,
+    "ai-bugbounty": 11,
     "tool": 3,
+    "malware": 13,
     "misc": 12,
     "technique": 3,
     "other": 1
@@ -46,7 +46,7 @@
    "by_src": {}
   },
   "year": {
-   "total": 2007,
+   "total": 2006,
    "by_cat": {
     "ai-bugbounty": 154,
     "malware": 255,
@@ -54,7 +54,7 @@
     "tool": 64,
     "misc": 360,
     "command": 6,
-    "technique": 147,
+    "technique": 146,
     "breach": 256,
     "supplychain": 106,
     "cve": 547
@@ -1752,9 +1752,7 @@
   }
  ],
  "apt_activity_windows": {
-  "week": {
-   "Kimsuky": 2
-  },
+  "week": {},
   "month": {
    "Kimsuky": 2,
    "Lazarus Group": 1
@@ -3217,7 +3215,7 @@
    "body": "# CVE-2026-106931: SiteGuard Server Edition WAF OS Command Injection \u2014 Exploited (root/SYSTEM)\n\n\u2705 **Verification:** Verified \u2014 2 independent sources (vendor alert 202610-1 + JPCERT/CC JVN88474777, as reported by BleepingComputer)\n\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-exploit-siteguard-waf-flaw-to-run-commands-as-system-root/) \u2014 2026-10-18T14:23Z\n\n**Type:** CVE / OS command injection | **Severity:** Critical | **Date:** 2026-10-18 | **Tags:** #cve #waf #siteguard #japan #exploited\n\n## Summary\n- **Flaw:** OS command injection in the **statistics function** of JP-Secure's SiteGuard Server Edition, a host-based WAF. The function is **enabled by default**.\n- **Impact:** commands run as **root** on Linux/FreeBSD and as **SYSTEM** on Windows.\n- **Exploited in the wild:** the vendor confirms abuse. It gives no actor, scale or IOCs. Customers were notified directly on 2026-09-29.\n- **Affected:**\n  - Apache httpd, Nginx and IIS editions (not FreeBSD): 2.20 up to, but not including, **8.00 Update 5**.\n  - FreeBSD Apache/Nginx editions: 2.20 up to, but not including, **7.00 Update 6**.\n  - IIS 3.10\u20134.00 Update 4 is **not** affected.\n- **Fix:** upgrade to 8.00 Update 5 or 7.00 Update 6. A replacement-file patch is available for builds that can't be upgraded, including EOL builds.\n\n## Actions\n- **Before patching**, save the diagnostic bundle from the web management screen (Diagnostic information \u2192 Download), because the fix may erase attack traces.\n- Hunt for child processes of the WAF statistics component and for new cron jobs, services or users on hosts running SiteGuard.\n- Security products that run as root on the web tier are high-value targets. Inventory every host-based WAF/agent with a management UI.\n\n## Tags\n#cve-2026-106931 #siteguard #jp-secure #waf #command-injection #exploited #verified",
    "sev": "Critical",
    "year": "2026",
-   "kev": false,
+   "kev": true,
    "apts": []
   },
   "CVE-2026-107406": {
@@ -4803,7 +4801,7 @@
    "body": "# Plex2Shell: Plex Media Server Unauthenticated RCE Chain (CVE-2026-96652 / 96654 / 96655 / 96656), Reportedly Exploited\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source (single researcher honeypot; the CVEs and the fixed build are corroborated by vendor/NVD-derived listings)\n\n> Source: [X @DarkWebInformer](https://x.com/DarkWebInformer/status/2111849768729100292) \u2014 2026-10-18T15:59Z\n> Reference: public PoC repo `github.com/code-zm/plex2shell`; CVE entries in the [SentinelOne vuln DB](https://www.sentinelone.com/vulnerability-database/cve-2026-96652/)\n\n**Type:** CVE chain / Unauth RCE | **Severity:** Critical | **Date:** 2026-10-18 | **Tags:** #cve #plex #rce #cryptominer #proxyware\n\n## Summary\n- **What:** four recently disclosed Plex Media Server flaws (**CVE-2026-96652, -96654, -96655, -96656**) chain into **unauthenticated remote code execution**. The chain is called \"Plex2Shell\", and a public PoC is available.\n- **Exploitation:** a researcher's internet-facing Plex honeypot was compromised on **2026-10-17**. Other confirmation is still missing, so this may not be a wide campaign yet.\n- **Payloads:** an XMRig miner and a residential-proxy tool called `myawesomeproxy`, which resells the victim's connection.\n- **Fixed in:** Plex Media Server **1.43.3.10861**. Anything earlier is vulnerable.\n\n## IOCs / hunting\n- Unexpected child processes of `Plex Media Server`, especially shells, curl/wget, or binaries running from /tmp.\n- Strings in process names or command lines: `myawesomeproxy`, `mylovelyminer`, `x12345`, `--rig-id`, `--donate-level`\n- Domain: `proxystream[.]st`\n- Check internet-facing **Linux and Docker** deployments first.\n\n## Actions\n- Update to 1.43.3.10861 or later. If Plex is exposed on 32400/tcp, reduce that exposure.\n- Bug bounty angle: self-hosted media servers on in-scope assets (for example `*.corp` home-lab-style hosts) are a fast check now that a public PoC exists.\n\n## Tags\n#plex #plex2shell #cve-2026-96652 #cve-2026-96654 #cve-2026-96655 #cve-2026-96656 #xmrig #proxyware #unverified",
    "sev": "Critical",
    "year": "2026",
-   "kev": false,
+   "kev": true,
    "apts": []
   },
   "CVE-2026-15409": {
@@ -7054,7 +7052,7 @@
    "body": "# CVE-2026-96654\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-96654\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-96654\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-96654\n\n## Tags\n#cve #2026 #unrated #auto-stub",
    "sev": "",
    "year": "2026",
-   "kev": false,
+   "kev": true,
    "apts": []
   },
   "CVE-2026-96655": {
@@ -7062,7 +7060,7 @@
    "body": "# CVE-2026-96655\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-96655\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-96655\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-96655\n\n## Tags\n#cve #2026 #unrated #auto-stub",
    "sev": "",
    "year": "2026",
-   "kev": false,
+   "kev": true,
    "apts": []
   },
   "CVE-2026-96656": {
@@ -7070,7 +7068,7 @@
    "body": "# CVE-2026-96656\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-96656\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-96656\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-96656\n\n## Tags\n#cve #2026 #unrated #auto-stub",
    "sev": "",
    "year": "2026",
-   "kev": false,
+   "kev": true,
    "apts": []
   },
   "CVE-2026-96934": {
@@ -7282,6 +7280,7 @@
   "CVE-2026-105133",
   "CVE-2026-105134",
   "CVE-2026-10520",
+  "CVE-2026-106931",
   "CVE-2026-15409",
   "CVE-2026-15410",
   "CVE-2026-16232",
@@ -7374,6 +7373,10 @@
   "CVE-2026-93616",
   "CVE-2026-94127",
   "CVE-2026-9586",
+  "CVE-2026-96652",
+  "CVE-2026-96654",
+  "CVE-2026-96655",
+  "CVE-2026-96656",
   "CVE-2026-96951"
  ],
  "top_tags": [],
@@ -8213,6 +8216,13 @@
   },
   {
    "date": "2026-10-20",
+   "intel_items": 2010,
+   "cves": 794,
+   "breaches": 172,
+   "malware": 189
+  },
+  {
+   "date": "2026-10-22",
    "intel_items": 2010,
    "cves": 794,
    "breaches": 172,
