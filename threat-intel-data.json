@@ -1,79 +1,79 @@
 {
- "generated": "2026-10-24 20:45",
- "today": "2026-10-24",
+ "generated": "2026-10-25 20:45",
+ "today": "2026-10-25",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
-  "cves": 816,
-  "breaches": 180,
+  "cves": 817,
+  "breaches": 182,
   "malware": 191,
   "supplychain": 80,
   "tools": 99,
   "commands": 13,
-  "guides": 323,
-  "intel_items": 2096,
+  "guides": 324,
+  "intel_items": 2105,
   "kev": 184
  },
  "windows": {
   "week": {
-   "total": 124,
+   "total": 112,
    "by_cat": {
-    "cve": 71,
-    "supplychain": 8,
-    "breach": 22,
-    "tool": 3,
-    "ai-bugbounty": 2,
-    "malware": 9,
-    "misc": 6,
-    "technique": 2,
-    "other": 1
+    "cve": 65,
+    "supplychain": 6,
+    "misc": 7,
+    "breach": 21,
+    "technique": 3,
+    "other": 1,
+    "tool": 2,
+    "malware": 6,
+    "ai-bugbounty": 1
    },
    "by_src": {}
   },
   "month": {
-   "total": 540,
+   "total": 509,
    "by_cat": {
-    "cve": 222,
-    "ai-bugbounty": 45,
-    "technique": 11,
-    "malware": 69,
-    "misc": 53,
-    "breach": 111,
-    "supplychain": 21,
+    "ai-bugbounty": 42,
+    "cve": 215,
+    "misc": 37,
+    "breach": 113,
+    "malware": 65,
+    "supplychain": 22,
+    "technique": 7,
     "tool": 7,
     "other": 1
    },
    "by_src": {}
   },
   "year": {
-   "total": 2092,
+   "total": 2101,
    "by_cat": {
     "ai-bugbounty": 155,
     "malware": 261,
     "other": 112,
     "tool": 65,
-    "misc": 361,
+    "misc": 362,
     "command": 6,
-    "technique": 146,
-    "breach": 274,
-    "supplychain": 110,
-    "cve": 602
+    "technique": 147,
+    "breach": 276,
+    "supplychain": 111,
+    "cve": 606
    },
    "by_src": {}
   },
   "all": {
-   "total": 2096,
+   "total": 2105,
    "by_cat": {
     "ai-bugbounty": 156,
     "malware": 261,
     "other": 112,
     "tool": 65,
-    "misc": 361,
+    "misc": 362,
     "command": 6,
-    "technique": 148,
-    "cve": 603,
-    "breach": 274,
-    "supplychain": 110
+    "technique": 149,
+    "cve": 607,
+    "breach": 276,
+    "supplychain": 111
    },
    "by_src": {}
   }
@@ -1869,7 +1869,7 @@
  },
  "cve_sev": {
   "Critical": 310,
-  "High": 201,
+  "High": 202,
   "Low": 40,
   "Medium": 25
  },
@@ -1885,7 +1885,7 @@
   "2023": 20,
   "2024": 17,
   "2025": 39,
-  "2026": 679
+  "2026": 680
  },
  "cve_month": {
   "2025-10": 1,
@@ -1895,7 +1895,7 @@
   "2026-07": 16,
   "2026-08": 84,
   "2026-09": 160,
-  "2026-10": 187
+  "2026-10": 191
  },
  "top_cve": [
   {
@@ -4874,7 +4874,7 @@
   },
   "CVE-2026-111497": {
    "file": "Threat_Intel/CVEs/2026/Critical/Node2Shell-CVE-2026-111497-Nodejs-Bundled-Brotli-Decoder-RCE-2026-10.md",
-   "body": "# Node2Shell \u2014 CVE-2026-111497 Node.js Bundled Brotli Decoder Out-of-Bounds Write \u2192 RCE\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> Source: [Imperva](https://www.imperva.com/blog/node2shell-from-brotli-data-to-remote-code-execution/) \u2014 2026-10-22T12:22Z\n> Source: [Semgrep](https://semgrep.dev/blog/2026/patch-your-node-and-eat-your-brotli-or-you-wont-get-dessert) \u2014 2026-10-22\n> Source: X [@TheHackersNews](https://x.com/TheHackersNews/status/2113538808126038500) \u2014 2026-10-23T07:51Z; [@IntCyberDigest](https://x.com/IntCyberDigest/status/2113466440464691712) \u2014 2026-10-23T03:04Z\n\n**Type:** CVE / RCE | **Severity:** Critical (no official CVSS in sources) | **Date:** 2026-10-22 | **Tags:** #cve #nodejs #brotli #rce #node2shell\n\n## Summary\n- Out-of-bounds write (improper bounds check) in the **Brotli decoder bundled with the Node.js runtime** (CVE per Brotli 1.2.1 changelog). Not the npm `brotli` package.\n- Found by **OpenAI Codex Security**. RCE demonstrated on the official **Node.js 24.22.0** build/image without modifying the runtime; 24.22.1 rejects the inputs.\n- EoL lines (Node 20, 23, 25) will not be fixed.\n\n## Reachable via\n- Express 5 + body-parser 2.x with inflation enabled\n- Koa via co-body\n- Fastify via @fastify/compress\n- Direct `node:zlib` Brotli decompression\n- `fetch()` of attacker-influenced Brotli responses\n- ultimate-express\n\n## Fixed\nNode **22.23.4, 24.22.1, 26.12.1**. No in-the-wild exploitation reported as of 2026-10-23.\n\n## Action / bug bounty angle\n- Upgrade Node and rebuild images. Short-term: reject `Content-Encoding: br` request bodies at the edge if unneeded.\n- Testing: send a request with `Content-Encoding: br` to body-parsing endpoints \u2014 acceptance (vs 415) indicates the decode path is reachable; report version + reachability, do not send crash payloads to production.\n\n## Related\n- [[PHP2Shell-CVE-2026-109618-109619-PHP-Core-Unauth-RCE-Exploited-2026-10]]\n\n## Tags\n#verified\n\n## Update 2026-10-24 (sweep)\n> Source: [Qualys](https://blog.qualys.com/product-tech/2026/10/23/node-js-patches-brotli-remote-code-execution-flaw-find-vulnerable-runtimes-before-attackers-do) \u2014 2026-10-23T12:58Z\n> Source: X @The_Cyber_News (2113858845365719257) \u2014 2026-10-24T05:03Z\n- Release fixes **10 CVEs** across 22.x / 24.x / 26.x incl. TLS/DNS hostname-validation flaws alongside the Brotli decoder OOB write. Qualys guidance on finding vulnerable runtimes (bundled Node in Electron apps, container base images).\n- Working **Node2Shell exploit** writeup circulating (cybersecuritynews) \u2014 code exec inside a Node app via crafted Brotli input, no runtime modification. EoL Node 20/23/25 get no fix.",
+   "body": "# Node2Shell \u2014 CVE-2026-111497 Node.js Bundled Brotli Decoder Out-of-Bounds Write \u2192 RCE\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> Source: [Imperva](https://www.imperva.com/blog/node2shell-from-brotli-data-to-remote-code-execution/) \u2014 2026-10-22T12:22Z\n> Source: [Semgrep](https://semgrep.dev/blog/2026/patch-your-node-and-eat-your-brotli-or-you-wont-get-dessert) \u2014 2026-10-22\n> Source: X [@TheHackersNews](https://x.com/TheHackersNews/status/2113538808126038500) \u2014 2026-10-23T07:51Z; [@IntCyberDigest](https://x.com/IntCyberDigest/status/2113466440464691712) \u2014 2026-10-23T03:04Z\n\n**Type:** CVE / RCE | **Severity:** Critical (no official CVSS in sources) | **Date:** 2026-10-22 | **Tags:** #cve #nodejs #brotli #rce #node2shell\n\n## Summary\n- Out-of-bounds write (improper bounds check) in the **Brotli decoder bundled with the Node.js runtime** (CVE per Brotli 1.2.1 changelog). Not the npm `brotli` package.\n- Found by **OpenAI Codex Security**. RCE demonstrated on the official **Node.js 24.22.0** build/image without modifying the runtime; 24.22.1 rejects the inputs.\n- EoL lines (Node 20, 23, 25) will not be fixed.\n\n## Reachable via\n- Express 5 + body-parser 2.x with inflation enabled\n- Koa via co-body\n- Fastify via @fastify/compress\n- Direct `node:zlib` Brotli decompression\n- `fetch()` of attacker-influenced Brotli responses\n- ultimate-express\n\n## Fixed\nNode **22.23.4, 24.22.1, 26.12.1**. No in-the-wild exploitation reported as of 2026-10-23.\n\n## Action / bug bounty angle\n- Upgrade Node and rebuild images. Short-term: reject `Content-Encoding: br` request bodies at the edge if unneeded.\n- Testing: send a request with `Content-Encoding: br` to body-parsing endpoints \u2014 acceptance (vs 415) indicates the decode path is reachable; report version + reachability, do not send crash payloads to production.\n\n## Related\n- [[PHP2Shell-CVE-2026-109618-109619-PHP-Core-Unauth-RCE-Exploited-2026-10]]\n\n## Tags\n#verified\n\n## Update 2026-10-24 (sweep)\n> Source: [Qualys](https://blog.qualys.com/product-tech/2026/10/23/node-js-patches-brotli-remote-code-execution-flaw-find-vulnerable-runtimes-before-attackers-do) \u2014 2026-10-23T12:58Z\n> Source: X @The_Cyber_News (2113858845365719257) \u2014 2026-10-24T05:03Z\n- Release fixes **10 CVEs** across 22.x / 24.x / 26.x incl. TLS/DNS hostname-validation flaws alongside the Brotli decoder OOB write. Qualys guidance on finding vulnerable runtimes (bundled Node in Electron apps, container base images).\n- Working **Node2Shell exploit** writeup circulating (cybersecuritynews) \u2014 code exec inside a Node app via crafted Brotli input, no runtime modification. EoL Node 20/23/25 get no fix.\n\n## Update 2026-10-25 (sweep) \u2014 scope widens beyond Node.js (Bun, Python, Envoy, Istio, workerd)\n> Source: [The Hacker News](https://thehackernews.com/2026/10/brotli-decoder-flaw-behind-nodejs-rce.html) \u2014 2026-10-24T11:09Z\n> Source: X @eastsidemccarty (2114154577125859826) \u2014 2026-10-25T00:38Z\n- Root bug is in **Google's Brotli C decoder** (1.0.3\u20131.2.0; fixed 1.0.10 / 1.1.1 / 1.2.1). CVSS 4.0 **9.2** (Google), 8.1 (Red Hat). Fix committed upstream 2026-02-27 but not released until 2026-10-21.\n- Products bundling their own decoder need separate fixes: **Bun 1.4.4**; **Envoy** 1.40.0 / 1.39.3 / 1.38.6 / 1.37.8 / 1.36.12; **Istio** 1.31.2 / 1.30.6 / 1.29.9; **Python Brotli 1.2.1** (PYSEC-2026-4322) and **brotlicffi 1.2.1.0** (PYSEC-2026-4323); cdxgen 13.5.0 / 12.8.9.\n- Python exposure: requests / urllib3 / httpx / aiohttp auto-decode `br` whenever Brotli is installed \u2014 client-side exposure to malicious servers. Mitigation there: upgrade or uninstall Brotli/brotlicffi.\n- Removing `br` from `Accept-Encoding` is **not sufficient**; reject `Content-Encoding: br` before any proxy/parser decodes. No Node.js workaround.\n- CISA SSVC (Oct 23): exploitation none, automatable no. Imperva RCE PoC unreleased.\n- **Cloudflare workerd** reported affected via dependency (researcher @eastsidemccarty, \"#brotlipocalypse\"): DoS trivial, RCE not achieved; Cloudflare closed report as known.\n- Bug bounty angle: Envoy/Istio sidecars and Bun/workerd edge runtimes widen the target set \u2014 check `server` headers / runtime fingerprints for version, report reachability only.",
    "sev": "Critical",
    "year": "2026",
    "kev": false,
@@ -4898,7 +4898,7 @@
   },
   "CVE-2026-109618": {
    "file": "Threat_Intel/CVEs/2026/Critical/PHP2Shell-CVE-2026-109618-109619-PHP-Core-Unauth-RCE-Exploited-2026-10.md",
-   "body": "# PHP2Shell \u2014 CVE-2026-109618 / CVE-2026-109619 PHP Core Unauthenticated RCE (Exploited, Public PoC)\n\n\u2705 **Verification:** Verified \u2014 6+ independent sources\n\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/amazon-says-php2shell-exploitation-began-4-days-before-patches/) \u2014 2026-10-22T13:09Z\n> Source: [Tenable](https://www.tenable.com/blog/php2shell-vulnerability-threat-actor-response) \u2014 2026-10-22T22:04Z\n> Source: [UpGuard](https://www.upguard.com/blog/php2shell-a-clear-explanation-and-response-framework) \u2014 2026-10-22T12:58Z\n> Source: [Imperva](https://www.imperva.com/blog/php2shell-early-attack-activity-through-impervas-lens/) \u2014 2026-10-22T16:30Z\n> Source: [Talos Threat Source](https://blog.talosintelligence.com/i-had-plans-for-that-second/) \u2014 2026-10-22T18:04Z\n> Source: [Schneier on Security](https://www.schneier.com/blog/archives/2026/10/new-serious-php-vulnerabilities-released-and-patched.html) \u2014 2026-10-22T13:26Z\n> Source: [Salt Security](https://salt.security/blog/bridging-the-patch-gap-stopping-php2shell-and-zero-days-before-waf-signatures-exist) \u2014 2026-10-23T01:00Z\n> Source: [The Last Watchdog (Gcore)](https://www.lastwatchdog.com/news-alert-gcore-extends-free-web-protection-to-government-agencies-after-widespread-php-exploits/) \u2014 2026-10-22T14:27Z\n> Source: [tl;dr sec #351](https://tldrsec.com/p/tldr-sec-351) \u2014 2026-10-22T14:30Z\n> Source: X [@IntCyberDigest](https://x.com/IntCyberDigest/status/2113435737769304239), [@swagitda_](https://x.com/swagitda_/status/2113451104994488560), [@shodanhq](https://x.com/shodanhq/status/2113423420444586279), [@ProbiusOfficial](https://x.com/ProbiusOfficial/status/2113530056438129041), [@MalwareTechBlog](https://x.com/MalwareTechBlog/status/2113463738833744047), [@0x534c](https://x.com/0x534c/status/2113161833683280284)\n\n**Type:** CVE / pre-auth RCE | **Severity:** Critical (CVSS v4 9.2; an early 10.0 figure is considered inflated) | **Date:** 2026-10-20 disclosure, 2026-10-21 patches | **Tags:** #cve #php #rce #exploited #poc #php2shell\n\n## Summary\n- **CVE-2026-109618** (\"OOM Corruption\") and **CVE-2026-109619** (\"Stale Global State\" / use-after-free) \u2014 stale internal state left after PHP aborts a request on out-of-memory. Chaining both is more reliable than either alone.\n- Unauthenticated RCE from a single HTTP request. Confirmed path through **session upload progress (on by default)**. Highest risk: **Apache mod_php with defaults** (exploit runs before app code). Also confirmed on PHP-FPM via application code paths.\n- Reaches every PHP app stack: WordPress, Drupal, Magento, Shopware, WooCommerce.\n- **Fixed:** PHP **8.5.12 / 8.4.27 / 8.3.36 / 8.2.35**. 7.4/8.0/8.1 get minimal source patches only; <7.4 unpatched. (Tenable and Talos state 8.1-and-older get no patch \u2014 sources conflict; check php.net.)\n\n## Exploitation\n- **Pre-disclosure exploitation:** Amazon MadPot honeypots logged an attempt on **2026-10-17** from an anonymization network, four days before patches. Tenable: from an Australian-geolocated IP; exploit code circulated privately before the embargo lifted.\n- **Public PoC** released (Sophos, 10-21); a \"stable\" exploit repo shared on X (@ProbiusOfficial). Marcus Hutchins: RCE needs memory addresses normally protected by ASLR; skeptical of claims of \"easy\" weaponization.\n- **Scale:** Imperva saw ~482k malicious requests against ~22k sites in 103 countries in the first 24h. Cloudflare reports payload changes to evade WAF rules. Fastly (Kelly Shortridge) posted day-2 activity data.\n- **Impact:** European public-sector sites taken offline (France: Ameli, CAF, impots, URSSAF pulled precautionarily); Gcore offering free WAAP to governments.\n- **Criminal ecosystem:** DarkForums, PwnForums, BreachForums and Dread went offline or locked down to protect their own PHP infra; some moved to Telegram. Tenable expects IABs and ransomware affiliates to adopt.\n- Discovery and exploit chain credited to frontier AI models.\n\n## Detection\n- Snort SIDs **67359, 67360** (Talos).\n- Hunt logs for repeated early warnings and **\"Maximum execution time exceeded\"** messages; worker crashes.\n- KQL hunting query for MDE shared by Steven Lim (@0x534c).\n- SANS ISC raised InfoCON to yellow (10-21).\n\n## Action\n1. Patch to the fixed versions; **rebuild container images** (base images bake in old PHP).\n2. Prioritise mod_php deployments and internet-facing apps (Shodan trend: trends.shodan.io cpe:php).\n3. Interim php.ini / FPM pool / php_admin_value hardening reduces but does not remove exposure. WAF rules are being evaded.\n4. Avoid the remirepo RPM repository, which lagged on release day.\n\n## Bug bounty angle\n- Any in-scope PHP target that has not patched is a pre-auth RCE; check version disclosure (X-Powered-By, phpinfo, error pages) and report as critical \u2014 do not exploit beyond a safe version fingerprint.\n\n## Tags\n#verified #php2shell\n\n## Update 2026-10-24 (sweep) \u2014 Day 3: Mirai joins, ASLR bypass, appliances exposed, follow-on CVE\n> Source: [SecurityWeek](https://www.securityweek.com/mirai-botnet-operators-join-php2shell-attacks-as-aslr-bypass-exploits-emerge/) \u2014 2026-10-23T12:45Z\n> Source: [SANS ISC \u2014 (Reliable)? php2shell exploitability](https://isc.sans.edu/diary/rss/33452) \u2014 2026-10-23T20:04Z\n> Source: [SANS ISC \u2014 PHP Vulnerability Wrap-Up](https://isc.sans.edu/diary/rss/33450) \u2014 2026-10-23T13:43Z\n> Source: [CCCS AL26-026 Update 1](https://cyber.gc.ca/en/alerts-advisories/al26-026-critical-vulnerabilities-impacting-php-cve-2026-109618-cve-2026-109619) \u2014 2026-10-23T16:15Z\n> Source: [McAfee](https://www.mcafee.com/blogs/internet-security/php2shell-php-vulnerability/) \u2014 2026-10-23T20:18Z\n> Source: X @IntCyberDigest (2113602587404714160), @DarkWebInformer (2113654367324713466) \u2014 2026-10-23\n\n- **Appliances:** **Palo Alto PAN-OS** confirmed affected \u2014 management web interface (HTTPS UI and XML API). Kevin Beaumont: **PAN-OS firewall VMs and Citrix NetScaler run without ASLR**, which makes PHP2Shell far easier to exploit via internet-facing management interfaces; **no patch yet** from either (Citrix promises one). \u2192 Lock management interfaces to admin networks now.\n- **Botnets:** Sophos blocked attempts to drop **\"Potassium\"** (Mirai-derived, early-2026 strain; download+DDoS). Arctic Wolf tied two Potassium binaries to PHP2Shell payload servers; Hunt.io attributes traffic to a Mirai-style botnet active since May 2026.\n- **ASLR bypass:** **VulnCheck** has a CVE-2026-109618 exploit using a memory leak to RCE on x86-64 **with ASLR on and display_errors off** (production config) \u2014 commercial (IAI customers) only.\n- **Attacker kit:** SOCRadar/Hunt.io open directory: \"one-click\" chain targeting **PHP 8.4.26 on Apache mod_php** + config-check scripts; ~20 sites fingerprinted, 11 probed, none exploitable; 10 rounds vs 123 servers, none exploited.\n- **Reality check:** Sansec walked back mass-exploitation forecast (public exploits fail on default settings); Wordfence: attacks continue, no known compromises; SANS ISC dropped **InfoCON back to Green**.\n- **Exposure stats (Qualys):** ~199k instances patched within 12h; **~110M (71%) run EoL PHP 5.4\u20138.1**; ~44M supported-branch hosts still unpatched. CISA had **not** added to KEV as of 10-23. UK gov: 32 services down, 4 partial (precautionary).\n- **Follow-on:** **CVE-2026-115560** \u2014 new unpatched session-handling RCE, same mitigation (`session.upload_progress.enabled=0`). See [[CVE-2026-115560-PHP-Session-Serialize-Handler-Upload-Progress-Unpatched-RCE-2026-10]].",
+   "body": "# PHP2Shell \u2014 CVE-2026-109618 / CVE-2026-109619 PHP Core Unauthenticated RCE (Exploited, Public PoC)\n\n\u2705 **Verification:** Verified \u2014 6+ independent sources\n\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/amazon-says-php2shell-exploitation-began-4-days-before-patches/) \u2014 2026-10-22T13:09Z\n> Source: [Tenable](https://www.tenable.com/blog/php2shell-vulnerability-threat-actor-response) \u2014 2026-10-22T22:04Z\n> Source: [UpGuard](https://www.upguard.com/blog/php2shell-a-clear-explanation-and-response-framework) \u2014 2026-10-22T12:58Z\n> Source: [Imperva](https://www.imperva.com/blog/php2shell-early-attack-activity-through-impervas-lens/) \u2014 2026-10-22T16:30Z\n> Source: [Talos Threat Source](https://blog.talosintelligence.com/i-had-plans-for-that-second/) \u2014 2026-10-22T18:04Z\n> Source: [Schneier on Security](https://www.schneier.com/blog/archives/2026/10/new-serious-php-vulnerabilities-released-and-patched.html) \u2014 2026-10-22T13:26Z\n> Source: [Salt Security](https://salt.security/blog/bridging-the-patch-gap-stopping-php2shell-and-zero-days-before-waf-signatures-exist) \u2014 2026-10-23T01:00Z\n> Source: [The Last Watchdog (Gcore)](https://www.lastwatchdog.com/news-alert-gcore-extends-free-web-protection-to-government-agencies-after-widespread-php-exploits/) \u2014 2026-10-22T14:27Z\n> Source: [tl;dr sec #351](https://tldrsec.com/p/tldr-sec-351) \u2014 2026-10-22T14:30Z\n> Source: X [@IntCyberDigest](https://x.com/IntCyberDigest/status/2113435737769304239), [@swagitda_](https://x.com/swagitda_/status/2113451104994488560), [@shodanhq](https://x.com/shodanhq/status/2113423420444586279), [@ProbiusOfficial](https://x.com/ProbiusOfficial/status/2113530056438129041), [@MalwareTechBlog](https://x.com/MalwareTechBlog/status/2113463738833744047), [@0x534c](https://x.com/0x534c/status/2113161833683280284)\n\n**Type:** CVE / pre-auth RCE | **Severity:** Critical (CVSS v4 9.2; an early 10.0 figure is considered inflated) | **Date:** 2026-10-20 disclosure, 2026-10-21 patches | **Tags:** #cve #php #rce #exploited #poc #php2shell\n\n## Summary\n- **CVE-2026-109618** (\"OOM Corruption\") and **CVE-2026-109619** (\"Stale Global State\" / use-after-free) \u2014 stale internal state left after PHP aborts a request on out-of-memory. Chaining both is more reliable than either alone.\n- Unauthenticated RCE from a single HTTP request. Confirmed path through **session upload progress (on by default)**. Highest risk: **Apache mod_php with defaults** (exploit runs before app code). Also confirmed on PHP-FPM via application code paths.\n- Reaches every PHP app stack: WordPress, Drupal, Magento, Shopware, WooCommerce.\n- **Fixed:** PHP **8.5.12 / 8.4.27 / 8.3.36 / 8.2.35**. 7.4/8.0/8.1 get minimal source patches only; <7.4 unpatched. (Tenable and Talos state 8.1-and-older get no patch \u2014 sources conflict; check php.net.)\n\n## Exploitation\n- **Pre-disclosure exploitation:** Amazon MadPot honeypots logged an attempt on **2026-10-17** from an anonymization network, four days before patches. Tenable: from an Australian-geolocated IP; exploit code circulated privately before the embargo lifted.\n- **Public PoC** released (Sophos, 10-21); a \"stable\" exploit repo shared on X (@ProbiusOfficial). Marcus Hutchins: RCE needs memory addresses normally protected by ASLR; skeptical of claims of \"easy\" weaponization.\n- **Scale:** Imperva saw ~482k malicious requests against ~22k sites in 103 countries in the first 24h. Cloudflare reports payload changes to evade WAF rules. Fastly (Kelly Shortridge) posted day-2 activity data.\n- **Impact:** European public-sector sites taken offline (France: Ameli, CAF, impots, URSSAF pulled precautionarily); Gcore offering free WAAP to governments.\n- **Criminal ecosystem:** DarkForums, PwnForums, BreachForums and Dread went offline or locked down to protect their own PHP infra; some moved to Telegram. Tenable expects IABs and ransomware affiliates to adopt.\n- Discovery and exploit chain credited to frontier AI models.\n\n## Detection\n- Snort SIDs **67359, 67360** (Talos).\n- Hunt logs for repeated early warnings and **\"Maximum execution time exceeded\"** messages; worker crashes.\n- KQL hunting query for MDE shared by Steven Lim (@0x534c).\n- SANS ISC raised InfoCON to yellow (10-21).\n\n## Action\n1. Patch to the fixed versions; **rebuild container images** (base images bake in old PHP).\n2. Prioritise mod_php deployments and internet-facing apps (Shodan trend: trends.shodan.io cpe:php).\n3. Interim php.ini / FPM pool / php_admin_value hardening reduces but does not remove exposure. WAF rules are being evaded.\n4. Avoid the remirepo RPM repository, which lagged on release day.\n\n## Bug bounty angle\n- Any in-scope PHP target that has not patched is a pre-auth RCE; check version disclosure (X-Powered-By, phpinfo, error pages) and report as critical \u2014 do not exploit beyond a safe version fingerprint.\n\n## Tags\n#verified #php2shell\n\n## Update 2026-10-24 (sweep) \u2014 Day 3: Mirai joins, ASLR bypass, appliances exposed, follow-on CVE\n> Source: [SecurityWeek](https://www.securityweek.com/mirai-botnet-operators-join-php2shell-attacks-as-aslr-bypass-exploits-emerge/) \u2014 2026-10-23T12:45Z\n> Source: [SANS ISC \u2014 (Reliable)? php2shell exploitability](https://isc.sans.edu/diary/rss/33452) \u2014 2026-10-23T20:04Z\n> Source: [SANS ISC \u2014 PHP Vulnerability Wrap-Up](https://isc.sans.edu/diary/rss/33450) \u2014 2026-10-23T13:43Z\n> Source: [CCCS AL26-026 Update 1](https://cyber.gc.ca/en/alerts-advisories/al26-026-critical-vulnerabilities-impacting-php-cve-2026-109618-cve-2026-109619) \u2014 2026-10-23T16:15Z\n> Source: [McAfee](https://www.mcafee.com/blogs/internet-security/php2shell-php-vulnerability/) \u2014 2026-10-23T20:18Z\n> Source: X @IntCyberDigest (2113602587404714160), @DarkWebInformer (2113654367324713466) \u2014 2026-10-23\n\n- **Appliances:** **Palo Alto PAN-OS** confirmed affected \u2014 management web interface (HTTPS UI and XML API). Kevin Beaumont: **PAN-OS firewall VMs and Citrix NetScaler run without ASLR**, which makes PHP2Shell far easier to exploit via internet-facing management interfaces; **no patch yet** from either (Citrix promises one). \u2192 Lock management interfaces to admin networks now.\n- **Botnets:** Sophos blocked attempts to drop **\"Potassium\"** (Mirai-derived, early-2026 strain; download+DDoS). Arctic Wolf tied two Potassium binaries to PHP2Shell payload servers; Hunt.io attributes traffic to a Mirai-style botnet active since May 2026.\n- **ASLR bypass:** **VulnCheck** has a CVE-2026-109618 exploit using a memory leak to RCE on x86-64 **with ASLR on and display_errors off** (production config) \u2014 commercial (IAI customers) only.\n- **Attacker kit:** SOCRadar/Hunt.io open directory: \"one-click\" chain targeting **PHP 8.4.26 on Apache mod_php** + config-check scripts; ~20 sites fingerprinted, 11 probed, none exploitable; 10 rounds vs 123 servers, none exploited.\n- **Reality check:** Sansec walked back mass-exploitation forecast (public exploits fail on default settings); Wordfence: attacks continue, no known compromises; SANS ISC dropped **InfoCON back to Green**.\n- **Exposure stats (Qualys):** ~199k instances patched within 12h; **~110M (71%) run EoL PHP 5.4\u20138.1**; ~44M supported-branch hosts still unpatched. CISA had **not** added to KEV as of 10-23. UK gov: 32 services down, 4 partial (precautionary).\n- **Follow-on:** **CVE-2026-115560** \u2014 new unpatched session-handling RCE, same mitigation (`session.upload_progress.enabled=0`). See [[CVE-2026-115560-PHP-Session-Serialize-Handler-Upload-Progress-Unpatched-RCE-2026-10]].\n\n## Update 2026-10-25 (sweep) \u2014 Palo Alto confirms PAN-OS impact\n> Source: X @The_Cyber_News (2113967491722403964) \u2014 2026-10-24T12:15Z\n- Palo Alto Networks confirmed both PHP RCEs affect **PAN-OS and multiple network products**, and previously impacted two PANW cloud services (now remediated). Ties to the 10-23 reports of the PAN-OS management interface being reachable and lacking ASLR \u2014 keep management interfaces off the internet and track PANW advisories for fixed builds.",
    "sev": "Critical",
    "year": "2026",
    "kev": false,
@@ -7254,6 +7254,54 @@
  },
  "recent": [
   {
+   "title": "ripgrep-search-zip-LOLBin-Proxy-Execution-Hexacorn-2026",
+   "file": "Guides/ripgrep-search-zip-LOLBin-Proxy-Execution-Hexacorn-2026.md",
+   "cat": "technique",
+   "ts": "2026-10-25"
+  },
+  {
+   "title": "Alliance-Police-Nationale-Member-Data-Unauthorized-Access-2026-10",
+   "file": "Threat_Intel/Breaches/Alliance-Police-Nationale-Member-Data-Unauthorized-Access-2026-10.md",
+   "cat": "breach",
+   "ts": "2026-10-25"
+  },
+  {
+   "title": "LFI-La-France-Insoumise-Canvassing-Data-Leak-ChimeraZ-2026-10",
+   "file": "Threat_Intel/Breaches/LFI-La-France-Insoumise-Canvassing-Data-Leak-ChimeraZ-2026-10.md",
+   "cat": "breach",
+   "ts": "2026-10-25"
+  },
+  {
+   "title": "Node2Shell-CVE-2026-111497-Nodejs-Bundled-Brotli-Decoder-RCE-2026-10",
+   "file": "Threat_Intel/CVEs/2026/Critical/Node2Shell-CVE-2026-111497-Nodejs-Bundled-Brotli-Decoder-RCE-2026-10.md",
+   "cat": "cve",
+   "ts": "2026-10-25"
+  },
+  {
+   "title": "PHP2Shell-CVE-2026-109618-109619-PHP-Core-Unauth-RCE-Exploited-2026-10",
+   "file": "Threat_Intel/CVEs/2026/Critical/PHP2Shell-CVE-2026-109618-109619-PHP-Core-Unauth-RCE-Exploited-2026-10.md",
+   "cat": "cve",
+   "ts": "2026-10-25"
+  },
+  {
+   "title": "Tailscale-11-Unpatched-Flaws-Full-Disclosure-SSH-Race-Root-Rogue-Node-2026-10",
+   "file": "Threat_Intel/CVEs/2026/High/Tailscale-11-Unpatched-Flaws-Full-Disclosure-SSH-Race-Root-Rogue-Node-2026-10.md",
+   "cat": "cve",
+   "ts": "2026-10-25"
+  },
+  {
+   "title": "LiteLLM-Malicious-PyPI-Releases-Trivy-Hack-2100-Orgs-2026",
+   "file": "Threat_Intel/SupplyChain/LiteLLM-Malicious-PyPI-Releases-Trivy-Hack-2100-Orgs-2026.md",
+   "cat": "supplychain",
+   "ts": "2026-10-25"
+  },
+  {
+   "title": "x-intel-2026-10-25",
+   "file": "X_Intel/x-intel-2026-10-25.md",
+   "cat": "misc",
+   "ts": "2026-10-25"
+  },
+  {
    "title": "session-2026-10-24",
    "file": "BugBounty/notes/session-2026-10-24.md",
    "cat": "other",
@@ -7293,54 +7341,6 @@
    "title": "Hisense-VIDAA-Smart-TV-Tracking-Server-Unauthenticated-57M-Viewing-Records-2026-10",
    "file": "Threat_Intel/Breaches/Hisense-VIDAA-Smart-TV-Tracking-Server-Unauthenticated-57M-Viewing-Records-2026-10.md",
    "cat": "breach",
-   "ts": "2026-10-24"
-  },
-  {
-   "title": "PingCAP-TiDB-Cloud-Service-Account-Credential-Breach-Customer-Data-Source-Code-2026-10",
-   "file": "Threat_Intel/Breaches/PingCAP-TiDB-Cloud-Service-Account-Credential-Breach-Customer-Data-Source-Code-2026-10.md",
-   "cat": "breach",
-   "ts": "2026-10-24"
-  },
-  {
-   "title": "Quest-Diagnostics-Quanum-Lab-Services-Manager-Breach-2026-10",
-   "file": "Threat_Intel/Breaches/Quest-Diagnostics-Quanum-Lab-Services-Manager-Breach-2026-10.md",
-   "cat": "breach",
-   "ts": "2026-10-24"
-  },
-  {
-   "title": "Arista-VeloCloud-Orchestrator-CVSS10-ZeroDay-Exploited-2026",
-   "file": "Threat_Intel/CVEs/2026/Critical/Arista-VeloCloud-Orchestrator-CVSS10-ZeroDay-Exploited-2026.md",
-   "cat": "cve",
-   "ts": "2026-10-24"
-  },
-  {
-   "title": "CVE-2026-106173-107656-Fortinet-FortiSIEM-FortiSandbox-Critical-2026-10",
-   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-106173-107656-Fortinet-FortiSIEM-FortiSandbox-Critical-2026-10.md",
-   "cat": "cve",
-   "ts": "2026-10-24"
-  },
-  {
-   "title": "CVE-2026-115560-PHP-Session-Serialize-Handler-Upload-Progress-Unpatched-RCE-2026-10",
-   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-115560-PHP-Session-Serialize-Handler-Upload-Progress-Unpatched-RCE-2026-10.md",
-   "cat": "cve",
-   "ts": "2026-10-24"
-  },
-  {
-   "title": "CVE-2026-30612-Time4Popcorn-Abandoned-Updater-Domain-HTTP-Unsigned-SYSTEM-RCE-2026",
-   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-30612-Time4Popcorn-Abandoned-Updater-Domain-HTTP-Unsigned-SYSTEM-RCE-2026.md",
-   "cat": "cve",
-   "ts": "2026-10-24"
-  },
-  {
-   "title": "CVE-2026-91403-Oracle-Java-Emergency-Update-HTTPS-Trust-Critical-2026-10",
-   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-91403-Oracle-Java-Emergency-Update-HTTPS-Trust-Critical-2026-10.md",
-   "cat": "cve",
-   "ts": "2026-10-24"
-  },
-  {
-   "title": "Fortinet-Multiple-Products-Critical-Vulns-ASD-ACSC-Alert-2026-10-23",
-   "file": "Threat_Intel/CVEs/2026/Critical/Fortinet-Multiple-Products-Critical-Vulns-ASD-ACSC-Alert-2026-10-23.md",
-   "cat": "cve",
    "ts": "2026-10-24"
   }
  ],
@@ -8391,6 +8391,13 @@
    "intel_items": 2096,
    "cves": 816,
    "breaches": 180,
+   "malware": 191
+  },
+  {
+   "date": "2026-10-25",
+   "intel_items": 2105,
+   "cves": 817,
+   "breaches": 182,
    "malware": 191
   }
  ]
