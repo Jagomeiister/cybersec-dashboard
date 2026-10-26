@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-25 20:45",
- "today": "2026-10-25",
+ "generated": "2026-10-26 20:45",
+ "today": "2026-10-26",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
@@ -16,30 +16,29 @@
  },
  "windows": {
   "week": {
-   "total": 112,
+   "total": 100,
    "by_cat": {
-    "cve": 65,
-    "supplychain": 6,
-    "misc": 7,
-    "breach": 21,
-    "technique": 3,
-    "other": 1,
-    "tool": 2,
+    "cve": 61,
+    "technique": 2,
+    "misc": 4,
+    "breach": 20,
+    "tool": 1,
+    "supplychain": 5,
     "malware": 6,
     "ai-bugbounty": 1
    },
    "by_src": {}
   },
   "month": {
-   "total": 509,
+   "total": 480,
    "by_cat": {
-    "ai-bugbounty": 42,
-    "cve": 215,
-    "misc": 37,
-    "breach": 113,
-    "malware": 65,
-    "supplychain": 22,
+    "cve": 208,
+    "breach": 105,
+    "ai-bugbounty": 36,
+    "malware": 63,
+    "supplychain": 21,
     "technique": 7,
+    "misc": 32,
     "tool": 7,
     "other": 1
    },
@@ -1759,8 +1758,7 @@
   "month": {
    "Sandworm": 2,
    "Kimsuky": 2,
-   "APT28": 1,
-   "Lazarus Group": 1
+   "APT28": 1
   },
   "year": {
    "Sandworm": 8,
@@ -8395,6 +8393,13 @@
   },
   {
    "date": "2026-10-25",
+   "intel_items": 2105,
+   "cves": 817,
+   "breaches": 182,
+   "malware": 191
+  },
+  {
+   "date": "2026-10-26",
    "intel_items": 2105,
    "cves": 817,
    "breaches": 182,
