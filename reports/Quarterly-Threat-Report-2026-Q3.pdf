@@ -933,7 +933,7 @@ endobj
 endobj
 21 0 obj
 <<
-/Length 28722
+/Length 28718
 >>
 stream
 q
@@ -1158,7 +1158,7 @@ q
 1 0 0 1 51.35433 569.4882 cm
 q
 .360784 .419608 .478431 rg
-BT 1 0 0 1 0 11.6 Tm /F1 7.4 Tf 9.5 TL (CISA added 100 CVEs to the Known Exploited Vulnerabilities catalog this quarter \(catalog 2026.10.04\); the weekly reports covered 63 of them, 12 on) Tj T* (or before the day CISA listed them. The 37 not covered are listed in Appendix B.) Tj T* ET
+BT 1 0 0 1 0 11.6 Tm /F1 7.4 Tf 9.5 TL (CISA added 100 CVEs to the Known Exploited Vulnerabilities catalog this quarter \(catalog 2026.10.26\); the weekly reports covered 63 of them, 12 on) Tj T* (or before the day CISA listed them. The 37 not covered are listed in Appendix B.) Tj T* ET
 Q
 Q
 q
@@ -2735,7 +2735,7 @@ q
 1 0 0 1 252.2835 168 cm
 q
 .360784 .419608 .478431 rg
-BT 1 0 0 1 0 2.9 Tm /F2 7.6 Tf 10.5 TL (Sectors affected \(62 of 482 items tagged; rest inferred\)) Tj T* ET
+BT 1 0 0 1 0 2.9 Tm /F2 7.6 Tf 10.5 TL (Sectors affected \(414 of 482 items tagged; rest inferred\)) Tj T* ET
 Q
 Q
 q
@@ -2762,7 +2762,7 @@ q
 0 J
 0 j
 [] 0 d
-n 92 12.74074 18.30429 10.96296 re f*
+n 92 12.74074 5.664498 10.96296 re f*
 Q
 q
 0 .517647 .239216 rg
@@ -2770,7 +2770,7 @@ q
 0 J
 0 j
 [] 0 d
-n 92 29.18519 18.30429 10.96296 re f*
+n 92 29.18519 6.230948 10.96296 re f*
 Q
 q
 0 .517647 .239216 rg
@@ -2778,7 +2778,7 @@ q
 0 J
 0 j
 [] 0 d
-n 92 45.62963 25.84135 10.96296 re f*
+n 92 45.62963 10.76255 10.96296 re f*
 Q
 q
 0 .517647 .239216 rg
@@ -2786,7 +2786,7 @@ q
 0 J
 0 j
 [] 0 d
-n 92 62.07407 25.84135 10.96296 re f*
+n 92 62.07407 11.89545 10.96296 re f*
 Q
 q
 0 .517647 .239216 rg
@@ -2794,7 +2794,7 @@ q
 0 J
 0 j
 [] 0 d
-n 92 78.51852 26.91807 10.96296 re f*
+n 92 78.51852 11.89545 10.96296 re f*
 Q
 q
 0 .517647 .239216 rg
@@ -2802,7 +2802,7 @@ q
 0 J
 0 j
 [] 0 d
-n 92 94.96296 41.99219 10.96296 re f*
+n 92 94.96296 12.4619 10.96296 re f*
 Q
 q
 0 .517647 .239216 rg
@@ -2810,7 +2810,7 @@ q
 0 J
 0 j
 [] 0 d
-n 92 111.4074 46.29908 10.96296 re f*
+n 92 111.4074 24.92379 10.96296 re f*
 Q
 q
 0 .517647 .239216 rg
@@ -2818,7 +2818,7 @@ q
 0 J
 0 j
 [] 0 d
-n 92 127.8519 61.3732 10.96296 re f*
+n 92 127.8519 71.93913 10.96296 re f*
 Q
 q
 0 .517647 .239216 rg
@@ -2831,75 +2831,75 @@ Q
 q
 1 0 0 1 0 0 cm
 q
-1 0 0 1 117.3043 18.22222 cm
+1 0 0 1 104.6645 18.22222 cm
 q
 BT /F2 7 Tf 8.4 TL ET
 BT /F2 7 Tf 8.4 TL ET
 .105882 .152941 .2 rg
-BT 1 0 0 1 -3.892 -2.8 Tm (17) Tj T* ET
+BT 1 0 0 1 -3.892 -2.8 Tm (10) Tj T* ET
 Q
 Q
 q
-1 0 0 1 117.3043 34.66667 cm
-q
-BT /F2 7 Tf 8.4 TL ET
-BT /F2 7 Tf 8.4 TL ET
-.105882 .152941 .2 rg
-BT 1 0 0 1 -3.892 -2.8 Tm (17) Tj T* ET
-Q
-Q
-q
-1 0 0 1 124.8413 51.11111 cm
+1 0 0 1 105.2309 34.66667 cm
 q
 BT /F2 7 Tf 8.4 TL ET
 BT /F2 7 Tf 8.4 TL ET
 .105882 .152941 .2 rg
-BT 1 0 0 1 -3.892 -2.8 Tm (24) Tj T* ET
+BT 1 0 0 1 -3.892 -2.8 Tm (11) Tj T* ET
 Q
 Q
 q
-1 0 0 1 124.8413 67.55556 cm
-q
-BT /F2 7 Tf 8.4 TL ET
-BT /F2 7 Tf 8.4 TL ET
-.105882 .152941 .2 rg
-BT 1 0 0 1 -3.892 -2.8 Tm (24) Tj T* ET
-Q
-Q
-q
-1 0 0 1 125.9181 84 cm
+1 0 0 1 109.7625 51.11111 cm
 q
 BT /F2 7 Tf 8.4 TL ET
 BT /F2 7 Tf 8.4 TL ET
 .105882 .152941 .2 rg
-BT 1 0 0 1 -3.892 -2.8 Tm (25) Tj T* ET
+BT 1 0 0 1 -3.892 -2.8 Tm (19) Tj T* ET
 Q
 Q
 q
-1 0 0 1 140.9922 100.4444 cm
-q
-BT /F2 7 Tf 8.4 TL ET
-BT /F2 7 Tf 8.4 TL ET
-.105882 .152941 .2 rg
-BT 1 0 0 1 -3.892 -2.8 Tm (39) Tj T* ET
-Q
-Q
-q
-1 0 0 1 145.2991 116.8889 cm
+1 0 0 1 110.8954 67.55556 cm
 q
 BT /F2 7 Tf 8.4 TL ET
 BT /F2 7 Tf 8.4 TL ET
 .105882 .152941 .2 rg
-BT 1 0 0 1 -3.892 -2.8 Tm (43) Tj T* ET
+BT 1 0 0 1 -3.892 -2.8 Tm (21) Tj T* ET
 Q
 Q
 q
-1 0 0 1 160.3732 133.3333 cm
+1 0 0 1 110.8954 84 cm
 q
 BT /F2 7 Tf 8.4 TL ET
 BT /F2 7 Tf 8.4 TL ET
 .105882 .152941 .2 rg
-BT 1 0 0 1 -3.892 -2.8 Tm (57) Tj T* ET
+BT 1 0 0 1 -3.892 -2.8 Tm (21) Tj T* ET
+Q
+Q
+q
+1 0 0 1 111.4619 100.4444 cm
+q
+BT /F2 7 Tf 8.4 TL ET
+BT /F2 7 Tf 8.4 TL ET
+.105882 .152941 .2 rg
+BT 1 0 0 1 -3.892 -2.8 Tm (22) Tj T* ET
+Q
+Q
+q
+1 0 0 1 123.9238 116.8889 cm
+q
+BT /F2 7 Tf 8.4 TL ET
+BT /F2 7 Tf 8.4 TL ET
+.105882 .152941 .2 rg
+BT 1 0 0 1 -3.892 -2.8 Tm (44) Tj T* ET
+Q
+Q
+q
+1 0 0 1 170.9391 133.3333 cm
+q
+BT /F2 7 Tf 8.4 TL ET
+BT /F2 7 Tf 8.4 TL ET
+.105882 .152941 .2 rg
+BT 1 0 0 1 -5.838 -2.8 Tm (127) Tj T* ET
 Q
 Q
 q
@@ -2908,7 +2908,7 @@ q
 BT /F2 7 Tf 8.4 TL ET
 BT /F2 7 Tf 8.4 TL ET
 .105882 .152941 .2 rg
-BT 1 0 0 1 -5.838 -2.8 Tm (121) Tj T* ET
+BT 1 0 0 1 -5.838 -2.8 Tm (230) Tj T* ET
 Q
 Q
 Q
@@ -3017,7 +3017,7 @@ q
 BT /F1 7 Tf 8.4 TL ET
 BT /F1 7 Tf 8.4 TL ET
 0 0 0 rg
-BT 1 0 0 1 -31.129 -2.8 Tm (Education) Tj T* ET
+BT 1 0 0 1 -50.568 -2.8 Tm (Energy / Utilities) Tj T* ET
 Q
 Q
 q
@@ -3026,7 +3026,7 @@ q
 BT /F1 7 Tf 8.4 TL ET
 BT /F1 7 Tf 8.4 TL ET
 0 0 0 rg
-BT 1 0 0 1 -44.352 -2.8 Tm (Manufacturing) Tj T* ET
+BT 1 0 0 1 -27.23 -2.8 Tm (OT / ICS) Tj T* ET
 Q
 Q
 q
@@ -3035,7 +3035,7 @@ q
 BT /F1 7 Tf 8.4 TL ET
 BT /F1 7 Tf 8.4 TL ET
 0 0 0 rg
-BT 1 0 0 1 -39.669 -2.8 Tm (Cross-sector) Tj T* ET
+BT 1 0 0 1 -33.845 -2.8 Tm (Healthcare) Tj T* ET
 Q
 Q
 q
@@ -3044,7 +3044,7 @@ q
 BT /F1 7 Tf 8.4 TL ET
 BT /F1 7 Tf 8.4 TL ET
 0 0 0 rg
-BT 1 0 0 1 -50.568 -2.8 Tm (Energy / Utilities) Tj T* ET
+BT 1 0 0 1 -31.129 -2.8 Tm (Education) Tj T* ET
 Q
 Q
 q
@@ -3053,7 +3053,7 @@ q
 BT /F1 7 Tf 8.4 TL ET
 BT /F1 7 Tf 8.4 TL ET
 0 0 0 rg
-BT 1 0 0 1 -33.845 -2.8 Tm (Healthcare) Tj T* ET
+BT 1 0 0 1 -28.007 -2.8 Tm (Financial) Tj T* ET
 Q
 Q
 q
@@ -3062,7 +3062,7 @@ q
 BT /F1 7 Tf 8.4 TL ET
 BT /F1 7 Tf 8.4 TL ET
 0 0 0 rg
-BT 1 0 0 1 -28.007 -2.8 Tm (Financial) Tj T* ET
+BT 1 0 0 1 -56.014 -2.8 Tm (Retail / Consumer) Tj T* ET
 Q
 Q
 q
@@ -3071,7 +3071,7 @@ q
 BT /F1 7 Tf 8.4 TL ET
 BT /F1 7 Tf 8.4 TL ET
 0 0 0 rg
-BT 1 0 0 1 -56.014 -2.8 Tm (Retail / Consumer) Tj T* ET
+BT 1 0 0 1 -38.514 -2.8 Tm (Government) Tj T* ET
 Q
 Q
 q
@@ -3080,7 +3080,7 @@ q
 BT /F1 7 Tf 8.4 TL ET
 BT /F1 7 Tf 8.4 TL ET
 0 0 0 rg
-BT 1 0 0 1 -38.514 -2.8 Tm (Government) Tj T* ET
+BT 1 0 0 1 -59.143 -2.8 Tm (Technology / SaaS) Tj T* ET
 Q
 Q
 q
@@ -3089,7 +3089,7 @@ q
 BT /F1 7 Tf 8.4 TL ET
 BT /F1 7 Tf 8.4 TL ET
 0 0 0 rg
-BT 1 0 0 1 -59.143 -2.8 Tm (Technology / SaaS) Tj T* ET
+BT 1 0 0 1 -39.669 -2.8 Tm (Cross-sector) Tj T* ET
 Q
 Q
 Q
@@ -9834,7 +9834,7 @@ endobj
 endobj
 74 0 obj
 <<
-/Length 10394
+/Length 10353
 >>
 stream
 q
@@ -10003,7 +10003,7 @@ q
 1 0 0 1 362.1858 192.6 cm
 q
 .105882 .152941 .2 rg
-BT 1 0 0 1 0 2.1 Tm /F1 7.7 Tf 9.8 TL (Healthcare, Government) Tj T* ET
+BT 1 0 0 1 0 2.1 Tm /F1 7.7 Tf 9.8 TL (Healthcare) Tj T* ET
 Q
 Q
 q
@@ -10031,7 +10031,7 @@ q
 1 0 0 1 362.1858 176.8 cm
 q
 .105882 .152941 .2 rg
-BT 1 0 0 1 0 2.1 Tm /F1 7.7 Tf 9.8 TL (Retail / Consumer) Tj T* ET
+BT 1 0 0 1 0 2.1 Tm /F1 7.7 Tf 9.8 TL (Transport / Aviation) Tj T* ET
 Q
 Q
 q
@@ -10143,7 +10143,7 @@ q
 1 0 0 1 362.1858 113.6 cm
 q
 .105882 .152941 .2 rg
-BT 1 0 0 1 0 2.1 Tm /F1 7.7 Tf 9.8 TL (Healthcare, Financial) Tj T* ET
+BT 1 0 0 1 0 2.1 Tm /F1 7.7 Tf 9.8 TL (Healthcare) Tj T* ET
 Q
 Q
 q
@@ -10227,7 +10227,7 @@ q
 1 0 0 1 362.1858 66.2 cm
 q
 .105882 .152941 .2 rg
-BT 1 0 0 1 0 2.1 Tm /F1 7.7 Tf 9.8 TL (Financial) Tj T* ET
+BT 1 0 0 1 0 2.1 Tm /F1 7.7 Tf 9.8 TL (Government) Tj T* ET
 Q
 Q
 q
@@ -10255,7 +10255,7 @@ q
 1 0 0 1 362.1858 50.4 cm
 q
 .105882 .152941 .2 rg
-BT 1 0 0 1 0 2.1 Tm /F1 7.7 Tf 9.8 TL (Financial, Energy / Utilities) Tj T* ET
+BT 1 0 0 1 0 2.1 Tm /F1 7.7 Tf 9.8 TL (Energy / Utilities) Tj T* ET
 Q
 Q
 q
@@ -10311,7 +10311,7 @@ q
 1 0 0 1 362.1858 18.8 cm
 q
 .105882 .152941 .2 rg
-BT 1 0 0 1 0 2.1 Tm /F1 7.7 Tf 9.8 TL (Government, Financial) Tj T* ET
+BT 1 0 0 1 0 2.1 Tm /F1 7.7 Tf 9.8 TL (Government) Tj T* ET
 Q
 Q
 q
@@ -18733,7 +18733,7 @@ q
 1 0 0 1 51.35433 381.8661 cm
 q
 .360784 .419608 .478431 rg
-BT 1 0 0 1 0 21.1 Tm /F1 7.4 Tf 9.5 TL (Method: items are de-duplicated by first CVE in the headline, else by headline. Vendor, origin, sector and access-vector labels are keyword) Tj T* (classifications \(Parsers/quarterly_analytics.py\) and are indicative, not analyst-assessed attribution. KEV figures use the CISA catalog version) Tj T* (2026.10.04. Each weekly item carries up to three independent references.) Tj T* ET
+BT 1 0 0 1 0 21.1 Tm /F1 7.4 Tf 9.5 TL (Method: items are de-duplicated by first CVE in the headline, else by headline. Vendor, origin, sector and access-vector labels are keyword) Tj T* (classifications \(Parsers/quarterly_analytics.py\) and are indicative, not analyst-assessed attribution. KEV figures use the CISA catalog version) Tj T* (2026.10.26. Each weekly item carries up to three independent references.) Tj T* ET
 Q
 Q
 q
@@ -19016,92 +19016,92 @@ xref
 0001004569 00000 n 
 0001004677 00000 n 
 0001005020 00000 n 
-0001033796 00000 n 
-0002889404 00000 n 
-0002889512 00000 n 
-0002889915 00000 n 
-0002914707 00000 n 
-0002914815 00000 n 
-0002915199 00000 n 
-0002915525 00000 n 
-0002915823 00000 n 
-0002916124 00000 n 
-0002916393 00000 n 
-0002916705 00000 n 
-0002917008 00000 n 
-0002917288 00000 n 
-0002917623 00000 n 
-0002917968 00000 n 
-0002918360 00000 n 
-0002918629 00000 n 
-0002918883 00000 n 
-0002919198 00000 n 
-0002919506 00000 n 
-0002919754 00000 n 
-0002935509 00000 n 
-0002935617 00000 n 
-0002936001 00000 n 
-0002936338 00000 n 
-0002936663 00000 n 
-0002936894 00000 n 
-0002937203 00000 n 
-0002937533 00000 n 
-0002937799 00000 n 
-0002938090 00000 n 
-0002938488 00000 n 
-0002938837 00000 n 
-0002939129 00000 n 
-0002939394 00000 n 
-0002939663 00000 n 
-0002939988 00000 n 
-0002940287 00000 n 
-0002940549 00000 n 
-0002955293 00000 n 
-0002955401 00000 n 
-0002955680 00000 n 
-0002978233 00000 n 
-0002978341 00000 n 
-0002978684 00000 n 
-0002998999 00000 n 
-0004530283 00000 n 
-0004530391 00000 n 
-0004530670 00000 n 
-0004541281 00000 n 
-0004541389 00000 n 
-0004541668 00000 n 
-0004552116 00000 n 
-0004552224 00000 n 
-0004552567 00000 n 
-0004566667 00000 n 
-0005969691 00000 n 
-0005969799 00000 n 
-0005970078 00000 n 
-0005989986 00000 n 
-0005990094 00000 n 
-0005990373 00000 n 
-0005997424 00000 n 
-0005997532 00000 n 
-0005997875 00000 n 
-0006008771 00000 n 
-0007353727 00000 n 
-0007353835 00000 n 
-0007354114 00000 n 
-0007362274 00000 n 
-0007362382 00000 n 
-0007362661 00000 n 
-0007384306 00000 n 
-0007384414 00000 n 
-0007384693 00000 n 
-0007406548 00000 n 
-0007406656 00000 n 
-0007406937 00000 n 
-0007426977 00000 n 
-0007427086 00000 n 
-0007427368 00000 n 
-0007452459 00000 n 
-0007452568 00000 n 
-0007452850 00000 n 
-0007470068 00000 n 
+0001033792 00000 n 
+0002889400 00000 n 
+0002889508 00000 n 
+0002889911 00000 n 
+0002914703 00000 n 
+0002914811 00000 n 
+0002915195 00000 n 
+0002915521 00000 n 
+0002915819 00000 n 
+0002916120 00000 n 
+0002916389 00000 n 
+0002916701 00000 n 
+0002917004 00000 n 
+0002917284 00000 n 
+0002917619 00000 n 
+0002917964 00000 n 
+0002918356 00000 n 
+0002918625 00000 n 
+0002918879 00000 n 
+0002919194 00000 n 
+0002919502 00000 n 
+0002919750 00000 n 
+0002935505 00000 n 
+0002935613 00000 n 
+0002935997 00000 n 
+0002936334 00000 n 
+0002936659 00000 n 
+0002936890 00000 n 
+0002937199 00000 n 
+0002937529 00000 n 
+0002937795 00000 n 
+0002938086 00000 n 
+0002938484 00000 n 
+0002938833 00000 n 
+0002939125 00000 n 
+0002939390 00000 n 
+0002939659 00000 n 
+0002939984 00000 n 
+0002940283 00000 n 
+0002940545 00000 n 
+0002955289 00000 n 
+0002955397 00000 n 
+0002955676 00000 n 
+0002978229 00000 n 
+0002978337 00000 n 
+0002978680 00000 n 
+0002998995 00000 n 
+0004530279 00000 n 
+0004530387 00000 n 
+0004530666 00000 n 
+0004541277 00000 n 
+0004541385 00000 n 
+0004541664 00000 n 
+0004552071 00000 n 
+0004552179 00000 n 
+0004552522 00000 n 
+0004566622 00000 n 
+0005969646 00000 n 
+0005969754 00000 n 
+0005970033 00000 n 
+0005989941 00000 n 
+0005990049 00000 n 
+0005990328 00000 n 
+0005997379 00000 n 
+0005997487 00000 n 
+0005997830 00000 n 
+0006008726 00000 n 
+0007353682 00000 n 
+0007353790 00000 n 
+0007354069 00000 n 
+0007362229 00000 n 
+0007362337 00000 n 
+0007362616 00000 n 
+0007384261 00000 n 
+0007384369 00000 n 
+0007384648 00000 n 
+0007406503 00000 n 
+0007406611 00000 n 
+0007406892 00000 n 
+0007426932 00000 n 
+0007427041 00000 n 
+0007427323 00000 n 
+0007452414 00000 n 
+0007452523 00000 n 
+0007452805 00000 n 
+0007470023 00000 n 
 trailer
 <<
 /Size 108
@@ -19109,5 +19109,5 @@ trailer
 /Info 1 0 R
 >>
 startxref
-7470177
+7470132
 %%EOF

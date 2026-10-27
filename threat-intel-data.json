@@ -1,41 +1,41 @@
 {
- "generated": "2026-10-26 20:45",
- "today": "2026-10-26",
+ "generated": "2026-10-27 20:45",
+ "today": "2026-10-27",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
-  "cves": 817,
+  "cves": 818,
   "breaches": 182,
   "malware": 191,
   "supplychain": 80,
   "tools": 99,
   "commands": 13,
-  "guides": 324,
+  "guides": 325,
   "intel_items": 2105,
-  "kev": 184
+  "kev": 187
  },
  "windows": {
   "week": {
-   "total": 100,
+   "total": 95,
    "by_cat": {
-    "cve": 61,
-    "technique": 2,
-    "misc": 4,
+    "cve": 59,
     "breach": 20,
     "tool": 1,
     "supplychain": 5,
     "malware": 6,
-    "ai-bugbounty": 1
+    "ai-bugbounty": 1,
+    "misc": 2,
+    "technique": 1
    },
    "by_src": {}
   },
   "month": {
-   "total": 480,
+   "total": 471,
    "by_cat": {
-    "cve": 208,
-    "breach": 105,
-    "ai-bugbounty": 36,
-    "malware": 63,
+    "cve": 204,
+    "breach": 102,
+    "malware": 62,
+    "ai-bugbounty": 35,
     "supplychain": 21,
     "technique": 7,
     "misc": 32,
@@ -1867,7 +1867,7 @@
  },
  "cve_sev": {
   "Critical": 310,
-  "High": 202,
+  "High": 203,
   "Low": 40,
   "Medium": 25
  },
@@ -1880,7 +1880,7 @@
   "2020": 5,
   "2021": 18,
   "2022": 15,
-  "2023": 20,
+  "2023": 21,
   "2024": 17,
   "2025": 39,
   "2026": 680
@@ -2346,7 +2346,7 @@
   },
   "CVE-2021-42278": {
    "file": "Threat_Intel/CVEs/2021/Unrated/CVE-2021-42278.md",
-   "body": "# CVE-2021-42278\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2021\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2021-42278\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2021-42278\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42278\n\n## Tags\n#cve #2021 #unrated #auto-stub #verified",
+   "body": "# CVE-2021-42278\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2021  \n**Vendor:** Microsoft  \n**Product:** Active Directory  \n**CISA KEV:** added 2022-04-11 \u00b7 due 2022-05-02\n\n## Summary\nMicrosoft Active Directory \u2014 Microsoft Active Directory Domain Services Privilege Escalation Vulnerability. Listed on CISA KEV (added 2022-04-11; remediation due 2022-05-02; known ransomware campaign use).\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2021-42278\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2021-42278\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42278\n\n## Tags\n#cve #2021 #unrated #auto-stub #kev #verified",
    "sev": "",
    "year": "2021",
    "kev": true,
@@ -2354,7 +2354,7 @@
   },
   "CVE-2021-42287": {
    "file": "Threat_Intel/CVEs/2021/Unrated/CVE-2021-42287.md",
-   "body": "# CVE-2021-42287\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2021\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2021-42287\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2021-42287\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42287\n\n## Tags\n#cve #2021 #unrated #auto-stub #verified",
+   "body": "# CVE-2021-42287\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2021  \n**Vendor:** Microsoft  \n**Product:** Active Directory  \n**CISA KEV:** added 2022-04-11 \u00b7 due 2022-05-02\n\n## Summary\nMicrosoft Active Directory \u2014 Microsoft Active Directory Domain Services Privilege Escalation Vulnerability. Listed on CISA KEV (added 2022-04-11; remediation due 2022-05-02; known ransomware campaign use).\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2021-42287\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2021-42287\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42287\n\n## Tags\n#cve #2021 #unrated #auto-stub #kev #verified",
    "sev": "",
    "year": "2021",
    "kev": true,
@@ -2452,7 +2452,7 @@
   },
   "CVE-2022-26923": {
    "file": "Threat_Intel/CVEs/2022/Unrated/CVE-2022-26923.md",
-   "body": "# CVE-2022-26923\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2022\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2022-26923\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2022-26923\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-26923\n\n## Tags\n#cve #2022 #unrated #auto-stub #verified",
+   "body": "# CVE-2022-26923\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2022  \n**Vendor:** Microsoft  \n**Product:** Active Directory  \n**CISA KEV:** added 2022-08-18 \u00b7 due 2022-09-08\n\n## Summary\nMicrosoft Active Directory \u2014 Microsoft Active Directory Domain Services Privilege Escalation Vulnerability. Listed on CISA KEV (added 2022-08-18; remediation due 2022-09-08).\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2022-26923\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2022-26923\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-26923\n\n## Tags\n#cve #2022 #unrated #auto-stub #kev #verified",
    "sev": "",
    "year": "2022",
    "kev": true,
@@ -2530,6 +2530,14 @@
     "Salt Typhoon"
    ]
   },
+  "CVE-2023-27532": {
+   "file": "Threat_Intel/CVEs/2023/High/CVE-2023-27532.md",
+   "body": "# CVE-2023-27532\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** High  \n**Year:** 2023  \n**Vendor:** Veeam  \n**Product:** Backup & Replication  \n**CISA KEV:** added 2023-08-22 \u00b7 due 2023-09-12\n\n## Summary\nWhat the attacker does.** CVE-2026-0257 is an authentication bypass in PAN-OS GlobalProtect portals and gateways that gives a VPN session without MFA. It was patched in May but is still being exploited. On 20 Oct 2026 Unit 42 reported that Qilin (Spikey Scorpius), Inc (Tarnished Scorpius) and Settra ransomware operators use it. After connecting they run RMM tools for recon and move laterally over RDP/SMB. In one case they moved from the VPN to vCenter and turned off ESXi's `execInstalledOnly` protection. They then used a custom tool to pull credentials offline from a domain controller's VMDK, which never touches in-guest EDR. Some intrusions also chained Veeam CVE-2023-27532. Because the DC never runs anything suspicious, detection has to happen at the VPN, hypervisor and backup layers.\n\n## Where it appears in this vault\n- `Guides/Detections/Detection-Digest-2026-10-27.md` \u2014 What the attacker does.** CVE-2026-0257 is an authentication bypass in PAN-OS GlobalProtect portals and gateways that gives a VPN session without MFA. It was patched in May but is still being exploited. On 20 Oct 2026 Unit 42 reported that Qilin (Spikey Scorpius), Inc (Tarnished Scorpius) and Settra ransomware operators use it. After connecting they run RMM tools for recon and move laterally over RDP/SMB. In one case they moved from the VPN to vCenter and turned off ESXi's `execInstalledOnly` protection. They then used a custom tool to pull credentials offline from a domain controller's VMDK, which never touches in-guest EDR. Some intrusions also chained Veeam CVE-2023-27532. Because the DC never runs anything suspicious, detection has to happen at the VPN, hypervisor and backup layers.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2023-27532\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2023-27532\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-27532\n\n## Tags\n#cve #2023 #high #auto-stub #kev",
+   "sev": "High",
+   "year": "2023",
+   "kev": true,
+   "apts": []
+  },
   "CVE-2023-38831": {
    "file": "Threat_Intel/CVEs/2023/High/CVE-2023-38831.md",
    "body": "# CVE-2023-38831\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** High  \n**Year:** 2023\n\n## Summary\nWinRAR archive spoofing enabling code execution; abused by multiple state actors.\n\n## Where it appears in this vault\n- `Threat_Intel/APT_Groups/APT29/APT29-Profile.md` \u2014 2023** \u2014 WinRAR zero-day (CVE-2023-38831): diplomatic spear-phishing on European embassies with \"BMW for sale\" lures.\n- `Threat_Intel/APT_Groups/APT29/APT29-Profile.md` \u2014 Patch internet-facing software promptly (TeamCity CVE-2023-42793, WinRAR CVE-2023-38831).\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2023-38831\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2023-38831\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-38831\n\n## Tags\n#cve #2023 #high #auto-stub #verified",
@@ -2598,7 +2606,7 @@
   },
   "CVE-2023-27350": {
    "file": "Threat_Intel/CVEs/2023/Unrated/CVE-2023-27350.md",
-   "body": "# CVE-2023-27350\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2023\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2023-27350\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2023-27350\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-27350\n\n## Tags\n#cve #2023 #unrated #auto-stub #verified",
+   "body": "# CVE-2023-27350\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2023  \n**Vendor:** PaperCut  \n**Product:** MF/NG  \n**CISA KEV:** added 2023-04-21 \u00b7 due 2023-05-12\n\n## Summary\nPaperCut MF/NG \u2014 PaperCut MF/NG Improper Access Control Vulnerability. Listed on CISA KEV (added 2023-04-21; remediation due 2023-05-12; known ransomware campaign use).\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2023-27350\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2023-27350\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-27350\n\n## Tags\n#cve #2023 #unrated #auto-stub #kev #verified",
    "sev": "",
    "year": "2023",
    "kev": true,
@@ -2932,7 +2940,7 @@
   },
   "CVE-2025-25249": {
    "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-25249.md",
-   "body": "# CVE-2025-25249\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2025\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-25249\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-25249\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-25249\n\n## Tags\n#cve #2025 #unrated #auto-stub #verified",
+   "body": "# CVE-2025-25249\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2025  \n**Vendor:** Fortinet  \n**Product:** Multiple Products  \n**CISA KEV:** added 2026-09-09 \u00b7 due 2026-09-12\n\n## Summary\nFortinet Multiple Products \u2014 Fortinet Multiple Products Heap-based Buffer Overflow Vulnerability. Listed on CISA KEV (added 2026-09-09; remediation due 2026-09-12).\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-25249\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-25249\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-25249\n\n## Tags\n#cve #2025 #unrated #auto-stub #kev #verified",
    "sev": "",
    "year": "2025",
    "kev": true,
@@ -2964,7 +2972,7 @@
   },
   "CVE-2025-3248": {
    "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-3248.md",
-   "body": "# CVE-2025-3248\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2025\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-3248\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-3248\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-3248\n\n## Tags\n#cve #2025 #unrated #auto-stub #verified",
+   "body": "# CVE-2025-3248\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2025  \n**Vendor:** Langflow  \n**Product:** Langflow  \n**CISA KEV:** added 2025-05-05 \u00b7 due 2025-05-26\n\n## Summary\nLangflow Langflow \u2014 Langflow Missing Authentication Vulnerability. Listed on CISA KEV (added 2025-05-05; remediation due 2025-05-26; known ransomware campaign use).\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-3248\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-3248\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-3248\n\n## Tags\n#cve #2025 #unrated #auto-stub #kev #verified",
    "sev": "",
    "year": "2025",
    "kev": true,
@@ -3084,7 +3092,7 @@
   },
   "CVE-2025-66376": {
    "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-66376.md",
-   "body": "# CVE-2025-66376\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2025\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-66376\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-66376\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-66376\n\n## Tags\n#cve #2025 #unrated #auto-stub #verified",
+   "body": "# CVE-2025-66376\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2025  \n**Vendor:** Synacor  \n**Product:** Zimbra Collaboration Suite (ZCS)  \n**CISA KEV:** added 2026-03-18 \u00b7 due 2026-04-01\n\n## Summary\nSynacor Zimbra Collaboration Suite (ZCS) \u2014 Synacor Zimbra Collaboration Suite (ZCS) Cross-Site Scripting Vulnerability. Listed on CISA KEV (added 2026-03-18; remediation due 2026-04-01).\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-66376\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-66376\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-66376\n\n## Tags\n#cve #2025 #unrated #auto-stub #kev #verified",
    "sev": "",
    "year": "2025",
    "kev": true,
@@ -3281,7 +3289,7 @@
    "body": "# CVE-2026-109619\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2026\n\n## Summary\n1. **PHP2Shell:** ASD's ACSC issued a rare \"Critical Alert: Act Now\" for two unauthenticated RCE flaws in the PHP runtime (CVE-2026-109618, CVE-2026-109619). The flaws are being exploited in the wild, and cyber.gov.au, GovCMS, Moodle and other sites went offline or into restricted mode while patches were applied.\n\n## Where it appears in this vault\n- `Reports/Australia/AU-Roundup-2026-10-23.md` \u2014 1. **PHP2Shell:** ASD's ACSC issued a rare \"Critical Alert: Act Now\" for two unauthenticated RCE flaws in the PHP runtime (CVE-2026-109618, CVE-2026-109619). The flaws are being exploited in the wild, and cyber.gov.au, GovCMS, Moodle and other sites went offline or into restricted mode while patches were applied.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-109619\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-109619\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-109619\n\n## Tags\n#cve #2026 #critical #auto-stub",
    "sev": "Critical",
    "year": "2026",
-   "kev": false,
+   "kev": true,
    "apts": []
   },
   "CVE-2026-110447": {
@@ -4899,7 +4907,7 @@
    "body": "# PHP2Shell \u2014 CVE-2026-109618 / CVE-2026-109619 PHP Core Unauthenticated RCE (Exploited, Public PoC)\n\n\u2705 **Verification:** Verified \u2014 6+ independent sources\n\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/amazon-says-php2shell-exploitation-began-4-days-before-patches/) \u2014 2026-10-22T13:09Z\n> Source: [Tenable](https://www.tenable.com/blog/php2shell-vulnerability-threat-actor-response) \u2014 2026-10-22T22:04Z\n> Source: [UpGuard](https://www.upguard.com/blog/php2shell-a-clear-explanation-and-response-framework) \u2014 2026-10-22T12:58Z\n> Source: [Imperva](https://www.imperva.com/blog/php2shell-early-attack-activity-through-impervas-lens/) \u2014 2026-10-22T16:30Z\n> Source: [Talos Threat Source](https://blog.talosintelligence.com/i-had-plans-for-that-second/) \u2014 2026-10-22T18:04Z\n> Source: [Schneier on Security](https://www.schneier.com/blog/archives/2026/10/new-serious-php-vulnerabilities-released-and-patched.html) \u2014 2026-10-22T13:26Z\n> Source: [Salt Security](https://salt.security/blog/bridging-the-patch-gap-stopping-php2shell-and-zero-days-before-waf-signatures-exist) \u2014 2026-10-23T01:00Z\n> Source: [The Last Watchdog (Gcore)](https://www.lastwatchdog.com/news-alert-gcore-extends-free-web-protection-to-government-agencies-after-widespread-php-exploits/) \u2014 2026-10-22T14:27Z\n> Source: [tl;dr sec #351](https://tldrsec.com/p/tldr-sec-351) \u2014 2026-10-22T14:30Z\n> Source: X [@IntCyberDigest](https://x.com/IntCyberDigest/status/2113435737769304239), [@swagitda_](https://x.com/swagitda_/status/2113451104994488560), [@shodanhq](https://x.com/shodanhq/status/2113423420444586279), [@ProbiusOfficial](https://x.com/ProbiusOfficial/status/2113530056438129041), [@MalwareTechBlog](https://x.com/MalwareTechBlog/status/2113463738833744047), [@0x534c](https://x.com/0x534c/status/2113161833683280284)\n\n**Type:** CVE / pre-auth RCE | **Severity:** Critical (CVSS v4 9.2; an early 10.0 figure is considered inflated) | **Date:** 2026-10-20 disclosure, 2026-10-21 patches | **Tags:** #cve #php #rce #exploited #poc #php2shell\n\n## Summary\n- **CVE-2026-109618** (\"OOM Corruption\") and **CVE-2026-109619** (\"Stale Global State\" / use-after-free) \u2014 stale internal state left after PHP aborts a request on out-of-memory. Chaining both is more reliable than either alone.\n- Unauthenticated RCE from a single HTTP request. Confirmed path through **session upload progress (on by default)**. Highest risk: **Apache mod_php with defaults** (exploit runs before app code). Also confirmed on PHP-FPM via application code paths.\n- Reaches every PHP app stack: WordPress, Drupal, Magento, Shopware, WooCommerce.\n- **Fixed:** PHP **8.5.12 / 8.4.27 / 8.3.36 / 8.2.35**. 7.4/8.0/8.1 get minimal source patches only; <7.4 unpatched. (Tenable and Talos state 8.1-and-older get no patch \u2014 sources conflict; check php.net.)\n\n## Exploitation\n- **Pre-disclosure exploitation:** Amazon MadPot honeypots logged an attempt on **2026-10-17** from an anonymization network, four days before patches. Tenable: from an Australian-geolocated IP; exploit code circulated privately before the embargo lifted.\n- **Public PoC** released (Sophos, 10-21); a \"stable\" exploit repo shared on X (@ProbiusOfficial). Marcus Hutchins: RCE needs memory addresses normally protected by ASLR; skeptical of claims of \"easy\" weaponization.\n- **Scale:** Imperva saw ~482k malicious requests against ~22k sites in 103 countries in the first 24h. Cloudflare reports payload changes to evade WAF rules. Fastly (Kelly Shortridge) posted day-2 activity data.\n- **Impact:** European public-sector sites taken offline (France: Ameli, CAF, impots, URSSAF pulled precautionarily); Gcore offering free WAAP to governments.\n- **Criminal ecosystem:** DarkForums, PwnForums, BreachForums and Dread went offline or locked down to protect their own PHP infra; some moved to Telegram. Tenable expects IABs and ransomware affiliates to adopt.\n- Discovery and exploit chain credited to frontier AI models.\n\n## Detection\n- Snort SIDs **67359, 67360** (Talos).\n- Hunt logs for repeated early warnings and **\"Maximum execution time exceeded\"** messages; worker crashes.\n- KQL hunting query for MDE shared by Steven Lim (@0x534c).\n- SANS ISC raised InfoCON to yellow (10-21).\n\n## Action\n1. Patch to the fixed versions; **rebuild container images** (base images bake in old PHP).\n2. Prioritise mod_php deployments and internet-facing apps (Shodan trend: trends.shodan.io cpe:php).\n3. Interim php.ini / FPM pool / php_admin_value hardening reduces but does not remove exposure. WAF rules are being evaded.\n4. Avoid the remirepo RPM repository, which lagged on release day.\n\n## Bug bounty angle\n- Any in-scope PHP target that has not patched is a pre-auth RCE; check version disclosure (X-Powered-By, phpinfo, error pages) and report as critical \u2014 do not exploit beyond a safe version fingerprint.\n\n## Tags\n#verified #php2shell\n\n## Update 2026-10-24 (sweep) \u2014 Day 3: Mirai joins, ASLR bypass, appliances exposed, follow-on CVE\n> Source: [SecurityWeek](https://www.securityweek.com/mirai-botnet-operators-join-php2shell-attacks-as-aslr-bypass-exploits-emerge/) \u2014 2026-10-23T12:45Z\n> Source: [SANS ISC \u2014 (Reliable)? php2shell exploitability](https://isc.sans.edu/diary/rss/33452) \u2014 2026-10-23T20:04Z\n> Source: [SANS ISC \u2014 PHP Vulnerability Wrap-Up](https://isc.sans.edu/diary/rss/33450) \u2014 2026-10-23T13:43Z\n> Source: [CCCS AL26-026 Update 1](https://cyber.gc.ca/en/alerts-advisories/al26-026-critical-vulnerabilities-impacting-php-cve-2026-109618-cve-2026-109619) \u2014 2026-10-23T16:15Z\n> Source: [McAfee](https://www.mcafee.com/blogs/internet-security/php2shell-php-vulnerability/) \u2014 2026-10-23T20:18Z\n> Source: X @IntCyberDigest (2113602587404714160), @DarkWebInformer (2113654367324713466) \u2014 2026-10-23\n\n- **Appliances:** **Palo Alto PAN-OS** confirmed affected \u2014 management web interface (HTTPS UI and XML API). Kevin Beaumont: **PAN-OS firewall VMs and Citrix NetScaler run without ASLR**, which makes PHP2Shell far easier to exploit via internet-facing management interfaces; **no patch yet** from either (Citrix promises one). \u2192 Lock management interfaces to admin networks now.\n- **Botnets:** Sophos blocked attempts to drop **\"Potassium\"** (Mirai-derived, early-2026 strain; download+DDoS). Arctic Wolf tied two Potassium binaries to PHP2Shell payload servers; Hunt.io attributes traffic to a Mirai-style botnet active since May 2026.\n- **ASLR bypass:** **VulnCheck** has a CVE-2026-109618 exploit using a memory leak to RCE on x86-64 **with ASLR on and display_errors off** (production config) \u2014 commercial (IAI customers) only.\n- **Attacker kit:** SOCRadar/Hunt.io open directory: \"one-click\" chain targeting **PHP 8.4.26 on Apache mod_php** + config-check scripts; ~20 sites fingerprinted, 11 probed, none exploitable; 10 rounds vs 123 servers, none exploited.\n- **Reality check:** Sansec walked back mass-exploitation forecast (public exploits fail on default settings); Wordfence: attacks continue, no known compromises; SANS ISC dropped **InfoCON back to Green**.\n- **Exposure stats (Qualys):** ~199k instances patched within 12h; **~110M (71%) run EoL PHP 5.4\u20138.1**; ~44M supported-branch hosts still unpatched. CISA had **not** added to KEV as of 10-23. UK gov: 32 services down, 4 partial (precautionary).\n- **Follow-on:** **CVE-2026-115560** \u2014 new unpatched session-handling RCE, same mitigation (`session.upload_progress.enabled=0`). See [[CVE-2026-115560-PHP-Session-Serialize-Handler-Upload-Progress-Unpatched-RCE-2026-10]].\n\n## Update 2026-10-25 (sweep) \u2014 Palo Alto confirms PAN-OS impact\n> Source: X @The_Cyber_News (2113967491722403964) \u2014 2026-10-24T12:15Z\n- Palo Alto Networks confirmed both PHP RCEs affect **PAN-OS and multiple network products**, and previously impacted two PANW cloud services (now remediated). Ties to the 10-23 reports of the PAN-OS management interface being reachable and lacking ASLR \u2014 keep management interfaces off the internet and track PANW advisories for fixed builds.",
    "sev": "Critical",
    "year": "2026",
-   "kev": false,
+   "kev": true,
    "apts": []
   },
   "CVE-2026-96652": {
@@ -6027,7 +6035,7 @@
   },
   "CVE-2026-105133": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-105133.md",
-   "body": "# CVE-2026-105133\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-105133\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-105133\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-105133\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
+   "body": "# CVE-2026-105133\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026  \n**Vendor:** Ahsay  \n**Product:** AhsayCBS  \n**CISA KEV:** added 2026-10-14 \u00b7 due 2026-10-17\n\n## Summary\nAhsay AhsayCBS \u2014 Ahsay AhsayCBS Improper Authentication Vulnerability. Listed on CISA KEV (added 2026-10-14; remediation due 2026-10-17).\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-105133\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-105133\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-105133\n\n## Tags\n#cve #2026 #unrated #auto-stub #kev #verified",
    "sev": "",
    "year": "2026",
    "kev": true,
@@ -6099,7 +6107,7 @@
   },
   "CVE-2026-114625": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-114625.md",
-   "body": "# CVE-2026-114625\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-114625\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-114625\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-114625\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "body": "# CVE-2026-114625\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026  \n**Vendor:** Arista  \n**Product:** VeloCloud Orchestrator  \n**CISA KEV:** added 2026-10-23 \u00b7 due 2026-10-26\n\n## Summary\nArista VeloCloud Orchestrator \u2014 Arista VeloCloud Orchestrator SQL Injection Vulnerability. Listed on CISA KEV (added 2026-10-23; remediation due 2026-10-26).\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-114625\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-114625\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-114625\n\n## Tags\n#cve #2026 #unrated #auto-stub #kev",
    "sev": "",
    "year": "2026",
    "kev": true,
@@ -6227,7 +6235,7 @@
   },
   "CVE-2026-20131": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-20131.md",
-   "body": "# CVE-2026-20131\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-20131\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-20131\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-20131\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
+   "body": "# CVE-2026-20131\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026  \n**Vendor:** Cisco  \n**Product:** Secure Firewall Management Center (FMC)  \n**CISA KEV:** added 2026-03-19 \u00b7 due 2026-03-22\n\n## Summary\nCisco Secure Firewall Management Center (FMC) \u2014 Cisco Secure Firewall Management Center (FMC) Software and Cisco Security Cloud Control (SCC) Firewall Management Deserialization of Untrusted Data Vulnerability. Listed on CISA KEV (added 2026-03-19; remediation due 2026-03-22; known ransomware campaign use).\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-20131\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-20131\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-20131\n\n## Tags\n#cve #2026 #unrated #auto-stub #kev #verified",
    "sev": "",
    "year": "2026",
    "kev": true,
@@ -6291,7 +6299,7 @@
   },
   "CVE-2026-20316": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-20316.md",
-   "body": "# CVE-2026-20316\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-20316\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-20316\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-20316\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
+   "body": "# CVE-2026-20316\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026  \n**Vendor:** Cisco  \n**Product:** Secure Firewall Management Center (FMC)  \n**CISA KEV:** added 2026-07-29 \u00b7 due 2026-08-01\n\n## Summary\nCisco Secure Firewall Management Center (FMC) \u2014 Cisco Secure Firewall Management Center Use of Hard-coded Password Vulnerability. Listed on CISA KEV (added 2026-07-29; remediation due 2026-08-01; known ransomware campaign use).\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-20316\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-20316\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-20316\n\n## Tags\n#cve #2026 #unrated #auto-stub #kev #verified",
    "sev": "",
    "year": "2026",
    "kev": true,
@@ -6379,7 +6387,7 @@
   },
   "CVE-2026-34909": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-34909.md",
-   "body": "# CVE-2026-34909\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-34909\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-34909\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-34909\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
+   "body": "# CVE-2026-34909\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026  \n**Vendor:** Ubiquiti  \n**Product:** UniFi OS  \n**CISA KEV:** added 2026-06-23 \u00b7 due 2026-06-26\n\n## Summary\nUbiquiti UniFi OS \u2014 Ubiquiti UniFi OS Path Traversal Vulnerability. Listed on CISA KEV (added 2026-06-23; remediation due 2026-06-26).\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-34909\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-34909\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-34909\n\n## Tags\n#cve #2026 #unrated #auto-stub #kev #verified",
    "sev": "",
    "year": "2026",
    "kev": true,
@@ -6387,7 +6395,7 @@
   },
   "CVE-2026-34910": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-34910.md",
-   "body": "# CVE-2026-34910\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-34910\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-34910\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-34910\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
+   "body": "# CVE-2026-34910\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026  \n**Vendor:** Ubiquiti  \n**Product:** UniFi OS  \n**CISA KEV:** added 2026-06-23 \u00b7 due 2026-06-26\n\n## Summary\nUbiquiti UniFi OS \u2014 Ubiquiti UniFi OS Improper Input Validation Vulnerability. Listed on CISA KEV (added 2026-06-23; remediation due 2026-06-26).\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-34910\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-34910\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-34910\n\n## Tags\n#cve #2026 #unrated #auto-stub #kev #verified",
    "sev": "",
    "year": "2026",
    "kev": true,
@@ -6459,7 +6467,7 @@
   },
   "CVE-2026-42016": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-42016.md",
-   "body": "# CVE-2026-42016\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-42016\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-42016\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42016\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
+   "body": "# CVE-2026-42016\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026  \n**Vendor:** JFrog  \n**Product:** Artifactory  \n**CISA KEV:** added 2026-09-11 \u00b7 due 2026-09-25\n\n## Summary\nJFrog Artifactory \u2014 JFrog Artifactory Incorrect Authorization Vulnerability. Listed on CISA KEV (added 2026-09-11; remediation due 2026-09-25).\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-42016\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-42016\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42016\n\n## Tags\n#cve #2026 #unrated #auto-stub #kev #verified",
    "sev": "",
    "year": "2026",
    "kev": true,
@@ -6467,7 +6475,7 @@
   },
   "CVE-2026-42018": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-42018.md",
-   "body": "# CVE-2026-42018\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-42018\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-42018\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42018\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
+   "body": "# CVE-2026-42018\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026  \n**Vendor:** JFrog  \n**Product:** Artifactory  \n**CISA KEV:** added 2026-09-11 \u00b7 due 2026-09-25\n\n## Summary\nJFrog Artifactory \u2014 JFrog Artifactory Improper Authentication Vulnerability. Listed on CISA KEV (added 2026-09-11; remediation due 2026-09-25).\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-42018\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-42018\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-42018\n\n## Tags\n#cve #2026 #unrated #auto-stub #kev #verified",
    "sev": "",
    "year": "2026",
    "kev": true,
@@ -6619,7 +6627,7 @@
   },
   "CVE-2026-50751": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-50751.md",
-   "body": "# CVE-2026-50751\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-50751\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-50751\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-50751\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
+   "body": "# CVE-2026-50751\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026  \n**Vendor:** Check Point  \n**Product:** Security Gateway  \n**CISA KEV:** added 2026-06-08 \u00b7 due 2026-06-11\n\n## Summary\nCheck Point Security Gateway \u2014 Check Point Security Gateway Improper Authentication Vulnerability. Listed on CISA KEV (added 2026-06-08; remediation due 2026-06-11; known ransomware campaign use).\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-50751\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-50751\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-50751\n\n## Tags\n#cve #2026 #unrated #auto-stub #kev #verified",
    "sev": "",
    "year": "2026",
    "kev": true,
@@ -6747,7 +6755,7 @@
   },
   "CVE-2026-59822": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-59822.md",
-   "body": "# CVE-2026-59822\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-59822\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-59822\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-59822\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
+   "body": "# CVE-2026-59822\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026  \n**Vendor:** BerriAI  \n**Product:** LiteLLM  \n**CISA KEV:** added 2026-09-02 \u00b7 due 2026-09-16\n\n## Summary\nBerriAI LiteLLM \u2014 BerriAI LiteLLM Improper Authentication Vulnerability. Listed on CISA KEV (added 2026-09-02; remediation due 2026-09-16).\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-59822\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-59822\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-59822\n\n## Tags\n#cve #2026 #unrated #auto-stub #kev #verified",
    "sev": "",
    "year": "2026",
    "kev": true,
@@ -6859,7 +6867,7 @@
   },
   "CVE-2026-67279": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-67279.md",
-   "body": "# CVE-2026-67279\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-67279\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-67279\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-67279\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
+   "body": "# CVE-2026-67279\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026  \n**Vendor:** MikroTik  \n**Product:** RouterOS  \n**CISA KEV:** added 2026-09-25 \u00b7 due 2026-09-28\n\n## Summary\nMikroTik RouterOS \u2014 Mikrotik RouterOS Improper Enforcement of Behavioral Workflow Vulnerability. Listed on CISA KEV (added 2026-09-25; remediation due 2026-09-28).\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-67279\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-67279\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-67279\n\n## Tags\n#cve #2026 #unrated #auto-stub #kev #verified",
    "sev": "",
    "year": "2026",
    "kev": true,
@@ -7027,7 +7035,7 @@
   },
   "CVE-2026-83549": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-83549.md",
-   "body": "# CVE-2026-83549\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-83549\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-83549\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-83549\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
+   "body": "# CVE-2026-83549\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026  \n**Vendor:** SonicWall  \n**Product:** SMA1000 Appliances  \n**CISA KEV:** added 2026-09-02 \u00b7 due 2026-09-05\n\n## Summary\nSonicWall SMA1000 Appliances \u2014 SonicWall SMA1000 Appliances OS Command Injection Vulnerability. Listed on CISA KEV (added 2026-09-02; remediation due 2026-09-05).\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-83549\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-83549\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-83549\n\n## Tags\n#cve #2026 #unrated #auto-stub #kev #verified",
    "sev": "",
    "year": "2026",
    "kev": true,
@@ -7035,7 +7043,7 @@
   },
   "CVE-2026-84869": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-84869.md",
-   "body": "# CVE-2026-84869\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-84869\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-84869\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-84869\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
+   "body": "# CVE-2026-84869\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026  \n**Vendor:** ConnectWise  \n**Product:** ScreenConnect  \n**CISA KEV:** added 2026-09-11 \u00b7 due 2026-09-14\n\n## Summary\nConnectWise ScreenConnect \u2014 ConnectWise ScreenConnect Improper Privilege Management and Missing Authorization Vulnerability. Listed on CISA KEV (added 2026-09-11; remediation due 2026-09-14).\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-84869\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-84869\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-84869\n\n## Tags\n#cve #2026 #unrated #auto-stub #kev #verified",
    "sev": "",
    "year": "2026",
    "kev": true,
@@ -7075,7 +7083,7 @@
   },
   "CVE-2026-87491": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-87491.md",
-   "body": "# CVE-2026-87491\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-87491\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-87491\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-87491\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
+   "body": "# CVE-2026-87491\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026  \n**Vendor:** Google  \n**Product:** Chromium V8  \n**CISA KEV:** added 2026-09-09 \u00b7 due 2026-09-23\n\n## Summary\nGoogle Chromium V8 \u2014 Google Chromium V8 Out of Bounds Write Vulnerability. Listed on CISA KEV (added 2026-09-09; remediation due 2026-09-23).\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-87491\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-87491\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-87491\n\n## Tags\n#cve #2026 #unrated #auto-stub #kev #verified",
    "sev": "",
    "year": "2026",
    "kev": true,
@@ -7115,7 +7123,7 @@
   },
   "CVE-2026-88772": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-88772.md",
-   "body": "# CVE-2026-88772\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-88772\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-88772\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-88772\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
+   "body": "# CVE-2026-88772\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026  \n**Vendor:** Citrix  \n**Product:** NetScaler  \n**CISA KEV:** added 2026-09-27 \u00b7 due 2026-09-30\n\n## Summary\nCitrix NetScaler \u2014 Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability. Listed on CISA KEV (added 2026-09-27; remediation due 2026-09-30).\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-88772\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-88772\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-88772\n\n## Tags\n#cve #2026 #unrated #auto-stub #kev #verified",
    "sev": "",
    "year": "2026",
    "kev": true,
@@ -7195,7 +7203,7 @@
   },
   "CVE-2026-96654": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-96654.md",
-   "body": "# CVE-2026-96654\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-96654\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-96654\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-96654\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "body": "# CVE-2026-96654\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026  \n**Vendor:** Plex  \n**Product:** Media Server  \n**CISA KEV:** added 2026-10-20 \u00b7 due 2026-10-23\n\n## Summary\nPlex Media Server \u2014 Plex Media Server Improper Neutralization of Encoded URI Schemes in a Web Page Vulnerability. Listed on CISA KEV (added 2026-10-20; remediation due 2026-10-23).\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-96654\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-96654\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-96654\n\n## Tags\n#cve #2026 #unrated #auto-stub #kev",
    "sev": "",
    "year": "2026",
    "kev": true,
@@ -7203,7 +7211,7 @@
   },
   "CVE-2026-96655": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-96655.md",
-   "body": "# CVE-2026-96655\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-96655\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-96655\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-96655\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "body": "# CVE-2026-96655\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026  \n**Vendor:** Plex  \n**Product:** Media Server  \n**CISA KEV:** added 2026-10-20 \u00b7 due 2026-11-03\n\n## Summary\nPlex Media Server \u2014 Plex Media Server Server-Side Request Forgery (SSRF) Vulnerability. Listed on CISA KEV (added 2026-10-20; remediation due 2026-11-03).\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-96655\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-96655\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-96655\n\n## Tags\n#cve #2026 #unrated #auto-stub #kev",
    "sev": "",
    "year": "2026",
    "kev": true,
@@ -7211,7 +7219,7 @@
   },
   "CVE-2026-96656": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-96656.md",
-   "body": "# CVE-2026-96656\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-96656\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-96656\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-96656\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "body": "# CVE-2026-96656\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026  \n**Vendor:** Plex  \n**Product:** Media Server  \n**CISA KEV:** added 2026-10-20 \u00b7 due 2026-10-23\n\n## Summary\nPlex Media Server \u2014 Plex Media Server External Control of File Name or Path Vulnerability. Listed on CISA KEV (added 2026-10-20; remediation due 2026-10-23).\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-96656\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-96656\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-96656\n\n## Tags\n#cve #2026 #unrated #auto-stub #kev",
    "sev": "",
    "year": "2026",
    "kev": true,
@@ -7252,94 +7260,94 @@
  },
  "recent": [
   {
-   "title": "ripgrep-search-zip-LOLBin-Proxy-Execution-Hexacorn-2026",
-   "file": "Guides/ripgrep-search-zip-LOLBin-Proxy-Execution-Hexacorn-2026.md",
-   "cat": "technique",
-   "ts": "2026-10-25"
-  },
-  {
-   "title": "Alliance-Police-Nationale-Member-Data-Unauthorized-Access-2026-10",
-   "file": "Threat_Intel/Breaches/Alliance-Police-Nationale-Member-Data-Unauthorized-Access-2026-10.md",
-   "cat": "breach",
-   "ts": "2026-10-25"
-  },
-  {
-   "title": "LFI-La-France-Insoumise-Canvassing-Data-Leak-ChimeraZ-2026-10",
-   "file": "Threat_Intel/Breaches/LFI-La-France-Insoumise-Canvassing-Data-Leak-ChimeraZ-2026-10.md",
-   "cat": "breach",
-   "ts": "2026-10-25"
-  },
-  {
-   "title": "Node2Shell-CVE-2026-111497-Nodejs-Bundled-Brotli-Decoder-RCE-2026-10",
-   "file": "Threat_Intel/CVEs/2026/Critical/Node2Shell-CVE-2026-111497-Nodejs-Bundled-Brotli-Decoder-RCE-2026-10.md",
-   "cat": "cve",
-   "ts": "2026-10-25"
-  },
-  {
-   "title": "PHP2Shell-CVE-2026-109618-109619-PHP-Core-Unauth-RCE-Exploited-2026-10",
-   "file": "Threat_Intel/CVEs/2026/Critical/PHP2Shell-CVE-2026-109618-109619-PHP-Core-Unauth-RCE-Exploited-2026-10.md",
-   "cat": "cve",
-   "ts": "2026-10-25"
-  },
-  {
-   "title": "Tailscale-11-Unpatched-Flaws-Full-Disclosure-SSH-Race-Root-Rogue-Node-2026-10",
-   "file": "Threat_Intel/CVEs/2026/High/Tailscale-11-Unpatched-Flaws-Full-Disclosure-SSH-Race-Root-Rogue-Node-2026-10.md",
-   "cat": "cve",
-   "ts": "2026-10-25"
-  },
-  {
-   "title": "LiteLLM-Malicious-PyPI-Releases-Trivy-Hack-2100-Orgs-2026",
-   "file": "Threat_Intel/SupplyChain/LiteLLM-Malicious-PyPI-Releases-Trivy-Hack-2100-Orgs-2026.md",
-   "cat": "supplychain",
-   "ts": "2026-10-25"
-  },
-  {
-   "title": "x-intel-2026-10-25",
-   "file": "X_Intel/x-intel-2026-10-25.md",
-   "cat": "misc",
-   "ts": "2026-10-25"
-  },
-  {
-   "title": "session-2026-10-24",
-   "file": "BugBounty/notes/session-2026-10-24.md",
+   "title": "\ud83c\udfe0 SOC Vault Homepage",
+   "file": "\ud83c\udfe0 SOC Vault Homepage.md",
    "cat": "other",
-   "ts": "2026-10-24"
+   "ts": "2026-10-27"
   },
   {
-   "title": "APT28-Profile",
-   "file": "Threat_Intel/APT_Groups/APT28/APT28-Profile.md",
-   "cat": "malware",
-   "ts": "2026-10-24"
+   "title": "Credential_Theft_Case_Study",
+   "file": "Case_Studies/Credential_Theft_Case_Study.md",
+   "cat": "other",
+   "ts": "2026-10-27"
   },
   {
-   "title": "HOOKEDGE-Backdoor-Romania-Spain-Turkiye-Diplomatic-2026",
-   "file": "Threat_Intel/APT_Groups/APT28/campaigns/HOOKEDGE-Backdoor-Romania-Spain-Turkiye-Diplomatic-2026.md",
-   "cat": "malware",
-   "ts": "2026-10-24"
+   "title": "Phishing_to_C2_Case_Study",
+   "file": "Case_Studies/Phishing_to_C2_Case_Study.md",
+   "cat": "other",
+   "ts": "2026-10-27"
   },
   {
-   "title": "Sandworm-Profile",
-   "file": "Threat_Intel/APT_Groups/Sandworm/Sandworm-Profile.md",
-   "cat": "malware",
-   "ts": "2026-10-24"
+   "title": "Detection-Digest-2026-10-27",
+   "file": "Guides/Detections/Detection-Digest-2026-10-27.md",
+   "cat": "technique",
+   "ts": "2026-10-27"
   },
   {
-   "title": "Capcom-ID-Breach-11-7M-Accounts-2026-10",
-   "file": "Threat_Intel/Breaches/Capcom-ID-Breach-11-7M-Accounts-2026-10.md",
-   "cat": "breach",
-   "ts": "2026-10-24"
+   "title": "Repo-Health-2026-10-27",
+   "file": "Reports/RepoHealth/Repo-Health-2026-10-27.md",
+   "cat": "other",
+   "ts": "2026-10-27"
   },
   {
-   "title": "eMudhra-CA-Weak-Private-Keys-Exits-TLS-Certificate-Business-2026-10",
-   "file": "Threat_Intel/Breaches/eMudhra-CA-Weak-Private-Keys-Exits-TLS-Certificate-Business-2026-10.md",
-   "cat": "breach",
-   "ts": "2026-10-24"
+   "title": "CVE-2021-42278",
+   "file": "Threat_Intel/CVEs/2021/Unrated/CVE-2021-42278.md",
+   "cat": "cve",
+   "ts": "2026-10-27"
   },
   {
-   "title": "Hisense-VIDAA-Smart-TV-Tracking-Server-Unauthenticated-57M-Viewing-Records-2026-10",
-   "file": "Threat_Intel/Breaches/Hisense-VIDAA-Smart-TV-Tracking-Server-Unauthenticated-57M-Viewing-Records-2026-10.md",
-   "cat": "breach",
-   "ts": "2026-10-24"
+   "title": "CVE-2021-42287",
+   "file": "Threat_Intel/CVEs/2021/Unrated/CVE-2021-42287.md",
+   "cat": "cve",
+   "ts": "2026-10-27"
+  },
+  {
+   "title": "CVE-2022-26923",
+   "file": "Threat_Intel/CVEs/2022/Unrated/CVE-2022-26923.md",
+   "cat": "cve",
+   "ts": "2026-10-27"
+  },
+  {
+   "title": "CVE-2023-27532",
+   "file": "Threat_Intel/CVEs/2023/High/CVE-2023-27532.md",
+   "cat": "cve",
+   "ts": "2026-10-27"
+  },
+  {
+   "title": "CVE-2023-27350",
+   "file": "Threat_Intel/CVEs/2023/Unrated/CVE-2023-27350.md",
+   "cat": "cve",
+   "ts": "2026-10-27"
+  },
+  {
+   "title": "CVE-2025-25249",
+   "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-25249.md",
+   "cat": "cve",
+   "ts": "2026-10-27"
+  },
+  {
+   "title": "CVE-2025-3248",
+   "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-3248.md",
+   "cat": "cve",
+   "ts": "2026-10-27"
+  },
+  {
+   "title": "CVE-2025-66376",
+   "file": "Threat_Intel/CVEs/2025/Unrated/CVE-2025-66376.md",
+   "cat": "cve",
+   "ts": "2026-10-27"
+  },
+  {
+   "title": "CVE-2026-105133",
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-105133.md",
+   "cat": "cve",
+   "ts": "2026-10-27"
+  },
+  {
+   "title": "CVE-2026-114625",
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-114625.md",
+   "cat": "cve",
+   "ts": "2026-10-27"
   }
  ],
  "kev_referenced": [
@@ -7388,6 +7396,7 @@
   "CVE-2023-22894",
   "CVE-2023-23397",
   "CVE-2023-27350",
+  "CVE-2023-27532",
   "CVE-2023-38831",
   "CVE-2023-42793",
   "CVE-2023-49105",
@@ -7428,6 +7437,8 @@
   "CVE-2026-105134",
   "CVE-2026-10520",
   "CVE-2026-106931",
+  "CVE-2026-109618",
+  "CVE-2026-109619",
   "CVE-2026-110447",
   "CVE-2026-114625",
   "CVE-2026-15409",
@@ -8402,6 +8413,13 @@
    "date": "2026-10-26",
    "intel_items": 2105,
    "cves": 817,
+   "breaches": 182,
+   "malware": 191
+  },
+  {
+   "date": "2026-10-27",
+   "intel_items": 2105,
+   "cves": 818,
    "breaches": 182,
    "malware": 191
   }
