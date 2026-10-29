@@ -1,77 +1,77 @@
 {
- "generated": "2026-10-28 20:45",
- "today": "2026-10-28",
+ "generated": "2026-10-29 20:45",
+ "today": "2026-10-29",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
-  "cves": 845,
-  "breaches": 186,
-  "malware": 195,
+  "cves": 850,
+  "breaches": 191,
+  "malware": 198,
   "supplychain": 84,
   "tools": 100,
   "commands": 14,
-  "guides": 337,
-  "intel_items": 2189,
-  "kev": 190
+  "guides": 342,
+  "intel_items": 2236,
+  "kev": 191
  },
  "windows": {
   "week": {
-   "total": 179,
+   "total": 225,
    "by_cat": {
-    "cve": 102,
-    "breach": 28,
+    "cve": 127,
+    "breach": 35,
     "tool": 4,
     "supplychain": 9,
-    "malware": 17,
-    "ai-bugbounty": 11,
-    "misc": 2,
-    "technique": 6
+    "malware": 24,
+    "ai-bugbounty": 13,
+    "misc": 3,
+    "technique": 10
    },
    "by_src": {}
   },
   "month": {
-   "total": 550,
+   "total": 593,
    "by_cat": {
-    "cve": 242,
-    "breach": 110,
-    "malware": 73,
-    "ai-bugbounty": 45,
+    "cve": 265,
+    "malware": 80,
+    "ai-bugbounty": 47,
     "supplychain": 25,
-    "technique": 12,
-    "misc": 32,
+    "breach": 116,
+    "technique": 16,
+    "misc": 33,
     "tool": 10,
     "other": 1
    },
    "by_src": {}
   },
   "year": {
-   "total": 2185,
+   "total": 2232,
    "by_cat": {
-    "ai-bugbounty": 165,
-    "malware": 272,
+    "ai-bugbounty": 167,
+    "malware": 279,
     "other": 112,
     "tool": 68,
-    "misc": 362,
+    "misc": 363,
     "command": 6,
-    "technique": 152,
-    "breach": 284,
+    "technique": 156,
+    "breach": 291,
     "supplychain": 115,
-    "cve": 649
+    "cve": 675
    },
    "by_src": {}
   },
   "all": {
-   "total": 2189,
+   "total": 2236,
    "by_cat": {
-    "ai-bugbounty": 166,
-    "malware": 272,
+    "ai-bugbounty": 168,
+    "malware": 279,
     "other": 112,
     "tool": 68,
-    "misc": 362,
+    "misc": 363,
     "command": 6,
-    "technique": 154,
-    "cve": 650,
-    "breach": 284,
+    "technique": 158,
+    "cve": 676,
+    "breach": 291,
     "supplychain": 115
    },
    "by_src": {}
@@ -1564,7 +1564,7 @@
   },
   {
    "group": "Volt Typhoon",
-   "body": "# Volt Typhoon \u2014 APT Profile\n\n\u2705 **Verification:** Verified \u2014 6 independent sources\n\n## Snapshot\n| Field | Value |\n|---|---|\n| Attribution | PRC state-sponsored |\n| Aliases | BRONZE SILHOUETTE, Vanguard Panda, DEV-0391, UNC3236, Voltzite, Insidious Taurus, DazedToad |\n| MITRE ATT&CK ID | G1017 |\n| First seen | 2021 |\n| Status | Active |\n| Motivation | Espionage + Pre-positioning for sabotage/disruption |\n\n## Overview\nVolt Typhoon is a PRC state-sponsored actor and the **canonical living-off-the-land (LOTL) threat group**. Active since at least mid-2021, it focuses on **pre-positioning** within US and allied critical-infrastructure IT networks to enable disruptive or destructive cyberattacks during a future major crisis or conflict (e.g. an Indo-Pacific / Taiwan contingency), rather than near-term data theft. It uses minimal or no custom malware on victim IT networks, abusing built-in Windows tools to blend with normal admin activity. Associated edge-device botnet activity is tracked as MITRE Campaign **C0035 (KV Botnet)**.\n\n## Attribution & Origin\nPRC state-sponsored / state-directed. The Feb 2024 advisory assesses the actors are **pre-positioning to be able to launch destructive or disruptive attacks against US critical infrastructure in the event of a major crisis or conflict with the United States** \u2014 a strategic shift from traditional espionage.\n\n## Motivation & Objectives\nA blend of espionage/information-gathering and \u2014 primarily \u2014 **pre-positioning for sabotage/disruption**: establishing long-dwell persistent access (in some cases ~5 years) for potential future destructive operations against critical infrastructure.\n\n## Target Profile\nSectors: US critical infrastructure \u2014 **communications, energy (power), water/wastewater, transportation** \u2014 plus manufacturing, maritime, government, IT, education and construction. Regions: continental US and territories, with notable early targeting of **Guam** (a key US Indo-Pacific military hub).\n\n**APAC / Australia relevance.**\n- Microsoft (24 May 2023) first publicly named the actor and detailed Guam/US critical-infrastructure targeting via LOTL.\n- CISA/NSA/FBI joint advisory **AA24-038A (7 Feb 2024)** confirmed persistent access (some ~5 years) across multiple critical-infrastructure sectors. It was **co-sealed by the full Five Eyes: US (CISA, NSA, FBI), Australia (ASD's ACSC), Canada (CCCS), UK (NCSC-UK), New Zealand (NCSC-NZ).**\n- The earlier advisory **AA23-144A** was also co-authored with **ACSC**. The Five Eyes co-sealing makes the guidance directly relevant to Australian and broader APAC critical-infrastructure operators (e.g. under Australia's SOCI Act regime).\n\n## TTPs \u2014 MITRE ATT&CK\nTechnique IDs verified against the MITRE ATT&CK G1017 page. **LOTL is the defining characteristic** \u2014 minimal malware, heavy abuse of native binaries.\n\n**Initial Access**\n- `T1190` Exploit Public-Facing Application \u2014 exploited internet-facing appliances (e.g. Fortinet/edge devices).\n- `T1133` External Remote Services \u2014 leveraged externally-facing remote services.\n\n**Execution (LOTL)**\n- `T1059.001` Command & Scripting Interpreter: PowerShell \u2014 hands-on-keyboard discovery/execution.\n- `T1059.003` Windows Command Shell \u2014 cmd.exe for discovery and operations.\n- `T1047` Windows Management Instrumentation \u2014 WMI/wmic for remote execution and discovery.\n\n**Credential Access**\n- `T1003.003` OS Credential Dumping: NTDS \u2014 used `ntdsutil` to create install media containing AD usernames and password hashes from ntds.dit.\n- `T1003.001` OS Credential Dumping: LSASS Memory \u2014 dumped LSASS for credentials.\n- `T1552.004` Unsecured Credentials: Private Keys \u2014 read Chrome Local State AES key to decrypt stored passwords.\n\n**Defense Evasion (LOTL)**\n- `T1070.007` Indicator Removal: Clear Network Connection History \u2014 edited/inspected server logs to remove their IPs.\n- `T1036.005` Masquerading: Match Legitimate Name/Location \u2014 renamed FRP/Earthworm binaries (e.g. cisco_up.exe, vm3dservice.exe, WmiPreSV.exe).\n\n**Discovery**\n- `T1018` Remote System Discovery \u2014 enumerated other hosts on the network.\n- `T1016` System Network Configuration Discovery \u2014 mapped topology (e.g. via ping).\n\n**Lateral Movement / Persistence**\n- `T1078.002` Valid Accounts: Domain Accounts \u2014 reused compromised domain credentials.\n- `T1021.001` Remote Services: RDP \u2014 RDP with valid accounts for lateral movement.\n\n**Command & Control (LOTL)**\n- `T1090.001 / T1090.003` Proxy: Internal Proxy (`netsh interface portproxy`) and Multi-hop Proxy \u2014 proxied traffic via netsh and through compromised SOHO devices.\n\n**Resource Development**\n- `T1584.005` Compromise Infrastructure: Botnet \u2014 Cisco/NETGEAR EOL SOHO routers running KV Botnet malware (C0035).\n- `T1584.008` Compromise Infrastructure: Network Devices \u2014 compromised SOHO edge devices to relay/obfuscate traffic.\n\n## Tooling & Malware\nVolt Typhoon relies on **built-in, legitimate tools** rather than custom implants:\n- **Native / LOLBins:** `netsh` (notably `netsh interface portproxy`), `wmic`/WMI, PowerShell, the Windows command shell, `ntdsutil` (dump ntds.dit), `ping`, `net` (group/localgroup), `dnscmd`.\n- **Credential access:** Mimikatz and direct LSASS access; theft of ntds.dit plus SYSTEM/SECURITY registry hives; harvesting of browser-stored credentials and the Chrome Local State AES key.\n- **Off-the-shelf tools (often renamed):** Fast Reverse Proxy (FRP) and Earthworm for tunneling/proxying.\n- **Infrastructure/obfuscation:** compromised SOHO routers and edge devices (EOL Cisco and NETGEAR) implanted with **KV Botnet** malware (C0035) to proxy/relay traffic and conceal PRC origin; also compromised PRTG servers and VPS/multi-hop proxies for C2.\n\n## Notable Campaigns & Timeline\n- **24 May 2023** \u2014 Microsoft publishes \"Volt Typhoon targets US critical infrastructure with living-off-the-land techniques,\" first public naming and Guam/critical-infrastructure disclosure.\n- **24 May 2023** \u2014 CISA/NSA/FBI + Five Eyes (incl. ACSC) release joint advisory **AA23-144A** (\"PRC State-Sponsored Cyber Actor Living off the Land to Evade Detection\").\n- **Dec 2023 (court authorisation) / Jan 2024** \u2014 FBI/DOJ court-authorised operation to disrupt the **KV Botnet** of compromised US SOHO routers used by Volt Typhoon.\n- **31 Jan 2024** \u2014 FBI Director Christopher Wray testifies to the House Select Committee on the CCP, confirming the KV Botnet takedown and warning of pre-positioning to \"wreak havoc\" on US critical infrastructure.\n- **7 Feb 2024** \u2014 CISA/NSA/FBI + Five Eyes release joint advisory **AA24-038A**, confirming long-dwell persistent access and pre-positioning for disruptive/destructive attacks; supplemental LOTL guidance and MAR-10448362-1.v1 (AR24-038A).\n\n## Detection & Hunting\nLOTL is the core challenge \u2014 minimal malware artifacts mean signature/IOC detection is largely ineffective. Shift to behavioral analytics:\n- Baseline normal admin behavior and alert on deviations.\n- Hunt suspicious native-tool use: `ntdsutil.exe`/`vssadmin` on domain controllers; `netsh interface portproxy` additions; anomalous `wmic`/PowerShell command lines; `net group`/`net localgroup` recon bursts.\n- Monitor for ntds.dit, SYSTEM and SECURITY hive copies written to `C:\\Windows\\Temp\\`, or files with mismatched extensions (e.g. `.gif` appended to ntds.dit).\n- Watch for unusual authentication from valid/domain accounts (off-hours, new source hosts, impossible travel) and unexpected RDP/lateral movement.\n- Inspect edge/SOHO devices for proxy/relay behavior; assume log deletion (`T1070`).\n- Enable, centralise and retain comprehensive logging (PowerShell script-block + module logging, command-line process auditing, Security and DC logs) \u2014 long retention is critical given multi-year dwell and local log clearing.\n\n## Mitigations\n- Patch and **replace end-of-life / internet-facing edge devices** (routers, VPNs, firewalls); apply vendor updates to public-facing apps promptly.\n- Enforce **phishing-resistant MFA**, especially for remote access and administrative/domain accounts; enforce least privilege and rotate credentials after suspected exposure.\n- Harden domain controllers; restrict and monitor `netsh portproxy` usage; segment networks and restrict lateral movement (RDP, SMB).\n- Secure and centralise logs off-host with extended retention; protect against log clearing.\n\n## Activity Log\n<!-- Append-only -->\n- _(seed)_ 2026-06-17 \u2014 Profile created.\n\n## Trend Tracking\n| Date | Event Type | Description | Source |\n|---|---|---|---|\n| | | | |\n\n## References\n- CISA AA24-038A: https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-038a\n- CISA AA23-144A: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-144a\n- Microsoft Volt Typhoon blog (24 May 2023): https://www.microsoft.com/en-us/security/blog/2023/05/24/volt-typhoon-targets-us-critical-infrastructure-with-living-off-the-land-techniques/\n- MITRE ATT&CK G1017: https://attack.mitre.org/groups/G1017/\n- NSA/CISA Joint CSA \"Living off the Land\" PDF (AA23-144A): https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF\n- AA24-038A full CSA PDF: https://media.defense.gov/2024/Feb/07/2003389935/-1/-1/0/CSA-PRC-Compromise-US-Critical-Infrastructure.PDF\n- DOJ press release (KV Botnet disruption): https://www.justice.gov/archives/opa/pr/us-government-disrupts-botnet-peoples-republic-china-used-conceal-hacking-critical\n- FBI Director Wray statement to House Select Committee on the CCP (31 Jan 2024): https://www.fbi.gov/news/speeches/director-wrays-opening-statement-to-the-house-select-committee-on-the-chinese-communist-party\n- Australian Signals Directorate / ACSC (cyber.gov.au): https://www.cyber.gov.au/\n\n---\n*Profile generated for CyberSec Vault \u2014 2026-06-17*\n\n## Tags\n #verified",
+   "body": "# Volt Typhoon \u2014 APT Profile\n\n\u2705 **Verification:** Verified \u2014 6 independent sources\n\n## Snapshot\n| Field | Value |\n|---|---|\n| Attribution | PRC state-sponsored |\n| Aliases | BRONZE SILHOUETTE, Vanguard Panda, DEV-0391, UNC3236, Voltzite, Insidious Taurus, DazedToad |\n| MITRE ATT&CK ID | G1017 |\n| First seen | 2021 |\n| Status | Active |\n| Motivation | Espionage + Pre-positioning for sabotage/disruption |\n\n## Overview\nVolt Typhoon is a PRC state-sponsored actor and the **canonical living-off-the-land (LOTL) threat group**. Active since at least mid-2021, it focuses on **pre-positioning** within US and allied critical-infrastructure IT networks to enable disruptive or destructive cyberattacks during a future major crisis or conflict (e.g. an Indo-Pacific / Taiwan contingency), rather than near-term data theft. It uses minimal or no custom malware on victim IT networks, abusing built-in Windows tools to blend with normal admin activity. Associated edge-device botnet activity is tracked as MITRE Campaign **C0035 (KV Botnet)**.\n\n## Attribution & Origin\nPRC state-sponsored / state-directed. The Feb 2024 advisory assesses the actors are **pre-positioning to be able to launch destructive or disruptive attacks against US critical infrastructure in the event of a major crisis or conflict with the United States** \u2014 a strategic shift from traditional espionage.\n\n## Motivation & Objectives\nA blend of espionage/information-gathering and \u2014 primarily \u2014 **pre-positioning for sabotage/disruption**: establishing long-dwell persistent access (in some cases ~5 years) for potential future destructive operations against critical infrastructure.\n\n## Target Profile\nSectors: US critical infrastructure \u2014 **communications, energy (power), water/wastewater, transportation** \u2014 plus manufacturing, maritime, government, IT, education and construction. Regions: continental US and territories, with notable early targeting of **Guam** (a key US Indo-Pacific military hub).\n\n**APAC / Australia relevance.**\n- Microsoft (24 May 2023) first publicly named the actor and detailed Guam/US critical-infrastructure targeting via LOTL.\n- CISA/NSA/FBI joint advisory **AA24-038A (7 Feb 2024)** confirmed persistent access (some ~5 years) across multiple critical-infrastructure sectors. It was **co-sealed by the full Five Eyes: US (CISA, NSA, FBI), Australia (ASD's ACSC), Canada (CCCS), UK (NCSC-UK), New Zealand (NCSC-NZ).**\n- The earlier advisory **AA23-144A** was also co-authored with **ACSC**. The Five Eyes co-sealing makes the guidance directly relevant to Australian and broader APAC critical-infrastructure operators (e.g. under Australia's SOCI Act regime).\n\n## TTPs \u2014 MITRE ATT&CK\nTechnique IDs verified against the MITRE ATT&CK G1017 page. **LOTL is the defining characteristic** \u2014 minimal malware, heavy abuse of native binaries.\n\n**Initial Access**\n- `T1190` Exploit Public-Facing Application \u2014 exploited internet-facing appliances (e.g. Fortinet/edge devices).\n- `T1133` External Remote Services \u2014 leveraged externally-facing remote services.\n\n**Execution (LOTL)**\n- `T1059.001` Command & Scripting Interpreter: PowerShell \u2014 hands-on-keyboard discovery/execution.\n- `T1059.003` Windows Command Shell \u2014 cmd.exe for discovery and operations.\n- `T1047` Windows Management Instrumentation \u2014 WMI/wmic for remote execution and discovery.\n\n**Credential Access**\n- `T1003.003` OS Credential Dumping: NTDS \u2014 used `ntdsutil` to create install media containing AD usernames and password hashes from ntds.dit.\n- `T1003.001` OS Credential Dumping: LSASS Memory \u2014 dumped LSASS for credentials.\n- `T1552.004` Unsecured Credentials: Private Keys \u2014 read Chrome Local State AES key to decrypt stored passwords.\n\n**Defense Evasion (LOTL)**\n- `T1070.007` Indicator Removal: Clear Network Connection History \u2014 edited/inspected server logs to remove their IPs.\n- `T1036.005` Masquerading: Match Legitimate Name/Location \u2014 renamed FRP/Earthworm binaries (e.g. cisco_up.exe, vm3dservice.exe, WmiPreSV.exe).\n\n**Discovery**\n- `T1018` Remote System Discovery \u2014 enumerated other hosts on the network.\n- `T1016` System Network Configuration Discovery \u2014 mapped topology (e.g. via ping).\n\n**Lateral Movement / Persistence**\n- `T1078.002` Valid Accounts: Domain Accounts \u2014 reused compromised domain credentials.\n- `T1021.001` Remote Services: RDP \u2014 RDP with valid accounts for lateral movement.\n\n**Command & Control (LOTL)**\n- `T1090.001 / T1090.003` Proxy: Internal Proxy (`netsh interface portproxy`) and Multi-hop Proxy \u2014 proxied traffic via netsh and through compromised SOHO devices.\n\n**Resource Development**\n- `T1584.005` Compromise Infrastructure: Botnet \u2014 Cisco/NETGEAR EOL SOHO routers running KV Botnet malware (C0035).\n- `T1584.008` Compromise Infrastructure: Network Devices \u2014 compromised SOHO edge devices to relay/obfuscate traffic.\n\n## Tooling & Malware\nVolt Typhoon relies on **built-in, legitimate tools** rather than custom implants:\n- **Native / LOLBins:** `netsh` (notably `netsh interface portproxy`), `wmic`/WMI, PowerShell, the Windows command shell, `ntdsutil` (dump ntds.dit), `ping`, `net` (group/localgroup), `dnscmd`.\n- **Credential access:** Mimikatz and direct LSASS access; theft of ntds.dit plus SYSTEM/SECURITY registry hives; harvesting of browser-stored credentials and the Chrome Local State AES key.\n- **Off-the-shelf tools (often renamed):** Fast Reverse Proxy (FRP) and Earthworm for tunneling/proxying.\n- **Infrastructure/obfuscation:** compromised SOHO routers and edge devices (EOL Cisco and NETGEAR) implanted with **KV Botnet** malware (C0035) to proxy/relay traffic and conceal PRC origin; also compromised PRTG servers and VPS/multi-hop proxies for C2.\n\n## Notable Campaigns & Timeline\n- **24 May 2023** \u2014 Microsoft publishes \"Volt Typhoon targets US critical infrastructure with living-off-the-land techniques,\" first public naming and Guam/critical-infrastructure disclosure.\n- **24 May 2023** \u2014 CISA/NSA/FBI + Five Eyes (incl. ACSC) release joint advisory **AA23-144A** (\"PRC State-Sponsored Cyber Actor Living off the Land to Evade Detection\").\n- **Dec 2023 (court authorisation) / Jan 2024** \u2014 FBI/DOJ court-authorised operation to disrupt the **KV Botnet** of compromised US SOHO routers used by Volt Typhoon.\n- **31 Jan 2024** \u2014 FBI Director Christopher Wray testifies to the House Select Committee on the CCP, confirming the KV Botnet takedown and warning of pre-positioning to \"wreak havoc\" on US critical infrastructure.\n- **7 Feb 2024** \u2014 CISA/NSA/FBI + Five Eyes release joint advisory **AA24-038A**, confirming long-dwell persistent access and pre-positioning for disruptive/destructive attacks; supplemental LOTL guidance and MAR-10448362-1.v1 (AR24-038A).\n\n## Detection & Hunting\nLOTL is the core challenge \u2014 minimal malware artifacts mean signature/IOC detection is largely ineffective. Shift to behavioral analytics:\n- Baseline normal admin behavior and alert on deviations.\n- Hunt suspicious native-tool use: `ntdsutil.exe`/`vssadmin` on domain controllers; `netsh interface portproxy` additions; anomalous `wmic`/PowerShell command lines; `net group`/`net localgroup` recon bursts.\n- Monitor for ntds.dit, SYSTEM and SECURITY hive copies written to `C:\\Windows\\Temp\\`, or files with mismatched extensions (e.g. `.gif` appended to ntds.dit).\n- Watch for unusual authentication from valid/domain accounts (off-hours, new source hosts, impossible travel) and unexpected RDP/lateral movement.\n- Inspect edge/SOHO devices for proxy/relay behavior; assume log deletion (`T1070`).\n- Enable, centralise and retain comprehensive logging (PowerShell script-block + module logging, command-line process auditing, Security and DC logs) \u2014 long retention is critical given multi-year dwell and local log clearing.\n\n## Mitigations\n- Patch and **replace end-of-life / internet-facing edge devices** (routers, VPNs, firewalls); apply vendor updates to public-facing apps promptly.\n- Enforce **phishing-resistant MFA**, especially for remote access and administrative/domain accounts; enforce least privilege and rotate credentials after suspected exposure.\n- Harden domain controllers; restrict and monitor `netsh portproxy` usage; segment networks and restrict lateral movement (RDP, SMB).\n- Secure and centralise logs off-host with extended retention; protect against log clearing.\n\n## Activity Log\n<!-- Append-only -->\n- _(seed)_ 2026-06-17 \u2014 Profile created.\n- 2026-10-29 \u2014 BleepingComputer: \"Silent Train\" framework builds rotating on-demand chains of compromised devices to hide zero-day attacks \u2192 [[Volt-Typhoon-Silent-Train-OnDemand-Compromised-Device-Chains-ZeroDay-Concealment-2026-10]]\n\n## Trend Tracking\n| Date | Event Type | Description | Source |\n|---|---|---|---|\n| 2026-10-28 | Infrastructure / TTP | Silent Train \u2014 on-demand rotating compromised-device relay chains concealing zero-day exploitation | [BleepingComputer](https://www.bleepingcomputer.com/news/security/volt-typhoon-hides-zero-day-attacks-using-silent-train-framework/) |\n\n## References\n- CISA AA24-038A: https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-038a\n- CISA AA23-144A: https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-144a\n- Microsoft Volt Typhoon blog (24 May 2023): https://www.microsoft.com/en-us/security/blog/2023/05/24/volt-typhoon-targets-us-critical-infrastructure-with-living-off-the-land-techniques/\n- MITRE ATT&CK G1017: https://attack.mitre.org/groups/G1017/\n- NSA/CISA Joint CSA \"Living off the Land\" PDF (AA23-144A): https://media.defense.gov/2023/May/24/2003229517/-1/-1/0/CSA_Living_off_the_Land.PDF\n- AA24-038A full CSA PDF: https://media.defense.gov/2024/Feb/07/2003389935/-1/-1/0/CSA-PRC-Compromise-US-Critical-Infrastructure.PDF\n- DOJ press release (KV Botnet disruption): https://www.justice.gov/archives/opa/pr/us-government-disrupts-botnet-peoples-republic-china-used-conceal-hacking-critical\n- FBI Director Wray statement to House Select Committee on the CCP (31 Jan 2024): https://www.fbi.gov/news/speeches/director-wrays-opening-statement-to-the-house-select-committee-on-the-chinese-communist-party\n- Australian Signals Directorate / ACSC (cyber.gov.au): https://www.cyber.gov.au/\n\n---\n*Profile generated for CyberSec Vault \u2014 2026-06-17*\n\n## Tags\n #verified",
    "aliases": [
     "BRONZE SILHOUETTE",
     "Vanguard Panda",
@@ -1752,10 +1752,12 @@
  ],
  "apt_activity_windows": {
   "week": {
+   "Volt Typhoon": 3,
    "Sandworm": 2,
    "APT28": 1
   },
   "month": {
+   "Volt Typhoon": 3,
    "Sandworm": 2,
    "Kimsuky": 2,
    "APT28": 1
@@ -1763,12 +1765,12 @@
   "year": {
    "Sandworm": 8,
    "Fire Ant": 5,
+   "Volt Typhoon": 4,
    "APT28": 3,
    "Scattered Spider": 3,
    "Salt Typhoon": 2,
    "APT41": 2,
    "Kimsuky": 2,
-   "Volt Typhoon": 1,
    "Gamaredon": 1,
    "APT29": 1,
    "Lazarus Group": 1
@@ -1776,12 +1778,12 @@
   "all": {
    "Sandworm": 8,
    "Fire Ant": 5,
+   "Volt Typhoon": 4,
    "APT28": 3,
    "Scattered Spider": 3,
    "Salt Typhoon": 2,
    "APT41": 2,
    "Kimsuky": 2,
-   "Volt Typhoon": 1,
    "Gamaredon": 1,
    "APT29": 1,
    "Lazarus Group": 1
@@ -1791,7 +1793,6 @@
   "months": [
    "2026-04",
    "2026-06",
-   "2026-07",
    "2026-08",
    "2026-09",
    "2026-10"
@@ -1800,7 +1801,6 @@
    {
     "group": "Sandworm",
     "data": [
-     0,
      0,
      0,
      2,
@@ -1813,17 +1813,25 @@
     "data": [
      0,
      0,
-     0,
      5,
      0,
      0
     ]
    },
    {
+    "group": "Volt Typhoon",
+    "data": [
+     0,
+     1,
+     0,
+     0,
+     3
+    ]
+   },
+   {
     "group": "APT28",
     "data": [
      1,
-     0,
      0,
      1,
      0,
@@ -1837,7 +1845,6 @@
      3,
      0,
      0,
-     0,
      0
     ]
    },
@@ -1846,30 +1853,18 @@
     "data": [
      0,
      0,
-     0,
      1,
      1,
-     0
-    ]
-   },
-   {
-    "group": "APT41",
-    "data": [
-     0,
-     0,
-     2,
-     0,
-     0,
      0
     ]
    }
   ]
  },
  "cve_sev": {
-  "Critical": 311,
+  "Critical": 313,
   "High": 208,
   "Low": 40,
-  "Medium": 25
+  "Medium": 26
  },
  "cve_year": {
   "2015": 6,
@@ -1883,7 +1878,7 @@
   "2023": 21,
   "2024": 17,
   "2025": 39,
-  "2026": 707
+  "2026": 712
  },
  "cve_month": {
   "2025-10": 1,
@@ -1893,7 +1888,7 @@
   "2026-07": 16,
   "2026-08": 84,
   "2026-09": 160,
-  "2026-10": 234
+  "2026-10": 260
  },
  "top_cve": [
   {
@@ -1945,6 +1940,12 @@
    "kev": false
   },
   {
+   "id": "CVE-2026-109618",
+   "n": 56,
+   "sev": "Critical",
+   "kev": true
+  },
+  {
    "id": "CVE-2026-13293",
    "n": 56,
    "sev": "Low",
@@ -1958,12 +1959,6 @@
   },
   {
    "id": "CVE-2026-0628",
-   "n": 55,
-   "sev": "High",
-   "kev": false
-  },
-  {
-   "id": "CVE-2026-55945",
    "n": 55,
    "sev": "High",
    "kev": false
@@ -3188,6 +3183,14 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-101767": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-101767-Oracle-EBS-October-2026-CPU-Exploited-Mass-Scanning-2026-10.md",
+   "body": "# CVE-2026-101767 \u2014 Oracle E-Business Suite (October 2026 CPU) Reportedly Exploited; Mass Scanning Begins\n\n\ud83d\udfe2 **Verification:** 2 independent sources\n\n> Source: [CCCS AV26-1071 Update 1](https://cyber.gc.ca/en/alerts-advisories/oracle-corporation-security-advisory-av26-1071) \u2014 2026-10-28T17:15Z\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/hackers-now-scanning-systems-for-recently-patched-oracle-flaw/) \u2014 2026-10-28T12:19Z\n\n**Type:** CVE / exploited | **Severity:** Critical | **Date:** 2026-10-28 | **Tags:** #cve #oracle #ebs #exploited\n\n## Summary\n- CCCS Update 1 to the **Oracle October 2026 Critical Patch Update** advisory: **CVE-2026-101767 reportedly exploited in the wild**.\n- BleepingComputer: attackers are **scanning for unpatched Oracle E-Business Suite** systems with a recently patched critical flaw (CVE link between the two is likely but not stated explicitly in the feed summary).\n- Oct CPU also covers MySQL, WebLogic, Java SE, Database, Communications.\n\n## Action\n- Apply the October 2026 CPU to EBS immediately; restrict EBS web tiers from the internet; review access logs for anomalous requests to EBS servlets since Oct 21.\n- Prior EBS exploitation history: [[CVE-2026-46817-Oracle-EBS-Payments-Unauth-RCE]].\n\n## Tags\n#cve #2026 #critical #oracle #exploited",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-102255": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-102255-SonicWall-SMA1000-WorkPlace-SSRF-2026-10.md",
    "body": "# CVE-2026-102255 \u2014 SonicWall SMA1000 Appliance WorkPlace Pre-Auth SSRF (Max Severity)\n\n\u2705 **Verification:** Verified \u2014 4 independent sources\n\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-max-severity-ssrf-flaw-in-sma1000-gateways/) \u2014 Wed, 07 Oct 2026\n\n**Type:** CVE / SSRF | **Severity:** Critical (vendor: maximum) | **Date:** 2026-10-07 | **Tags:** #cve #sonicwall #sma1000 #ssrf #edge-device\n\n## Summary\n- Unauthenticated, low-complexity **server-side request forgery** in the SMA1000 **Appliance WorkPlace** interface, caused by an unintended alternate access path.\n- Affected: SMA1000 **6210, 7210, 8200v**. Not affected: SMA 100 series, SSL-VPN on SonicWall firewalls.\n- Hotfixes released 2026-10-06; advisory **SNWLID-2026-0017**. No workaround.\n- **Not exploited** per SonicWall (as of disclosure). Shadowserver sees ~400 exposed SMA1000 appliances.\n\n## Why it matters\nSMA1000 was hit by the CVE-2026-83548/83549 pre-auth SSRF zero-day chain in September (CISA KEV). Same product, same bug class: expect fast weaponization. See [[CVE-2026-83548-83549-SonicWall-SMA1000-ZeroDay-Chain-Exploited-2026-09]].\n\n## Actions\n- Apply SNWLID-2026-0017 hotfix now; restrict WorkPlace/management exposure.\n- Hunt for outbound requests from SMA1000 to internal metadata/admin endpoints.\n\n\n## Update 2026-10-11 \u2014 Now exploited in the wild\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/max-severity-sonicwall-sma1000-flaw-now-exploited-in-attacks/) \u2014 Fri, 09 Oct 2026\n> Source: [CCCS AV26-1017 Update 1](https://cyber.gc.ca/en/alerts-advisories/sonicwall-security-advisory-av26-1017) \u2014 2026-10-09\n- CVE-2026-102255 now actively exploited (status changed from \"not exploited\").\n- Affected: SMA1000 6210/7210/8200v, 12.4.3-03670 (platform-hotfix) and earlier, 12.5.0-03082 (platform-hotfix) and earlier.\n- Action: patch immediately; treat unpatched exposed appliances as potentially compromised.\n\n## Tags\n #verified\n\n\n## Update 2026-10-12 \u2014 Exploitation timeline (CVSS 10.0)\n> Source: [SecurityWeek](https://www.securityweek.com/critical-sonicwall-vulnerability-exploited-days-after-disclosure/) \u2014 Mon, 12 Oct 2026\n- CVSS **10.0**; fixed in **12.5.0-03082** and **12.4.3-03670** (hotfix builds).\n- Disclosed 10-06; **Defused** honeypots saw first exploitation attempts **10-08**; **Previdian** (formerly KEVIntel) also observed attempts.\n- **Horizon3.ai**: can lead to full device takeover. No actor/IOCs published yet.\n\n\n## Update 2026-10-13\n> Source: [The Hacker News](https://thehackernews.com/2026/10/critical-sonicwall-sma-1000-flaw.html) \u2014 Mon, 12 Oct 2026 10:36 UTC\n- THN: **135 exploitation attempts** observed against CVE-2026-102255 (CVSS 10.0 pre-auth SSRF) after the patch; exploitation began within days of disclosure. Patch SMA 1000 now and review WorkPlace logs for SSRF requests.",
@@ -3744,10 +3747,10 @@
   },
   "CVE-2026-41709": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-41709.md",
-   "body": "# CVE-2026-41709\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2026\n\n## Summary\nBroadcom advisory **VMSA-2026-0006.1** now covers multiple flaws across **vCenter, ESX, Workstation, Fusion, and Cloud Foundation**: **CVE-2026-59309** (critical vCenter authentication bypass, CVSS 9.8), **CVE-2026-59310**, **CVE-2026-47876**, **CVE-2026-41703**, **CVE-2026-41709**.\n\n## Where it appears in this vault\n- `Threat_Intel/VMware-ESXi-vCenter-Ransomware-Exploitation-VMSA-2026-0006-2026.md` \u2014 Broadcom advisory **VMSA-2026-0006.1** now covers multiple flaws across **vCenter, ESX, Workstation, Fusion, and Cloud Foundation**: **CVE-2026-59309** (critical vCenter authentication bypass, CVSS 9.8), **CVE-2026-59310**, **CVE-2026-47876**, **CVE-2026-41703**, **CVE-2026-41709**.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-41709\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-41709\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-41709\n\n## Tags\n#cve #2026 #critical #auto-stub #verified",
+   "body": "# CVE-2026-41709\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u2139\ufe0f **Enriched** \u2014 this note now contains captured intel beyond the auto-stub baseline. Verify specifics against the linked sources.\n\n**Severity (assessed):** Critical  \n**Year:** 2026\n\n## Summary\nBroadcom advisory **VMSA-2026-0006.1** now covers multiple flaws across **vCenter, ESX, Workstation, Fusion, and Cloud Foundation**: **CVE-2026-59309** (critical vCenter authentication bypass, CVSS 9.8), **CVE-2026-59310**, **CVE-2026-47876**, **CVE-2026-41703**, **CVE-2026-41709**.\n\n## Where it appears in this vault\n- `Threat_Intel/VMware-ESXi-vCenter-Ransomware-Exploitation-VMSA-2026-0006-2026.md` \u2014 Broadcom advisory **VMSA-2026-0006.1** now covers multiple flaws across **vCenter, ESX, Workstation, Fusion, and Cloud Foundation**: **CVE-2026-59309** (critical vCenter authentication bypass, CVSS 9.8), **CVE-2026-59310**, **CVE-2026-47876**, **CVE-2026-41703**, **CVE-2026-41709**.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-41709\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-41709\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-41709\n\n## Tags\n#cve #2026 #critical #enriched #verified\n\n\n## Update 2026-10-29 (sweep) \u2014 Added to CISA KEV (VMware AV26-763 Update 2)\n> Source: [CCCS AV26-763 Update 2](https://cyber.gc.ca/en/alerts-advisories/vmware-security-advisory-av26-763) \u2014 2026-10-28T19:53Z\n- **CISA added CVE-2026-41709 to KEV on 2026-10-28** (exploited in the wild). CVE-2026-59310 from the same advisory was added in August.\n- Advisory **VMSA-2026-0006** \u2014 Broadcom VMware Cloud Foundation, ESX, vCenter Server, Workstation, Fusion. Same advisory also lists CVE-2026-59309, CVE-2026-47876, CVE-2026-41703.\n- Action: patch ESX/vCenter per VMSA-2026-0006 now; restrict vCenter management interfaces; ESXi is a top ransomware target.",
    "sev": "Critical",
    "year": "2026",
-   "kev": false,
+   "kev": true,
    "apts": []
   },
   "CVE-2026-42530": {
@@ -4806,6 +4809,14 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-97631": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-97631-EDK-II-UEFI-PXE-NetworkPkg-PreBoot-RCE-2026-10.md",
+   "body": "# CVE-2026-97631 \u2014 EDK II UEFI NetworkPkg (PXE) Pre-Boot Remote Code Execution\n\n\ud83d\udfe2 **Verification:** 2 independent sources\n\n> Source: [X @The_Cyber_News](https://x.com/The_Cyber_News/status/2115390623062925765) \u2014 2026-10-28T10:30Z\n> Source: [Clubic](https://www.clubic.com/actualite-636538-une-faille-critique-vieille-de-16-ans-menace-des-serveurs-dans-le-monde-entier-et-la-patcher-partout-s-annonce-complique.html) \u2014 2026-10-29T09:26Z\n\n**Type:** CVE / firmware RCE | **Severity:** Critical (CVSS v4 9.5) | **Date:** 2026-10-28 | **Tags:** #cve #uefi #firmware #edk2 #pxe #preboot\n\n## Summary\n- Critical bug in the **network boot (PXE) driver** of TianoCore **EDK II NetworkPkg** lets a remote (adjacent/network) attacker run code **before the OS loads**.\n- Advisory lists EDK II master as of 2026-09-14; Clubic says the flaw is ~16 years old.\n- Advisory page still says \"Not patched currently\", but a **fix is merged upstream** \u2014 every OEM/IBV (AMI, Insyde, Phoenix, server OEMs) must ship it in its own firmware, so exposure will linger for months/years.\n\n## Why it matters\n- Pre-boot code execution bypasses OS-level EDR and can enable bootkits / Secure Boot bypass persistence.\n- Highest risk: servers and fleets that **PXE/HTTP-boot** on untrusted or flat networks.\n\n## Action\n- Inventory systems with network boot enabled; **disable PXE/HTTP boot** where not needed; isolate provisioning VLANs.\n- Track OEM firmware advisories for CVE-2026-97631 and schedule BIOS/UEFI updates.\n\n## Bug bounty angle\n- Firmware supply-chain lag: vendor-specific firmware based on unpatched EDK II is a likely source of follow-on CVEs (scope: OEM bounty programs).\n\n## Tags\n#cve #2026 #critical #uefi #firmware",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-9802": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-9802.md",
    "body": "# CVE-2026-9802\n\n\u2705 **Verification:** Verified \u2014 4 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2026\n\n## Summary\n2069685475741229428 | 2026-06-24 | @kmkz_security | [BOOKMARK] Keycloak: CVE-2026-4282 unauth admin-token forge; view-clients secret leak (#49220); CVE-2026-9802 refresh-token revival | -> Threat_Intel/CVEs/2026/Critical/Keycloak-Multiple-Auth-Flaws-2026.md (new)\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 2069685475741229428 | 2026-06-24 | @kmkz_security | [BOOKMARK] Keycloak: CVE-2026-4282 unauth admin-token forge; view-clients secret leak (#49220); CVE-2026-9802 refresh-token revival | -> Threat_Intel/CVEs/2026/Critical/Keycloak-Multiple-Auth-Flaws-2026.md (new)\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-9802\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-9802\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-9802\n\n## Tags\n#cve #2026 #critical #auto-stub #verified",
@@ -4880,7 +4891,7 @@
   },
   "CVE-2026-111497": {
    "file": "Threat_Intel/CVEs/2026/Critical/Node2Shell-CVE-2026-111497-Nodejs-Bundled-Brotli-Decoder-RCE-2026-10.md",
-   "body": "# Node2Shell \u2014 CVE-2026-111497 Node.js Bundled Brotli Decoder Out-of-Bounds Write \u2192 RCE\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> Source: [Imperva](https://www.imperva.com/blog/node2shell-from-brotli-data-to-remote-code-execution/) \u2014 2026-10-22T12:22Z\n> Source: [Semgrep](https://semgrep.dev/blog/2026/patch-your-node-and-eat-your-brotli-or-you-wont-get-dessert) \u2014 2026-10-22\n> Source: X [@TheHackersNews](https://x.com/TheHackersNews/status/2113538808126038500) \u2014 2026-10-23T07:51Z; [@IntCyberDigest](https://x.com/IntCyberDigest/status/2113466440464691712) \u2014 2026-10-23T03:04Z\n\n**Type:** CVE / RCE | **Severity:** Critical (no official CVSS in sources) | **Date:** 2026-10-22 | **Tags:** #cve #nodejs #brotli #rce #node2shell\n\n## Summary\n- Out-of-bounds write (improper bounds check) in the **Brotli decoder bundled with the Node.js runtime** (CVE per Brotli 1.2.1 changelog). Not the npm `brotli` package.\n- Found by **OpenAI Codex Security**. RCE demonstrated on the official **Node.js 24.22.0** build/image without modifying the runtime; 24.22.1 rejects the inputs.\n- EoL lines (Node 20, 23, 25) will not be fixed.\n\n## Reachable via\n- Express 5 + body-parser 2.x with inflation enabled\n- Koa via co-body\n- Fastify via @fastify/compress\n- Direct `node:zlib` Brotli decompression\n- `fetch()` of attacker-influenced Brotli responses\n- ultimate-express\n\n## Fixed\nNode **22.23.4, 24.22.1, 26.12.1**. No in-the-wild exploitation reported as of 2026-10-23.\n\n## Action / bug bounty angle\n- Upgrade Node and rebuild images. Short-term: reject `Content-Encoding: br` request bodies at the edge if unneeded.\n- Testing: send a request with `Content-Encoding: br` to body-parsing endpoints \u2014 acceptance (vs 415) indicates the decode path is reachable; report version + reachability, do not send crash payloads to production.\n\n## Related\n- [[PHP2Shell-CVE-2026-109618-109619-PHP-Core-Unauth-RCE-Exploited-2026-10]]\n\n## Tags\n#verified\n\n## Update 2026-10-24 (sweep)\n> Source: [Qualys](https://blog.qualys.com/product-tech/2026/10/23/node-js-patches-brotli-remote-code-execution-flaw-find-vulnerable-runtimes-before-attackers-do) \u2014 2026-10-23T12:58Z\n> Source: X @The_Cyber_News (2113858845365719257) \u2014 2026-10-24T05:03Z\n- Release fixes **10 CVEs** across 22.x / 24.x / 26.x incl. TLS/DNS hostname-validation flaws alongside the Brotli decoder OOB write. Qualys guidance on finding vulnerable runtimes (bundled Node in Electron apps, container base images).\n- Working **Node2Shell exploit** writeup circulating (cybersecuritynews) \u2014 code exec inside a Node app via crafted Brotli input, no runtime modification. EoL Node 20/23/25 get no fix.\n\n## Update 2026-10-25 (sweep) \u2014 scope widens beyond Node.js (Bun, Python, Envoy, Istio, workerd)\n> Source: [The Hacker News](https://thehackernews.com/2026/10/brotli-decoder-flaw-behind-nodejs-rce.html) \u2014 2026-10-24T11:09Z\n> Source: X @eastsidemccarty (2114154577125859826) \u2014 2026-10-25T00:38Z\n- Root bug is in **Google's Brotli C decoder** (1.0.3\u20131.2.0; fixed 1.0.10 / 1.1.1 / 1.2.1). CVSS 4.0 **9.2** (Google), 8.1 (Red Hat). Fix committed upstream 2026-02-27 but not released until 2026-10-21.\n- Products bundling their own decoder need separate fixes: **Bun 1.4.4**; **Envoy** 1.40.0 / 1.39.3 / 1.38.6 / 1.37.8 / 1.36.12; **Istio** 1.31.2 / 1.30.6 / 1.29.9; **Python Brotli 1.2.1** (PYSEC-2026-4322) and **brotlicffi 1.2.1.0** (PYSEC-2026-4323); cdxgen 13.5.0 / 12.8.9.\n- Python exposure: requests / urllib3 / httpx / aiohttp auto-decode `br` whenever Brotli is installed \u2014 client-side exposure to malicious servers. Mitigation there: upgrade or uninstall Brotli/brotlicffi.\n- Removing `br` from `Accept-Encoding` is **not sufficient**; reject `Content-Encoding: br` before any proxy/parser decodes. No Node.js workaround.\n- CISA SSVC (Oct 23): exploitation none, automatable no. Imperva RCE PoC unreleased.\n- **Cloudflare workerd** reported affected via dependency (researcher @eastsidemccarty, \"#brotlipocalypse\"): DoS trivial, RCE not achieved; Cloudflare closed report as known.\n- Bug bounty angle: Envoy/Istio sidecars and Bun/workerd edge runtimes widen the target set \u2014 check `server` headers / runtime fingerprints for version, report reachability only.\n\n\n## Update 2026-10-27 (sweep) \u2014 .NET OOB patches, PHP Windows rebuild, PAN-OS, first exploitation attempt\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/critical-http2shell-brotli-vulnerability-triggers-emergency-patches/) \u2014 2026-10-26\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-emergency-net-patches-for-critical-brotli-flaw/) \u2014 2026-10-26\n> Source: [The Hacker News](https://thehackernews.com/2026/10/php-issues-second-windows-security.html) \u2014 2026-10-26\n> Source: [Tenable](https://www.tenable.com/blog/brotli2shell-frequently-asked-questions-for-google-brotli-decoder-cve-2026-111497) \u2014 2026-10-27\n> Source: [Wiz](https://www.wiz.io/blog/cve-2026-111497-brotli-rce-node-js) \u2014 2026-10-25\n> Source: [CCCS AV26-1085](https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1085) \u2014 2026-10-26\n> Source: [Clubic](https://www.clubic.com/actualite-636082-microsoft-corrige-en-urgence-une-faille-critique-menacant-les-applications-net.html) \u2014 2026-10-27\n> Source: [X @IntCyberDigest](https://x.com/IntCyberDigest/status/2114959528169259243) \u2014 2026-10-27\n\n- Aliases now in use: **Node2Shell / Broccoli2Shell / Brotli2Shell / HTTP2Shell**. CVSS v4 **9.2** (Google); CVSS v3.1 8.1 (Microsoft, .NET).\n- **Fixed versions:** Brotli 1.0.10 / 1.1.1 / 1.2.1 (affected 1.0.3\u20131.0.9, 1.1.0, 1.2.0); Node.js 22.23.4 / 24.22.1 / 26.12.1; Bun 1.4.4 (affected from 1.0.21).\n- **.NET:** out-of-band 8.0.33 / 9.0.22 / 10.0.14 / 11 RC3. Exposed only if ASP.NET Core request decompression, HttpClient auto-decompression, or direct Brotli use is enabled (off by default); .NET Framework not affected. Restart apps; rebuild self-contained apps.\n- **PHP for Windows:** second rebuild in five days for 8.2\u20138.5; reachable via cURL automatic decompression (off by default).\n- **Palo Alto PAN-OS:** critical, only units decrypting TLS and inspecting Brotli; fixes due **30 Oct** \u2014 disable Brotli inspection meanwhile (X @IntCyberDigest).\n- **Exploitation:** public PoCs (Imperva RCE vs Node.js 24.22.0 arm64). ELLIO reported an exploitation attempt vs Node.js 24.22.0 x86-64 on 2026-10-26 (unconfirmed by Tenable). Not in KEV as of 10-26.\n\n## Update 2026-10-28 \u2014 Added to CISA KEV (CCCS AV26-1085 Update 1)\n> Source: [CCCS AV26-1085](https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1085) \u2014 2026-10-27 20:32 UTC\n> Source: [Malwarebytes](https://www.malwarebytes.com/blog/news/2026/10/the-webs-having-a-rough-week-heres-how-to-browse-safely) \u2014 2026-10-27 12:22 UTC\n- CISA added **CVE-2026-111497** to **KEV on 2026-10-27** \u2192 exploited in the wild.\n- CCCS affected Brotli ranges: **1.0.3\u2013<1.0.10, 1.1.0\u2013<1.1.1, 1.2.0\u2013<1.2.1** (fixed: 1.0.10 / 1.1.1 / 1.2.1).\n- Malwarebytes consumer roundup lists it alongside PHP2Shell and the eMudhra CA revocations as the week's major web-platform issues.",
+   "body": "# Node2Shell \u2014 CVE-2026-111497 Node.js Bundled Brotli Decoder Out-of-Bounds Write \u2192 RCE\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> Source: [Imperva](https://www.imperva.com/blog/node2shell-from-brotli-data-to-remote-code-execution/) \u2014 2026-10-22T12:22Z\n> Source: [Semgrep](https://semgrep.dev/blog/2026/patch-your-node-and-eat-your-brotli-or-you-wont-get-dessert) \u2014 2026-10-22\n> Source: X [@TheHackersNews](https://x.com/TheHackersNews/status/2113538808126038500) \u2014 2026-10-23T07:51Z; [@IntCyberDigest](https://x.com/IntCyberDigest/status/2113466440464691712) \u2014 2026-10-23T03:04Z\n\n**Type:** CVE / RCE | **Severity:** Critical (no official CVSS in sources) | **Date:** 2026-10-22 | **Tags:** #cve #nodejs #brotli #rce #node2shell\n\n## Summary\n- Out-of-bounds write (improper bounds check) in the **Brotli decoder bundled with the Node.js runtime** (CVE per Brotli 1.2.1 changelog). Not the npm `brotli` package.\n- Found by **OpenAI Codex Security**. RCE demonstrated on the official **Node.js 24.22.0** build/image without modifying the runtime; 24.22.1 rejects the inputs.\n- EoL lines (Node 20, 23, 25) will not be fixed.\n\n## Reachable via\n- Express 5 + body-parser 2.x with inflation enabled\n- Koa via co-body\n- Fastify via @fastify/compress\n- Direct `node:zlib` Brotli decompression\n- `fetch()` of attacker-influenced Brotli responses\n- ultimate-express\n\n## Fixed\nNode **22.23.4, 24.22.1, 26.12.1**. No in-the-wild exploitation reported as of 2026-10-23.\n\n## Action / bug bounty angle\n- Upgrade Node and rebuild images. Short-term: reject `Content-Encoding: br` request bodies at the edge if unneeded.\n- Testing: send a request with `Content-Encoding: br` to body-parsing endpoints \u2014 acceptance (vs 415) indicates the decode path is reachable; report version + reachability, do not send crash payloads to production.\n\n## Related\n- [[PHP2Shell-CVE-2026-109618-109619-PHP-Core-Unauth-RCE-Exploited-2026-10]]\n\n## Tags\n#verified\n\n## Update 2026-10-24 (sweep)\n> Source: [Qualys](https://blog.qualys.com/product-tech/2026/10/23/node-js-patches-brotli-remote-code-execution-flaw-find-vulnerable-runtimes-before-attackers-do) \u2014 2026-10-23T12:58Z\n> Source: X @The_Cyber_News (2113858845365719257) \u2014 2026-10-24T05:03Z\n- Release fixes **10 CVEs** across 22.x / 24.x / 26.x incl. TLS/DNS hostname-validation flaws alongside the Brotli decoder OOB write. Qualys guidance on finding vulnerable runtimes (bundled Node in Electron apps, container base images).\n- Working **Node2Shell exploit** writeup circulating (cybersecuritynews) \u2014 code exec inside a Node app via crafted Brotli input, no runtime modification. EoL Node 20/23/25 get no fix.\n\n## Update 2026-10-25 (sweep) \u2014 scope widens beyond Node.js (Bun, Python, Envoy, Istio, workerd)\n> Source: [The Hacker News](https://thehackernews.com/2026/10/brotli-decoder-flaw-behind-nodejs-rce.html) \u2014 2026-10-24T11:09Z\n> Source: X @eastsidemccarty (2114154577125859826) \u2014 2026-10-25T00:38Z\n- Root bug is in **Google's Brotli C decoder** (1.0.3\u20131.2.0; fixed 1.0.10 / 1.1.1 / 1.2.1). CVSS 4.0 **9.2** (Google), 8.1 (Red Hat). Fix committed upstream 2026-02-27 but not released until 2026-10-21.\n- Products bundling their own decoder need separate fixes: **Bun 1.4.4**; **Envoy** 1.40.0 / 1.39.3 / 1.38.6 / 1.37.8 / 1.36.12; **Istio** 1.31.2 / 1.30.6 / 1.29.9; **Python Brotli 1.2.1** (PYSEC-2026-4322) and **brotlicffi 1.2.1.0** (PYSEC-2026-4323); cdxgen 13.5.0 / 12.8.9.\n- Python exposure: requests / urllib3 / httpx / aiohttp auto-decode `br` whenever Brotli is installed \u2014 client-side exposure to malicious servers. Mitigation there: upgrade or uninstall Brotli/brotlicffi.\n- Removing `br` from `Accept-Encoding` is **not sufficient**; reject `Content-Encoding: br` before any proxy/parser decodes. No Node.js workaround.\n- CISA SSVC (Oct 23): exploitation none, automatable no. Imperva RCE PoC unreleased.\n- **Cloudflare workerd** reported affected via dependency (researcher @eastsidemccarty, \"#brotlipocalypse\"): DoS trivial, RCE not achieved; Cloudflare closed report as known.\n- Bug bounty angle: Envoy/Istio sidecars and Bun/workerd edge runtimes widen the target set \u2014 check `server` headers / runtime fingerprints for version, report reachability only.\n\n\n## Update 2026-10-27 (sweep) \u2014 .NET OOB patches, PHP Windows rebuild, PAN-OS, first exploitation attempt\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/critical-http2shell-brotli-vulnerability-triggers-emergency-patches/) \u2014 2026-10-26\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/microsoft/microsoft-releases-emergency-net-patches-for-critical-brotli-flaw/) \u2014 2026-10-26\n> Source: [The Hacker News](https://thehackernews.com/2026/10/php-issues-second-windows-security.html) \u2014 2026-10-26\n> Source: [Tenable](https://www.tenable.com/blog/brotli2shell-frequently-asked-questions-for-google-brotli-decoder-cve-2026-111497) \u2014 2026-10-27\n> Source: [Wiz](https://www.wiz.io/blog/cve-2026-111497-brotli-rce-node-js) \u2014 2026-10-25\n> Source: [CCCS AV26-1085](https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1085) \u2014 2026-10-26\n> Source: [Clubic](https://www.clubic.com/actualite-636082-microsoft-corrige-en-urgence-une-faille-critique-menacant-les-applications-net.html) \u2014 2026-10-27\n> Source: [X @IntCyberDigest](https://x.com/IntCyberDigest/status/2114959528169259243) \u2014 2026-10-27\n\n- Aliases now in use: **Node2Shell / Broccoli2Shell / Brotli2Shell / HTTP2Shell**. CVSS v4 **9.2** (Google); CVSS v3.1 8.1 (Microsoft, .NET).\n- **Fixed versions:** Brotli 1.0.10 / 1.1.1 / 1.2.1 (affected 1.0.3\u20131.0.9, 1.1.0, 1.2.0); Node.js 22.23.4 / 24.22.1 / 26.12.1; Bun 1.4.4 (affected from 1.0.21).\n- **.NET:** out-of-band 8.0.33 / 9.0.22 / 10.0.14 / 11 RC3. Exposed only if ASP.NET Core request decompression, HttpClient auto-decompression, or direct Brotli use is enabled (off by default); .NET Framework not affected. Restart apps; rebuild self-contained apps.\n- **PHP for Windows:** second rebuild in five days for 8.2\u20138.5; reachable via cURL automatic decompression (off by default).\n- **Palo Alto PAN-OS:** critical, only units decrypting TLS and inspecting Brotli; fixes due **30 Oct** \u2014 disable Brotli inspection meanwhile (X @IntCyberDigest).\n- **Exploitation:** public PoCs (Imperva RCE vs Node.js 24.22.0 arm64). ELLIO reported an exploitation attempt vs Node.js 24.22.0 x86-64 on 2026-10-26 (unconfirmed by Tenable). Not in KEV as of 10-26.\n\n## Update 2026-10-28 \u2014 Added to CISA KEV (CCCS AV26-1085 Update 1)\n> Source: [CCCS AV26-1085](https://cyber.gc.ca/en/alerts-advisories/google-security-advisory-av26-1085) \u2014 2026-10-27 20:32 UTC\n> Source: [Malwarebytes](https://www.malwarebytes.com/blog/news/2026/10/the-webs-having-a-rough-week-heres-how-to-browse-safely) \u2014 2026-10-27 12:22 UTC\n- CISA added **CVE-2026-111497** to **KEV on 2026-10-27** \u2192 exploited in the wild.\n- CCCS affected Brotli ranges: **1.0.3\u2013<1.0.10, 1.1.0\u2013<1.1.1, 1.2.0\u2013<1.2.1** (fixed: 1.0.10 / 1.1.1 / 1.2.1).\n- Malwarebytes consumer roundup lists it alongside PHP2Shell and the eMudhra CA revocations as the week's major web-platform issues.\n\n\n## Update 2026-10-29 (sweep) \u2014 CISA confirms exploitation; x86-64 RCE confirmed; CCCS AL26-027\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/cisa-warns-of-hackers-now-exploiting-critical-node2shell-flaw/) \u2014 2026-10-28T10:46Z\n> Source: [CCCS AL26-027](https://cyber.gc.ca/en/alerts-advisories/al26-027-critical-vulnerability-impacting-google-brotli-cve-2026-111497) \u2014 2026-10-28T12:46Z\n> Source: [X @TheHackersNews](https://x.com/TheHackersNews/status/2115346578756280447) \u2014 2026-10-28T07:35Z\n> Source: [Clubic](https://www.clubic.com/actualite-636442-node2shell-la-faille-critique-qui-touche-node-js-et-net-est-desormais-exploitee-par-des-pirates.html) \u2014 2026-10-28T15:01Z\n- **CISA confirms active exploitation** (KEV since 10-27). Aliases: Node2Shell / **Broccoli2Shell** / HTTP2Shell.\n- **THN update:** moved from PoC to the wild \u2014 scanning live, first exploit attempts seen; **RCE now confirmed on stock x86-64 Node.js**, not just arm64.\n- **CCCS AL26-027:** CWE-787 OOB write in the Brotli decoder; crafted compressed data, unauthenticated, may yield RCE. Fixed in **Brotli 1.0.10 / 1.1.1 / 1.2.1**. Bundled in **Node.js, .NET, PowerShell, Bun, Envoy, Istio, Python Brotli** packages \u2014 patch runtimes AND proxies/meshes.\n- Node fixed versions unchanged: **22.23.4 / 24.22.1 / 26.12.1**.",
    "sev": "Critical",
    "year": "2026",
    "kev": true,
@@ -4904,7 +4915,7 @@
   },
   "CVE-2026-109618": {
    "file": "Threat_Intel/CVEs/2026/Critical/PHP2Shell-CVE-2026-109618-109619-PHP-Core-Unauth-RCE-Exploited-2026-10.md",
-   "body": "# PHP2Shell \u2014 CVE-2026-109618 / CVE-2026-109619 PHP Core Unauthenticated RCE (Exploited, Public PoC)\n\n\u2705 **Verification:** Verified \u2014 6+ independent sources\n\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/amazon-says-php2shell-exploitation-began-4-days-before-patches/) \u2014 2026-10-22T13:09Z\n> Source: [Tenable](https://www.tenable.com/blog/php2shell-vulnerability-threat-actor-response) \u2014 2026-10-22T22:04Z\n> Source: [UpGuard](https://www.upguard.com/blog/php2shell-a-clear-explanation-and-response-framework) \u2014 2026-10-22T12:58Z\n> Source: [Imperva](https://www.imperva.com/blog/php2shell-early-attack-activity-through-impervas-lens/) \u2014 2026-10-22T16:30Z\n> Source: [Talos Threat Source](https://blog.talosintelligence.com/i-had-plans-for-that-second/) \u2014 2026-10-22T18:04Z\n> Source: [Schneier on Security](https://www.schneier.com/blog/archives/2026/10/new-serious-php-vulnerabilities-released-and-patched.html) \u2014 2026-10-22T13:26Z\n> Source: [Salt Security](https://salt.security/blog/bridging-the-patch-gap-stopping-php2shell-and-zero-days-before-waf-signatures-exist) \u2014 2026-10-23T01:00Z\n> Source: [The Last Watchdog (Gcore)](https://www.lastwatchdog.com/news-alert-gcore-extends-free-web-protection-to-government-agencies-after-widespread-php-exploits/) \u2014 2026-10-22T14:27Z\n> Source: [tl;dr sec #351](https://tldrsec.com/p/tldr-sec-351) \u2014 2026-10-22T14:30Z\n> Source: X [@IntCyberDigest](https://x.com/IntCyberDigest/status/2113435737769304239), [@swagitda_](https://x.com/swagitda_/status/2113451104994488560), [@shodanhq](https://x.com/shodanhq/status/2113423420444586279), [@ProbiusOfficial](https://x.com/ProbiusOfficial/status/2113530056438129041), [@MalwareTechBlog](https://x.com/MalwareTechBlog/status/2113463738833744047), [@0x534c](https://x.com/0x534c/status/2113161833683280284)\n\n**Type:** CVE / pre-auth RCE | **Severity:** Critical (CVSS v4 9.2; an early 10.0 figure is considered inflated) | **Date:** 2026-10-20 disclosure, 2026-10-21 patches | **Tags:** #cve #php #rce #exploited #poc #php2shell\n\n## Summary\n- **CVE-2026-109618** (\"OOM Corruption\") and **CVE-2026-109619** (\"Stale Global State\" / use-after-free) \u2014 stale internal state left after PHP aborts a request on out-of-memory. Chaining both is more reliable than either alone.\n- Unauthenticated RCE from a single HTTP request. Confirmed path through **session upload progress (on by default)**. Highest risk: **Apache mod_php with defaults** (exploit runs before app code). Also confirmed on PHP-FPM via application code paths.\n- Reaches every PHP app stack: WordPress, Drupal, Magento, Shopware, WooCommerce.\n- **Fixed:** PHP **8.5.12 / 8.4.27 / 8.3.36 / 8.2.35**. 7.4/8.0/8.1 get minimal source patches only; <7.4 unpatched. (Tenable and Talos state 8.1-and-older get no patch \u2014 sources conflict; check php.net.)\n\n## Exploitation\n- **Pre-disclosure exploitation:** Amazon MadPot honeypots logged an attempt on **2026-10-17** from an anonymization network, four days before patches. Tenable: from an Australian-geolocated IP; exploit code circulated privately before the embargo lifted.\n- **Public PoC** released (Sophos, 10-21); a \"stable\" exploit repo shared on X (@ProbiusOfficial). Marcus Hutchins: RCE needs memory addresses normally protected by ASLR; skeptical of claims of \"easy\" weaponization.\n- **Scale:** Imperva saw ~482k malicious requests against ~22k sites in 103 countries in the first 24h. Cloudflare reports payload changes to evade WAF rules. Fastly (Kelly Shortridge) posted day-2 activity data.\n- **Impact:** European public-sector sites taken offline (France: Ameli, CAF, impots, URSSAF pulled precautionarily); Gcore offering free WAAP to governments.\n- **Criminal ecosystem:** DarkForums, PwnForums, BreachForums and Dread went offline or locked down to protect their own PHP infra; some moved to Telegram. Tenable expects IABs and ransomware affiliates to adopt.\n- Discovery and exploit chain credited to frontier AI models.\n\n## Detection\n- Snort SIDs **67359, 67360** (Talos).\n- Hunt logs for repeated early warnings and **\"Maximum execution time exceeded\"** messages; worker crashes.\n- KQL hunting query for MDE shared by Steven Lim (@0x534c).\n- SANS ISC raised InfoCON to yellow (10-21).\n\n## Action\n1. Patch to the fixed versions; **rebuild container images** (base images bake in old PHP).\n2. Prioritise mod_php deployments and internet-facing apps (Shodan trend: trends.shodan.io cpe:php).\n3. Interim php.ini / FPM pool / php_admin_value hardening reduces but does not remove exposure. WAF rules are being evaded.\n4. Avoid the remirepo RPM repository, which lagged on release day.\n\n## Bug bounty angle\n- Any in-scope PHP target that has not patched is a pre-auth RCE; check version disclosure (X-Powered-By, phpinfo, error pages) and report as critical \u2014 do not exploit beyond a safe version fingerprint.\n\n## Tags\n#verified #php2shell\n\n## Update 2026-10-24 (sweep) \u2014 Day 3: Mirai joins, ASLR bypass, appliances exposed, follow-on CVE\n> Source: [SecurityWeek](https://www.securityweek.com/mirai-botnet-operators-join-php2shell-attacks-as-aslr-bypass-exploits-emerge/) \u2014 2026-10-23T12:45Z\n> Source: [SANS ISC \u2014 (Reliable)? php2shell exploitability](https://isc.sans.edu/diary/rss/33452) \u2014 2026-10-23T20:04Z\n> Source: [SANS ISC \u2014 PHP Vulnerability Wrap-Up](https://isc.sans.edu/diary/rss/33450) \u2014 2026-10-23T13:43Z\n> Source: [CCCS AL26-026 Update 1](https://cyber.gc.ca/en/alerts-advisories/al26-026-critical-vulnerabilities-impacting-php-cve-2026-109618-cve-2026-109619) \u2014 2026-10-23T16:15Z\n> Source: [McAfee](https://www.mcafee.com/blogs/internet-security/php2shell-php-vulnerability/) \u2014 2026-10-23T20:18Z\n> Source: X @IntCyberDigest (2113602587404714160), @DarkWebInformer (2113654367324713466) \u2014 2026-10-23\n\n- **Appliances:** **Palo Alto PAN-OS** confirmed affected \u2014 management web interface (HTTPS UI and XML API). Kevin Beaumont: **PAN-OS firewall VMs and Citrix NetScaler run without ASLR**, which makes PHP2Shell far easier to exploit via internet-facing management interfaces; **no patch yet** from either (Citrix promises one). \u2192 Lock management interfaces to admin networks now.\n- **Botnets:** Sophos blocked attempts to drop **\"Potassium\"** (Mirai-derived, early-2026 strain; download+DDoS). Arctic Wolf tied two Potassium binaries to PHP2Shell payload servers; Hunt.io attributes traffic to a Mirai-style botnet active since May 2026.\n- **ASLR bypass:** **VulnCheck** has a CVE-2026-109618 exploit using a memory leak to RCE on x86-64 **with ASLR on and display_errors off** (production config) \u2014 commercial (IAI customers) only.\n- **Attacker kit:** SOCRadar/Hunt.io open directory: \"one-click\" chain targeting **PHP 8.4.26 on Apache mod_php** + config-check scripts; ~20 sites fingerprinted, 11 probed, none exploitable; 10 rounds vs 123 servers, none exploited.\n- **Reality check:** Sansec walked back mass-exploitation forecast (public exploits fail on default settings); Wordfence: attacks continue, no known compromises; SANS ISC dropped **InfoCON back to Green**.\n- **Exposure stats (Qualys):** ~199k instances patched within 12h; **~110M (71%) run EoL PHP 5.4\u20138.1**; ~44M supported-branch hosts still unpatched. CISA had **not** added to KEV as of 10-23. UK gov: 32 services down, 4 partial (precautionary).\n- **Follow-on:** **CVE-2026-115560** \u2014 new unpatched session-handling RCE, same mitigation (`session.upload_progress.enabled=0`). See [[CVE-2026-115560-PHP-Session-Serialize-Handler-Upload-Progress-Unpatched-RCE-2026-10]].\n\n## Update 2026-10-25 (sweep) \u2014 Palo Alto confirms PAN-OS impact\n> Source: X @The_Cyber_News (2113967491722403964) \u2014 2026-10-24T12:15Z\n- Palo Alto Networks confirmed both PHP RCEs affect **PAN-OS and multiple network products**, and previously impacted two PANW cloud services (now remediated). Ties to the 10-23 reports of the PAN-OS management interface being reachable and lacking ASLR \u2014 keep management interfaces off the internet and track PANW advisories for fixed builds.\n\n\n## Update 2026-10-27 (sweep) \u2014 Confirmed in-the-wild exploitation, CISA KEV, OT vendors, bypass CVE\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/php2shell-security-flaws-now-sucessfully-exploited-in-the-wild/) \u2014 2026-10-26\n> Source: [SecurityWeek](https://www.securityweek.com/php2shell-exploitation-moves-from-probes-to-working-shells/) \u2014 2026-10-26\n> Source: [The Hacker News](https://thehackernews.com/2026/10/cisa-confirms-active-exploitation-of.html) \u2014 2026-10-27\n> Source: [The Hacker News](https://thehackernews.com/2026/10/php2shell-exploitation-hits-government.html) \u2014 2026-10-25\n> Source: [SecurityWeek](https://www.securityweek.com/industrial-vendors-check-products-for-php2shell-vulnerabilities/) \u2014 2026-10-26\n> Source: [Snyk](https://snyk.io/blog/php-patches-critical-unauthenticated-rces/) \u2014 2026-10-26\n> Source: [Qualys](https://blog.qualys.com/product-tech/2026/10/25/cant-patch-php2shell-yet-build-a-stopgap-with-the-controls-you-own) \u2014 2026-10-26\n> Source: [Tenable](https://www.tenable.com/blog/discover-and-remediate-php2shell-exposure-with-tenable) \u2014 2026-10-26\n> Source: [Industrial Cyber](https://industrialcyber.co/vulnerabilities/critical-php-vulnerabilities-raise-worldwide-concerns-as-government-websites-go-offline-researchers-report-ai-assisted-attacks/) \u2014 2026-10-26\n\n- **Exploitation confirmed:** honeypots caught **35 working shells from 2 IPs on 2026-10-24** (SecurityWeek); earlier attempts tried to drop Mirai variant **\"Potassium\"**. **CISA added CVE-2026-109618 and CVE-2026-109619 to KEV** (CVSS v4 9.2 each).\n- **Bypass:** **CVE-2026-115560** (reserved) \u2014 partial bypass of -109619 when `session.serialize_handler` is switched to `php` at runtime with upload progress enabled. Keep `session.upload_progress.enabled=0` even after patching (Snyk).\n- **Patch uptake:** Qualys saw only ~0.13% of version-identified PHP installs patched in the first 12h; stopgap = `session.upload_progress.enabled=0` + WAF/IPS + EDR (PHP worker spawning shells).\n- **OT/ICS:** Siemens, Schneider Electric, ABB confirm some products affected.\n- **Attribution noise:** global scanning suspected North Korean; Unit 42 **retracted** its claim that a European government agency was breached (it was a vulnerable PHP app). Separately Unit 42 reported an agentic-AI-assisted intrusion (hashes + MFA secrets in <2h, NTLM relay attempt).\n- **Detection content:** CISA SIGMA rule; Tenable VM plugin 369483, WAS plugin 115719.\n- Fixed: PHP 8.5.12 / 8.4.27 / 8.3.36 / 8.2.35. 8.1 and older: no upstream fix.\n\n## Update 2026-10-28 \u2014 Wiz exploitation analysis + IOCs; CCCS AL26-026 Update 2\n> Source: [Wiz](https://www.wiz.io/blog/php2shell-exploitation-so-far) \u2014 2026-10-27 13:21 UTC\n> Source: [CCCS AL26-026 Update 2](https://cyber.gc.ca/en/alerts-advisories/al26-026-critical-vulnerabilities-impacting-php-cve-2026-109618-cve-2026-109619) \u2014 2026-10-27 17:20 UTC\n> Source: [CCCS AV26-1070 Update 1](https://cyber.gc.ca/en/alerts-advisories/php-security-advisory-av26-1070) \u2014 2026-10-27 13:16 UTC\n- **Wiz:** no public PoC achieves general end-to-end exploitation; no successful exploitation in Wiz telemetry. Adel Karimi's honeypots *were* exploited \u2014 but ran single-worker Apache **mod_php**.\n- Exploit kit **9bie/php2shell-bypass-aslr-exp**:\n  - Legacy chain: 1,005-part multipart (~12 MB, Content-Length 12,655,437) \u2014 rejected by default 8 MB `post_max_size`.\n  - Current chain (`pure/mk_a1.py`, `pure/mk_leak_b.py`): worker pinning with up to **399 stalled connections** (declare 1,048,576 bytes, send 1); Stage A1 chunked multipart ~1,060,211 bytes, 974 parts, null-byte PHPSESSID, 860 empty file parts with deeply nested array names \u2192 HTTP 500 \"Allowed memory size of 67108864 bytes exhausted ... in Unknown on line 0\"; Stage B1 leak (`PHPSESSID=a`, `PHP_SESSION_UPLOAD_PROGRESS=k0`) failed in every captured run.\n  - Leak layout calibrated for `php:8.4.26-apache` with 128 MB memory_limit \u2014 blockers: post_max_size, build/memory_limit differences, unreliable worker pinning over the internet.\n- Separate **\"PHP2Shell-branded\" Go tool** (not the CVEs): Go port of WoYinDao \"Chain A\" \u2014 session poisoning via upload-progress with `system($_GET[\"c\"])`, then `GET /lfi_sink.php?c=id&f=/tmp/sess_...` \u2014 needs an existing LFI.\n- Exposure trend: ~67% fewer daily exposed vulnerable machines; PHP \u22647.3 share 8.3% \u2192 5.7%; ~47.9% fewer affected orgs; <53% of initially affected orgs still vulnerable after one week.\n- **IOCs (Wiz):** IPs `85.11.187[.]35`, `172.206.2[.]199`, `3.37.227[.]134`, `103.151.172[.]95`, `178.249.214[.]6` (VPN), `31.56.197[.]72` (C2/payload), `135.136.19[.]197` (VPN), `15.204.59[.]70`, `162.35.99[.]94`. Strings: UA `Go-http-client/1.1`; boundary `----php2shell-golang`; marker `PHP2SHELL_XBu4Je`; boundaries `SSSSSSSSSSSSSSSSS` (legacy), `CCCCCCCCCC` (A1).\n- **Detection ideas:** many long-lived slow POSTs from one IP; multipart bodies with ~974\u20131,005 parts / nested array field names; 500s with \"Allowed memory size ... in Unknown on line 0\"; `PHP_SESSION_UPLOAD_PROGRESS` with tiny PHPSESSID values.\n- **CCCS:** AL26-026 Update 2 \u2014 CVE-2026-109618/109619 reportedly exploited, added to KEV Oct 26; Update 1 \u2014 **CVE-2026-115560 not fixed** by the Oct 21 releases (mitigate with `session.upload_progress.enabled=0`). AV26-1070 Update 1 mirrors the KEV addition (affected: 8.5.x<8.5.12, 8.4.x<8.4.27, 8.3.x<8.3.36, 8.2.x<8.2.35).",
+   "body": "# PHP2Shell \u2014 CVE-2026-109618 / CVE-2026-109619 PHP Core Unauthenticated RCE (Exploited, Public PoC)\n\n\u2705 **Verification:** Verified \u2014 6+ independent sources\n\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/amazon-says-php2shell-exploitation-began-4-days-before-patches/) \u2014 2026-10-22T13:09Z\n> Source: [Tenable](https://www.tenable.com/blog/php2shell-vulnerability-threat-actor-response) \u2014 2026-10-22T22:04Z\n> Source: [UpGuard](https://www.upguard.com/blog/php2shell-a-clear-explanation-and-response-framework) \u2014 2026-10-22T12:58Z\n> Source: [Imperva](https://www.imperva.com/blog/php2shell-early-attack-activity-through-impervas-lens/) \u2014 2026-10-22T16:30Z\n> Source: [Talos Threat Source](https://blog.talosintelligence.com/i-had-plans-for-that-second/) \u2014 2026-10-22T18:04Z\n> Source: [Schneier on Security](https://www.schneier.com/blog/archives/2026/10/new-serious-php-vulnerabilities-released-and-patched.html) \u2014 2026-10-22T13:26Z\n> Source: [Salt Security](https://salt.security/blog/bridging-the-patch-gap-stopping-php2shell-and-zero-days-before-waf-signatures-exist) \u2014 2026-10-23T01:00Z\n> Source: [The Last Watchdog (Gcore)](https://www.lastwatchdog.com/news-alert-gcore-extends-free-web-protection-to-government-agencies-after-widespread-php-exploits/) \u2014 2026-10-22T14:27Z\n> Source: [tl;dr sec #351](https://tldrsec.com/p/tldr-sec-351) \u2014 2026-10-22T14:30Z\n> Source: X [@IntCyberDigest](https://x.com/IntCyberDigest/status/2113435737769304239), [@swagitda_](https://x.com/swagitda_/status/2113451104994488560), [@shodanhq](https://x.com/shodanhq/status/2113423420444586279), [@ProbiusOfficial](https://x.com/ProbiusOfficial/status/2113530056438129041), [@MalwareTechBlog](https://x.com/MalwareTechBlog/status/2113463738833744047), [@0x534c](https://x.com/0x534c/status/2113161833683280284)\n\n**Type:** CVE / pre-auth RCE | **Severity:** Critical (CVSS v4 9.2; an early 10.0 figure is considered inflated) | **Date:** 2026-10-20 disclosure, 2026-10-21 patches | **Tags:** #cve #php #rce #exploited #poc #php2shell\n\n## Summary\n- **CVE-2026-109618** (\"OOM Corruption\") and **CVE-2026-109619** (\"Stale Global State\" / use-after-free) \u2014 stale internal state left after PHP aborts a request on out-of-memory. Chaining both is more reliable than either alone.\n- Unauthenticated RCE from a single HTTP request. Confirmed path through **session upload progress (on by default)**. Highest risk: **Apache mod_php with defaults** (exploit runs before app code). Also confirmed on PHP-FPM via application code paths.\n- Reaches every PHP app stack: WordPress, Drupal, Magento, Shopware, WooCommerce.\n- **Fixed:** PHP **8.5.12 / 8.4.27 / 8.3.36 / 8.2.35**. 7.4/8.0/8.1 get minimal source patches only; <7.4 unpatched. (Tenable and Talos state 8.1-and-older get no patch \u2014 sources conflict; check php.net.)\n\n## Exploitation\n- **Pre-disclosure exploitation:** Amazon MadPot honeypots logged an attempt on **2026-10-17** from an anonymization network, four days before patches. Tenable: from an Australian-geolocated IP; exploit code circulated privately before the embargo lifted.\n- **Public PoC** released (Sophos, 10-21); a \"stable\" exploit repo shared on X (@ProbiusOfficial). Marcus Hutchins: RCE needs memory addresses normally protected by ASLR; skeptical of claims of \"easy\" weaponization.\n- **Scale:** Imperva saw ~482k malicious requests against ~22k sites in 103 countries in the first 24h. Cloudflare reports payload changes to evade WAF rules. Fastly (Kelly Shortridge) posted day-2 activity data.\n- **Impact:** European public-sector sites taken offline (France: Ameli, CAF, impots, URSSAF pulled precautionarily); Gcore offering free WAAP to governments.\n- **Criminal ecosystem:** DarkForums, PwnForums, BreachForums and Dread went offline or locked down to protect their own PHP infra; some moved to Telegram. Tenable expects IABs and ransomware affiliates to adopt.\n- Discovery and exploit chain credited to frontier AI models.\n\n## Detection\n- Snort SIDs **67359, 67360** (Talos).\n- Hunt logs for repeated early warnings and **\"Maximum execution time exceeded\"** messages; worker crashes.\n- KQL hunting query for MDE shared by Steven Lim (@0x534c).\n- SANS ISC raised InfoCON to yellow (10-21).\n\n## Action\n1. Patch to the fixed versions; **rebuild container images** (base images bake in old PHP).\n2. Prioritise mod_php deployments and internet-facing apps (Shodan trend: trends.shodan.io cpe:php).\n3. Interim php.ini / FPM pool / php_admin_value hardening reduces but does not remove exposure. WAF rules are being evaded.\n4. Avoid the remirepo RPM repository, which lagged on release day.\n\n## Bug bounty angle\n- Any in-scope PHP target that has not patched is a pre-auth RCE; check version disclosure (X-Powered-By, phpinfo, error pages) and report as critical \u2014 do not exploit beyond a safe version fingerprint.\n\n## Tags\n#verified #php2shell\n\n## Update 2026-10-24 (sweep) \u2014 Day 3: Mirai joins, ASLR bypass, appliances exposed, follow-on CVE\n> Source: [SecurityWeek](https://www.securityweek.com/mirai-botnet-operators-join-php2shell-attacks-as-aslr-bypass-exploits-emerge/) \u2014 2026-10-23T12:45Z\n> Source: [SANS ISC \u2014 (Reliable)? php2shell exploitability](https://isc.sans.edu/diary/rss/33452) \u2014 2026-10-23T20:04Z\n> Source: [SANS ISC \u2014 PHP Vulnerability Wrap-Up](https://isc.sans.edu/diary/rss/33450) \u2014 2026-10-23T13:43Z\n> Source: [CCCS AL26-026 Update 1](https://cyber.gc.ca/en/alerts-advisories/al26-026-critical-vulnerabilities-impacting-php-cve-2026-109618-cve-2026-109619) \u2014 2026-10-23T16:15Z\n> Source: [McAfee](https://www.mcafee.com/blogs/internet-security/php2shell-php-vulnerability/) \u2014 2026-10-23T20:18Z\n> Source: X @IntCyberDigest (2113602587404714160), @DarkWebInformer (2113654367324713466) \u2014 2026-10-23\n\n- **Appliances:** **Palo Alto PAN-OS** confirmed affected \u2014 management web interface (HTTPS UI and XML API). Kevin Beaumont: **PAN-OS firewall VMs and Citrix NetScaler run without ASLR**, which makes PHP2Shell far easier to exploit via internet-facing management interfaces; **no patch yet** from either (Citrix promises one). \u2192 Lock management interfaces to admin networks now.\n- **Botnets:** Sophos blocked attempts to drop **\"Potassium\"** (Mirai-derived, early-2026 strain; download+DDoS). Arctic Wolf tied two Potassium binaries to PHP2Shell payload servers; Hunt.io attributes traffic to a Mirai-style botnet active since May 2026.\n- **ASLR bypass:** **VulnCheck** has a CVE-2026-109618 exploit using a memory leak to RCE on x86-64 **with ASLR on and display_errors off** (production config) \u2014 commercial (IAI customers) only.\n- **Attacker kit:** SOCRadar/Hunt.io open directory: \"one-click\" chain targeting **PHP 8.4.26 on Apache mod_php** + config-check scripts; ~20 sites fingerprinted, 11 probed, none exploitable; 10 rounds vs 123 servers, none exploited.\n- **Reality check:** Sansec walked back mass-exploitation forecast (public exploits fail on default settings); Wordfence: attacks continue, no known compromises; SANS ISC dropped **InfoCON back to Green**.\n- **Exposure stats (Qualys):** ~199k instances patched within 12h; **~110M (71%) run EoL PHP 5.4\u20138.1**; ~44M supported-branch hosts still unpatched. CISA had **not** added to KEV as of 10-23. UK gov: 32 services down, 4 partial (precautionary).\n- **Follow-on:** **CVE-2026-115560** \u2014 new unpatched session-handling RCE, same mitigation (`session.upload_progress.enabled=0`). See [[CVE-2026-115560-PHP-Session-Serialize-Handler-Upload-Progress-Unpatched-RCE-2026-10]].\n\n## Update 2026-10-25 (sweep) \u2014 Palo Alto confirms PAN-OS impact\n> Source: X @The_Cyber_News (2113967491722403964) \u2014 2026-10-24T12:15Z\n- Palo Alto Networks confirmed both PHP RCEs affect **PAN-OS and multiple network products**, and previously impacted two PANW cloud services (now remediated). Ties to the 10-23 reports of the PAN-OS management interface being reachable and lacking ASLR \u2014 keep management interfaces off the internet and track PANW advisories for fixed builds.\n\n\n## Update 2026-10-27 (sweep) \u2014 Confirmed in-the-wild exploitation, CISA KEV, OT vendors, bypass CVE\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/php2shell-security-flaws-now-sucessfully-exploited-in-the-wild/) \u2014 2026-10-26\n> Source: [SecurityWeek](https://www.securityweek.com/php2shell-exploitation-moves-from-probes-to-working-shells/) \u2014 2026-10-26\n> Source: [The Hacker News](https://thehackernews.com/2026/10/cisa-confirms-active-exploitation-of.html) \u2014 2026-10-27\n> Source: [The Hacker News](https://thehackernews.com/2026/10/php2shell-exploitation-hits-government.html) \u2014 2026-10-25\n> Source: [SecurityWeek](https://www.securityweek.com/industrial-vendors-check-products-for-php2shell-vulnerabilities/) \u2014 2026-10-26\n> Source: [Snyk](https://snyk.io/blog/php-patches-critical-unauthenticated-rces/) \u2014 2026-10-26\n> Source: [Qualys](https://blog.qualys.com/product-tech/2026/10/25/cant-patch-php2shell-yet-build-a-stopgap-with-the-controls-you-own) \u2014 2026-10-26\n> Source: [Tenable](https://www.tenable.com/blog/discover-and-remediate-php2shell-exposure-with-tenable) \u2014 2026-10-26\n> Source: [Industrial Cyber](https://industrialcyber.co/vulnerabilities/critical-php-vulnerabilities-raise-worldwide-concerns-as-government-websites-go-offline-researchers-report-ai-assisted-attacks/) \u2014 2026-10-26\n\n- **Exploitation confirmed:** honeypots caught **35 working shells from 2 IPs on 2026-10-24** (SecurityWeek); earlier attempts tried to drop Mirai variant **\"Potassium\"**. **CISA added CVE-2026-109618 and CVE-2026-109619 to KEV** (CVSS v4 9.2 each).\n- **Bypass:** **CVE-2026-115560** (reserved) \u2014 partial bypass of -109619 when `session.serialize_handler` is switched to `php` at runtime with upload progress enabled. Keep `session.upload_progress.enabled=0` even after patching (Snyk).\n- **Patch uptake:** Qualys saw only ~0.13% of version-identified PHP installs patched in the first 12h; stopgap = `session.upload_progress.enabled=0` + WAF/IPS + EDR (PHP worker spawning shells).\n- **OT/ICS:** Siemens, Schneider Electric, ABB confirm some products affected.\n- **Attribution noise:** global scanning suspected North Korean; Unit 42 **retracted** its claim that a European government agency was breached (it was a vulnerable PHP app). Separately Unit 42 reported an agentic-AI-assisted intrusion (hashes + MFA secrets in <2h, NTLM relay attempt).\n- **Detection content:** CISA SIGMA rule; Tenable VM plugin 369483, WAS plugin 115719.\n- Fixed: PHP 8.5.12 / 8.4.27 / 8.3.36 / 8.2.35. 8.1 and older: no upstream fix.\n\n## Update 2026-10-28 \u2014 Wiz exploitation analysis + IOCs; CCCS AL26-026 Update 2\n> Source: [Wiz](https://www.wiz.io/blog/php2shell-exploitation-so-far) \u2014 2026-10-27 13:21 UTC\n> Source: [CCCS AL26-026 Update 2](https://cyber.gc.ca/en/alerts-advisories/al26-026-critical-vulnerabilities-impacting-php-cve-2026-109618-cve-2026-109619) \u2014 2026-10-27 17:20 UTC\n> Source: [CCCS AV26-1070 Update 1](https://cyber.gc.ca/en/alerts-advisories/php-security-advisory-av26-1070) \u2014 2026-10-27 13:16 UTC\n- **Wiz:** no public PoC achieves general end-to-end exploitation; no successful exploitation in Wiz telemetry. Adel Karimi's honeypots *were* exploited \u2014 but ran single-worker Apache **mod_php**.\n- Exploit kit **9bie/php2shell-bypass-aslr-exp**:\n  - Legacy chain: 1,005-part multipart (~12 MB, Content-Length 12,655,437) \u2014 rejected by default 8 MB `post_max_size`.\n  - Current chain (`pure/mk_a1.py`, `pure/mk_leak_b.py`): worker pinning with up to **399 stalled connections** (declare 1,048,576 bytes, send 1); Stage A1 chunked multipart ~1,060,211 bytes, 974 parts, null-byte PHPSESSID, 860 empty file parts with deeply nested array names \u2192 HTTP 500 \"Allowed memory size of 67108864 bytes exhausted ... in Unknown on line 0\"; Stage B1 leak (`PHPSESSID=a`, `PHP_SESSION_UPLOAD_PROGRESS=k0`) failed in every captured run.\n  - Leak layout calibrated for `php:8.4.26-apache` with 128 MB memory_limit \u2014 blockers: post_max_size, build/memory_limit differences, unreliable worker pinning over the internet.\n- Separate **\"PHP2Shell-branded\" Go tool** (not the CVEs): Go port of WoYinDao \"Chain A\" \u2014 session poisoning via upload-progress with `system($_GET[\"c\"])`, then `GET /lfi_sink.php?c=id&f=/tmp/sess_...` \u2014 needs an existing LFI.\n- Exposure trend: ~67% fewer daily exposed vulnerable machines; PHP \u22647.3 share 8.3% \u2192 5.7%; ~47.9% fewer affected orgs; <53% of initially affected orgs still vulnerable after one week.\n- **IOCs (Wiz):** IPs `85.11.187[.]35`, `172.206.2[.]199`, `3.37.227[.]134`, `103.151.172[.]95`, `178.249.214[.]6` (VPN), `31.56.197[.]72` (C2/payload), `135.136.19[.]197` (VPN), `15.204.59[.]70`, `162.35.99[.]94`. Strings: UA `Go-http-client/1.1`; boundary `----php2shell-golang`; marker `PHP2SHELL_XBu4Je`; boundaries `SSSSSSSSSSSSSSSSS` (legacy), `CCCCCCCCCC` (A1).\n- **Detection ideas:** many long-lived slow POSTs from one IP; multipart bodies with ~974\u20131,005 parts / nested array field names; 500s with \"Allowed memory size ... in Unknown on line 0\"; `PHP_SESSION_UPLOAD_PROGRESS` with tiny PHPSESSID values.\n- **CCCS:** AL26-026 Update 2 \u2014 CVE-2026-109618/109619 reportedly exploited, added to KEV Oct 26; Update 1 \u2014 **CVE-2026-115560 not fixed** by the Oct 21 releases (mitigate with `session.upload_progress.enabled=0`). AV26-1070 Update 1 mirrors the KEV addition (affected: 8.5.x<8.5.12, 8.4.x<8.4.27, 8.3.x<8.3.36, 8.2.x<8.2.35).\n\n\n## Update 2026-10-29 (sweep) \u2014 CISA: commands executed on servers; InfraTrust appliance exposure; 'no Log4Shell' counterview\n> Source: [Clubic](https://www.clubic.com/actualite-636448-php2shell-des-pirates-ont-reussi-a-exploiter-les-failles-critiques-de-php-la-cisa-confirme-la-menace.html) \u2014 2026-10-28T15:17Z\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/infratrust-report-warns-of-exploited-flaws-in-critical-network-infrastructure/) \u2014 2026-10-28T14:00Z\n> Source: [The Last Watchdog](https://www.lastwatchdog.com/shared-intel-qa-php2shell-is-no-log4shell-its-danger-has-not-yet-matched-the-alarm/) \u2014 2026-10-28T10:18Z\n> Source: [ESET WeLiveSecurity](https://www.welivesecurity.com/en/business-security/lessons-cybersecurity-black-week/) \u2014 2026-10-28T10:33Z\n- **CISA:** exploitation has moved from attempts to **commands actually executed** on several vulnerable servers. PHP \u22648.1 unpatched upstream; French public sites taken offline as a precaution (Clubic).\n- **InfraTrust report:** PHP2Shell exposes **web management interfaces of firewalls, VPNs, ADCs and other appliances** running embedded PHP \u2014 check vendor advisories for appliances, not just web servers.\n- **Counterview (Last Watchdog Q&A):** Calif + Wiz researchers built a working exploit in ~1 week using OpenAI/Google models; Amazon saw an attempt 4 days pre-disclosure \u2014 but real-world impact has not matched the Log4Shell-level alarm (consistent with Wiz's 10-27 telemetry).\n- ESET \"Black Week\" recap ties PHP2Shell, leaked Linux kernel vuln reports and the poisoned **LiteLLM 1.107.0** PyPI release together.",
    "sev": "Critical",
    "year": "2026",
    "kev": true,
@@ -6249,6 +6260,14 @@
    "kev": true,
    "apts": []
   },
+  "CVE-2026-118035": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-118035.md",
+   "body": "# CVE-2026-118035\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-118035\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-118035\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-118035\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-12345": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-12345.md",
    "body": "# CVE-2026-12345\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u2139\ufe0f **Enriched** \u2014 this note now contains captured intel beyond the auto-stub baseline. Verify specifics against the linked sources.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\n{ label: \"\ud83d\udc1e New CVE\",            template: \"Templates/CVE Tracker Template.md\",         folder: \"Threat_Intel/CVEs\", ask: \"CVE id (e.g. CVE-2026-12345)\" },\n\n## Where it appears in this vault\n- `\ud83c\udfe0 SOC Vault Homepage.md` \u2014 { label: \"\ud83d\udc1e New CVE\",            template: \"Templates/CVE Tracker Template.md\",         folder: \"Threat_Intel/CVEs\", ask: \"CVE id (e.g. CVE-2026-12345)\" },\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-12345\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-12345\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-12345\n\n## Tags\n#cve #2026 #unrated #enriched #verified\n\n---\n\n## \u26a0\ufe0f FALSE POSITIVE \u2014 not a real CVE reference (flagged 2026-09-04)\n\n**This stub should not exist and its identifier is not a real vulnerability in this vault's scope.**\n\n`make_cve_notes.py` extracted `CVE-2026-12345` from a **placeholder example string** in `\ud83c\udfe0 SOC Vault Homepage.md`:\n\n`ask: \"CVE id (e.g. CVE-2026-12345)\"`\n\n\u2014 which is the prompt text of a Templater quick-add button, not an intel reference. `CVE-2026-12345` is the conventional dummy identifier used in documentation examples.\n\n**Impact:** it inflates the `referenced` count in the CVE-coverage metric by one and adds a permanent empty stub to `Threat_Intel/CVEs/2026/Unrated/`.\n\n**Recommended fix (left for the vault owner \u2014 this sweep does not delete files):**\n1. Delete this file.\n2. Add an exclusion to `Dashboards/make_cve_notes.py` so the CVE regex skips: (a) matches inside `e.g.`/`example` contexts, (b) an explicit denylist containing `CVE-2026-12345`, or (c) the `\ud83c\udfe0 SOC Vault Homepage.md` file entirely, since it is a navigation page rather than an intel note.\n\nOption (b) is the smallest safe change. Without it this stub will be silently regenerated on every sweep.\n\n## Tags\n#false-positive #enriched-error #tooling-bug #do-not-cite #verified",
@@ -7420,94 +7439,94 @@
  },
  "recent": [
   {
-   "title": "nist-agent-identity-management-design-tenets-nccoe-2026-10",
-   "file": "Guides/AI-BugBounty/nist-agent-identity-management-design-tenets-nccoe-2026-10.md",
-   "cat": "ai-bugbounty",
-   "ts": "2026-10-28"
-  },
-  {
-   "title": "provably-hidden-capabilities-encrypted-backdoor-circuits-elicitation-audit-limits-2026-10",
-   "file": "Guides/AI-BugBounty/provably-hidden-capabilities-encrypted-backdoor-circuits-elicitation-audit-limits-2026-10.md",
-   "cat": "ai-bugbounty",
-   "ts": "2026-10-28"
-  },
-  {
-   "title": "Election-Scams-Voter-Registration-Ballot-Smishing-TSE-WhatsApp-Malwarebytes-2026-10",
-   "file": "Guides/phishing/Election-Scams-Voter-Registration-Ballot-Smishing-TSE-WhatsApp-Malwarebytes-2026-10.md",
-   "cat": "malware",
-   "ts": "2026-10-28"
-  },
-  {
-   "title": "SVG-Sanitizer-Bypasses-XSLT-Link-Header-Safari-GIF-Use-PortSwigger-2026-10",
-   "file": "Guides/WebSec/SVG-Sanitizer-Bypasses-XSLT-Link-Header-Safari-GIF-Use-PortSwigger-2026-10.md",
+   "title": "Apple-Bug-Bounty-dawgyg-Public-POC-Report-Dump-Announcement-2026-10",
+   "file": "Guides/Apple-Bug-Bounty-dawgyg-Public-POC-Report-Dump-Announcement-2026-10.md",
    "cat": "technique",
-   "ts": "2026-10-28"
+   "ts": "2026-10-29"
+  },
+  {
+   "title": "Entra-ID-SMS-Voice-MFA-Retirement-Feb-2027-Passkey-Migration-2026-10",
+   "file": "Guides/Entra-ID-SMS-Voice-MFA-Retirement-Feb-2027-Passkey-Migration-2026-10.md",
+   "cat": "technique",
+   "ts": "2026-10-29"
+  },
+  {
+   "title": "autonomous-n-day-exploit-generation-pipeline-chompie-bsides-canberra-2026-10",
+   "file": "Guides/AI-BugBounty/autonomous-n-day-exploit-generation-pipeline-chompie-bsides-canberra-2026-10.md",
+   "cat": "ai-bugbounty",
+   "ts": "2026-10-29"
+  },
+  {
+   "title": "guillotine-hypervisor-model-containment-mickens-labscon26-keynote-2026-10",
+   "file": "Guides/AI-BugBounty/guillotine-hypervisor-model-containment-mickens-labscon26-keynote-2026-10.md",
+   "cat": "ai-bugbounty",
+   "ts": "2026-10-29"
+  },
+  {
+   "title": "Discord-Discoverable-Servers-Search-Engine-Indexing-OSINT-2026-10",
+   "file": "Guides/OSINT/Discord-Discoverable-Servers-Search-Engine-Indexing-OSINT-2026-10.md",
+   "cat": "technique",
+   "ts": "2026-10-29"
+  },
+  {
+   "title": "WhatsApp-Vote-For-Child-Contest-Verification-Code-Account-Takeover-Gendarmerie-2026-10",
+   "file": "Guides/phishing/WhatsApp-Vote-For-Child-Contest-Verification-Code-Account-Takeover-Gendarmerie-2026-10.md",
+   "cat": "technique",
+   "ts": "2026-10-29"
+  },
+  {
+   "title": "DPRK-IT-Workers-FBI-StateDept-Joint-Advisory-2026",
+   "file": "Threat_Intel/APT_Groups/DPRK-IT-Workers-FBI-StateDept-Joint-Advisory-2026.md",
+   "cat": "malware",
+   "ts": "2026-10-29"
+  },
+  {
+   "title": "UNC6671-BlackFile-HedgeFund-Extortion-2026",
+   "file": "Threat_Intel/APT_Groups/UNC6671-BlackFile-HedgeFund-Extortion-2026.md",
+   "cat": "malware",
+   "ts": "2026-10-29"
+  },
+  {
+   "title": "Volt-Typhoon-Silent-Train-OnDemand-Compromised-Device-Chains-ZeroDay-Concealment-2026-10",
+   "file": "Threat_Intel/APT_Groups/VoltTyphoon/Volt-Typhoon-Silent-Train-OnDemand-Compromised-Device-Chains-ZeroDay-Concealment-2026-10.md",
+   "cat": "malware",
+   "ts": "2026-10-29"
+  },
+  {
+   "title": "VoltTyphoon-Profile",
+   "file": "Threat_Intel/APT_Groups/VoltTyphoon/VoltTyphoon-Profile.md",
+   "cat": "malware",
+   "ts": "2026-10-29"
   },
   {
    "title": "eMudhra-CA-Weak-Private-Keys-Exits-TLS-Certificate-Business-2026-10",
    "file": "Threat_Intel/Breaches/eMudhra-CA-Weak-Private-Keys-Exits-TLS-Certificate-Business-2026-10.md",
    "cat": "breach",
-   "ts": "2026-10-28"
+   "ts": "2026-10-29"
   },
   {
-   "title": "UNM-Health-Cyber-Incident-Patient-Diversion-Clinic-Closures-2026-10",
-   "file": "Threat_Intel/Breaches/UNM-Health-Cyber-Incident-Patient-Diversion-Clinic-Closures-2026-10.md",
+   "title": "Engie-Partner-Door-to-Door-Sales-Tool-Customer-Data-Theft-2026-10",
+   "file": "Threat_Intel/Breaches/Engie-Partner-Door-to-Door-Sales-Tool-Customer-Data-Theft-2026-10.md",
    "cat": "breach",
-   "ts": "2026-10-28"
+   "ts": "2026-10-29"
   },
   {
-   "title": "Warp-Third-Party-Vendor-Breach-AI-Agent-Logs-Telemetry-2026-10",
-   "file": "Threat_Intel/Breaches/Warp-Third-Party-Vendor-Breach-AI-Agent-Logs-Telemetry-2026-10.md",
+   "title": "Fortinet-Firewalls-k0t-Mass-Breach-Hudson-Rock-40k-Cleartext-Secrets-2026-10",
+   "file": "Threat_Intel/Breaches/Fortinet-Firewalls-k0t-Mass-Breach-Hudson-Rock-40k-Cleartext-Secrets-2026-10.md",
    "cat": "breach",
-   "ts": "2026-10-28"
+   "ts": "2026-10-29"
   },
   {
-   "title": "Node2Shell-CVE-2026-111497-Nodejs-Bundled-Brotli-Decoder-RCE-2026-10",
-   "file": "Threat_Intel/CVEs/2026/Critical/Node2Shell-CVE-2026-111497-Nodejs-Bundled-Brotli-Decoder-RCE-2026-10.md",
-   "cat": "cve",
-   "ts": "2026-10-28"
+   "title": "Japan-Airlines-Sony-Network-Communications-Breaches-Japan-Incident-Wave-2026-10",
+   "file": "Threat_Intel/Breaches/Japan-Airlines-Sony-Network-Communications-Breaches-Japan-Incident-Wave-2026-10.md",
+   "cat": "breach",
+   "ts": "2026-10-29"
   },
   {
-   "title": "PHP2Shell-CVE-2026-109618-109619-PHP-Core-Unauth-RCE-Exploited-2026-10",
-   "file": "Threat_Intel/CVEs/2026/Critical/PHP2Shell-CVE-2026-109618-109619-PHP-Core-Unauth-RCE-Exploited-2026-10.md",
-   "cat": "cve",
-   "ts": "2026-10-28"
-  },
-  {
-   "title": "Apple-CoreGraphics-Zero-Day-Exploited-iOS-26.7.1-2026",
-   "file": "Threat_Intel/CVEs/2026/High/Apple-CoreGraphics-Zero-Day-Exploited-iOS-26.7.1-2026.md",
-   "cat": "cve",
-   "ts": "2026-10-28"
-  },
-  {
-   "title": "Tailscale-11-Unpatched-Flaws-Full-Disclosure-SSH-Race-Root-Rogue-Node-2026-10",
-   "file": "Threat_Intel/CVEs/2026/High/Tailscale-11-Unpatched-Flaws-Full-Disclosure-SSH-Race-Root-Rogue-Node-2026-10.md",
-   "cat": "cve",
-   "ts": "2026-10-28"
-  },
-  {
-   "title": "Adobe-CVE-2026-48356-Added-to-CISA-KEV-AV26-697-2026-10",
-   "file": "Threat_Intel/CVEs/2026/Unrated/Adobe-CVE-2026-48356-Added-to-CISA-KEV-AV26-697-2026-10.md",
-   "cat": "cve",
-   "ts": "2026-10-28"
-  },
-  {
-   "title": "CCCS-Advisories-2026-10-27-Hitachi-JCI-Moxa-Esri-ICS-Roundup",
-   "file": "Threat_Intel/CVEs/2026/Unrated/CCCS-Advisories-2026-10-27-Hitachi-JCI-Moxa-Esri-ICS-Roundup.md",
-   "cat": "cve",
-   "ts": "2026-10-28"
-  },
-  {
-   "title": "CVE-2026-111459",
-   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-111459.md",
-   "cat": "cve",
-   "ts": "2026-10-28"
-  },
-  {
-   "title": "CVE-2026-111460",
-   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-111460.md",
-   "cat": "cve",
-   "ts": "2026-10-28"
+   "title": "Moldova-Major-Government-Cyberattack-Foreign-Involvement-Probe-2026-10",
+   "file": "Threat_Intel/Breaches/Moldova-Major-Government-Cyberattack-Foreign-Involvement-Probe-2026-10.md",
+   "cat": "breach",
+   "ts": "2026-10-29"
   }
  ],
  "kev_referenced": [
@@ -7630,6 +7649,7 @@
   "CVE-2026-35273",
   "CVE-2026-39808",
   "CVE-2026-39987",
+  "CVE-2026-41709",
   "CVE-2026-42016",
   "CVE-2026-42018",
   "CVE-2026-42271",
@@ -8592,6 +8612,13 @@
    "cves": 845,
    "breaches": 186,
    "malware": 195
+  },
+  {
+   "date": "2026-10-29",
+   "intel_items": 2236,
+   "cves": 850,
+   "breaches": 191,
+   "malware": 198
   }
  ]
 }
