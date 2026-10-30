@@ -1,6 +1,6 @@
 {
- "generated": "2026-10-29 20:45",
- "today": "2026-10-29",
+ "generated": "2026-10-30 20:45",
+ "today": "2026-10-30",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
@@ -12,33 +12,33 @@
   "commands": 14,
   "guides": 342,
   "intel_items": 2236,
-  "kev": 191
+  "kev": 192
  },
  "windows": {
   "week": {
-   "total": 225,
+   "total": 194,
    "by_cat": {
-    "cve": 127,
-    "breach": 35,
-    "tool": 4,
-    "supplychain": 9,
-    "malware": 24,
-    "ai-bugbounty": 13,
+    "cve": 107,
+    "breach": 29,
+    "supplychain": 7,
+    "malware": 23,
     "misc": 3,
-    "technique": 10
+    "technique": 10,
+    "tool": 3,
+    "ai-bugbounty": 12
    },
    "by_src": {}
   },
   "month": {
-   "total": 593,
+   "total": 582,
    "by_cat": {
-    "cve": 265,
-    "malware": 80,
-    "ai-bugbounty": 47,
-    "supplychain": 25,
-    "breach": 116,
-    "technique": 16,
+    "cve": 261,
+    "ai-bugbounty": 46,
+    "malware": 78,
+    "breach": 114,
     "misc": 33,
+    "supplychain": 24,
+    "technique": 15,
     "tool": 10,
     "other": 1
    },
@@ -4806,7 +4806,7 @@
    "body": "# CVE-2026-97229 \u2014 GitLab CE/EE CI/CD Regex Integer Overflow \u2192 Unauthenticated RCE (CVSS 10.0)\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> Source: [The Hacker News](https://thehackernews.com/2026/10/gitlab-patches-cvss-100-flaw-that-could.html) \u2014 Tue, 13 Oct 2026 08:43 UTC\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/gitlab-warns-of-max-severity-rce-flaw-in-regex-compiler-engine/) \u2014 Mon, 12 Oct 2026 13:09 UTC\n\n**Type:** CVE / RCE | **Severity:** Critical (CVSS 10.0) | **Date:** 2026-10-12 | **Tags:** #cve #gitlab #rce #cicd #regex #integer-overflow #unauthenticated\n\n## Summary\n- **CVE-2026-97229**: integer overflow from insufficient regular expression validation in GitLab's CI/CD regular expression compiler engine.\n- Under certain (unspecified) conditions, an **unauthenticated** user can run arbitrary code on the GitLab server via a crafted regex in a CI/CD configuration/component.\n- No in-the-wild exploitation reported as of 2026-10-13. No workaround published.\n\n## Affected / Fixed\n| Branch | Affected | Fixed |\n|---|---|---|\n| 19.2 | < 19.2.8 | 19.2.8 |\n| 19.3 | < 19.3.5 | 19.3.5 |\n| 19.4 | < 19.4.2 | 19.4.2 |\n\n## Other fixes in the same patch release\n- **CVE-2026-92883** (CVSS 8.7) \u2014 stored XSS via crafted repository (authenticated).\n- **CVE-2026-16301** (CVSS 8.5) \u2014 improper authorization in downstream pipeline creation; Developer role can run pipelines on protected branches.\n- **CVE-2026-14814** (CVSS 8.2) \u2014 permissive regex \u2192 poisoning of cached raw repository file responses; may expose protected CI variables to targeted pipelines.\n\n## Actions\n- Upgrade self-managed GitLab immediately (GitLab.com already patched).\n- Until patched: restrict anonymous access / sign-up on internet-facing instances; review CI includes from untrusted projects.\n- Hunt: unusual child processes of the Rails/Sidekiq/regex-evaluating workers; crashes in CI config validation shortly before suspicious activity.\n\n## Bug bounty angle\nRegex engines compiled server-side from user input (CI `rules:if`, `only/except` regex, branch protections) are a parser-to-memory-corruption attack surface. Look for any feature that compiles user regex in a native engine (RE2/Onigmo bindings) and fuzz length/quantifier boundaries.\n\n## Related\n- [[CVE-2026-90970-GitLab-AI-Gateway-Duo-Sandbox-Escape-RCE-2026]]\n- [[CVE-2026-85706-GitLab-Commits-API-Path-Traversal-Arbitrary-File-Read-2026]]\n\n## Tags\n #verified\n\n\n## Update 2026-10-14 \u2014 CCCS advisory\n> Source: [Canadian Centre for Cyber Security AV26-1028](https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-1028) \u2014 2026-10-13\n\n- CCCS lists the fixed versions as **GitLab 19.2.8, 19.3.5, 19.4.2**.\n\n\n## Update 2026-10-23 (scheduled sweep) \u2014 incomplete fix, new max-severity release\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/gitlab-warns-of-new-max-severity-code-execution-vulnerability/) \u2014 2026-10-22T11:41Z\n> Source: [CCCS AV26-1074](https://cyber.gc.ca/en/alerts-advisories/gitlab-security-advisory-av26-1074) \u2014 2026-10-22T12:27Z\n\n- GitLab warns of a new **CVSS 10.0** Regular Expression Compiler RCE (unauthenticated, self-managed) affecting **every version back to 7.0**; the Oct 12 patch only covered 19.2+. Whether a new CVE ID was assigned is not stated in feeds \u2014 confirm against GitLab's release post.\n- **Fixed:** 19.5.1, 19.4.3, 19.3.6, 19.2.9, 19.1.9, 19.0.10, 18.11.13. Upgrade even if you applied the Oct 12 release.",
    "sev": "Critical",
    "year": "2026",
-   "kev": false,
+   "kev": true,
    "apts": []
   },
   "CVE-2026-97631": {
@@ -7720,7 +7720,8 @@
   "CVE-2026-96654",
   "CVE-2026-96655",
   "CVE-2026-96656",
-  "CVE-2026-96951"
+  "CVE-2026-96951",
+  "CVE-2026-97229"
  ],
  "top_tags": [],
  "attack_types": [
@@ -8615,6 +8616,13 @@
   },
   {
    "date": "2026-10-29",
+   "intel_items": 2236,
+   "cves": 850,
+   "breaches": 191,
+   "malware": 198
+  },
+  {
+   "date": "2026-10-30",
    "intel_items": 2236,
    "cves": 850,
    "breaches": 191,
