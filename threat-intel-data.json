@@ -1,79 +1,79 @@
 {
- "generated": "2026-10-31 20:45",
- "today": "2026-10-31",
+ "generated": "2026-11-01 20:45",
+ "today": "2026-11-01",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
-  "cves": 860,
-  "breaches": 200,
-  "malware": 203,
+  "cves": 864,
+  "breaches": 205,
+  "malware": 205,
   "supplychain": 86,
   "tools": 100,
   "commands": 14,
-  "guides": 348,
-  "intel_items": 2312,
+  "guides": 350,
+  "intel_items": 2338,
   "kev": 197
  },
  "windows": {
   "week": {
-   "total": 218,
+   "total": 236,
    "by_cat": {
-    "cve": 99,
-    "misc": 4,
-    "supplychain": 12,
+    "cve": 100,
     "technique": 14,
-    "breach": 36,
-    "malware": 29,
-    "tool": 3,
-    "ai-bugbounty": 20,
+    "malware": 31,
+    "breach": 49,
+    "tool": 4,
+    "supplychain": 12,
+    "ai-bugbounty": 21,
+    "misc": 4,
     "other": 1
    },
    "by_src": {}
   },
   "month": {
-   "total": 656,
+   "total": 680,
    "by_cat": {
-    "cve": 284,
+    "cve": 289,
+    "malware": 90,
+    "breach": 148,
     "ai-bugbounty": 54,
-    "malware": 88,
-    "breach": 133,
     "misc": 35,
-    "supplychain": 31,
+    "supplychain": 32,
     "technique": 19,
-    "tool": 10,
+    "tool": 11,
     "other": 2
    },
    "by_src": {}
   },
   "year": {
-   "total": 2308,
+   "total": 2334,
    "by_cat": {
-    "ai-bugbounty": 175,
-    "malware": 290,
+    "ai-bugbounty": 176,
+    "malware": 292,
     "other": 113,
-    "tool": 68,
-    "misc": 365,
+    "tool": 69,
+    "misc": 366,
     "command": 6,
     "technique": 160,
-    "breach": 310,
-    "supplychain": 122,
-    "cve": 699
+    "breach": 325,
+    "supplychain": 123,
+    "cve": 704
    },
    "by_src": {}
   },
   "all": {
-   "total": 2312,
+   "total": 2338,
    "by_cat": {
-    "ai-bugbounty": 176,
-    "malware": 290,
+    "ai-bugbounty": 177,
+    "malware": 292,
     "other": 113,
-    "tool": 68,
-    "misc": 365,
+    "tool": 69,
+    "misc": 366,
     "command": 6,
     "technique": 162,
-    "cve": 700,
-    "breach": 310,
-    "supplychain": 122
+    "cve": 705,
+    "breach": 325,
+    "supplychain": 123
    },
    "by_src": {}
   }
@@ -1045,7 +1045,7 @@
   },
   {
    "group": "Lazarus Group",
-   "body": "# Lazarus Group \u2014 APT Profile\n\n\u2705 **Verification:** Verified \u2014 7 independent sources\n\n## Snapshot\n| Field | Value |\n|---|---|\n| Attribution | North Korea \u2014 Reconnaissance General Bureau (RGB) |\n| Aliases | Hidden Cobra, Labyrinth Chollima, ZINC, Diamond Sleet, APT38, TraderTraitor |\n| MITRE ATT&CK ID | G0032 |\n| First seen | 2009 (Operation Troy) |\n| Status | Active (most prolific DPRK financial + espionage actor) |\n| Motivation | Financial (regime revenue), espionage, sabotage/destruction |\n\n## Overview\nLazarus Group is North Korea's flagship state-sponsored threat actor, active since at least 2009 and attributed to the RGB. It is an umbrella organization spanning multiple subgroups \u2014 including the financially focused **APT38/BlueNoroff** and **TraderTraitor** crypto-theft cells, and **Andariel** for espionage/ransomware. Lazarus is responsible for some of the most consequential cyber events in history: the destructive 2014 Sony Pictures hack, the 2016 Bangladesh Bank SWIFT heist, the 2017 WannaCry ransomware outbreak, and a string of record-breaking cryptocurrency thefts. The group is unusual among nation-state actors in that a primary objective is generating hard currency to fund the DPRK regime and circumvent international sanctions.\n\n## Attribution & Origin\nThe U.S. DOJ has indicted named North Korean RGB operators (notably Park Jin Hyok in 2018) for Lazarus operations. CISA/FBI \"HIDDEN COBRA\" advisories, Treasury (OFAC) sanctions, and vendor reporting from Mandiant, Kaspersky, Microsoft (Diamond Sleet/ZINC), and others consistently attribute Lazarus to North Korea. The FBI and partners have publicly attributed major crypto heists (Ronin, Harmony, DMM Bitcoin, Bybit) to Lazarus/TraderTraitor.\n\n## Motivation & Objectives\n- **Financial (dominant):** theft from banks (SWIFT), cryptocurrency exchanges, DeFi bridges, and individuals to fund the regime and weapons programs; estimated billions stolen.\n- **Espionage:** defense, aerospace, energy, and technology intelligence (overlap with Andariel/APT37 collection priorities).\n- **Sabotage/destruction:** wiper and ransomware operations (Sony 2014, WannaCry 2017) for coercion and disruption.\n\n## Target Profile\nLazarus targets globally across cryptocurrency and financial services, defense/aerospace, energy, technology, media, and supply-chain vendors. It runs persistent fake-recruiter (\"Operation Dream Job\") and ClickFix campaigns against engineers and crypto/blockchain staff. **APAC / Australia & financial/crypto theft relevance is high:** Australian and APAC cryptocurrency exchanges, blockchain startups, fintechs, and their employees are squarely in scope. Lazarus has repeatedly hit exchanges across the Asia-Pacific (e.g., DMM Bitcoin in Japan, and numerous regional platforms), and Australian crypto firms and developers face the same fake-job, supply-chain (malicious npm/PyPI), and social-engineering vectors. Treat unsolicited recruiter outreach, \"coding test\" repos, and fake Zoom/wallet tooling as high-risk Lazarus indicators in this sector.\n\n## TTPs \u2014 MITRE ATT&CK\n\n### Initial Access\n- **T1566.001/.003 Spearphishing (Attachment / via Service)** \u2014 \"Dream Job\" fake recruiter lures via LinkedIn/Telegram with trojanized documents and \"coding challenges.\"\n- **T1189 Drive-by Compromise** \u2014 watering holes and a Feb 2025 Chrome zero-day delivered via a fake gaming site (AI-generated content for credibility).\n- **T1195 Supply Chain Compromise** \u2014 malicious npm/PyPI packages (BeaverTail/InvisibleFerret) and the 3CX/X_TRADER software supply-chain cascade.\n\n### Execution\n- **T1204.002 User Execution: Malicious File**, **T1059.001 PowerShell / T1059.005 Visual Basic / T1059.007 JavaScript**, **T1106 Native API**, **T1203 Exploitation for Client Execution**.\n\n### Persistence & Privilege Escalation\n- **T1543.003 Windows Service**, **T1547.001 Registry Run Keys/Startup**, **T1053 Scheduled Task/Job**, **T1574 Hijack Execution Flow** (DLL side-loading).\n- **T1068-class driver exploitation** \u2014 exploited **CVE-2024-38193** (Windows AFD.sys BYOVD/zero-day) for SYSTEM-level privilege escalation (FudModule rootkit chain). [Privilege Escalation]\n\n### Defense Evasion\n- **T1027 Obfuscated/Encoded Files**, **T1140 Deobfuscate/Decode**, **T1202 Indirect Command Execution**, **T1218 System Binary Proxy Execution**, **T1220 XSL Script Processing**, **T1221 Template Injection**, **T1553 Subvert Trust Controls** (stolen/abused code-signing certs), **T1564 Hide Artifacts**.\n\n### Credential Access & Discovery\n- **T1110 Brute Force**, **T1557 Adversary-in-the-Middle**, **T1087 Account Discovery**, **T1083 File/Directory Discovery**.\n\n### Collection, C2 & Exfiltration\n- **T1056 Input Capture**, **T1560 Archive Collected Data**, **T1005 Data from Local System**.\n- **T1071.001 Web Protocols**, **T1573 Encrypted Channel**, **T1008 Fallback Channels**, **T1105 Ingress Tool Transfer**, **T1001 Data Obfuscation**.\n- **T1041 Exfiltration Over C2 Channel**, **T1567.002 Exfiltration to Cloud Storage**.\n\n### Impact\n- **T1485 Data Destruction** and **T1491 Defacement** (Sony 2014, Guardians of Peace), **T1486 Data Encrypted for Impact** (WannaCry). [Impact]\n\n## Tooling & Malware\n- **Manuscrypt / NukeSped / Comebacker** \u2014 modular backdoors used across campaigns.\n- **AppleJeus** \u2014 trojanized cryptocurrency trading apps (Windows & macOS) for crypto theft.\n- **BLINDINGCAN, FALLCHILL, Volgmer, DTrack** \u2014 RATs/backdoors from HIDDEN COBRA advisories.\n- **BeaverTail / InvisibleFerret** \u2014 JavaScript/Python stealers in the \"Contagious Interview\" fake-job + supply-chain campaigns.\n- **WannaCry** \u2014 self-propagating ransomware (EternalBlue) behind the 2017 global outbreak.\n- **FudModule rootkit** \u2014 kernel-level AV/EDR tampering delivered via BYOVD.\n\n## Notable Campaigns & Timeline\n- **2009 / 2013** \u2014 Operation Troy and DarkSeoul wiper attacks against South Korea.\n- **Nov 2014** \u2014 Destructive **Sony Pictures** hack (Guardians of Peace) \u2014 wiper + data leak.\n- **Feb 2016** \u2014 **Bangladesh Bank SWIFT heist** (~$81M stolen).\n- **May 2017** \u2014 **WannaCry** global ransomware outbreak.\n- **2018** \u2014 DOJ indicts Park Jin Hyok; AppleJeus crypto-theft campaigns surface.\n- **Mar 2022** \u2014 **Ronin Network bridge** hack (~$620M, Axie Infinity) attributed to Lazarus.\n- **2023** \u2014 **JumpCloud** cloud identity provider breach (TraderTraitor); 3CX/X_TRADER supply-chain cascade.\n- **May 2024** \u2014 **DMM Bitcoin** (Japan) heist (~$308M) attributed to TraderTraitor by FBI/NPA.\n- **Aug 2024** \u2014 Exploitation of **CVE-2024-38193** (AFD.sys zero-day) for SYSTEM access.\n- **Feb 2025** \u2014 **Bybit** exchange heist (~$1.5B in Ethereum) \u2014 largest crypto theft on record; Chrome zero-day delivered via fake gaming site.\n- **2024\u20132025** \u2014 Adoption of **ClickFix** social engineering in fake job-interview crypto-theft chains; AI-generated personas/recruiters on LinkedIn.\n\n## Detection & Hunting\n- Hunt for **fake-recruiter** activity: trojanized \"job description\"/\"coding test\" files, ISO/LNK lures, and developer machines pulling unusual npm/PyPI packages (BeaverTail/InvisibleFerret IOCs).\n- Detect **DLL side-loading** and execution from unusual paths; alert on signed binaries loading unsigned/abnormal DLLs.\n- Monitor for **BYOVD** \u2014 vulnerable-driver loads (e.g., AFD.sys exploit patterns) and kernel-tampering behaviors consistent with FudModule.\n- Watch crypto/finance endpoints for **trojanized trading apps** (AppleJeus) and fake wallet/Zoom installers.\n- Network: encrypted C2 with fallback channels, exfil to cloud storage, connections to newly-registered look-alike crypto/recruiting domains.\n- For exchanges: monitor privileged-operator workstations and multisig signing infrastructure for AiTM and UI-spoofing (Bybit-style) tradecraft.\n\n## Mitigations\n- Phishing-resistant **FIDO2 MFA**; strict controls on developer and crypto-operations endpoints.\n- **Application control / WDAC**, vulnerable-driver blocklists (Microsoft recommended driver block rules) to counter BYOVD.\n- Lock down package management (private registries, dependency pinning, scanning) to counter malicious npm/PyPI.\n- Segregate and monitor signing/multisig and treasury operations; enforce out-of-band transaction verification.\n- Patch promptly (Chrome, Windows kernel/AFD.sys, 3CX-type supply-chain risks); EDR with kernel-tamper protection.\n- Security awareness for engineers/crypto staff on fake-recruiter, \"coding test,\" and ClickFix lures.\n\n## Activity Log\n<!-- Append-only: future intel sweeps add dated entries below -->\n- _(seed)_ 2026-06-17 \u2014 Profile created.\n- 2026-10-31 (sweep) \u2014 **Binance ~$6.3B theft (2026-10-29)** attributed to TraderTraitor by TRM Labs/Chainalysis; possible entry via compromised DevOps laptop; ~$3B frozen. \u2192 [[Binance-6.3B-Crypto-Heist-TraderTraitor-DPRK-2026-10]]\n- 2026-10-31 (sweep) \u2014 Microsoft (2026-10-29) assesses AI adoption across DPRK actors (Jade/Coral/Jasper/Diamond/Onyx/Pearl/Emerald/Sapphire Sleet); ARTEX agentic pentest framework reported used by Onyx & Pearl Sleet. \u2192 [[DPRK-AI-Adoption-Tradecraft-Microsoft-2026-10]]\n- 2026-10-31 (sweep 2) \u2014 Binance update: co-CEO calls it a \"multi-layered composite attack\"; withdrawals resume within ~34h; technical findings due ~48h. \u2192 [[Binance-6.3B-Crypto-Heist-TraderTraitor-DPRK-2026-10]]\n\n## Trend Tracking\n| Date | Event Type | Description | Source |\n|---|---|---|---|\n| 2025-02 | Heist | Bybit ~$1.5B Ethereum theft \u2014 largest crypto heist on record | FBI / Picus |\n| 2024-05 | Heist | DMM Bitcoin ~$308M theft attributed to TraderTraitor | FBI / NPA Japan |\n| 2024-08 | Vulnerability | CVE-2024-38193 AFD.sys zero-day used for SYSTEM access | Gen/Avast |\n| 2026-06 | Malware | Suspected BeaverTail sample `vscode-bootstrap.sh` \u2192 code-beautify[.]com (2 VT) \u2014 developer lure | @malwrhunterteam/@LOPsec (X) |\n| 2026-10 | Heist | Binance ~$6.3B theft (TraderTraitor) \u2014 new largest crypto heist on record | TRM Labs / Chainalysis / Malwarebytes |\n| 2026-10 | AI tradecraft | Microsoft: DPRK actors adopting AI across recon, SE, tooling; ARTEX used by Onyx/Pearl Sleet | Microsoft Security Blog |\n\n## References\n- https://attack.mitre.org/groups/G0032/\n- https://www.picussecurity.com/resource/blog/fbi-north-korean-lazarus-group-bybit-crypto-heist\n- https://www.wiz.io/blog/north-korean-tradertraitor-crypto-heist\n- https://www.huntress.com/threat-library/threat-actors/lazarus-group\n- https://www.infoblox.com/blog/security/lazarus-group-targets-financial-services-and-cryptocurrency-sector/\n- https://www.picussecurity.com/resource/blog/lazarus-group-apt38-explained-timeline-ttps-and-major-attacks\n\n---\n*Profile generated for CyberSec Vault \u2014 2026-06-17*\n\n## Tags\n #verified\n\n---\n\n### 2026-08-12 \u2014 Operation Dream Job resurfaces with Windows zero-day CVE-2026-68820 + \"Troy\" backdoor\n\n\n- **Zero-day:** **CVE-2026-68820** \u2014 Windows **Ancillary Function Driver for WinSock (AFD.sys)** privilege escalation to **SYSTEM** (CVSS 7.0). Exploited by Lazarus **since early July 2026**, roughly five weeks before Microsoft patched it in the **August 2026 Patch Tuesday**. It was the only in-the-wild exploited flaw in that release.\n- **Targets:** defense, aerospace, and aviation organisations in **France, Germany, Brazil, and India**.\n- **Lure:** fake recruiter approaches (LinkedIn) impersonating firms including **Lockheed Martin** and **Enveil**; victim opens a malicious **PDF** or installs a **trojanized PDF viewer**.\n- **New backdoor:** **Troy** \u2014 grants remote access to the compromised machine.\n- **C2 architecture:** built almost entirely on infrastructure Lazarus **does not own** \u2014 compromised **Roundcube webmail** installations and CMS platforms (many vulnerable to **CVE-2025-49113**), infected with **RelayShell**, a previously undocumented **PHP webshell** acting as a communication relay between implants and operators via **simple text files**.\n\n**Trend tracking:** continues Lazarus's Dream Job social-engineering spine (cf. Zoom lure 2026-03, Mach-O Man macOS 2026-04, signed-driver BYOVD 2026-04, BeaverTail 2026-06) but adds (a) a genuine Windows kernel-driver zero-day and (b) a shift to **third-party compromised infrastructure for C2**, which materially degrades infrastructure-based attribution and blocklisting.\n\n**Hunting:** Troy backdoor artifacts; trojanized PDF viewers; outbound C2 to Roundcube/CMS hosts; RelayShell PHP webshells using text-file command relay.\n\n> Source: [Check Point Research](https://research.checkpoint.com/2026/shattering-the-dream-when-a-job-offer-becomes-a-zero-day-attack/) \u2014 2026-08-12; [The Hacker News](https://thehackernews.com/2026/08/lazarus-exploits-windows-zero-day-to.html) \u2014 Wed, 12 Aug 2026",
+   "body": "# Lazarus Group \u2014 APT Profile\n\n\u2705 **Verification:** Verified \u2014 7 independent sources\n\n## Snapshot\n| Field | Value |\n|---|---|\n| Attribution | North Korea \u2014 Reconnaissance General Bureau (RGB) |\n| Aliases | Hidden Cobra, Labyrinth Chollima, ZINC, Diamond Sleet, APT38, TraderTraitor |\n| MITRE ATT&CK ID | G0032 |\n| First seen | 2009 (Operation Troy) |\n| Status | Active (most prolific DPRK financial + espionage actor) |\n| Motivation | Financial (regime revenue), espionage, sabotage/destruction |\n\n## Overview\nLazarus Group is North Korea's flagship state-sponsored threat actor, active since at least 2009 and attributed to the RGB. It is an umbrella organization spanning multiple subgroups \u2014 including the financially focused **APT38/BlueNoroff** and **TraderTraitor** crypto-theft cells, and **Andariel** for espionage/ransomware. Lazarus is responsible for some of the most consequential cyber events in history: the destructive 2014 Sony Pictures hack, the 2016 Bangladesh Bank SWIFT heist, the 2017 WannaCry ransomware outbreak, and a string of record-breaking cryptocurrency thefts. The group is unusual among nation-state actors in that a primary objective is generating hard currency to fund the DPRK regime and circumvent international sanctions.\n\n## Attribution & Origin\nThe U.S. DOJ has indicted named North Korean RGB operators (notably Park Jin Hyok in 2018) for Lazarus operations. CISA/FBI \"HIDDEN COBRA\" advisories, Treasury (OFAC) sanctions, and vendor reporting from Mandiant, Kaspersky, Microsoft (Diamond Sleet/ZINC), and others consistently attribute Lazarus to North Korea. The FBI and partners have publicly attributed major crypto heists (Ronin, Harmony, DMM Bitcoin, Bybit) to Lazarus/TraderTraitor.\n\n## Motivation & Objectives\n- **Financial (dominant):** theft from banks (SWIFT), cryptocurrency exchanges, DeFi bridges, and individuals to fund the regime and weapons programs; estimated billions stolen.\n- **Espionage:** defense, aerospace, energy, and technology intelligence (overlap with Andariel/APT37 collection priorities).\n- **Sabotage/destruction:** wiper and ransomware operations (Sony 2014, WannaCry 2017) for coercion and disruption.\n\n## Target Profile\nLazarus targets globally across cryptocurrency and financial services, defense/aerospace, energy, technology, media, and supply-chain vendors. It runs persistent fake-recruiter (\"Operation Dream Job\") and ClickFix campaigns against engineers and crypto/blockchain staff. **APAC / Australia & financial/crypto theft relevance is high:** Australian and APAC cryptocurrency exchanges, blockchain startups, fintechs, and their employees are squarely in scope. Lazarus has repeatedly hit exchanges across the Asia-Pacific (e.g., DMM Bitcoin in Japan, and numerous regional platforms), and Australian crypto firms and developers face the same fake-job, supply-chain (malicious npm/PyPI), and social-engineering vectors. Treat unsolicited recruiter outreach, \"coding test\" repos, and fake Zoom/wallet tooling as high-risk Lazarus indicators in this sector.\n\n## TTPs \u2014 MITRE ATT&CK\n\n### Initial Access\n- **T1566.001/.003 Spearphishing (Attachment / via Service)** \u2014 \"Dream Job\" fake recruiter lures via LinkedIn/Telegram with trojanized documents and \"coding challenges.\"\n- **T1189 Drive-by Compromise** \u2014 watering holes and a Feb 2025 Chrome zero-day delivered via a fake gaming site (AI-generated content for credibility).\n- **T1195 Supply Chain Compromise** \u2014 malicious npm/PyPI packages (BeaverTail/InvisibleFerret) and the 3CX/X_TRADER software supply-chain cascade.\n\n### Execution\n- **T1204.002 User Execution: Malicious File**, **T1059.001 PowerShell / T1059.005 Visual Basic / T1059.007 JavaScript**, **T1106 Native API**, **T1203 Exploitation for Client Execution**.\n\n### Persistence & Privilege Escalation\n- **T1543.003 Windows Service**, **T1547.001 Registry Run Keys/Startup**, **T1053 Scheduled Task/Job**, **T1574 Hijack Execution Flow** (DLL side-loading).\n- **T1068-class driver exploitation** \u2014 exploited **CVE-2024-38193** (Windows AFD.sys BYOVD/zero-day) for SYSTEM-level privilege escalation (FudModule rootkit chain). [Privilege Escalation]\n\n### Defense Evasion\n- **T1027 Obfuscated/Encoded Files**, **T1140 Deobfuscate/Decode**, **T1202 Indirect Command Execution**, **T1218 System Binary Proxy Execution**, **T1220 XSL Script Processing**, **T1221 Template Injection**, **T1553 Subvert Trust Controls** (stolen/abused code-signing certs), **T1564 Hide Artifacts**.\n\n### Credential Access & Discovery\n- **T1110 Brute Force**, **T1557 Adversary-in-the-Middle**, **T1087 Account Discovery**, **T1083 File/Directory Discovery**.\n\n### Collection, C2 & Exfiltration\n- **T1056 Input Capture**, **T1560 Archive Collected Data**, **T1005 Data from Local System**.\n- **T1071.001 Web Protocols**, **T1573 Encrypted Channel**, **T1008 Fallback Channels**, **T1105 Ingress Tool Transfer**, **T1001 Data Obfuscation**.\n- **T1041 Exfiltration Over C2 Channel**, **T1567.002 Exfiltration to Cloud Storage**.\n\n### Impact\n- **T1485 Data Destruction** and **T1491 Defacement** (Sony 2014, Guardians of Peace), **T1486 Data Encrypted for Impact** (WannaCry). [Impact]\n\n## Tooling & Malware\n- **Manuscrypt / NukeSped / Comebacker** \u2014 modular backdoors used across campaigns.\n- **AppleJeus** \u2014 trojanized cryptocurrency trading apps (Windows & macOS) for crypto theft.\n- **BLINDINGCAN, FALLCHILL, Volgmer, DTrack** \u2014 RATs/backdoors from HIDDEN COBRA advisories.\n- **BeaverTail / InvisibleFerret** \u2014 JavaScript/Python stealers in the \"Contagious Interview\" fake-job + supply-chain campaigns.\n- **WannaCry** \u2014 self-propagating ransomware (EternalBlue) behind the 2017 global outbreak.\n- **FudModule rootkit** \u2014 kernel-level AV/EDR tampering delivered via BYOVD.\n\n## Notable Campaigns & Timeline\n- **2009 / 2013** \u2014 Operation Troy and DarkSeoul wiper attacks against South Korea.\n- **Nov 2014** \u2014 Destructive **Sony Pictures** hack (Guardians of Peace) \u2014 wiper + data leak.\n- **Feb 2016** \u2014 **Bangladesh Bank SWIFT heist** (~$81M stolen).\n- **May 2017** \u2014 **WannaCry** global ransomware outbreak.\n- **2018** \u2014 DOJ indicts Park Jin Hyok; AppleJeus crypto-theft campaigns surface.\n- **Mar 2022** \u2014 **Ronin Network bridge** hack (~$620M, Axie Infinity) attributed to Lazarus.\n- **2023** \u2014 **JumpCloud** cloud identity provider breach (TraderTraitor); 3CX/X_TRADER supply-chain cascade.\n- **May 2024** \u2014 **DMM Bitcoin** (Japan) heist (~$308M) attributed to TraderTraitor by FBI/NPA.\n- **Aug 2024** \u2014 Exploitation of **CVE-2024-38193** (AFD.sys zero-day) for SYSTEM access.\n- **Feb 2025** \u2014 **Bybit** exchange heist (~$1.5B in Ethereum) \u2014 largest crypto theft on record; Chrome zero-day delivered via fake gaming site.\n- **2024\u20132025** \u2014 Adoption of **ClickFix** social engineering in fake job-interview crypto-theft chains; AI-generated personas/recruiters on LinkedIn.\n\n## Detection & Hunting\n- Hunt for **fake-recruiter** activity: trojanized \"job description\"/\"coding test\" files, ISO/LNK lures, and developer machines pulling unusual npm/PyPI packages (BeaverTail/InvisibleFerret IOCs).\n- Detect **DLL side-loading** and execution from unusual paths; alert on signed binaries loading unsigned/abnormal DLLs.\n- Monitor for **BYOVD** \u2014 vulnerable-driver loads (e.g., AFD.sys exploit patterns) and kernel-tampering behaviors consistent with FudModule.\n- Watch crypto/finance endpoints for **trojanized trading apps** (AppleJeus) and fake wallet/Zoom installers.\n- Network: encrypted C2 with fallback channels, exfil to cloud storage, connections to newly-registered look-alike crypto/recruiting domains.\n- For exchanges: monitor privileged-operator workstations and multisig signing infrastructure for AiTM and UI-spoofing (Bybit-style) tradecraft.\n\n## Mitigations\n- Phishing-resistant **FIDO2 MFA**; strict controls on developer and crypto-operations endpoints.\n- **Application control / WDAC**, vulnerable-driver blocklists (Microsoft recommended driver block rules) to counter BYOVD.\n- Lock down package management (private registries, dependency pinning, scanning) to counter malicious npm/PyPI.\n- Segregate and monitor signing/multisig and treasury operations; enforce out-of-band transaction verification.\n- Patch promptly (Chrome, Windows kernel/AFD.sys, 3CX-type supply-chain risks); EDR with kernel-tamper protection.\n- Security awareness for engineers/crypto staff on fake-recruiter, \"coding test,\" and ClickFix lures.\n\n## Activity Log\n<!-- Append-only: future intel sweeps add dated entries below -->\n- _(seed)_ 2026-06-17 \u2014 Profile created.\n- 2026-10-31 (sweep) \u2014 **Binance ~$6.3B theft (2026-10-29)** attributed to TraderTraitor by TRM Labs/Chainalysis; possible entry via compromised DevOps laptop; ~$3B frozen. \u2192 [[Binance-6.3B-Crypto-Heist-TraderTraitor-DPRK-2026-10]]\n- 2026-10-31 (sweep) \u2014 Microsoft (2026-10-29) assesses AI adoption across DPRK actors (Jade/Coral/Jasper/Diamond/Onyx/Pearl/Emerald/Sapphire Sleet); ARTEX agentic pentest framework reported used by Onyx & Pearl Sleet. \u2192 [[DPRK-AI-Adoption-Tradecraft-Microsoft-2026-10]]\n- 2026-10-31 (sweep 2) \u2014 Binance update: co-CEO calls it a \"multi-layered composite attack\"; withdrawals resume within ~34h; technical findings due ~48h. \u2192 [[Binance-6.3B-Crypto-Heist-TraderTraitor-DPRK-2026-10]]\n- 2026-11-01 (sweep) \u2014 **FBI/USSS/IRS-CI formally attribute Binance heist (~$6.43B) to TraderTraitor** (Jade Sleet / Pressure Chollima / UNC4899). \u2192 [[Binance-6.3B-Crypto-Heist-TraderTraitor-DPRK-2026-10]]\n\n## Trend Tracking\n| Date | Event Type | Description | Source |\n|---|---|---|---|\n| 2025-02 | Heist | Bybit ~$1.5B Ethereum theft \u2014 largest crypto heist on record | FBI / Picus |\n| 2024-05 | Heist | DMM Bitcoin ~$308M theft attributed to TraderTraitor | FBI / NPA Japan |\n| 2024-08 | Vulnerability | CVE-2024-38193 AFD.sys zero-day used for SYSTEM access | Gen/Avast |\n| 2026-06 | Malware | Suspected BeaverTail sample `vscode-bootstrap.sh` \u2192 code-beautify[.]com (2 VT) \u2014 developer lure | @malwrhunterteam/@LOPsec (X) |\n| 2026-10 | Heist | Binance ~$6.3B theft (TraderTraitor) \u2014 new largest crypto heist on record | TRM Labs / Chainalysis / Malwarebytes |\n| 2026-10 | AI tradecraft | Microsoft: DPRK actors adopting AI across recon, SE, tooling; ARTEX used by Onyx/Pearl Sleet | Microsoft Security Blog |\n| 2026-11 | Attribution | FBI formally attributes Binance ~$6.43B theft to TraderTraitor | FBI via The Hacker News |\n\n## References\n- https://attack.mitre.org/groups/G0032/\n- https://www.picussecurity.com/resource/blog/fbi-north-korean-lazarus-group-bybit-crypto-heist\n- https://www.wiz.io/blog/north-korean-tradertraitor-crypto-heist\n- https://www.huntress.com/threat-library/threat-actors/lazarus-group\n- https://www.infoblox.com/blog/security/lazarus-group-targets-financial-services-and-cryptocurrency-sector/\n- https://www.picussecurity.com/resource/blog/lazarus-group-apt38-explained-timeline-ttps-and-major-attacks\n\n---\n*Profile generated for CyberSec Vault \u2014 2026-06-17*\n\n## Tags\n #verified\n\n---\n\n### 2026-08-12 \u2014 Operation Dream Job resurfaces with Windows zero-day CVE-2026-68820 + \"Troy\" backdoor\n\n\n- **Zero-day:** **CVE-2026-68820** \u2014 Windows **Ancillary Function Driver for WinSock (AFD.sys)** privilege escalation to **SYSTEM** (CVSS 7.0). Exploited by Lazarus **since early July 2026**, roughly five weeks before Microsoft patched it in the **August 2026 Patch Tuesday**. It was the only in-the-wild exploited flaw in that release.\n- **Targets:** defense, aerospace, and aviation organisations in **France, Germany, Brazil, and India**.\n- **Lure:** fake recruiter approaches (LinkedIn) impersonating firms including **Lockheed Martin** and **Enveil**; victim opens a malicious **PDF** or installs a **trojanized PDF viewer**.\n- **New backdoor:** **Troy** \u2014 grants remote access to the compromised machine.\n- **C2 architecture:** built almost entirely on infrastructure Lazarus **does not own** \u2014 compromised **Roundcube webmail** installations and CMS platforms (many vulnerable to **CVE-2025-49113**), infected with **RelayShell**, a previously undocumented **PHP webshell** acting as a communication relay between implants and operators via **simple text files**.\n\n**Trend tracking:** continues Lazarus's Dream Job social-engineering spine (cf. Zoom lure 2026-03, Mach-O Man macOS 2026-04, signed-driver BYOVD 2026-04, BeaverTail 2026-06) but adds (a) a genuine Windows kernel-driver zero-day and (b) a shift to **third-party compromised infrastructure for C2**, which materially degrades infrastructure-based attribution and blocklisting.\n\n**Hunting:** Troy backdoor artifacts; trojanized PDF viewers; outbound C2 to Roundcube/CMS hosts; RelayShell PHP webshells using text-file command relay.\n\n> Source: [Check Point Research](https://research.checkpoint.com/2026/shattering-the-dream-when-a-job-offer-becomes-a-zero-day-attack/) \u2014 2026-08-12; [The Hacker News](https://thehackernews.com/2026/08/lazarus-exploits-windows-zero-day-to.html) \u2014 Wed, 12 Aug 2026",
    "aliases": [
     "Hidden Cobra",
     "Labyrinth Chollima",
@@ -1753,21 +1753,21 @@
  ],
  "apt_activity_windows": {
   "week": {
-   "Volt Typhoon": 3,
-   "Lazarus Group": 3
+   "Lazarus Group": 5,
+   "Volt Typhoon": 3
   },
   "month": {
+   "Lazarus Group": 5,
    "Volt Typhoon": 3,
-   "Lazarus Group": 3,
    "Sandworm": 2,
    "Kimsuky": 2,
    "APT28": 1
   },
   "year": {
    "Sandworm": 8,
+   "Lazarus Group": 6,
    "Fire Ant": 5,
    "Volt Typhoon": 4,
-   "Lazarus Group": 4,
    "APT28": 3,
    "Scattered Spider": 3,
    "Salt Typhoon": 2,
@@ -1778,9 +1778,9 @@
   },
   "all": {
    "Sandworm": 8,
+   "Lazarus Group": 6,
    "Fire Ant": 5,
    "Volt Typhoon": 4,
-   "Lazarus Group": 4,
    "APT28": 3,
    "Scattered Spider": 3,
    "Salt Typhoon": 2,
@@ -1796,7 +1796,8 @@
    "2026-06",
    "2026-08",
    "2026-09",
-   "2026-10"
+   "2026-10",
+   "2026-11"
   ],
   "series": [
    {
@@ -1806,6 +1807,18 @@
      0,
      2,
      4,
+     2,
+     0
+    ]
+   },
+   {
+    "group": "Lazarus Group",
+    "data": [
+     0,
+     0,
+     0,
+     1,
+     3,
      2
     ]
    },
@@ -1815,6 +1828,7 @@
      0,
      0,
      5,
+     0,
      0,
      0
     ]
@@ -1826,17 +1840,8 @@
      1,
      0,
      0,
-     3
-    ]
-   },
-   {
-    "group": "Lazarus Group",
-    "data": [
-     0,
-     0,
-     0,
-     1,
-     3
+     3,
+     0
     ]
    },
    {
@@ -1846,7 +1851,8 @@
      0,
      1,
      0,
-     1
+     1,
+     0
     ]
    },
    {
@@ -1856,14 +1862,15 @@
      3,
      0,
      0,
+     0,
      0
     ]
    }
   ]
  },
  "cve_sev": {
-  "Critical": 317,
-  "High": 213,
+  "Critical": 319,
+  "High": 214,
   "Low": 40,
   "Medium": 26
  },
@@ -1880,7 +1887,7 @@
   "2023": 21,
   "2024": 17,
   "2025": 39,
-  "2026": 721
+  "2026": 725
  },
  "cve_month": {
   "2025-10": 1,
@@ -1890,7 +1897,8 @@
   "2026-07": 16,
   "2026-08": 84,
   "2026-09": 160,
-  "2026-10": 284
+  "2026-10": 285,
+  "2026-11": 4
  },
  "top_cve": [
   {
@@ -3321,6 +3329,14 @@
    "kev": true,
    "apts": []
   },
+  "CVE-2026-112816": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-112816-Canonical-LXD-MicroCloud-Trusted-Client-Impersonation-2026-11.md",
+   "body": "# CVE-2026-112816 \u2014 Canonical LXD / MicroCloud: Trusted-Client Impersonation Without Private Key (CVSS 10.0)\n\n\u2705 **Verification:** Verified \u2014 2 independent sources (THN RSS + X posts)\n\n> Source: [The Hacker News](https://thehackernews.com/2026/11/critical-lxd-and-microcloud-flaw-cvss.html) \u2014 2026-11-01T08:51Z\n> Source: [X @TheHackersNews](https://x.com/TheHackersNews/status/2116818971773309278) \u2014 2026-11-01T09:05Z\n> Source: [X @TheCyberSecHub](https://x.com/TheCyberSecHub/status/2116827372909629824) \u2014 2026-11-01T09:39Z\n\n**Type:** Authentication bypass (mTLS client-cert trust) | **Severity:** Critical (CVSS 10.0) | **Products:** Canonical LXD, MicroCloud\n\n## Summary\n- An attacker who can reach the **LXD HTTPS API** and knows a **trusted client's public certificate** can authenticate as that client **without possessing its private key**.\n- Impact chain: cluster + VM/container access \u2192 potential **host root** (LXD access is effectively root-equivalent on the host).\n- Exploitation status: not reported as exploited at time of writing.\n\n## Actions / Hunting\n- Patch LXD/MicroCloud to the fixed releases per Canonical's advisory; until then **do not expose the LXD API (8443/tcp)** beyond management networks.\n- Public client certs are often discoverable (shared configs, repos, `lxc remote` exports) \u2014 treat them as a precondition attackers can meet.\n- Review `lxd` audit/daemon logs for API sessions from unexpected source IPs using known trusted-client fingerprints.\n\n## Bug bounty angle\n- Recon for exposed `:8443` endpoints returning LXD `/1.0` JSON; cert-based auth logic flaws are a recurring class (compare signature/verification bypasses in mTLS stacks).\n\n## Tags\n#cve #critical #lxd #microcloud #canonical #auth-bypass #mtls #container",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-112900": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-112900-Pillow-EPS-Filename-Ghostscript-OS-Command-Injection-2026-10.md",
    "body": "# CVE-2026-112900 \u2014 Python Pillow EPS Filename \u2192 Ghostscript OS Command Execution\n\n\u26a0\ufe0f **Verification:** Single source (social) \u2014 confirm against the Pillow advisory\n\n> Source: X [@TheHackersNews](https://x.com/TheHackersNews/status/2113565218039333137) \u2014 2026-10-23T09:36Z (\"Critical Flaw in Python's Popular Pillow Image\u2026\")\n\n**Type:** CVE / OS command injection | **Severity:** Critical (per THN headline; CVSS not captured) | **Date:** 2026-10-23 | **Tags:** #cve #python #pillow #ghostscript #command-injection\n\n## Summary\n- A crafted **filename** is enough to trigger OS command execution: Pillow passes EPS filenames to **Ghostscript** without adequate sanitisation.\n- Pillow is a transitive dependency of a huge share of Python web apps, ML pipelines and thumbnailers.\n\n## Action\n- Upgrade Pillow to the fixed release in the vendor advisory (version not captured this sweep \u2014 record it here).\n- Interim: disable EPS handling (`Image.init()` plugin restrictions / remove EpsImagePlugin), uninstall Ghostscript where not needed, never pass user-controlled filenames to `Image.open`.\n\n## Bug bounty angle\n- Upload/convert endpoints that keep the user-supplied filename (or accept a path/URL) and process with Pillow are the target surface. Check for EPS acceptance; report with version evidence and a benign proof (e.g., out-of-band DNS) only where program rules allow.\n\n## Tags\n#needs-verification",
@@ -4185,6 +4201,14 @@
    "sev": "Critical",
    "year": "2026",
    "kev": true,
+   "apts": []
+  },
+  "CVE-2026-59106": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-59106-wolfSSL-WolfProt-Unauth-OS-Command-Injection-RCE-2026-11.md",
+   "body": "# CVE-2026-59106 \u2014 wolfSSL \"WolfProt\" Interface Unauthenticated OS Command Injection RCE (CVSS 9.3)\n\n\u26a0\ufe0f **Verification:** Single source (aggregator) \u2014 verify against wolfSSL advisory / NVD\n\n> Source: [X @SecAlertsCo](https://x.com/SecAlertsCo/status/2116830641903874166) \u2014 2026-11-01T09:52Z\n\n**Type:** OS command injection \u2192 RCE | **Severity:** Critical (CVSS 9.3) | **Product:** wolfSSL (WolfProt interface)\n\n## Summary\n- Critical **unauthenticated RCE** via OS command injection: unsanitized network input reaches a shell in wolfSSL's **WolfProt** interface. No auth required.\n- Details (affected versions, fixed version) not in the post \u2014 confirm with vendor advisory.\n\n## Actions\n- Inventory embedded/IoT products bundling wolfSSL with the WolfProt component; apply vendor patch.\n- Related wolfSSL intel: [[CVE-2026-11999-wolfSSL-X509-TrustChain-Bypass]] \u00b7 [[OpenSSL-WolfSSL-Dozen-Vulns-Patched-2026-09]]\n\n## Tags\n#cve #critical #wolfssl #rce #command-injection #embedded #unverified",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
    "apts": []
   },
   "CVE-2026-59309": {
@@ -5451,6 +5475,14 @@
    "kev": true,
    "apts": []
   },
+  "CVE-2026-58882": {
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-58882-Android-SMS-of-Death-Remote-Crash-PoC-2026-10.md",
+   "body": "# CVE-2026-58882 \u2014 Android \"SMS of Death\": Crafted SMS Remotely Crashes Phones / Disrupts Cellular Service (PoC Public)\n\n\u2705 **Verification:** Verified \u2014 2 sources (BleepingComputer; Clubic coverage 2026-10-31)\n\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones/) \u2014 2026-10-31T15:35Z\n\n**Type:** Remote DoS via malformed SMS (baseband/telephony stack) | **Severity:** High | **Exploit:** Public PoC\n\n## Summary\n- A researcher released a **PoC** for CVE-2026-58882: a specially crafted text message can **disrupt cellular service or crash unpatched Android phones** \u2014 zero-click, remote.\n- Already patched in Android security updates; Clubic notes potential to block **emergency calls** while the device is affected.\n\n## Actions\n- Ensure fleet devices have the patch level that fixes CVE-2026-58882 (MDM compliance query on security patch level).\n- Detection is hard at endpoint level; carriers may filter malformed PDUs.\n\n## Bug bounty angle\n- Mobile/baseband message-parsing fuzzing (SMS PDU, class-0, WAP push) remains productive \u2014 high payouts in Android VRP for zero-click remote DoS/RCE.\n\n## Tags\n#cve #high #android #sms #zero-click #dos #poc",
+   "sev": "High",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-61857": {
    "file": "Threat_Intel/CVEs/2026/High/CVE-2026-61857-ImageMagick-XMP-Heap-UAF.md",
    "body": "# CVE-2026-61857 \u2014 ImageMagick Heap Use-After-Free via XMP Profile Parsing\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n**Severity:** High (memory corruption via crafted image)\n**Component:** ImageMagick < 7.1.2-26\n**Impact:** A heap use-after-free caused by a missing null check when parsing XMP profiles. Attackers can craft a malicious image that, when processed, triggers the UAF \u2014 potentially leading to code execution or crash.\n\n## Details\nImageMagick before 7.1.2-26 contains a heap use-after-free vulnerability caused by a missing null check when parsing XMP profiles embedded in images. Because ImageMagick is widely used server-side for automated image processing (uploads, thumbnails, conversions), a crafted image delivered through any such pipeline can trigger the condition without user interaction.\n\n## Action\n- Upgrade ImageMagick to **7.1.2-26** or later.\n- In upload pipelines, validate/limit accepted formats and strip XMP metadata before processing where possible.\n- Sandbox ImageMagick workers and apply a restrictive `policy.xml`.\n\n> Source: [X @CVEnew](https://x.com/CVEnew) \u2014 2026-07-12\n\n## Tags\n#cve #imagemagick #use-after-free #memory-corruption #image-parsing #xmp #2026 #unverified\n\n*Captured via x-bugbounty-intel-sweep \u2014 2026-07-12*",
@@ -6308,6 +6340,14 @@
    "sev": "",
    "year": "2026",
    "kev": true,
+   "apts": []
+  },
+  "CVE-2026-114820": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-114820.md",
+   "body": "# CVE-2026-114820\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nHackerOne's **AI triage bot** blocked researcher **Will Dormann's** report because it believed CVE-2026-114820 was \"from the future\" \u2014 the bot assumed the current year was 2024 (stale model date context).\n\n## Where it appears in this vault\n- `Guides/AI-BugBounty/HackerOne-AI-Triage-Bot-Rejects-Future-CVE-Dormann-2026-11.md` \u2014 HackerOne's **AI triage bot** blocked researcher **Will Dormann's** report because it believed CVE-2026-114820 was \"from the future\" \u2014 the bot assumed the current year was 2024 (stale model date context).\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-114820\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-114820\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-114820\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
    "apts": []
   },
   "CVE-2026-118035": {
@@ -7489,94 +7529,94 @@
  },
  "recent": [
   {
-   "title": "AD-CS-ESC1-ESC8-Teams-Help-Desk-Impersonation-Intrusion-Microsoft-2026-10",
-   "file": "Guides/AD-CS-ESC1-ESC8-Teams-Help-Desk-Impersonation-Intrusion-Microsoft-2026-10.md",
+   "title": "HackerOne-AI-Triage-Bot-Rejects-Future-CVE-Dormann-2026-11",
+   "file": "Guides/AI-BugBounty/HackerOne-AI-Triage-Bot-Rejects-Future-CVE-Dormann-2026-11.md",
+   "cat": "ai-bugbounty",
+   "ts": "2026-11-01"
+  },
+  {
+   "title": "RBA-Digest-2026-11-01",
+   "file": "Guides/RBA/RBA-Digest-2026-11-01.md",
    "cat": "technique",
-   "ts": "2026-10-31"
+   "ts": "2026-11-01"
   },
   {
-   "title": "Intigriti-Bug-Bytes-241-October-2026",
-   "file": "Guides/Intigriti-Bug-Bytes-241-October-2026.md",
-   "cat": "technique",
-   "ts": "2026-10-31"
-  },
-  {
-   "title": "Agentic-Attacks-Real-World-Cases-Fingerprints-Wiz-2026-10",
-   "file": "Guides/AI-BugBounty/Agentic-Attacks-Real-World-Cases-Fingerprints-Wiz-2026-10.md",
-   "cat": "ai-bugbounty",
-   "ts": "2026-10-31"
-  },
-  {
-   "title": "Claude-Code-YOLO-Mode-Permissions-Prompt-Injection-Risk-UpGuard-2026-10",
-   "file": "Guides/AI-BugBounty/Claude-Code-YOLO-Mode-Permissions-Prompt-Injection-Risk-UpGuard-2026-10.md",
-   "cat": "ai-bugbounty",
-   "ts": "2026-10-31"
-  },
-  {
-   "title": "Claude-Experimental-Model-Chained-Exploits-Chrome-Safari-Android-Windows-Linux-2026-10",
-   "file": "Guides/AI-BugBounty/Claude-Experimental-Model-Chained-Exploits-Chrome-Safari-Android-Windows-Linux-2026-10.md",
-   "cat": "ai-bugbounty",
-   "ts": "2026-10-31"
-  },
-  {
-   "title": "Indirect-Prompt-Injection-Autonomous-Agents-Carrier-Index-2026",
-   "file": "Guides/AI-BugBounty/Indirect-Prompt-Injection-Autonomous-Agents-Carrier-Index-2026.md",
-   "cat": "ai-bugbounty",
-   "ts": "2026-10-31"
-  },
-  {
-   "title": "LLM-Router-Prompt-Dataset-Resale-Credential-Leak-2026",
-   "file": "Guides/AI-BugBounty/LLM-Router-Prompt-Dataset-Resale-Credential-Leak-2026.md",
-   "cat": "ai-bugbounty",
-   "ts": "2026-10-31"
-  },
-  {
-   "title": "Discord-Discoverable-Servers-Search-Engine-Indexing-OSINT-2026-10",
-   "file": "Guides/OSINT/Discord-Discoverable-Servers-Search-Engine-Indexing-OSINT-2026-10.md",
-   "cat": "technique",
-   "ts": "2026-10-31"
-  },
-  {
-   "title": "Talos-IR-Trends-Q3-2026-Help-Desk-Vishing-Ransomware-Rise",
-   "file": "Guides/phishing/Talos-IR-Trends-Q3-2026-Help-Desk-Vishing-Ransomware-Rise.md",
-   "cat": "technique",
-   "ts": "2026-10-31"
-  },
-  {
-   "title": "Sigma-Watch-2026-10-31",
-   "file": "Reports/Sigma/Sigma-Watch-2026-10-31.md",
-   "cat": "other",
-   "ts": "2026-10-31"
-  },
-  {
-   "title": "DPRK-AI-Adoption-Tradecraft-Microsoft-2026-10",
-   "file": "Threat_Intel/APT_Groups/DPRK-AI-Adoption-Tradecraft-Microsoft-2026-10.md",
+   "title": "Lazarus-Profile",
+   "file": "Threat_Intel/APT_Groups/Lazarus/Lazarus-Profile.md",
    "cat": "malware",
-   "ts": "2026-10-31"
+   "ts": "2026-11-01"
   },
   {
-   "title": "Russian-FSB-Center16-Router-Critical-Infra-Advisory-2026",
-   "file": "Threat_Intel/APT_Groups/Russian-FSB-Center16-Router-Critical-Infra-Advisory-2026.md",
-   "cat": "malware",
-   "ts": "2026-10-31"
+   "title": "Binance-6.3B-Crypto-Heist-TraderTraitor-DPRK-2026-10",
+   "file": "Threat_Intel/Breaches/Binance-6.3B-Crypto-Heist-TraderTraitor-DPRK-2026-10.md",
+   "cat": "breach",
+   "ts": "2026-11-01"
   },
   {
-   "title": "Storm-0940-ARTEX-Agentic-AI-Pentest-Framework-IT-Vendor-Identity-Targeting-2026-10",
-   "file": "Threat_Intel/APT_Groups/Storm-0940-ARTEX-Agentic-AI-Pentest-Framework-IT-Vendor-Identity-Targeting-2026-10.md",
-   "cat": "malware",
-   "ts": "2026-10-31"
+   "title": "Chainalysis-Breach-Offensive-Agentic-Techniques-2026-10",
+   "file": "Threat_Intel/Breaches/Chainalysis-Breach-Offensive-Agentic-Techniques-2026-10.md",
+   "cat": "breach",
+   "ts": "2026-11-01"
   },
   {
-   "title": "Syrian-Electronic-Army-Th3Pr0-Sentenced-42-Months-2026-10",
-   "file": "Threat_Intel/APT_Groups/Syrian-Electronic-Army-Th3Pr0-Sentenced-42-Months-2026-10.md",
-   "cat": "malware",
-   "ts": "2026-10-31"
+   "title": "Charite-Berlin-Hospital-Web-Server-Breach-Staff-Data-2026-11",
+   "file": "Threat_Intel/Breaches/Charite-Berlin-Hospital-Web-Server-Breach-Staff-Data-2026-11.md",
+   "cat": "breach",
+   "ts": "2026-11-01"
   },
   {
-   "title": "TraderTraitor-FLATROOF-ROOFDECK-macOS-Backdoors-Second-Victim-Terraform-Registry-SentinelOne-2026",
-   "file": "Threat_Intel/APT_Groups/TraderTraitor-FLATROOF-ROOFDECK-macOS-Backdoors-Second-Victim-Terraform-Registry-SentinelOne-2026.md",
+   "title": "DarkWeb-Leak-Claims-Roundup-2026-11-01",
+   "file": "Threat_Intel/Breaches/DarkWeb-Leak-Claims-Roundup-2026-11-01.md",
+   "cat": "breach",
+   "ts": "2026-11-01"
+  },
+  {
+   "title": "Northflank-Breach-Customer-AI-API-Keys-Abused-2026-10",
+   "file": "Threat_Intel/Breaches/Northflank-Breach-Customer-AI-API-Keys-Abused-2026-10.md",
+   "cat": "breach",
+   "ts": "2026-11-01"
+  },
+  {
+   "title": "Scribd-Breach-Notices-Emails-Payment-History-2026-11",
+   "file": "Threat_Intel/Breaches/Scribd-Breach-Notices-Emails-Payment-History-2026-11.md",
+   "cat": "breach",
+   "ts": "2026-11-01"
+  },
+  {
+   "title": "CVE-2026-112816-Canonical-LXD-MicroCloud-Trusted-Client-Impersonation-2026-11",
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-112816-Canonical-LXD-MicroCloud-Trusted-Client-Impersonation-2026-11.md",
+   "cat": "cve",
+   "ts": "2026-11-01"
+  },
+  {
+   "title": "CVE-2026-59106-wolfSSL-WolfProt-Unauth-OS-Command-Injection-RCE-2026-11",
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-59106-wolfSSL-WolfProt-Unauth-OS-Command-Injection-RCE-2026-11.md",
+   "cat": "cve",
+   "ts": "2026-11-01"
+  },
+  {
+   "title": "CVE-2026-58882-Android-SMS-of-Death-Remote-Crash-PoC-2026-10",
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-58882-Android-SMS-of-Death-Remote-Crash-PoC-2026-10.md",
+   "cat": "cve",
+   "ts": "2026-11-01"
+  },
+  {
+   "title": "CVE-2026-114820",
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-114820.md",
+   "cat": "cve",
+   "ts": "2026-11-01"
+  },
+  {
+   "title": "NetamLoader-NET-Loader-Asian-Government-Custom-Windows10-Kaspersky-2026-11",
+   "file": "Threat_Intel/Malware/NetamLoader-NET-Loader-Asian-Government-Custom-Windows10-Kaspersky-2026-11.md",
    "cat": "malware",
-   "ts": "2026-10-31"
+   "ts": "2026-11-01"
+  },
+  {
+   "title": "VOLTA-AUTODOXER-Infostealer-LLM-Victim-Prioritization-Talos-2026-10",
+   "file": "Threat_Intel/Malware/VOLTA-AUTODOXER-Infostealer-LLM-Victim-Prioritization-Talos-2026-10.md",
+   "cat": "malware",
+   "ts": "2026-11-01"
   }
  ],
  "kev_referenced": [
@@ -8689,6 +8729,13 @@
    "cves": 860,
    "breaches": 200,
    "malware": 203
+  },
+  {
+   "date": "2026-11-01",
+   "intel_items": 2338,
+   "cves": 864,
+   "breaches": 205,
+   "malware": 205
   }
  ]
 }
