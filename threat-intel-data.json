@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-02 20:45",
- "today": "2026-11-02",
+ "generated": "2026-11-03 20:45",
+ "today": "2026-11-03",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
@@ -10,31 +10,31 @@
   "supplychain": 86,
   "tools": 100,
   "commands": 14,
-  "guides": 350,
+  "guides": 351,
   "intel_items": 2338,
   "kev": 197
  },
  "windows": {
   "week": {
-   "total": 227,
+   "total": 186,
    "by_cat": {
-    "cve": 95,
-    "malware": 31,
-    "breach": 49,
-    "technique": 13,
-    "supplychain": 11,
-    "ai-bugbounty": 20,
-    "tool": 3,
+    "cve": 76,
+    "malware": 25,
+    "ai-bugbounty": 14,
+    "breach": 45,
+    "tool": 2,
+    "technique": 10,
+    "supplychain": 9,
     "misc": 4,
     "other": 1
    },
    "by_src": {}
   },
   "month": {
-   "total": 674,
+   "total": 671,
    "by_cat": {
-    "breach": 146,
-    "cve": 287,
+    "cve": 286,
+    "breach": 144,
     "ai-bugbounty": 54,
     "malware": 88,
     "misc": 35,
@@ -7529,6 +7529,18 @@
  },
  "recent": [
   {
+   "title": "Detection-Digest-2026-11-03",
+   "file": "Guides/Detections/Detection-Digest-2026-11-03.md",
+   "cat": "technique",
+   "ts": "2026-11-03"
+  },
+  {
+   "title": "Repo-Health-2026-11-03",
+   "file": "Reports/RepoHealth/Repo-Health-2026-11-03.md",
+   "cat": "other",
+   "ts": "2026-11-03"
+  },
+  {
    "title": "account-takeover-open-redirect-regex-bypass-technique-guide",
    "file": "Guides/account-takeover-open-redirect-regex-bypass-technique-guide.md",
    "cat": "technique",
@@ -7603,18 +7615,6 @@
   {
    "title": "azure-conditional-access-bypass-kql-guide",
    "file": "Guides/azure-conditional-access-bypass-kql-guide.md",
-   "cat": "technique",
-   "ts": "2026-11-02"
-  },
-  {
-   "title": "bitskrieg-bitlocker-bypass-technique-guide",
-   "file": "Guides/bitskrieg-bitlocker-bypass-technique-guide.md",
-   "cat": "technique",
-   "ts": "2026-11-02"
-  },
-  {
-   "title": "bluekit-browser-in-the-middle-phishing-kit-guide",
-   "file": "Guides/bluekit-browser-in-the-middle-phishing-kit-guide.md",
    "cat": "technique",
    "ts": "2026-11-02"
   }
@@ -8739,6 +8739,13 @@
   },
   {
    "date": "2026-11-02",
+   "intel_items": 2338,
+   "cves": 864,
+   "breaches": 205,
+   "malware": 205
+  },
+  {
+   "date": "2026-11-03",
    "intel_items": 2338,
    "cves": 864,
    "breaches": 205,
