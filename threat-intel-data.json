@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-04 20:45",
- "today": "2026-11-04",
+ "generated": "2026-11-05 20:45",
+ "today": "2026-11-05",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
@@ -16,28 +16,28 @@
  },
  "windows": {
   "week": {
-   "total": 204,
+   "total": 161,
    "by_cat": {
-    "cve": 66,
-    "breach": 58,
-    "technique": 8,
-    "ai-bugbounty": 17,
     "misc": 5,
-    "malware": 31,
+    "cve": 41,
+    "malware": 25,
+    "breach": 52,
     "supplychain": 12,
+    "technique": 4,
+    "ai-bugbounty": 15,
     "other": 6,
     "tool": 1
    },
    "by_src": {}
   },
   "month": {
-   "total": 726,
+   "total": 725,
    "by_cat": {
     "cve": 297,
     "breach": 161,
     "ai-bugbounty": 60,
     "malware": 99,
-    "misc": 36,
+    "misc": 35,
     "supplychain": 36,
     "technique": 19,
     "tool": 11,
@@ -1754,7 +1754,7 @@
  "apt_activity_windows": {
   "week": {
    "Lazarus Group": 6,
-   "Volt Typhoon": 3
+   "Volt Typhoon": 1
   },
   "month": {
    "Lazarus Group": 6,
@@ -8803,6 +8803,13 @@
   },
   {
    "date": "2026-11-04",
+   "intel_items": 2393,
+   "cves": 871,
+   "breaches": 212,
+   "malware": 209
+  },
+  {
+   "date": "2026-11-05",
    "intel_items": 2393,
    "cves": 871,
    "breaches": 212,
