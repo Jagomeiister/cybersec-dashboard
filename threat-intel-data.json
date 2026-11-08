@@ -1,80 +1,80 @@
 {
- "generated": "2026-11-07 20:45",
- "today": "2026-11-07",
+ "generated": "2026-11-08 20:45",
+ "today": "2026-11-08",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
-  "cves": 900,
-  "breaches": 218,
-  "malware": 216,
+  "cves": 910,
+  "breaches": 224,
+  "malware": 217,
   "supplychain": 89,
   "tools": 102,
   "commands": 14,
-  "guides": 364,
-  "intel_items": 2502,
+  "guides": 365,
+  "intel_items": 2530,
   "kev": 204
  },
  "windows": {
   "week": {
-   "total": 203,
+   "total": 212,
    "by_cat": {
-    "other": 18,
-    "misc": 8,
-    "supplychain": 7,
-    "breach": 56,
+    "cve": 54,
+    "breach": 60,
     "ai-bugbounty": 24,
-    "malware": 35,
-    "cve": 45,
-    "tool": 3,
+    "misc": 6,
+    "malware": 34,
+    "supplychain": 6,
+    "other": 17,
     "command": 1,
-    "technique": 6
+    "technique": 7,
+    "tool": 3
    },
    "by_src": {}
   },
   "month": {
-   "total": 795,
+   "total": 783,
    "by_cat": {
-    "breach": 170,
-    "malware": 111,
-    "misc": 34,
-    "cve": 317,
-    "technique": 25,
+    "cve": 321,
+    "breach": 172,
+    "malware": 103,
     "ai-bugbounty": 69,
-    "supplychain": 36,
-    "tool": 13,
+    "tool": 14,
+    "supplychain": 35,
+    "misc": 25,
+    "technique": 24,
     "other": 19,
     "command": 1
    },
    "by_src": {}
   },
   "year": {
-   "total": 2498,
+   "total": 2526,
    "by_cat": {
-    "ai-bugbounty": 197,
-    "malware": 322,
+    "ai-bugbounty": 199,
+    "malware": 325,
     "other": 130,
-    "tool": 71,
+    "tool": 72,
     "misc": 371,
     "command": 7,
-    "technique": 166,
-    "breach": 363,
+    "technique": 167,
+    "breach": 373,
     "supplychain": 128,
-    "cve": 743
+    "cve": 754
    },
    "by_src": {}
   },
   "all": {
-   "total": 2502,
+   "total": 2530,
    "by_cat": {
-    "ai-bugbounty": 198,
-    "malware": 322,
+    "ai-bugbounty": 200,
+    "malware": 325,
     "other": 130,
-    "tool": 71,
+    "tool": 72,
     "misc": 371,
     "command": 7,
-    "technique": 168,
-    "cve": 744,
-    "breach": 363,
+    "technique": 169,
+    "cve": 755,
+    "breach": 373,
     "supplychain": 128
    },
    "by_src": {}
@@ -1755,7 +1755,7 @@
  ],
  "apt_activity_windows": {
   "week": {
-   "Lazarus Group": 6
+   "Lazarus Group": 3
   },
   "month": {
    "Lazarus Group": 6,
@@ -1870,10 +1870,10 @@
   ]
  },
  "cve_sev": {
-  "Critical": 329,
-  "High": 226,
+  "Critical": 334,
+  "High": 230,
   "Low": 40,
-  "Medium": 26
+  "Medium": 27
  },
  "cve_year": {
   "2000": 1,
@@ -1889,7 +1889,7 @@
   "2023": 22,
   "2024": 20,
   "2025": 43,
-  "2026": 752
+  "2026": 762
  },
  "cve_month": {
   "2025-10": 1,
@@ -1900,7 +1900,7 @@
   "2026-08": 84,
   "2026-09": 160,
   "2026-10": 285,
-  "2026-11": 43
+  "2026-11": 54
  },
  "top_cve": [
   {
@@ -3467,6 +3467,22 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-120281": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-120281-CVE-2026-120277-WAVLINK-WN536AX6-A-Unauth-RCE-Public-PoC-2026-11.md",
+   "body": "# CVE-2026-120281 / CVE-2026-120277 \u2014 WAVLINK WN536AX6-A Unauthenticated RCE (Public PoCs)\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 source (SecAlerts on X)\n\n> Source: [X @SecAlertsCo](https://x.com/SecAlertsCo/status/2119363729204617294) \u2014 2026-11-08T09:37Z\n> Source: [X @SecAlertsCo](https://x.com/SecAlertsCo/status/2119183184587809270) \u2014 2026-11-07T21:40Z\n\n**Type:** Stack overflow + OS command injection | **Severity:** Critical (CVSS 9.3) | **Product:** WAVLINK WN536AX6-A router | **CVE:** CVE-2026-120281, CVE-2026-120277\n\n## Summary\n- **CVE-2026-120281:** stack overflow via `strcpy` in the `/protocol.csp` **OpenVPN handler**; no auth; CVSS 9.3; PoC public.\n- **CVE-2026-120277:** OS command injection in the **WireGuard CLI Group handler** (`sub_41a1d8` in `/bin/ioos`); no auth; CVSS 9.3; PoC public.\n\n## Hunting\n- Shodan/Censys for WAVLINK web UIs; expect botnet (Mirai-style) pickup quickly after public PoCs.\n- Same firmware family likely shares handlers \u2014 test other VPN config endpoints in `/protocol.csp`.\n\n## Tags\n#cve #iot #router #wavlink #rce #command-injection #poc",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-120277": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-120281-CVE-2026-120277-WAVLINK-WN536AX6-A-Unauth-RCE-Public-PoC-2026-11.md",
+   "body": "# CVE-2026-120281 / CVE-2026-120277 \u2014 WAVLINK WN536AX6-A Unauthenticated RCE (Public PoCs)\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 source (SecAlerts on X)\n\n> Source: [X @SecAlertsCo](https://x.com/SecAlertsCo/status/2119363729204617294) \u2014 2026-11-08T09:37Z\n> Source: [X @SecAlertsCo](https://x.com/SecAlertsCo/status/2119183184587809270) \u2014 2026-11-07T21:40Z\n\n**Type:** Stack overflow + OS command injection | **Severity:** Critical (CVSS 9.3) | **Product:** WAVLINK WN536AX6-A router | **CVE:** CVE-2026-120281, CVE-2026-120277\n\n## Summary\n- **CVE-2026-120281:** stack overflow via `strcpy` in the `/protocol.csp` **OpenVPN handler**; no auth; CVSS 9.3; PoC public.\n- **CVE-2026-120277:** OS command injection in the **WireGuard CLI Group handler** (`sub_41a1d8` in `/bin/ioos`); no auth; CVSS 9.3; PoC public.\n\n## Hunting\n- Shodan/Censys for WAVLINK web UIs; expect botnet (Mirai-style) pickup quickly after public PoCs.\n- Same firmware family likely shares handlers \u2014 test other VPN config endpoints in `/protocol.csp`.\n\n## Tags\n#cve #iot #router #wavlink #rce #command-injection #poc",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-120442": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-120442-ape-volo-admin-Hardcoded-JWT-Key-PoC-2026-11.md",
    "body": "# CVE-2026-120442 \u2014 ape-volo-admin Hardcoded JWT Signing Key (Public PoC)\n\n\u26a0\ufe0f **Verification:** Single source (SecAlerts X post)\n\n> Source: [X @SecAlertsCo](https://x.com/SecAlertsCo/status/2118640116344225994) \u2014 2026-11-06T09:42Z\n\n**Type:** Authentication bypass (forged admin JWT) | **Severity:** Critical | **Product:** ape-volo-admin < 3.6.1\n\n## Summary\n- ape-volo-admin before **3.6.1** ships a **hardcoded JWT signing key in `appsettings.json`**; unauthenticated attackers can forge **admin tokens**. Public PoC released. Fixed in 3.6.1.\n\n## Bug bounty / testing notes\n- Pattern to hunt: .NET admin templates with default `appsettings.json` JWT secrets \u2014 grab the key from the public repo, sign `{\"role\":\"admin\"}` tokens with `jwt_tool -S hs256 -p '<key>'`.\n- Rotate the key after upgrading (upgrade alone doesn't invalidate a key copied from the template).\n\n## Related\n- [[jwt-sqli-jti-technique-guide]]\n\n## Tags\n#cve #jwt #hardcoded-secret #auth-bypass #poc #dotnet #unverified",
@@ -3811,6 +3827,14 @@
    "sev": "Critical",
    "year": "2026",
    "kev": true,
+   "apts": []
+  },
+  "CVE-2026-38595": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-38595-im3x-Scriptables-Sync-Filename-Command-Injection-PoC-2026-11.md",
+   "body": "# CVE-2026-38595 \u2014 im3x Scriptables `/sync` Filename OS Command Injection (Public PoC)\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 source (SecAlerts on X)\n\n> Source: [X @SecAlertsCo](https://x.com/SecAlertsCo/status/2119242957937107055) \u2014 2026-11-08T01:37Z\n\n**Type:** OS command injection | **Severity:** Critical (CVSS 9.8, no auth) | **Product:** im3x Scriptables | **CVE:** CVE-2026-38595\n\n## Summary\n- Uploading a **crafted filename** to the `/sync` endpoint gives **OS command injection**, no authentication.\n- Public PoC released. Advice: patch or pull from `v2-dev`.\n\n## Hunting\n- Classic filename-into-shell bug: test upload endpoints with names like `a;id;.js` / `$(id).js` on similar sync tools.\n\n## Tags\n#cve #command-injection #file-upload #poc #javascript",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
    "apts": []
   },
   "CVE-2026-39773": {
@@ -4557,6 +4581,14 @@
    "kev": true,
    "apts": []
   },
+  "CVE-2026-73117": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-73117-Apache-Juneau-CRLF-Response-Splitting-CVSS10-2026-11.md",
+   "body": "# CVE-2026-73117 \u2014 Apache Juneau CRLF Injection / HTTP Response Splitting (CVSS 10)\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 source (SecAlerts on X)\n\n> Source: [X @SecAlertsCo](https://x.com/SecAlertsCo/status/2119303559669862709) \u2014 2026-11-08T05:38Z\n\n**Type:** CRLF injection \u2192 response splitting / open redirect | **Severity:** Critical (CVSS 10) | **Product:** Apache Juneau | **CVE:** CVE-2026-73117\n\n## Summary\n- CRLF injection in HTTP response headers lets attackers **split responses** and **redirect users**.\n- Apps that set headers or redirects from request data are exposed.\n\n## Bug bounty\n- Test Juneau-based REST endpoints with `%0d%0a` in params reflected into `Location`/custom headers \u2192 header injection, cache poisoning, XSS via split body.\n- Upgrade to the fixed Juneau release per the Apache advisory.\n\n## Tags\n#cve #apache #juneau #crlf #response-splitting #java",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-73296": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-73296-Microsoft-UFO-Agent-Framework-Critical.md",
    "body": "# CVE-2026-73296 \u2014 Microsoft UFO (open-source UI-automation agent framework), CVSS 9.4\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n**CVE:** CVE-2026-73296\n**CVSS:** 9.4 (Critical)\n**Product:** Microsoft **UFO** \u2014 Microsoft's open-source **UI-Focused agent framework** for automating Windows GUI applications with an LLM\n**Fix:** Available per SecAlerts\n\n## Why this one matters beyond its score\nUFO is an **agentic desktop-automation framework**: it drives real Windows UI with model-generated actions. A critical flaw in that class of software is not a web-app flaw with a bigger number \u2014 the exploit primitive is *actions taken on the user's desktop under the user's identity*, which is exactly the boundary that endpoint controls assume is human.\n\nThis is the fourth AI-agent-infrastructure item in a single 24-hour window in this vault (Langflow CVE-2026-0768, METR key theft, the SANS free-LLM-endpoint honeypot, and this). **The pattern is that agent frameworks are shipping with the security maturity of pre-2010 web software while holding the privileges of a logged-in user.**\n\n## \u26a0\ufe0f What is NOT established\n- **The vulnerability class is unknown** from this source. CVSS 9.4 is quoted; the vector is not.\n- Affected version range unknown.\n- No evidence of exploitation.\n- **This note is sourced to an aggregator relaying a CVE record.** Per the standing rule recorded 2026-08-31: record what the document class is. Upgrade this note only against the Microsoft/GitHub advisory.\n\n## Action\n1. Inventory: does anyone in the org run **microsoft/UFO** on a workstation? It is a research/automation tool, so it will not appear in a software asset register.\n2. Update to the fixed release before reading further.\n3. Treat any host running an agentic desktop-automation framework as a **privileged host**, not a developer workstation.\n\n> Source: [SecAlerts via @SecAlertsCo on X](https://x.com/SecAlertsCo/status/2094668827841945965) \u2014 2026-09-01\n\n## Tags\n#cve-2026-73296 #microsoft #ufo #ai-agent #desktop-automation #critical #single-source #vector-unknown #unverified",
@@ -5261,6 +5293,22 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-120554": {
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-120554-WordPress-Import-Export-Users-Customers-PrivEsc-2026-11.md",
+   "body": "# CVE-2026-120554 \u2014 WordPress 'Import and export users and customers' Plugin Privilege Escalation\n\n\u26a0\ufe0f **Verification:** 1 source (CVE feed on X)\n\n> Source: [X @CVEnew](https://x.com/CVEnew/status/2119246062099599600) \u2014 2026-11-08T01:50Z\n> Source: [CVE.org](https://www.cve.org/CVERecord?id=CVE-2026-120554) \u2014 2026-11-08\n\n**Type:** Privilege escalation | **Product:** Import and export users and customers (WordPress plugin) \u2264 2.5.11 | **CVE:** CVE-2026-120554\n\n## Summary\n- Privilege escalation in all versions up to and including **2.5.11** (details truncated in feed; see CVE record).\n- Same feed: **CVE-2026-121818** \u2014 Herowatch Mini (About Time Technologies) system-signing flaw: local authenticated attackers can use a **publicly available test key** to sign.\n\n## Hunting\n- User-import plugins commonly allow setting `role` via CSV/meta \u2192 check if low-priv users can import/modify accounts as administrator.\n\n## Tags\n#cve #wordpress #plugin #privilege-escalation",
+   "sev": "High",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-121818": {
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-121818.md",
+   "body": "# CVE-2026-121818\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** High  \n**Year:** 2026\n\n## Summary\n2119246062099599600 | 2026-11-08 | @CVEnew | CVE-2026-120554 WP plugin privesc (+ 2119246060761559162 CVE-2026-121818 Herowatch) | -> Threat_Intel/CVEs/2026/High/CVE-2026-120554-WordPress-Import-Export-Users-Customers-PrivEsc-2026-11.md\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 2119246062099599600 | 2026-11-08 | @CVEnew | CVE-2026-120554 WP plugin privesc (+ 2119246060761559162 CVE-2026-121818 Herowatch) | -> Threat_Intel/CVEs/2026/High/CVE-2026-120554-WordPress-Import-Export-Users-Customers-PrivEsc-2026-11.md\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-121818\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-121818\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-121818\n\n## Tags\n#cve #2026 #high #auto-stub",
+   "sev": "High",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-123158": {
    "file": "Threat_Intel/CVEs/2026/High/CVE-2026-123158.md",
    "body": "# CVE-2026-123158\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** High  \n**Year:** 2026\n\n## Summary\nrss:thn-2026-11-06-sshole-exploited | 2026-11-06 | The Hacker News | SSHole CVE-2026-123158 exploited in hours | -> Threat_Intel/CVEs/2026/High/OpenSSH-sshole-musl-Password-Disabled-Account-Login-10.6p2-2026-11.md (appended)\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 rss:thn-2026-11-06-sshole-exploited | 2026-11-06 | The Hacker News | SSHole CVE-2026-123158 exploited in hours | -> Threat_Intel/CVEs/2026/High/OpenSSH-sshole-musl-Password-Disabled-Account-Login-10.6p2-2026-11.md (appended)\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-123158\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-123158\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-123158\n\n## Tags\n#cve #2026 #high #auto-stub",
@@ -5832,6 +5880,14 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-82033": {
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-82033-DeepSeek-Harness-Missing-Auth-WebSocket-RPC-2026-11.md",
+   "body": "# CVE-2026-82033 \u2014 DeepSeek Harness Missing Authentication (HTTP / WebSocket RPC)\n\n\u26a0\ufe0f **Verification:** 1 source (CVE feed on X)\n\n> Source: [X @CVEnew](https://x.com/CVEnew/status/2119219596402008490) \u2014 2026-11-08T00:04Z\n> Source: [CVE.org](https://www.cve.org/CVERecord?id=CVE-2026-82033) \u2014 2026-11-08\n\n**Type:** Missing authentication | **Product:** DeepSeek Harness (< 0.1.2-alpha.2; commit 3e24087) | **CVE:** CVE-2026-82033\n\n## Summary\n- Missing authentication in DeepSeek Harness's **web profile HTTP and WebSocket RPC** components before 0.1.2-alpha.2.\n\n## AI bug bounty\n- Agent harnesses often expose localhost RPC \u2192 test for DNS rebinding / cross-origin WebSocket hijacking from a malicious page to drive the agent (tool execution).\n\n## Tags\n#cve #ai-security #agent #websocket #missing-auth #deepseek",
+   "sev": "High",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-83527": {
    "file": "Threat_Intel/CVEs/2026/High/CVE-2026-83527.md",
    "body": "# CVE-2026-83527\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** High  \n**Year:** 2026\n\n## Summary\nrss:cccs-2026-09-08-av26-897 | 2026-09-08 | CCCS | Ivanti Sept 2026 \u2014 EPMM CVE-2026-18851, Sentry CVE-2026-83527, Neurons for ITSM multiple | -> Threat_Intel/CVEs/2026/High/Ivanti-September-2026-Security-Update-EPMM-Neurons-ITSM-Sentry-AV26-897.md (new)\n\n## Where it appears in this vault\n- `X_Intel/x-intel-tracker.md` \u2014 rss:cccs-2026-09-08-av26-897 | 2026-09-08 | CCCS | Ivanti Sept 2026 \u2014 EPMM CVE-2026-18851, Sentry CVE-2026-83527, Neurons for ITSM multiple | -> Threat_Intel/CVEs/2026/High/Ivanti-September-2026-Security-Update-EPMM-Neurons-ITSM-Sentry-AV26-897.md (new)\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-83527\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-83527\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-83527\n\n## Tags\n#cve #2026 #high #auto-stub #verified",
@@ -5842,7 +5898,7 @@
   },
   "CVE-2026-83844": {
    "file": "Threat_Intel/CVEs/2026/High/CVE-2026-83844-Microsoft-Paint-RCE-Store-Only-Fix-2026-11.md",
-   "body": "# CVE-2026-83844 \u2014 Microsoft Paint Out-of-Bounds Read RCE (fix via Microsoft Store only)\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 source (The Hacker News; also posted on X)\n\n> Source: [The Hacker News](https://thehackernews.com/2026/11/microsoft-paint-rce-fix-now-available.html) \u2014 2026-11-06T12:06Z\n\n**Type:** RCE (out-of-bounds read) | **Severity:** High (MS rating truncated in feed) | **Product:** Windows Paint | **CVE:** CVE-2026-83844\n\n## Summary\n- Out-of-bounds read in **Windows Paint** that could let an unauthenticated network/remote attacker run code (crafted image).\n- Fixed in Paint **build 11.2609.401.0**, delivered **only through Microsoft Store updates \u2014 Windows Update will not install it.**\n\n## Actions\n- Check Paint version fleet-wide (`Get-AppxPackage *MSPaint*`); push Store updates via Intune/winget where Store is disabled.\n- Environments that block the Store stay vulnerable \u2014 flag as patch-management gap.\n\n## Tags\n#cve #microsoft #windows #paint #rce #patch-gap",
+   "body": "# CVE-2026-83844 \u2014 Microsoft Paint Out-of-Bounds Read RCE (fix via Microsoft Store only)\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 source (The Hacker News; also posted on X)\n\n> Source: [The Hacker News](https://thehackernews.com/2026/11/microsoft-paint-rce-fix-now-available.html) \u2014 2026-11-06T12:06Z\n\n**Type:** RCE (out-of-bounds read) | **Severity:** High (MS rating truncated in feed) | **Product:** Windows Paint | **CVE:** CVE-2026-83844\n\n## Summary\n- Out-of-bounds read in **Windows Paint** that could let an unauthenticated network/remote attacker run code (crafted image).\n- Fixed in Paint **build 11.2609.401.0**, delivered **only through Microsoft Store updates \u2014 Windows Update will not install it.**\n\n## Actions\n- Check Paint version fleet-wide (`Get-AppxPackage *MSPaint*`); push Store updates via Intune/winget where Store is disabled.\n- Environments that block the Store stay vulnerable \u2014 flag as patch-management gap.\n\n## Tags\n#cve #microsoft #windows #paint #rce #patch-gap\n\n\n## Update 2026-11-08\n> Source: [Clubic](https://www.clubic.com/actualite-638194-microsoft-corrige-une-faille-dans-paint-et-le-patch-se-trouve-dans-le-microsoft-store.html) \u2014 2026-11-07T12:15Z\n- French coverage (Clubic): zero-click RCE, no credentials; fix delivered via Microsoft Store, not Windows Update.",
    "sev": "High",
    "year": "2026",
    "kev": false,
@@ -7755,94 +7811,94 @@
  },
  "recent": [
   {
-   "title": "Apple-Bug-Bounty-dawgyg-Public-POC-Report-Dump-Announcement-2026-10",
-   "file": "Guides/Apple-Bug-Bounty-dawgyg-Public-POC-Report-Dump-Announcement-2026-10.md",
+   "title": "Bug-Bounty-Writeups-2FA-Bypass-OAuth-Account-Migration-Cookie-Tossing-2026-11",
+   "file": "Guides/Bug-Bounty-Writeups-2FA-Bypass-OAuth-Account-Migration-Cookie-Tossing-2026-11.md",
    "cat": "technique",
-   "ts": "2026-11-07"
+   "ts": "2026-11-08"
+  },
+  {
+   "title": "ChatGPT-Lockdown-Mode-Bypass-Desktop-HTML-Conversation-Leak-CheckPoint-2026-11",
+   "file": "Guides/AI-BugBounty/ChatGPT-Lockdown-Mode-Bypass-Desktop-HTML-Conversation-Leak-CheckPoint-2026-11.md",
+   "cat": "ai-bugbounty",
+   "ts": "2026-11-08"
   },
   {
    "title": "Claude-Code-Dont-Ask-Again-Settings-File-Secrets-Exposed-GitHub-Apiiro-2026-11",
    "file": "Guides/AI-BugBounty/Claude-Code-Dont-Ask-Again-Settings-File-Secrets-Exposed-GitHub-Apiiro-2026-11.md",
    "cat": "ai-bugbounty",
-   "ts": "2026-11-07"
-  },
-  {
-   "title": "Claude-Code-Web-Search-Email-Address-Leak-Fixed-2026-11",
-   "file": "Guides/AI-BugBounty/Claude-Code-Web-Search-Email-Address-Leak-Fixed-2026-11.md",
-   "cat": "ai-bugbounty",
-   "ts": "2026-11-07"
-  },
-  {
-   "title": "Claude-Dispatch-Malicious-Browser-Extension-to-Desktop-Code-Execution-Forever-Security-2026-11",
-   "file": "Guides/AI-BugBounty/Claude-Dispatch-Malicious-Browser-Extension-to-Desktop-Code-Execution-Forever-Security-2026-11.md",
-   "cat": "ai-bugbounty",
-   "ts": "2026-11-07"
-  },
-  {
-   "title": "OpenAI-GPT-6-Cyber-81-Firefox-Flaws-948-Linux-LPE-Exploits-2026-11",
-   "file": "Guides/AI-BugBounty/OpenAI-GPT-6-Cyber-81-Firefox-Flaws-948-Linux-LPE-Exploits-2026-11.md",
-   "cat": "ai-bugbounty",
-   "ts": "2026-11-07"
-  },
-  {
-   "title": "Video-Geolocation-via-Background-Aircraft-Sound-Doppler-ADS-B-2026-11",
-   "file": "Guides/OSINT/Video-Geolocation-via-Background-Aircraft-Sound-Doppler-ADS-B-2026-11.md",
-   "cat": "technique",
-   "ts": "2026-11-07"
-  },
-  {
-   "title": "Vendor-Advisory-Roundup-CCCS-AV26-1131-1133-2026-11-06",
-   "file": "Threat_Intel/Vendor-Advisory-Roundup-CCCS-AV26-1131-1133-2026-11-06.md",
-   "cat": "other",
-   "ts": "2026-11-07"
+   "ts": "2026-11-08"
   },
   {
    "title": "Storm-0940-ARTEX-Agentic-AI-Pentest-Framework-IT-Vendor-Identity-Targeting-2026-10",
    "file": "Threat_Intel/APT_Groups/Storm-0940-ARTEX-Agentic-AI-Pentest-Framework-IT-Vendor-Identity-Targeting-2026-10.md",
    "cat": "malware",
-   "ts": "2026-11-07"
+   "ts": "2026-11-08"
   },
   {
    "title": "Storm-3358-ARTEX-Financial-Sector-WISP-vshell-AdaptixC2-2026-11",
    "file": "Threat_Intel/APT_Groups/Storm-3358-ARTEX-Financial-Sector-WISP-vshell-AdaptixC2-2026-11.md",
    "cat": "malware",
-   "ts": "2026-11-07"
+   "ts": "2026-11-08"
   },
   {
-   "title": "Chainalysis-Breach-Offensive-Agentic-Techniques-2026-10",
-   "file": "Threat_Intel/Breaches/Chainalysis-Breach-Offensive-Agentic-Techniques-2026-10.md",
+   "title": "Belgium-FPS-Finance-MyMinfin-Cyberattack-2026-10",
+   "file": "Threat_Intel/Breaches/Belgium-FPS-Finance-MyMinfin-Cyberattack-2026-10.md",
    "cat": "breach",
-   "ts": "2026-11-07"
+   "ts": "2026-11-08"
+  },
+  {
+   "title": "Credit-Mutuel-Arkea-Fortuneo-100M-EUR-Fraud-via-Provider-2026-11",
+   "file": "Threat_Intel/Breaches/Credit-Mutuel-Arkea-Fortuneo-100M-EUR-Fraud-via-Provider-2026-11.md",
+   "cat": "breach",
+   "ts": "2026-11-08"
   },
   {
    "title": "Danfoss-Refrigeration-Controller-Attack-French-Supermarkets-2026-10",
    "file": "Threat_Intel/Breaches/Danfoss-Refrigeration-Controller-Attack-French-Supermarkets-2026-10.md",
    "cat": "breach",
-   "ts": "2026-11-07"
+   "ts": "2026-11-08"
   },
   {
    "title": "DigiCert-Breach-Server-Migration-Exposed-Customer-ID-Documents-2026-11",
    "file": "Threat_Intel/Breaches/DigiCert-Breach-Server-Migration-Exposed-Customer-ID-Documents-2026-11.md",
    "cat": "breach",
-   "ts": "2026-11-07"
+   "ts": "2026-11-08"
   },
   {
-   "title": "Japan-Airlines-Sony-Network-Communications-Breaches-Japan-Incident-Wave-2026-10",
-   "file": "Threat_Intel/Breaches/Japan-Airlines-Sony-Network-Communications-Breaches-Japan-Incident-Wave-2026-10.md",
+   "title": "Dubai-Land-Department-Reze-Ransomware-BBK-Leak-2026-11",
+   "file": "Threat_Intel/Breaches/Dubai-Land-Department-Reze-Ransomware-BBK-Leak-2026-11.md",
    "cat": "breach",
-   "ts": "2026-11-07"
+   "ts": "2026-11-08"
   },
   {
-   "title": "Mindfactory-German-PC-Retailer-Breach-Customer-Data-Password-Reset-2026-11",
-   "file": "Threat_Intel/Breaches/Mindfactory-German-PC-Retailer-Breach-Customer-Data-Password-Reset-2026-11.md",
+   "title": "GOPAX-Exchange-Halts-Trading-Withdrawals-After-Hack-Threat-2026-11",
+   "file": "Threat_Intel/Breaches/GOPAX-Exchange-Halts-Trading-Withdrawals-After-Hack-Threat-2026-11.md",
    "cat": "breach",
-   "ts": "2026-11-07"
+   "ts": "2026-11-08"
   },
   {
-   "title": "WorkOS-Breach-ARTEX-AI-Internal-Sales-App-2026-11",
-   "file": "Threat_Intel/Breaches/WorkOS-Breach-ARTEX-AI-Internal-Sales-App-2026-11.md",
+   "title": "Plisio-Crypto-Payment-Gateway-Security-Incident-Outage-2026-11",
+   "file": "Threat_Intel/Breaches/Plisio-Crypto-Payment-Gateway-Security-Incident-Outage-2026-11.md",
    "cat": "breach",
-   "ts": "2026-11-07"
+   "ts": "2026-11-08"
+  },
+  {
+   "title": "Rosstat-Russia-Statistics-Agency-Cyberattack-Data-Releases-Delayed-2026-11",
+   "file": "Threat_Intel/Breaches/Rosstat-Russia-Statistics-Agency-Cyberattack-Data-Releases-Delayed-2026-11.md",
+   "cat": "breach",
+   "ts": "2026-11-08"
+  },
+  {
+   "title": "Smartbox-Customer-Data-Unauthorized-Access-2026-11",
+   "file": "Threat_Intel/Breaches/Smartbox-Customer-Data-Unauthorized-Access-2026-11.md",
+   "cat": "breach",
+   "ts": "2026-11-08"
+  },
+  {
+   "title": "UANL-Mexico-University-Student-Data-Leak-OBL1V1ON-2026-11",
+   "file": "Threat_Intel/Breaches/UANL-Mexico-University-Student-Data-Leak-OBL1V1ON-2026-11.md",
+   "cat": "breach",
+   "ts": "2026-11-08"
   }
  ],
  "kev_referenced": [
@@ -8094,6 +8150,10 @@
    "n": 1
   },
   {
+   "t": "Bug Bounty Writeups 2Fa Bypass Oauth Account Migration Cookie Tossing 2026 11",
+   "n": 1
+  },
+  {
    "t": "C2 Hunting Shodan Censys Cobaltstrike Server Fingerprinting 2026",
    "n": 1
   },
@@ -8107,10 +8167,6 @@
   },
   {
    "t": "Companion Device Linking E2Ee Bypass Whatsapp Signal Telegram 2026",
-   "n": 1
-  },
-  {
-   "t": "Csrf Token Not Bound To Session",
    "n": 1
   }
  ],
@@ -9011,6 +9067,13 @@
    "cves": 900,
    "breaches": 218,
    "malware": 216
+  },
+  {
+   "date": "2026-11-08",
+   "intel_items": 2530,
+   "cves": 910,
+   "breaches": 224,
+   "malware": 217
   }
  ]
 }
