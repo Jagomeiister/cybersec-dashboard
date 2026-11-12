@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-10 20:45",
- "today": "2026-11-10",
+ "generated": "2026-11-12 20:45",
+ "today": "2026-11-12",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
@@ -12,35 +12,35 @@
   "commands": 14,
   "guides": 369,
   "intel_items": 2561,
-  "kev": 207
+  "kev": 209
  },
  "windows": {
   "week": {
-   "total": 223,
+   "total": 139,
    "by_cat": {
-    "cve": 65,
-    "malware": 33,
-    "ai-bugbounty": 26,
-    "supplychain": 7,
-    "breach": 58,
-    "misc": 5,
-    "other": 17,
+    "cve": 48,
     "command": 1,
-    "technique": 7,
-    "tool": 4
+    "ai-bugbounty": 19,
+    "malware": 20,
+    "breach": 34,
+    "misc": 4,
+    "technique": 5,
+    "tool": 3,
+    "other": 3,
+    "supplychain": 2
    },
    "by_src": {}
   },
   "month": {
-   "total": 764,
+   "total": 736,
    "by_cat": {
-    "cve": 318,
-    "breach": 171,
-    "malware": 94,
-    "misc": 25,
-    "ai-bugbounty": 67,
-    "supplychain": 33,
+    "cve": 310,
+    "breach": 161,
+    "malware": 90,
+    "ai-bugbounty": 65,
+    "supplychain": 31,
     "tool": 12,
+    "misc": 23,
     "technique": 24,
     "other": 19,
     "command": 1
@@ -1754,9 +1754,7 @@
   }
  ],
  "apt_activity_windows": {
-  "week": {
-   "Lazarus Group": 1
-  },
+  "week": {},
   "month": {
    "Lazarus Group": 6,
    "Volt Typhoon": 3,
@@ -3456,7 +3454,7 @@
    "body": "# CVE-2026-116606 \u2014 Barracuda Pre-Auth Authorization Bypass + Command Injection \u2192 Root (CVSS 9.3)\n\n\u2705 **Verification:** Verified \u2014 2 independent sources\n\n> Source: [BleepingComputer](https://www.bleepingcomputer.com/news/security/barracuda-warns-of-critical-flaws-allowing-root-access-to-devices/) \u2014 2026-11-03T15:06Z\n> Source: [The Hacker News](https://thehackernews.com/2026/11/barracuda-flaws-could-be-chained-to.html) \u2014 2026-11-03T15:59Z\n\n**Type:** Auth bypass + OS command injection chain | **Severity:** Critical (CVSS 9.3) | **Vendor:** Barracuda\n\n## Summary\n- Barracuda urges patching of **two vulnerabilities** that chain: a **pre-authentication authorization bypass** plus a **command injection**, yielding **root** on susceptible devices. THN names **CVE-2026-116606 (CVSS 9.3)**.\n- Affected product lines/versions not in feed excerpts \u2014 confirm via Barracuda advisory.\n\n## Actions\n- Patch exposed Barracuda appliances immediately; edge devices with root-level chains historically see exploitation within days (cf. ESG CVE-2023-2868).\n- Hunt: unexpected processes/cron entries, new SSH keys, outbound connections from appliance management IPs.\n\n## Tags\n#cve #critical #barracuda #edge-device #auth-bypass #command-injection #rce #verified\n\n\n## Update 2026-11-10 (sweep) \u2014 Exploited in the wild (CCCS)\n> Source: [Canadian Centre for Cyber Security AV26-1112 Update 1](https://cyber.gc.ca/en/alerts-advisories/barracuda-networks-security-advisory-av26-1112) \u2014 2026-11-09T14:45Z\n- CCCS update: open-source reporting indicates **CVE-2026-116606 is exploited in the wild**.\n- Fixed versions: ESG \u2265 9.4.0.030; Load Balancer ADC \u2265 6.4.0; WAF \u2265 11.0.1; Web Security Gateway \u2265 16.1.100.100; Message Archiver \u2265 5.5.4.0; WAF Control Center \u2265 2.2.1.",
    "sev": "Critical",
    "year": "2026",
-   "kev": false,
+   "kev": true,
    "apts": []
   },
   "CVE-2026-118527": {
@@ -5346,7 +5344,7 @@
    "body": "# CVE-2026-125350 \u2014 Chrome XML Use-After-Free Zero-Day (Exploited ITW, 8th of 2026)\n\n\u26a0\ufe0f **Verification:** Multiple sources (Google release notes via DDW, THN, SecurityWeek, CybersecurityNews)\n\n> Source: [X @DailyDarkWeb](https://x.com/DailyDarkWeb/status/2119993656429936749) \u2014 2026-11-10T03:20Z\n> Source: [X @TheHackersNews](https://x.com/TheHackersNews/status/2120047471544222151) \u2014 2026-11-10T06:54Z\n> Source: [X @SecurityWeek](https://x.com/SecurityWeek/status/2120038076751974737) \u2014 2026-11-10T06:17Z\n> Source: [X @The_Cyber_News](https://x.com/The_Cyber_News/status/2120041515011719371) \u2014 2026-11-10T06:31Z\n> Official: https://chromereleases.googleblog.com/2026/11/stable-channel-update-for-desktop_018223192.html\n\n**Type:** Use-after-free (XML component) | **Severity:** High (Google) | **Product:** Google Chrome desktop | **CVE:** CVE-2026-125350\n\n## Summary\n- Google Nov 9, 2026 Stable update: \"aware that an exploit for CVE-2026-125350 exists in the wild\". Reported anonymously **Nov 6, 2026**.\n- Fixed in **157.0.8103.50/.51** (Windows/Mac) and **157.0.8103.50** (Linux); 9 security fixes total. No attribution/target details.\n- Eighth exploited Chrome zero-day of 2026 (per THN / SecurityWeek). Not yet in CISA KEV at time of DDW post.\n\n## Action\n- Force-update fleet to 157.0.8103.50+; restart browsers. Chromium-based browsers (Edge, Brave, Opera, Electron apps) \u2014 watch for downstream patches.\n\n## Related\n- [[Chrome-157-213-Vulns-7-Critical-2026-11]] \u00b7 [[CVE-2026-85046-Chrome-V8-Type-Confusion-ZeroDay-Exploited-2026]]\n\n## Tags\n#cve #zero-day #chrome #browser #uaf #exploited-itw",
    "sev": "High",
    "year": "2026",
-   "kev": false,
+   "kev": true,
    "apts": []
   },
   "CVE-2026-13773": {
@@ -8072,10 +8070,12 @@
   "CVE-2026-111357",
   "CVE-2026-111497",
   "CVE-2026-114625",
+  "CVE-2026-116606",
   "CVE-2026-118527",
   "CVE-2026-119977",
   "CVE-2026-123158",
   "CVE-2026-123218",
+  "CVE-2026-125350",
   "CVE-2026-15409",
   "CVE-2026-15410",
   "CVE-2026-16232",
@@ -9152,6 +9152,13 @@
   },
   {
    "date": "2026-11-10",
+   "intel_items": 2561,
+   "cves": 923,
+   "breaches": 232,
+   "malware": 217
+  },
+  {
+   "date": "2026-11-12",
    "intel_items": 2561,
    "cves": 923,
    "breaches": 232,
