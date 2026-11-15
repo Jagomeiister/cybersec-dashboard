@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-14 20:45",
- "today": "2026-11-14",
+ "generated": "2026-11-15 20:45",
+ "today": "2026-11-15",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
@@ -10,35 +10,35 @@
   "supplychain": 91,
   "tools": 103,
   "commands": 14,
-  "guides": 373,
+  "guides": 374,
   "intel_items": 2627,
   "kev": 210
  },
  "windows": {
   "week": {
-   "total": 136,
+   "total": 116,
    "by_cat": {
-    "cve": 57,
-    "technique": 4,
-    "breach": 41,
-    "ai-bugbounty": 11,
-    "misc": 3,
-    "malware": 15,
+    "malware": 14,
+    "cve": 48,
+    "breach": 37,
+    "technique": 3,
+    "ai-bugbounty": 8,
     "tool": 2,
-    "supplychain": 3
+    "supplychain": 3,
+    "misc": 1
    },
    "by_src": {}
   },
   "month": {
-   "total": 732,
+   "total": 691,
    "by_cat": {
-    "cve": 299,
-    "supplychain": 31,
-    "breach": 163,
-    "ai-bugbounty": 62,
-    "tool": 12,
-    "malware": 95,
-    "misc": 24,
+    "cve": 278,
+    "supplychain": 29,
+    "breach": 159,
+    "ai-bugbounty": 60,
+    "tool": 11,
+    "malware": 90,
+    "misc": 18,
     "technique": 26,
     "other": 19,
     "command": 1
@@ -8054,6 +8054,12 @@
  },
  "recent": [
   {
+   "title": "RBA-Digest-2026-11-15",
+   "file": "Guides/RBA/RBA-Digest-2026-11-15.md",
+   "cat": "technique",
+   "ts": "2026-11-15"
+  },
+  {
    "title": "CVE-2026-126170",
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-126170.md",
    "cat": "cve",
@@ -8135,12 +8141,6 @@
    "title": "Storm-0940-ARTEX-Agentic-AI-Pentest-Framework-IT-Vendor-Identity-Targeting-2026-10",
    "file": "Threat_Intel/APT_Groups/Storm-0940-ARTEX-Agentic-AI-Pentest-Framework-IT-Vendor-Identity-Targeting-2026-10.md",
    "cat": "malware",
-   "ts": "2026-11-12"
-  },
-  {
-   "title": "Admirals-MTrading-Forex-Brokers-Third-Party-CRM-Backup-Data-Sale-Claim-2026-11",
-   "file": "Threat_Intel/Breaches/Admirals-MTrading-Forex-Brokers-Third-Party-CRM-Backup-Data-Sale-Claim-2026-11.md",
-   "cat": "breach",
    "ts": "2026-11-12"
   }
  ],
@@ -9340,6 +9340,13 @@
   },
   {
    "date": "2026-11-14",
+   "intel_items": 2627,
+   "cves": 948,
+   "breaches": 245,
+   "malware": 224
+  },
+  {
+   "date": "2026-11-15",
    "intel_items": 2627,
    "cves": 948,
    "breaches": 245,
