@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-17 20:45",
- "today": "2026-11-17",
+ "generated": "2026-11-18 20:45",
+ "today": "2026-11-18",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
@@ -10,37 +10,36 @@
   "supplychain": 91,
   "tools": 103,
   "commands": 14,
-  "guides": 374,
+  "guides": 375,
   "intel_items": 2627,
   "kev": 210
  },
  "windows": {
   "week": {
-   "total": 79,
+   "total": 51,
    "by_cat": {
-    "cve": 32,
-    "breach": 25,
-    "supplychain": 2,
-    "ai-bugbounty": 4,
-    "tool": 1,
-    "malware": 12,
+    "cve": 19,
+    "malware": 11,
+    "supplychain": 1,
+    "breach": 15,
+    "ai-bugbounty": 2,
     "technique": 2,
     "misc": 1
    },
    "by_src": {}
   },
   "month": {
-   "total": 634,
+   "total": 622,
    "by_cat": {
-    "cve": 255,
-    "supplychain": 26,
-    "misc": 17,
-    "breach": 148,
-    "technique": 25,
-    "other": 19,
-    "tool": 10,
+    "cve": 251,
+    "technique": 24,
+    "misc": 14,
+    "breach": 147,
+    "tool": 9,
+    "supplychain": 25,
     "malware": 82,
     "ai-bugbounty": 51,
+    "other": 18,
     "command": 1
    },
    "by_src": {}
@@ -8054,6 +8053,18 @@
  },
  "recent": [
   {
+   "title": "Detection-Digest-2026-11-17",
+   "file": "Guides/Detections/Detection-Digest-2026-11-17.md",
+   "cat": "technique",
+   "ts": "2026-11-17"
+  },
+  {
+   "title": "Repo-Health-2026-11-17",
+   "file": "Reports/RepoHealth/Repo-Health-2026-11-17.md",
+   "cat": "other",
+   "ts": "2026-11-17"
+  },
+  {
    "title": "RBA-Digest-2026-11-15",
    "file": "Guides/RBA/RBA-Digest-2026-11-15.md",
    "cat": "technique",
@@ -8129,18 +8140,6 @@
    "title": "Three-Threat-Clusters-Targeting-Russian-Enterprises-NightEagle-HackingCat-ToyGhouls-Kaspersky-2026",
    "file": "Threat_Intel/Three-Threat-Clusters-Targeting-Russian-Enterprises-NightEagle-HackingCat-ToyGhouls-Kaspersky-2026.md",
    "cat": "other",
-   "ts": "2026-11-12"
-  },
-  {
-   "title": "CopperDragon-Sparrow-Framework-Global-Tracking-Check-Point-2026-11",
-   "file": "Threat_Intel/APT_Groups/CopperDragon-Sparrow-Framework-Global-Tracking-Check-Point-2026-11.md",
-   "cat": "malware",
-   "ts": "2026-11-12"
-  },
-  {
-   "title": "Storm-0940-ARTEX-Agentic-AI-Pentest-Framework-IT-Vendor-Identity-Targeting-2026-10",
-   "file": "Threat_Intel/APT_Groups/Storm-0940-ARTEX-Agentic-AI-Pentest-Framework-IT-Vendor-Identity-Targeting-2026-10.md",
-   "cat": "malware",
    "ts": "2026-11-12"
   }
  ],
@@ -9361,6 +9360,13 @@
   },
   {
    "date": "2026-11-17",
+   "intel_items": 2627,
+   "cves": 948,
+   "breaches": 245,
+   "malware": 224
+  },
+  {
+   "date": "2026-11-18",
    "intel_items": 2627,
    "cves": 948,
    "breaches": 245,
