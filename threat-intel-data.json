@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-20 20:46",
- "today": "2026-11-20",
+ "generated": "2026-11-21 20:45",
+ "today": "2026-11-21",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
@@ -21,9 +21,9 @@
    "by_src": {}
   },
   "month": {
-   "total": 617,
+   "total": 616,
    "by_cat": {
-    "cve": 249,
+    "cve": 248,
     "breach": 147,
     "tool": 9,
     "supplychain": 25,
@@ -9373,6 +9373,13 @@
   },
   {
    "date": "2026-11-20",
+   "intel_items": 2627,
+   "cves": 948,
+   "breaches": 245,
+   "malware": 224
+  },
+  {
+   "date": "2026-11-21",
    "intel_items": 2627,
    "cves": 948,
    "breaches": 245,
