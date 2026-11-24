@@ -1,70 +1,79 @@
 {
- "generated": "2026-11-21 20:45",
- "today": "2026-11-21",
+ "generated": "2026-11-24 20:45",
+ "today": "2026-11-24",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
-  "cves": 948,
-  "breaches": 245,
-  "malware": 224,
+  "cves": 959,
+  "breaches": 256,
+  "malware": 227,
   "supplychain": 91,
-  "tools": 103,
+  "tools": 104,
   "commands": 14,
-  "guides": 375,
-  "intel_items": 2627,
-  "kev": 210
+  "guides": 378,
+  "intel_items": 2664,
+  "kev": 212
  },
  "windows": {
   "week": {
-   "total": 0,
-   "by_cat": {},
+   "total": 37,
+   "by_cat": {
+    "cve": 8,
+    "breach": 13,
+    "malware": 6,
+    "tool": 1,
+    "ai-bugbounty": 2,
+    "misc": 4,
+    "supplychain": 1,
+    "other": 2
+   },
    "by_src": {}
   },
   "month": {
-   "total": 616,
+   "total": 562,
    "by_cat": {
-    "cve": 248,
-    "breach": 147,
-    "tool": 9,
-    "supplychain": 25,
-    "malware": 82,
-    "ai-bugbounty": 51,
-    "misc": 12,
+    "cve": 200,
     "technique": 23,
-    "other": 18,
+    "malware": 82,
+    "breach": 140,
+    "tool": 9,
+    "supplychain": 21,
+    "ai-bugbounty": 52,
+    "misc": 14,
+    "other": 20,
     "command": 1
    },
    "by_src": {}
   },
   "year": {
-   "total": 2623,
+   "total": 2660,
    "by_cat": {
-    "ai-bugbounty": 205,
-    "malware": 337,
-    "other": 130,
-    "tool": 73,
-    "misc": 372,
+    "ai-bugbounty": 207,
+    "malware": 343,
+    "other": 132,
+    "tool": 74,
+    "misc": 376,
     "command": 7,
     "technique": 169,
-    "breach": 403,
-    "supplychain": 131,
-    "cve": 796
+    "breach": 416,
+    "supplychain": 132,
+    "cve": 804
    },
    "by_src": {}
   },
   "all": {
-   "total": 2627,
+   "total": 2664,
    "by_cat": {
-    "ai-bugbounty": 206,
-    "malware": 337,
-    "other": 130,
-    "tool": 73,
-    "misc": 372,
+    "ai-bugbounty": 208,
+    "malware": 343,
+    "other": 132,
+    "tool": 74,
+    "misc": 376,
     "command": 7,
     "technique": 171,
-    "cve": 797,
-    "breach": 403,
-    "supplychain": 131
+    "cve": 805,
+    "breach": 416,
+    "supplychain": 132
    },
    "by_src": {}
   }
@@ -1746,9 +1755,7 @@
   "week": {},
   "month": {
    "Lazarus Group": 6,
-   "Volt Typhoon": 3,
-   "Sandworm": 2,
-   "APT28": 1
+   "Volt Typhoon": 3
   },
   "year": {
    "Sandworm": 8,
@@ -1856,8 +1863,8 @@
   ]
  },
  "cve_sev": {
-  "Critical": 345,
-  "High": 242,
+  "Critical": 349,
+  "High": 246,
   "Low": 40,
   "Medium": 27
  },
@@ -1875,7 +1882,7 @@
   "2023": 22,
   "2024": 20,
   "2025": 43,
-  "2026": 798
+  "2026": 809
  },
  "cve_month": {
   "2025-10": 1,
@@ -1886,12 +1893,12 @@
   "2026-08": 84,
   "2026-09": 160,
   "2026-10": 285,
-  "2026-11": 96
+  "2026-11": 104
  },
  "top_cve": [
   {
    "id": "CVE-2026-109618",
-   "n": 71,
+   "n": 72,
    "sev": "Critical",
    "kev": true
   },
@@ -3557,9 +3564,25 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-131914": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-131914-Idunno-AntiCsrf-ObjectStateFormatter-Deserialization-Unauth-RCE-PoC-2026-11.md",
+   "body": "# CVE-2026-131914: Idunno.AntiCsrf Unkeyed ObjectStateFormatter Deserialization, Unauthenticated RCE (PoC Public)\n\n> Source: X @Dinosn [2125077835513495933](https://x.com/Dinosn/status/2125077835513495933) \u2014 2026-11-24 04:03 UTC (PoC repo: github.com/dinosn/cve-2026-131914-poc)\n\n**CVE:** CVE-2026-131914 | **CVSS:** not stated in post | **Product:** Idunno.AntiCsrf (ASP.NET anti-CSRF library) | **Exploited:** not stated | **PoC:** public\n\n## Summary\n- The library deserializes data with ObjectStateFormatter without a key (no MAC validation), per the PoC description.\n- Result: unauthenticated remote code execution inside the IIS worker process (w3wp.exe).\n- A public proof of concept is on GitHub. The PoC code was not reviewed in this sweep, and affected versions were not given in the post.\n- Severity folder (Critical) is this sweep's judgment from \"unauthenticated RCE\", not a published score.\n\n## Action\n- Inventory ASP.NET apps that reference Idunno.AntiCsrf. Update or remove the package once the fixed version is confirmed from the advisory.\n- Hunt for w3wp.exe spawning cmd.exe or powershell.exe.\n\n## Tags\n#cve #aspnet #deserialization #rce #unauthenticated #poc #iis",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-1337": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-1337-Ivanti-RCE.md",
    "body": "# CVE-2026-1337 \u2014 Ivanti Connect Secure RCE\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n**Date**: 2026-03-28\n**Source**: X (@hacker_news_sec) \u2014 [https://x.com/hacker_news_sec/status/CVE-2026-1337](https://x.com/hacker_news_sec/status/CVE-2026-1337)\n**Severity**: Critical\n**CVSS Score**: 9.8\n**Tags**: #cve #threat-intel #rce #ivanti\n\n---\n\n## Summary\n\nCritical unauthenticated remote code execution vulnerability in Ivanti Connect Secure. The vulnerability exists in the `/api/v1/totp/user-backup-code` endpoint and is caused by a stack overflow condition that allows unauthenticated attackers to execute arbitrary code.\n\n## Affected Software / Versions\n\n- Ivanti Connect Secure: All versions (specific patch version pending)\n\n## Vulnerability Details\n\n**Attack Vector**: Network-based, unauthenticated\n**Endpoint**: `/api/v1/totp/user-backup-code`\n**Root Cause**: Stack overflow\n**Impact**: Remote Code Execution (RCE)\n\n## PoC / Exploit Details\n\nProof of concept available at:\n- [github.com/ivanti-sec/cve-2026-1337-poc](https://github.com/ivanti-sec/cve-2026-1337-poc)\n\n## References\n\n- CVE: [CVE-2026-1337](https://nvd.nist.gov/vuln/detail/CVE-2026-1337)\n- PoC Repository: [https://github.com/ivanti-sec/cve-2026-1337-poc](https://github.com/ivanti-sec/cve-2026-1337-poc)\n\n## Mitigation\n\n**Action**: Patch immediately. A patch is expected to be released soon. Monitor Ivanti security advisories for updates.\n\n**Interim Mitigations**:\n- Restrict network access to the `/api/v1/totp/user-backup-code` endpoint\n- Monitor for suspicious requests to this endpoint\n- Check logs for exploitation attempts\n\n## Additional Notes\n\nPoC code is dropping soon. Keep monitoring the repository and Ivanti advisories for patch details and mitigation steps.\n\n## Tags\n #verified",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-134401": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-134401-Chrome-Critical-Vulnerability-158.0.8127.88-2026-11.md",
+   "body": "# CVE-2026-134401: Google Chrome Critical Vulnerability, Fixed in 158.0.8127.88/.89\n\n> Source: X @TheHackersNews [2125140408623931867](https://x.com/TheHackersNews/status/2125140408623931867) \u2014 2026-11-24 08:12 UTC\n\n**CVE:** CVE-2026-134401 | **Severity:** Critical (per post) | **Product:** Google Chrome | **Patched:** 158.0.8127.88/.89 (Windows, macOS, Linux) | **Exploited:** not stated\n\n## Summary\n- Google released a security patch for a vulnerability rated critical. Chrome 158.0.8127.88/.89 is rolling out to Windows, macOS and Linux.\n- The post did not name the affected component or say whether it is exploited in the wild.\n\n## Action\n- Update Chrome to 158.0.8127.88 or later and restart the browser. Check Chromium-based browsers (Edge, Brave) for their matching updates.\n\n## Tags\n#cve #chrome #browser #critical #patch",
    "sev": "Critical",
    "year": "2026",
    "kev": false,
@@ -4719,6 +4742,14 @@
    "kev": true,
    "apts": []
   },
+  "CVE-2026-76466": {
+   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-76466-Cisco-Expressway-OS-Command-Execution-Root-Exploited-2026-11.md",
+   "body": "# CVE-2026-76466: Cisco Expressway Critical Flaw, Remote OS Command Execution as Root, Actively Exploited\n\n> Source: X @The_Cyber_News [2125121500994998575](https://x.com/The_Cyber_News/status/2125121500994998575) \u2014 2026-11-24 06:57 UTC (article: cybersecuritynews.com/cisco-expressway-vulnerability-exploited/)\n\n**CVE:** CVE-2026-76466 | **Severity:** Critical (per post) | **Product:** Cisco Expressway | **Exploited:** yes\n\n## Summary\n- Attackers are actively exploiting a critical Cisco Expressway vulnerability that lets remote attackers run operating system commands and gain full root access.\n- BleepingComputer's feed carried \"CISA flags critical Cisco RCE flaw as actively exploited in attacks\" on 2026-11-23 07:44 UTC. The feed text did not name the CVE, so the link to CVE-2026-76466 is likely but unconfirmed.\n- Affected and fixed versions were not in the post. Take them from the Cisco advisory.\n\n## Action\n- Patch Expressway-C/E per the Cisco advisory. Restrict management interfaces. Hunt for unexpected root processes and outbound connections from Expressway hosts.\n\n## Tags\n#cve #cisco #expressway #rce #root #exploited #kev",
+   "sev": "Critical",
+   "year": "2026",
+   "kev": true,
+   "apts": []
+  },
   "CVE-2026-76504": {
    "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-76504.md",
    "body": "# CVE-2026-76504\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Critical  \n**Year:** 2026\n\n## Summary\nCisco Catalyst SD-WAN Manager CVE-2026-76504 (CVSS 9.8)** was disclosed 30 Sep. It is an authentication bypass to admin API that was exploited in the wild, and no workaround exists. Fixed builds are 20.9.10.1, 20.12.8.2, 20.15.6.1, 20.18.4.1, 26.1.2.1 and 26.2.1.\n\n## Where it appears in this vault\n- `Reports/Australia/AU-Roundup-2026-10-09.md` \u2014 Cisco Catalyst SD-WAN Manager CVE-2026-76504 (CVSS 9.8)** was disclosed 30 Sep. It is an authentication bypass to admin API that was exploited in the wild, and no workaround exists. Fixed builds are 20.9.10.1, 20.12.8.2, 20.15.6.1, 20.18.4.1, 26.1.2.1 and 26.2.1.\n- `Reports/Australia/AU-Roundup-2026-10-09.md` \u2014 3. **Cisco SD-WAN Manager CVE-2026-76504:** Patch, and hunt `serviceproxy-access.log` for encoded `/j_security_check` POSTs (e.g. `%6a`) and `vmanage-server.log` for `viptela-reserved-` usernames from September onward.\n- `Reports/Australia/AU-Roundup-2026-10-09.md` \u2014 [CSA Labs: Cisco SD-WAN CVE-2026-76504 research note](https://labs.cloudsecurityalliance.org/research/csa-research-note-cisco-sdwan-cve-2026-76504-20261002-csa-st/)\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-76504\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-76504\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-76504\n\n## Tags\n#cve #2026 #critical #auto-stub #verified",
@@ -5407,6 +5438,14 @@
    "kev": true,
    "apts": []
   },
+  "CVE-2026-125396": {
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-125396-Ghostscript-Upload2Shell-PoC-Available-Sophos-2026-11.md",
+   "body": "# CVE-2026-125396: Ghostscript \"Upload2Shell\", Proof-of-Concept Exploit Code Available\n\n> Source: [Sophos Threat Research](https://www.sophos.com/en-us/blog/proof-of-concept-available-for-ghostscript-upload2shell) \u2014 Mon, 23 Nov 2026 00:00:00 GMT\n\n**CVE:** CVE-2026-125396 | **CVSS:** not in feed | **Product:** Ghostscript | **PoC:** public (per Sophos title)\n\n## Summary\n- Sophos advisory title: proof-of-concept exploit code is available for the Ghostscript \"Upload2Shell\" vulnerability.\n- The feed carried the title and tags only (advisory, vulnerability, Ghostscript, Upload2Shell). No technical detail, versions or score. Severity folder (High) is a placeholder.\n- The feed timestamp is date-only, so this item may sit just outside the 24h window. Logged because the time of day is unknown.\n\n## Related\n- Earlier Ghostscript upload-path bugs: [[CVE-2026-39919-Ghostscript-JPEG2000-Heap-Overflow-PDF-Upload-RCE-2026-10]], [[CVE-2026-112900-Pillow-EPS-Filename-Ghostscript-OS-Command-Injection-2026-10]]\n\n## Bug bounty relevance\n- Any feature that converts or thumbnails uploaded PDF/PS/EPS files may reach Ghostscript.\n\n## Tags\n#cve #ghostscript #upload2shell #poc #file-upload",
+   "sev": "High",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-13773": {
    "file": "Threat_Intel/CVEs/2026/High/CVE-2026-13773-IBM-WebSphere-eXtreme-Scale-SSRF.md",
    "body": "# CVE-2026-13773 \u2014 IBM WebSphere eXtreme Scale SSRF\n\n\u26a0\ufe0f **Verification:** Unverified \u2014 1 independent source\n\n**Severity:** High (as reported)\n**Component:** IBM WebSphere eXtreme Scale 8.6.1.x (affected 8.6.1.0\u20138.8.1.6).\n**Type:** Server-Side Request Forgery (SSRF).\n\n## Summary\n~50 CORBA stub classes in `ogclient.jar` call `ORB.string_to_object()` unsafely, enabling **server-side request forgery**. An attacker can coerce the WebSphere eXtreme Scale client into issuing attacker-controlled requests via the ORB transport.\n\n## Recommended Actions\n- Patch to a fixed version above 8.8.1.6 (or per IBM advisory) if running 8.6.1.0\u20138.8.1.6.\n- Restrict outbound network egress from WebSphere hosts; monitor ORB traffic for anomalous destinations.\n\n## Tags\n#CVE #IBM #WebSphere #SSRF #CORBA #2026 #unverified\n\n> Source: [@SecAlertsCo (X)](https://x.com/SecAlertsCo) \u2014 2026-07-03 (secalerts.co/vulnerability)\n\n*Captured via x-bugbounty-intel-sweep \u2014 2026-07-03*",
@@ -5997,6 +6036,14 @@
   "CVE-2026-82033": {
    "file": "Threat_Intel/CVEs/2026/High/CVE-2026-82033-DeepSeek-Harness-Missing-Auth-WebSocket-RPC-2026-11.md",
    "body": "# CVE-2026-82033 \u2014 DeepSeek Harness Missing Authentication (HTTP / WebSocket RPC)\n\n\u26a0\ufe0f **Verification:** 1 source (CVE feed on X)\n\n> Source: [X @CVEnew](https://x.com/CVEnew/status/2119219596402008490) \u2014 2026-11-08T00:04Z\n> Source: [CVE.org](https://www.cve.org/CVERecord?id=CVE-2026-82033) \u2014 2026-11-08\n\n**Type:** Missing authentication | **Product:** DeepSeek Harness (< 0.1.2-alpha.2; commit 3e24087) | **CVE:** CVE-2026-82033\n\n## Summary\n- Missing authentication in DeepSeek Harness's **web profile HTTP and WebSocket RPC** components before 0.1.2-alpha.2.\n\n## AI bug bounty\n- Agent harnesses often expose localhost RPC \u2192 test for DNS rebinding / cross-origin WebSocket hijacking from a malicious page to drive the agent (tool execution).\n\n## Tags\n#cve #ai-security #agent #websocket #missing-auth #deepseek",
+   "sev": "High",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
+  "CVE-2026-82981": {
+   "file": "Threat_Intel/CVEs/2026/High/CVE-2026-82981-WHMCS-Unauth-SQL-Injection-Customer-Data-Admin-Hashes-2026-11.md",
+   "body": "# CVE-2026-82981: WHMCS Unauthenticated SQL Injection, Customer Data and Admin Password Hashes\n\n> Source: X @TheHackersNews [2125146378565521792](https://x.com/TheHackersNews/status/2125146378565521792) \u2014 2026-11-24 08:35 UTC\n\n**CVE:** CVE-2026-82981 | **CVSS:** not stated in post | **Product:** WHMCS (web hosting billing platform) | **Patched:** yes | **Exploited:** not stated\n\n## Summary\n- SQL injection that needs no login. Per The Hacker News, it could let attackers steal customer data and admin password hashes.\n- It is one of three newly patched WHMCS flaws. The other two were not named in the post.\n- Fixed versions were not given in the post. Check the WHMCS security advisory before acting.\n\n## Action\n- Patch WHMCS to the latest release. Rotate admin passwords if the instance was internet-facing and unpatched.\n- Review web logs for SQL injection patterns against unauthenticated endpoints.\n\n## Bug bounty relevance\n- WHMCS is common on hosting provider scopes (billing., clients., my. subdomains). Fingerprint the version before testing.\n\n## Tags\n#cve #whmcs #sql-injection #unauthenticated #web-hosting",
    "sev": "High",
    "year": "2026",
    "kev": false,
@@ -6866,6 +6913,14 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-134624": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-134624.md",
+   "body": "# CVE-2026-134624\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\n[AV26-1191](https://cyber.gc.ca/en/alerts-advisories/n-able-security-advisory-av26-1191) | N-able | MailAssure < 20261121.1943 | **CVE-2026-134624 added to CISA KEV 2026-11-23** (Update 1). LDAP sync connection check SSRF |\n\n## Where it appears in this vault\n- `Threat_Intel/Vendor-Advisory-Roundup-CCCS-AV26-1189-1197-2026-11-23.md` \u2014 [AV26-1191](https://cyber.gc.ca/en/alerts-advisories/n-able-security-advisory-av26-1191) | N-able | MailAssure < 20261121.1943 | **CVE-2026-134624 added to CISA KEV 2026-11-23** (Update 1). LDAP sync connection check SSRF |\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-134624\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-134624\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-134624\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": true,
+   "apts": []
+  },
   "CVE-2026-14814": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-14814.md",
    "body": "# CVE-2026-14814\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-14814\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-14814\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-14814\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
@@ -7506,6 +7561,14 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-59442": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-59442.md",
+   "body": "# CVE-2026-59442\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\n[AV26-1195](https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-1195) | Spring | Spring AI < 1.0.11, 1.1.10, 2.0.2.1, 2.0.3 | CVE-2026-59442, broken logical grouping in TypesenseFilterExpressionConverter (filter bypass class) |\n\n## Where it appears in this vault\n- `Threat_Intel/Vendor-Advisory-Roundup-CCCS-AV26-1189-1197-2026-11-23.md` \u2014 [AV26-1195](https://cyber.gc.ca/en/alerts-advisories/spring-security-advisory-av26-1195) | Spring | Spring AI < 1.0.11, 1.1.10, 2.0.2.1, 2.0.3 | CVE-2026-59442, broken logical grouping in TypesenseFilterExpressionConverter (filter bypass class) |\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-59442\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-59442\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-59442\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-59821": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-59821.md",
    "body": "# CVE-2026-59821\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-59821\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-59821\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-59821\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
@@ -7842,6 +7905,14 @@
    "kev": false,
    "apts": []
   },
+  "CVE-2026-86312": {
+   "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-86312.md",
+   "body": "# CVE-2026-86312\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\n[AV26-1194](https://cyber.gc.ca/en/alerts-advisories/apache-security-advisory-av26-1194) | Apache | Solr < 10.1.0 and < 9.11.0 | CVE-2026-86312, ping health-check endpoint could trigger unintended functionality |\n\n## Where it appears in this vault\n- `Threat_Intel/Vendor-Advisory-Roundup-CCCS-AV26-1189-1197-2026-11-23.md` \u2014 [AV26-1194](https://cyber.gc.ca/en/alerts-advisories/apache-security-advisory-av26-1194) | Apache | Solr < 10.1.0 and < 9.11.0 | CVE-2026-86312, ping health-check endpoint could trigger unintended functionality |\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-86312\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-86312\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-86312\n\n## Tags\n#cve #2026 #unrated #auto-stub",
+   "sev": "",
+   "year": "2026",
+   "kev": false,
+   "apts": []
+  },
   "CVE-2026-86987": {
    "file": "Threat_Intel/CVEs/2026/Unrated/CVE-2026-86987.md",
    "body": "# CVE-2026-86987\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2026\n\n## Summary\nNo local description captured yet. See references below.\n\n## Where it appears in this vault\n- _(referenced in vault; see search)_\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2026-86987\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2026-86987\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2026-86987\n\n## Tags\n#cve #2026 #unrated #auto-stub #verified",
@@ -8045,94 +8116,94 @@
  },
  "recent": [
   {
-   "title": "Detection-Digest-2026-11-17",
-   "file": "Guides/Detections/Detection-Digest-2026-11-17.md",
-   "cat": "technique",
-   "ts": "2026-11-17"
+   "title": "Agent-Instructions-Attack-Path-No-Malware-Ox-Security-2026-11",
+   "file": "Guides/AI-BugBounty/Agent-Instructions-Attack-Path-No-Malware-Ox-Security-2026-11.md",
+   "cat": "malware",
+   "ts": "2026-11-24"
   },
   {
-   "title": "Repo-Health-2026-11-17",
-   "file": "Reports/RepoHealth/Repo-Health-2026-11-17.md",
-   "cat": "other",
-   "ts": "2026-11-17"
-  },
-  {
-   "title": "RBA-Digest-2026-11-15",
-   "file": "Guides/RBA/RBA-Digest-2026-11-15.md",
-   "cat": "technique",
-   "ts": "2026-11-15"
-  },
-  {
-   "title": "CVE-2026-126170",
-   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-126170.md",
-   "cat": "cve",
-   "ts": "2026-11-14"
-  },
-  {
-   "title": "CVE-2026-126229",
-   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-126229.md",
-   "cat": "cve",
-   "ts": "2026-11-14"
-  },
-  {
-   "title": "CVE-2026-126253",
-   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-126253.md",
-   "cat": "cve",
-   "ts": "2026-11-14"
-  },
-  {
-   "title": "CVE-2026-126261",
-   "file": "Threat_Intel/CVEs/2026/Critical/CVE-2026-126261.md",
-   "cat": "cve",
-   "ts": "2026-11-14"
-  },
-  {
-   "title": "AU-Roundup-2026-11-13",
-   "file": "Reports/Australia/AU-Roundup-2026-11-13.md",
-   "cat": "other",
-   "ts": "2026-11-13"
-  },
-  {
-   "title": "Sigma-Watch-2026-11-13",
-   "file": "Reports/Sigma/Sigma-Watch-2026-11-13.md",
-   "cat": "other",
-   "ts": "2026-11-13"
-  },
-  {
-   "title": "Cloud-Pentest-Methodology-External-Overlay-Underlay-Layers-Securelist-2026-11",
-   "file": "Guides/Cloud-Pentest-Methodology-External-Overlay-Underlay-Layers-Securelist-2026-11.md",
-   "cat": "technique",
-   "ts": "2026-11-12"
-  },
-  {
-   "title": "CSP-Allowlisted-Domain-Credential-Theft-Blind-Trust-PortSwigger-2026-11",
-   "file": "Guides/CSP-Allowlisted-Domain-Credential-Theft-Blind-Trust-PortSwigger-2026-11.md",
-   "cat": "technique",
-   "ts": "2026-11-12"
-  },
-  {
-   "title": "LLM-Prompt-Injection-Advanced-Exploitation-Guide-Intigriti-2026-11",
-   "file": "Guides/AI-BugBounty/LLM-Prompt-Injection-Advanced-Exploitation-Guide-Intigriti-2026-11.md",
+   "title": "Hacking-AI-Apps-Course-AI-Edition-NullSecurityX-2026-11",
+   "file": "Guides/AI-BugBounty/Hacking-AI-Apps-Course-AI-Edition-NullSecurityX-2026-11.md",
    "cat": "ai-bugbounty",
-   "ts": "2026-11-12"
+   "ts": "2026-11-24"
   },
   {
-   "title": "Microsoft-FORGE-Lab-Agentic-Rust-Core-Std-Memory-Safety-Bugs-2026-11",
-   "file": "Guides/AI-BugBounty/Microsoft-FORGE-Lab-Agentic-Rust-Core-Std-Memory-Safety-Bugs-2026-11.md",
+   "title": "OpenAI-GPT-6-Cyber-81-Firefox-Flaws-948-Linux-LPE-Exploits-2026-11",
+   "file": "Guides/AI-BugBounty/OpenAI-GPT-6-Cyber-81-Firefox-Flaws-948-Linux-LPE-Exploits-2026-11.md",
    "cat": "ai-bugbounty",
-   "ts": "2026-11-12"
+   "ts": "2026-11-24"
   },
   {
-   "title": "Sleeper-Agent-Backdoors-Via-Under-10-Neuron-Edits-Detection-Microsoft-Research-2026-11",
-   "file": "Guides/AI-BugBounty/Sleeper-Agent-Backdoors-Via-Under-10-Neuron-Edits-Detection-Microsoft-Research-2026-11.md",
-   "cat": "ai-bugbounty",
-   "ts": "2026-11-12"
+   "title": "Detection-Digest-2026-11-24",
+   "file": "Guides/Detections/Detection-Digest-2026-11-24.md",
+   "cat": "technique",
+   "ts": "2026-11-24"
   },
   {
-   "title": "Three-Threat-Clusters-Targeting-Russian-Enterprises-NightEagle-HackingCat-ToyGhouls-Kaspersky-2026",
-   "file": "Threat_Intel/Three-Threat-Clusters-Targeting-Russian-Enterprises-NightEagle-HackingCat-ToyGhouls-Kaspersky-2026.md",
+   "title": "Repo-Health-2026-11-24",
+   "file": "Reports/RepoHealth/Repo-Health-2026-11-24.md",
    "cat": "other",
-   "ts": "2026-11-12"
+   "ts": "2026-11-24"
+  },
+  {
+   "title": "Scanning-Subnet-109.160.32.0-24-BANATSYNC-AS198364-SANS-ISC-2026-11",
+   "file": "Threat_Intel/Scanning-Subnet-109.160.32.0-24-BANATSYNC-AS198364-SANS-ISC-2026-11.md",
+   "cat": "other",
+   "ts": "2026-11-24"
+  },
+  {
+   "title": "Vendor-Advisory-Roundup-CCCS-AV26-1189-1197-2026-11-23",
+   "file": "Threat_Intel/Vendor-Advisory-Roundup-CCCS-AV26-1189-1197-2026-11-23.md",
+   "cat": "other",
+   "ts": "2026-11-24"
+  },
+  {
+   "title": "Storm-0940-ARTEX-Agentic-AI-Pentest-Framework-IT-Vendor-Identity-Targeting-2026-10",
+   "file": "Threat_Intel/APT_Groups/Storm-0940-ARTEX-Agentic-AI-Pentest-Framework-IT-Vendor-Identity-Targeting-2026-10.md",
+   "cat": "malware",
+   "ts": "2026-11-24"
+  },
+  {
+   "title": "Austrian-Foreign-Ministry-Website-Breach-Diplomat-Contact-Details-2026-11",
+   "file": "Threat_Intel/Breaches/Austrian-Foreign-Ministry-Website-Breach-Diplomat-Contact-Details-2026-11.md",
+   "cat": "breach",
+   "ts": "2026-11-24"
+  },
+  {
+   "title": "Bell-Canada-Nov-17-Breach-Consumer-Customers-Affected-2026-11",
+   "file": "Threat_Intel/Breaches/Bell-Canada-Nov-17-Breach-Consumer-Customers-Affected-2026-11.md",
+   "cat": "breach",
+   "ts": "2026-11-24"
+  },
+  {
+   "title": "Bordeaux-University-Hospital-Email-Accounts-Misused-ScarlettGroup-Claim-2026-11",
+   "file": "Threat_Intel/Breaches/Bordeaux-University-Hospital-Email-Accounts-Misused-ScarlettGroup-Claim-2026-11.md",
+   "cat": "breach",
+   "ts": "2026-11-24"
+  },
+  {
+   "title": "Decathlon-Service-Provider-Customer-Data-Leak-2026-11",
+   "file": "Threat_Intel/Breaches/Decathlon-Service-Provider-Customer-Data-Leak-2026-11.md",
+   "cat": "breach",
+   "ts": "2026-11-24"
+  },
+  {
+   "title": "FBI-NCIC-National-Crime-Information-Center-Reported-Breach-2026-11",
+   "file": "Threat_Intel/Breaches/FBI-NCIC-National-Crime-Information-Center-Reported-Breach-2026-11.md",
+   "cat": "breach",
+   "ts": "2026-11-24"
+  },
+  {
+   "title": "Ipsos-Internal-System-Breach-Qilin-Leak-Site-Listing-2026-11",
+   "file": "Threat_Intel/Breaches/Ipsos-Internal-System-Breach-Qilin-Leak-Site-Listing-2026-11.md",
+   "cat": "breach",
+   "ts": "2026-11-24"
+  },
+  {
+   "title": "JAXA-Earth-Observation-Data-System-Command-Injection-2000-Accounts-2026-11",
+   "file": "Threat_Intel/Breaches/JAXA-Earth-Observation-Data-System-Command-Injection-2000-Accounts-2026-11.md",
+   "cat": "breach",
+   "ts": "2026-11-24"
   }
  ],
  "kev_referenced": [
@@ -8241,6 +8312,7 @@
   "CVE-2026-123218",
   "CVE-2026-124194",
   "CVE-2026-125350",
+  "CVE-2026-134624",
   "CVE-2026-15409",
   "CVE-2026-15410",
   "CVE-2026-16232",
@@ -8312,6 +8384,7 @@
   "CVE-2026-76418",
   "CVE-2026-76460",
   "CVE-2026-76461",
+  "CVE-2026-76466",
   "CVE-2026-76504",
   "CVE-2026-76519",
   "CVE-2026-8037",
@@ -9384,6 +9457,13 @@
    "cves": 948,
    "breaches": 245,
    "malware": 224
+  },
+  {
+   "date": "2026-11-24",
+   "intel_items": 2664,
+   "cves": 959,
+   "breaches": 256,
+   "malware": 227
   }
  ]
 }
