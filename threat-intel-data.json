@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-24 20:45",
- "today": "2026-11-24",
+ "generated": "2026-11-25 20:45",
+ "today": "2026-11-25",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
@@ -12,7 +12,7 @@
   "commands": 14,
   "guides": 378,
   "intel_items": 2664,
-  "kev": 212
+  "kev": 213
  },
  "windows": {
   "week": {
@@ -30,15 +30,15 @@
    "by_src": {}
   },
   "month": {
-   "total": 562,
+   "total": 553,
    "by_cat": {
-    "cve": 200,
-    "technique": 23,
+    "cve": 195,
     "malware": 82,
     "breach": 140,
-    "tool": 9,
-    "supplychain": 21,
-    "ai-bugbounty": 52,
+    "technique": 22,
+    "supplychain": 20,
+    "ai-bugbounty": 51,
+    "tool": 8,
     "misc": 14,
     "other": 20,
     "command": 1
@@ -3569,7 +3569,7 @@
    "body": "# CVE-2026-131914: Idunno.AntiCsrf Unkeyed ObjectStateFormatter Deserialization, Unauthenticated RCE (PoC Public)\n\n> Source: X @Dinosn [2125077835513495933](https://x.com/Dinosn/status/2125077835513495933) \u2014 2026-11-24 04:03 UTC (PoC repo: github.com/dinosn/cve-2026-131914-poc)\n\n**CVE:** CVE-2026-131914 | **CVSS:** not stated in post | **Product:** Idunno.AntiCsrf (ASP.NET anti-CSRF library) | **Exploited:** not stated | **PoC:** public\n\n## Summary\n- The library deserializes data with ObjectStateFormatter without a key (no MAC validation), per the PoC description.\n- Result: unauthenticated remote code execution inside the IIS worker process (w3wp.exe).\n- A public proof of concept is on GitHub. The PoC code was not reviewed in this sweep, and affected versions were not given in the post.\n- Severity folder (Critical) is this sweep's judgment from \"unauthenticated RCE\", not a published score.\n\n## Action\n- Inventory ASP.NET apps that reference Idunno.AntiCsrf. Update or remove the package once the fixed version is confirmed from the advisory.\n- Hunt for w3wp.exe spawning cmd.exe or powershell.exe.\n\n## Tags\n#cve #aspnet #deserialization #rce #unauthenticated #poc #iis",
    "sev": "Critical",
    "year": "2026",
-   "kev": false,
+   "kev": true,
    "apts": []
   },
   "CVE-2026-1337": {
@@ -8312,6 +8312,7 @@
   "CVE-2026-123218",
   "CVE-2026-124194",
   "CVE-2026-125350",
+  "CVE-2026-131914",
   "CVE-2026-134624",
   "CVE-2026-15409",
   "CVE-2026-15410",
@@ -9460,6 +9461,13 @@
   },
   {
    "date": "2026-11-24",
+   "intel_items": 2664,
+   "cves": 959,
+   "breaches": 256,
+   "malware": 227
+  },
+  {
+   "date": "2026-11-25",
    "intel_items": 2664,
    "cves": 959,
    "breaches": 256,
