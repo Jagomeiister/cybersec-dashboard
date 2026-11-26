@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-25 20:45",
- "today": "2026-11-25",
+ "generated": "2026-11-26 20:45",
+ "today": "2026-11-26",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
@@ -12,7 +12,7 @@
   "commands": 14,
   "guides": 378,
   "intel_items": 2664,
-  "kev": 213
+  "kev": 214
  },
  "windows": {
   "week": {
@@ -30,15 +30,15 @@
    "by_src": {}
   },
   "month": {
-   "total": 553,
+   "total": 512,
    "by_cat": {
-    "cve": 195,
-    "malware": 82,
-    "breach": 140,
-    "technique": 22,
-    "supplychain": 20,
-    "ai-bugbounty": 51,
-    "tool": 8,
+    "cve": 176,
+    "malware": 76,
+    "ai-bugbounty": 45,
+    "breach": 136,
+    "tool": 7,
+    "technique": 19,
+    "supplychain": 18,
     "misc": 14,
     "other": 20,
     "command": 1
@@ -3103,7 +3103,7 @@
    "body": "# CVE-2025-41450\n\n\u2705 **Verification:** Verified \u2014 3 independent sources\n\n> \u26a0\ufe0f **Auto-generated stub** \u2014 description below is from analyst knowledge and/or this vault's own context. **Verify against the authoritative sources linked at the bottom** before operational use.\n\n**Severity (assessed):** Unrated  \n**Year:** 2025\n\n## Summary\nKnown AK-SM 800A flaws (2025): **CVE-2025-41450** (auth bypass, <4.2), **CVE-2025-41451** (command injection/RCE), **CVE-2025-41452** (DoS) \u2014 latter two fixed in 4.3.1. Claroty: thousands of AK-SM 800A interfaces internet-reachable.\n\n## Where it appears in this vault\n- `Threat_Intel/Breaches/Danfoss-Refrigeration-Controller-Attack-French-Supermarkets-2026-10.md` \u2014 Known AK-SM 800A flaws (2025): **CVE-2025-41450** (auth bypass, <4.2), **CVE-2025-41451** (command injection/RCE), **CVE-2025-41452** (DoS) \u2014 latter two fixed in 4.3.1. Claroty: thousands of AK-SM 800A interfaces internet-reachable.\n\n## References (verify here)\n- NVD: https://nvd.nist.gov/vuln/detail/CVE-2025-41450\n- CVE.org: https://www.cve.org/CVERecord?id=CVE-2025-41450\n- MITRE: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2025-41450\n\n## Tags\n#cve #2025 #unrated #auto-stub #verified",
    "sev": "",
    "year": "2025",
-   "kev": false,
+   "kev": true,
    "apts": []
   },
   "CVE-2025-41451": {
@@ -8279,6 +8279,7 @@
   "CVE-2025-3248",
   "CVE-2025-39682",
   "CVE-2025-39964",
+  "CVE-2025-41450",
   "CVE-2025-43510",
   "CVE-2025-43520",
   "CVE-2025-43529",
@@ -9468,6 +9469,13 @@
   },
   {
    "date": "2026-11-25",
+   "intel_items": 2664,
+   "cves": 959,
+   "breaches": 256,
+   "malware": 227
+  },
+  {
+   "date": "2026-11-26",
    "intel_items": 2664,
    "cves": 959,
    "breaches": 256,
