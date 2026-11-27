@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-26 20:45",
- "today": "2026-11-26",
+ "generated": "2026-11-27 20:45",
+ "today": "2026-11-27",
  "vault": "CyberSec Vault",
  "snapshot": {
   "apt_groups": 21,
@@ -30,17 +30,17 @@
    "by_src": {}
   },
   "month": {
-   "total": 512,
+   "total": 475,
    "by_cat": {
-    "cve": 176,
-    "malware": 76,
-    "ai-bugbounty": 45,
-    "breach": 136,
-    "tool": 7,
-    "technique": 19,
-    "supplychain": 18,
+    "cve": 155,
+    "breach": 132,
+    "technique": 17,
+    "ai-bugbounty": 42,
     "misc": 14,
+    "malware": 71,
+    "supplychain": 17,
     "other": 20,
+    "tool": 6,
     "command": 1
    },
    "by_src": {}
@@ -8116,6 +8116,12 @@
  },
  "recent": [
   {
+   "title": "session-2026-11-27",
+   "file": "BugBounty/notes/session-2026-11-27.md",
+   "cat": "other",
+   "ts": "2026-11-27"
+  },
+  {
    "title": "Agent-Instructions-Attack-Path-No-Malware-Ox-Security-2026-11",
    "file": "Guides/AI-BugBounty/Agent-Instructions-Attack-Path-No-Malware-Ox-Security-2026-11.md",
    "cat": "malware",
@@ -8196,12 +8202,6 @@
   {
    "title": "Ipsos-Internal-System-Breach-Qilin-Leak-Site-Listing-2026-11",
    "file": "Threat_Intel/Breaches/Ipsos-Internal-System-Breach-Qilin-Leak-Site-Listing-2026-11.md",
-   "cat": "breach",
-   "ts": "2026-11-24"
-  },
-  {
-   "title": "JAXA-Earth-Observation-Data-System-Command-Injection-2000-Accounts-2026-11",
-   "file": "Threat_Intel/Breaches/JAXA-Earth-Observation-Data-System-Command-Injection-2000-Accounts-2026-11.md",
    "cat": "breach",
    "ts": "2026-11-24"
   }
@@ -9476,6 +9476,13 @@
   },
   {
    "date": "2026-11-26",
+   "intel_items": 2664,
+   "cves": 959,
+   "breaches": 256,
+   "malware": 227
+  },
+  {
+   "date": "2026-11-27",
    "intel_items": 2664,
    "cves": 959,
    "breaches": 256,
